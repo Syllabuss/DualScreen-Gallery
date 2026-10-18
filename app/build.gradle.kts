@@ -95,13 +95,13 @@ dependencies {
     implementation("org.apache.mina:mina-core:2.2.9") // Includes subsequent MINA security fixes; FTP does not use object serialization.
     implementation("com.hierynomus:smbj:0.15.0") // Signed SMB2/3 browsing; credentials stay in memory.
     implementation("io.coil-kt.coil3:coil-video:3.1.0")
-    implementation("androidx.media3:media3-exoplayer:1.6.1")
-    implementation("androidx.media3:media3-exoplayer-hls:1.6.1")
-    implementation("androidx.media3:media3-datasource-okhttp:1.6.1")
-    implementation("androidx.media3:media3-session:1.6.1")
-    implementation("androidx.media3:media3-ui:1.6.1")
-    implementation("androidx.media3:media3-transformer:1.6.1")
-    implementation("androidx.media3:media3-effect:1.6.1")
+    implementation("androidx.media3:media3-exoplayer:1.11.1")
+    implementation("androidx.media3:media3-exoplayer-hls:1.11.1")
+    implementation("androidx.media3:media3-datasource-okhttp:1.11.1")
+    implementation("androidx.media3:media3-session:1.11.1")
+    implementation("androidx.media3:media3-ui:1.11.1")
+    implementation("androidx.media3:media3-transformer:1.11.1")
+    implementation("androidx.media3:media3-effect:1.11.1")
     implementation("de.sciss:jump3r:1.0.5") // MP3 encoding; Android's built-in exporter only supplies AAC.
     testImplementation("junit:junit:4.13.2")
     testImplementation("commons-net:commons-net:3.12.0")
