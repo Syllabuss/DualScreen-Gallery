@@ -14,6 +14,7 @@ import android.os.SystemClock
 import android.provider.DocumentsContract
 import android.view.*
 import androidx.compose.ui.semantics.SemanticsActions
+import androidx.compose.ui.semantics.getOrNull
 import androidx.compose.ui.test.*
 import androidx.compose.ui.test.junit4.createEmptyComposeRule
 import androidx.media3.common.Player
@@ -1333,6 +1334,11 @@ class PadRenderTest {
         compose.onNodeWithTag("album:folder-20").performClick(); compose.waitForIdle()
         assertEquals("folder-20", panel.windowModel.route.value.album)
         key(panel, KeyEvent.KEYCODE_BUTTON_B); compose.waitForIdle()
+        // Returning recreates the lazy list; wait for its layout/focus restoration, not only recomposition.
+        compose.waitUntil(5000) {
+            val album = compose.onNodeWithTag("album:folder-20")
+            album.isDisplayed() && album.fetchSemanticsNode().config.getOrNull(androidx.compose.ui.semantics.SemanticsProperties.Focused) == true
+        }
         compose.onNodeWithTag("album:folder-20").assertIsDisplayed().assertIsFocused()
         panel.windowModel.albumGrid(true); compose.waitForIdle()
         compose.onNodeWithTag("albums-grid").assertIsDisplayed()
