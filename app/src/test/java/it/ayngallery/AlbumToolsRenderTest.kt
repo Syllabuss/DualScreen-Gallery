@@ -13,7 +13,6 @@ import org.junit.Assert.*
 import org.junit.runner.RunWith
 import org.robolectric.*
 import org.robolectric.annotation.*
-import java.time.Duration
 
 @RunWith(RobolectricTestRunner::class)
 @Config(sdk = [28], application = TestGalleryApp::class, qualifiers = "it-w620dp-h420dp-land")
@@ -24,7 +23,9 @@ class AlbumToolsRenderTest {
         val controller = Robolectric.buildActivity(ComponentActivity::class.java).setup().visible()
         controller.get().setContent { GalleryDesign(GalleryPreferences(reducedMotion = true)) { AlbumPinSettings(app) } }
         compose.onNodeWithText("Aggiungi PIN").performClick()
-        repeat(2) { for (digit in "1234") compose.onNodeWithTag("pin:$digit").performClick() }
+        for (digit in "1234") compose.onNodeWithTag("pin:$digit").performClick()
+        pump { compose.onAllNodesWithText("Ripeti il PIN").fetchSemanticsNodes().isNotEmpty() }
+        for (digit in "1234") compose.onNodeWithTag("pin:$digit").performClick()
         pump { app.catalog.protection.configured && compose.onAllNodesWithTag("album-pin-dialog").fetchSemanticsNodes().isEmpty() }
         compose.onNodeWithText("Cambia PIN").performClick()
         for (digit in "1234") compose.onNodeWithTag("pin:$digit").performClick()
@@ -42,12 +43,8 @@ class AlbumToolsRenderTest {
     private val app get() = RuntimeEnvironment.getApplication() as GalleryApp
     @After fun close() { app.onTerminate() }
     private fun pump(check: () -> Boolean) {
-        val end = System.currentTimeMillis() + 10000
-        while (!check() && System.currentTimeMillis() < end) {
-            Shadows.shadowOf(android.os.Looper.getMainLooper()).idleFor(Duration.ofMillis(30))
-            compose.waitForIdle(); Thread.sleep(15)
-        }
-        assertTrue(check())
+        // Compose owns the UI clock; manually draining its looper can race PIN coroutines.
+        compose.waitUntil(10000) { check() }
     }
     @Test fun numericKeypadConfirmsNewPinAndFitsSmallLandscapePanel() {
         val controller = Robolectric.buildActivity(ComponentActivity::class.java).setup().visible()
