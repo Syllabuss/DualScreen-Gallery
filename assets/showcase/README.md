@@ -17,6 +17,6 @@ The recording shows several configurations of the music widgets, not separate wi
 
 ## Video and controls
 
-The [YouTube showcase](https://www.youtube.com/shorts/u7ObFoqf3pA) is linked from the root README. The README uses a normal link rather than an embedded player.
+The [YouTube showcase](https://www.youtube.com/shorts/gTU0hsluWSg) is linked from the root README. The README uses a normal link rather than an embedded player.
 
 Y swaps the preview and browsing displays by default; X opens contextual options. Both are remappable. The game in the last capture is a separate application, not a DS Gallery feature.

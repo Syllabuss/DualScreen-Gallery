@@ -10,7 +10,7 @@ Alla fine mi è piaciuto quello che ne è uscito e ho pensato di renderlo pubbli
 
 ## Guarda come funziona
 
-Nel [README principale](../README.md#see-it-in-use-y-swaps-the-screens) trovi le schermate reali dei due display e una GIF dei widget su iiSU. Ci sono anche Album, il player musicale e un esempio con il gioco sullo schermo superiore e un video su quello inferiore. **Y** scambia i pannelli con i comandi predefiniti; puoi rimapparlo. Guarda anche il [video dimostrativo su YouTube](https://www.youtube.com/shorts/u7ObFoqf3pA). I media visibili sono esempi della mia libreria personale e non sono inclusi nell'app.
+Nel [README principale](../README.md#see-it-in-use-y-swaps-the-screens) trovi le schermate reali dei due display e una GIF dei widget su iiSU. Ci sono anche Album, il player musicale e un esempio con il gioco sullo schermo superiore e un video su quello inferiore. **Y** scambia i pannelli con i comandi predefiniti; puoi rimapparlo. Guarda anche il [video dimostrativo su YouTube](https://www.youtube.com/shorts/gTU0hsluWSg). I media visibili sono esempi della mia libreria personale e non sono inclusi nell'app.
 
 ## Cosa puoi fare
 

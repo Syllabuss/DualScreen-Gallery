@@ -34,7 +34,7 @@ data class PlaybackState(val id: String? = null, val title: String = localized(R
     val artist: String = localized(R.string.text_choose_a_music_folder_2a9069, "Scegli una cartella musicale"), val artwork: String? = null,
     val playing: Boolean = false, val position: Long = 0, val duration: Long = 0,
     val queue: List<String> = emptyList(), val index: Int = 0, val shuffle: Boolean = false,
-    val repeat: Int = Player.REPEAT_MODE_OFF, val error: String? = null, val hasNext: Boolean? = null, val hasPrevious: Boolean? = null)
+    val repeat: Int = Player.REPEAT_MODE_OFF, val error: String? = null, val hasNext: Boolean? = null, val hasPrevious: Boolean? = null, val playRequested: Boolean = playing)
 
 fun Catalog.musicItem(item: MediaEntity, data: CatalogSnapshot): MediaItem = MediaItem.Builder()
     .setMediaId(item.id).setUri(uri(item, data)).setMediaMetadata(MediaMetadata.Builder()
@@ -195,7 +195,7 @@ class MusicCoordinator(private val app: GalleryApp) {
                 override fun onDisconnected(disconnected: MediaController) {
                     if (controller === disconnected) {
                         controller = null; future = null
-                        state.value = state.value.copy(playing = false, error = localized(R.string.text_player_disconnected_try_again_7b801f, "Player disconnesso · riprova"))
+                        state.value = state.value.copy(playing = false, playRequested = false, error = localized(R.string.text_player_disconnected_try_again_7b801f, "Player disconnesso · riprova"))
                     }
                 }
             })
@@ -241,7 +241,8 @@ class MusicCoordinator(private val app: GalleryApp) {
             metadata.artist?.toString() ?: localized(R.string.text_artist_unavailable_c612a4, "Artista non disponibile"), metadata.artworkUri?.toString(), player.isPlaying,
             player.currentPosition.coerceAtLeast(0), player.duration.takeIf { it != C.TIME_UNSET }?.coerceAtLeast(0) ?: 0,
             publishedQueue, player.currentMediaItemIndex.coerceAtLeast(0),
-            player.shuffleModeEnabled, player.repeatMode, state.value.error, player.hasNextMediaItem(), player.hasPreviousMediaItem())
+            player.shuffleModeEnabled, player.repeatMode, state.value.error, player.hasNextMediaItem(), player.hasPreviousMediaItem(),
+            player.playWhenReady && player.playbackState != Player.STATE_ENDED && player.playerError == null)
     }
 
     private fun command(action: suspend (MediaController) -> Unit) {

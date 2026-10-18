@@ -31,20 +31,32 @@ class MusicLibraryRenderTest {
     @get:Rule val compose = createEmptyComposeRule()
     private val app get() = RuntimeEnvironment.getApplication() as GalleryApp
     @After fun release() { app.onTerminate() }
-    @Test fun selectedSongPreviewDoesNotDisplayTheDifferentPlayingSong() {
+    @Test fun previewFollowsPlayingTrackUntilPausedIncludingBufferingAndTrackChanges() {
         val first = MediaEntity("first", "first", "content://preview/first", "album", "Execution Clap.mp3", "audio/mpeg", "AUDIO", 100, 1)
         val second = first.copy(id = "second", uri = "content://preview/second", name = "Shut Me Up.mp3")
         val data = CatalogSnapshot(sources = listOf(SourceEntity("music", "content://preview/root", "Music", "MUSIC")),
             media = listOf(first, second), membership = listOf(MediaSource(first.id, "music", 1), MediaSource(second.id, "music", 1)), initialized = true)
         app.session.selectMedia(second.id)
+        val playback = mutableStateOf(PlaybackState(id = first.id, playing = true))
         val controller = Robolectric.buildActivity(ComponentActivity::class.java).setup().visible()
         try {
             controller.get().setContent { GalleryDesign(GalleryPreferences(reducedMotion = true)) {
-                PreviewMusicPanel(app, PlaybackState(id = first.id, playing = true), data, GalleryPreferences(reducedMotion = true), fullPlayer = true)
+                PreviewMusicPanel(app, playback.value, data, GalleryPreferences(reducedMotion = true), fullPlayer = true)
             } }
-            compose.onNodeWithText("Shut Me Up.mp3").assertExists()
-            compose.onNodeWithText("Execution Clap.mp3").assertDoesNotExist()
+            compose.onNodeWithTag("preview-music-title").assertTextEquals("Execution Clap.mp3")
+            compose.onNodeWithTag("preview-music-seek").assertIsEnabled()
+            playback.value = playback.value.copy(playing = false, playRequested = true)
+            compose.onNodeWithTag("preview-music-title").assertTextEquals("Execution Clap.mp3")
+            playback.value = playback.value.copy(playRequested = false)
+            compose.onNodeWithTag("preview-music-title").assertTextEquals("Shut Me Up.mp3")
             compose.onNodeWithTag("preview-music-seek").assertIsNotEnabled()
+            playback.value = playback.value.copy(id = second.id, playing = true, playRequested = true)
+            compose.onNodeWithTag("preview-music-title").assertTextEquals("Shut Me Up.mp3")
+            compose.onNodeWithTag("preview-music-seek").assertIsEnabled()
+            app.session.selectMedia(first.id)
+            compose.onNodeWithTag("preview-music-title").assertTextEquals("Shut Me Up.mp3")
+            playback.value = playback.value.copy(id = first.id)
+            compose.onNodeWithTag("preview-music-title").assertTextEquals("Execution Clap.mp3")
         } finally { controller.pause().stop().destroy() }
     }
 

@@ -1681,6 +1681,43 @@ class PadRenderTest {
         key(dialogView(), KeyEvent.KEYCODE_BUTTON_L1)
         compose.waitUntil(5000) { compose.onAllNodesWithTag("confirm-file-action").fetchSemanticsNodes().isEmpty() }
     }
+    @Test fun selectingAnotherSongKeepsThePlayingPreviewUntilAStartsItAndPauseAllowsBrowsing() {
+        start(music = true)
+        val audioBytes = File("src/test/resources/media/video-segments.mp4").readBytes()
+        listOf("song1", "song2").forEach { File(app.cacheDir, "preview-$it.png").writeBytes(audioBytes) }
+        val preview = focusPreview()
+        panel.windowModel.go("MUSIC"); compose.waitForIdle()
+        app.music.play("song1", listOf("song1", "song2"))
+        waitFor { app.music.state.value.id == "song1" && app.music.state.value.playRequested }
+        compose.onNodeWithTag("media:song2").performSemanticsAction(SemanticsActions.RequestFocus) { it() }
+        compose.waitForIdle()
+        assertEquals("song2", app.session.selectedMediaId)
+        assertEquals("song1", app.music.state.value.id)
+        compose.onNodeWithTag("preview-music-title").assertTextEquals("song1.wav")
+        activity!!.windowFocusChanged(true)
+        key(panel, KeyEvent.KEYCODE_BUTTON_A)
+        waitFor { app.music.state.value.id == "song2" && app.music.state.value.playRequested }
+        compose.onNodeWithTag("preview-music-title").assertTextEquals("song2.wav")
+        app.music.pause()
+        waitFor { !app.music.state.value.playRequested }
+        compose.onNodeWithTag("media:song1").performSemanticsAction(SemanticsActions.RequestFocus) { it() }
+        compose.waitForIdle()
+        assertEquals("song2", app.music.state.value.id)
+        compose.onNodeWithTag("preview-music-title").assertTextEquals("song1.wav")
+    }
+    @Test fun musicShoulderChangesFollowTheNewTrackInThePreviewAndSelection() {
+        start(music = true)
+        val preview = focusPreview()
+        panel.windowModel.go("MUSIC"); compose.waitForIdle()
+        app.session.selectMedia("song1"); compose.waitForIdle()
+        compose.onNodeWithTag("preview-music-title").assertTextEquals("song1.wav")
+        key(preview, KeyEvent.KEYCODE_BUTTON_R2)
+        waitFor { app.music.state.value.id == "song2" && app.session.selectedMediaId == "song2" }
+        compose.onNodeWithTag("preview-music-title").assertTextEquals("song2.wav")
+        key(preview, KeyEvent.KEYCODE_BUTTON_L2)
+        waitFor { app.music.state.value.id == "song1" && app.session.selectedMediaId == "song1" }
+        compose.onNodeWithTag("preview-music-title").assertTextEquals("song1.wav")
+    }
     @Test fun mediaAndTrackShortcutsUseDifferentTargetsAndDeduplicateTrigger() {
         start(PadProfile().assign(PadContext.VIEWER, PadAction.TRACK_NEXT, PadBinding(setOf(PadButton.R3)), replace = true), music = true)
         app.session.updateMediaContext(listOf("a", "b")); app.session.selectMedia("a")

@@ -218,6 +218,11 @@ fun GalleryHome(activity: PanelActivity) {
     LaunchedEffect(libraryRole, libraryRoute.tab, app.video.floating, settingsActive) {
         if (libraryRole && !settingsActive && (libraryRoute.tab in setOf("PHOTO", "ALBUM", "VIDEO", "FAVORITE") || libraryRoute.tab == "TV" && app.video.liveChannel != null)) app.video.returnFromTools()
     }
+    // A queue transition follows the new song; browsing another song alone does not start it.
+    LaunchedEffect(playback.id) {
+        if (libraryRole && route.tab in setOf("MUSIC", "PLAYER") && route.viewer == null && playback.id != null)
+            app.session.selectMedia(playback.id)
+    }
     LaunchedEffect(libraryRoute.tab) {
         if (libraryRole && libraryRoute.tab == "MUSIC" && app.session.selectedMediaId == null && playback.id != null) app.session.selectMedia(playback.id)
     }

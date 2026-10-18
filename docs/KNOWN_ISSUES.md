@@ -1,6 +1,6 @@
 # Known issues and verification limits
 
-Current application build: **0.1.0-beta.123**, code **209**, on **main**, dated **2026-10-18**. This is the first beta snapshot in DualScreen-Gallery; the previous development history is not included.
+Current application build: **0.1.0-beta.124**, code **210**, on **main**, dated **2026-10-18**. This is the first beta snapshot in DualScreen-Gallery; the previous development history is not included.
 
 ## Device coverage
 
@@ -19,6 +19,8 @@ Recent Thor checks covered returning both panels to iiSU, one Gallery card in Re
 - **Network sharing:** FTP is intended for a trusted local network and does not encrypt transfers. Only the folder explicitly shared is exposed. Android storage and background-execution restrictions still apply.
 
 ## Current verification
+
+Beta.124 corrects music previews: selecting a different song while playing keeps the current track visible until activation; previous/next follows the new track, including buffering, and paused browsing follows selection. All 915 JVM tests, lint and the optimized build passed locally before the release-version update. The final commit must also pass GitHub Actions before publication.
 
 The optimized beta.122 APK and matching LGPL reconstruction kit build locally; the APK is signed with the maintainer's dedicated identity. Beta.122 was installed in place on Thor on October 18 without clearing data. Favorites → TV was checked with touch and L1 while video continued in PiP; TV remained selected. The maintainer confirmed all seven widget/preview acceptance checks on October 18; see [release checks](RELEASING.md#thor-acceptance). Beta.122 adds the local-video current-frame cover shortcut, translated into every supported language. A full 913-test local run passed 912 checks; after synchronizing the PIN-change confirmation step, that test and ten related import, localization and cover checks passed together.
 

@@ -50,7 +50,7 @@ fun MiniPlayer(app: GalleryApp, state: PlaybackState, data: CatalogSnapshot, pre
 
 @Composable
 fun PreviewMusicPanel(app: GalleryApp, state: PlaybackState, data: CatalogSnapshot, prefs: GalleryPreferences, fullPlayer: Boolean, controlsVisible: Boolean = true, bottomReserve: androidx.compose.ui.unit.Dp = 0.dp, onActions: ((MediaEntity) -> Unit)? = null, onChooseFolder: () -> Unit = {}) {
-    val selectedTrack = data.byId[app.session.selectedMediaId]?.takeIf { fullPlayer && it.kind == "AUDIO" && data.usable(it) }
+    val selectedTrack = data.byId[app.session.selectedMediaId]?.takeIf { fullPlayer && !state.playRequested && it.kind == "AUDIO" && data.usable(it) }
     val track = selectedTrack ?: data.byId[state.id]?.takeIf { it.kind == "AUDIO" && data.usable(it) } ?: if (fullPlayer)
         rememberedMusicId(app)?.let(data.byId::get)?.takeIf { it.kind == "AUDIO" && data.usable(it) }
             ?: data.visibleMedia.filter { it.kind == "AUDIO" && data.usable(it) }.minWithOrNull(compareBy(MediaNames.natural) { it.title ?: it.name })
@@ -123,7 +123,7 @@ fun PreviewMusicPanel(app: GalleryApp, state: PlaybackState, data: CatalogSnapsh
                     InteractiveMusicCover(app, track, data, prefs, displayState.playing, Modifier.weight(.42f).aspectRatio(1f))
                     Column(Modifier.weight(.58f), horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(12.dp)) {
                     Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                        Text(track.title ?: track.name, style = MaterialTheme.typography.headlineSmall, maxLines = 2, overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis)
+                        Text(track.title ?: track.name, Modifier.testTag("preview-music-title"), style = MaterialTheme.typography.headlineSmall, maxLines = 2, overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis)
                         Text(track.artist ?: displayState.artist, style = MaterialTheme.typography.bodyMedium, color = palette.ink.copy(alpha = .75f), maxLines = 1)
                     }
                     var seek by remember(displayState.id) { mutableStateOf<Float?>(null) }

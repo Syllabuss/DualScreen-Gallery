@@ -16,7 +16,7 @@ What began as a small gallery became a media manager I enjoy using. I thought th
 
 **Ⓨ Swap screens** — the preview and browser can trade places; Y is the default, and you can remap it in Controls. Most captures below show the preview above the browser. Open any screenshot to see it at full size. The media shown comes from my own library and isn't included with the app.
 
-<p align="center"><a href="https://www.youtube.com/shorts/u7ObFoqf3pA"><strong>▶ Watch the showcase on YouTube</strong></a></p>
+<p align="center"><a href="https://www.youtube.com/shorts/gTU0hsluWSg"><strong>▶ Watch the showcase on YouTube</strong></a></p>
 
 <table>
   <tr>
