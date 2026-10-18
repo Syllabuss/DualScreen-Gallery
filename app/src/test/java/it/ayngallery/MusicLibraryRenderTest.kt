@@ -45,17 +45,17 @@ class MusicLibraryRenderTest {
             } }
             compose.onNodeWithTag("preview-music-title").assertTextEquals("Execution Clap.mp3")
             compose.onNodeWithTag("preview-music-seek").assertIsEnabled()
-            playback.value = playback.value.copy(playing = false, playRequested = true)
+            compose.runOnIdle { playback.value = playback.value.copy(playing = false, playRequested = true) }
             compose.onNodeWithTag("preview-music-title").assertTextEquals("Execution Clap.mp3")
-            playback.value = playback.value.copy(playRequested = false)
+            compose.runOnIdle { playback.value = playback.value.copy(playRequested = false) }
             compose.onNodeWithTag("preview-music-title").assertTextEquals("Shut Me Up.mp3")
             compose.onNodeWithTag("preview-music-seek").assertIsNotEnabled()
-            playback.value = playback.value.copy(id = second.id, playing = true, playRequested = true)
+            compose.runOnIdle { playback.value = playback.value.copy(id = second.id, playing = true, playRequested = true) }
             compose.onNodeWithTag("preview-music-title").assertTextEquals("Shut Me Up.mp3")
             compose.onNodeWithTag("preview-music-seek").assertIsEnabled()
-            app.session.selectMedia(first.id)
+            compose.runOnIdle { app.session.selectMedia(first.id) }
             compose.onNodeWithTag("preview-music-title").assertTextEquals("Shut Me Up.mp3")
-            playback.value = playback.value.copy(id = first.id)
+            compose.runOnIdle { playback.value = playback.value.copy(id = first.id) }
             compose.onNodeWithTag("preview-music-title").assertTextEquals("Execution Clap.mp3")
         } finally { controller.pause().stop().destroy() }
     }

@@ -31,10 +31,8 @@ import java.io.File
 @GraphicsMode(GraphicsMode.Mode.NATIVE)
 @LooperMode(LooperMode.Mode.PAUSED)
 class VideoEditorRenderTest {
-    // Decoder IO completes on worker threads; resume Compose effects on the UI looper.
-    // The Compose test rule owns looper draining; do not advance it inside wait predicates.
-    @OptIn(ExperimentalTestApi::class)
-    @get:Rule val compose = createEmptyComposeRule(effectContext = Dispatchers.Main)
+    // Keep effects on the test rule's scheduler to avoid re-entering layout from decoder callbacks.
+    @get:Rule val compose = createEmptyComposeRule()
     private val app get() = RuntimeEnvironment.getApplication() as GalleryApp
     private var activity: ActivityController<MainPanelActivity>? = null
     private lateinit var provider: OperationDocuments
