@@ -56,7 +56,8 @@ class PhotoWidgetConfigTest {
         val controller = Robolectric.buildActivity(PhotoWidgetConfigActivity::class.java,
             Intent(app, PhotoWidgetConfigActivity::class.java).putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, id)).setup().visible().windowFocusChanged(true)
         try {
-            compose.waitForIdle()
+            // The activity collects the catalog asynchronously before enabling framing.
+            compose.waitUntil(10000) { compose.onAllNodes(hasTestTag("photo-config-save") and isEnabled()).fetchSemanticsNodes().isNotEmpty() }
             compose.onNodeWithTag("photo-config-list").performScrollToNode(hasTestTag("photo-config-crop"))
             compose.onNodeWithTag("photo-config-crop").performClick()
             compose.onNodeWithTag("photo-widget-crop-preview").assertIsDisplayed()

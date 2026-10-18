@@ -10,7 +10,6 @@ The application does not remove DRM, bypass geoblocking, sell access or relay
 streams. First-use notices explain authorized use and external requests; they
 are not waivers of mandatory rights or the developer’s own obligations.
 
-Report application issues or a rights concern to https://t.me/syllamisu.
 Do not post account passwords, token-bearing stream URLs or personal data in
-public issues. Investigate substantiated rights reports promptly. User-provided
+public issues. User-provided
 sources remain under the user’s control; examples must use authorized material.
