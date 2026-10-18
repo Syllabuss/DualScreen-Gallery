@@ -105,7 +105,7 @@ dependencies {
     implementation("de.sciss:jump3r:1.0.5") // MP3 encoding; Android's built-in exporter only supplies AAC.
     testImplementation("junit:junit:4.13.2")
     testImplementation("commons-net:commons-net:3.12.0")
-    testImplementation("org.robolectric:robolectric:4.14.1")
+    testImplementation("org.robolectric:robolectric:4.17")
     testImplementation("androidx.work:work-testing:2.10.1")
     testImplementation("androidx.compose.ui:ui-test-junit4")
 }
