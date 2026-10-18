@@ -1,9 +1,8 @@
-# Reporting security concerns
+# Security and safe reporting
 
-Contact the maintainer privately at https://t.me/syllamisu. Describe the version,
-Android/device, prerequisites and a minimal reproduction. Do not publish passwords,
-signed stream URLs, personal files, signing material or an exploit against other
-people's devices. Public issues can describe non-sensitive functional defects.
+Use GitHub Issues for non-sensitive functional defects. Include the application version, device/Android version and a minimal reproduction. Remove passwords, signed stream URLs, personal files and other private data before sharing logs or screenshots.
+
+Do not publish an exploit, signing material or credentials in a public issue. This project currently has no dedicated private vulnerability-reporting channel. If a report needs confidential details, ask for a private reporting route without including those details.
 
 FTP is opt-in, password protected and intended for trusted local networks. It is
 not encrypted. Uploads are capped at 8 GiB each and preserve at least 128 MiB of
