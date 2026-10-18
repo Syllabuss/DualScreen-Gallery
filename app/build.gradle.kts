@@ -88,13 +88,13 @@ dependencies {
     implementation("androidx.room:room-ktx:2.7.2")
     ksp("androidx.room:room-compiler:2.7.2")
     implementation("androidx.work:work-runtime-ktx:2.10.1")
-    implementation("io.coil-kt.coil3:coil-compose:3.1.0")
-    implementation("io.coil-kt.coil3:coil-gif:3.1.0")
+    implementation("io.coil-kt.coil3:coil-compose:3.6.3")
+    implementation("io.coil-kt.coil3:coil-gif:3.6.3")
     implementation("com.github.bumptech.glide:gifdecoder:4.16.0") // Real frame selection; Coil remains the ordinary image loader.
     implementation("org.apache.ftpserver:ftpserver-core:1.2.1") // FTP protocol, passive data channels and authentication; SAF remains app-owned.
     implementation("org.apache.mina:mina-core:2.2.9") // Includes subsequent MINA security fixes; FTP does not use object serialization.
     implementation("com.hierynomus:smbj:0.15.0") // Signed SMB2/3 browsing; credentials stay in memory.
-    implementation("io.coil-kt.coil3:coil-video:3.1.0")
+    implementation("io.coil-kt.coil3:coil-video:3.6.3")
     implementation("androidx.media3:media3-exoplayer:1.6.1")
     implementation("androidx.media3:media3-exoplayer-hls:1.6.1")
     implementation("androidx.media3:media3-datasource-okhttp:1.6.1")
