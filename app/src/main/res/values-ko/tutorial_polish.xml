@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tutorial_folder_compact_body">표시할 미디어를 선택하세요. 하위 폴더는 앨범이 됩니다.</string>
+    <string name="tutorial_permission_compact_purpose">폴더: 미디어. 알림: 플레이어. 다른 앱 위에 표시: 비교. 필요한 경우에만 요청합니다.</string>
+    <string name="tutorial_permission_compact_body">폴더 열기 → 이 폴더 사용 → 허용. Download는 하위 폴더를 선택하세요.</string>
+    <string name="tutorial_actions_short">작업 및 설정</string>
+    <string name="info_licenses">라이선스 및 구성 요소</string>
+    <string name="controller_guide_image_title">확대한 이미지</string>
+    <string name="controller_guide_image_body">확대했을 때만: 왼쪽 스틱으로 이미지를 이동하고 오른쪽 스틱 위/아래로 확대율을 조절합니다. 방향키로 미디어를 탐색합니다.</string>
+</resources>

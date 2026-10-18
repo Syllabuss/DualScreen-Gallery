@@ -1,0 +1,16 @@
+<resources>
+    <string name="settings_advanced">Avancé</string>
+    <string name="settings_visible_buttons">Boutons visibles</string>
+    <string name="settings_unsaved_title">Modifications non enregistrées</string>
+    <string name="settings_unsaved_message">Quitter sans enregistrer les modifications ?</string>
+    <string name="settings_discard">Quitter sans enregistrer</string>
+    <string name="settings_keep_editing">Continuer à modifier</string>
+    <string name="settings_folders_permission">L’accès aux fichiers est accordé lorsque vous choisissez des dossiers dans la bibliothèque.</string>
+    <string name="settings_organize">Dossiers et collections</string>
+    <string name="settings_privacy">Confidentialité</string>
+    <string name="settings_file_management">Gestion des fichiers</string>
+    <string name="settings_manage_folders">Gérer les dossiers</string>
+    <string name="settings_folder_access_ready">Accès disponible</string>
+    <string name="settings_folder_access_missing">À configurer</string>
+    <string name="settings_album_tools_note">Ces options s’appliquent aussi aux médias dans un album.</string>
+</resources>

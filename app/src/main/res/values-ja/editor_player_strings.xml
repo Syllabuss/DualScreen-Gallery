@@ -1,0 +1,11 @@
+<resources>
+    <string name="video_exit_playback">再生を終了</string>
+    <string name="video_resume_title">動画を続きから再生しますか？</string>
+    <string name="video_resume_description">%1$sから再開するか、最初から再生します。</string>
+    <string name="video_resume_controller_hint">コントローラー：A 続きから · Y 最初から · B キャンセル</string>
+    <string name="video_resume_action">続ける</string>
+    <string name="video_restart_action">最初から</string>
+    <string name="editor_save_mp3">MP3として保存</string>
+    <string name="editor_pcm_unsupported">未対応のデコード済み音声形式です</string>
+    <string name="editor_decoder_timeout">音声のデコードが応答しません。元のファイルは変更されていません。</string>
+</resources>

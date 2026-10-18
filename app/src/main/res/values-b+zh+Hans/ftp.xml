@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ftp_title">FTP共享</string>
+    <string name="ftp_wifi_required">请将Thor和另一台设备连接到同一Wi-Fi网络。</string>
+    <string name="ftp_notification">所选文件夹可通过局域网访问。</string>
+    <string name="ftp_stop">停止共享</string>
+    <string name="ftp_start">开始共享</string>
+    <string name="ftp_folder">共享文件夹</string>
+    <string name="ftp_description">在所选文件夹中与电脑或手机收发文件。共享将持续到你将其停止。</string>
+    <string name="ftp_connect">连接方法</string>
+    <string name="ftp_security">在另一台设备上使用FTP客户端。仅在可信网络中使用：FTP传输不加密。已有文件不会被覆盖，也无法远程删除。</string>
+    <string name="ftp_password">密码</string>
+    <string name="ftp_username">用户名</string>
+    <string name="ftp_choose">选择文件夹</string>
+    <string name="ftp_enabled">在导航栏显示FTP</string>
+    <string name="ftp_transfers">传输</string>
+    <string name="ftp_received">已接收</string>
+    <string name="ftp_receiving">正在接收</string>
+    <string name="ftp_failed">传输已中断</string>
+</resources>

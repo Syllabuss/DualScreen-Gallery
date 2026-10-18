@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tv_title">"在线电视"</string>
+    <string name="tv_enabled">"启用在线电视"</string>
+    <string name="tv_navbar">"在导航栏显示电视"</string>
+    <string name="tv_favorites">"在收藏中显示电视频道"</string>
+    <string name="tv_my_channels">"我的频道"</string>
+    <string name="tv_browse">"浏览频道"</string>
+    <string name="tv_empty">"暂无电视频道"</string>
+    <string name="tv_empty_help">输入您获准使用的HTTPS M3U播放列表。最多20个来源；导入不会开始播放。</string>
+    <string name="tv_add">"添加频道"</string>
+    <string name="tv_url">"串流 HTTPS 地址"</string>
+    <string name="tv_unverified">"仅限单个 HLS 串流。验证链接时不会开始播放。"</string>
+    <string name="tv_network_notice">"目录、台标和频道会连接外部服务，这些服务会看到你的 IP 地址。"</string>
+    <string name="tv_countries">"国家"</string>
+    <string name="tv_languages">"语言"</string>
+    <string name="tv_categories">"类别"</string>
+    <string name="tv_sources">"来源"</string>
+    <string name="tv_watch">"立即观看"</string>
+    <string name="tv_edit">"编辑频道"</string>
+    <string name="tv_artwork">"选择缩略图"</string>
+    <string name="tv_restore">"恢复原始信息"</string>
+    <string name="tv_error_network">"连接失败，请检查网络后重试。"</string>
+    <string name="tv_error_blocked">"不允许此地址，请使用公共服务器的 HTTPS 地址。"</string>
+    <string name="tv_error_forbidden">"服务拒绝访问，该频道可能不支持你所在的地区。"</string>
+    <string name="tv_error_not_found">"找不到来源，请尝试其他目录或链接。"</string>
+    <string name="tv_error_large">"内容过大，无法安全加载。"</string>
+    <string name="tv_error_format">"不支持此格式，请选择单个 HLS 串流。"</string>
+    <string name="tv_error_live">"此来源不是直播。"</string>
+    <string name="tv_retry">"重试"</string>
+    <string name="tv_return">"移回此屏幕"</string>
+    <string name="tv_save_unverified">"再次点击保存，以保留此未经验证的频道。"</string>
+    <string name="tv_search">"搜索频道或目录"</string>
+    <string name="tv_replace_title">"切换到电视？"</string>
+    <string name="tv_replace_description">"打开此频道将关闭当前视频。是否继续？"</string>
+    <string name="tv_optional_title">"缩略图标题（可选）"</string>
+    <string name="tv_favorite_add">"添加到收藏？"</string>
+    <string name="tv_favorite_remove">"从收藏中移除？"</string>
+    <string name="tv_sleep_title">"电视已暂停"</string>
+    <string name="tv_sleep_message">"休眠时已断开直播连接。是否重新连接？"</string>
+    <string name="info_tv_sources">电视：Media3 · 用户提供的来源</string>
+</resources>

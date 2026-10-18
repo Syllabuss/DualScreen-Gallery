@@ -1,0 +1,4 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="launcher_icon_title">アプリアイコン</string>
+    <string name="dual_screen_disclaimer">2画面向けに設計されています。1画面モードは試験的な機能で、まだ十分に検証されていません。</string>
+</resources>

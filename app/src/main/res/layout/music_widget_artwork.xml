@@ -1,0 +1,28 @@
+<FrameLayout android:id="@+id/widget_root" xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@android:color/transparent" android:descendantFocusability="afterDescendants">
+    <ImageView android:id="@+id/widget_background" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="fitXY" android:importantForAccessibility="no" />
+    <FrameLayout android:id="@+id/widget_effect_disc" android:layout_width="match_parent" android:layout_height="match_parent" android:visibility="gone" android:importantForAccessibility="no" />
+    <FrameLayout android:id="@+id/widget_effect_pulse" android:layout_width="match_parent" android:layout_height="match_parent" android:visibility="gone" android:importantForAccessibility="no" />
+    <ImageView android:id="@+id/widget_effect_bars" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="fitCenter" android:visibility="gone" android:importantForAccessibility="no" />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:padding="8dp">
+        <LinearLayout android:id="@+id/widget_header" android:layout_width="match_parent" android:layout_height="32dp" android:orientation="horizontal" android:gravity="center_vertical" android:background="@drawable/widget_title_overlay">
+            <FrameLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent">
+            <TextView android:id="@+id/widget_title" style="@style/WidgetTitle" android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center_vertical" android:paddingStart="8dp" android:paddingEnd="4dp" android:textSize="13sp" android:ellipsize="marquee" android:marqueeRepeatLimit="marquee_forever" android:focusable="true" android:focusableInTouchMode="true"><requestFocus /></TextView>
+                <FrameLayout android:id="@+id/widget_title_scroll" android:layout_width="match_parent" android:layout_height="match_parent" android:importantForAccessibility="no" />
+            </FrameLayout>
+            <ImageButton android:id="@+id/widget_shuffle" style="@style/WidgetButton" android:layout_width="32dp" android:layout_height="32dp" android:padding="7dp" android:src="@drawable/ph_arrow_right" android:contentDescription="@string/text_shuffle_169374" />
+        </LinearLayout>
+        <ImageView android:id="@+id/widget_cover" android:layout_width="0dp" android:layout_height="0dp" android:visibility="gone" android:focusable="true" android:contentDescription="@string/widget_open_cover" />
+        <TextView android:id="@+id/widget_artist" style="@style/WidgetSecondary" android:visibility="gone" />
+        <TextView android:id="@+id/widget_status" style="@style/WidgetSecondary" android:visibility="gone" />
+        <Chronometer android:id="@+id/widget_elapsed" style="@style/WidgetSecondary" android:visibility="gone" />
+        <TextView android:id="@+id/widget_duration" style="@style/WidgetSecondary" android:visibility="gone" />
+        <ImageView android:id="@+id/widget_progress" android:layout_width="0dp" android:layout_height="0dp" android:visibility="gone" />
+        <ImageButton android:id="@+id/widget_favorite" style="@style/WidgetButton" android:visibility="gone" />
+        <FrameLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="40dp" android:orientation="horizontal" android:gravity="center">
+            <ImageButton android:id="@+id/widget_previous" style="@style/WidgetButton" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:padding="9dp" android:src="@drawable/ph_skip_back" android:contentDescription="@string/widget_previous" />
+            <ImageButton android:id="@+id/widget_play" style="@style/WidgetButton" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:padding="9dp" android:src="@drawable/ph_play" android:contentDescription="@string/widget_play" />
+            <ImageButton android:id="@+id/widget_next" style="@style/WidgetButton" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:padding="9dp" android:src="@drawable/ph_skip_forward" android:contentDescription="@string/widget_next" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

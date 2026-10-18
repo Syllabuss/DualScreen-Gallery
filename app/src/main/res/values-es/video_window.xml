@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="video_pip">Vídeo en ventana</string>
+    <string name="video_pip_active">Reproducción en ventana</string>
+    <string name="video_pip_description">El vídeo continúa en la ventana de Android. Explora la galería o abre otras aplicaciones. Usa los controles de la ventana para ampliarla o cerrarla.</string>
+    <string name="video_pip_unavailable">La ventana de vídeo no está disponible. Revisa el permiso de imagen en imagen en los ajustes de Android.</string>
+    <string name="video_return_screen">"Volver a mostrar el vídeo en esta pantalla"</string>
+</resources>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ftp_title">FTP-Freigabe</string>
+    <string name="ftp_wifi_required">Verbinde den Thor und das andere Gerät mit demselben WLAN.</string>
+    <string name="ftp_notification">Der gewählte Ordner ist im lokalen Netzwerk verfügbar.</string>
+    <string name="ftp_stop">Freigabe beenden</string>
+    <string name="ftp_start">Freigabe starten</string>
+    <string name="ftp_folder">Freigegebener Ordner</string>
+    <string name="ftp_description">Sende und empfange Dateien vom Computer oder Telefon im gewählten Ordner. Die Freigabe bleibt aktiv, bis du sie beendest.</string>
+    <string name="ftp_connect">Verbindung herstellen</string>
+    <string name="ftp_security">Nutze einen FTP-Client auf dem anderen Gerät. Nur in vertrauenswürdigen Netzwerken: FTP verschlüsselt keine Übertragungen. Vorhandene Dateien werden nicht überschrieben und können nicht aus der Ferne gelöscht werden.</string>
+    <string name="ftp_password">Passwort</string>
+    <string name="ftp_username">Benutzername</string>
+    <string name="ftp_choose">Ordner wählen</string>
+    <string name="ftp_enabled">FTP in der Navigationsleiste anzeigen</string>
+    <string name="ftp_transfers">Übertragungen</string>
+    <string name="ftp_received">Empfangen</string>
+    <string name="ftp_receiving">Empfang läuft</string>
+    <string name="ftp_failed">Übertragung unterbrochen</string>
+</resources>

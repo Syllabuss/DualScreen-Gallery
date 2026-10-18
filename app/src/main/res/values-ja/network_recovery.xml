@@ -1,0 +1,22 @@
+<resources>
+    <string name="network_host_error">PC名が見つかりません。同じネットワークのIPアドレスを使ってください。</string>
+    <string name="network_offline_error">PCに接続できません。Wi-Fi、SMBポート、ファイアウォールを確認してください。</string>
+    <string name="network_timeout_error">PCが応答しません。ネットワークを確認して再試行してください。</string>
+    <string name="network_auth_error">ログインが拒否されました。ユーザー名、パスワード、ドメインを確認してください。</string>
+    <string name="network_share_error">共有が見つかりません。共有フォルダー名を確認してください。</string>
+    <string name="network_permission_error">アクセス権がありません。PCのフォルダー権限を確認してください。</string>
+    <string name="network_recovery">転送を復旧</string>
+    <string name="network_recovery_help">同じ転送元と転送先のフォルダーに再接続してください。検証済みのコピーを確認してから再開します。</string>
+    <string name="network_source">転送元</string>
+    <string name="network_destination">転送先</string>
+    <string name="network_resume">再開</string>
+    <string name="sound_preview_pin">プレビューを固定</string>
+    <string name="sound_preview_unpin">プレビュー固定を解除</string>
+    <string name="sound_comparison_first">最初の比較</string>
+    <string name="sound_comparison_second">2つ目の比較</string>
+    <string name="sound_comparison_close">比較を閉じる</string>
+    <string name="sound_network_transfer">転送開始</string>
+    <string name="sound_zoom_out">グリッドを縮小</string>
+    <string name="sound_zoom_in">グリッドを拡大</string>
+    <string name="all_animated_album_covers">表示中のすべてのカバーをアニメーション</string>
+</resources>

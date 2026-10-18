@@ -1,0 +1,16 @@
+<resources>
+    <string name="settings_advanced">詳細設定</string>
+    <string name="settings_visible_buttons">表示するボタン</string>
+    <string name="settings_unsaved_title">未保存の変更</string>
+    <string name="settings_unsaved_message">変更を保存せずに終了しますか？</string>
+    <string name="settings_discard">保存せずに終了</string>
+    <string name="settings_keep_editing">編集を続ける</string>
+    <string name="settings_folders_permission">ライブラリでフォルダーを選ぶと、ファイルへのアクセスが許可されます。</string>
+    <string name="settings_organize">フォルダーとコレクション</string>
+    <string name="settings_privacy">プライバシー</string>
+    <string name="settings_file_management">ファイル管理</string>
+    <string name="settings_manage_folders">フォルダーを管理</string>
+    <string name="settings_folder_access_ready">アクセス可能</string>
+    <string name="settings_folder_access_missing">設定が必要</string>
+    <string name="settings_album_tools_note">これらの設定はアルバム内のメディアにも適用されます。</string>
+</resources>

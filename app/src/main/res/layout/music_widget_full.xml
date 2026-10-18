@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<FrameLayout android:id="@+id/widget_root" android:descendantFocusability="afterDescendants" xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/widget_surface">
+    <ImageView android:id="@+id/widget_background" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="fitXY" android:importantForAccessibility="no" />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:padding="8dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:orientation="horizontal" android:gravity="top">
+            <FrameLayout android:layout_width="56dp" android:layout_height="56dp">
+                <ImageView android:id="@+id/widget_cover" android:scaleType="fitCenter" android:focusable="true" android:contentDescription="@string/widget_open_cover" android:layout_width="match_parent" android:layout_height="match_parent" />
+                <FrameLayout android:id="@+id/widget_effect_disc" android:layout_width="match_parent" android:layout_height="match_parent" android:visibility="gone" android:importantForAccessibility="no" />
+                <FrameLayout android:id="@+id/widget_effect_pulse" android:layout_width="match_parent" android:layout_height="match_parent" android:visibility="gone" android:importantForAccessibility="no" />
+                <ImageView android:id="@+id/widget_effect_bars" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="fitCenter" android:visibility="gone" android:importantForAccessibility="no" />
+            </FrameLayout>
+            <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_marginStart="10dp" android:orientation="vertical">
+                <TextView android:id="@+id/widget_title" style="@style/WidgetTitle" android:maxLines="1" />
+                <TextView android:id="@+id/widget_artist" style="@style/WidgetSecondary" android:layout_marginTop="4dp" />
+                <TextView android:id="@+id/widget_status" style="@style/WidgetSecondary" android:visibility="gone" />
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="4dp">
+                    <Chronometer android:id="@+id/widget_elapsed" style="@style/WidgetSecondary" android:layout_width="wrap_content" />
+                    <TextView android:id="@+id/widget_duration" style="@style/WidgetSecondary" android:layout_width="wrap_content" />
+                </LinearLayout>
+                <ImageView android:id="@+id/widget_progress" android:layout_width="match_parent" android:layout_height="3dp" android:layout_marginTop="4dp" android:scaleType="fitXY" />
+            </LinearLayout>
+        </LinearLayout>
+        <ImageButton android:id="@+id/widget_favorite" style="@style/WidgetButton" android:visibility="gone" />
+        <LinearLayout android:layout_width="200dp" android:layout_height="48dp" android:layout_marginTop="4dp" android:orientation="horizontal" android:gravity="start">
+            <ImageButton android:id="@+id/widget_previous" style="@style/WidgetButton" android:layout_width="0dp" android:layout_weight="1" android:src="@drawable/ph_skip_back" android:contentDescription="@string/widget_previous" />
+            <ImageButton android:id="@+id/widget_play" style="@style/WidgetButton" android:layout_width="0dp" android:layout_weight="1" android:src="@drawable/ph_play" android:contentDescription="@string/widget_play" />
+            <ImageButton android:id="@+id/widget_next" style="@style/WidgetButton" android:layout_width="0dp" android:layout_weight="1" android:src="@drawable/ph_skip_forward" android:contentDescription="@string/widget_next" />
+            <ImageButton android:id="@+id/widget_shuffle" style="@style/WidgetButton" android:layout_width="0dp" android:layout_weight="1" android:src="@drawable/ph_shuffle" android:contentDescription="@string/text_shuffle_169374" android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

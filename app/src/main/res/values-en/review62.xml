@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:locale="en">
+    <string name="video_flow_mode">Playback mode</string>
+    <string name="action_menus_below">Actions on the browsing screen</string>
+    <string name="explorer_copy">Copy</string>
+    <string name="explorer_move">Move</string>
+    <string name="explorer_continue">Continue</string>
+    <string name="explorer_transfer_error">Operation interrupted. Check originals and copies before retrying.</string>
+    <string name="explorer_transfer_help">The destination is the folder open on the other panel. Existing files are kept. Move removes the source only after verifying the copy.</string>
+    <string name="explorer_extract">Extract archive</string>
+    <string name="explorer_move_folders_help">Verified files are moved while the original folders are kept. Empty folders are not deleted.</string>
+</resources>

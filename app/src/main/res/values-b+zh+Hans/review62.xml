@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:locale="zh">
+    <string name="video_flow_mode">播放模式</string>
+    <string name="action_menus_below">在浏览屏幕上显示操作</string>
+    <string name="explorer_copy">复制</string>
+    <string name="explorer_move">移动</string>
+    <string name="explorer_continue">继续</string>
+    <string name="explorer_transfer_error">操作已中断。重试前请检查原件和副本。</string>
+    <string name="explorer_transfer_help">目标为另一屏幕中打开的文件夹。已有文件会保留。移动仅在验证副本后删除原文件。</string>
+    <string name="explorer_extract">解压文件</string>
+    <string name="explorer_move_folders_help">移动已验证的文件，同时保留原文件夹。不会删除空文件夹。</string>
+</resources>

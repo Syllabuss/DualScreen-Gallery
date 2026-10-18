@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="playback_sleep_continue">"本体を閉じても再生を続ける"</string>
+    <string name="music_sleep_help">"再生中の音楽だけを継続します。電池消費が増える場合があります。一時停止中の曲は再生しません。"</string>
+    <string name="video_sleep_help">"再生中の動画またはチャンネルだけを継続します。デコードと通信が続くため、電池消費、発熱、ファン動作が増える場合があります。"</string>
+</resources>

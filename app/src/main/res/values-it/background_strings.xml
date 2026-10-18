@@ -1,0 +1,7 @@
+<resources>
+    <string name="gallery_background_title">Sfondo della galleria</string>
+    <string name="gallery_background_description">Personalizza solo lo sfondo della navigazione. Le anteprime e i file restano invariati.</string>
+    <string name="gallery_background_gradient">Sfumatura</string>
+    <string name="gallery_background_photo">Immagine</string>
+    <string name="gallery_background_opacity">Opacità</string>
+</resources>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ftp_title">FTP共有</string>
+    <string name="ftp_wifi_required">Thorとほかの端末を同じWi-Fiネットワークに接続してください。</string>
+    <string name="ftp_notification">選択したフォルダーをローカルネットワークで利用できます。</string>
+    <string name="ftp_stop">共有を停止</string>
+    <string name="ftp_start">共有を開始</string>
+    <string name="ftp_folder">共有フォルダー</string>
+    <string name="ftp_description">選択したフォルダーでパソコンやスマートフォンとファイルを送受信できます。停止するまで共有が続きます。</string>
+    <string name="ftp_connect">接続方法</string>
+    <string name="ftp_security">ほかの端末でFTPクライアントを使用してください。信頼できるネットワークでのみ使用してください。FTP通信は暗号化されません。既存のファイルは上書きされず、リモートから削除することもできません。</string>
+    <string name="ftp_password">パスワード</string>
+    <string name="ftp_username">ユーザー名</string>
+    <string name="ftp_choose">フォルダーを選択</string>
+    <string name="ftp_enabled">ナビゲーションバーにFTPを表示</string>
+    <string name="ftp_transfers">転送</string>
+    <string name="ftp_received">受信済み</string>
+    <string name="ftp_receiving">受信中</string>
+    <string name="ftp_failed">転送が中断されました</string>
+</resources>

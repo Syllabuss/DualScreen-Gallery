@@ -1,0 +1,9 @@
+<resources>
+    <string name="album_lock_action">잠금</string>
+    <string name="album_unlock_action">잠금 해제</string>
+    <string name="album_pin_settings">앨범 PIN</string>
+    <string name="album_pin_shared">모든 보호된 앨범에 같은 PIN을 사용합니다.</string>
+    <string name="album_pin_add">PIN 추가</string>
+    <string name="album_pin_change">PIN 변경</string>
+    <string name="preview_rotate">미리보기를 90° 회전</string>
+</resources>

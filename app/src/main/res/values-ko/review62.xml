@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:locale="ko">
+    <string name="video_flow_mode">재생 모드</string>
+    <string name="action_menus_below">탐색 화면에 작업 표시</string>
+    <string name="explorer_copy">복사</string>
+    <string name="explorer_move">이동</string>
+    <string name="explorer_continue">계속</string>
+    <string name="explorer_transfer_error">작업이 중단되었습니다. 다시 시도하기 전에 원본과 사본을 확인하세요.</string>
+    <string name="explorer_transfer_help">대상은 다른 화면에 열린 폴더입니다. 기존 파일은 보존됩니다. 이동은 복사본을 검증한 후에만 원본을 삭제합니다.</string>
+    <string name="explorer_extract">압축 풀기</string>
+    <string name="explorer_move_folders_help">검증된 파일을 이동하고 원래 폴더는 유지합니다. 빈 폴더는 삭제하지 않습니다.</string>
+</resources>

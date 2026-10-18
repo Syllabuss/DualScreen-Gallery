@@ -1,0 +1,11 @@
+<resources>
+    <string name="video_exit_playback">Выйти из воспроизведения</string>
+    <string name="video_resume_title">Продолжить видео?</string>
+    <string name="video_resume_description">Продолжить с %1$s или начать сначала.</string>
+    <string name="video_resume_controller_hint">Контроллер: A — продолжить · Y — сначала · B — отменить</string>
+    <string name="video_resume_action">Продолжить</string>
+    <string name="video_restart_action">Начать сначала</string>
+    <string name="editor_save_mp3">Сохранить как MP3</string>
+    <string name="editor_pcm_unsupported">Неподдерживаемый формат декодированного аудио</string>
+    <string name="editor_decoder_timeout">Декодирование аудио не отвечает. Исходный файл не изменён.</string>
+</resources>

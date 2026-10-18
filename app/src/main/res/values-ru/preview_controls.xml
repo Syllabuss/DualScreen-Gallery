@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="preview_pin_setting">Кнопка закрепления предпросмотра</string>
+    <string name="preview_compare_setting">Сравнение в плавающих окнах</string>
+    <string name="preview_unpin_title">Изменить предпросмотр?</string>
+    <string name="preview_unpin_description">Это изображение закреплено. Открытие другого файла открепит его. Продолжить?</string>
+    <string name="preview_overlay_permission">Разрешите DS Gallery показывать до двух изображений или анимированных GIF поверх других приложений. Перетаскивайте для перемещения и используйте два пальца для изменения размера. Нажатие показывает или скрывает крестик закрытия. Перетащите за боковой край, чтобы свернуть в кружок; нажмите на него или потяните внутрь для восстановления окна.</string>
+    <string name="preview_compare_limit">Уже открыты два окна сравнения. Сначала закройте одно.</string>
+    <string name="video_keep_playing">Продолжать в окне</string>
+    <string name="animated_album_covers">Анимированные GIF-обложки альбомов</string>
+    <string name="preview_pin_description">Закрепите фото или GIF кнопкой в предпросмотре и просматривайте другие файлы. Музыка, FTP и настройки остаются доступны.</string>
+    <string name="video_keep_playing_description">Видео продолжает играть в окне при открытии других файлов, музыки, FTP или настроек. Отключите, чтобы ставить его на паузу.</string>
+    <string name="preview_restore_overlay">Показать снова</string>
+</resources>

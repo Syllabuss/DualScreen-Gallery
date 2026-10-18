@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:locale="it">
+    <string name="preview_pin_setting">Pulsante Fissa anteprima</string>
+    <string name="preview_compare_setting">Confronti in finestre mobili</string>
+    <string name="preview_unpin_title">Cambiare anteprima?</string>
+    <string name="preview_unpin_description">Questa immagine è fissata. Aprire un altro media rimuoverà il PIN dall’anteprima. Vuoi continuare?</string>
+    <string name="preview_overlay_permission">Consenti a DS Gallery di mostrare fino a due immagini o GIF animate sopra le altre app. Trascina per spostarle e usa due dita per ridimensionarle. Un tap mostra o nasconde la X per chiudere. Trascinale oltre un bordo laterale per ridurle a una bolla; tocca la bolla o trascinala verso l’interno per recuperarle.</string>
+    <string name="preview_compare_limit">Sono già aperti due confronti. Chiudine uno prima di aggiungerne un altro.</string>
+    <string name="video_keep_playing">Continua in finestra</string>
+    <string name="animated_album_covers">Copertine GIF animate degli album</string>
+    <string name="preview_pin_description">Fissa una foto o GIF con la puntina nell’anteprima. Puoi sfogliare altri media senza cambiarla; Musica, FTP e impostazioni restano disponibili.</string>
+    <string name="video_keep_playing_description">Il video continua in finestra quando apri altri media, Musica, FTP o impostazioni. Disattiva per metterlo in pausa.</string>
+    <string name="preview_restore_overlay">Mostra di nuovo</string>
+</resources>

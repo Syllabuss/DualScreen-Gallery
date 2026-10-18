@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="preview_pin_setting">Pin preview button</string>
+    <string name="preview_compare_setting">Floating image comparisons</string>
+    <string name="preview_unpin_title">Change the preview?</string>
+    <string name="preview_unpin_description">This image is pinned. Opening another media item will unpin it. Continue?</string>
+    <string name="preview_overlay_permission">Allow DS Gallery to show up to two images or animated GIFs above other apps. Drag to move and use two fingers to resize. Tap to show or hide the close X. Drag beyond a side edge to park it as a bubble; tap or swipe the bubble inward to restore it.</string>
+    <string name="preview_compare_limit">Two comparisons are already open. Close one before adding another.</string>
+    <string name="video_keep_playing">Keep playing in a window</string>
+    <string name="animated_album_covers">Animated GIF album covers</string>
+    <string name="preview_pin_description">Use the pin in the preview to hold a photo or GIF while browsing other media. Music, FTP and settings stay available.</string>
+    <string name="video_keep_playing_description">Video keeps playing in a window when you open other media, Music, FTP or settings. Turn off to pause it.</string>
+    <string name="preview_restore_overlay">Show again</string>
+</resources>

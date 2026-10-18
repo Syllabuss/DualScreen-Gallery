@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tutorial_folder_compact_body">Wähle deine Medien. Unterordner werden zu Alben.</string>
+    <string name="tutorial_permission_compact_purpose">Ordner: Medien. Benachrichtigungen: Player. Überlagerungen: Vergleiche. Nur bei Bedarf.</string>
+    <string name="tutorial_permission_compact_body">Ordner öffnen → Diesen Ordner verwenden → Zulassen. Für Download einen Unterordner wählen.</string>
+    <string name="tutorial_actions_short">Aktionen und Einstellungen</string>
+    <string name="info_licenses">Lizenzen und Komponenten</string>
+    <string name="controller_guide_image_title">Vergrößerte Bilder</string>
+    <string name="controller_guide_image_body">Nur bei vergrößerten Bildern: linker Stick verschiebt das Bild; rechter Stick oben/unten zoomt. Das Steuerkreuz durchsucht Medien.</string>
+</resources>

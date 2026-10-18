@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="preview_nearest">Pixel netti (Nearest-neighbor) </string>
+    <string name="preview_nearest_help">Mantiene i pixel netti durante lo zoom, senza sfumarli. Disattivato usa il filtro standard.</string>
+</resources>

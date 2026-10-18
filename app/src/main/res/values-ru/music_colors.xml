@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="music_colors_title">Цвета плеера</string>
+    <string name="music_colors_theme">Тема</string>
+    <string name="music_colors_artwork">Из обложки</string>
+    <string name="music_colors_custom">Свои цвета</string>
+    <string name="music_colors_description">Используйте тему, обложку на весь экран с подходящими цветами или свои цвета. Без обложки остаётся фон темы. Свои цвета применяются без изменений и дополнительных градиентов.</string>
+    <string name="music_colors_background">Фон</string>
+    <string name="music_colors_bars">Полосы</string>
+</resources>

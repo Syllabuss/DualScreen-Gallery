@@ -1,0 +1,20 @@
+<resources>
+    <string name="explorer_share">Ordner freigeben</string>
+    <string name="explorer_browse">Geräte durchsuchen</string>
+    <string name="explorer_device">Auf diesem Gerät</string>
+    <string name="explorer_computer">Computer</string>
+    <string name="explorer_control">Hier steuern</string>
+    <string name="explorer_connect">Computer verbinden</string>
+    <string name="explorer_refresh">Aktualisieren</string>
+    <string name="explorer_local_intro">Wähle einen Ordner. Die Dateien bleiben an ihrem Ort.</string>
+    <string name="explorer_remote_intro">Öffne einen freigegebenen Ordner auf deinem Computer.</string>
+    <string name="explorer_empty">Leerer Ordner</string>
+    <string name="explorer_read_only">Nur Lesen: Dateien werden nicht verändert.</string>
+    <string name="explorer_connection_help">Nutze dasselbe WLAN und einen freigegebenen Ordner auf dem Computer. Gib Adresse und Zugangsdaten ein.</string>
+    <string name="explorer_password_help">Nutze das Kontopasswort, nicht die Windows-PIN. Es wird nicht gespeichert.</string>
+    <string name="explorer_address">Freigegebener Ordner</string>
+    <string name="explorer_address_invalid">Gib eine Adresse wie \\\\PC\\Fotos oder smb://PC/Fotos ein.</string>
+    <string name="explorer_local_error">Ordner nicht verfügbar. Wähle ihn erneut, um Zugriff zu erlauben.</string>
+    <string name="explorer_remote_error">Verbindung fehlgeschlagen. Prüfe Netzwerk, Freigabe und Zugangsdaten.</string>
+    <string name="explorer_example_help">Die Anfangswerte sind Beispiele. Bitte ersetze sie durch die Adresse deines freigegebenen Ordners und dein Computerkonto.</string>
+</resources>

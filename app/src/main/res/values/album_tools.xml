@@ -1,0 +1,26 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:locale="it">
+    <string name="protected_album">Album protetto</string>
+    <string name="protect_albums">Proteggi con PIN</string>
+    <string name="unprotect_albums">Rimuovi protezione</string>
+    <string name="unlock_album">Sblocca album</string>
+    <string name="pin_create">Crea il tuo PIN</string>
+    <string name="pin_confirm">Ripeti il PIN</string>
+    <string name="pin_enter">Inserisci il PIN</string>
+    <string name="pin_hint">Quattro cifre per i tuoi album. La copertina resta visibile.</string>
+    <string name="pin_wrong">PIN non corretto. Riprova.</string>
+    <string name="pin_wait">Riprova tra %1$d s</string>
+    <string name="timeline_title">Navigazione cronologica</string>
+    <string name="timeline_off">Nessun raggruppamento</string>
+    <string name="timeline_day">Giorno</string>
+    <string name="timeline_month">Mese</string>
+    <string name="timeline_year">Anno</string>
+    <string name="timeline_unknown">Data sconosciuta</string>
+    <string name="tools_zoom">Pulsanti + e −</string>
+    <string name="tools_view">Pulsante lista / griglia</string>
+    <string name="tools_search">Pulsante ricerca</string>
+    <string name="tools_filter">Filtro dei formati</string>
+    <string name="tools_swap">Pulsante scambia schermi</string>
+    <string name="tools_play">Pulsante riproduci</string>
+    <string name="tools_music_mode">Menu della libreria musicale</string>
+    <string name="tools_hint">Scegli i pulsanti da mostrare. Le scorciatoie del controller restano attive.</string>
+</resources>

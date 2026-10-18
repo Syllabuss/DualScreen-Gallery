@@ -1,0 +1,8 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:locale="it">
+    <string name="widget_appearance">Aspetto</string>
+    <string name="widget_dark">Scuro</string>
+    <string name="widget_light">Chiaro</string>
+    <string name="widget_system">Predefinito di sistema</string>
+    <string name="widget_transparent">Trasparente</string>
+    <string name="widget_bars_color">Colore delle barre</string>
+</resources>

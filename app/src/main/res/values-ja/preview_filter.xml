@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="preview_nearest">くっきりしたピクセル (Nearest-neighbor) </string>
+    <string name="preview_nearest_help">拡大時にピクセルをぼかさず、くっきり表示します。オフにすると標準フィルターを使用します。</string>
+</resources>

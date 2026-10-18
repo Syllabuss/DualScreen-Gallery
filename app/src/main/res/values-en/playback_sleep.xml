@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="playback_sleep_continue">"Keep playing with device closed"</string>
+    <string name="music_sleep_help">"Only music already playing continues. This may use more battery; paused tracks are not started."</string>
+    <string name="video_sleep_help">"Only the video or channel already playing continues. Decoding and networking stay active, which may increase battery use, heat and fan activity."</string>
+</resources>

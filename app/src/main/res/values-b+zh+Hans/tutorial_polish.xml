@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tutorial_folder_compact_body">选择要显示的媒体。子文件夹将成为相册。</string>
+    <string name="tutorial_permission_compact_purpose">文件夹：媒体。通知：播放器。悬浮窗：图片对比。仅在需要时请求。</string>
+    <string name="tutorial_permission_compact_body">打开文件夹 → 使用此文件夹 → 允许。Download 请选择子文件夹。</string>
+    <string name="tutorial_actions_short">操作和设置</string>
+    <string name="info_licenses">许可证和组件</string>
+    <string name="controller_guide_image_title">放大的图片</string>
+    <string name="controller_guide_image_body">仅在放大时：左摇杆移动图片，右摇杆上下调节缩放。方向键浏览媒体。</string>
+</resources>

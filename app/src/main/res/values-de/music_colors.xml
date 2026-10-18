@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="music_colors_title">Player-Farben</string>
+    <string name="music_colors_theme">Design</string>
+    <string name="music_colors_artwork">Aus dem Cover</string>
+    <string name="music_colors_custom">Eigene Farben</string>
+    <string name="music_colors_description">Verwende das Design, ein bildschirmfüllendes Cover mit passenden Farben oder eigene Farben. Ohne Cover bleibt der Designhintergrund. Eigene Farben werden unverändert und ohne zusätzliche Verläufe verwendet.</string>
+    <string name="music_colors_background">Hintergrund</string>
+    <string name="music_colors_bars">Balken</string>
+</resources>

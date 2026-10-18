@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tutorial_permission_purpose">文件夹访问权限用于浏览和管理你选择的媒体。只有使用相应功能时，才会请求通知和悬浮窗权限：播放控制和图片对比。</string>
+</resources>

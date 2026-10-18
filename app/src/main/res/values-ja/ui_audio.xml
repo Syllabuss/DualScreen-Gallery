@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="gif_all_visible">表示中のすべての GIF</string>
+    <string name="hide_gif_badge">GIF ラベルを非表示</string>
+    <string name="ui_sounds">操作音</string>
+<string name="widget_crop">写真の構図を調整</string>
+<string name="widget_crop_hint">ピンチで拡大。ドラッグまたはスティックで写真を移動します。</string>
+<string name="widget_crop_reset">リセット</string>
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="gif_all_visible">所有可见的 GIF</string>
+    <string name="hide_gif_badge">隐藏 GIF 标签</string>
+    <string name="ui_sounds">界面音效</string>
+<string name="widget_crop">调整照片构图</string>
+<string name="widget_crop_hint">双指缩放。拖动或使用摇杆移动照片。</string>
+<string name="widget_crop_reset">重置</string>
+</resources>

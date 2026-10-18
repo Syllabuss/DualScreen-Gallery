@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="gif_current_frame">"현재 프레임 카운터"</string>
+    <string name="gif_frame_selector">"프레임 선택기"</string>
+    <string name="gif_current_of_total">"%1$s / %2$s 프레임"</string>
+</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="gif_current_frame">"Current frame counter"</string>
+    <string name="gif_frame_selector">"Frame selector"</string>
+    <string name="gif_current_of_total">"%1$s / %2$s frames"</string>
+</resources>

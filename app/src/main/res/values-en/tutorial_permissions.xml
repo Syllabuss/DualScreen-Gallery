@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tutorial_permission_purpose">Folder access lets you browse and manage the media you choose. Notifications and display over other apps are requested only for the features that need them: player controls and comparisons.</string>
+</resources>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="album_lock_action">Lock</string>
+    <string name="album_unlock_action">Unlock</string>
+    <string name="album_pin_settings">Album PIN</string>
+    <string name="album_pin_shared">One PIN for all protected albums.</string>
+    <string name="album_pin_add">Add PIN</string>
+    <string name="album_pin_change">Change PIN</string>
+    <string name="preview_rotate">Rotate preview by 90°</string>
+</resources>

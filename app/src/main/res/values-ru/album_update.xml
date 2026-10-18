@@ -1,0 +1,9 @@
+<resources>
+    <string name="album_lock_action">Заблокировать</string>
+    <string name="album_unlock_action">Разблокировать</string>
+    <string name="album_pin_settings">PIN-код альбомов</string>
+    <string name="album_pin_shared">Один PIN-код для всех защищённых альбомов.</string>
+    <string name="album_pin_add">Добавить PIN-код</string>
+    <string name="album_pin_change">Изменить PIN-код</string>
+    <string name="preview_rotate">Повернуть предпросмотр на 90°</string>
+</resources>

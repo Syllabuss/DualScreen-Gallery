@@ -1,0 +1,6 @@
+<resources>
+    <string name="tv_personal_notice_title">Your TV sources</string>
+    <string name="tv_personal_notice_body">DS Gallery includes no channels or playlists and grants no programme rights. Add only official, trusted sources you are authorized to use in your country. A public link or free playlist does not establish permission. Do not use sources that bypass subscriptions, DRM or territorial restrictions. Contacted services receive your IP address. This notice does not remove legal obligations.</string>
+    <string name="tv_personal_source_add">Add playlist</string>
+    <string name="tv_personal_source_help">Enter an HTTPS M3U playlist you are authorized to use. Up to 20 sources; importing never starts playback.</string>
+</resources>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="album_subfolder_count">%1$d subcarpetas</string>
+    <string name="music_mode_playlists">Listas de reproducción</string>
+</resources>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="widget_circle_name">DS Gallery · Player Coin</string>
+    <string name="widget_effect_circle">Circle</string>
+    <string name="widget_choose_track">Choose track</string>
+    <string name="photo_slide_left">Slide left</string>
+    <string name="photo_slide_right">Slide right</string>
+    <string name="photo_slide_up">Slide up</string>
+    <string name="photo_slide_down">Slide down</string>
+    <string name="photo_rotate">Rotate</string>
+</resources>

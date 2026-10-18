@@ -1,0 +1,9 @@
+<resources>
+    <string name="album_lock_action">Verrouiller</string>
+    <string name="album_unlock_action">Déverrouiller</string>
+    <string name="album_pin_settings">PIN des albums</string>
+    <string name="album_pin_shared">Un seul PIN pour tous les albums protégés.</string>
+    <string name="album_pin_add">Ajouter un PIN</string>
+    <string name="album_pin_change">Modifier le PIN</string>
+    <string name="preview_rotate">Tourner l’aperçu de 90°</string>
+</resources>

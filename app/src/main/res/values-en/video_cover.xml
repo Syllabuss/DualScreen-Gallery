@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="video_cover_frame">"Choose cover frame"</string>
+    <string name="album_tile_size">"Album size"</string>
+    <string name="video_cover_current_frame">Set current frame as cover</string>
+</resources>

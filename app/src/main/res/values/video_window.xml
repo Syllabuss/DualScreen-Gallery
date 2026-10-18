@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:locale="it">
+    <string name="video_pip">Video in finestra</string>
+    <string name="video_pip_active">Riproduzione in finestra</string>
+    <string name="video_pip_description">Il video continua nella finestra Android. Puoi sfogliare la galleria o aprire altre app. Usa i controlli della finestra per ingrandirla o chiuderla.</string>
+    <string name="video_pip_unavailable">La finestra video non è disponibile. Controlla il permesso Picture-in-Picture nelle impostazioni Android.</string>
+</resources>

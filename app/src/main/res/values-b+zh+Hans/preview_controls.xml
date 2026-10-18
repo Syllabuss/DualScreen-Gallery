@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="preview_pin_setting">固定预览按钮</string>
+    <string name="preview_compare_setting">浮动窗口图片对比</string>
+    <string name="preview_unpin_title">更换预览？</string>
+    <string name="preview_unpin_description">此图片已固定。打开其他媒体将取消固定。是否继续？</string>
+    <string name="preview_overlay_permission">允许DS Gallery在其他应用上方显示最多两张图片或动画GIF。拖动可移动，双指可调整大小。轻点可显示或隐藏关闭X。拖到侧边之外可收起为小圆钮；轻点圆钮或向内滑动即可恢复窗口。</string>
+    <string name="preview_compare_limit">已打开两个对比窗口。请先关闭一个。</string>
+    <string name="video_keep_playing">在窗口中继续播放</string>
+    <string name="animated_album_covers">相册 GIF 封面动画</string>
+    <string name="preview_pin_description">使用预览中的图钉固定照片或 GIF，同时浏览其他媒体。音乐、FTP 和设置仍可使用。</string>
+    <string name="video_keep_playing_description">打开其他媒体、音乐、FTP 或设置时，视频会在窗口中继续播放。关闭后将暂停。</string>
+    <string name="preview_restore_overlay">重新显示</string>
+</resources>

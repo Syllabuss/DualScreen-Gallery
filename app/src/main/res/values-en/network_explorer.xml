@@ -1,0 +1,20 @@
+<resources>
+    <string name="explorer_share">Share folder</string>
+    <string name="explorer_browse">Explore devices</string>
+    <string name="explorer_device">On this device</string>
+    <string name="explorer_computer">Computer</string>
+    <string name="explorer_control">Control here</string>
+    <string name="explorer_connect">Connect computer</string>
+    <string name="explorer_refresh">Refresh</string>
+    <string name="explorer_local_intro">Choose a folder to explore. Files stay where they are.</string>
+    <string name="explorer_remote_intro">Open a shared folder on your computer.</string>
+    <string name="explorer_empty">Empty folder</string>
+    <string name="explorer_read_only">Read-only browsing: no files are changed.</string>
+    <string name="explorer_connection_help">Use the same Wi-Fi network and a shared folder on the computer. Enter its address and sign-in credentials.</string>
+    <string name="explorer_password_help">Use the account password, not the Windows PIN. It is not saved.</string>
+    <string name="explorer_address">Shared folder</string>
+    <string name="explorer_address_invalid">Enter an address such as \\\\PC\\Photos or smb://PC/Photos.</string>
+    <string name="explorer_local_error">This folder is unavailable. Choose it again to allow access.</string>
+    <string name="explorer_remote_error">Connection failed. Check the network, shared folder and credentials, then retry.</string>
+    <string name="explorer_example_help">The initial values are examples. Please replace them with your shared folder address and computer account.</string>
+</resources>

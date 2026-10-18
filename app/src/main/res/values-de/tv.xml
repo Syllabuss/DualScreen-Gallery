@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tv_title">"Online-TV"</string>
+    <string name="tv_enabled">"Online-TV aktivieren"</string>
+    <string name="tv_navbar">"TV in der Navigationsleiste anzeigen"</string>
+    <string name="tv_favorites">"TV-Sender in Favoriten anzeigen"</string>
+    <string name="tv_my_channels">"Meine Sender"</string>
+    <string name="tv_browse">"Sender durchsuchen"</string>
+    <string name="tv_empty">"Keine TV-Sender"</string>
+    <string name="tv_empty_help">Gib eine autorisierte HTTPS-M3U-Playlist ein. Bis zu 20 Quellen; der Import startet keine Wiedergabe.</string>
+    <string name="tv_add">"Sender hinzufügen"</string>
+    <string name="tv_url">"HTTPS-URL des Streams"</string>
+    <string name="tv_unverified">"Nur ein HLS-Stream. Der Link wird ohne Wiedergabe geprüft."</string>
+    <string name="tv_network_notice">"Kataloge, Logos und Sender verbinden sich mit externen Diensten, die deine IP-Adresse sehen."</string>
+    <string name="tv_countries">"Länder"</string>
+    <string name="tv_languages">"Sprachen"</string>
+    <string name="tv_categories">"Kategorien"</string>
+    <string name="tv_sources">"Quellen"</string>
+    <string name="tv_watch">"Jetzt ansehen"</string>
+    <string name="tv_edit">"Sender bearbeiten"</string>
+    <string name="tv_artwork">"Vorschaubild auswählen"</string>
+    <string name="tv_restore">"Ursprüngliche Angaben wiederherstellen"</string>
+    <string name="tv_error_network">"Verbindung fehlgeschlagen. Prüfe dein Netzwerk und versuche es erneut."</string>
+    <string name="tv_error_blocked">"Adresse nicht erlaubt. Verwende HTTPS auf einem öffentlichen Server."</string>
+    <string name="tv_error_forbidden">"Der Dienst verweigert den Zugriff. Der Sender ist möglicherweise in deiner Region nicht verfügbar."</string>
+    <string name="tv_error_not_found">"Quelle nicht gefunden. Versuche einen anderen Katalog oder Link."</string>
+    <string name="tv_error_large">"Der Inhalt ist für sicheres Laden zu groß."</string>
+    <string name="tv_error_format">"Nicht unterstütztes Format. Wähle einen einzelnen HLS-Stream."</string>
+    <string name="tv_error_live">"Diese Quelle ist kein Livestream."</string>
+    <string name="tv_retry">"Erneut versuchen"</string>
+    <string name="tv_return">"Auf diesen Bildschirm zurückholen"</string>
+    <string name="tv_save_unverified">"Drücke erneut Speichern, um den ungeprüften Sender zu behalten."</string>
+    <string name="tv_search">"Sender oder Kataloge suchen"</string>
+    <string name="tv_replace_title">"Zum Fernsehen wechseln?"</string>
+    <string name="tv_replace_description">"Das aktuelle Video wird geschlossen, um diesen Sender zu öffnen. Fortfahren?"</string>
+    <string name="tv_optional_title">"Titel auf dem Vorschaubild (optional)"</string>
+    <string name="tv_favorite_add">"Zu Favoriten hinzufügen?"</string>
+    <string name="tv_favorite_remove">"Aus Favoriten entfernen?"</string>
+    <string name="tv_sleep_title">"TV pausiert"</string>
+    <string name="tv_sleep_message">"Die Live-Verbindung wurde im Ruhemodus geschlossen. Erneut verbinden?"</string>
+    <string name="info_tv_sources">TV: Media3 · vom Nutzer bereitgestellte Quellen</string>
+</resources>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="widget_appearance">外观</string>
+    <string name="widget_dark">深色</string>
+    <string name="widget_light">浅色</string>
+    <string name="widget_system">系统默认</string>
+    <string name="widget_transparent">透明</string>
+    <string name="widget_bars_color">频谱条颜色</string>
+</resources>

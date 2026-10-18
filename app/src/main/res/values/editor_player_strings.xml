@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:locale="it">
+    <string name="video_exit_playback">Esci dalla riproduzione</string>
+    <string name="video_resume_title">Riprendere il video?</string>
+    <string name="video_resume_description">Riprendi da %1$s oppure ricomincia dall’inizio.</string>
+    <string name="video_resume_controller_hint">Controller: A riprende · Y ricomincia · B esce</string>
+    <string name="video_resume_action">Continua</string>
+    <string name="video_restart_action">Ricomincia</string>
+    <string name="editor_save_mp3">Salva come MP3</string>
+    <string name="editor_pcm_unsupported">Formato audio decodificato non supportato</string>
+    <string name="editor_decoder_timeout">La decodifica audio non risponde. Nessun originale modificato.</string>
+</resources>

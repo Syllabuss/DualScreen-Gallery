@@ -1,0 +1,26 @@
+<resources>
+    <string name="protected_album">Protected album</string>
+    <string name="protect_albums">Protect with PIN</string>
+    <string name="unprotect_albums">Remove protection</string>
+    <string name="unlock_album">Unlock album</string>
+    <string name="pin_create">Create your PIN</string>
+    <string name="pin_confirm">Confirm PIN</string>
+    <string name="pin_enter">Enter PIN</string>
+    <string name="pin_hint">Four digits for your albums. The cover stays visible.</string>
+    <string name="pin_wrong">Incorrect PIN. Try again.</string>
+    <string name="pin_wait">Try again in %1$d s</string>
+    <string name="timeline_title">Chronological browsing</string>
+    <string name="timeline_off">No grouping</string>
+    <string name="timeline_day">Day</string>
+    <string name="timeline_month">Month</string>
+    <string name="timeline_year">Year</string>
+    <string name="timeline_unknown">Unknown date</string>
+    <string name="tools_zoom">+ and − buttons</string>
+    <string name="tools_view">List / grid button</string>
+    <string name="tools_search">Search button</string>
+    <string name="tools_filter">Format filter</string>
+    <string name="tools_swap">Swap screens button</string>
+    <string name="tools_play">Play button</string>
+    <string name="tools_music_mode">Music library menu</string>
+    <string name="tools_hint">Choose which buttons to show. Controller shortcuts remain available.</string>
+</resources>

@@ -1,0 +1,9 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:locale="it">
+    <string name="album_lock_action">Blocca</string>
+    <string name="album_unlock_action">Sblocca</string>
+    <string name="album_pin_settings">PIN degli album</string>
+    <string name="album_pin_shared">Un solo PIN per tutti gli album protetti.</string>
+    <string name="album_pin_add">Aggiungi PIN</string>
+    <string name="album_pin_change">Cambia PIN</string>
+    <string name="preview_rotate">Ruota anteprima di 90°</string>
+</resources>

@@ -1,0 +1,22 @@
+<resources>
+    <string name="network_host_error">Equipo no encontrado. Usa su IP en la misma red.</string>
+    <string name="network_offline_error">Equipo inaccesible. Revisa Wi-Fi, puerto SMB y cortafuegos.</string>
+    <string name="network_timeout_error">El equipo no responde. Revisa la red y reintenta.</string>
+    <string name="network_auth_error">Acceso rechazado. Revisa usuario, contraseña y dominio.</string>
+    <string name="network_share_error">Recurso compartido no encontrado. Revisa su nombre.</string>
+    <string name="network_permission_error">Permiso denegado. Revisa los permisos de la carpeta del equipo.</string>
+    <string name="network_recovery">Recuperar transferencia</string>
+    <string name="network_recovery_help">Reconecta las mismas carpetas de origen y destino. Las copias verificadas se comprobarán antes de continuar.</string>
+    <string name="network_source">Origen</string>
+    <string name="network_destination">Destino</string>
+    <string name="network_resume">Continuar</string>
+    <string name="sound_preview_pin">Fijar vista previa</string>
+    <string name="sound_preview_unpin">Liberar vista previa</string>
+    <string name="sound_comparison_first">Primera comparación</string>
+    <string name="sound_comparison_second">Segunda comparación</string>
+    <string name="sound_comparison_close">Cerrar comparación</string>
+    <string name="sound_network_transfer">Iniciar transferencia</string>
+    <string name="sound_zoom_out">Reducir cuadrícula</string>
+    <string name="sound_zoom_in">Ampliar cuadrícula</string>
+    <string name="all_animated_album_covers">Animar todas las portadas visibles</string>
+</resources>

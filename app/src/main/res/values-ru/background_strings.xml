@@ -1,0 +1,7 @@
+<resources>
+    <string name="gallery_background_title">Фон галереи</string>
+    <string name="gallery_background_description">Изменяется только фон навигации. Предпросмотр и файлы остаются без изменений.</string>
+    <string name="gallery_background_gradient">Градиент</string>
+    <string name="gallery_background_photo">Изображение</string>
+    <string name="gallery_background_opacity">Непрозрачность</string>
+</resources>

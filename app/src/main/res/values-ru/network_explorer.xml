@@ -1,0 +1,20 @@
+<resources>
+    <string name="explorer_share">Поделиться папкой</string>
+    <string name="explorer_browse">Просмотр устройств</string>
+    <string name="explorer_device">На устройстве</string>
+    <string name="explorer_computer">Компьютер</string>
+    <string name="explorer_control">Управлять здесь</string>
+    <string name="explorer_connect">Подключить компьютер</string>
+    <string name="explorer_refresh">Обновить</string>
+    <string name="explorer_local_intro">Выберите папку. Файлы останутся на месте.</string>
+    <string name="explorer_remote_intro">Откройте общую папку на компьютере.</string>
+    <string name="explorer_empty">Папка пуста</string>
+    <string name="explorer_read_only">Только чтение: файлы не изменяются.</string>
+    <string name="explorer_connection_help">Используйте одну сеть Wi-Fi и общую папку на компьютере. Введите её адрес и данные учётной записи.</string>
+    <string name="explorer_password_help">Используйте пароль учётной записи, а не PIN Windows. Пароль не сохраняется.</string>
+    <string name="explorer_address">Общая папка</string>
+    <string name="explorer_address_invalid">Введите адрес, например \\\\PC\\Photos или smb://PC/Photos.</string>
+    <string name="explorer_local_error">Папка недоступна. Выберите её снова, чтобы разрешить доступ.</string>
+    <string name="explorer_remote_error">Ошибка подключения. Проверьте сеть, общую папку и данные учётной записи.</string>
+    <string name="explorer_example_help">Начальные значения приведены для примера. Замените их адресом общей папки и учётной записью вашего компьютера.</string>
+</resources>

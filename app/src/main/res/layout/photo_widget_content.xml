@@ -1,0 +1,14 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@android:color/transparent">
+    <ImageView android:id="@+id/photo_background" android:layout_width="match_parent" android:layout_height="match_parent" android:visibility="gone"/>
+    <FrameLayout android:id="@+id/photo_picture" android:layout_width="match_parent" android:layout_height="match_parent" android:focusable="true" android:contentDescription="@string/photo_widget_open">
+        <ImageView android:id="@+id/photo_fit" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="fitCenter" android:importantForAccessibility="no"/>
+        <ImageView android:id="@+id/photo_fill" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="fitXY" android:visibility="gone" android:importantForAccessibility="no"/>
+        <ViewFlipper android:id="@+id/photo_animation" android:layout_width="match_parent" android:layout_height="match_parent" android:autoStart="true" android:flipInterval="100" android:visibility="gone"/>
+        <ImageView android:id="@+id/photo_empty" android:layout_width="56dp" android:layout_height="56dp" android:layout_gravity="center" android:src="@drawable/ph_images" android:importantForAccessibility="no"/>
+    </FrameLayout>
+    <TextView android:id="@+id/photo_title" android:layout_width="0dp" android:layout_height="0dp" android:visibility="gone"/>
+    <TextView android:id="@+id/photo_status" android:layout_width="0dp" android:layout_height="0dp" android:visibility="gone"/>
+    <ImageButton android:id="@+id/photo_previous" android:layout_width="0dp" android:layout_height="0dp" android:visibility="gone"/>
+    <ImageButton android:id="@+id/photo_next" android:layout_width="0dp" android:layout_height="0dp" android:visibility="gone"/>
+    <ImageButton android:id="@+id/photo_settings" android:layout_width="0dp" android:layout_height="0dp" android:visibility="gone"/>
+</FrameLayout>

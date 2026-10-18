@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="music_cover_animation">Animación de la carátula</string>
+    <string name="music_cover_normal">Normal</string>
+    <string name="music_cover_pulse">Pulsación</string>
+    <string name="music_cover_disc_hole">Disco con orificio</string>
+    <string name="music_cover_disc_solid">Disco sin orificio</string>
+    <string name="video_auto_dim">Oscurecimiento automático</string>
+    <string name="video_auto_dim_off">Desactivado</string>
+    <string name="video_auto_dim_description">Mientras se reproduce un vídeo, oscurece la pantalla de navegación tras el tiempo elegido sin interacción. Tócala para activarla. Desactivado: usa la luna cuando quieras. La búsqueda oculta el botón sin detener el temporizador.</string>
+</resources>

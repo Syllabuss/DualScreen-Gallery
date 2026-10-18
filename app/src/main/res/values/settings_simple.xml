@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:locale="it">
+    <string name="settings_advanced">Avanzate</string>
+    <string name="settings_visible_buttons">Pulsanti visibili</string>
+    <string name="settings_unsaved_title">Modifiche non salvate</string>
+    <string name="settings_unsaved_message">Vuoi uscire senza salvare le modifiche?</string>
+    <string name="settings_discard">Esci senza salvare</string>
+    <string name="settings_keep_editing">Continua a modificare</string>
+    <string name="settings_folders_permission">L’accesso ai file viene concesso quando scegli le cartelle nella Libreria.</string>
+    <string name="settings_organize">Cartelle e raccolte</string>
+    <string name="settings_privacy">Privacy</string>
+    <string name="settings_file_management">Gestione dei file</string>
+    <string name="settings_manage_folders">Gestisci cartelle</string>
+    <string name="settings_folder_access_ready">Accesso disponibile</string>
+    <string name="settings_folder_access_missing">Da configurare</string>
+    <string name="settings_album_tools_note">Queste opzioni valgono anche per i media dentro un album.</string>
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:locale="it">
+    <string name="music_cover_animation">Animazione della copertina</string>
+    <string name="music_cover_normal">Normale</string>
+    <string name="music_cover_pulse">Pulsazione</string>
+    <string name="music_cover_disc_hole">CD con foro</string>
+    <string name="music_cover_disc_solid">CD senza foro</string>
+    <string name="video_auto_dim">Oscuramento automatico</string>
+    <string name="video_auto_dim_off">Disattivato</string>
+    <string name="video_auto_dim_description">Durante un video, oscura lo schermo di navigazione dopo il tempo scelto senza interazioni. Toccalo per riattivarlo. Disattivato: usa la luna quando vuoi. La ricerca nasconde il pulsante, senza interrompere il timer.</string>
+</resources>

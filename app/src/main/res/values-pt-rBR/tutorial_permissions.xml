@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tutorial_permission_purpose">O acesso às pastas permite visualizar e gerenciar os arquivos escolhidos. Notificações e exibição sobre outros apps são solicitadas apenas para as funções que precisam delas: controles do player e comparações.</string>
+</resources>

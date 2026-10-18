@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ftp_title">Compartir por FTP</string>
+    <string name="ftp_wifi_required">Conecta el Thor y el otro dispositivo a la misma red Wi-Fi.</string>
+    <string name="ftp_notification">La carpeta elegida está disponible en la red local.</string>
+    <string name="ftp_stop">Dejar de compartir</string>
+    <string name="ftp_start">Empezar a compartir</string>
+    <string name="ftp_folder">Carpeta compartida</string>
+    <string name="ftp_description">Envía y recibe archivos desde un ordenador o teléfono en la carpeta elegida. Se seguirá compartiendo hasta que lo detengas.</string>
+    <string name="ftp_connect">Cómo conectarse</string>
+    <string name="ftp_security">Usa un cliente FTP en el otro dispositivo. Solo en redes de confianza: FTP no cifra las transferencias. Los archivos existentes no se sobrescriben ni se pueden borrar de forma remota.</string>
+    <string name="ftp_password">Contraseña</string>
+    <string name="ftp_username">Usuario</string>
+    <string name="ftp_choose">Elegir carpeta</string>
+    <string name="ftp_enabled">Mostrar FTP en la barra de navegación</string>
+    <string name="ftp_transfers">Transferencias</string>
+    <string name="ftp_received">Recibido</string>
+    <string name="ftp_receiving">Recibiendo</string>
+    <string name="ftp_failed">Transferencia interrumpida</string>
+</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="video_cover_frame">"Elegir fotograma de portada"</string>
+    <string name="album_tile_size">"Tamaño del álbum"</string>
+    <string name="video_cover_current_frame">Usar el fotograma actual como portada</string>
+</resources>

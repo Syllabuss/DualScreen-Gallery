@@ -1,0 +1,9 @@
+<resources>
+    <string name="album_lock_action">Bloquear</string>
+    <string name="album_unlock_action">Desbloquear</string>
+    <string name="album_pin_settings">PIN dos álbuns</string>
+    <string name="album_pin_shared">Um único PIN para todos os álbuns protegidos.</string>
+    <string name="album_pin_add">Adicionar PIN</string>
+    <string name="album_pin_change">Alterar PIN</string>
+    <string name="preview_rotate">Girar prévia em 90°</string>
+</resources>

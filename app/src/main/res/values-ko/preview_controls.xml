@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="preview_pin_setting">미리보기 고정 버튼</string>
+    <string name="preview_compare_setting">플로팅 이미지 비교</string>
+    <string name="preview_unpin_title">미리보기를 변경할까요?</string>
+    <string name="preview_unpin_description">이 이미지는 고정되어 있습니다. 다른 미디어를 열면 고정이 해제됩니다. 계속할까요?</string>
+    <string name="preview_overlay_permission">DS Gallery가 다른 앱 위에 이미지 또는 움직이는 GIF를 최대 두 개 표시하도록 허용합니다. 드래그로 이동하고 두 손가락으로 크기를 조절하세요. 탭하면 닫기 X가 표시되거나 숨겨집니다. 옆 가장자리 밖으로 드래그하면 작은 버튼으로 접힙니다. 버튼을 탭하거나 안쪽으로 밀면 창이 복원됩니다.</string>
+    <string name="preview_compare_limit">비교 창이 이미 두 개 열려 있습니다. 먼저 하나를 닫으세요.</string>
+    <string name="video_keep_playing">창에서 계속 재생</string>
+    <string name="animated_album_covers">앨범 GIF 표지 애니메이션</string>
+    <string name="preview_pin_description">미리보기의 핀으로 사진이나 GIF를 고정한 채 다른 미디어를 탐색하세요. 음악, FTP, 설정도 계속 이용할 수 있습니다.</string>
+    <string name="video_keep_playing_description">다른 미디어, 음악, FTP 또는 설정을 열면 동영상이 창에서 계속 재생됩니다. 끄면 일시 정지됩니다.</string>
+    <string name="preview_restore_overlay">다시 표시</string>
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tutorial_folder_compact_body">Elige qué mostrar. Las subcarpetas se convierten en álbumes.</string>
+    <string name="tutorial_permission_compact_purpose">Carpetas: archivos. Notificaciones: reproductor. Superposiciones: comparaciones. Solo cuando haga falta.</string>
+    <string name="tutorial_permission_compact_body">Abre una carpeta → Usar esta carpeta → Permitir. Para Download, elige una subcarpeta.</string>
+    <string name="tutorial_actions_short">Acciones y ajustes</string>
+    <string name="info_licenses">Licencias y componentes</string>
+    <string name="controller_guide_image_title">Imágenes ampliadas</string>
+    <string name="controller_guide_image_body">Solo con zoom activo: el stick izquierdo desplaza la imagen; el derecho arriba/abajo ajusta el zoom. La cruceta recorre los archivos.</string>
+</resources>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:locale="it">
+    <string name="ftp_title">Condivisione FTP</string>
+    <string name="ftp_wifi_required">Collega il Thor e l’altro dispositivo alla stessa rete Wi-Fi.</string>
+    <string name="ftp_notification">La cartella scelta è disponibile sulla rete locale.</string>
+    <string name="ftp_stop">Ferma condivisione</string>
+    <string name="ftp_start">Avvia condivisione</string>
+    <string name="ftp_folder">Cartella condivisa</string>
+    <string name="ftp_description">Invia e ricevi file dal PC o dal telefono nella cartella scelta. La condivisione rimane attiva finché la fermi.</string>
+    <string name="ftp_connect">Come collegarti</string>
+    <string name="ftp_security">Usa un client FTP sull’altro dispositivo. Solo rete fidata: FTP non cifra i trasferimenti. I file esistenti non vengono sovrascritti e non possono essere cancellati da remoto.</string>
+    <string name="ftp_password">Password</string>
+    <string name="ftp_username">Utente</string>
+    <string name="ftp_choose">Scegli cartella</string>
+    <string name="ftp_enabled">Mostra FTP nella barra di navigazione</string>
+    <string name="ftp_transfers">Trasferimenti</string>
+    <string name="ftp_received">Ricevuto</string>
+    <string name="ftp_receiving">Ricezione in corso</string>
+    <string name="ftp_failed">Trasferimento interrotto</string>
+</resources>

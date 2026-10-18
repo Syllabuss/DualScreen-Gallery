@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tutorial_folder_compact_body">Choisissez vos médias. Les sous-dossiers deviennent des albums.</string>
+    <string name="tutorial_permission_compact_purpose">Dossiers : médias. Notifications : lecteur. Superposition : comparaisons. Au besoin seulement.</string>
+    <string name="tutorial_permission_compact_body">Ouvrir un dossier → Utiliser ce dossier → Autoriser. Pour Download, choisissez un sous-dossier.</string>
+    <string name="tutorial_actions_short">Actions et réglages</string>
+    <string name="info_licenses">Licences et composants</string>
+    <string name="controller_guide_image_title">Images agrandies</string>
+    <string name="controller_guide_image_body">Seulement avec le zoom actif : le stick gauche déplace l’image ; le stick droit haut/bas règle le zoom. La croix directionnelle parcourt les médias.</string>
+</resources>

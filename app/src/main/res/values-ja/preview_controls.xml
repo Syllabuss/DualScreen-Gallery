@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="preview_pin_setting">プレビューを固定するボタン</string>
+    <string name="preview_compare_setting">フローティング画像比較</string>
+    <string name="preview_unpin_title">プレビューを変更しますか？</string>
+    <string name="preview_unpin_description">この画像は固定されています。別のメディアを開くと固定が解除されます。続行しますか？</string>
+    <string name="preview_overlay_permission">DS Galleryが他のアプリ上に画像またはアニメーションGIFを最大2つ表示することを許可します。ドラッグで移動し、2本指でサイズを変更できます。タップで閉じるXを表示・非表示にします。左右の端の外へドラッグすると小さなボタンに収納されます。ボタンをタップするか内側へスワイプすると復元します。</string>
+    <string name="preview_compare_limit">比較ウィンドウが2つ開いています。先に1つ閉じてください。</string>
+    <string name="video_keep_playing">ウィンドウで再生を続ける</string>
+    <string name="animated_album_covers">アルバムのGIFカバーを動かす</string>
+    <string name="preview_pin_description">プレビューのピンで写真やGIFを固定したまま、他のメディアを閲覧できます。音楽、FTP、設定も利用できます。</string>
+    <string name="video_keep_playing_description">他のメディア、音楽、FTP、設定を開いても動画は小窓で再生を続けます。オフにすると一時停止します。</string>
+    <string name="preview_restore_overlay">再表示</string>
+</resources>

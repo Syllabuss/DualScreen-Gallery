@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="playback_images">Images</string>
+    <string name="media_display_options">Options d’affichage</string>
+</resources>

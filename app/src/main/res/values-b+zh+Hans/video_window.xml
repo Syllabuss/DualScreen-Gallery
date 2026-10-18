@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="video_pip">窗口播放视频</string>
+    <string name="video_pip_active">正在窗口中播放</string>
+    <string name="video_pip_description">视频会在 Android 窗口中继续播放。你可以浏览图库或打开其他应用。使用窗口控件可以放大或关闭窗口。</string>
+    <string name="video_pip_unavailable">视频窗口不可用。请在 Android 设置中检查画中画权限。</string>
+    <string name="video_return_screen">"将视频移回此屏幕"</string>
+</resources>

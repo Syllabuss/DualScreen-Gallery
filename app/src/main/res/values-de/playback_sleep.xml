@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="playback_sleep_continue">"Bei geschlossenem Gerät weiterspielen"</string>
+    <string name="music_sleep_help">"Nur bereits laufende Musik wird fortgesetzt. Dies kann mehr Akku verbrauchen; pausierte Titel werden nicht gestartet."</string>
+    <string name="video_sleep_help">"Nur das bereits laufende Video oder der Sender läuft weiter. Dekodierung und Netzwerk bleiben aktiv; Akkuverbrauch, Wärme und Lüfteraktivität können steigen."</string>
+</resources>

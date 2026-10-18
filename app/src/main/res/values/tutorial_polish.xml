@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tutorial_folder_compact_body">Scegli cosa mostrare. Le sottocartelle diventano album.</string>
+    <string name="tutorial_permission_compact_purpose">Cartelle: media. Notifiche: player. Finestre: confronti. Solo quando servono.</string>
+    <string name="tutorial_permission_compact_body">Apri una cartella → Usa questa cartella → Consenti. Per Download, scegli una sottocartella.</string>
+    <string name="tutorial_actions_short">Azioni e impostazioni</string>
+    <string name="info_licenses">Licenze e componenti</string>
+    <string name="controller_guide_image_title">Immagini ingrandite</string>
+    <string name="controller_guide_image_body">Solo con zoom attivo: stick sinistro sposta la foto; destro su/giù cambia lo zoom. Il D-pad sfoglia i media.</string>
+</resources>

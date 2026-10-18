@@ -1,0 +1,1818 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="settings_preview_example">预览示例</string>
+    <string name="add_music_folder" formatted="false">"音乐"</string>
+    <string name="add_roots" formatted="false">"添加文件夹"</string>
+    <string name="add_visual_folder" formatted="false">"照片与视频"</string>
+    <string name="audio_preview_position" formatted="false">"音频预览位置"</string>
+    <string name="choose_media_folder" formatted="false">"选择文件夹"</string>
+    <string name="copy_file_explanation" formatted="false">"想要在另一个文件夹中复制文件吗？选择以下选项之一。要浏览而不复制，请在上面添加一个文件夹。"</string>
+    <string name="copy_music_title" formatted="false">"将音乐复制到文件夹…"</string>
+    <string name="copy_photos_title" formatted="false">"将照片和视频复制到文件夹…"</string>
+    <string name="dual_screen_access_action" formatted="false">"打开设置"</string>
+    <string name="dual_screen_access_description" formatted="false">"为了在您打开游戏时将图库保留在空闲屏幕上并在您返回主页时将其发送到后台，Android 必须让 DS Gallery 识别前台中的应用程序。它可以读取活动应用程序的名称，而不是其内容。"</string>
+    <string name="dual_screen_access_title" formatted="false">"管理两个屏幕"</string>
+    <string name="empty_preview_folder_message" formatted="false">"选择包含照片或视频的文件夹。其子文件夹将显示为相册，可以在另一个屏幕上浏览。"</string>
+    <string name="empty_preview_folder_title" formatted="false">"您的画廊从这里开始"</string>
+    <string name="info_author" formatted="false">"由 Syllabuss 制作"</string>
+    <string name="info_channel" formatted="false">"渠道"</string>
+    <string name="info_description" formatted="false">"版本、作者、文件夹与权限"</string>
+    <string name="info_development" formatted="false">"测试版"</string>
+    <string name="info_support">在 Ko-fi 上支持</string>
+    <string name="info_title" formatted="false">"信息与权限"</string>
+    <string name="info_version" formatted="false">"版本"</string>
+    <string name="language_description" formatted="false">"应用语言"</string>
+    <string name="language_save_error" formatted="false">"未能保存语言，请重试。"</string>
+    <string name="language_system" formatted="false">"设备语言"</string>
+    <string name="language_title" formatted="false">"语言"</string>
+    <string name="library_settings_description" formatted="false">"文件夹、合集和文件管理"</string>
+    <string name="library_settings_title" formatted="false">"图书馆"</string>
+    <string name="media_folders_title" formatted="false">"媒体文件夹"</string>
+    <string name="nav_albums" formatted="false">"相册"</string>
+    <string name="nav_videos" formatted="false">"视频"</string>
+    <string name="permission_enable_usage" formatted="false">"启用访问"</string>
+    <string name="permission_folder_access_is_selected" formatted="false">"文件夹已获得图书馆授权"</string>
+    <string name="permission_manage_android" formatted="false">"打开Android权限"</string>
+    <string name="permission_media_description" formatted="false">"要浏览文件，请从库中选择文件夹。您可以在此处查看应用程序的 Android 权限。"</string>
+    <string name="permission_media_title" formatted="false">"照片与视频"</string>
+    <string name="permission_notifications_description" formatted="false">"通知显示复制和其他正在进行的操作的进度。"</string>
+    <string name="permission_notifications_title" formatted="false">"操作通知"</string>
+    <string name="permission_status_enabled" formatted="false">"启用"</string>
+    <string name="permission_status_not_enabled" formatted="false">"需要注意"</string>
+    <string name="permission_usage_description" formatted="false">"此访问权限允许 DS Gallery 在您返回主页时将两个面板发送到后台，同时在使用另一个应用程序时将图库保留在另一个屏幕上。"</string>
+    <string name="permission_usage_enabled" formatted="false">"启用"</string>
+    <string name="permission_usage_title" formatted="false">"检测您何时返回家"</string>
+    <string name="permissions_intro" formatted="false">"在此处查看 DS Gallery 使用的访问权限。媒体文件夹在库中单独选择；该应用程序仅保留对您授权的位置的访问权限。"</string>
+    <string name="permissions_settings_description" formatted="false">"查看和管理 DS Gallery 访问权限"</string>
+    <string name="permissions_settings_title" formatted="false">"权限"</string>
+    <string name="photo_widget_empty" formatted="false">"你的图片"</string>
+    <string name="photo_widget_manual" formatted="false">"手动更改"</string>
+    <string name="photo_widget_name" formatted="false">"DS Gallery · 照片小组件"</string>
+    <string name="photo_widget_next" formatted="false">"下一张照片"</string>
+    <string name="photo_widget_open" formatted="false">"在一个屏幕上打开照片"</string>
+    <string name="photo_widget_previous" formatted="false">"上一张照片"</string>
+    <string name="photo_widget_settings" formatted="false">"配置这个小部件"</string>
+    <string name="remove_root">"移除文件夹：%1$s"</string>
+    <string name="roots_added_scanning" formatted="false">"文件夹已添加。相册扫描正在进行中。"</string>
+    <string name="roots_choose_type" formatted="false">"选择您要浏览的内容。授予访问权限后，将自动找到相册。"</string>
+    <string name="roots_download_help" formatted="false">"Android 可能不允许选择整个 Download 文件夹或存储空间的根目录。请打开子文件夹，例如 Download/Photos，然后点按“使用此文件夹”。无法访问 Android/data 和 Android/obb 文件夹。"</string>
+    <string name="roots_empty_message" formatted="false">"添加文件夹，即可查看相册。"</string>
+    <string name="roots_empty_title" formatted="false">"尚未添加文件夹"</string>
+    <string name="roots_guidance" formatted="false">"子文件夹将显示为相册。添加文件夹后会自动扫描。"</string>
+    <string name="roots_picker_help" formatted="false">"在Android的选择器中，打开内部存储或microSD卡，选择根文件夹，然后点击“使用此文件夹”。无法授权受保护的系统文件夹。"</string>
+    <string name="roots_scanning">"正在扫描 %1$s… · %2$s 文件"</string>
+    <string name="roots_title" formatted="false">"媒体文件夹"</string>
+    <string name="single_shortcut" formatted="false">"在此屏幕打开"</string>
+    <string name="source_folder_guidance" formatted="false">"添加要浏览的文件夹。子文件夹成为相册，文件保留在其原始位置。"</string>
+    <string name="text_1_s_128_albums_and_collections_chosen_at_the_lim_3e14da">"%1$s / 128 张专辑和精选集。在极限情况下，先删除一个选择，然后再添加另一个选择。"</string>
+    <string name="text_1_s_2_s_candidates_3_s_read_4_s_unverified_c7af59">"%1$s / %2$s 候选人 · %3$s 已读 · %4$s 未经验证"</string>
+    <string name="text_1_s_2_s_visible_items_c963ae">"%1$s · %2$s 可见项目"</string>
+    <string name="text_1_s_backup_references_still_need_relinking_choos_d8d02b">"%1$s 备份引用仍需要重新链接。选择正确的文件并确认每个匹配项。"</string>
+    <string name="text_1_s_candidates_choice_required_107fb7">"%1$s 候选人：需要选择"</string>
+    <string name="text_1_s_choices_unavailable_references_retained_061994">"%1$s 选项不可用：保留参考文献"</string>
+    <string name="text_1_s_chosen_media_30240a">"%1$s 选择的媒体"</string>
+    <string name="text_1_s_directions_confirm_and_back_must_remain_assi_d66f86">"%1$s：方向、确认和返回必须保持分配状态"</string>
+    <string name="text_1_s_each_potential_space_to_reclaim_2_s_0deb3a">"%1$s 每个 · 回收 %2$s 的潜在空间"</string>
+    <string name="text_1_s_edge_c30958">"%1$s 边缘"</string>
+    <string name="text_1_s_empty_file_80be53">"%1$s：空文件"</string>
+    <string name="text_1_s_excluded_or_missing_references_retained_034d70">" · %1$s 排除或保留缺失的参考文献"</string>
+    <string name="text_1_s_expires_2_s_8918f6">"%1$s · 到期 %2$s"</string>
+    <string name="text_1_s_field_out_of_range_95e5ad">"%1$s 字段超出范围"</string>
+    <string name="text_1_s_file_changed_while_reading_9910f3">"%1$s：读取时文件已更改"</string>
+    <string name="text_1_s_files_2_s_0660da">"%1$s 文件 · %2$s"</string>
+    <string name="text_1_s_files_fe3ced">" · %1$s 文件"</string>
+    <string name="text_1_s_folders_and_subfolders_f1bc01">"%1$s 文件夹和子文件夹"</string>
+    <string name="text_1_s_frames_ea0c5d">"%1$s 帧"</string>
+    <string name="text_1_s_groups_2_s_candidates_read_3_s_unverified_290f94">"%1$s 组 · %2$s 候选人已读 · %3$s 未经验证"</string>
+    <string name="text_1_s_is_already_used_by_2_s_replace_these_binding_9bc78c">"%1$s 已被 %2$s 使用。替换草稿中的这些绑定？"</string>
+    <string name="text_1_s_items_no_files_copied_9ee36c">"%1$s 项目 · 未复制文件"</string>
+    <string name="text_1_s_m4a_n_2_s_nfrom_3_s_to_4_s_5_s_nm4a_aac_6_s_e1e1cd">"%1$s.m4a\n%2$s\n从 %3$s 到 %4$s · %5$s\nM4A · AAC · %6$s kb/s\n未复制原始元数据和插图。保留原始内容、收藏夹和播放列表。"</string>
+    <string name="text_1_s_minutes_c69ae1">"%1$s 分钟"</string>
+    <string name="text_1_s_mp4_n_2_s_nfrom_3_s_to_4_s_5_s_nmp4_h_264_6_2381c9">"%1$s.mp4\n%2$s\n从 %3$s 到 %4$s · %5$s\nMP4 · H.264 · %6$sp%7$s\n裁剪 %8$s%% × %9$s%%\n未复制个人元数据。原件保存。"</string>
+    <string name="text_1_s_n_2_s_n_nreplaces_the_open_comparison_previo_76dd8a">"%1$s\n%2$s\n\n替换打开比较。以前保存的会话仍然可用。"</string>
+    <string name="text_1_s_n_nonly_the_collection_and_its_links_will_be_1073ca">"%1$s\n\n仅删除合集及其链接。不会删除任何文件；收藏夹被保留。"</string>
+    <string name="text_1_s_n_nread_only_access_to_this_document_only_no_216299">"%1$s\n\n仅可只读访问本文档。禁止复制或扫描其他文件夹。提供者可以使文件不可用或撤销访问权限；使用导入副本来保留其字节。"</string>
+    <string name="text_1_s_nconfirming_resumes_cleanup_of_expired_copie_d2bb79">"%1$s\n确认恢复过期副本的清理。如果日期有误，请先更正。"</string>
+    <string name="text_1_s_of_2_s_selected_files_fbb670">"%2$s 所选文件中的 %1$s"</string>
+    <string name="text_1_s_options_a1440f">"%1$s 选项"</string>
+    <string name="text_1_s_references_2_s_media_in_the_folder_fff099">"%1$s 参考资料 · %2$s 文件夹中的媒体"</string>
+    <string name="text_1_s_references_relinked_folder_authorized_for_re_e1eaeb">"%1$s 参考文献重新链接。授权阅读的文件夹；没有更改原件或启动媒体。"</string>
+    <string name="text_1_s_selected_albums_5ebbfb">"%1$s 精选专辑"</string>
+    <string name="text_1_s_selected_e2edc4">"已选择 %1$s 项"</string>
+    <string name="text_1_s_selected_matches_01a2e5">"%1$s 选定的比赛"</string>
+    <string name="text_1_s_selected_media_babf2f">"%1$s 选定的媒体"</string>
+    <string name="text_1_s_unavailable_tracks_will_be_skipped_9556f5">"%1$s 不可用的曲目将被跳过"</string>
+    <string name="text_1_s_unreadable_file_2b9af6">"%1$s：无法读取的文件"</string>
+    <string name="text_1_s_unsupported_format_025f92">"%1$s：不支持的格式"</string>
+    <string name="text_1_s_visible_items_df95fc">"%1$s 可见项目"</string>
+    <string name="text_1_s_visible_tracks_9940ce">"%1$s 可见轨道"</string>
+    <string name="text_a_file_changed_choose_the_folder_again_e4947d" formatted="false">"文件已更改：再次选择文件夹"</string>
+    <string name="text_a_new_copy_keeping_the_original_intact_b1e835" formatted="false">"一份新的副本，保持原样不变。"</string>
+    <string name="text_a_opens_b_goes_back_without_closing_the_gallery_435989" formatted="false">"A 打开，B 返回而不关闭画廊，X 交换面板。无需更改文件即可自定义按钮和手势。"</string>
+    <string name="text_a_place_for_your_media_8f207b" formatted="false">"您的媒体场所"</string>
+    <string name="text_a_playlist_requires_an_audio_copy_77dd5c" formatted="false">"播放列表需要音频副本"</string>
+    <string name="text_a_received_1f521d" formatted="false">"已收到"</string>
+    <string name="text_a_second_chance_0fddaa" formatted="false">"第二次机会"</string>
+    <string name="text_a_session_with_this_name_already_exists_5ae07c" formatted="false">"具有该名称的会话已存在"</string>
+    <string name="text_a_session_with_this_name_already_exists_choose_a_e1a297" formatted="false">"具有该名称的会话已存在。选择另一个名称。"</string>
+    <string name="text_a_verified_copy_will_be_kept_for_seven_days_the_dcf62b" formatted="false">"经验证的副本将保留 7 天。原件经核实后才会被删除。"</string>
+    <string name="text_aac_if_present_981768" formatted="false">" · AAC 如果存在"</string>
+    <string name="text_about_1_s_min_2ef38b">"大约 %1$s 分钟"</string>
+    <string name="text_accent_785d03" formatted="false">"强调色"</string>
+    <string name="text_access_needs_restoring_6a31e2" formatted="false">"访问需要恢复"</string>
+    <string name="text_acquiring_external_file_47201b" formatted="false">"获取外部文件"</string>
+    <string name="text_acquiring_the_private_copy_before_the_destinatio_87ef67" formatted="false">"在到达目的地之前获取私人副本…"</string>
+    <string name="text_activation_threshold_1_s_a3d5d8">"激活阈值 · %1$s%%"</string>
+    <string name="text_active_1_s_08406e">"活跃 · %1$s"</string>
+    <string name="text_active_1_s_6f4cb9">"活跃：%1$s"</string>
+    <string name="text_active_39df52" formatted="false">"活跃"</string>
+    <string name="text_active_filter_1_s_019879">"有源滤波器：%1$s"</string>
+    <string name="text_active_theme_40e4ef" formatted="false">"活跃主题"</string>
+    <string name="text_add_items_49e7fb" formatted="false">"添加项目"</string>
+    <string name="text_add_items_to_this_collection_excluded_links_are_21b137" formatted="false">"将项目添加到此合集。排除的链接不会被删除。"</string>
+    <string name="text_add_thor_gallery_photo_frame_from_your_launcher_628bfc" formatted="false">"从启动器的小部件添加“DS Gallery·相框”，然后返回此处。"</string>
+    <string name="text_add_to_0791d4" formatted="false">"添加到…"</string>
+    <string name="text_add_to_a_collection_c19880" formatted="false">"添加到合集"</string>
+    <string name="text_add_to_favorites_63ce28" formatted="false">"添加到收藏"</string>
+    <string name="text_add_to_favorites_ecc911" formatted="false">"添加到收藏"</string>
+    <string name="text_add_to_queue_363178" formatted="false">"添加到队列"</string>
+    <string name="text_add_zone_54c3e5" formatted="false">"添加区域"</string>
+    <string name="text_added_f6ef7c" formatted="false">"已添加"</string>
+    <string name="text_advanced_value_optional_2f398a" formatted="false">"高级值·可选"</string>
+    <string name="text_album_folders_and_media_structure_will_be_recrea_1c7b5d" formatted="false">"相册文件夹和媒体结构将在目的地重新创建。非媒体文件将不会被传输。"</string>
+    <string name="text_album_or_track_no_longer_available_41bdb5" formatted="false">"专辑或曲目不再可用"</string>
+    <string name="text_album_source_unavailable_d29ab8" formatted="false">"专辑来源不可用"</string>
+    <string name="text_album_unavailable_check_permission_or_reopen_the_70b1c5" formatted="false">"相册不可用。检查权限或重新打开文件夹。"</string>
+    <string name="text_album_unavailable_fe6944" formatted="false">"相册不可用"</string>
+    <string name="text_albums_and_collections_246b7d" formatted="false">"专辑和合集"</string>
+    <string name="text_all_7f65ef" formatted="false">"全部"</string>
+    <string name="text_all_849797" formatted="false">"全部"</string>
+    <string name="text_all_done_046f31" formatted="false">"全部完成"</string>
+    <string name="text_all_formats_5f54e8" formatted="false">"所有格式"</string>
+    <string name="text_all_panes_are_pinned_5d759f" formatted="false">"所有窗格均已固定"</string>
+    <string name="text_all_references_have_been_relinked_the_backup_sou_295fc9" formatted="false">"所有参考文献均已重新链接。备份源仍然是出处。"</string>
+    <string name="text_allow_access_to_photos_and_videos_d1906e" formatted="false">"允许访问照片和视频"</string>
+    <string name="text_allow_access_to_this_media_36f18a" formatted="false">"允许访问该媒体"</string>
+    <string name="text_allow_cleanup_in_game_mode_7fcac9" formatted="false">"允许在游戏模式下进行清理"</string>
+    <string name="text_allow_import_while_gaming_ddd9a8" formatted="false">"允许在游戏时导入"</string>
+    <string name="text_allow_photos_and_videos_0e8d89" formatted="false">"允许照片和视频"</string>
+    <string name="text_allow_preparation_while_gaming_347fe8" formatted="false">"允许在游戏时进行准备"</string>
+    <string name="text_allow_relinking_in_game_mode_670757" formatted="false">"允许在游戏模式下重新链接"</string>
+    <string name="text_allow_this_check_in_game_mode_5680c6" formatted="false">"允许在游戏模式下进行此检查"</string>
+    <string name="text_allowed_9b88cf" formatted="false">"允许"</string>
+    <string name="text_already_assigned_1_s_617740">"已分配：%1$s"</string>
+    <string name="text_also_use_the_document_s_shared_controls_de11b1" formatted="false">"还可以使用文档的共享控件"</string>
+    <string name="text_always_previous_track_c63ca0" formatted="false">"总是上一个曲目"</string>
+    <string name="text_ambiguous_temporary_file_check_the_destination_7fc5f4" formatted="false">"临时文件不明确：检查目的地"</string>
+    <string name="text_amoled_black_silver_and_ice_313bfc" formatted="false">"AMOLED黑·银冰色"</string>
+    <string name="text_an_item_is_no_longer_available_for_this_collecti_eae1b5" formatted="false">"此合集中不再提供某个项目"</string>
+    <string name="text_anchor_1_s_released_2_s_roles_swapped_3_s_526aa9">"锚：%1$s；发布：%2$s；角色交换：%3$s"</string>
+    <string name="text_android_does_not_allow_an_activity_on_screen_1_s_d097fe">"Android 不允许屏幕 %1$s 上存在活动。"</string>
+    <string name="text_android_gallery_1_s_fcad13">"Android 画廊：%1$s"</string>
+    <string name="text_android_gallery_did_not_respond_52ab35" formatted="false">"Android画廊没有回应"</string>
+    <string name="text_android_may_delay_changes_suspended_in_game_mode_4c0e10" formatted="false">"Android 可能会延迟更改；在游戏模式下暂停。"</string>
+    <string name="text_android_picker_unavailable_on_this_panel_4b1ad8" formatted="false">"Android 选择器在此面板上不可用"</string>
+    <string name="text_android_settings_unavailable_open_app_permission_fef31a" formatted="false">"Android 设置不可用。在设备设置中打开应用程序权限。"</string>
+    <string name="text_android_wallpaper_67c9fc" formatted="false">"Android 壁纸"</string>
+    <string name="text_android_will_show_available_crop_tools_and_desti_6acb8e" formatted="false">"Android 将显示可用的裁剪工具和目的地。两个显示器和 iiSU 上的壁纸取决于系统。"</string>
+    <string name="text_animate_current_gif_863ee0" formatted="false">"动画电流 GIF"</string>
+    <string name="text_animation_cannot_be_played_1_s_444482">"动画无法播放：%1$s"</string>
+    <string name="text_appearance_and_behavior_bbd831" formatted="false">"外表和行为"</string>
+    <string name="text_appearance_f9ce8f" formatted="false">"主题"</string>
+    <string name="text_apply_range_f3c147" formatted="false">"适用范围"</string>
+    <string name="text_artist_7e6ef2" formatted="false">"艺术家"</string>
+    <string name="text_artist_unavailable_c612a4" formatted="false">"艺术家不可用"</string>
+    <string name="text_artists_bbd1aa" formatted="false">"艺术家"</string>
+    <string name="text_artwork_1_s_nprevious_2_s_n_462b2e">"作品：%1$s\n上一个：%2$s\n"</string>
+    <string name="text_artwork_and_priority_b87104" formatted="false">"艺术品和优先级"</string>
+    <string name="text_artwork_cache_recovery_failed_1_s_3bc1c1">"艺术品缓存恢复失败：%1$s"</string>
+    <string name="text_artwork_cache_unavailable_81e2e4" formatted="false">"艺术品缓存不可用"</string>
+    <string name="text_artwork_colors_dimmed_8e8b47" formatted="false">"作品颜色·变暗"</string>
+    <string name="text_artwork_not_saved_69810d" formatted="false">"作品未保存"</string>
+    <string name="text_artwork_recovery_incomplete_try_clearing_preview_225d68" formatted="false">"艺术品恢复不完整。再次尝试清除预览。"</string>
+    <string name="text_artwork_unavailable_56b21e" formatted="false">"艺术品不可用"</string>
+    <string name="text_at_startup_the_app_uses_both_detected_screens_a_b5d260" formatted="false">"启动时，应用程序使用两个检测到的屏幕。游戏的屏幕保持免费。"</string>
+    <string name="text_audio_duration_unavailable_3d0271" formatted="false">"音频持续时间不可用"</string>
+    <string name="text_audio_encoding_could_not_be_verified_output_not_681245" formatted="false">"无法验证音频编码：输出未发布"</string>
+    <string name="text_audio_preview_unavailable_f44c32" formatted="false">"音频预览不可用"</string>
+    <string name="text_audio_segment_exported_original_favorites_and_pl_bb24a1" formatted="false">"导出的音频片段：保留原始、收藏夹和播放列表"</string>
+    <string name="text_audio_segment_range_68e0ae" formatted="false">"音频段范围"</string>
+    <string name="text_audio_trim_preview_on_the_other_screen_45d9bc" formatted="false">"曲目预览 · 在另一个屏幕上调整开始和结束"</string>
+    <string name="text_authorize_the_folders_you_want_to_see_hiding_an_f652bf" formatted="false">"授权您想要查看的文件夹。隐藏相册会将其从图库中删除，同时保留原始文件。"</string>
+    <string name="text_authorized_folder_739100" formatted="false">"授权文件夹"</string>
+    <string name="text_automatic_allowed_screen_5d5ba2" formatted="false">"自动·允许画面"</string>
+    <string name="text_automatic_changes_paused_game_mode_1dd71f" formatted="false">"自动更改暂停·游戏模式"</string>
+    <string name="text_automatic_cover_99768a" formatted="false">"自动盖"</string>
+    <string name="text_available_images_and_gifs_only_hidden_albums_rev_d46c35" formatted="false">"仅可用图像和 GIF。隐藏专辑、撤销来源和垃圾仍然被排除在外。"</string>
+    <string name="text_b_received_d8ce9e" formatted="false">"乙收到"</string>
+    <string name="text_back_804268" formatted="false">"返回"</string>
+    <string name="text_back_to_appearance_2b73b0" formatted="false">"返回主题"</string>
+    <string name="text_background_78edb0" formatted="false">"背景"</string>
+    <string name="text_backup_copy_after_restore_d3b116" formatted="false">"恢复后备份副本"</string>
+    <string name="text_backup_draft_not_verified_fd30b7" formatted="false">"备份草稿未验证"</string>
+    <string name="text_backup_source_needs_relinking_fb5836" formatted="false">"备份：源需要重新链接"</string>
+    <string name="text_backup_too_large_de2bee" formatted="false">"备份太大"</string>
+    <string name="text_backup_unverified_the_document_may_be_incomplete_510b4b" formatted="false">"备份未经验证；该文件可能不完整"</string>
+    <string name="text_behavior_03b2ee" formatted="false">"行为"</string>
+    <string name="text_binding_already_used_by_1_s_74e2c7">"绑定已被 %1$s 使用"</string>
+    <string name="text_bindings_not_saved_ccc1a2" formatted="false">"绑定未保存"</string>
+    <string name="text_black_acid_green_and_cyan_97deef" formatted="false">"黑色·酸性绿、青色"</string>
+    <string name="text_black_and_sage_cf43a0" formatted="false">"黑色和鼠尾草色"</string>
+    <string name="text_borders_45b76c" formatted="false">"边框"</string>
+    <string name="text_bottom_e201c6" formatted="false">"底部"</string>
+    <string name="text_brightness_48f971" formatted="false">"亮度"</string>
+    <string name="text_bring_together_images_gifs_videos_and_music_with_1ca575" formatted="false">"将图像、GIF、视频和音乐整合在一起，无需复制。播放列表仅包含曲目。"</string>
+    <string name="text_button_88410e" formatted="false">"按钮"</string>
+    <string name="text_buttons_and_sticks_bf2200" formatted="false">"按钮和操纵杆"</string>
+    <string name="text_buttons_sticks_and_touch_gestures_220de4" formatted="false">"按钮、操纵杆和触摸手势"</string>
+    <string name="text_cache_cleared_3a29ae" formatted="false">"缓存已清除"</string>
+    <string name="text_cancel_18c9d9" formatted="false">"取消"</string>
+    <string name="text_cancel_search_d9c204" formatted="false">"取消搜索"</string>
+    <string name="text_cancel_when_safe_cb9d24" formatted="false">"安全时取消"</string>
+    <string name="text_canceled_000f5b" formatted="false">"取消"</string>
+    <string name="text_canceled_fdb1ba" formatted="false">"取消"</string>
+    <string name="text_cancellation_requested_a58dd2" formatted="false">"已请求取消…"</string>
+    <string name="text_candidate_preview_142090" formatted="false">"候选预览"</string>
+    <string name="text_candidates_for_1_s_b55cd1">"%1$s 的候选人"</string>
+    <string name="text_catalog_and_permissions_049549" formatted="false">"--- 目录和权限 ---"</string>
+    <string name="text_change_image_every_75bf32" formatted="false">"每隔一次更改图像"</string>
+    <string name="text_change_photo_f1bc64" formatted="false">"更换照片"</string>
+    <string name="text_charcoal_soft_green_and_sand_690002" formatted="false">"木炭·软绿和沙色"</string>
+    <string name="text_check_access_again_80d1e3" formatted="false">"再次检查访问权限"</string>
+    <string name="text_check_candidates_8155a8" formatted="false">"检查候选人…"</string>
+    <string name="text_check_change_36b194" formatted="false">"检查/更改…"</string>
+    <string name="text_check_date_and_resume_cleanup_b9c526" formatted="false">"检查日期并恢复清理"</string>
+    <string name="text_check_matches_871bbc" formatted="false">"检查匹配项"</string>
+    <string name="text_check_matches_before_relinking_48b12f" formatted="false">"重新链接之前检查匹配项"</string>
+    <string name="text_checking_access_a6b304" formatted="false">"正在检查访问…"</string>
+    <string name="text_checking_document_cf3a92" formatted="false">"检查文件…"</string>
+    <string name="text_checking_reference_9b649e" formatted="false">"检查参考…"</string>
+    <string name="text_choice_discarded_references_and_permissions_pres_1f4a42" formatted="false">"选择被放弃；保留引用和权限"</string>
+    <string name="text_choice_retained_unavailable_8fbbc3" formatted="false">"选择保留，不可用"</string>
+    <string name="text_choices_discarded_permissions_and_references_pre_811d22" formatted="false">"放弃的选择；保留权限和引用"</string>
+    <string name="text_choose_1128_files_to_open_ee836b" formatted="false">"选择要打开的 1–128 个文件"</string>
+    <string name="text_choose_1_s_2_s_26e8e4">"选择 %1$s · %2$s"</string>
+    <string name="text_choose_a_collection_the_image_remains_a_local_re_698b12" formatted="false">"选择一个合集：图像仍然是本地参考。"</string>
+    <string name="text_choose_a_color_9cf459" formatted="false">"选择颜色"</string>
+    <string name="text_choose_a_destination_1_s_2c24d6">"选择目的地 %1$s"</string>
+    <string name="text_choose_a_destination_from_the_system_3bc989" formatted="false">"从系统中选择目的地"</string>
+    <string name="text_choose_a_destination_outside_the_selected_albums_312088" formatted="false">"选择所选相册之外的目的地。"</string>
+    <string name="text_choose_a_document_from_the_system_a069ca" formatted="false">"从系统中选择一个文档"</string>
+    <string name="text_choose_a_folder_56d054" formatted="false">"选择文件夹"</string>
+    <string name="text_choose_a_folder_in_the_android_picker_354f26" formatted="false">"在 Android 选择器中选择一个文件夹"</string>
+    <string name="text_choose_a_linkable_document_in_the_android_picker_96d1f0" formatted="false">"在 Android 选择器中选择一个可链接文档"</string>
+    <string name="text_choose_a_music_folder_2a9069" formatted="false">"选择音乐文件夹"</string>
+    <string name="text_choose_a_music_or_mixed_folder_in_folders_and_pe_026756" formatted="false">"在“资源库”&gt;“媒体文件夹”中选择“音乐”或“混合”文件夹。"</string>
+    <string name="text_choose_a_name_of_1100_characters_20d6b6" formatted="false">"选择 1–100 个字符的名称"</string>
+    <string name="text_choose_a_photo_folder_in_the_gallery_first_bcb193" formatted="false">"首先在图库中选择一个照片文件夹。"</string>
+    <string name="text_choose_a_reference_then_its_file_in_the_android_e4100b" formatted="false">"选择一个参考，然后在 Android 选择器中选择其文件。备份可保留组织，无需复制介质或自动授予访问权限。"</string>
+    <string name="text_choose_a_root_folder_for_your_photos_and_videos_96ddcc" formatted="false">"为您的照片和视频选择一个根文件夹。子文件夹将显示为相册。您可以在“设置”中添加更多内容。"</string>
+    <string name="text_choose_a_root_folder_subfolders_become_albums_e435c7" formatted="false">"选择根文件夹：子文件夹成为相册。"</string>
+    <string name="text_choose_a_segment_of_at_least_0_25_seconds_within_3023d9" formatted="false">"在视频中选择至少 0.25 秒的片段"</string>
+    <string name="text_choose_a_segment_of_at_least_0_25_seconds_within_eb10b3" formatted="false">"在曲目中选择至少 0.25 秒的片段"</string>
+    <string name="text_choose_a_thor_gallery_settings_document_opening_d4eef4" formatted="false">"选择 DS Gallery 设置文档。打开它不会改变任何内容：使用导入并保存来应用它。"</string>
+    <string name="text_choose_a_track_from_music_the_player_is_shared_a_c71f4b" formatted="false">"从音乐中选择曲目。播放器在屏幕上共享并在后台继续播放。"</string>
+    <string name="text_choose_an_active_connected_folder_1_s_e19a6c">"选择一个活动的、已连接的文件夹 %1$s"</string>
+    <string name="text_choose_an_authorized_destination_folder_d16813" formatted="false">"选择授权的目标文件夹"</string>
+    <string name="text_choose_an_image_destination_e8911f" formatted="false">"选择图像目的地"</string>
+    <string name="text_choose_another_available_display_9374e5" formatted="false">"选择另一个可用的显示器。"</string>
+    <string name="text_choose_another_file_4dc30e" formatted="false">"选择另一个文件…"</string>
+    <string name="text_choose_another_folder_423db4" formatted="false">"选择另一个文件夹…"</string>
+    <string name="text_choose_another_name_in_the_same_folder_0121f0" formatted="false">"在同一文件夹中选择另一个名称"</string>
+    <string name="text_choose_app_965609" formatted="false">"选择应用程序"</string>
+    <string name="text_choose_at_least_one_album_or_collection_f499bc" formatted="false">"至少选择一张专辑或合集"</string>
+    <string name="text_choose_colors_with_a_color_wheel_45c992" formatted="false">"一次选择一种颜色"</string>
+    <string name="text_choose_copy_transformations_923466" formatted="false">"选择复制转换"</string>
+    <string name="text_choose_cover_254a2f" formatted="false">"选择封面"</string>
+    <string name="text_choose_destination_7320c1" formatted="false">"选择目的地"</string>
+    <string name="text_choose_file_38d369" formatted="false">"选择文件…"</string>
+    <string name="text_choose_file_to_link_4d549c" formatted="false">"选择要链接的文件…"</string>
+    <string name="text_choose_folder_764e29" formatted="false">"选择文件夹"</string>
+    <string name="text_choose_local_image_8460fc" formatted="false">"选择本地图片"</string>
+    <string name="text_choose_media_217616" formatted="false">"选择媒体"</string>
+    <string name="text_choose_music_destination_b193b9" formatted="false">"选择音乐目的地"</string>
+    <string name="text_choose_music_folders_artists_and_albums_use_loca_0dbc29" formatted="false">"选择音乐文件夹。艺术家和专辑仅使用本地元数据，无需在线搜索。"</string>
+    <string name="text_choose_new_folder_9ec30a" formatted="false">"选择新文件夹…"</string>
+    <string name="text_choose_only_one_file_for_this_reference_de6fed" formatted="false">"仅选择一个文件作为参考"</string>
+    <string name="text_choose_only_one_reference_for_each_file_659de7" formatted="false">"为每个文件仅选择一个参考"</string>
+    <string name="text_choose_original_folder_7c8b3b" formatted="false">"选择原始文件夹…"</string>
+    <string name="text_choose_photo_frame_images_3d6082" formatted="false">"选择相框图像"</string>
+    <string name="text_choose_readable_individual_files_not_a_folder_or_bd3427" formatted="false">"选择可读的单个文件，而不是文件夹或地址"</string>
+    <string name="text_choose_root_folders_for_your_photos_and_videos_8005f3" formatted="false">"为您的照片和视频选择根文件夹。"</string>
+    <string name="text_choose_settings_f671c8" formatted="false">"选择设置…"</string>
+    <string name="text_choose_the_destination_8c4b9e" formatted="false">"选择目的地"</string>
+    <string name="text_choose_the_original_folder_ab2296" formatted="false">"选择原来的文件夹"</string>
+    <string name="text_choose_the_same_content_type_as_the_original_ref_53b10c" formatted="false">"选择与原始参考相同的内容类型"</string>
+    <string name="text_choose_this_one_255533" formatted="false">"选择这个"</string>
+    <string name="text_choose_two_available_screens_first_77329a" formatted="false">"首先选择两个可用的屏幕。"</string>
+    <string name="text_choose_up_to_128_files_per_import_2cea07" formatted="false">"每次导入最多选择 128 个文件"</string>
+    <string name="text_choose_what_appears_in_the_gallery_c72934" formatted="false">"选择图库中显示的内容"</string>
+    <string name="text_choose_where_to_look_subfolders_become_albums_912e6f" formatted="false">"选择要查看的位置。子文件夹变成相册。"</string>
+    <string name="text_choose_which_copy_to_keep_content_is_checked_aga_db2906" formatted="false">"选择要保留的副本。内容在移至回收站之前会再次检查。"</string>
+    <string name="text_choose_which_pin_to_replace_with_1_s_c6ec95">"选择要替换为 %1$s 的引脚。"</string>
+    <string name="text_choose_your_music_folders_covers_stay_in_the_mus_f93d06" formatted="false">"选择您的音乐文件夹。封面保留在音乐库中。"</string>
+    <string name="text_chosen_1_s_c8f1bf">"选择：%1$s"</string>
+    <string name="text_chosen_1_s_n_2_s_3_s_n_4_s_5b7d73">"选择： %1$s\n%2$s · %3$s\n%4$s"</string>
+    <string name="text_chosen_file_1_s_368352">"选择的文件：%1$s"</string>
+    <string name="text_chosen_file_preview_9b3263" formatted="false">"所选文件预览"</string>
+    <string name="text_chosen_files_only_no_provider_scanning_or_cloud_49b792" formatted="false">"仅使用选中的文件。不会扫描文件提供方或同步云端，也不会修改外部原文件。"</string>
+    <string name="text_chosen_media_25c884" formatted="false">"所选媒体"</string>
+    <string name="text_chosen_sources_1_s_indexed_media_2_s_albums_3_s_83cb72">"选择的来源：%1$s；索引媒体：%2$s；专辑：%3$s"</string>
+    <string name="text_chosen_wallpaper_ba1aba" formatted="false">"选择的壁纸"</string>
+    <string name="text_circular_matches_choose_one_reference_per_file_e1f63c" formatted="false">"循环匹配：为每个文件选择一个引用"</string>
+    <string name="text_circular_reference_6918cc" formatted="false">"循环引用"</string>
+    <string name="text_cleanup_failed_try_again_08cccf" formatted="false">"清理失败。再试一次。"</string>
+    <string name="text_cleanup_interrupted_1_s_3f18c1">"清理中断：%1$s"</string>
+    <string name="text_clear_2bdc24" formatted="false">"清除"</string>
+    <string name="text_clear_cache_591e39" formatted="false">"清除缓存"</string>
+    <string name="text_clear_queue_bb5c72" formatted="false">"清除队列"</string>
+    <string name="text_clear_search_3664fa" formatted="false">"清除搜索"</string>
+    <string name="text_clear_selection_508e08" formatted="false">"清除选择"</string>
+    <string name="text_clearing_cache_911274" formatted="false">"清除缓存…"</string>
+    <string name="text_close_32d407" formatted="false">"关闭"</string>
+    <string name="text_close_search_9cf7ab" formatted="false">"关闭搜索"</string>
+    <string name="text_collection_6d6e22" formatted="false">"合集"</string>
+    <string name="text_collection_97d9d7" formatted="false">" · 合集"</string>
+    <string name="text_collection_cover_7ec6e5" formatted="false">"合集封面"</string>
+    <string name="text_collection_item_actions_81ff41" formatted="false">"收集项目动作"</string>
+    <string name="text_collection_name_5d060a" formatted="false">"藏品名称"</string>
+    <string name="text_collection_removed_7205b1" formatted="false">"合集已删除"</string>
+    <string name="text_collections_2ffdd0" formatted="false">"合集"</string>
+    <string name="text_collections_and_playlists_8b30ee" formatted="false">"合集和播放列表"</string>
+    <string name="text_color_preview_7bbd3c" formatted="false">"预览"</string>
+    <string name="text_color_wheel_5d58ae" formatted="false">"色轮"</string>
+    <string name="text_command_failed_open_the_player_6a5bff" formatted="false">"命令失败·打开播放器"</string>
+    <string name="text_compact_07da14" formatted="false">"紧凑型"</string>
+    <string name="text_compact_grid_3c9e94" formatted="false">"紧凑型网格"</string>
+    <string name="text_compare_65b080" formatted="false">"比较"</string>
+    <string name="text_compare_the_reference_f68129" formatted="false">"比较参考"</string>
+    <string name="text_compare_these_two_copies_bc72b0" formatted="false">"比较这两个副本？"</string>
+    <string name="text_compares_the_contents_of_authorized_files_matchi_7f9d1e" formatted="false">"比较授权文件的内容。匹配的名称或相似的图像是不够的。"</string>
+    <string name="text_comparison_5db262" formatted="false">"比较"</string>
+    <string name="text_comparison_session_unreadable_1_s_895563">"比较会话不可读：%1$s"</string>
+    <string name="text_completed_97967f" formatted="false">"已完成"</string>
+    <string name="text_completes_a_cycle_and_avoids_immediate_repeats_39acda" formatted="false">"完成一个循环并避免立即重复"</string>
+    <string name="text_configuration_incomplete_try_again_0d7d29" formatted="false">"配置不完整。再试一次。"</string>
+    <string name="text_configuration_not_saved_try_again_0ef8dd" formatted="false">"配置未保存。再试一次。"</string>
+    <string name="text_configure_photo_frame_bbd19b" formatted="false">"配置相框"</string>
+    <string name="text_confirm_662c0e" formatted="false">"确认"</string>
+    <string name="text_confirm_chosen_file_c62c88" formatted="false">"确认选择的文件"</string>
+    <string name="text_confirm_date_6b308b" formatted="false">"确认日期"</string>
+    <string name="text_confirm_only_if_you_recognize_the_file_identical_c20d48" formatted="false">"仅当您认识该文件时才进行确认：相同的名称和大小并不能证明身份。仅当您点击“重新链接”时，该选择才适用。"</string>
+    <string name="text_confirming_authorizes_the_entire_folder_read_onl_43d5fe">"确认授权整个文件夹为只读：%1$s。仅传输选定的参考文献。收藏夹、收藏、封面和图钉跟随文件；排除仍然有效。"</string>
+    <string name="text_conflicting_bindings_60437b" formatted="false">"绑定冲突"</string>
+    <string name="text_content_becomes_visible_when_this_panel_is_activ_89c5d8" formatted="false">"当此面板处于活动状态时，内容变得可见。"</string>
+    <string name="text_content_cannot_be_opened_048ecf" formatted="false">"内容无法打开"</string>
+    <string name="text_content_changed_no_references_transferred_4ec39b" formatted="false">"内容已更改：未传输参考文献"</string>
+    <string name="text_content_unavailable_df9efa" formatted="false">"内容不可用"</string>
+    <string name="text_controller_code_1_s_dd98f6">"控制器·代码 %1$s"</string>
+    <string name="text_controls_1_s_b42d62">"控制 · %1$s"</string>
+    <string name="text_controls_3c6824" formatted="false">"操作"</string>
+    <string name="text_controls_54b475" formatted="false">"操作"</string>
+    <string name="text_controls_and_bindings_bc7885" formatted="false">"控件和绑定"</string>
+    <string name="text_converted_copies_require_static_images_a4ba7d" formatted="false">"转换后的副本需要静态图像"</string>
+    <string name="text_cool_white_powder_blue_710a43" formatted="false">"冷白·粉蓝"</string>
+    <string name="text_copies_do_not_enter_the_catalog_or_trash_after_o_8ae906" formatted="false">"副本不会进入目录或回收站。打开拾取器后，它们在 24 小时内保持可读状态；下次可能时运行清理。准备并不发送它们。"</string>
+    <string name="text_copies_expired_or_selection_changed_prepare_agai_88a079" formatted="false">"副本已过期或选择已更改：重新准备"</string>
+    <string name="text_copies_not_recovered_prepare_them_again_7bdf89" formatted="false">"副本未恢复：重新准备"</string>
+    <string name="text_copies_original_bytes_without_recompression_reta_6efbf0" formatted="false">"复制原始字节而不重新压缩，保留任何个人元数据。未添加收藏夹或文件提供方链接。新副本仅在验证后才可在目的地使用。"</string>
+    <string name="text_copies_ready_1_s_c7ea4e">"副本已准备好·%1$s"</string>
+    <string name="text_copies_too_large_reduce_dimensions_or_image_coun_db61cb" formatted="false">"副本太大：减少尺寸或图像数量"</string>
+    <string name="text_copy_1_s_47dc62">"副本：%1$s"</string>
+    <string name="text_copy_and_move_ask_for_a_destination_trash_allows_02c47c" formatted="false">"复制和移动询问目的地。回收站允许恢复：确认之前检查您的选择。"</string>
+    <string name="text_copy_complete_original_preserved_51eb2c" formatted="false">"复制完成：原件保留"</string>
+    <string name="text_copy_ebd162" formatted="false">"复制"</string>
+    <string name="text_copy_imported_into_the_chosen_folder_external_or_edcde6" formatted="false">"复制导入到所选文件夹：保留外部原始文件"</string>
+    <string name="text_copy_imported_or_canceled_private_temporary_file_cc6d03" formatted="false">"复制导入或取消；保留私有临时文件。继续清理。"</string>
+    <string name="text_copy_in_trash_no_further_removal_of_the_original_6a1315" formatted="false">"复制到回收站；不再删除原来的"</string>
+    <string name="text_copy_not_published_855942" formatted="false">"副本未发表"</string>
+    <string name="text_copy_not_verified_b25152" formatted="false">"副本未验证"</string>
+    <string name="text_copy_retained_move_incomplete_9fedd1" formatted="false">"保留副本 · 移动不完整"</string>
+    <string name="text_copy_retained_move_incomplete_no_further_deletio_f4c49b" formatted="false">"保留副本：移动不完整，不再删除"</string>
+    <string name="text_copy_retained_references_need_restoring_1_s_e7e976">"保留副本：引用需要恢复。 %1$s"</string>
+    <string name="text_copy_to_b8ead5" formatted="false">"复制到…"</string>
+    <string name="text_copy_unavailable_0f205e" formatted="false">"复制不可用"</string>
+    <string name="text_copying_0ed6bc" formatted="false">"复印"</string>
+    <string name="text_could_not_connect_to_player_85f1ae" formatted="false">"无法连接到播放器"</string>
+    <string name="text_could_not_open_aa1697" formatted="false">"无法打开"</string>
+    <string name="text_could_not_publish_the_private_copy_7f58f5" formatted="false">"无法发布私人副本"</string>
+    <string name="text_could_not_publish_the_trash_copy_dd8550" formatted="false">"无法发布垃圾副本"</string>
+    <string name="text_could_not_read_albums_585db4" formatted="false">"无法读取专辑"</string>
+    <string name="text_could_not_reserve_the_private_copy_557a15" formatted="false">"无法保留私人副本"</string>
+    <string name="text_could_not_save_9b6ca7" formatted="false">"无法保存"</string>
+    <string name="text_could_not_save_label_1a4871" formatted="false">"无法保存标签。"</string>
+    <string name="text_cover_7be01e" formatted="false">"封面"</string>
+    <string name="text_cream_lavender_and_sage_5c0db4" formatted="false">"奶油·薰衣草和鼠尾草"</string>
+    <string name="text_create_9bf626" formatted="false">"创建"</string>
+    <string name="text_creating_ad9b47" formatted="false">"创造……"</string>
+    <string name="text_creation_denied_b143ba" formatted="false">"创建被拒绝"</string>
+    <string name="text_crop_300dba" formatted="false">"裁剪"</string>
+    <string name="text_current_settings_cannot_be_exported_9a7577" formatted="false">"当前设置无法导出。"</string>
+    <string name="text_custom_792566" formatted="false">"自定义"</string>
+    <string name="text_customize_theme_5d7c82" formatted="false">"定制颜色"</string>
+    <string name="text_dark_316022" formatted="false">"黑暗"</string>
+    <string name="text_date_cec3a9" formatted="false">"日期"</string>
+    <string name="text_date_unavailable_932e7b" formatted="false">"日期不可用"</string>
+    <string name="text_default_interval_for_the_in_app_photo_frame_laun_3098dc" formatted="false">"应用内相框的默认间隔。启动器小部件有单独的间隔。"</string>
+    <string name="text_deferred_in_game_mode_318f70" formatted="false">"游戏模式下延迟"</string>
+    <string name="text_delay_before_repeat_1_s_ms_2d2dfe">"重复前延迟 · %1$s ms"</string>
+    <string name="text_delete_7efe33" formatted="false">"删除"</string>
+    <string name="text_delete_permanently_8a62e5" formatted="false">"永久删除"</string>
+    <string name="text_deletion_denied_e0b43a" formatted="false">"删除被拒绝"</string>
+    <string name="text_deselect_all_d1cf57" formatted="false">"取消全选"</string>
+    <string name="text_destination_1_s_27ea61">"目的地：%1$s"</string>
+    <string name="text_destination_album_unavailable_1d55d6" formatted="false">"目标相册不可用"</string>
+    <string name="text_destination_changed_85142f" formatted="false">"目的地已更改"</string>
+    <string name="text_destination_disconnected_or_access_needs_restori_06ea20" formatted="false">"目的地已断开连接或需要恢复访问"</string>
+    <string name="text_destination_hidden_or_unavailable_54ced7" formatted="false">"目的地隐藏或不可用"</string>
+    <string name="text_destination_identity_changed_no_new_changes_2bc461" formatted="false">"目的地标识已更改：没有新的更改"</string>
+    <string name="text_destination_is_not_writable_e03949" formatted="false">"目的地不可写"</string>
+    <string name="text_destination_needs_relinking_file_preserved_6cd661" formatted="false">"目的地需要重新链接；文件已保存"</string>
+    <string name="text_destination_not_authorized_9ab1e7" formatted="false">"目的地未经授权"</string>
+    <string name="text_destination_published_verify_the_result_before_r_c120e7" formatted="false">"目标已发布：解决操作之前验证结果。无需进一步移除。"</string>
+    <string name="text_destination_same_folder_a0be2e" formatted="false">"目的地：同一文件夹"</string>
+    <string name="text_destination_unavailable_1a3939" formatted="false">"目的地不可用"</string>
+    <string name="text_destination_verification_failed_original_preserv_108861" formatted="false">"目的地验证失败：原始内容已保留"</string>
+    <string name="text_details_1a45b0" formatted="false">"详情"</string>
+    <string name="text_detect_278b26" formatted="false">"检测"</string>
+    <string name="text_device_gallery_1354db" formatted="false">"设备图库"</string>
+    <string name="text_device_gallery_unavailable_4a3bc5" formatted="false">"设备库不可用"</string>
+    <string name="text_dialogs_c3422e" formatted="false">"对话框"</string>
+    <string name="text_different_data_or_path_verification_required_660629" formatted="false">"数据或路径不同：需要验证"</string>
+    <string name="text_different_file_type_75990a" formatted="false">"不同的文件类型"</string>
+    <string name="text_dimensions_4d6b7c" formatted="false">"尺寸"</string>
+    <string name="text_dimensions_before_crop_4622f5" formatted="false">"裁剪前尺寸"</string>
+    <string name="text_directions_cannot_be_part_of_combinations_50c20a" formatted="false">"方向不能是组合的一部分"</string>
+    <string name="text_disable_timer_ba37ce" formatted="false">"禁用计时器"</string>
+    <string name="text_discard_838670" formatted="false">"丢弃"</string>
+    <string name="text_display_1_s_disconnected_no_panel_moved_automati_c72848">"显示 %1$s 已断开连接。没有面板自动移动。"</string>
+    <string name="text_display_added_1_s_no_window_opened_addc3a">"显示添加%1$s；没有打开窗户"</string>
+    <string name="text_display_configuration_changed_1_s_a9092c">"显示配置已更改 %1$s"</string>
+    <string name="text_display_identity_changed_reopen_on_one_screen_an_347828" formatted="false">"显示身份已更改。在一个屏幕上重新打开并检查分配。"</string>
+    <string name="text_display_no_longer_available_8322f0" formatted="false">"显示不再可用。"</string>
+    <string name="text_display_released_the_gallery_continues_on_the_ot_6b18c1" formatted="false">"显示已发布。画廊在另一个屏幕上继续。"</string>
+    <string name="text_display_unavailable_8b459c" formatted="false">"显示不可用"</string>
+    <string name="text_document_link_changed_66df8b" formatted="false">"文档链接已更改"</string>
+    <string name="text_document_unavailable_2d9594" formatted="false">"文档不可用"</string>
+    <string name="text_document_verified_check_the_preview_before_impor_ab933c" formatted="false">"文件已验证。导入前检查预览。"</string>
+    <string name="text_done_fa6730" formatted="false">"完成"</string>
+    <string name="text_double_tap_1_s_nlong_press_2_s_n_610152">"双击：%1$s\n长按：%2$s\n"</string>
+    <string name="text_double_tap_8f6732" formatted="false">"双击"</string>
+    <string name="text_downward_da6a81" formatted="false">"向下"</string>
+    <string name="text_draft_changes_tap_save_to_apply_fd453d" formatted="false">"草稿更改：点击“保存”以应用。"</string>
+    <string name="text_drag_the_corners_or_frame_with_a_controller_adju_023237" formatted="false">"拖动角或框架。使用控制器调整下面的边缘。"</string>
+    <string name="text_duration_902f15" formatted="false">"时长"</string>
+    <string name="text_each_file_has_its_own_result_a_successful_copy_w_1dda18" formatted="false">"每个文件都有自己的结果。删除被拒绝的成功副本仍然是部分移动。"</string>
+    <string name="text_edit_49e493" formatted="false">"编辑"</string>
+    <string name="text_edit_audio_3c820b" formatted="false">"编辑音频…"</string>
+    <string name="text_edit_audio_90b959" formatted="false">"编辑音频"</string>
+    <string name="text_edit_image_cab524" formatted="false">"编辑图像…"</string>
+    <string name="text_edit_image_da6264" formatted="false">"编辑图片"</string>
+    <string name="text_edit_search_1_s_b5e403">"编辑搜索：%1$s"</string>
+    <string name="text_edit_video_3e8c8f" formatted="false">"编辑视频…"</string>
+    <string name="text_edit_video_e5572e" formatted="false">"编辑视频"</string>
+    <string name="text_edited_7e7cdc" formatted="false">"-编辑"</string>
+    <string name="text_electric_lime_5aa0f2" formatted="false">"电石灰"</string>
+    <string name="text_embedded_b70dbe" formatted="false">"嵌入式"</string>
+    <string name="text_empty_file_7a1d6c" formatted="false">"空文件"</string>
+    <string name="text_empty_pin_e56092" formatted="false">"空针"</string>
+    <string name="text_empty_queue_39af79" formatted="false">"空队列"</string>
+    <string name="text_empty_trash_1c01ef" formatted="false">"清空回收站"</string>
+    <string name="text_enable_operation_notifications_d6bcd6" formatted="false">"启用操作通知"</string>
+    <string name="text_encoding_did_not_produce_a_file_8b1592" formatted="false">"编码没有产生文件"</string>
+    <string name="text_encoding_failed_1_s_codec_or_parameters_may_be_u_8f1cb9">"编码失败 (%1$s)。编解码器或参数可能不受支持；原件保存。"</string>
+    <string name="text_encoding_may_slow_down_your_game_and_use_more_ba_06e080" formatted="false">"编码可能会减慢游戏速度并消耗更多电量。您可以稍后导出。"</string>
+    <string name="text_encoding_may_use_memory_and_slow_the_game_you_ca_8acfd0" formatted="false">"编码可能会占用内存并减慢游戏速度。您可以稍后取消并保存。"</string>
+    <string name="text_encoding_new_copy_cddadd" formatted="false">"对新副本进行编码"</string>
+    <string name="text_encoding_segment_1_s_a411b2">"编码段：%1$s%%"</string>
+    <string name="text_encoding_segment_4f4ac8" formatted="false">"编码段…"</string>
+    <string name="text_encoding_takes_time_and_temporary_space_no_files_ad5504" formatted="false">"编码需要时间和临时空间。不会覆盖任何文件：现有名称会带有后缀。"</string>
+    <string name="text_end_seconds_60bd23" formatted="false">"结束·秒"</string>
+    <string name="text_enter_seconds_within_the_content_duration_3fa3be" formatted="false">"输入内容持续时间内的秒数"</string>
+    <string name="text_entire_catalog_10e9a3" formatted="false">"整个目录"</string>
+    <string name="text_every_30_minutes_fcea34" formatted="false">"每30分钟一班"</string>
+    <string name="text_every_6_hours_70657d" formatted="false">"每 6 小时"</string>
+    <string name="text_every_day_32af98" formatted="false">"每天"</string>
+    <string name="text_every_hour_0b11e2" formatted="false">"每小时"</string>
+    <string name="text_excluded_album_relinking_keeps_the_exclusion_3c5468" formatted="false">"排除的相册：重新链接会保留排除。"</string>
+    <string name="text_excluded_album_stays_excluded_after_relinking_8db313" formatted="false">"排除的相册：重新链接后仍保持排除状态。"</string>
+    <string name="text_explicit_panel_1_s_request_screen_2_s_80a0d8">"显式面板%1$s请求→屏幕%2$s"</string>
+    <string name="text_explicitly_relink_the_backup_document_d45acb" formatted="false">"显式重新链接备份文档"</string>
+    <string name="text_explicitly_relink_the_backup_source_179521" formatted="false">"显式重新链接备份源"</string>
+    <string name="text_export_2c4c51" formatted="false">"出口"</string>
+    <string name="text_export_audio_segment_a0faff" formatted="false">"导出音频片段"</string>
+    <string name="text_export_did_not_start_c11e45" formatted="false">"导出未开始"</string>
+    <string name="text_export_first_frame_68b9a6" formatted="false">导出帧…</string>
+    <string name="text_export_gif_frame_a7c5cd" formatted="false">"导出 GIF 帧"</string>
+    <string name="text_export_image_b28177" formatted="false">"导出图片"</string>
+    <string name="text_export_import_settings_5d89ec" formatted="false">"导出/导入设置"</string>
+    <string name="text_export_new_copy_f9107d" formatted="false">"导出新副本"</string>
+    <string name="text_export_now_4bb86b" formatted="false">"立即导出"</string>
+    <string name="text_export_or_import_settings_5f5279" formatted="false">"导出或导入设置"</string>
+    <string name="text_export_saved_settings_48c7e3" formatted="false">"导出保存的设置"</string>
+    <string name="text_export_settings_b58a03" formatted="false">"导出设置…"</string>
+    <string name="text_export_storage_unavailable_5041f2" formatted="false">"导出存储不可用"</string>
+    <string name="text_export_unverified_the_destination_document_may_b_364634" formatted="false">"出口未经验证。目的地文件可能不完整；使用新文件重试。设置保持不变。"</string>
+    <string name="text_export_unverified_the_document_may_be_incomplete_eceee6" formatted="false">"出口未经验证；该文件可能不完整"</string>
+    <string name="text_export_video_segment_d137d3" formatted="false">"导出视频片段"</string>
+    <string name="text_export_while_gaming_a6b51c" formatted="false">"玩游戏时导出？"</string>
+    <string name="text_export_without_audio_ab231b" formatted="false">"导出时不带音频"</string>
+    <string name="text_exported_duration_does_not_match_the_segment_5feb72" formatted="false">"导出的持续时间与段不匹配"</string>
+    <string name="text_exported_track_incomplete_79fd24" formatted="false">"导出的曲目不完整"</string>
+    <string name="text_extra_copy_17ffbc" formatted="false">"额外副本"</string>
+    <string name="text_fade_b179cb" formatted="false">"淡入淡出"</string>
+    <string name="text_favorite_06bae3" formatted="false">"最爱"</string>
+    <string name="text_favorite_not_saved_1_s_9d77cf">"收藏夹未保存：%1$s"</string>
+    <string name="text_favorites_4c7a1b" formatted="false">"收藏"</string>
+    <string name="text_favorites_and_links_transferred_no_files_deleted_b9a9f0" formatted="false">"已转移收藏夹和链接。没有删除任何文件。"</string>
+    <string name="text_favorites_collections_covers_and_pins_are_preser_53017d" formatted="false">"收藏夹、收藏、封面和别针都会被保留。已索引的文件合并其引用。排除的专辑仍被排除。禁止复制、移动或播放；持久只读访问。"</string>
+    <string name="text_favorites_d1d566" formatted="false">"收藏"</string>
+    <string name="text_file_1_s_2_s_348193">"文件%1$s：%2$s"</string>
+    <string name="text_file_access_denied_check_the_source_160214" formatted="false">"文件访问被拒绝。检查来源。"</string>
+    <string name="text_file_access_needs_restoring_5e2b63" formatted="false">"文件访问需要恢复"</string>
+    <string name="text_file_cannot_be_linked_403bb3" formatted="false">"文件无法链接"</string>
+    <string name="text_file_management_73f374" formatted="false">"文件管理"</string>
+    <string name="text_file_name_a26de2" formatted="false">"文件名"</string>
+    <string name="text_file_name_too_long_576415" formatted="false">"文件名太长"</string>
+    <string name="text_file_not_found_cf1869" formatted="false">"找不到文件"</string>
+    <string name="text_file_not_indexed_check_exclusions_and_access_e8ce8a" formatted="false">"文件未编入索引：检查排除和访问"</string>
+    <string name="text_file_not_writable_01d31c" formatted="false">"文件不可写"</string>
+    <string name="text_file_operations_7333a0" formatted="false">"文件操作"</string>
+    <string name="text_file_path_780ddb" formatted="false">"文件路径"</string>
+    <string name="text_file_picker_unavailable_be119c" formatted="false">"文件选择器不可用"</string>
+    <string name="text_file_picker_unavailable_on_this_panel_993597" formatted="false">"文件选择器在此面板上不可用。"</string>
+    <string name="text_file_picker_unavailable_on_this_system_327275" formatted="false">"文件选择器在此系统上不可用"</string>
+    <string name="text_file_readable_compare_the_data_and_confirm_only_2b77a7" formatted="false">"文件可读。比较数据并仅确认它是否是您要重新链接的文件。"</string>
+    <string name="text_file_restored_private_copy_still_retained_resume_f3fe8f" formatted="false">"文件已恢复；私人副本仍保留。恢复清理或保留备份副本。"</string>
+    <string name="text_file_size_c27dd5" formatted="false">"文件大小"</string>
+    <string name="text_file_too_large_234633" formatted="false">"文件太大"</string>
+    <string name="text_file_unavailable_6dcc4f" formatted="false">"文件不可用"</string>
+    <string name="text_file_unavailable_dad522" formatted="false">"文件不可用"</string>
+    <string name="text_file_unreadable_2af756" formatted="false">"文件无法读取"</string>
+    <string name="text_files_not_acquired_6bf6a7" formatted="false">"未获取文件"</string>
+    <string name="text_fill_frame_4f7c97" formatted="false">"填充框"</string>
+    <string name="text_fill_may_crop_edges_7b2302" formatted="false">"填充 · 可以裁剪边缘"</string>
+    <string name="text_filter_1_s_you_can_show_all_formats_while_keepin_c81fc6">"过滤器：%1$s。您可以在保留文件夹和搜索的同时显示所有格式。"</string>
+    <string name="text_filter_black_and_white_7c204d" formatted="false">"黑色和白色"</string>
+    <string name="text_filter_by_format_113c28" formatted="false">"按格式过滤"</string>
+    <string name="text_filter_cool_5a1d5d" formatted="false">"酷"</string>
+    <string name="text_filter_original_18c7dc" formatted="false">"原创"</string>
+    <string name="text_filter_warm_ef28da" formatted="false">"温暖"</string>
+    <string name="text_filters_54fc01" formatted="false">"滤镜"</string>
+    <string name="text_find_duplicates_d1ed15" formatted="false">"查找重复项"</string>
+    <string name="text_find_your_folder_d5b7f4" formatted="false">"找到你的文件夹"</string>
+    <string name="text_finish_file_operations_before_relinking_544ffb" formatted="false">"重新链接之前完成文件操作"</string>
+    <string name="text_finish_or_cancel_file_operations_before_restorin_e489ae" formatted="false">"恢复前完成或取消文件操作"</string>
+    <string name="text_first_frame_as_a_still_image_the_original_gif_ke_da8ccd" formatted="false">"第一帧为静止图像。原始的 GIF 保留所有帧和动画。"</string>
+    <string name="text_first_frame_exported_original_gif_and_favorites_8d9d76" formatted="false">"导出第一帧：原始 GIF 并保留收藏夹"</string>
+    <string name="text_fixed_image_631654" formatted="false">"固定图像"</string>
+    <string name="text_focus_down_d198fa" formatted="false">"聚焦"</string>
+    <string name="text_focus_left_bbc430" formatted="false">"焦点向左"</string>
+    <string name="text_focus_right_8b0117" formatted="false">"向右对焦"</string>
+    <string name="text_focus_up_bb1e59" formatted="false">"集中注意力"</string>
+    <string name="text_folder_1_s_media_8ef7d0">"文件夹·%1$s 媒体"</string>
+    <string name="text_folder_2e95e4" formatted="false">"文件夹"</string>
+    <string name="text_folder_access_denied_try_again_d5e242" formatted="false">"文件夹访问被拒绝。再试一次。"</string>
+    <string name="text_folder_access_needs_restoring_b913f4" formatted="false">"文件夹访问需要恢复"</string>
+    <string name="text_folder_authorized_open_it_in_albums_to_see_files_ef4038" formatted="false">"文件夹已授权。在相册中打开它即可查看文件。"</string>
+    <string name="text_folder_available_1_s_ae9bd3">"可用文件夹：%1$s"</string>
+    <string name="text_folder_is_not_writable_348e84" formatted="false">"文件夹不可写"</string>
+    <string name="text_folder_name_7eaa40" formatted="false">"文件夹名称"</string>
+    <string name="text_folder_needs_relinking_f72a5e" formatted="false">"文件夹需要重新链接"</string>
+    <string name="text_folder_not_added_1_s_82ccb6">"未添加文件夹：%1$s"</string>
+    <string name="text_folder_not_created_c4c5b9" formatted="false">"文件夹未创建"</string>
+    <string name="text_folder_picker_unavailable_on_this_panel_72be79" formatted="false">"文件夹选择器在此面板上不可用"</string>
+    <string name="text_folder_read_choose_and_verify_matches_no_persist_cd57e0" formatted="false">"文件夹已读。选择并验证匹配项；未获取持久访问权限。"</string>
+    <string name="text_folder_unavailable_1f6e37" formatted="false">"文件夹不可用"</string>
+    <string name="text_folder_unavailable_choose_it_again_no_originals_2a7f89" formatted="false">"文件夹不可用。再次选择；原件没有改变。"</string>
+    <string name="text_folders_23cc92" formatted="false">"文件夹"</string>
+    <string name="text_folders_69d99c" formatted="false">"文件夹"</string>
+    <string name="text_folders_and_collections_2083b2" formatted="false">"文件夹与合集"</string>
+    <string name="text_folders_and_permissions_80735e" formatted="false">"文件夹与权限"</string>
+    <string name="text_folders_to_check_708c64" formatted="false">"要检查的文件夹"</string>
+    <string name="text_follow_selection_4b3585" formatted="false">"跟随选择"</string>
+    <string name="text_following_selection_1_s_97b184">"以下选择 · %1$s"</string>
+    <string name="text_for_images_and_videos_3a551b" formatted="false">"对于图像和视频"</string>
+    <string name="text_for_music_eef927" formatted="false">"为了音乐"</string>
+    <string name="text_for_videos_4cebe5" formatted="false">"对于视频"</string>
+    <string name="text_format_73e180" formatted="false">"格式"</string>
+    <string name="text_four_panes_407964" formatted="false">"四个窗格"</string>
+    <string name="text_frame_4098fb" formatted="false">"框架"</string>
+    <string name="text_frame_a6b9c6" formatted="false">"- 框架"</string>
+    <string name="text_frame_count_unavailable_3e8d19" formatted="false">"帧数不可用"</string>
+    <string name="text_from_1_s_2e9c11">"来自：%1$s"</string>
+    <string name="text_from_1_s_nto_2_s_n_nfavorites_and_collection_pla_bb8171">"从 %1$s\n 到 %2$s\n\n 收藏夹和收藏/播放列表链接将移动，保持其顺序。封面保持不变。没有文件被删除。首先再次检查这两个内容。"</string>
+    <string name="text_full_4b19a8" formatted="false">"满"</string>
+    <string name="text_full_frame_1f765a" formatted="false">"全画幅"</string>
+    <string name="text_full_track_a05670" formatted="false">"全轨"</string>
+    <string name="text_full_video_cae633" formatted="false">"完整视频"</string>
+    <string name="text_gallery_and_preview_36bf93" formatted="false">"图库和预览"</string>
+    <string name="text_gallery_preview_and_navigation_1bc538" formatted="false">"图库、预览和导航"</string>
+    <string name="text_gallery_theme_a2416f" formatted="false">"画廊主题"</string>
+    <string name="text_game_mode_36850a" formatted="false">"游戏模式"</string>
+    <string name="text_game_mode_allow_preparation_or_try_later_f52946" formatted="false">"游戏模式：允许准备或稍后尝试"</string>
+    <string name="text_game_mode_export_deferred_disable_it_and_tap_res_a4b373" formatted="false">"游戏模式：导出延迟。禁用它并点击恢复。"</string>
+    <string name="text_game_mode_import_deferred_disable_it_and_tap_res_450951" formatted="false">"游戏模式：导入延迟。禁用它并点击恢复。"</string>
+    <string name="text_gestures_apply_locally_to_this_window_swap_panel_b7ff93" formatted="false">"手势局部应用于此窗口。交换面板仅影响两个打开的面板；它不会回收发布到游戏的屏幕。文件确认仍然明确。"</string>
+    <string name="text_gestures_changed_on_the_other_panel_reload_setti_09990f" formatted="false">"另一个面板上的手势发生了变化。保存前重新加载设置。"</string>
+    <string name="text_gestures_not_saved_f2b3af" formatted="false">"手势未保存"</string>
+    <string name="text_gif_frame_count_dc95bf" formatted="false">"GIF 帧数"</string>
+    <string name="text_gif_too_large_803f38" formatted="false">"GIF 太大"</string>
+    <string name="text_gifs_in_the_grid_c5be9f" formatted="false">"网格中的 GIF"</string>
+    <string name="text_grid_1_s_ngif_limit_2_s_n_224dd6">"网格：%1$s\nGIF限制：%2$s\n"</string>
+    <string name="text_grid_view_c4886b" formatted="false">"网格视图"</string>
+    <string name="text_group_1_s_2_s_copies_116e5d">"组 %1$s · %2$s 副本"</string>
+    <string name="text_height_ba9669" formatted="false">"身高"</string>
+    <string name="text_help_79df3a" formatted="false">"帮助"</string>
+    <string name="text_hidden_albums_5ff5a5" formatted="false">"隐藏相册"</string>
+    <string name="text_hidden_albums_keep_their_favorites_and_reference_848396" formatted="false">"隐藏相册保留他们的收藏夹和参考文献，而无需更改文件。"</string>
+    <string name="text_hidden_folder_d2c9a2" formatted="false">"隐藏文件夹"</string>
+    <string name="text_hidden_items_trash_disabled_sources_and_unavaila_44d115" formatted="false">"隐藏的项目、垃圾、禁用的源和不可用的文件被排除在外。文件夹包括先前索引的子文件夹。"</string>
+    <string name="text_hide_12292a" formatted="false">"隐藏"</string>
+    <string name="text_hide_1_s_albums_359955">"隐藏 %1$s 相册？"</string>
+    <string name="text_hide_advanced_value_47a819" formatted="false">"隐藏高级值"</string>
+    <string name="text_hides_app_bars_the_top_button_restores_controls_de2422" formatted="false">"隐藏应用栏；顶部按钮恢复控制"</string>
+    <string name="text_hold_a_stick_or_d_pad_to_keep_scrolling_single_a_93ed50" formatted="false">"按住操纵杆或方向键继续滚动。单一动作不重复。"</string>
+    <string name="text_home_p_1_s_in_background_2_s_8f77e6">"主页：背景中的 P%1$s=%2$s"</string>
+    <string name="text_home_volume_and_system_keys_cannot_be_recorded_t_1b3b70" formatted="false">"无法记录 Home 键、音量键和系统键。对真实控制器的测试显示哪个物理字母对应于接收到的代码。"</string>
+    <string name="text_horizontal_position_c54b8c" formatted="false">"水平位置"</string>
+    <string name="text_hue_071cf9" formatted="false">"色调"</string>
+    <string name="text_i_checked_that_i_want_to_link_this_file_to_the_r_172195" formatted="false">"我检查过我想将此文件链接到参考"</string>
+    <string name="text_i_checked_the_selected_matches_71f4d0" formatted="false">"我检查了所选的比赛"</string>
+    <string name="text_identical_duplicates_5f7af8" formatted="false">"相同的重复项"</string>
+    <string name="text_if_a_key_does_not_appear_firmware_may_reserve_it_0f06b5" formatted="false">"如果某个键未出现，则固件可能会保留该键，或者可能不支持该键：尝试另一个命令。使用系统“后退”或“取消”停止录制。"</string>
+    <string name="text_if_temporary_access_expires_before_acquisition_t_8742b5" formatted="false">"如果临时访问在获取之前过期，操作将停止：重新打开选取器并重试。按照文件操作中的每个文件进行操作。"</string>
+    <string name="text_if_the_file_is_playing_playback_stops_before_rem_8136e9" formatted="false">"如果文件正在播放，播放会在删除之前停止。"</string>
+    <string name="text_if_the_name_exists_the_copy_receives_a_suffix_th_b80221" formatted="false">"如果该名称存在，则副本会收到一个后缀。队列显示验证、结果和取消。"</string>
+    <string name="text_if_the_name_is_taken_a_suffix_will_be_used_no_fo_261df9" formatted="false">"如果使用该名称，将使用后缀。不会覆盖任何文件夹。"</string>
+    <string name="text_image_850b6f" formatted="false">"图片"</string>
+    <string name="text_image_copies_646a7b" formatted="false">"图像副本"</string>
+    <string name="text_image_encoding_failed_856b1c" formatted="false">"图像编码失败"</string>
+    <string name="text_image_exported_original_and_favorites_preserved_5e5c41" formatted="false">"导出的图像：保留原始图像和收藏夹"</string>
+    <string name="text_image_only_174c99" formatted="false">"仅图像"</string>
+    <string name="text_image_ready_c2b75d" formatted="false">"图像准备就绪"</string>
+    <string name="text_image_unreadable_dffbcd" formatted="false">"图像无法读取"</string>
+    <string name="text_images_a9f46a" formatted="false">"图片"</string>
+    <string name="text_images_and_videos_731776" formatted="false">"图片和视频"</string>
+    <string name="text_images_stay_local_hiding_an_album_or_disconnecti_ed25ff" formatted="false">"图像保留在本地。隐藏相册或断开源连接会从小部件中删除艺术品。"</string>
+    <string name="text_images_to_show_29445a" formatted="false">"要显示的图片"</string>
+    <string name="text_images_videos_and_music_7e3f80" formatted="false">"图片、视频和音乐"</string>
+    <string name="text_import_a_copy_42d133" formatted="false">"导入副本…"</string>
+    <string name="text_import_a_copy_9719ca" formatted="false">"导入副本"</string>
+    <string name="text_import_a_copy_or_keep_the_link_before_adding_to_55a177" formatted="false">"在添加到收藏夹之前导入副本或保留链接"</string>
+    <string name="text_import_and_save_586cbd" formatted="false">"导入并保存"</string>
+    <string name="text_import_copies_38f630" formatted="false">"导入副本"</string>
+    <string name="text_import_data_missing_774e96" formatted="false">"导入数据缺失"</string>
+    <string name="text_import_did_not_start_7308d0" formatted="false">"导入未开始"</string>
+    <string name="text_import_images_and_videos_982ded" formatted="false">"导入图像和视频…"</string>
+    <string name="text_import_music_04d90e" formatted="false">"导入音乐…"</string>
+    <string name="text_import_music_b026bc" formatted="false">"导入音乐"</string>
+    <string name="text_import_photos_and_videos_b31480" formatted="false">"导入照片和视频"</string>
+    <string name="text_import_while_gaming_anyway_reading_from_the_prov_352ee8" formatted="false">"无论如何，在玩游戏时导入。从文件提供方处读取可能会消耗电池并减慢游戏速度。"</string>
+    <string name="text_import_with_preview_78ff22" formatted="false">"带预览导入"</string>
+    <string name="text_imported_cleaning_private_copy_343dbb" formatted="false">"进口·清洗私人副本"</string>
+    <string name="text_imported_media_53118d" formatted="false">"进口媒体"</string>
+    <string name="text_in_memory_previews_cleared_removed_1_s_temporary_d1b41f">"内存中预览已清除。删除了 %1$s 临时图稿文件 (%2$s)。"</string>
+    <string name="text_in_trash_for_seven_days_e05a70" formatted="false">"在回收站里呆了7天"</string>
+    <string name="text_include_1_s_414139">"包括 %1$s"</string>
+    <string name="text_included_1_s_reachable_2_s_last_scan_3_s_error_4_ead44c">"包括=%1$s；可达=%2$s；最后一次扫描=%3$s；错误=%4$s"</string>
+    <string name="text_incompatible_album_identity_b1009c" formatted="false">"相册标识不兼容"</string>
+    <string name="text_incompatible_reference_identity_effad2" formatted="false">"参考身份不兼容"</string>
+    <string name="text_incompatible_source_identity_748a30" formatted="false">"源身份不兼容"</string>
+    <string name="text_incomplete_90fb31" formatted="false">"不完整"</string>
+    <string name="text_incomplete_artwork_cannot_be_deleted_5c7b87" formatted="false">"不完整的图稿无法删除"</string>
+    <string name="text_incomplete_gif_597b31" formatted="false">"不完整 GIF"</string>
+    <string name="text_incomplete_or_unsupported_settings_8affeb" formatted="false">"设置不完整或不受支持"</string>
+    <string name="text_ink_black_neon_pink_and_ice_c1dc9e" formatted="false">"墨黑·霓虹粉与冰"</string>
+    <string name="text_input_received_check_the_binding_before_using_it_d15720" formatted="false">"收到输入。使用前请检查绑定情况。"</string>
+    <string name="text_insufficient_private_storage_import_stopped_orig_5daa32" formatted="false">"私人存储空间不足：导入停止，原始保留"</string>
+    <string name="text_insufficient_private_storage_original_preserved_4f3855" formatted="false">"私人存储空间不足：原始保留"</string>
+    <string name="text_insufficient_space_for_copies_originals_preserve_ee396b" formatted="false">"没有足够的空间存放副本；保留原件"</string>
+    <string name="text_insufficient_space_to_protect_the_file_original_837367" formatted="false">"空间不足，无法保护文件：保留原始文件"</string>
+    <string name="text_intensity_7a8f0c" formatted="false">"强度"</string>
+    <string name="text_interface_a86468" formatted="false">"界面"</string>
+    <string name="text_internal_storage_506cd3" formatted="false">"内部存储"</string>
+    <string name="text_interrupted_verification_required_98ab9d" formatted="false">"中断·需要验证"</string>
+    <string name="text_interrupted_verify_copy_and_original_before_resu_eb3b9a" formatted="false">"中断：在恢复之前验证副本和原件"</string>
+    <string name="text_invalid_1_s_field_949520">"%1$s 字段无效"</string>
+    <string name="text_invalid_artwork_priority_c1e3fd" formatted="false">"艺术品优先级无效"</string>
+    <string name="text_invalid_collection_type_802a12" formatted="false">"合集类型无效"</string>
+    <string name="text_invalid_color_afaf16" formatted="false">"颜色无效"</string>
+    <string name="text_invalid_colors_124716" formatted="false">"无效颜色"</string>
+    <string name="text_invalid_comparison_reference_2ba4e7" formatted="false">"比较参考无效"</string>
+    <string name="text_invalid_cover_e32130" formatted="false">"封面无效"</string>
+    <string name="text_invalid_crop_b9c1bc" formatted="false">"裁剪区域无效"</string>
+    <string name="text_invalid_duplicate_protection_011a1a" formatted="false">"无效的重复保护"</string>
+    <string name="text_invalid_export_identity_2dbcad" formatted="false">"导出身份无效"</string>
+    <string name="text_invalid_export_type_768187" formatted="false">"导出类型无效"</string>
+    <string name="text_invalid_folder_structure_637a03" formatted="false">"文件夹结构无效。"</string>
+    <string name="text_invalid_gif_block_19455d" formatted="false">"GIF 块无效"</string>
+    <string name="text_invalid_image_filter_d2a84e" formatted="false">"图像过滤器无效"</string>
+    <string name="text_invalid_name_2e3d77" formatted="false">"名称无效"</string>
+    <string name="text_invalid_navigation_bar_order_0bf386" formatted="false">"导航栏顺序无效"</string>
+    <string name="text_invalid_private_locator_9aa0f7" formatted="false">"私人定位器无效"</string>
+    <string name="text_invalid_range_7d3864" formatted="false">"无效范围"</string>
+    <string name="text_invalid_recipe_ed8ebd" formatted="false">"食谱无效"</string>
+    <string name="text_invalid_recipe_format_ec8914" formatted="false">"食谱格式无效"</string>
+    <string name="text_invalid_settings_73e331" formatted="false">"无效设置"</string>
+    <string name="text_invalid_text_c9999f" formatted="false">"无效文字"</string>
+    <string name="text_invalid_three_finger_gesture_ef0390" formatted="false">"三指手势无效"</string>
+    <string name="text_invalid_touch_action_36e363" formatted="false">"无效的触摸动作"</string>
+    <string name="text_invalid_touch_contexts_038d88" formatted="false">"无效的触摸上下文"</string>
+    <string name="text_invalid_touch_coordinates_0cb272" formatted="false">"无效的触摸坐标"</string>
+    <string name="text_invalid_touch_field_cd73e5" formatted="false">"触摸区无效"</string>
+    <string name="text_invalid_touch_settings_a76146" formatted="false">"触摸设置无效"</string>
+    <string name="text_invalid_transformation_ae3aba" formatted="false">"无效转换"</string>
+    <string name="text_invalid_value_23d031" formatted="false">"无效值"</string>
+    <string name="text_invalid_video_crop_6c7d96" formatted="false">"视频裁剪无效"</string>
+    <string name="text_is_the_system_date_correct_e852f9" formatted="false">"系统日期是否正确？"</string>
+    <string name="text_item_already_removed_47c0c9" formatted="false">"项目已删除"</string>
+    <string name="text_item_not_in_trash_1d8ce8" formatted="false">"物品不在回收站中"</string>
+    <string name="text_jpeg_quality_1_s_transparent_areas_become_white_5dbac0">"JPEG · 质量 %1$s%%。透明区域变成白色；有损压缩。"</string>
+    <string name="text_jpeg_quality_2a0749" formatted="false">"JPEG 质量"</string>
+    <string name="text_jpeg_transparency_becomes_white_quality_1_s_654e7d">"JPEG：透明度变为白色。质量 %1$s%%。"</string>
+    <string name="text_keep_1_s_nthis_content_will_also_be_checked_agai_5f06f3">"保留：%1$s\n此内容在删除前也会再次检查。"</string>
+    <string name="text_keep_backup_copy_bfdd54" formatted="false">"保留备份副本"</string>
+    <string name="text_keep_both_if_the_name_is_taken_cbae14" formatted="false">"如果名字被占用，请保留两者"</string>
+    <string name="text_keep_both_when_the_name_is_taken_212871" formatted="false">"取名时保留两者"</string>
+    <string name="text_keep_copy_782cd4" formatted="false">"保留副本"</string>
+    <string name="text_keep_copy_in_trash_725033" formatted="false">"将副本放入回收站"</string>
+    <string name="text_keep_d3090f" formatted="false">"保留"</string>
+    <string name="text_keep_link_0fa353" formatted="false">"保留链接吗？"</string>
+    <string name="text_keep_link_1e44fb" formatted="false">"保留链接…"</string>
+    <string name="text_keep_link_c839e2" formatted="false">"保留链接"</string>
+    <string name="text_keep_original_64df82" formatted="false">"保持原创"</string>
+    <string name="text_keep_screen_on_d6eb18" formatted="false">"保持屏幕开启"</string>
+    <string name="text_keep_the_original_extension_renaming_does_not_co_5220af" formatted="false">"保留原始扩展名：重命名不会转换文件"</string>
+    <string name="text_keep_the_original_extension_the_name_does_not_ch_02a5b8" formatted="false">"保留原来的扩展名。该名称不会改变文件格式。"</string>
+    <string name="text_keep_the_original_extension_the_name_does_not_co_d2004e" formatted="false">"保留原来的扩展名：名称不转换格式。"</string>
+    <string name="text_keep_this_one_5d3d76" formatted="false">"保留这个"</string>
+    <string name="text_keep_your_preferences_53df46" formatted="false">"保留您的偏好"</string>
+    <string name="text_label_1_s_45b4a6">"标签：%1$s"</string>
+    <string name="text_large_image_choose_2048_or_1024_px_before_export_f848e3" formatted="false">"大图像：导出前选择 2048 或 1024 px"</string>
+    <string name="text_larger_albums_806813" formatted="false">"更大的专辑"</string>
+    <string name="text_last_modified_63c096" formatted="false">"最后修改时间"</string>
+    <string name="text_later_b81861" formatted="false">"暂时不用"</string>
+    <string name="text_lavender_cloud_4cff2b" formatted="false">"薰衣草云"</string>
+    <string name="text_leave_this_off_to_keep_current_shared_controls_p_8d66bb" formatted="false">"关闭此选项以保留当前的共享控件。个人配置文件仅在匹配的控制器上激活。"</string>
+    <string name="text_leave_unlinked_16ff6e" formatted="false">"保持未链接状态"</string>
+    <string name="text_left_af36a4" formatted="false">"左"</string>
+    <string name="text_leftward_db8d9b" formatted="false">"向左"</string>
+    <string name="text_letters_indicate_codes_received_from_android_ren_0d4b3a" formatted="false">"字母表示从 Android 收到的代码。在控件中重命名它们的标签。快捷方式仅适用于活动窗口。"</string>
+    <string name="text_library_93c372" formatted="false">"图书馆"</string>
+    <string name="text_library_identity_not_saved_a70dd7" formatted="false">"图书馆身份未保存"</string>
+    <string name="text_light_8f1b4e" formatted="false">"光"</string>
+    <string name="text_light_peach_terracotta_and_teal_0e2200" formatted="false">"浅桃色·赤土色和青色"</string>
+    <string name="text_lightness_7d8d12" formatted="false">"亮度"</string>
+    <string name="text_link_a_single_file_2f3972" formatted="false">"链接单个文件…"</string>
+    <string name="text_link_not_retained_91c97f" formatted="false">"链接未保留"</string>
+    <string name="text_link_the_file_or_import_a_library_copy_to_use_fa_29ea7c" formatted="false">"链接文件或导入库副本以使用收藏夹和比较。"</string>
+    <string name="text_linked_file_1_s_2ebd23">"链接文件/%1$s"</string>
+    <string name="text_linked_file_1_s_c1b652">"链接文件·%1$s"</string>
+    <string name="text_linked_zoom_ac5b5d" formatted="false">"联动变焦"</string>
+    <string name="text_list_view_8cb747" formatted="false">"列表视图"</string>
+    <string name="text_listen_to_segment_b9d78e" formatted="false">"听片段"</string>
+    <string name="text_listening_04c474" formatted="false">"正在听……"</string>
+    <string name="text_loading_fda05a" formatted="false">"加载中…"</string>
+    <string name="text_loading_image_b4f633" formatted="false">"加载图片"</string>
+    <string name="text_local_choice_bb1037" formatted="false">"本地选择"</string>
+    <string name="text_local_playlist_091df5" formatted="false">"本地播放列表"</string>
+    <string name="text_local_references_only_original_files_stay_in_the_1c6b0a" formatted="false">"仅本地参考：原始文件保留在其文件夹中。"</string>
+    <string name="text_long_press_e8ac77" formatted="false">"长按"</string>
+    <string name="text_lower_fa89db" formatted="false">"较低"</string>
+    <string name="text_m4a_with_aac_audio_the_segment_is_re_encoded_not_ca6411" formatted="false">"带有 AAC 音频的 M4A：该片段被重新编码，而不是无损修剪。原始标题、艺术家、艺术品和其他元数据不会被复制。"</string>
+    <string name="text_make_room_by_moving_or_shrinking_a_zone_82547d" formatted="false">"通过移动或缩小区域来腾出空间。"</string>
+    <string name="text_manage_both_screens_dcba9a" formatted="false">"管理两个屏幕"</string>
+    <string name="text_manage_collection_557c66" formatted="false">"管理合集"</string>
+    <string name="text_manage_playlists_e10ca3" formatted="false">"管理播放列表"</string>
+    <string name="text_manual_changes_6f0bb8" formatted="false">"手动更改"</string>
+    <string name="text_mark_an_image_gif_video_or_track_as_a_favorite_n_29af41" formatted="false">"将图像、GIF、视频或曲目标记为收藏夹。不复制任何文件。"</string>
+    <string name="text_match_not_in_preview_b32852" formatted="false">"匹配不在预览中"</string>
+    <string name="text_maximum_long_edge_no_upscaling_377c8a" formatted="false">"最大长边·无放大"</string>
+    <string name="text_may_crop_edges_turn_off_to_show_the_full_image_de5969" formatted="false">"可以裁剪边缘；关闭以显示完整图像"</string>
+    <string name="text_media_actions_0e2aa2" formatted="false">"媒体行动"</string>
+    <string name="text_media_hidden_disconnected_or_busy_6151f3" formatted="false">"媒体隐藏、断开连接或忙碌"</string>
+    <string name="text_media_menu_17ce51" formatted="false">"媒体菜单"</string>
+    <string name="text_media_options_8aef8c" formatted="false">"媒体选项"</string>
+    <string name="text_media_record_missing_c01843" formatted="false">"媒体记录丢失"</string>
+    <string name="text_media_to_check_32b34c" formatted="false">"要检查的媒体"</string>
+    <string name="text_media_unavailable_91dca9" formatted="false">"媒体不可用"</string>
+    <string name="text_media_unavailable_for_comparison_8fd848" formatted="false">"媒体无法进行比较"</string>
+    <string name="text_media_unavailable_or_hidden_789e84" formatted="false">"媒体不可用或隐藏"</string>
+    <string name="text_media_unreadable_access_expired_or_format_cannot_563bbc" formatted="false">"媒体无法读取：访问已过期或格式无法解码"</string>
+    <string name="text_metadata_07289c" formatted="false">"元数据"</string>
+    <string name="text_metadata_too_large_choose_fewer_files_2a4c6e" formatted="false">"元数据太大：选择较少的文件"</string>
+    <string name="text_midnight_blue_cyan_and_fuchsia_87834d" formatted="false">"午夜蓝·青色和紫红色"</string>
+    <string name="text_midnight_copper_6af1c7" formatted="false">"午夜铜色"</string>
+    <string name="text_mint_cream_2af769" formatted="false">"薄荷霜"</string>
+    <string name="text_mirror_999cf9" formatted="false">"镜子"</string>
+    <string name="text_mirror_horizontal_2c4e75" formatted="false">"水平镜像"</string>
+    <string name="text_mirror_horizontal_on_b74c1f" formatted="false">"水平镜开启"</string>
+    <string name="text_mirror_on_e46f1b" formatted="false">"镜像打开"</string>
+    <string name="text_mirror_vertical_629eb8" formatted="false">"垂直镜像"</string>
+    <string name="text_mirror_vertical_on_9c28ef" formatted="false">"垂直镜子打开"</string>
+    <string name="text_missing_identity_6fc395" formatted="false">"身份缺失"</string>
+    <string name="text_mixed_collection_6834fb" formatted="false">"混合合集"</string>
+    <string name="text_mixed_file_types_some_apps_may_not_accept_every_6c1468" formatted="false">"混合文件类型：某些应用程序可能不接受每个文件。您可以从选择中删除项目。"</string>
+    <string name="text_move_copy_and_delete_apply_to_album_media_includ_1ffc2c" formatted="false">"移动、复制和删除适用于相册媒体，包括子文件夹。确认显示受影响的文件；保留原始文件夹。"</string>
+    <string name="text_move_down_d0bb80" formatted="false">"下移"</string>
+    <string name="text_move_f44eb9" formatted="false">"移动"</string>
+    <string name="text_move_left_4e3ed5" formatted="false">"向左移动"</string>
+    <string name="text_move_right_1d91fd" formatted="false">"向右移动"</string>
+    <string name="text_move_to_36f208" formatted="false">"移动到…"</string>
+    <string name="text_move_to_trash_confirm_98b863" formatted="false">"移至回收站·确认"</string>
+    <string name="text_move_to_trash_dd41b3" formatted="false">"移至回收站"</string>
+    <string name="text_move_to_trash_f91742" formatted="false">"移至回收站…"</string>
+    <string name="text_move_up_666f06" formatted="false">"向上移动"</string>
+    <string name="text_multiple_references_chosen_for_the_same_file_64dc75" formatted="false">"为同一文件选择多个参考"</string>
+    <string name="text_multiple_visible_gifs_cd9a7d" formatted="false">"多个可见的 GIF"</string>
+    <string name="text_music_012df9" formatted="false">"音乐"</string>
+    <string name="text_music_10_seconds_453447" formatted="false">"音乐+10秒"</string>
+    <string name="text_music_10_seconds_c20111" formatted="false">"音乐−10秒"</string>
+    <string name="text_music_album_f87381" formatted="false">"音乐专辑"</string>
+    <string name="text_music_albums_e85fef" formatted="false">"音乐专辑"</string>
+    <string name="text_music_and_local_covers_without_adding_them_to_ph_316e17" formatted="false">"音乐和本地封面，无需将其添加到照片中"</string>
+    <string name="text_music_animation_and_game_mode_678659" formatted="false">音乐和动画</string>
+    <string name="text_music_artwork_335159" formatted="false">"音乐艺术品"</string>
+    <string name="text_music_artwork_6ef5dc" formatted="false">"音乐艺术品"</string>
+    <string name="text_music_play_pause_b180bc" formatted="false">"音乐播放/暂停"</string>
+    <string name="text_music_widget_4c67df" formatted="false">"音乐小组件"</string>
+    <string name="text_muted_2228e3" formatted="false">"静音"</string>
+    <string name="text_n_nsubfolders_will_also_be_excluded_files_remain_a5552e" formatted="false">"\n\n子文件夹也将被排除。文件保持完整。"</string>
+    <string name="text_name_1_s_7ad389">"名称：%1$s"</string>
+    <string name="text_name_508690" formatted="false">"名称"</string>
+    <string name="text_name_already_taken_choose_another_name_or_keep_b_ec9d46" formatted="false">"名字已被占用。选择另一个名称或保留两个名称。"</string>
+    <string name="text_name_not_allowed_513891" formatted="false">"姓名不允许"</string>
+    <string name="text_name_size_and_date_do_not_prove_this_is_the_orig_d1f102" formatted="false">"名称、大小和日期并不能证明这是原始文件：备份没有媒体哈希。即使他们同意，也要确认比赛。"</string>
+    <string name="text_name_taken_no_folder_overwritten_9f5059" formatted="false">"已用名称：没有覆盖文件夹"</string>
+    <string name="text_natural_name_order_d9f048" formatted="false">"自然名称顺序"</string>
+    <string name="text_navigation_96867a" formatted="false">"导航"</string>
+    <string name="text_navigation_bar_labels_63fe86" formatted="false">"导航栏标签"</string>
+    <string name="text_navigator_when_the_photo_is_zoomed_in_9ddb60" formatted="false">"照片放大时的导航器"</string>
+    <string name="text_neon_nocturne_40d0b9" formatted="false">"霓虹夜曲"</string>
+    <string name="text_neutral_white_graphite_and_slate_blue_7cd029" formatted="false">"中性白·石墨蓝"</string>
+    <string name="text_new_collection_656a05" formatted="false">"新系列"</string>
+    <string name="text_new_copy_name_1_s_cfecd3">"新副本名称 · .%1$s"</string>
+    <string name="text_new_copy_name_f686d2" formatted="false">"新副本名称"</string>
+    <string name="text_new_copy_name_m4a_ed1106" formatted="false">"新副本名称·.m4a"</string>
+    <string name="text_new_copy_name_mp4_fb568c" formatted="false">"新副本名称·.mp4"</string>
+    <string name="text_new_copy_quality_253f0f" formatted="false">"新的复印质量"</string>
+    <string name="text_new_folder_at_destination_db21b2" formatted="false">"目的地的新文件夹"</string>
+    <string name="text_new_folder_cf5925" formatted="false">"新建文件夹"</string>
+    <string name="text_new_playlist_6ebfb3" formatted="false">"新播放列表"</string>
+    <string name="text_next_media_228a8d" formatted="false">"下一媒体"</string>
+    <string name="text_next_media_in_the_active_pane_520c0c" formatted="false">"活动窗格中的下一个媒体"</string>
+    <string name="text_next_photo_17e053" formatted="false">"下一张照片"</string>
+    <string name="text_next_section_9416ef" formatted="false">"下一节"</string>
+    <string name="text_next_track_b0ff2f" formatted="false">"下一首"</string>
+    <string name="text_night_and_neon_f6d332" formatted="false">"夜晚和霓虹灯"</string>
+    <string name="text_no_action_f43e02" formatted="false">"无动作"</string>
+    <string name="text_no_albums_found_18010c" formatted="false">"没有找到专辑"</string>
+    <string name="text_no_app_available_to_open_this_6a28bb" formatted="false">"没有可用的应用程序可以打开此内容"</string>
+    <string name="text_no_authorized_folder_use_choose_another_folder_t_c6cfc5" formatted="false">"没有授权文件夹。使用“选择另一个文件夹”来授予访问权限。"</string>
+    <string name="text_no_collections_available_1eb2bf" formatted="false">"没有可用的合集。"</string>
+    <string name="text_no_compatible_collection_c6ea58" formatted="false">"没有兼容的合集。"</string>
+    <string name="text_no_compatible_items_for_this_choice_9187e2" formatted="false">"此选择没有兼容的项目。"</string>
+    <string name="text_no_display_available_explicitly_open_the_gallery_6ef978" formatted="false">"无可用显示：在空闲屏幕上显式打开图库"</string>
+    <string name="text_no_files_waiting_to_be_restored_c8ec60" formatted="false">"没有等待恢复的文件。"</string>
+    <string name="text_no_files_will_be_overwritten_favorites_and_colle_5a422b" formatted="false">"不会覆盖任何文件。收藏夹和收藏跟随移动和恢复。"</string>
+    <string name="text_no_hidden_albums_0da9d4" formatted="false">"没有隐藏专辑"</string>
+    <string name="text_no_identical_copies_among_verified_files_some_fi_34dda8" formatted="false">"已验证的文件之间没有相同的副本。某些文件无法读取。"</string>
+    <string name="text_no_identical_copies_found_in_the_chosen_scope_b98b95" formatted="false">"在所选范围内未找到相同的副本。"</string>
+    <string name="text_no_image_0fca79" formatted="false">"无图像"</string>
+    <string name="text_no_image_available_470187" formatted="false">"无可用图像"</string>
+    <string name="text_no_longer_available_reopen_the_menu_5f5c78" formatted="false">"不再可用：重新打开菜单"</string>
+    <string name="text_no_matches_in_the_folder_52d8ec" formatted="false">"文件夹中没有匹配项"</string>
+    <string name="text_no_media_25195d" formatted="false">"没有媒体"</string>
+    <string name="text_no_media_in_this_folder_3e95d8" formatted="false">"此文件夹中没有媒体"</string>
+    <string name="text_no_media_matches_this_filter_ae3907" formatted="false">"没有媒体与此过滤器匹配"</string>
+    <string name="text_no_missing_references_in_this_original_folder_749906" formatted="false">"此原始文件夹中没有丢失参考文献"</string>
+    <string name="text_no_overwriting_an_existing_name_receives_a_suffi_1531d1" formatted="false">"不覆盖：现有名称会收到后缀。新副本不会替换收藏夹或播放列表中的原始副本。"</string>
+    <string name="text_no_photo_albums_available_7e331a" formatted="false">"没有可用的相册。"</string>
+    <string name="text_no_photo_available_3cf246" formatted="false">"没有可用的照片"</string>
+    <string name="text_no_provider_scanning_automatic_copying_or_adding_0604c6" formatted="false">"无需文件提供方扫描、自动复制或添加到收藏夹。链接不保证离线可用性。"</string>
+    <string name="text_no_readable_preview_58c498" formatted="false">"没有可读的预览"</string>
+    <string name="text_no_references_to_relink_in_this_scope_dcc7ef" formatted="false">"在此范围内没有重新链接的参考。"</string>
+    <string name="text_no_remaining_copy_in_trash_5e3e21" formatted="false">"回收站中没有剩余副本"</string>
+    <string name="text_no_results_0af987" formatted="false">"没有结果"</string>
+    <string name="text_no_results_try_another_name_f78f41" formatted="false">"没有结果。尝试另一个名字。"</string>
+    <string name="text_no_tracks_queued_156b61" formatted="false">"没有曲目排队"</string>
+    <string name="text_no_visible_media_e3bde4" formatted="false">"无可见媒体"</string>
+    <string name="text_none_b8ce01" formatted="false">"无"</string>
+    <string name="text_not_allowed_0062d3" formatted="false">"不允许"</string>
+    <string name="text_not_saved_yet_a9ff08" formatted="false">"尚未保存"</string>
+    <string name="text_not_selected_f6efb4" formatted="false">"未选择"</string>
+    <string name="text_not_started_1_s_4866a0">"未开始：%1$s"</string>
+    <string name="text_not_visible_7a468e" formatted="false">"不可见"</string>
+    <string name="text_not_yet_in_the_catalog_986ad9" formatted="false">"尚未在目录中"</string>
+    <string name="text_off_de3be8" formatted="false">"关闭"</string>
+    <string name="text_one_animation_only_suspended_when_paused_and_in_b619ca" formatted="false">"仅一部动画；暂停时和游戏模式下暂停"</string>
+    <string name="text_one_image_only_7f300d" formatted="false">"仅一张图像"</string>
+    <string name="text_one_shared_profile_and_up_to_16_personal_profile_aad090" formatted="false">"允许一份共享个人资料和最多 16 份个人资料"</string>
+    <string name="text_only_this_screen_others_remain_released_until_ex_55a96a" formatted="false">"只有这个画面。其他人则在明确要求之前保持释放。"</string>
+    <string name="text_only_while_the_frame_is_visible_suspended_in_pow_70dcc7" formatted="false">"仅当框架可见时；暂停省电"</string>
+    <string name="text_open_12abcf" formatted="false">"打开"</string>
+    <string name="text_open_android_crop_tool_3130eb" formatted="false">"打开Android裁剪工具"</string>
+    <string name="text_open_comparison_7d6cae" formatted="false">"公开比较"</string>
+    <string name="text_open_gallery_no_photo_available_03a759" formatted="false">"打开画廊·没有照片"</string>
+    <string name="text_open_on_one_screen_00b28c" formatted="false">"在一个屏幕上打开"</string>
+    <string name="text_open_on_two_screens_at_startup_7c2cb7" formatted="false">"启动时在双屏打开"</string>
+    <string name="text_open_player_artwork_279c50" formatted="false">"打开播放器·美术作品"</string>
+    <string name="text_open_player_artwork_unavailable_70b4ea" formatted="false">"打开播放器 · 艺术作品不可用"</string>
+    <string name="text_open_the_second_panel_first_or_use_back_to_close_ceebad" formatted="false">"首先打开第二个面板，或使用“返回”关闭。"</string>
+    <string name="text_open_to_view_this_file_with_temporary_access_imp_45ef00" formatted="false">"打开以使用临时访问权限查看此文件。导入副本以将其字节保留在您选择的文件夹中。仅当文件提供方允许时，保留链接才会保留文档访问权限。"</string>
+    <string name="text_open_with_531e1d" formatted="false">"打开方式"</string>
+    <string name="text_open_with_dae8f1" formatted="false">"打开…"</string>
+    <string name="text_opening_0945e5" formatted="false">"开幕"</string>
+    <string name="text_opening_artwork_c4ca71" formatted="false">"开幕作品"</string>
+    <string name="text_opening_not_identified_3b2f9b" formatted="false">"未识别开口"</string>
+    <string name="text_opening_paused_f249fe" formatted="false">"暂停开放"</string>
+    <string name="text_opening_refused_1_s_no_automatic_retry_f38df6">"打开被拒绝：%1$s。没有自动重试。"</string>
+    <string name="text_opening_superseded_by_another_music_command_893ffe" formatted="false">"开场被另一个音乐命令取代"</string>
+    <string name="text_opens_music_on_the_current_track_on_one_screen_46281b" formatted="false">"在一个屏幕上打开当前曲目上的音乐。"</string>
+    <string name="text_operation_053259" formatted="false">"操作"</string>
+    <string name="text_operation_canceled_original_preserved_e6b590" formatted="false">"操作取消；原始保存"</string>
+    <string name="text_operation_cannot_be_resumed_e10db1" formatted="false">"无法恢复操作"</string>
+    <string name="text_operation_complete_9b2712" formatted="false">"操作完成"</string>
+    <string name="text_operation_failed_check_format_access_and_free_sp_9f7c43" formatted="false">"操作失败。检查格式、访问权限和可用空间；设置保持不变。"</string>
+    <string name="text_operation_failed_f17e12" formatted="false">"操作失败"</string>
+    <string name="text_operation_failed_original_preserved_4dd031" formatted="false">"操作失败：原始保留"</string>
+    <string name="text_operation_interrupted_resume_or_cancel_in_file_o_dc8133" formatted="false">"操作中断。恢复或取消文件操作。"</string>
+    <string name="text_operations_389997" formatted="false">"运营"</string>
+    <string name="text_operations_continue_without_notifications_enable_5afbfb" formatted="false">"操作将在没有通知的情况下继续进行。使他们能够在使用其他应用程序时跟踪副本。"</string>
+    <string name="text_operations_to_finish_4f1ecf" formatted="false">"待完成的操作"</string>
+    <string name="text_optional_physical_label_01b29a" formatted="false">"可选的物理标签…"</string>
+    <string name="text_optional_physical_label_6a760e" formatted="false">"可选的物理标签"</string>
+    <string name="text_original_1_s_n_2_s_3_s_n_4_s_cbe330">"原件：%1$s\n%2$s·%3$s\n%4$s"</string>
+    <string name="text_original_dimensions_ee2d69" formatted="false">"原始尺寸"</string>
+    <string name="text_original_files_may_contain_location_metadata_no_f14755" formatted="false">"原始文件可能包含位置元数据。未应用转换。"</string>
+    <string name="text_original_files_remain_intact_go_back_to_choose_a_b50e67" formatted="false">"原始文件保持完整。返回选择另一个合集。"</string>
+    <string name="text_original_folder_e41647" formatted="false">"原始文件夹"</string>
+    <string name="text_original_names_for_multiple_selection_559576" formatted="false">"多重选择的原始名称"</string>
+    <string name="text_original_preserved_015250" formatted="false">"原件保留"</string>
+    <string name="text_original_preserved_trash_operation_canceled_5a8833" formatted="false">"原件保存；垃圾处理行动取消"</string>
+    <string name="text_original_source_1_s_b2b855">"原始来源：%1$s"</string>
+    <string name="text_originals_fa1fbe" formatted="false">"原件"</string>
+    <string name="text_other_displays_released_screen_1_s_remains_bcd1b9">"其他展示已发布；屏幕 %1$s 仍然存在"</string>
+    <string name="text_other_images_af27b2" formatted="false">"其他图片"</string>
+    <string name="text_output_height_is_1_s_px_width_follows_the_chosen_de6116">"输出高度为 %1$s px；宽度遵循所选裁剪区域。使用 H.264 视频和 AAC 音频（如果存在）重新编码为 MP4。不复制个人元数据。"</string>
+    <string name="text_p_1_s_created_on_display_2_s_b6f016">"P%1$s 在显示器 %2$s 上创建"</string>
+    <string name="text_p_1_s_external_picker_requested_on_display_2_s_o_214785">"P%1$s 在显示器 %2$s 上请求外部选择器；结果未声明"</string>
+    <string name="text_p_1_s_key_2_s_source_3_s_focus_4_s_accepted_5_s_10cfe3">"P%1$s 键 %2$s，源 %3$s，焦点=%4$s，接受=%5$s"</string>
+    <string name="text_p_1_s_local_command_2_s_b9fd52">"P%1$s 本地命令：%2$s"</string>
+    <string name="text_p_1_s_returning_from_picker_2_s_no_files_read_or_f1fc77">"P%1$s 从选取器返回：%2$s；没有读取或更改文件"</string>
+    <string name="text_p_1_s_system_picker_requested_on_display_2_s_fe81f3">"P%1$s 显示器上请求的系统选择器 %2$s"</string>
+    <string name="text_pale_mint_vanilla_cream_d7ef2e" formatted="false">"淡薄荷·香草奶油"</string>
+    <string name="text_palettes_colors_and_theme_preview_7d2833" formatted="false">"调色板、颜色和主题预览"</string>
+    <string name="text_pan_down_458c10" formatted="false">"向下平移"</string>
+    <string name="text_pan_left_78d13c" formatted="false">"向左平移"</string>
+    <string name="text_pan_right_9990b6" formatted="false">"向右平移"</string>
+    <string name="text_pan_up_919906" formatted="false">"向上平移"</string>
+    <string name="text_pane_1_s_df7792">"窗格 %1$s"</string>
+    <string name="text_pane_options_a83fbf" formatted="false">"窗格选项"</string>
+    <string name="text_panel_1_s_closed_2_s_907fdd">"面板 %1$s 关闭：%2$s"</string>
+    <string name="text_panel_closed_android_opened_it_on_an_unexpected_9ecb63" formatted="false">"面板关闭：Android 在意外或释放的显示器上打开它。"</string>
+    <string name="text_panel_not_visible_4f52a6" formatted="false">"面板不可见"</string>
+    <string name="text_panel_swap_6e908b" formatted="false">"面板交换"</string>
+    <string name="text_panels_f2a345" formatted="false">"面板"</string>
+    <string name="text_panels_swapped_selection_preserved_ac0b05" formatted="false">"面板交换了。选择已保留。"</string>
+    <string name="text_panes_12_0684e7" formatted="false">"窗格 1–2"</string>
+    <string name="text_panes_34_5d606a" formatted="false">"窗格 3–4"</string>
+    <string name="text_partial_cleanup_removed_1_s_artwork_files_2_s_co_2e8c9b">"部分清理：删除了 %1$s 图稿文件； %2$s 无法删除。你可以再试一次。"</string>
+    <string name="text_partial_result_6dc371" formatted="false">"部分结果"</string>
+    <string name="text_pastel_f90857" formatted="false">"粉彩"</string>
+    <string name="text_pastel_prism_dec86c" formatted="false">"粉彩棱镜"</string>
+    <string name="text_path_name_and_size_are_clues_the_backup_has_no_f_3d5d0a" formatted="false">"路径、名称和大小是线索：备份没有文件哈希值。在链接之前验证建议。模棱两可的案例和不同的版本需要个人选择。"</string>
+    <string name="text_pause_9bd4d1" formatted="false">"暂停"</string>
+    <string name="text_pause_photo_frame_ead8b9" formatted="false">"暂停相框"</string>
+    <string name="text_paused_2f4e01" formatted="false">"已暂停"</string>
+    <string name="text_paused_by_you_b54dd5" formatted="false">"被你暂停了"</string>
+    <string name="text_paused_for_game_mode_resume_only_if_you_want_to_e0c9cb" formatted="false">"游戏模式暂停 · 仅当您想开始阅读时才恢复"</string>
+    <string name="text_paused_game_mode_853b95" formatted="false">"暂停 · 游戏模式"</string>
+    <string name="text_paused_menu_open_fc2df2" formatted="false">"暂停 · 菜单打开"</string>
+    <string name="text_paused_or_finished_4e52b8" formatted="false">"暂停或完成"</string>
+    <string name="text_paused_power_saving_44a049" formatted="false">"暂停·省电"</string>
+    <string name="text_paused_while_the_gallery_is_not_visible_3b5e35" formatted="false">"画廊不可见时已暂停"</string>
+    <string name="text_peach_tea_740475" formatted="false">"桃花茶"</string>
+    <string name="text_pearl_gray_button_accents_e8fab0" formatted="false">"暖灰色 · 按钮装饰"</string>
+    <string name="text_permanent_cleanup_in_progress_dbdb7b" formatted="false">"永久清理正在进行中"</string>
+    <string name="text_permanently_delete_1_s_files_5b028e">"永久删除 %1$s 文件？"</string>
+    <string name="text_persistent_access_not_granted_17c407" formatted="false">"未授予持久访问权限"</string>
+    <string name="text_personal_controller_profiles_1_s_ngame_mode_2_s_59f2c2">"个人控制器配置文件：%1$s\n游戏模式：%2$s"</string>
+    <string name="text_photo_changed_or_unavailable_fdb784" formatted="false">"照片已更改或不可用"</string>
+    <string name="text_photo_frame_1_s_9917f0">"相框%1$s"</string>
+    <string name="text_photo_frame_b05b1e" formatted="false">"相框"</string>
+    <string name="text_photo_frame_interval_1_s_s_b8e1f7">"照片帧间隔：%1$s s"</string>
+    <string name="text_photo_frame_mode_be123c" formatted="false">"相框模式"</string>
+    <string name="text_photo_unavailable_d15d30" formatted="false">"照片不可用"</string>
+    <string name="text_photo_widget_911f94" formatted="false">"照片小组件"</string>
+    <string name="text_photos_494e08" formatted="false">"照片"</string>
+    <string name="text_photos_and_gifs_927c77" formatted="false">"照片和 GIF"</string>
+    <string name="text_photos_and_videos_1f1516" formatted="false">"照片和视频"</string>
+    <string name="text_photos_and_videos_6bc028" formatted="false">"照片与视频"</string>
+    <string name="text_photos_and_videos_not_authorized_open_folders_an_7b898b" formatted="false">"一般照片和视频访问已关闭。您可以从“库”&gt;“媒体文件夹”中选择特定文件夹。"</string>
+    <string name="text_photos_fill_the_screen_pinch_to_zoom_drag_with_o_71a50f" formatted="false">"照片充满了屏幕。捏合即可缩放，用一根手指拖动并点击两侧即可更改照片。额外的控制是可选的。"</string>
+    <string name="text_photos_videos_and_music_564f16" formatted="false">"照片、视频和音乐"</string>
+    <string name="text_physical_label_5f15ae" formatted="false">"物理标签"</string>
+    <string name="text_picker_unavailable_1_s_bd35d0">"选择器不可用：%1$s"</string>
+    <string name="text_pin_compare_ff6bd8" formatted="false">"固定/比较"</string>
+    <string name="text_pin_media_05a7ef" formatted="false">"钉媒体"</string>
+    <string name="text_pinned_items_stay_in_place_while_browsing_arrows_389821" formatted="false">"浏览时固定的项目保持在原位。箭头仅更改活动窗格。"</string>
+    <string name="text_pins_in_panes_3_and_4_will_be_removed_from_this_f500e1" formatted="false">"窗格 3 和 4 中的图钉将从该会话中删除。如果您想保留会话，请先保存会话。"</string>
+    <string name="text_play_da1576" formatted="false">"播放"</string>
+    <string name="text_play_next_504580" formatted="false">"播放下一个"</string>
+    <string name="text_play_pause_7973c0" formatted="false">"播放/暂停"</string>
+    <string name="text_play_playlist_5451fd" formatted="false">"播放播放列表"</string>
+    <string name="text_play_segment_47e94f" formatted="false">"播放片段"</string>
+    <string name="text_play_these_tracks_625887" formatted="false">"播放这些曲目"</string>
+    <string name="text_play_this_collection_65be1f" formatted="false">"玩这个合集"</string>
+    <string name="text_play_track_402432" formatted="false">"播放曲目"</string>
+    <string name="text_play_video_ba31ae" formatted="false">"播放视频"</string>
+    <string name="text_playback_2b0fe5" formatted="false">"回放"</string>
+    <string name="text_playback_did_not_start_367226" formatted="false">"播放未开始"</string>
+    <string name="text_playback_failed_12d57a" formatted="false">"播放失败"</string>
+    <string name="text_playback_failed_1_s_b5e391">"播放失败：%1$s"</string>
+    <string name="text_playback_was_replaced_by_another_music_command_eec62d" formatted="false">"播放被另一个音乐命令取代。"</string>
+    <string name="text_player_connection_closed_58b7ea" formatted="false">"玩家连接已关闭"</string>
+    <string name="text_player_disconnected_try_again_7b801f" formatted="false">"播放器已断开连接·重试"</string>
+    <string name="text_player_unavailable_try_again_8ee4a5" formatted="false">"播放器不可用：重试"</string>
+    <string name="text_player_unreachable_tap_again_to_retry_61e14c" formatted="false">"无法访问玩家·再次点击重试"</string>
+    <string name="text_playing_5ef505" formatted="false">"演奏"</string>
+    <string name="text_playlist_order_fb1ecd" formatted="false">"播放列表顺序"</string>
+    <string name="text_png_preserves_transparency_96ed6e" formatted="false">"PNG 保留透明度。"</string>
+    <string name="text_portrait_332772" formatted="false">"肖像"</string>
+    <string name="text_preferences_changed_read_the_document_again_befo_fb7e76" formatted="false">"偏好改变了。导入前再次阅读文档。"</string>
+    <string name="text_preparation_interrupted_for_game_mode_originals_f79ced" formatted="false">"游戏模式的准备工作中断；保留原件"</string>
+    <string name="text_prepare_and_verify_copies_before_sharing_2a431b" formatted="false">"共享前准备并验证副本"</string>
+    <string name="text_prepare_copies_437567" formatted="false">"准备复印件"</string>
+    <string name="text_prepare_while_gaming_anyway_encoding_may_slow_th_02a0ee" formatted="false">"无论如何，边玩边准备。编码可能会减慢游戏速度并消耗更多电量。"</string>
+    <string name="text_preparing_1_s_2_s_c07b72">"准备 · %1$s / %2$s"</string>
+    <string name="text_preparing_7e2891" formatted="false">"正在准备……"</string>
+    <string name="text_preparing_copy_ccb050" formatted="false">"准备副本"</string>
+    <string name="text_preparing_image_07c726" formatted="false">"准备图像"</string>
+    <string name="text_preparing_operations_1e55d8" formatted="false">"准备操作…"</string>
+    <string name="text_preparing_playback_617073" formatted="false">"正在准备播放…"</string>
+    <string name="text_preparing_preview_cda2d9" formatted="false">"正在准备预览…"</string>
+    <string name="text_preparing_request_76bb17" formatted="false">"正在准备请求…"</string>
+    <string name="text_preparing_your_library_373c55" formatted="false">"准备你的图书馆…"</string>
+    <string name="text_press_the_button_or_combination_then_release_you_ca7221" formatted="false">"按下按钮或组合，然后松开。您还可以移动操纵杆或扳机。"</string>
+    <string name="text_preview_0b2338" formatted="false">"预览·"</string>
+    <string name="text_preview_1_s_809e74">"预览·%1$s"</string>
+    <string name="text_preview_1_s_81e72b">"预览：%1$s"</string>
+    <string name="text_preview_arrows_a1fa38" formatted="false">"预览箭头"</string>
+    <string name="text_preview_c10f62" formatted="false">"预览"</string>
+    <string name="text_preview_e9bcae" formatted="false">"预览"</string>
+    <string name="text_preview_frame_unavailable_3d562e" formatted="false">"预览帧不可用"</string>
+    <string name="text_preview_gifs_start_looping_automatically_grid_op_4cabad" formatted="false">"预览 GIF 会自动开始循环。网格选项限制同时显示动画缩略图；游戏模式减少负载。"</string>
+    <string name="text_preview_not_identified_21e557" formatted="false">"预览未识别"</string>
+    <string name="text_preview_of_1_s_62847b">"%1$s 的预览"</string>
+    <string name="text_preview_of_1_s_zones_in_the_content_area_b336b0">"内容区域中 %1$s 区域的预览"</string>
+    <string name="text_preview_superseded_by_another_music_command_9601ec" formatted="false">"预览被另一个音乐命令取代"</string>
+    <string name="text_preview_too_large_choose_an_original_subfolder_c1fdcf" formatted="false">"预览太大：选择原始子文件夹"</string>
+    <string name="text_preview_unavailable_135044" formatted="false">"预览不可用"</string>
+    <string name="text_preview_unavailable_choose_the_folder_again_no_r_2a78f0" formatted="false">"预览不可用：再次选择文件夹。参考文献没有改变。"</string>
+    <string name="text_preview_unreadable_9374e0" formatted="false">"预览不可读"</string>
+    <string name="text_preview_unreadable_try_again_45db31" formatted="false">"预览无法读取·重试"</string>
+    <string name="text_preview_uses_the_shared_player_your_original_que_0a71a9" formatted="false">"预览使用共享播放器。当您停止预览或关闭编辑器时，您的原始队列将被保留并返回暂停状态。"</string>
+    <string name="text_preview_zoom_buttons_7873e1" formatted="false">"预览缩放按钮"</string>
+    <string name="text_previous_always_changes_track_747bc5" formatted="false">"上一个总是改变轨道"</string>
+    <string name="text_previous_artwork_not_recovered_6904f2" formatted="false">"以前的艺术品未恢复"</string>
+    <string name="text_previous_changes_track_even_after_three_seconds_3e5ab8" formatted="false">"即使在三秒后也会跟踪先前的更改。如果没有上一首曲目，则返回到开头。"</string>
+    <string name="text_previous_ff1443" formatted="false">"上一页"</string>
+    <string name="text_previous_media_3e439b" formatted="false">"以前的媒体"</string>
+    <string name="text_previous_media_in_the_active_pane_fe4ef7" formatted="false">"活动窗格中的上一个媒体"</string>
+    <string name="text_previous_photo_a41ac2" formatted="false">"上一张照片"</string>
+    <string name="text_previous_restore_recovered_private_copy_retained_542ed0" formatted="false">"恢复之前的恢复：保留私人副本直至原始到期"</string>
+    <string name="text_previous_returns_to_the_beginning_after_three_se_9b4ec0" formatted="false">"上一个在三秒后返回开头；三秒内再次按下可转到上一曲目。"</string>
+    <string name="text_previous_section_079e1f" formatted="false">"上一节"</string>
+    <string name="text_previous_track_b3f5fe" formatted="false">"上一首"</string>
+    <string name="text_priority_ff5835" formatted="false">"优先级"</string>
+    <string name="text_private_copy_changed_destination_not_published_b61c4c" formatted="false">"私人副本已更改：目的地未发布"</string>
+    <string name="text_private_copy_damaged_or_source_replaced_ad5ee7" formatted="false">"私人副本损坏或源被替换"</string>
+    <string name="text_private_copy_not_removed_original_preserved_9a16c1" formatted="false">"私人副本未删除；原始保存"</string>
+    <string name="text_private_copy_permanently_deleted_cb214b" formatted="false">"私人副本永久删除"</string>
+    <string name="text_private_copy_unverified_no_new_changes_a39372" formatted="false">"私人副本未经验证：没有新的更改"</string>
+    <string name="text_private_copy_verified_0e4d4b" formatted="false">"私人副本已验证"</string>
+    <string name="text_private_deletion_failed_208163" formatted="false">"私密删除失败"</string>
+    <string name="text_private_storage_full_original_preserved_2c14a4" formatted="false">"私人存储已满：原始保留"</string>
+    <string name="text_private_storage_unavailable_8e7c33" formatted="false">"私人存储不可用"</string>
+    <string name="text_private_temporary_file_retained_resume_or_cancel_e646b3" formatted="false">"保留的私有临时文件：恢复或取消清理"</string>
+    <string name="text_process_started_checking_availability_and_releas_262ec8" formatted="false">"进程开始；检查可用性和已发布的显示"</string>
+    <string name="text_progress_and_cancellation_in_file_operations_86c746" formatted="false">"文件操作的进度和取消"</string>
+    <string name="text_progress_results_and_recovery_of_your_file_opera_e3a3f2" formatted="false">"文件操作的进度、结果和恢复将显示在此处。"</string>
+    <string name="text_provider_unavailable_f52c42" formatted="false">"文件提供方不可用"</string>
+    <string name="text_publishing_conflict_original_preserved_2f5ae0" formatted="false">"出版冲突：保留原件"</string>
+    <string name="text_publishing_denied_76e1f0" formatted="false">"发布被拒绝"</string>
+    <string name="text_publishing_destination_c735d6" formatted="false">"发布目的地"</string>
+    <string name="text_publishing_interrupted_destination_needs_verific_e95574" formatted="false">"发布中断：目的地需要验证"</string>
+    <string name="text_queue_1_s_tracks_5ad2e5">"队列·%1$s 轨道"</string>
+    <string name="text_queue_not_recovered_playback_remains_paused_897fc5" formatted="false">"队列未恢复。播放保持暂停状态。"</string>
+    <string name="text_queue_not_restored_443da6" formatted="false">"队列未恢复"</string>
+    <string name="text_queue_not_restored_try_stopping_the_preview_agai_c21f6d" formatted="false">"队列未恢复：尝试再次停止预览"</string>
+    <string name="text_re_enable_this_folder_in_sources_first_70d532" formatted="false">"首先在源中重新启用此文件夹"</string>
+    <string name="text_re_encodes_in_srgb_with_orientation_applied_all_722db5" formatted="false">"应用方向以 sRGB 重新编码。所有原始元数据（包括位置）均被排除；副本名称是匿名的。像素仍可能泄露个人信息。"</string>
+    <string name="text_read_files_while_gaming_ccc524" formatted="false">"玩游戏时读取文件？"</string>
+    <string name="text_read_only_link_retained_original_in_provider_no_935dea" formatted="false">"保留只读链接；原件由文件提供方提供，无副本。"</string>
+    <string name="text_reading_1_s_2_s_1a4230">"阅读·%1$s / %2$s"</string>
+    <string name="text_reading_chosen_files_1_s_2_s_d7f692">"读取所选文件 · %1$s / %2$s"</string>
+    <string name="text_reading_contents_b436b3" formatted="false">"阅读内容…"</string>
+    <string name="text_reading_duration_8bc1f7" formatted="false">"阅读时长…"</string>
+    <string name="text_reading_file_sizes_1fccaa" formatted="false">"读取文件大小…"</string>
+    <string name="text_reading_selected_contents_5b4592" formatted="false">"阅读选定的内容…"</string>
+    <string name="text_received_content_cb883c" formatted="false">"收到内容"</string>
+    <string name="text_received_file_changed_original_preserved_141a38" formatted="false">"收到的文件已更改：保留原始文件"</string>
+    <string name="text_received_file_temporary_access_a756d1" formatted="false">"已接收文件·临时访问"</string>
+    <string name="text_received_file_unreadable_f23c3d" formatted="false">"收到的文件无法读取"</string>
+    <string name="text_received_size_differs_no_file_published_c4dc10" formatted="false">"收到的大小不同：未发布文件"</string>
+    <string name="text_received_track_access_expired_previous_queue_rec_739d68" formatted="false">"收到的轨道访问权限已过期；先前的队列恢复暂停"</string>
+    <string name="text_received_track_unavailable_c84466" formatted="false">"收到的曲目不可用"</string>
+    <string name="text_recent_events_2537da" formatted="false">"--- 近期活动 ---"</string>
+    <string name="text_recipe_missing_0d4b6e" formatted="false">"处理设置缺失"</string>
+    <string name="text_record_1_s_52eb4b">"记录·%1$s"</string>
+    <string name="text_record_again_8c6a0c" formatted="false">"再次录制"</string>
+    <string name="text_recover_copy_1ee15f" formatted="false">"恢复副本"</string>
+    <string name="text_recover_links_d1e7cc" formatted="false">"恢复链接"</string>
+    <string name="text_recovering_preview_9fa505" formatted="false">"正在恢复预览…"</string>
+    <string name="text_reduce_animations_0fdf71" formatted="false">"减少动画"</string>
+    <string name="text_reduced_motion_1_s_nphoto_interval_2_s_s_n_488a86">"减少运动：%1$s\n照片间隔：%2$s s\n"</string>
+    <string name="text_reduces_gifs_and_pauses_automatic_photo_changes_8a5194" formatted="false">"游戏时减少 GIF 并暂停框架和照片小部件中的自动照片更改。"</string>
+    <string name="text_reference_1_s_01d1a7">"参考：%1$s"</string>
+    <string name="text_reference_not_in_preview_a3e66e" formatted="false">"参考不在预览中"</string>
+    <string name="text_reference_relinked_read_only_original_files_inta_0d4f8c" formatted="false">"参考重新链接为只读。原始文件完好无损；没有开始播放。"</string>
+    <string name="text_reference_retained_3c0f78" formatted="false">"保留参考"</string>
+    <string name="text_references_relinked_backup_source_retained_923cab" formatted="false">"重新链接参考文献；保留备份源"</string>
+    <string name="text_refresh_albums_f739d2" formatted="false">"刷新相册"</string>
+    <string name="text_regular_0e99b3" formatted="false">"常规的"</string>
+    <string name="text_release_threshold_1_s_75a788">"释放阈值·%1$s%%"</string>
+    <string name="text_released_display_52a9ac" formatted="false">"发布展示"</string>
+    <string name="text_relink_a_folder_70c3bc" formatted="false">"重新链接文件夹…"</string>
+    <string name="text_relink_a_folder_d8543d" formatted="false">"重新链接文件夹"</string>
+    <string name="text_relink_e366de" formatted="false">"重新链接"</string>
+    <string name="text_relink_files_618c8b" formatted="false">"重新链接文件…"</string>
+    <string name="text_relink_files_688750" formatted="false">"重新链接文件…"</string>
+    <string name="text_relink_files_f3aef2" formatted="false">"重新链接文件"</string>
+    <string name="text_relink_folder_1_s_e29041">"重新链接文件夹·%1$s"</string>
+    <string name="text_relinking_not_applied_choose_the_folder_again_184529" formatted="false">"未应用重新链接；再次选择文件夹"</string>
+    <string name="text_relinking_unverified_choose_the_document_again_n_9c784f" formatted="false">"重新链接未经验证。再次选择文档。没有改变原件。"</string>
+    <string name="text_reload_saved_settings_b7567e" formatted="false">"重新加载保存的设置"</string>
+    <string name="text_remove_and_switch_to_two_f5d196" formatted="false">"删除并切换为两个"</string>
+    <string name="text_remove_collection_e81de6" formatted="false">"删除合集"</string>
+    <string name="text_remove_favorite_9acd17" formatted="false">"删除收藏夹"</string>
+    <string name="text_remove_fd69f0" formatted="false">"移除"</string>
+    <string name="text_remove_folder_89f681" formatted="false">"删除文件夹"</string>
+    <string name="text_remove_from_collection_d95612" formatted="false">"从合集中删除"</string>
+    <string name="text_remove_from_favorites_6556ff" formatted="false">"从收藏中移除"</string>
+    <string name="text_remove_from_favorites_e1e1ac" formatted="false">"从收藏中移除"</string>
+    <string name="text_remove_from_queue_f7ebcb" formatted="false">"从队列中删除"</string>
+    <string name="text_remove_gifs_videos_and_tracks_to_prepare_image_c_e825c6" formatted="false">"删除 GIF、视频和曲目以准备图像副本，或选择原件。"</string>
+    <string name="text_remove_this_collection_aec0c3" formatted="false">"删除这个合集吗？"</string>
+    <string name="text_remove_this_zone_e2a96a" formatted="false">"删除该区域"</string>
+    <string name="text_removing_original_please_wait_5de067" formatted="false">"正在删除原件·请稍候"</string>
+    <string name="text_rename_0771a2" formatted="false">"重命名…"</string>
+    <string name="text_rename_98b79b" formatted="false">"重命名"</string>
+    <string name="text_rename_collection_afd80a" formatted="false">"重命名合集"</string>
+    <string name="text_reopen_temporary_file_32d294" formatted="false">"重新打开临时文件"</string>
+    <string name="text_reorder_navigation_bar_5b4ba2" formatted="false">"重新排序导航栏"</string>
+    <string name="text_reorder_navigation_bar_f913bd" formatted="false">"重新排序导航栏"</string>
+    <string name="text_reorder_or_remove_from_queue_6df945" formatted="false">"重新排序或从队列中删除"</string>
+    <string name="text_repeat_interval_1_s_ms_2d1d12">"重复间隔 · %1$s ms"</string>
+    <string name="text_repeat_off_700e76" formatted="false">"重复关闭"</string>
+    <string name="text_repeat_queue_7bf8e2" formatted="false">"重复队列"</string>
+    <string name="text_repeat_track_baa748" formatted="false">"重复曲目"</string>
+    <string name="text_replace_in_draft_f2a979" formatted="false">"在草稿中替换"</string>
+    <string name="text_replace_these_bindings_in_the_draft_d23325" formatted="false">"替换草稿中的这些绑定"</string>
+    <string name="text_replaces_the_widget_selection_with_this_fixed_im_ecfdfb" formatted="false">"用此固定图像替换小部件选择。原始文件保持不变。"</string>
+    <string name="text_replay_segment_6f92a8" formatted="false">"重播片段"</string>
+    <string name="text_report_copied_you_can_paste_it_into_chat_5f32cd" formatted="false">"报告已复制。您可以将其粘贴到聊天中。"</string>
+    <string name="text_request_sent_to_screen_1_s_check_the_actual_pane_24e14b">"请求发送到屏幕 %1$s。检查实际面板位置。"</string>
+    <string name="text_requested_display_1_s_actual_2_s_7980a8">"请求的显示=%1$s，实际=%2$s"</string>
+    <string name="text_reset_1_s_f6bc88">"重置%1$s"</string>
+    <string name="text_reset_profile_80afee" formatted="false">"重置个人资料"</string>
+    <string name="text_resolve_the_file_operation_first_6c358c" formatted="false">"先解决文件操作"</string>
+    <string name="text_resolve_the_operation_on_the_original_first_c24f4b" formatted="false">"先解决对原件的操作"</string>
+    <string name="text_resolve_the_other_operation_on_this_file_first_cf0c95" formatted="false">"先解决对该文件的其他操作"</string>
+    <string name="text_restart_after_three_seconds_2e0291" formatted="false">"三秒后重新启动"</string>
+    <string name="text_restore_access_fa5ec3" formatted="false">"恢复访问权限"</string>
+    <string name="text_restore_automatic_artwork_d9141c" formatted="false">"恢复自动图稿"</string>
+    <string name="text_restore_cf1718" formatted="false">"恢复"</string>
+    <string name="text_restore_default_gestures_88890a" formatted="false">"恢复默认手势"</string>
+    <string name="text_restore_not_yet_indexed_use_resume_6e4516" formatted="false">"恢复尚未索引：使用 Resume"</string>
+    <string name="text_restore_or_another_operation_in_progress_6bf31c" formatted="false">"恢复或正在进行的其他操作"</string>
+    <string name="text_restore_unavailable_3d38ae" formatted="false">"恢复不可用"</string>
+    <string name="text_restore_within_seven_days_cleanup_runs_when_next_ca4f77" formatted="false">"七日内恢复。到期后下次可能时运行清理。卸载应用程序或清除其数据也会删除垃圾。"</string>
+    <string name="text_restore_without_verifiable_authorization_a0331e" formatted="false">"未经可验证授权的恢复"</string>
+    <string name="text_restored_backup_copy_retained_ea9ba2" formatted="false">"已恢复 · 保留备份副本"</string>
+    <string name="text_restored_backup_copy_retained_in_trash_until_the_634382" formatted="false">"已恢复；备份副本保留在回收站中，直到原始副本到期"</string>
+    <string name="text_restored_cleaning_private_copy_4c8f4d" formatted="false">"恢复·清理私人副本"</string>
+    <string name="text_result_d28636" formatted="false">"结果"</string>
+    <string name="text_result_recovered_2cc841" formatted="false">"结果恢复"</string>
+    <string name="text_resume_b0cc9c" formatted="false">"简历"</string>
+    <string name="text_retry_20b5f4" formatted="false">"重试"</string>
+    <string name="text_reverse_order_33051e" formatted="false">"颠倒顺序"</string>
+    <string name="text_review_what_will_change_f71fce" formatted="false">"回顾一下将会改变什么"</string>
+    <string name="text_right_ddcff9" formatted="false">"右"</string>
+    <string name="text_right_stick_5a153b" formatted="false">"右摇杆↑"</string>
+    <string name="text_right_stick_9b9fdf" formatted="false">"右摇杆←"</string>
+    <string name="text_right_stick_9bc58d" formatted="false">"右摇杆↓"</string>
+    <string name="text_right_stick_aa4367" formatted="false">"右摇杆 →"</string>
+    <string name="text_rightward_2260ce" formatted="false">"向右"</string>
+    <string name="text_roles_swapped_no_activity_started_4edeec" formatted="false">"角色互换；没有活动开始"</string>
+    <string name="text_root_folder_b2af5c" formatted="false">"根文件夹"</string>
+    <string name="text_root_path_b7b245" formatted="false">"根路径"</string>
+    <string name="text_rose_milk_2c3a5e" formatted="false">"玫瑰牛奶"</string>
+    <string name="text_rotate_90_9746ed" formatted="false">"旋转 90°"</string>
+    <string name="text_same_content_multiple_copies_dd275d" formatted="false">"相同内容，多份"</string>
+    <string name="text_sample_photo_0b6032" formatted="false">"样本照片"</string>
+    <string name="text_sample_text_a631e1" formatted="false">"文字"</string>
+    <string name="text_samples_beyond_the_chosen_segment_output_not_pub_af4d09" formatted="false">"超出所选片段的样本：输出未发布"</string>
+    <string name="text_saturation_433626" formatted="false">"饱和度"</string>
+    <string name="text_save_a_copy_0680bd" formatted="false">"保存副本"</string>
+    <string name="text_save_c5997e" formatted="false">"保存"</string>
+    <string name="text_save_comparison_1dff9e" formatted="false">"保存比较"</string>
+    <string name="text_save_playlist_8d3e69" formatted="false">"保存播放列表"</string>
+    <string name="text_save_session_beee36" formatted="false">"保存会话"</string>
+    <string name="text_save_settings_4daada" formatted="false">"保存设置"</string>
+    <string name="text_save_the_player_queue_to_find_it_here_tracks_sta_7b739d" formatted="false">"保存玩家队列以在此处找到它。曲目保留在其文件夹中。"</string>
+    <string name="text_saved_1_s_a6223b">"已保存 · %1$s"</string>
+    <string name="text_saved_sessions_3c65dd" formatted="false">"已保存的会话"</string>
+    <string name="text_saving_c4f57f" formatted="false">"正在保存…"</string>
+    <string name="text_saving_the_new_copy_d7e74b" formatted="false">"保存新副本…"</string>
+    <string name="text_scan_running_1_s_items_2_s_error_3_s_950caf">"扫描：运行=%1$s；项目=%2$s；错误=%3$s"</string>
+    <string name="text_scope_of_the_next_search_237f0a" formatted="false">"下次搜索的范围"</string>
+    <string name="text_screen_1_s_55a281">"屏幕%1$s"</string>
+    <string name="text_screen_1_s_label_2_s_b21ce5">"屏幕%1$s：标签%2$s"</string>
+    <string name="text_screen_1_s_release_saved_closing_locally_4b6ad9">"屏幕 %1$s 释放已保存；本地关闭"</string>
+    <string name="text_screens_and_tools_153eab" formatted="false">"屏幕与备份"</string>
+    <string name="text_screens_menu_37fb30" formatted="false">"屏幕菜单"</string>
+    <string name="text_search_albums_f6f4bb" formatted="false">"搜索相册"</string>
+    <string name="text_search_and_filter_c3edb2" formatted="false">"搜索和过滤"</string>
+    <string name="text_search_backup_059b95" formatted="false">"搜索备份"</string>
+    <string name="text_search_canceled_results_are_partial_files_remain_3c838c" formatted="false">"搜索已取消。结果是部分的；文件保持完整。"</string>
+    <string name="text_search_collection_053f46" formatted="false">"搜索合集"</string>
+    <string name="text_search_finished_no_files_were_changed_006f53" formatted="false">"搜索完毕。没有更改任何文件。"</string>
+    <string name="text_search_interrupted_access_or_provider_unavailabl_020715" formatted="false">"搜索中断。访问或文件提供方不可用；没有更改任何文件。"</string>
+    <string name="text_search_may_use_device_storage_and_the_sd_card_in_901521" formatted="false">"搜索可以使用设备存储和SD卡。在游戏模式下，只有通过此明确的选择才能启动或恢复。"</string>
+    <string name="text_search_media_626c4c" formatted="false">"搜索媒体"</string>
+    <string name="text_search_name_or_artist_44c15b" formatted="false">"搜索姓名或艺术家"</string>
+    <string name="text_search_now_anyway_d2a180" formatted="false">"无论如何现在搜索"</string>
+    <string name="text_search_performed_1_s_75bcaf">"执行的搜索：%1$s"</string>
+    <string name="text_search_runs_only_when_you_start_it_4a07e0" formatted="false">"搜索仅在您启动时运行。"</string>
+    <string name="text_search_state_not_retained_e21aac" formatted="false">" 不保留搜索状态。"</string>
+    <string name="text_search_state_not_saved_ca2a23" formatted="false">"搜索状态未保存"</string>
+    <string name="text_seconds_2120_c9fe92" formatted="false">"秒 · 2–120"</string>
+    <string name="text_segment_8d73b9" formatted="false">"- 段"</string>
+    <string name="text_segment_new_copy_duration_1_s_33ce36">"段·新副本持续时间%1$s"</string>
+    <string name="text_segment_new_duration_1_s_468a07">"段·新持续时间%1$s"</string>
+    <string name="text_segment_preview_original_queue_retained_a9766d" formatted="false">"片段预览 · 保留原始队列"</string>
+    <string name="text_select_a_system_destination_da89d0" formatted="false">"选择系统目标"</string>
+    <string name="text_select_a_system_document_d34685" formatted="false">"选择系统文档"</string>
+    <string name="text_select_all_0e5b81" formatted="false">"全选"</string>
+    <string name="text_select_media_in_the_library_56906c" formatted="false">"选择库中的媒体。"</string>
+    <string name="text_select_unique_matches_1_s_87601c">"选择唯一匹配 (%1$s)"</string>
+    <string name="text_selected_35a6ad" formatted="false">"已选择"</string>
+    <string name="text_selected_3da0d3" formatted="false">"已选择"</string>
+    <string name="text_selected_album_options_839aa6" formatted="false">"选定的专辑选项"</string>
+    <string name="text_selected_file_fc1eda" formatted="false">"选定的文件"</string>
+    <string name="text_selected_files_43f235" formatted="false">"选定的文件"</string>
+    <string name="text_selected_folder_aae82a" formatted="false">"选定的文件夹"</string>
+    <string name="text_selected_media_move_to_trash_original_folders_re_6f7f18" formatted="false">"选定的媒体移至回收站；保留原始文件夹。"</string>
+    <string name="text_selected_media_options_079c9a" formatted="false">"选定的媒体选项"</string>
+    <string name="text_selected_not_saved_yet_0b8923" formatted="false">"已选择，尚未保存"</string>
+    <string name="text_selected_only_07ada4" formatted="false">"仅选定"</string>
+    <string name="text_selected_track_operations_b23ac0" formatted="false">"选定的轨道操作"</string>
+    <string name="text_selection_access_no_longer_available_ee4372" formatted="false">"选择访问不再可用"</string>
+    <string name="text_selection_ae3f45" formatted="false">"选择"</string>
+    <string name="text_selection_too_large_choose_fewer_files_23f153" formatted="false">"选择太大：选择较少的文件"</string>
+    <string name="text_selection_too_large_choose_fewer_files_c3c718" formatted="false">"选择太大：选择较少的文件"</string>
+    <string name="text_selection_unavailable_3930d5" formatted="false">"无法选择"</string>
+    <string name="text_sequential_937369" formatted="false">"顺序"</string>
+    <string name="text_session_name_856023" formatted="false">"会话名称"</string>
+    <string name="text_session_unreadable_no_pins_replaced_fde88c" formatted="false">"会话不可读；没有更换引脚。"</string>
+    <string name="text_sessions_733ff6" formatted="false">"会议"</string>
+    <string name="text_set_as_wallpaper_c5056f" formatted="false">"设置为壁纸…"</string>
+    <string name="text_settings_7b855c" formatted="false">"设置"</string>
+    <string name="text_settings_changed_on_the_other_panel_read_the_fil_805d13" formatted="false">"其他面板上的设置已更改。导入前再次读取文件。"</string>
+    <string name="text_settings_exported_and_verified_the_document_cont_10cce0" formatted="false">"导出并验证设置。该文档不包含任何媒体。"</string>
+    <string name="text_settings_imported_and_saved_files_and_screens_st_9e3e7e" formatted="false">"导入并保存设置。文件和屏幕保持不变。"</string>
+    <string name="text_settings_not_saved_d67a68" formatted="false">"设置未保存"</string>
+    <string name="text_settings_too_large_34c3b1" formatted="false">"设置太大"</string>
+    <string name="text_several_matches_point_to_the_same_file_select_on_c691b2" formatted="false">"多个匹配项指向同一文件：仅选择一个"</string>
+    <string name="text_share_5812e6" formatted="false">"分享"</string>
+    <string name="text_share_628ff2" formatted="false">"分享…"</string>
+    <string name="text_share_image_copies_63f7df" formatted="false">"共享图像副本"</string>
+    <string name="text_shared_aa3dfe" formatted="false">"共享"</string>
+    <string name="text_shared_copies_are_read_only_1aeab8" formatted="false">"共享副本是只读的"</string>
+    <string name="text_shared_priority_override_it_for_individual_album_c330fa" formatted="false">"共享优先级。在不更改标签的情况下覆盖单个专辑或曲目的它。"</string>
+    <string name="text_shared_profile_controller_not_detected_yet_f52b68" formatted="false">"共享配置文件 · 尚未检测到控制器"</string>
+    <string name="text_show_again_5cb1ec" formatted="false">"再次显示"</string>
+    <string name="text_show_all_formats_400e1d" formatted="false">"显示所有格式"</string>
+    <string name="text_show_file_names_557e96" formatted="false">"显示文件名"</string>
+    <string name="text_show_photo_frame_controls_792f9e" formatted="false">"显示相框控件"</string>
+    <string name="text_shuffle_0eb69b" formatted="false">"随机播放"</string>
+    <string name="text_shuffle_169374" formatted="false">"随机播放"</string>
+    <string name="text_shuffle_button_f0e9bd" formatted="false">"随机播放按钮"</string>
+    <string name="text_shuffle_on_3d4f18" formatted="false">"随机播放"</string>
+    <string name="text_simultaneous_animated_gifs_1_s_2a1e80">"同步动画 GIF：%1$s"</string>
+    <string name="text_single_photo_5ed01a" formatted="false">"单张照片"</string>
+    <string name="text_size_86d146" formatted="false">"尺寸"</string>
+    <string name="text_size_needs_verification_bf47ec" formatted="false">"尺寸需要核实"</string>
+    <string name="text_skipped_9006eb" formatted="false">"跳过"</string>
+    <string name="text_sky_milk_9a0e81" formatted="false">"天奶"</string>
+    <string name="text_smaller_albums_52ae9a" formatted="false">"较小的专辑"</string>
+    <string name="text_smoky_purple_lavender_and_champagne_5341d5" formatted="false">"烟熏紫·薰衣草和香槟"</string>
+    <string name="text_smooth_transition_of_about_half_a_second_14f506" formatted="false">"约半秒平滑过渡"</string>
+    <string name="text_soft_lilac_violet_and_sage_7793f8" formatted="false">"柔和的丁香·紫罗兰和鼠尾草"</string>
+    <string name="text_sound_on_935c7c" formatted="false">"声音打开"</string>
+    <string name="text_source_1_s_2_s_crop_3_s_4_s_rotation_5_s_8a16ea">"来源 %1$s×%2$s · 裁剪 %3$s×%4$s · 旋转 %5$s°"</string>
+    <string name="text_source_1_s_n_9a21ed">"来源：%1$s\n"</string>
+    <string name="text_source_already_removed_or_unverifiable_use_resum_3e26c2" formatted="false">"来源已删除或无法验证：使用 Resume；私人副本仍然受到保护"</string>
+    <string name="text_source_already_removed_use_resume_to_recover_ref_4c3a87" formatted="false">"源已删除：使用“恢复”恢复目标处的引用"</string>
+    <string name="text_source_cannot_be_verified_6e3e1e" formatted="false">"来源无法验证"</string>
+    <string name="text_source_disconnected_or_reading_failed_2c1ac4" formatted="false">"源已断开或读取失败"</string>
+    <string name="text_source_folder_needs_verification_c7496b" formatted="false">"源文件夹需要验证"</string>
+    <string name="text_source_has_no_audio_0732a4" formatted="false">"音源没有音频"</string>
+    <string name="text_source_identity_changed_289adf" formatted="false">"源身份已更改"</string>
+    <string name="text_source_needs_relinking_653c58" formatted="false">"来源需要重新链接"</string>
+    <string name="text_source_type_changed_d2e607" formatted="false">"源类型已更改"</string>
+    <string name="text_source_type_or_format_changed_2e65b2" formatted="false">"源类型或格式已更改"</string>
+    <string name="text_source_unavailable_3bc08a" formatted="false">"来源不可用"</string>
+    <string name="text_source_unavailable_ea3980" formatted="false">"来源不可用"</string>
+    <string name="text_source_unavailable_or_media_hidden_2075ae" formatted="false">"来源不可用或媒体被隐藏"</string>
+    <string name="text_source_unavailable_private_copy_retained_23d417" formatted="false">"来源不可用：保留私人副本"</string>
+    <string name="text_source_verification_failed_try_again_in_sources_be6dc5" formatted="false">"来源验证失败。在来源中重试。"</string>
+    <string name="text_space_for_your_choices_9db02b" formatted="false">"给你选择的空间"</string>
+    <string name="text_space_is_estimated_from_content_providers_and_li_c770ea" formatted="false">"空间是根据内容估算的：提供者和链接文件可能使用不同的数量。结果不会验证读取后更改的文件。"</string>
+    <string name="text_specify_the_original_folder_then_its_new_locatio_9026c2" formatted="false">"指定原始文件夹，然后指定其新位置。在确认之前仅读取元数据：不复制或更改任何文件。"</string>
+    <string name="text_start_a_new_search_d9b3b9" formatted="false">"开始新的搜索"</string>
+    <string name="text_start_photo_frame_b1bade" formatted="false">"启动相框"</string>
+    <string name="text_start_seconds_a70528" formatted="false">"开始·秒"</string>
+    <string name="text_startup_automatic_1_s_saved_pair_2_s_valid_state_1cc6de">"启动：自动=%1$s；已保存对=%2$s；有效状态=%3$s"</string>
+    <string name="text_startup_preference_not_saved_febc48" formatted="false">"启动首选项未保存。"</string>
+    <string name="text_state_not_saved_no_new_window_opened_eaf55b" formatted="false">"状态未保存。没有打开新窗口。"</string>
+    <string name="text_stick_activate_1_s_release_2_s_nrepeat_3_s_4_s_m_a3104d">"坚持：激活%1$s%%，释放%2$s%%\n重复：%3$s / %4$s ms"</string>
+    <string name="text_sticks_and_repeat_91e28e" formatted="false">"坚持并重复"</string>
+    <string name="text_stop_preview_049a11" formatted="false">"停止预览"</string>
+    <string name="text_stop_preview_and_restore_queue_625382" formatted="false">"停止预览并恢复队列"</string>
+    <string name="text_stop_preview_before_changing_order_82ff53" formatted="false">"更改顺序之前停止预览"</string>
+    <string name="text_stop_preview_before_changing_repeat_65687f" formatted="false">"更改重复之前停止预览"</string>
+    <string name="text_stop_preview_before_clearing_the_queue_7fbd0a" formatted="false">"清除队列之前停止预览"</string>
+    <string name="text_stop_preview_before_editing_the_queue_91bc03" formatted="false">"编辑队列之前停止预览"</string>
+    <string name="text_subfolders_remain_accessible_above_hidden_or_una_171816" formatted="false">"上面的子文件夹仍可访问。隐藏或不可用的媒体会保留其参考资料。"</string>
+    <string name="text_suggested_unique_match_needs_confirmation_5111c8" formatted="false">"建议的唯一匹配，需要确认"</string>
+    <string name="text_swap_already_open_panels_87205f" formatted="false">"交换已经打开的面板"</string>
+    <string name="text_swap_available_only_when_both_panels_are_visible_eabf0e" formatted="false">"仅当两个面板都可见时，交换才可用。"</string>
+    <string name="text_swap_panels_a7b7be" formatted="false">"交换面板"</string>
+    <string name="text_swap_screens_7455a4" formatted="false">"交换屏幕"</string>
+    <string name="text_swipe_with_three_fingers_then_lift_them_some_ges_caae1f" formatted="false">"用三个手指滑动，然后抬起它们。某些手势可能会被 Android 保留。"</string>
+    <string name="text_switch_to_two_panes_43f379" formatted="false">"切换到两个窗格？"</string>
+    <string name="text_system_nomedia_exclusion_remove_it_externally_to_320c3c" formatted="false">"系统.nomedia 排除。从外部删除它以包含该文件夹。"</string>
+    <string name="text_t01t12_t83_require_thor_verification_this_report_85f844" formatted="false">"T01–T12/T83：需要 Thor 验证。本报告不证明硬件测试。"</string>
+    <string name="text_tap_a_color_to_change_it_5cbe58" formatted="false">"点击一种颜色即可更改它。保存时更改将生效。"</string>
+    <string name="text_tap_a_section_in_the_preview_and_move_it_with_th_098245" formatted="false">"点击预览中的某个部分并使用箭头移动它。保存以应用订单。"</string>
+    <string name="text_tap_a_zone_to_perform_its_action_measurements_ar_abf462" formatted="false">"点击一个区域以执行其操作。测量值是内容区域的百分比。"</string>
+    <string name="text_tap_apply_range_before_listening_or_saving_727b4a" formatted="false">"在收听或保存之前点击应用范围。"</string>
+    <string name="text_tap_apply_range_before_saving_2d9014" formatted="false">"保存前点击应用范围。"</string>
+    <string name="text_tap_to_choose_a_new_color_0de3e4" formatted="false">"点击以选择新颜色"</string>
+    <string name="text_temporary_access_expired_d75210" formatted="false">"临时访问权限已过期"</string>
+    <string name="text_temporary_artwork_storage_unavailable_f8b0fa" formatted="false">"临时艺术品存储不可用"</string>
+    <string name="text_temporary_content_is_read_only_link_the_file_and_b53bf7" formatted="false">"临时内容是只读的。链接文件并授权其文件夹对其进行修改。"</string>
+    <string name="text_temporary_copies_retained_retry_cleanup_f0c17a" formatted="false">"保留临时副本：重试清理"</string>
+    <string name="text_temporary_copy_changed_prepare_again_04811b" formatted="false">"临时副本更改：重新准备"</string>
+    <string name="text_temporary_copy_cleanup_denied_61395b" formatted="false">"临时副本清理被拒绝"</string>
+    <string name="text_temporary_file_retained_1_s_3157a4">"保留临时文件：%1$s"</string>
+    <string name="text_temporary_folder_cleanup_denied_d615be" formatted="false">"临时文件夹清理被拒绝"</string>
+    <string name="text_temporary_opening_shared_player_4fca7f" formatted="false">"暂时开放·共享播放器"</string>
+    <string name="text_temporary_storage_full_34bbc4" formatted="false">"临时存储已满"</string>
+    <string name="text_temporary_storage_unavailable_e47ae5" formatted="false">"临时存储不可用"</string>
+    <string name="text_text_ebb9e6" formatted="false">"文字"</string>
+    <string name="text_the_bar_uses_icons_only_enable_labels_show_file_94209b" formatted="false">"该栏仅使用图标。在此启用标签、显示文件名并减少动画。"</string>
+    <string name="text_the_chosen_app_receives_temporary_read_access_to_b93bca" formatted="false">"所选应用程序将获得对这些文件的临时读取权限。您可以在 Android 选择器中取消。"</string>
+    <string name="text_the_chosen_file_changed_reopen_the_picker_65e401" formatted="false">"所选文件已更改：重新打开选择器"</string>
+    <string name="text_the_chosen_file_is_empty_or_unreadable_4ea2f0" formatted="false">"所选文件为空或不可读"</string>
+    <string name="text_the_chosen_folder_is_added_or_recovered_as_a_rea_3251be" formatted="false">"仅在重新链接后，所选文件夹才会添加或恢复为只读源。未选择的媒体将被编入索引，但不会继承以前的收藏夹。"</string>
+    <string name="text_the_clock_changed_automatic_cleanup_is_paused_8501bb" formatted="false">"时钟发生变化：自动清理暂停。"</string>
+    <string name="text_the_collection_order_has_changed_try_again_938c15" formatted="false">"收集顺序已更改：重试"</string>
+    <string name="text_the_collection_was_removed_7b276a" formatted="false">"该合集已被删除"</string>
+    <string name="text_the_data_differs_from_the_saved_reference_you_ma_77bf6c" formatted="false">"该数据与保存的参考不同。您可能选择了不同的版本。"</string>
+    <string name="text_the_destination_must_grant_read_and_write_access_64dff6" formatted="false">"目标必须授予读取和写入访问权限"</string>
+    <string name="text_the_destination_name_changed_no_further_deletion_4b4834" formatted="false">"目的地名称已更改。不再删除。"</string>
+    <string name="text_the_document_contains_saved_preferences_not_draf_9c4308" formatted="false">"该文档包含已保存的首选项，而不是在其他面板上打开的草稿。"</string>
+    <string name="text_the_document_is_unavailable_or_changed_choose_it_3a88b9" formatted="false">"该文档不可用或已更改。在 Android 选择器中再次选择它。"</string>
+    <string name="text_the_entire_authorized_catalog_270539" formatted="false">"整个授权目录"</string>
+    <string name="text_the_file_changed_after_selection_reopen_the_menu_d4632a" formatted="false">"选择后文件发生变化。重新打开菜单。"</string>
+    <string name="text_the_file_changed_during_verification_3909b4" formatted="false">"验证过程中文件发生变化"</string>
+    <string name="text_the_file_has_already_changed_update_the_selectio_151a60" formatted="false">"文件已经改变；更新选择"</string>
+    <string name="text_the_file_has_no_readable_audio_track_bc530e" formatted="false">"该文件没有可读的音轨"</string>
+    <string name="text_the_file_has_no_readable_video_track_6b8fdc" formatted="false">"该文件没有可读的视频轨道"</string>
+    <string name="text_the_file_is_already_in_the_chosen_folder_3a7291" formatted="false">"该文件已位于所选文件夹中"</string>
+    <string name="text_the_file_is_no_longer_readable_choose_it_again_i_005adc" formatted="false">"该文件不再可读。在 Android 选择器中再次选择它。"</string>
+    <string name="text_the_file_type_changed_reopen_the_menu_079ffe" formatted="false">"文件类型已更改。重新打开菜单。"</string>
+    <string name="text_the_folder_does_not_allow_new_copies_3ec9ee" formatted="false">"该文件夹不允许新副本"</string>
+    <string name="text_the_folder_does_not_grant_read_access_c5c5f5" formatted="false">"该文件夹不授予读取权限。"</string>
+    <string name="text_the_folder_must_allow_persistent_read_access_402191" formatted="false">"该文件夹必须允许持久读取访问"</string>
+    <string name="text_the_gallery_uses_one_navigation_screen_and_one_p_9da2d1" formatted="false">"图库使用一个导航屏幕和一个预览。在此处管理屏幕并恢复预览，而无需删除原件。"</string>
+    <string name="text_the_image_is_no_longer_available_47ae20" formatted="false">"该图像不再可用"</string>
+    <string name="text_the_image_is_oriented_correctly_cropped_then_mir_64c8b2" formatted="false">"图像被正确定向、裁剪、镜像和旋转。 sRGB 颜色； EXIF、位置和其他元数据不会被复制。"</string>
+    <string name="text_the_item_changed_confirm_again_79bd2a" formatted="false">"项目变更：再次确认"</string>
+    <string name="text_the_item_has_not_expired_148c30" formatted="false">"该商品尚未过期"</string>
+    <string name="text_the_library_changed_choose_the_file_again_to_ref_81ccf1" formatted="false">"库已更改：再次选择文件刷新预览"</string>
+    <string name="text_the_library_changed_refresh_the_preview_a4e11a" formatted="false">"库发生变化：刷新预览"</string>
+    <string name="text_the_library_changed_refresh_the_preview_by_choos_cc2201" formatted="false">"库已更改：再次选择文件夹刷新预览"</string>
+    <string name="text_the_media_is_no_longer_available_47e2f8" formatted="false">"媒体不再可用"</string>
+    <string name="text_the_name_must_end_in_1_s_e12d3a">"名称必须以 .%1$s 结尾"</string>
+    <string name="text_the_name_to_show_in_hints_up_to_24_characters_th_b24e2b" formatted="false">"提示中显示的名称，最多 24 个字符。按钮代码保持不变。"</string>
+    <string name="text_the_original_changed_prepare_copies_again_92bdd2" formatted="false">"原件已更改：重新准备副本"</string>
+    <string name="text_the_original_stays_intact_save_creates_a_new_cop_1584a7" formatted="false">"原件保持完好。保存会创建一个新副本，并将收藏夹保留在原始副本上。"</string>
+    <string name="text_the_panel_is_no_longer_available_try_again_from_88605c" formatted="false">"该面板不再可用。从活动窗口重试。"</string>
+    <string name="text_the_previous_search_is_not_resumed_automatically_7b96aa" formatted="false">"之前的搜索不会自动恢复。开始新的文件验证。"</string>
+    <string name="text_the_provider_cannot_remove_the_original_c3a48f" formatted="false">"提供者无法删除原件"</string>
+    <string name="text_the_provider_changed_the_requested_name_the_orig_b5eddd" formatted="false">"文件提供方更改了请求的名称。原件被保留。"</string>
+    <string name="text_the_provider_did_not_create_a_folder_fc23fd" formatted="false">"提供者未创建文件夹"</string>
+    <string name="text_the_provider_did_not_remove_the_original_99c355" formatted="false">"提供者没有删除原来的"</string>
+    <string name="text_the_provider_did_not_return_file_data_17e4e1" formatted="false">"提供者未返回文件数据"</string>
+    <string name="text_the_provider_did_not_return_folder_contents_8852fa" formatted="false">"提供者未返回文件夹内容"</string>
+    <string name="text_the_received_file_changed_open_it_again_8c87d1" formatted="false">"收到的文件发生变化：重新打开"</string>
+    <string name="text_the_reference_is_already_available_or_relinked_r_a58a41" formatted="false">"该参考已经可用或重新链接。刷新列表。"</string>
+    <string name="text_the_reference_is_in_the_trash_resolve_it_before_4482d2" formatted="false">"该引用位于回收站中：在链接之前解决它"</string>
+    <string name="text_the_selected_albums_contain_no_available_media_d768a1" formatted="false">"所选相册不包含可用媒体。"</string>
+    <string name="text_the_selected_images_cannot_be_opened_try_again_o_edf6e5" formatted="false">"无法打开所选图像。再试一次或选择其他内容。"</string>
+    <string name="text_the_selection_already_has_a_different_operation_5c4a12" formatted="false">"选择已经有不同的操作：首先在文件操作中解决它"</string>
+    <string name="text_the_selection_changed_or_is_no_longer_available_33adcc" formatted="false">"选择已更改或不再可用。重新打开菜单。"</string>
+    <string name="text_the_selection_changed_select_the_files_again_83e934" formatted="false">"选择发生了变化。再次选择文件。"</string>
+    <string name="text_the_selection_is_no_longer_available_reopen_the_672edd" formatted="false">"该选择不再可用。重新打开菜单。"</string>
+    <string name="text_the_session_changed_on_the_other_screen_check_th_b1243d" formatted="false">"会话在另一个屏幕上发生了变化。再次检查引脚。"</string>
+    <string name="text_the_source_changed_during_acquisition_a4b43b" formatted="false">"获取过程中来源发生变化"</string>
+    <string name="text_the_source_changed_during_preparation_c794a3" formatted="false">"准备期间来源发生变化"</string>
+    <string name="text_the_source_changed_the_original_will_not_be_dele_1bfd44" formatted="false">"来源改变了。原件不会被删除；查看当前文件。"</string>
+    <string name="text_the_source_does_not_allow_removing_this_file_7c5fbb" formatted="false">"源不允许删除此文件。"</string>
+    <string name="text_the_source_duration_changed_d3389f" formatted="false">"源持续时间已更改"</string>
+    <string name="text_the_source_duration_has_changed_reopen_the_edito_be0a12" formatted="false">"源持续时间已更改：重新打开编辑器"</string>
+    <string name="text_the_source_has_changed_or_is_unavailable_reopen_43f906" formatted="false">"来源已更改或不可用。重新打开编辑器。"</string>
+    <string name="text_the_source_is_disconnected_hidden_or_needs_acces_148e2b" formatted="false">"源已断开、隐藏或需要再次访问。参考文献被保留。"</string>
+    <string name="text_the_source_is_hidden_or_disabled_no_new_changes_3a5881" formatted="false">"源被隐藏或禁用。没有新的变化。"</string>
+    <string name="text_the_source_is_no_longer_available_407cb7" formatted="false">"源码已经找不到了"</string>
+    <string name="text_the_source_is_not_a_gif_no_conversion_performed_784764" formatted="false">"源不是 GIF：未执行转换"</string>
+    <string name="text_the_source_was_hidden_or_disconnected_the_queue_ebde9e" formatted="false">"来源被隐藏或断开。队列更新，同时保留引用。"</string>
+    <string name="text_the_still_frame_shows_the_initial_crop_play_to_c_4ea1d0" formatted="false">"拖动时间轴预览当前帧。播放时只播放所选片段。"</string>
+    <string name="text_the_temporary_copy_expired_2d727d" formatted="false">"临时副本已过期"</string>
+    <string name="text_the_track_changed_refresh_the_command_64968c" formatted="false">"轨迹改变：刷新命令"</string>
+    <string name="text_the_track_changed_refresh_the_widget_f90587" formatted="false">"曲目更改：刷新小部件"</string>
+    <string name="text_the_widget_photo_could_not_be_opened_try_again_47f055" formatted="false">"无法打开小部件照片。再试一次。"</string>
+    <string name="text_the_widget_photo_is_no_longer_available_d35303" formatted="false">"小部件照片不再可用。"</string>
+    <string name="text_theme_1_s_ngifs_2_s_n_0e9255">"主题：%1$s\nGIF：%2$s\n"</string>
+    <string name="text_themes_behavior_controller_and_touch_gestures_in_e02831" formatted="false">"本地文档中的主题、行为、控制器和触摸手势。"</string>
+    <string name="text_these_copies_can_no_longer_be_restored_07ed54" formatted="false">"这些副本无法再恢复。"</string>
+    <string name="text_these_files_are_not_included_n_a7c42f" formatted="false">"不包括这些文件：\n"</string>
+    <string name="text_this_access_cannot_be_retained_choose_the_file_a_2472a4" formatted="false">"无法保留此访问权限：在 Android 选择器中再次选择文件或导入副本"</string>
+    <string name="text_this_display_af7c7f" formatted="false">"这个显示"</string>
+    <string name="text_this_display_is_released_long_press_the_app_icon_ede49c" formatted="false">"此显示已发布。长按应用图标并选择“在此处打开，单屏”。"</string>
+    <string name="text_this_document_is_not_a_backup_of_files_or_collec_fca373" formatted="false">"本文档不是文件或合集的备份。它不包含来源、权限、垃圾或屏幕分配；发布到游戏的屏幕保持不变。"</string>
+    <string name="text_this_file_has_an_import_to_resolve_in_file_opera_3498d1" formatted="false">"该文件有一个要在文件操作中解析的导入"</string>
+    <string name="text_this_file_is_already_chosen_for_another_referenc_995a49" formatted="false">"该文件已被选择供其他参考。只保留一个。"</string>
+    <string name="text_this_file_is_animated_use_explicit_gif_frame_exp_7d4cbd" formatted="false">"该文件是动画的：使用显式 GIF 帧导出"</string>
+    <string name="text_this_group_has_no_visible_tracks_references_are_0a98e3" formatted="false">"该组没有可见的踪迹。保留参考文献。"</string>
+    <string name="text_this_private_app_file_is_not_an_import_source_f90db3" formatted="false">"此私有应用程序文件不是导入源"</string>
+    <string name="text_this_provider_cannot_publish_the_temporary_file_949885" formatted="false">"该文件提供方无法发布临时文件。选择另一个目的地。"</string>
+    <string name="text_this_single_file_link_is_read_only_import_a_copy_2b4ea6" formatted="false">"此单文件链接是只读的：导入副本或授权其文件夹修改原始文件"</string>
+    <string name="text_this_source_is_disabled_enable_it_in_sources_42528d" formatted="false">"该源已禁用：在源中启用它"</string>
+    <string name="text_this_system_does_not_offer_wallpaper_cropping_fo_7f7e1f" formatted="false">"该系统不提供该图像的壁纸裁剪功能。您可以使用其他应用程序打开它。"</string>
+    <string name="text_this_widget_controls_the_shared_player_play_and_b312ff" formatted="false">"该小部件控制共享播放器。播放和曲目更改会使图库关闭。"</string>
+    <string name="text_thor_albums_below_preview_above_the_button_swaps_218580" formatted="false">"Thor：下面是专辑，上面是预览。 ⇅ 按钮交换内容。"</string>
+    <string name="text_thor_gallery_beta_development_display_report_dd517c" formatted="false">"DS Gallery · 测试版开发 · 显示报告"</string>
+    <string name="text_thor_gallery_m1_417893" formatted="false">"DS Gallery M1"</string>
+    <string name="text_thor_layout_cache_and_saved_settings_f7e1f8" formatted="false">"Thor 屏幕布局与设置备份"</string>
+    <string name="text_thor_layout_not_saved_e72a31" formatted="false">"Thor 布局未保存。"</string>
+    <string name="text_thorgallery_settings_json_c065ac" formatted="false">"DSGallery-settings.json"</string>
+    <string name="text_three_finger_gestures_f7904c" formatted="false">"三指手势"</string>
+    <string name="text_thumbnails_9a085b" formatted="false">"缩略图+"</string>
+    <string name="text_thumbnails_c2d7a9" formatted="false">"缩略图 -"</string>
+    <string name="text_to_1_s_e9250f">"至：%1$s"</string>
+    <string name="text_to_move_rename_or_use_trash_authorize_the_folder_44ca3d" formatted="false">"要移动、重命名或使用回收站，请在源中授权该文件夹。文件保持完整。"</string>
+    <string name="text_toggle_favorite_41f17b" formatted="false">"切换收藏夹"</string>
+    <string name="text_too_many_comparison_references_79dd27" formatted="false">"对比参考太多"</string>
+    <string name="text_too_many_conflicting_names_76409a" formatted="false">"太多互相冲突的名字"</string>
+    <string name="text_too_many_documents_choose_a_subfolder_42bf11" formatted="false">"文档太多：选择一个子文件夹"</string>
+    <string name="text_too_many_documents_choose_an_original_subfolder_495209" formatted="false">"文档太多：选择原始子文件夹"</string>
+    <string name="text_too_many_documents_in_the_folder_dc4e96" formatted="false">"文件夹中的文档太多"</string>
+    <string name="text_too_many_folders_choose_a_subfolder_9faacd" formatted="false">"文件夹太多：选择一个子文件夹"</string>
+    <string name="text_too_many_folders_choose_an_original_subfolder_922de2" formatted="false">"文件夹太多：选择原始子文件夹"</string>
+    <string name="text_too_many_items_in_backup_7b0ac6" formatted="false">"备份中的项目太多"</string>
+    <string name="text_top_85e2ad" formatted="false">"顶部"</string>
+    <string name="text_touch_gestures_241cad" formatted="false">"触摸手势"</string>
+    <string name="text_touch_gestures_and_zones_aa170e" formatted="false">"触摸手势和区域"</string>
+    <string name="text_touch_settings_too_large_b4e1f3" formatted="false">"触摸设置太大"</string>
+    <string name="text_touch_zone_outside_the_usable_area_1d5310" formatted="false">"触摸区域超出可用区域"</string>
+    <string name="text_touch_zones_1_s_nassigned_three_finger_direction_26358f">"触摸区域：%1$s\n分配的三指方向：%2$s"</string>
+    <string name="text_touch_zones_51a77a" formatted="false">"触摸区"</string>
+    <string name="text_track_3c0db2" formatted="false">"轨道"</string>
+    <string name="text_track_artwork_50bfbb" formatted="false">"追踪艺术品"</string>
+    <string name="text_track_encoding_unverified_output_not_published_13ac53" formatted="false">"轨道编码未经验证：输出未发布"</string>
+    <string name="text_track_music_album_folder_settings_a_source_witho_9f4410" formatted="false">"曲目→音乐专辑→文件夹→设置。没有艺术品的来源会退回到下一个。原始标签保持不变。"</string>
+    <string name="text_track_unavailable_b73d64" formatted="false">"曲目不可用"</string>
+    <string name="text_track_unavailable_in_queue_d9efbc" formatted="false">"队列中的曲目不可用"</string>
+    <string name="text_tracks_ac264a" formatted="false">"曲目"</string>
+    <string name="text_transfer_references_0edaf3" formatted="false">"转移参考文献"</string>
+    <string name="text_transfer_references_396f43" formatted="false">"转移参考文献？"</string>
+    <string name="text_trash_0f64be" formatted="false">"垃圾…"</string>
+    <string name="text_trash_9a3a36" formatted="false">"回收站"</string>
+    <string name="text_trash_archive_unavailable_65088e" formatted="false">"垃圾存档不可用"</string>
+    <string name="text_trash_copies_imports_and_duplicates_19a795" formatted="false">"垃圾、副本、导入和重复项"</string>
+    <string name="text_trash_copy_damaged_362903" formatted="false">"回收站副本已损坏"</string>
+    <string name="text_trash_date_unverified_591d7a" formatted="false">"垃圾日期未经验证"</string>
+    <string name="text_trash_is_empty_bd2e58" formatted="false">"回收站已空"</string>
+    <string name="text_trash_item_changed_confirm_the_target_again_cd7047" formatted="false">"垃圾项目已更改：再次确认目标"</string>
+    <string name="text_trash_unavailable_474ba5" formatted="false">"回收站不可用"</string>
+    <string name="text_trim_time_and_crop_the_frame_the_original_its_fa_58180e" formatted="false">"修剪时间并裁剪框架。原件、收藏夹和收藏品均保持原样。"</string>
+    <string name="text_try_another_name_or_clear_the_search_0cceaf" formatted="false">"尝试其他名称或清除搜索。"</string>
+    <string name="text_turn_shuffle_off_ff71f4" formatted="false">"关闭随机播放"</string>
+    <string name="text_turn_shuffle_on_39e948" formatted="false">"打开随机播放"</string>
+    <string name="text_two_panes_e0eda7" formatted="false">"两个窗格"</string>
+    <string name="text_two_screens_dde4ec" formatted="false">"两个屏幕"</string>
+    <string name="text_unassigned_81757b" formatted="false">"未分配"</string>
+    <string name="text_unavailable_1d80f0" formatted="false">"不可用"</string>
+    <string name="text_unavailable_1d9817" formatted="false">"不可用"</string>
+    <string name="text_unavailable_4107fc" formatted="false">"不可用"</string>
+    <string name="text_unavailable_ce1391" formatted="false">"不可用"</string>
+    <string name="text_unexpected_content_after_settings_912e60" formatted="false">"设置后出现意外内容"</string>
+    <string name="text_unexpected_output_track_1_s_af782c">"意外的输出轨道：%1$s"</string>
+    <string name="text_uninstalling_the_app_or_clearing_its_data_also_d_cecefb" formatted="false">"卸载应用程序或清除其数据也会删除垃圾。"</string>
+    <string name="text_unknown_size_954717" formatted="false">"尺寸未知"</string>
+    <string name="text_unknown_size_c08f91" formatted="false">"尺寸未知"</string>
+    <string name="text_unknown_size_e9b931" formatted="false">"尺寸未知"</string>
+    <string name="text_unnamed_034324" formatted="false">"未命名"</string>
+    <string name="text_unnamed_media_24a1bb" formatted="false">"未具名媒体"</string>
+    <string name="text_unreadable_artwork_folder_c5d7b8" formatted="false">"无法读取的艺术品文件夹"</string>
+    <string name="text_unreadable_track_99d3c9" formatted="false">"无法读取曲目"</string>
+    <string name="text_unrecognized_format_a07e3b" formatted="false">"无法识别的格式"</string>
+    <string name="text_unrecognized_temporary_file_cleanup_paused_257383" formatted="false">"无法识别的临时文件：清理已暂停"</string>
+    <string name="text_unsafe_artwork_folder_178f07" formatted="false">"不安全的艺术品文件夹"</string>
+    <string name="text_unsafe_artwork_recovery_dbc2b0" formatted="false">"不安全的艺术品恢复"</string>
+    <string name="text_unsafe_temporary_artwork_368bc9" formatted="false">"不安全的临时艺术品"</string>
+    <string name="text_unsafe_temporary_write_455c5f" formatted="false">"不安全的临时写入"</string>
+    <string name="text_unspecified_album_f59acd" formatted="false">"未指定专辑"</string>
+    <string name="text_unspecified_artist_53b8a6" formatted="false">"未指定艺术家"</string>
+    <string name="text_unsupported_audio_quality_2af31b" formatted="false">"不支持的音频质量"</string>
+    <string name="text_unsupported_audio_recipe_d81e86" formatted="false">"不支持的音频处理设置"</string>
+    <string name="text_unsupported_backup_version_a9bfd8" formatted="false">"不支持的备份版本"</string>
+    <string name="text_unsupported_opening_ca41a8" formatted="false">"不支持打开"</string>
+    <string name="text_unsupported_recipe_d2aba5" formatted="false">"不支持的处理设置"</string>
+    <string name="text_unsupported_resolution_b28db9" formatted="false">"不支持的分辨率"</string>
+    <string name="text_unsupported_version_0fd927" formatted="false">"不支持的版本"</string>
+    <string name="text_unsupported_video_recipe_393281" formatted="false">"不支持的视频食谱"</string>
+    <string name="text_up_to_24_characters_without_control_characters_cfac52" formatted="false">"最多 24 个字符，不含控制字符"</string>
+    <string name="text_up_to_four_zones_per_context_6f7946" formatted="false">"每个上下文最多四个区域"</string>
+    <string name="text_updating_references_7a459f" formatted="false">"更新参考文献"</string>
+    <string name="text_upper_ae009f" formatted="false">"上层"</string>
+    <string name="text_upward_a9ec70" formatted="false">"向上"</string>
+    <string name="text_use_a_name_of_1120_characters_without_control_ch_d4d026" formatted="false">"使用 1–120 个字符的名称，不含控制字符"</string>
+    <string name="text_use_a_name_up_to_170_characters_9d3f2a" formatted="false">"使用最多 170 个字符的名称"</string>
+    <string name="text_use_binding_499a9d" formatted="false">"使用绑定"</string>
+    <string name="text_use_in_a_photo_frame_4b03fb" formatted="false">"用于相框"</string>
+    <string name="text_use_inherited_priority_720160" formatted="false">"使用继承的优先级"</string>
+    <string name="text_use_label_39f1df" formatted="false">"使用标签"</string>
+    <string name="text_use_one_to_three_buttons_directions_are_recorded_9a7276" formatted="false">"使用一到三个按钮；方向单独记录。"</string>
+    <string name="text_use_only_this_screen_f859c0" formatted="false">"仅使用此屏幕"</string>
+    <string name="text_use_shared_profile_8997d5" formatted="false">"使用共享个人资料"</string>
+    <string name="text_use_system_crop_tool_30ec32" formatted="false">"使用系统裁剪工具"</string>
+    <string name="text_use_this_name_c09501" formatted="false">"使用这个名字"</string>
+    <string name="text_use_this_selection_48380c" formatted="false">"使用此选择"</string>
+    <string name="text_verification_failed_or_access_changed_no_referen_ba271c" formatted="false">"验证失败或访问权限已更改。没有转移参考文献；开始新的搜索。"</string>
+    <string name="text_verified_groups_will_appear_here_nothing_is_dele_41b1d4" formatted="false">"已验证的组将出现在此处。不会自动删除任何内容。"</string>
+    <string name="text_verifying_1_s_documents_examined_55eddd">"正在验证·检查%1$s文件"</string>
+    <string name="text_verifying_62483c" formatted="false">"正在验证…"</string>
+    <string name="text_verifying_integrity_a2ae93" formatted="false">"验证完整性"</string>
+    <string name="text_vertical_position_b0dfc9" formatted="false">"垂直位置"</string>
+    <string name="text_video_audio_tracks_do_not_match_options_429d73" formatted="false">"视频/音频轨道与选项不匹配"</string>
+    <string name="text_video_cannot_be_opened_23b178" formatted="false">"视频无法打开"</string>
+    <string name="text_video_cannot_be_played_1_s_a0e774">"视频无法播放：%1$s"</string>
+    <string name="text_video_duration_or_dimensions_unavailable_007d54" formatted="false">"视频时长或尺寸不可用"</string>
+    <string name="text_video_encoding_may_slow_the_game_and_use_more_ba_0160f6" formatted="false">"视频编码可能会减慢游戏速度并消耗更多电池。您可以稍后导出。"</string>
+    <string name="text_video_resolution_a7f5f2" formatted="false">"视频分辨率"</string>
+    <string name="text_video_segment_exported_original_favorites_and_co_e1d82f" formatted="false">"导出的视频片段：保留原始、收藏夹和收藏"</string>
+    <string name="text_video_segment_range_314ef0" formatted="false">"视频片段范围"</string>
+    <string name="text_video_unavailable_ce2e8e" formatted="false">"视频不可用"</string>
+    <string name="text_video_unreadable_041806" formatted="false">"视频无法读取"</string>
+    <string name="text_videos_and_music_are_excluded_timers_and_preload_29d638" formatted="false">"视频和音乐不包括在内。当面板隐藏、菜单打开或者游戏模式或省电模式处于活动状态时，计时器和预加载会停止。"</string>
+    <string name="text_violet_arcade_ad309f" formatted="false">"紫罗兰街机"</string>
+    <string name="text_violet_night_orchid_and_turquoise_eaa135" formatted="false">"紫罗兰之夜·兰花与绿松石"</string>
+    <string name="text_visibility_or_access_changed_06dec4" formatted="false">"可见性或访问权限已更改"</string>
+    <string name="text_visible_373a21" formatted="false">"可见的"</string>
+    <string name="text_visible_9c4acf" formatted="false">"可见"</string>
+    <string name="text_visible_panels_1_s_f349c1">"可见面板：%1$s"</string>
+    <string name="text_waiting_6f3524" formatted="false">"等待"</string>
+    <string name="text_wallpaper_requires_a_static_image_60bd7b" formatted="false">"壁纸需要静态图像"</string>
+    <string name="text_warm_black_copper_and_mineral_blue_a03f6d" formatted="false">"暖黑·铜矿蓝"</string>
+    <string name="text_warm_white_powder_pink_5524ec" formatted="false">"暖白·粉粉色"</string>
+    <string name="text_welcome_to_thor_gallery_f22b0e" formatted="false">"欢迎使用 DS Gallery"</string>
+    <string name="text_widget_command_refused_1_s_0c9fdb">"小组件命令被拒绝 (%1$s)"</string>
+    <string name="text_widget_no_longer_available_f999f8" formatted="false">"小部件不再可用"</string>
+    <string name="text_widget_not_updated_try_again_d5d426" formatted="false">"小部件未更新。再试一次。"</string>
+    <string name="text_width_ea6150" formatted="false">"宽度"</string>
+    <string name="text_window_display_unavailable_3f5404" formatted="false">"窗口显示不可用。"</string>
+    <string name="text_window_p_1_s_display_2_s_focus_3_s_53bd0a">"窗口：P%1$s · 显示%2$s · 焦点%3$s"</string>
+    <string name="text_without_audio_66297f" formatted="false">" · 无音频"</string>
+    <string name="text_x_received_1f44c5" formatted="false">"X 收到"</string>
+    <string name="text_y_received_7e8297" formatted="false">"收到了"</string>
+    <string name="text_yes_ad273c" formatted="false">"是的"</string>
+    <string name="text_your_albums_b2a5fe" formatted="false">"你的专辑"</string>
+    <string name="text_your_collections_b5ac86" formatted="false">"你的合集"</string>
+    <string name="text_your_favorites_together_45ecfa" formatted="false">"你最喜欢的，在一起"</string>
+    <string name="text_your_images_41bd0e" formatted="false">"你的图片"</string>
+    <string name="text_your_music_b63856" formatted="false">"你的音乐"</string>
+    <string name="text_your_music_starts_here_22d615" formatted="false">"你的音乐从这里开始"</string>
+    <string name="text_your_playlists_f30fdf" formatted="false">"您的播放列表"</string>
+    <string name="text_your_preview_48eb5c" formatted="false">"您的预览"</string>
+    <string name="text_zone_1_s_13f903">"区域 %1$s"</string>
+    <string name="text_zone_action_38a54a" formatted="false">"区域行动"</string>
+    <string name="text_zones_in_the_same_context_cannot_overlap_d8c35b" formatted="false">"同一上下文中的区域不能重叠"</string>
+    <string name="text_zoom_1_s_position_2_s_3_s_abeae2">"变焦 %1$s%% · 位置 %2$s%%、%3$s%%"</string>
+    <string name="video_preview_position" formatted="false">"视频预览位置"</string>
+    <string name="widget_choose_folder" formatted="false">""</string>
+    <string name="widget_color" formatted="false">"颜色"</string>
+    <string name="widget_duration_empty" formatted="false">"\u0020/ —"</string>
+    <string name="widget_empty_title" formatted="false">""</string>
+    <string name="widget_favorite" formatted="false">"添加到收藏"</string>
+    <string name="widget_full_name" formatted="false">DS Gallery · Icon Player</string>
+    <string name="widget_last_listened" formatted="false">"上次收听"</string>
+    <string name="widget_minimal_name" formatted="false">DS Gallery · Compact Player</string>
+    <string name="widget_next" formatted="false">"下一首"</string>
+    <string name="widget_open_cover" formatted="false">"打开播放器·美术作品"</string>
+    <string name="widget_photo_fade" formatted="false">"淡入淡出"</string>
+    <string name="widget_play" formatted="false">"播放"</string>
+    <string name="widget_previous" formatted="false">"上一首"</string>
+    <string name="widget_progress_open" formatted="false">"进度·开放玩家"</string>
+    <string name="widget_resume_guidance" formatted="false">"播放会继续上次的收听。如果队列为空，将使用选中的播放列表。"</string>
+    <string name="widget_square_name" formatted="false">DS Gallery · Icon Player</string>
+    <string name="widget_start" formatted="false">"点击开始"</string>
+    <string name="widget_start_playlist" formatted="false">"默认播放列表"</string>
+    <string name="settings_preview_no_media">"此类别中没有媒体。"</string>
+    <string name="album_add_folder">"添加相册"</string>
+    <string name="recovery_description">"恢复文件并查找重复项"</string>
+    <string name="info_updated">"更新时间"</string>
+    <string name="info_sound_sources">"音效来源：Pixabay 和 Romain Raynal · Modern UI Vol.1"</string>
+    <string name="trash_selected_count">"已选择 %1$s 项"</string>
+    <string name="trash_delete_selected">"删除所选项"</string>
+    <string name="trash_delete_all">"全部删除"</string>
+    <string name="trash_days_remaining">"%1$s 天"</string>
+    <string name="trash_restore_confirmation">"恢复 %1$s 个文件？"</string>
+    <string name="trash_restore_original">"文件将恢复到原始文件夹。已有的同名文件将保留。"</string>
+    <string name="trash_selected_one">"已选择 %1$s 项"</string>
+    <string name="trash_day_remaining_one">"%1$s 天"</string>
+    <string name="sounds_title">"声音"</string>
+    <string name="persist_media_title">"保留上次选择的媒体"</string>
+    <string name="persist_media_description">"开启：退出或浏览其他相册时，预览保持不变，直到选择新项目。关闭：打开相册时预览所选排序下的第一个项目；退出后恢复相册封面。"</string>
+    <string name="settings_grid_title">"网格"</string>
+    <string name="settings_rows_title">"列表"</string>
+    <string name="sound_navigate">"图库导航"</string>
+    <string name="sound_notice">"提示和对话框"</string>
+    <string name="sound_delete">"删除"</string>
+    <string name="sound_favorite">"收藏"</string>
+    <string name="sound_settings">"打开设置"</string>
+    <string name="sound_settings_navigation">"设置导航"</string>
+    <string name="sound_save">"保存"</string>
+    <string name="direct_delete">"直接删除"</string>
+    <string name="direct_delete_warning">"文件将被永久删除，无法从回收站恢复。"</string>
+    <string name="direct_delete_option">"显示“直接删除”"</string>
+    <string name="favorite_deletion_notice">"所选项目中包含%1$s项目。"</string>
+    <string name="new_empty_album">"创建新的空相册"</string>
+    <string name="new_album_move">"移动到新相册…"</string>
+    <string name="new_album_copy">"复制到新相册…"</string>
+    <string name="album_hierarchy">"按文件夹浏览相册"</string>
+    <string name="album_hierarchy_description">关闭：子文件夹中的相册与其他相册一起显示。开启：按文件夹层级浏览。不会修改文件。</string>
+    <string name="controller_settings_hint">"按%1$s打开设置。快捷键遵循您的控制器配置。"</string>
+    <string name="duplicate_experimental">实验性功能 · 删除文件前请检查结果。</string>
+    <string name="tutorial_skip">跳过教程</string>
+    <string name="tutorial_shortcuts_title">双屏操作，轻松上手</string>
+    <string name="tutorial_folders_title">连接你的文件夹</string>
+    <string name="tutorial_folders_body">选择照片和视频文件夹，以及独立的音乐文件夹。子文件夹会显示为相册。你可以在设置中添加或移除文件夹。</string>
+    <string name="tutorial_permission_body">在 Android 选择器中打开文件夹，点击使用此文件夹，再确认允许。应用只能访问已授权的文件夹。如果无法选择 Download，请选择其中的子文件夹。</string>
+    <string name="tutorial_visual_folder">照片和视频</string>
+    <string name="tutorial_next">下一步</string>
+    <string name="tutorial_finish">开始</string>
+    <string name="tutorial_previous">上一步</string>
+    <string name="album_set_cover">"设为专辑封面"</string>
+
+    <string name="navbar_categories_title">启用并排序</string>
+
+    <string name="navbar_categories_help">点按图标以显示或隐藏。长按并拖动即可更改顺序。</string>
+    <string name="video_subtitles">字幕</string>
+    <string name="controller_shortcuts">控制器快捷键</string>
+    <string name="album_shadows_title">相册预览阴影</string>
+    <string name="album_shadow_top">顶部</string>
+    <string name="album_shadow_bottom">底部</string>
+    <string name="album_shadow_sides">两侧</string>
+    <string name="album_shadow_all">所有边缘</string>
+    <string name="album_shadow_vertical">顶部和底部</string>
+    <string name="album_shadow_none">无</string>
+    <string name="photo_widget_order">照片顺序</string>
+    <string name="photo_widget_newest">最新优先</string>
+    <string name="photo_widget_oldest">最早优先</string>
+    <string name="photo_widget_random">随机</string>
+    <string name="album_studio_title">"摄影棚边框"</string>
+    <string name="album_studio_description">"主题色细线沿边缘显示，位于阴影上方、控件下方，向内快速淡出，不遮挡图片。"</string>
+    <string name="frame_source_guidance">"选择相册或收藏。幻灯片将在预览屏幕上播放。"</string>
+    <string name="frame_transition_title">"切换效果"</string>
+    <string name="video_dim_navigation">"调暗浏览屏幕"</string>
+    <string name="sound_preview_action">"试听声音"</string>
+    <string name="sound_preview_hint">"按声音旁的播放按钮，可试听并查看波形。"</string>
+    <string name="sound_custom_action">"自定义声音"</string>
+    <string name="sound_custom_guide">"请选择时长不超过6秒的WAV音频。副本保存在应用内，原始文件不会修改。"</string>
+    <string name="sound_custom_choose">"选择音频"</string>
+    <string name="sound_custom_reset">"恢复默认声音？"</string>
+    <string name="sound_custom_restore">"恢复"</string>
+    <string name="sound_custom_invalid">"请选择时长不超过6秒的有效WAV文件。"</string>
+    <string name="sound_custom_load_failed">"无法加载声音。已保留原来的声音。"</string>
+    <string name="controller_guide_title">"控制器快速指南"</string>
+    <string name="controller_guide_video_title">"视频：搜索与音量"</string>
+    <string name="controller_guide_video_body">播放视频时，A切换播放与暂停。播放中按B进行图库导航；暂停时按B关闭播放器，但不退出文件夹。续播对话框：A继续，X从头播放，B取消。左摇杆上下调音量、左右快进或快退。方向键用于导航。</string>
+    <string name="controller_guide_dpad_title">"方向键"</string>
+    <string name="controller_guide_dpad_body">"使用方向键在图库项目和分类之间移动。"</string>
+    <string name="controller_guide_l3_title">"L3 · 照片轮播"</string>
+    <string name="controller_guide_l3_body">"按 L3 打开照片轮播：选择相册或收藏，并在上屏开始播放。"</string>
+    <string name="controller_guide_shortcuts_title">"默认快捷键"</string>
+    <string name="controller_guide_shortcuts_body">"A 确认并打开或播放。B 返回且不退出应用。Y 交换两个屏幕的内容。X 打开设置。你可以重新映射这些按键。"</string>
+    <string name="controller_guide_tabs_title">"切换分类"</string>
+    <string name="controller_guide_tabs_body">"L1 和 R1 切换到上一个或下一个分类。按键可能因控制器配置文件而异。"</string>
+    <string name="frame_enter_fullscreen">"全屏轮播"</string>
+    <string name="frame_exit_fullscreen">"退出全屏"</string>
+    <string name="video_stick_category">视频</string>
+    <string name="video_stick_controls">左摇杆：音量与快进快退</string>
+    <string name="gallery_background_zoom">缩放</string>
+    <string name="default_section">启动页面</string>
+    <string name="info_icon_sources">图标：Phosphor · MIT 许可证</string>
+    <string name="tutorial_y_actions">打开所选项目的操作；未选择项目时打开设置。</string>
+    <string name="playback_image_category">图像</string>
+    <string name="image_preview_name">在预览中显示文件名</string>
+    <string name="grid_preview_motion">浏览网格时滑动预览</string>
+    <string name="sound_restore">恢复完成</string>
+    <string name="sound_unlock">PIN 正确</string>
+    <string name="sound_unlock_error">PIN 错误</string>
+    <string name="sound_reorder">调整相册顺序</string>
+    <string name="widget_disc_hole">CD 中心孔</string>
+    <string name="controller_sorting">用控制器操作日历与排序</string>
+    <string name="controller_sorting_description">使用摇杆或方向键选择日历图标、排序方式和倒序箭头，再按 A 确认。关闭后，这些控件仅支持触控。</string>
+    <string name="grid_preview_motion_description">网格视图中的预览会沿导航方向滑动。关闭后改为淡入淡出切换。</string>
+    <string name="sound_pin_digit_1">PIN · 1</string>
+    <string name="sound_pin_digit_2">PIN · 2</string>
+    <string name="sound_pin_digit_3">PIN · 3</string>
+    <string name="image_overlay_auto_hide">"自动隐藏预览控件"</string>
+    <string name="image_overlay_auto_hide_description">"无操作 5 秒后隐藏预览控件。点按图片或在当前媒体上按 A 可显示或隐藏控件。切换图片不会重置计时。"</string>
+    <string name="crop_upper_screen">"上方屏幕"</string>
+    <string name="crop_lower_screen">"下方屏幕"</string>
+    <string name="video_stick_description">"播放视频时：上/下调节音量；左/右依次跳转 5、10、10、30、30、60 秒。持续倾斜摇杆会每半秒重复一次。反向或等待一秒后重置为 5 秒。将摇杆回中才能切换轴；方向键仍可用于浏览。"</string>
+    <string name="color_copy_hex">"复制颜色"</string>
+    <string name="video_mix_audio">"与其他应用同时播放音频"</string>
+    <string name="video_mix_audio_description">"主屏幕或其他应用播放音频时，视频继续播放，您会同时听到两者的声音。关闭后，其他音频可能会使视频暂停。"</string>
+    <string name="reduced_motion_help">减少应用转场并关闭播放器动画特效，不影响 GIF 和小组件。</string>
+    <string name="music_volume">音乐音量</string>
+    <string name="video_confirm_replace">替换正在播放的视频前询问</string>
+    <string name="video_replace_title">播放另一个视频？</string>
+    <string name="video_replace_description">当前视频将关闭。要播放所选视频吗？</string>
+    <string name="video_replace_dont_ask">不再显示</string>
+    <string name="sound_pin_digit_4">PIN · 第四位数字</string>
+    <string name="sound_video_replace">视频切换确认</string>
+    <string name="video_volume">音量</string>
+    <string name="dim_screen">调暗此屏幕</string>
+    <string name="upper_status_bar">在上屏显示状态栏</string>
+    <string name="app_reset_action">重置应用</string>
+    <string name="app_reset_title">重置应用？</string>
+    <string name="app_reset_description">这将删除设置、已关联的文件夹信息和应用数据，不会删除关联文件夹中的文件。应用将关闭，重新打开后可从教程开始。</string>
+    <string name="app_reset_failed">无法重置应用。请在 Android 应用设置中重试。</string>
+    <string name="empty_favorites_message">你还没有收藏任何媒体。</string>
+    <string name="folder_add_explanation">选择要浏览的文件夹。以后可以随时添加更多文件夹。</string>
+    <string name="folder_add_continue">继续</string>
+    <string name="onboarding_images">图片预览</string>
+    <string name="onboarding_images_body">左摇杆：移动放大的图片。\n右摇杆：缩放。\nA 或轻点：显示或隐藏控件。\n单指滑动切换媒体。</string>
+    <string name="onboarding_video_body">左摇杆上下：播放器音量。\n左右：快退或快进。\nA：播放或暂停。\n双击画面两侧可跳转。</string>
+    <string name="onboarding_gestures_body">用三根手指向所示方向滑动。可在操作设置中自定义手势。</string>
+    <string name="onboarding_ready">准备就绪！</string>
+    <string name="onboarding_later">稍后</string>
+    <string name="shared_storage_title">内部存储</string>
+    <string name="shared_storage_action">Download和全部存储空间</string>
+    <string name="shared_storage_help">如需选择Download或整个内部存储，请先在Android设置中允许访问所有文件，再选择文件夹。Android/data、Android/obb及应用私有文件夹仍不可访问。</string>
+    <string name="console_stick_title">音量和亮度</string>
+    <string name="console_stick_body">在视频和音乐中，右摇杆上下调节系统亮度，左右调节设备音量。在图片中仍用于缩放。</string>
+    <string name="console_brightness_permission_title">调节亮度</string>
+    <string name="console_brightness_permission_body">要用右摇杆调节亮度，请允许DS Gallery修改系统设置。调节音量不需要此权限。</string>
+    <string name="console_brightness_permission_action">打开权限</string>
+    <string name="console_brightness_level">亮度 · %1$d%%</string>
+    <string name="tutorial_pan">移动放大的图像</string>
+    <string name="tutorial_overlay">显示或隐藏控件</string>
+    <string name="tutorial_swipe_media">单指滑动以切换媒体</string>
+    <string name="tutorial_double_tap_zoom">双击图像可放大或缩小。</string>
+    <string name="tutorial_seek">快退 / 快进</string>
+    <string name="tutorial_double_tap_seek">双击屏幕两侧可快退或快进</string>
+    <string name="tutorial_folders_selected">已选择 %1$d 个文件夹</string>
+    <string name="tutorial_play_pause">播放 / 暂停</string>
+    <string name="tutorial_three_tap">三指轻点</string>
+    <string name="tutorial_gesture_hint">使用三根手指：向所示方向滑动，或不拖动直接轻点。</string>
+    <string name="tutorial_recap_title">一切就绪，开始吧！</string>
+    <string name="tutorial_recap_body">文件夹已准备好。你可以在设置中继续添加。</string>
+    <string name="tutorial_begin">开始吧！</string>
+    <string name="tutorial_control_help">操作说明</string>
+    <string name="tutorial_recap_empty">你可以稍后在设置中关联文件夹。</string>
+    <string name="tutorial_setup_hint">你可以随时在设置中更改语言和主题。</string>
+    <string name="tutorial_ready">一切就绪！</string>
+    <string name="sound_section">切换分区</string>
+    <string name="widget_effect_coin">硬币</string>
+</resources>

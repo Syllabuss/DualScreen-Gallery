@@ -1,0 +1,8 @@
+<resources>
+    <string name="image_backdrop_title">透過画像の背景</string>
+    <string name="image_backdrop_grid">市松模様</string>
+    <string name="image_backdrop_tint">色付き市松模様</string>
+    <string name="image_backdrop_solid">単色</string>
+    <string name="image_backdrop_linear">縦方向のグラデーション</string>
+    <string name="image_backdrop_radial">中心からのグラデーション</string>
+</resources>

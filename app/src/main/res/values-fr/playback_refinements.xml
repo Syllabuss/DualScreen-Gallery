@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="music_cover_animation">Animation de la pochette</string>
+    <string name="music_cover_normal">Normale</string>
+    <string name="music_cover_pulse">Pulsation</string>
+    <string name="music_cover_disc_hole">Disque avec trou</string>
+    <string name="music_cover_disc_solid">Disque sans trou</string>
+    <string name="video_auto_dim">Assombrissement automatique</string>
+    <string name="video_auto_dim_off">Désactivé</string>
+    <string name="video_auto_dim_description">Pendant une vidéo, assombrit l’écran de navigation après la durée choisie sans interaction. Touchez-le pour le réveiller. Désactivé : utilisez la lune quand vous voulez. La recherche masque le bouton sans arrêter le minuteur.</string>
+</resources>

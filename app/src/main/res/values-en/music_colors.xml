@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="music_colors_title">Player colors</string>
+    <string name="music_colors_theme">Theme</string>
+    <string name="music_colors_artwork">From artwork</string>
+    <string name="music_colors_custom">Custom</string>
+    <string name="music_colors_description">Use the theme, full-screen cover art with matching colors, or custom colors. Without cover art, the theme background stays. Custom colors are used exactly as chosen, with no added gradients.</string>
+    <string name="music_colors_background">Background</string>
+    <string name="music_colors_bars">Bars</string>
+</resources>

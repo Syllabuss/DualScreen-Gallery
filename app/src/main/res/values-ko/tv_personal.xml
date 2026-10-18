@@ -1,0 +1,6 @@
+<resources>
+    <string name="tv_personal_notice_title">내 TV 소스</string>
+    <string name="tv_personal_notice_body">DS Gallery는 채널이나 재생목록을 제공하지 않으며 프로그램 권리를 부여하지 않습니다. 해당 국가에서 허가된 공식적이고 신뢰할 수 있는 소스만 추가하세요. 공개 링크는 허가를 의미하지 않습니다. 구독, DRM, 지역 제한을 우회하지 마세요. 연결된 서비스에 IP 주소가 전달됩니다. 법적 의무는 유지됩니다.</string>
+    <string name="tv_personal_source_add">재생목록 추가</string>
+    <string name="tv_personal_source_help">사용이 허가된 HTTPS M3U 재생목록을 입력하세요. 최대 20개이며 가져오기는 재생을 시작하지 않습니다.</string>
+</resources>

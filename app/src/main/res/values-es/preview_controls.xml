@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="preview_pin_setting">Botón Fijar vista previa</string>
+    <string name="preview_compare_setting">Comparaciones en ventanas flotantes</string>
+    <string name="preview_unpin_title">¿Cambiar la vista previa?</string>
+    <string name="preview_unpin_description">Esta imagen está fijada. Abrir otro archivo la desfijará. ¿Continuar?</string>
+    <string name="preview_overlay_permission">Permite que DS Gallery muestre hasta dos imágenes o GIF animados sobre otras aplicaciones. Arrastra para mover y usa dos dedos para cambiar el tamaño. Toca para mostrar u ocultar la X de cierre. Arrastra más allá de un borde lateral para reducir a una burbuja; toca o desliza la burbuja hacia dentro para restaurar la ventana.</string>
+    <string name="preview_compare_limit">Ya hay dos comparaciones abiertas. Cierra una antes de añadir otra.</string>
+    <string name="video_keep_playing">Seguir reproduciendo en una ventana</string>
+    <string name="animated_album_covers">Portadas GIF animadas de álbumes</string>
+    <string name="preview_pin_description">Fija una foto o GIF con la chincheta mientras exploras otros archivos. Música, FTP y ajustes siguen disponibles.</string>
+    <string name="video_keep_playing_description">El vídeo sigue en una ventana al abrir otros medios, Música, FTP o ajustes. Desactiva para pausarlo.</string>
+    <string name="preview_restore_overlay">Mostrar de nuevo</string>
+</resources>

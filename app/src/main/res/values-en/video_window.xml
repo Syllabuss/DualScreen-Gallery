@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="video_pip">Video window</string>
+    <string name="video_pip_active">Playing in a window</string>
+    <string name="video_pip_description">The video continues in the Android window. Browse the gallery or open other apps. Use the window controls to expand or close it.</string>
+    <string name="video_pip_unavailable">The video window is unavailable. Check the Picture-in-Picture permission in Android settings.</string>
+</resources>

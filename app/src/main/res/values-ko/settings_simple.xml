@@ -1,0 +1,16 @@
+<resources>
+    <string name="settings_advanced">고급</string>
+    <string name="settings_visible_buttons">표시할 버튼</string>
+    <string name="settings_unsaved_title">저장하지 않은 변경 사항</string>
+    <string name="settings_unsaved_message">변경 사항을 저장하지 않고 나갈까요?</string>
+    <string name="settings_discard">저장하지 않고 나가기</string>
+    <string name="settings_keep_editing">계속 수정하기</string>
+    <string name="settings_folders_permission">라이브러리에서 폴더를 선택하면 파일 접근 권한이 부여됩니다.</string>
+    <string name="settings_organize">폴더 및 컬렉션</string>
+    <string name="settings_privacy">개인정보 보호</string>
+    <string name="settings_file_management">파일 관리</string>
+    <string name="settings_manage_folders">폴더 관리</string>
+    <string name="settings_folder_access_ready">접근 가능</string>
+    <string name="settings_folder_access_missing">접근 설정 필요</string>
+    <string name="settings_album_tools_note">이 옵션은 앨범 안의 미디어에도 적용됩니다.</string>
+</resources>

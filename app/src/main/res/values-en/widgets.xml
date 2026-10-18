@@ -1,0 +1,20 @@
+<resources>
+    <string name="widget_square_name">DS Gallery · Icon Player</string>
+    <string name="widget_full_name">DS Gallery · Icon Player</string>
+    <string name="widget_minimal_name">DS Gallery · Compact Player</string>
+    <string name="widget_empty_title"></string>
+    <string name="widget_choose_folder"></string>
+    <string name="widget_start">Tap to start</string>
+    <string name="widget_duration_empty">\u0020/ —</string>
+    <string name="widget_open_cover">Open player · artwork</string>
+    <string name="widget_progress_open">Progress · open player</string>
+    <string name="widget_previous">Previous track</string>
+    <string name="widget_play">Play</string>
+    <string name="widget_next">Next track</string>
+    <string name="widget_color">Color</string>
+    <string name="widget_start_playlist">Starting playlist</string>
+    <string name="widget_last_listened">Last listened</string>
+    <string name="widget_resume_guidance">Play resumes your last session. If there is no queue, it uses the selected playlist.</string>
+    <string name="widget_photo_fade">Fade</string>
+    <string name="widget_favorite">Add to Favorites</string>
+</resources>

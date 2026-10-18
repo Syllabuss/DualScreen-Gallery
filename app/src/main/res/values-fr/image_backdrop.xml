@@ -1,0 +1,8 @@
+<resources>
+    <string name="image_backdrop_title">Fond des images transparentes</string>
+    <string name="image_backdrop_grid">Damier</string>
+    <string name="image_backdrop_tint">Damier teinté</string>
+    <string name="image_backdrop_solid">Couleur unie</string>
+    <string name="image_backdrop_linear">Dégradé vertical</string>
+    <string name="image_backdrop_radial">Dégradé depuis le centre</string>
+</resources>

@@ -1,0 +1,26 @@
+<resources>
+    <string name="protected_album">保護されたアルバム</string>
+    <string name="protect_albums">PINで保護</string>
+    <string name="unprotect_albums">保護を解除</string>
+    <string name="unlock_album">アルバムのロックを解除</string>
+    <string name="pin_create">PINを作成</string>
+    <string name="pin_confirm">PINを再入力</string>
+    <string name="pin_enter">PINを入力</string>
+    <string name="pin_hint">4桁の数字でアルバムを保護します。表紙は引き続き表示されます。</string>
+    <string name="pin_wrong">PINが正しくありません。もう一度お試しください。</string>
+    <string name="pin_wait">%1$d秒後に再試行</string>
+    <string name="timeline_title">日付順に閲覧</string>
+    <string name="timeline_off">グループ化しない</string>
+    <string name="timeline_day">日</string>
+    <string name="timeline_month">月</string>
+    <string name="timeline_year">年</string>
+    <string name="timeline_unknown">日付不明</string>
+    <string name="tools_zoom">+ と − ボタン</string>
+    <string name="tools_view">リスト / グリッドボタン</string>
+    <string name="tools_search">検索ボタン</string>
+    <string name="tools_filter">形式フィルター</string>
+    <string name="tools_swap">画面切り替えボタン</string>
+    <string name="tools_play">再生ボタン</string>
+    <string name="tools_music_mode">音楽ライブラリメニュー</string>
+    <string name="tools_hint">表示するボタンを選択します。コントローラーのショートカットは引き続き使えます。</string>
+</resources>

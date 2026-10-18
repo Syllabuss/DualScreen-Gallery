@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="music_colors_title">播放器颜色</string>
+    <string name="music_colors_theme">主题</string>
+    <string name="music_colors_artwork">从封面提取</string>
+    <string name="music_colors_custom">自定义</string>
+    <string name="music_colors_description">使用主题、搭配相应颜色的全屏封面，或自定义颜色。没有封面时保留主题背景。自定义颜色将原样应用，不添加渐变。</string>
+    <string name="music_colors_background">背景</string>
+    <string name="music_colors_bars">音频条</string>
+</resources>

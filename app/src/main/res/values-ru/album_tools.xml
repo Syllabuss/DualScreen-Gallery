@@ -1,0 +1,26 @@
+<resources>
+    <string name="protected_album">Защищённый альбом</string>
+    <string name="protect_albums">Защитить PIN-кодом</string>
+    <string name="unprotect_albums">Снять защиту</string>
+    <string name="unlock_album">Разблокировать альбом</string>
+    <string name="pin_create">Создайте PIN-код</string>
+    <string name="pin_confirm">Повторите PIN-код</string>
+    <string name="pin_enter">Введите PIN-код</string>
+    <string name="pin_hint">Четыре цифры для ваших альбомов. Обложка остаётся видимой.</string>
+    <string name="pin_wrong">Неверный PIN-код. Повторите попытку.</string>
+    <string name="pin_wait">Повторите через %1$d с</string>
+    <string name="timeline_title">Просмотр по датам</string>
+    <string name="timeline_off">Без группировки</string>
+    <string name="timeline_day">День</string>
+    <string name="timeline_month">Месяц</string>
+    <string name="timeline_year">Год</string>
+    <string name="timeline_unknown">Дата неизвестна</string>
+    <string name="tools_zoom">Кнопки + и −</string>
+    <string name="tools_view">Кнопка списка / сетки</string>
+    <string name="tools_search">Кнопка поиска</string>
+    <string name="tools_filter">Фильтр форматов</string>
+    <string name="tools_swap">Кнопка смены экранов</string>
+    <string name="tools_play">Кнопка воспроизведения</string>
+    <string name="tools_music_mode">Меню музыкальной библиотеки</string>
+    <string name="tools_hint">Выберите видимые кнопки. Команды контроллера останутся доступны.</string>
+</resources>

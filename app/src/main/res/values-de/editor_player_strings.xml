@@ -1,0 +1,11 @@
+<resources>
+    <string name="video_exit_playback">Wiedergabe beenden</string>
+    <string name="video_resume_title">Video fortsetzen?</string>
+    <string name="video_resume_description">Ab %1$s fortsetzen oder von vorne beginnen.</string>
+    <string name="video_resume_controller_hint">Controller: A fortsetzen · Y neu starten · B abbrechen</string>
+    <string name="video_resume_action">Fortsetzen</string>
+    <string name="video_restart_action">Von vorne</string>
+    <string name="editor_save_mp3">Als MP3 speichern</string>
+    <string name="editor_pcm_unsupported">Nicht unterstütztes dekodiertes Audioformat</string>
+    <string name="editor_decoder_timeout">Die Audiodekodierung reagiert nicht. Das Original wurde nicht verändert.</string>
+</resources>

@@ -1,0 +1,22 @@
+<resources>
+    <string name="network_host_error">Computer name not found. Use its IP address on the same network.</string>
+    <string name="network_offline_error">Computer unreachable. Check Wi-Fi, SMB port and firewall.</string>
+    <string name="network_timeout_error">The computer is not responding. Check the network and retry.</string>
+    <string name="network_auth_error">Sign-in refused. Check the computer username, password and domain.</string>
+    <string name="network_share_error">Share not found. Check the shared folder name.</string>
+    <string name="network_permission_error">Permission denied. Check the computer folder permissions.</string>
+    <string name="network_recovery">Recover transfer</string>
+    <string name="network_recovery_help">Reconnect the same source and destination folders. Verified copies will be checked before resuming.</string>
+    <string name="network_source">Source</string>
+    <string name="network_destination">Destination</string>
+    <string name="network_resume">Resume</string>
+    <string name="sound_preview_pin">Pin preview</string>
+    <string name="sound_preview_unpin">Unpin preview</string>
+    <string name="sound_comparison_first">First comparison</string>
+    <string name="sound_comparison_second">Second comparison</string>
+    <string name="sound_comparison_close">Close comparison</string>
+    <string name="sound_network_transfer">Start transfer</string>
+    <string name="sound_zoom_out">Zoom grid out</string>
+    <string name="sound_zoom_in">Zoom grid in</string>
+    <string name="all_animated_album_covers">Animate all visible covers</string>
+</resources>

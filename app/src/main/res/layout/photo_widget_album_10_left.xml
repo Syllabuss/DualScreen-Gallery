@@ -1,0 +1,6 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@android:color/transparent">
+    <include layout="@layout/photo_widget_content"/>
+    <AdapterViewFlipper android:id="@+id/photo_slideshow" android:layout_width="match_parent" android:layout_height="match_parent"
+        android:autoStart="true" android:flipInterval="10000" android:inAnimation="@animator/photo_left_in" android:outAnimation="@animator/photo_left_out"/>
+    <ImageView android:id="@+id/photo_touch" android:layout_width="match_parent" android:layout_height="32dp" android:layout_gravity="top" android:background="@android:color/transparent" android:focusable="false" android:contentDescription="@string/text_settings_7b855c" />
+</FrameLayout>

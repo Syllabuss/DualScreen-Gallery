@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="music_colors_title">Colori del player</string>
+    <string name="music_colors_theme">Tema</string>
+    <string name="music_colors_artwork">Dalla copertina</string>
+    <string name="music_colors_custom">Personalizzati</string>
+    <string name="music_colors_description">Usa il tema, la copertina a tutto schermo con colori coordinati, oppure colori personalizzati. Senza copertina resta lo sfondo del tema. I colori personalizzati vengono usati esattamente come li scegli, senza sfumature aggiunte.</string>
+    <string name="music_colors_background">Sfondo</string>
+    <string name="music_colors_bars">Barre</string>
+</resources>

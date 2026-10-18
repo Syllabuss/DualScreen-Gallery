@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="album_subfolder_count">サブフォルダー %1$d 個</string>
+    <string name="music_mode_playlists">プレイリスト</string>
+</resources>

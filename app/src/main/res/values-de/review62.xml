@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:locale="de">
+    <string name="video_flow_mode">Wiedergabemodus</string>
+    <string name="action_menus_below">Aktionen auf dem Navigationsbildschirm</string>
+    <string name="explorer_copy">Kopieren</string>
+    <string name="explorer_move">Verschieben</string>
+    <string name="explorer_continue">Weiter</string>
+    <string name="explorer_transfer_error">Vorgang unterbrochen. Prüfe Originale und Kopien vor einem neuen Versuch.</string>
+    <string name="explorer_transfer_help">Das Ziel ist der geöffnete Ordner im anderen Bereich. Vorhandene Dateien bleiben erhalten. Verschieben entfernt die Quelle erst nach Prüfung der Kopie.</string>
+    <string name="explorer_extract">Archiv entpacken</string>
+    <string name="explorer_move_folders_help">Geprüfte Dateien werden verschoben; die ursprünglichen Ordner bleiben erhalten. Leere Ordner werden nicht gelöscht.</string>
+</resources>

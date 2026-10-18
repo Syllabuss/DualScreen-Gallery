@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Multilingual greeting loop: each supported language is intentionally shown to everyone. -->
+    <string-array name="tutorial_greetings" translatable="false">
+        <item>Benvenuto!</item><item>Welcome!</item><item>Добро пожаловать!</item>
+        <item>환영합니다!</item><item>欢迎！</item><item>ようこそ！</item>
+        <item>Willkommen!</item><item>Bienvenue !</item><item>Bem-vindo!</item><item>¡Bienvenido!</item>
+    </string-array>
+</resources>

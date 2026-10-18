@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tutorial_folder_compact_body">Choose what to show. Subfolders become albums.</string>
+    <string name="tutorial_permission_compact_purpose">Folders: media. Notifications: player. Overlays: comparisons. Only when needed.</string>
+    <string name="tutorial_permission_compact_body">Open a folder → Use this folder → Allow. For Download, choose a subfolder.</string>
+    <string name="tutorial_actions_short">Actions and settings</string>
+    <string name="info_licenses">Licenses and components</string>
+    <string name="controller_guide_image_title">Zoomed images</string>
+    <string name="controller_guide_image_body">Only while zoomed in: left stick pans the image; right stick up/down adjusts zoom. The D-pad browses media.</string>
+</resources>

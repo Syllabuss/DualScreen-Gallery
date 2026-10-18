@@ -1,0 +1,8 @@
+<resources>
+    <string name="image_backdrop_title">Transparent image background</string>
+    <string name="image_backdrop_grid">Checkerboard</string>
+    <string name="image_backdrop_tint">Tinted checkerboard</string>
+    <string name="image_backdrop_solid">Solid color</string>
+    <string name="image_backdrop_linear">Vertical gradient</string>
+    <string name="image_backdrop_radial">Gradient from center</string>
+</resources>

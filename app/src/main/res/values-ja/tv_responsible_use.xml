@@ -1,0 +1,9 @@
+<resources>
+    <string name="tv_authorized_title">"テレビと許可された配信元"</string>
+    <string name="tv_authorized_message">"DS Galleryはプレーヤーであり、コンテンツの利用権を付与しません。お住まいの国で許可された公式配信チャンネルのみを利用してください。開発者は外部配信元を管理せず、適法性や可用性を保証しません。配信元の選択と利用は利用者の責任です。カタログ、ロゴ、配信の取得時に接続先へIPアドレスが伝わります。"</string>
+    <string name="tv_authorized_accept">"理解し、許可された配信元のみを利用する責任を負います。"</string>
+    <string name="tv_source_policy">"配信元について"</string>
+    <string name="tv_report_channel">"チャンネルを報告"</string>
+    <string name="tv_start_timeout">"チャンネルが応答しません。再試行するか別のチャンネルを選んでください。"</string>
+    <string name="ftp_upload_limits">"アップロードは一時的に内部ストレージを使用します。1ファイル最大8 GiB、空き容量128 MiB以上を確保します。FTPはパスワードやファイルを暗号化しません。信頼できるネットワークのみ利用してください。"</string>
+</resources>

@@ -1,0 +1,9 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:locale="it">
+    <string name="photo_widget_name">DS Gallery · Cornice fotografica</string>
+    <string name="photo_widget_open">Apri la foto su un solo schermo</string>
+    <string name="photo_widget_previous">Foto precedente</string>
+    <string name="photo_widget_next">Foto successiva</string>
+    <string name="photo_widget_settings">Configura questo widget</string>
+    <string name="photo_widget_empty">Le tue immagini</string>
+    <string name="photo_widget_manual">Cambio manuale</string>
+</resources>

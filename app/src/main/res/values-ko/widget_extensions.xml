@@ -1,0 +1,10 @@
+<resources>
+    <string name="widget_choose_track">곡 선택</string>
+    <string name="photo_slide_left">왼쪽으로 슬라이드</string>
+    <string name="photo_slide_right">오른쪽으로 슬라이드</string>
+    <string name="photo_slide_up">위로 슬라이드</string>
+    <string name="photo_slide_down">아래로 슬라이드</string>
+    <string name="photo_rotate">회전</string>
+    <string name="widget_circle_name">DS Gallery · Player Coin</string>
+    <string name="widget_effect_circle">원형</string>
+</resources>

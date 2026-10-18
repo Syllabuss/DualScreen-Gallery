@@ -1,0 +1,26 @@
+<resources>
+    <string name="protected_album">Geschütztes Album</string>
+    <string name="protect_albums">Mit PIN schützen</string>
+    <string name="unprotect_albums">Schutz entfernen</string>
+    <string name="unlock_album">Album entsperren</string>
+    <string name="pin_create">PIN erstellen</string>
+    <string name="pin_confirm">PIN bestätigen</string>
+    <string name="pin_enter">PIN eingeben</string>
+    <string name="pin_hint">Vier Ziffern für deine Alben. Das Titelbild bleibt sichtbar.</string>
+    <string name="pin_wrong">Falsche PIN. Versuche es erneut.</string>
+    <string name="pin_wait">In %1$d s erneut versuchen</string>
+    <string name="timeline_title">Chronologische Ansicht</string>
+    <string name="timeline_off">Keine Gruppierung</string>
+    <string name="timeline_day">Tag</string>
+    <string name="timeline_month">Monat</string>
+    <string name="timeline_year">Jahr</string>
+    <string name="timeline_unknown">Unbekanntes Datum</string>
+    <string name="tools_zoom">+ und − Tasten</string>
+    <string name="tools_view">Liste / Raster</string>
+    <string name="tools_search">Suchschaltfläche</string>
+    <string name="tools_filter">Formatfilter</string>
+    <string name="tools_swap">Bildschirme tauschen</string>
+    <string name="tools_play">Wiedergabetaste</string>
+    <string name="tools_music_mode">Menü der Musikbibliothek</string>
+    <string name="tools_hint">Wähle die sichtbaren Schaltflächen. Controller-Kurzbefehle bleiben verfügbar.</string>
+</resources>

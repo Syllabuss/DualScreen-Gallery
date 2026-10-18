@@ -1,0 +1,8 @@
+<resources>
+    <string name="image_backdrop_title">Fundo de imagens transparentes</string>
+    <string name="image_backdrop_grid">Quadriculado</string>
+    <string name="image_backdrop_tint">Quadriculado colorido</string>
+    <string name="image_backdrop_solid">Cor sólida</string>
+    <string name="image_backdrop_linear">Gradiente vertical</string>
+    <string name="image_backdrop_radial">Gradiente a partir do centro</string>
+</resources>

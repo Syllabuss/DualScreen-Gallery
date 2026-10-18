@@ -1,0 +1,11 @@
+<resources>
+    <string name="video_exit_playback">退出播放</string>
+    <string name="video_resume_title">继续播放视频？</string>
+    <string name="video_resume_description">从 %1$s 继续播放，或从头开始。</string>
+    <string name="video_resume_controller_hint">控制器：A 继续 · Y 从头开始 · B 取消</string>
+    <string name="video_resume_action">继续播放</string>
+    <string name="video_restart_action">从头开始</string>
+    <string name="editor_save_mp3">另存为 MP3</string>
+    <string name="editor_pcm_unsupported">不支持解码后的音频格式</string>
+    <string name="editor_decoder_timeout">音频解码无响应。原始文件未被修改。</string>
+</resources>

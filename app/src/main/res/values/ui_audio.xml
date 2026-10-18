@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:locale="it">
+    <string name="gif_all_visible">Tutte le GIF visibili</string>
+    <string name="hide_gif_badge">Nascondi etichetta GIF</string>
+    <string name="ui_sounds">Suoni dell’interfaccia</string>
+<string name="widget_crop">Inquadra la foto</string>
+<string name="widget_crop_hint">Pizzica per ingrandire. Trascina o usa gli stick per spostare la foto.</string>
+<string name="widget_crop_reset">Ripristina</string>
+</resources>

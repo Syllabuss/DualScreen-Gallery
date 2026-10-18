@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="gif_all_visible">Alle sichtbaren GIFs</string>
+    <string name="hide_gif_badge">GIF-Kennzeichnung ausblenden</string>
+    <string name="ui_sounds">Bedienungstöne</string>
+<string name="widget_crop">Foto einpassen</string>
+<string name="widget_crop_hint">Mit zwei Fingern zoomen. Foto ziehen oder mit den Sticks verschieben.</string>
+<string name="widget_crop_reset">Zurücksetzen</string>
+</resources>

@@ -1,0 +1,26 @@
+<resources>
+    <string name="protected_album">Álbum protegido</string>
+    <string name="protect_albums">Proteger con PIN</string>
+    <string name="unprotect_albums">Quitar protección</string>
+    <string name="unlock_album">Desbloquear álbum</string>
+    <string name="pin_create">Crea tu PIN</string>
+    <string name="pin_confirm">Confirma el PIN</string>
+    <string name="pin_enter">Introduce el PIN</string>
+    <string name="pin_hint">Cuatro dígitos para tus álbumes. La portada sigue visible.</string>
+    <string name="pin_wrong">PIN incorrecto. Inténtalo de nuevo.</string>
+    <string name="pin_wait">Inténtalo de nuevo en %1$d s</string>
+    <string name="timeline_title">Navegación cronológica</string>
+    <string name="timeline_off">Sin agrupar</string>
+    <string name="timeline_day">Día</string>
+    <string name="timeline_month">Mes</string>
+    <string name="timeline_year">Año</string>
+    <string name="timeline_unknown">Fecha desconocida</string>
+    <string name="tools_zoom">Botones + y −</string>
+    <string name="tools_view">Botón de lista / cuadrícula</string>
+    <string name="tools_search">Botón de búsqueda</string>
+    <string name="tools_filter">Filtro de formatos</string>
+    <string name="tools_swap">Botón para intercambiar pantallas</string>
+    <string name="tools_play">Botón de reproducción</string>
+    <string name="tools_music_mode">Menú de la biblioteca musical</string>
+    <string name="tools_hint">Elige qué botones mostrar. Los atajos del mando siguen disponibles.</string>
+</resources>

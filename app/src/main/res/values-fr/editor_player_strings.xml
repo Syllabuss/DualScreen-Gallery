@@ -1,0 +1,11 @@
+<resources>
+    <string name="video_exit_playback">Quitter la lecture</string>
+    <string name="video_resume_title">Reprendre la vidéo ?</string>
+    <string name="video_resume_description">Reprendre à %1$s ou recommencer depuis le début.</string>
+    <string name="video_resume_controller_hint">Manette : A reprend · Y recommence · B annule</string>
+    <string name="video_resume_action">Continuer</string>
+    <string name="video_restart_action">Recommencer</string>
+    <string name="editor_save_mp3">Enregistrer en MP3</string>
+    <string name="editor_pcm_unsupported">Format audio décodé non pris en charge</string>
+    <string name="editor_decoder_timeout">Le décodage audio ne répond pas. Le fichier original est intact.</string>
+</resources>

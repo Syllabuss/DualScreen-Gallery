@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="gif_current_frame">"Contador del fotograma actual"</string>
+    <string name="gif_frame_selector">"Selector de fotogramas"</string>
+    <string name="gif_current_of_total">"%1$s / %2$s fotogramas"</string>
+</resources>

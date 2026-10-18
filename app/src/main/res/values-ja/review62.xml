@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:locale="ja">
+    <string name="video_flow_mode">再生モード</string>
+    <string name="action_menus_below">操作を閲覧画面に表示</string>
+    <string name="explorer_copy">コピー</string>
+    <string name="explorer_move">移動</string>
+    <string name="explorer_continue">続行</string>
+    <string name="explorer_transfer_error">処理が中断されました。再試行前に元のファイルとコピーを確認してください。</string>
+    <string name="explorer_transfer_help">保存先はもう一方の画面で開いているフォルダです。既存ファイルは保持されます。移動はコピーを検証してから元ファイルを削除します。</string>
+    <string name="explorer_extract">アーカイブを展開</string>
+    <string name="explorer_move_folders_help">検証済みのファイルを移動し、元のフォルダは保持します。空のフォルダは削除しません。</string>
+</resources>

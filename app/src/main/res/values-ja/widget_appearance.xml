@@ -1,0 +1,8 @@
+<resources>
+    <string name="widget_appearance">外観</string>
+    <string name="widget_dark">ダーク</string>
+    <string name="widget_light">ライト</string>
+    <string name="widget_system">システムの設定</string>
+    <string name="widget_transparent">透明</string>
+    <string name="widget_bars_color">バーの色</string>
+</resources>

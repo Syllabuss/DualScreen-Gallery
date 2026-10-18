@@ -1,0 +1,20 @@
+<resources>
+    <string name="explorer_share">Compartilhar pasta</string>
+    <string name="explorer_browse">Explorar dispositivos</string>
+    <string name="explorer_device">Neste dispositivo</string>
+    <string name="explorer_computer">Computador</string>
+    <string name="explorer_control">Controlar aqui</string>
+    <string name="explorer_connect">Conectar computador</string>
+    <string name="explorer_refresh">Atualizar</string>
+    <string name="explorer_local_intro">Escolha uma pasta. Os arquivos ficam onde estão.</string>
+    <string name="explorer_remote_intro">Abra uma pasta compartilhada no computador.</string>
+    <string name="explorer_empty">Pasta vazia</string>
+    <string name="explorer_read_only">Somente leitura: nenhum arquivo é alterado.</string>
+    <string name="explorer_connection_help">Use a mesma rede Wi-Fi e uma pasta compartilhada no computador. Digite o endereço e as credenciais.</string>
+    <string name="explorer_password_help">Use a senha da conta, não o PIN do Windows. Ela não será salva.</string>
+    <string name="explorer_address">Pasta compartilhada</string>
+    <string name="explorer_address_invalid">Digite um endereço como \\\\PC\\Fotos ou smb://PC/Fotos.</string>
+    <string name="explorer_local_error">Pasta indisponível. Selecione-a novamente para autorizar o acesso.</string>
+    <string name="explorer_remote_error">Falha na conexão. Confira a rede, a pasta compartilhada e as credenciais.</string>
+    <string name="explorer_example_help">Os valores iniciais são exemplos. Substitua-os pelo endereço da pasta compartilhada e pela conta do seu computador.</string>
+</resources>

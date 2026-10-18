@@ -1,0 +1,20 @@
+<resources>
+    <string name="explorer_share">Condividi cartella</string>
+    <string name="explorer_browse">Esplora dispositivi</string>
+    <string name="explorer_device">Sul dispositivo</string>
+    <string name="explorer_computer">Computer</string>
+    <string name="explorer_control">Controlla qui</string>
+    <string name="explorer_connect">Collega computer</string>
+    <string name="explorer_refresh">Aggiorna</string>
+    <string name="explorer_local_intro">Scegli una cartella da esplorare. I file restano dove sono.</string>
+    <string name="explorer_remote_intro">Apri una cartella condivisa dal tuo computer.</string>
+    <string name="explorer_empty">Cartella vuota</string>
+    <string name="explorer_read_only">Esplorazione in sola lettura: nessun file viene modificato.</string>
+    <string name="explorer_connection_help">Usa la stessa rete Wi-Fi e una cartella condivisa sul computer. Inserisci il suo indirizzo e le credenziali di accesso.</string>
+    <string name="explorer_password_help">Usa la password dell’account, non il PIN di Windows. Non viene salvata.</string>
+    <string name="explorer_address">Cartella condivisa</string>
+    <string name="explorer_address_invalid">Inserisci un indirizzo come \\\\PC\\Foto oppure smb://PC/Foto.</string>
+    <string name="explorer_local_error">La cartella non è accessibile. Sceglila di nuovo per autorizzare l’accesso.</string>
+    <string name="explorer_remote_error">Connessione non riuscita. Controlla rete, cartella condivisa e credenziali, poi riprova.</string>
+    <string name="explorer_example_help">I valori iniziali sono esempi. Sostituiscili con l’indirizzo della cartella condivisa e l’account del tuo computer.</string>
+</resources>

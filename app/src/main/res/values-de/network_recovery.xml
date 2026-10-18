@@ -1,0 +1,22 @@
+<resources>
+    <string name="network_host_error">Computername nicht gefunden. Verwende seine IP-Adresse im selben Netzwerk.</string>
+    <string name="network_offline_error">Computer nicht erreichbar. WLAN, SMB-Port und Firewall prüfen.</string>
+    <string name="network_timeout_error">Der Computer antwortet nicht. Netzwerk prüfen und erneut versuchen.</string>
+    <string name="network_auth_error">Anmeldung abgelehnt. Benutzername, Passwort und Domäne prüfen.</string>
+    <string name="network_share_error">Freigabe nicht gefunden. Namen des freigegebenen Ordners prüfen.</string>
+    <string name="network_permission_error">Zugriff verweigert. Ordnerberechtigungen am Computer prüfen.</string>
+    <string name="network_recovery">Übertragung wiederherstellen</string>
+    <string name="network_recovery_help">Dieselben Quell- und Zielordner erneut verbinden. Bereits geprüfte Kopien werden vor dem Fortsetzen kontrolliert.</string>
+    <string name="network_source">Quelle</string>
+    <string name="network_destination">Ziel</string>
+    <string name="network_resume">Fortsetzen</string>
+    <string name="sound_preview_pin">Vorschau anheften</string>
+    <string name="sound_preview_unpin">Vorschau lösen</string>
+    <string name="sound_comparison_first">Erster Vergleich</string>
+    <string name="sound_comparison_second">Zweiter Vergleich</string>
+    <string name="sound_comparison_close">Vergleich schließen</string>
+    <string name="sound_network_transfer">Übertragung starten</string>
+    <string name="sound_zoom_out">Raster verkleinern</string>
+    <string name="sound_zoom_in">Raster vergrößern</string>
+    <string name="all_animated_album_covers">Alle sichtbaren Cover animieren</string>
+</resources>

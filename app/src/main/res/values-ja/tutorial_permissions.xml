@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tutorial_permission_purpose">フォルダーへのアクセスは、選択したメディアの表示と管理に使います。通知と他のアプリの上に表示する権限は、プレーヤー操作や画像比較など、必要な機能を使うときだけ求めます。</string>
+</resources>

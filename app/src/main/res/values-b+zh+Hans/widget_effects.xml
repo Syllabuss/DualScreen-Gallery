@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="widget_playback_effect">播放效果</string>
+    <string name="widget_effect_none">无</string>
+    <string name="widget_effect_disc">唱片</string>
+    <string name="widget_effect_pulse">脉动</string>
+    <string name="widget_effect_bars">音频频谱</string>
+</resources>

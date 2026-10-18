@@ -1,0 +1,9 @@
+<resources>
+    <string name="tv_authorized_title">"电视与授权来源"</string>
+    <string name="tv_authorized_message">"DS Gallery 只是播放器，不授予任何内容使用权。请仅使用在您所在国家获得授权的官方分发频道。开发者不控制外部来源，也不保证其合法性或可用性。您须对所选来源及其使用负责。加载目录、标志及直播时，所连接的服务会获取您的 IP 地址。"</string>
+    <string name="tv_authorized_accept">"我已理解，并承担仅使用授权来源的责任。"</string>
+    <string name="tv_source_policy">"来源信息"</string>
+    <string name="tv_report_channel">"举报频道"</string>
+    <string name="tv_start_timeout">"频道未响应。请重试或选择其他频道。"</string>
+    <string name="ftp_upload_limits">"上传会使用内部临时存储：每个文件最多 8 GiB，并保留至少 128 MiB 可用空间。FTP 不加密密码或文件，请仅在可信网络中使用。"</string>
+</resources>

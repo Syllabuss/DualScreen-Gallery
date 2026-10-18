@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="preview_nearest">清晰像素（Nearest-neighbor） </string>
+    <string name="preview_nearest_help">缩放时保持像素清晰，不进行平滑处理。关闭后使用标准滤镜。</string>
+</resources>

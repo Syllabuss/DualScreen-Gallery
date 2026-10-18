@@ -1,0 +1,26 @@
+<resources>
+    <string name="protected_album">Album protégé</string>
+    <string name="protect_albums">Protéger par un PIN</string>
+    <string name="unprotect_albums">Retirer la protection</string>
+    <string name="unlock_album">Déverrouiller l’album</string>
+    <string name="pin_create">Créer un PIN</string>
+    <string name="pin_confirm">Confirmer le PIN</string>
+    <string name="pin_enter">Saisir le PIN</string>
+    <string name="pin_hint">Quatre chiffres pour vos albums. La couverture reste visible.</string>
+    <string name="pin_wrong">PIN incorrect. Réessayez.</string>
+    <string name="pin_wait">Réessayez dans %1$d s</string>
+    <string name="timeline_title">Navigation chronologique</string>
+    <string name="timeline_off">Aucun regroupement</string>
+    <string name="timeline_day">Jour</string>
+    <string name="timeline_month">Mois</string>
+    <string name="timeline_year">Année</string>
+    <string name="timeline_unknown">Date inconnue</string>
+    <string name="tools_zoom">Boutons + et −</string>
+    <string name="tools_view">Bouton liste / grille</string>
+    <string name="tools_search">Bouton de recherche</string>
+    <string name="tools_filter">Filtre des formats</string>
+    <string name="tools_swap">Bouton d’échange des écrans</string>
+    <string name="tools_play">Bouton de lecture</string>
+    <string name="tools_music_mode">Menu de la bibliothèque musicale</string>
+    <string name="tools_hint">Choisissez les boutons à afficher. Les raccourcis de la manette restent disponibles.</string>
+</resources>

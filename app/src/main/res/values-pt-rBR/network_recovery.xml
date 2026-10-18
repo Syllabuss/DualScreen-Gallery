@@ -1,0 +1,22 @@
+<resources>
+    <string name="network_host_error">Computador não encontrado. Use o IP dele na mesma rede.</string>
+    <string name="network_offline_error">Computador inacessível. Confira Wi-Fi, porta SMB e firewall.</string>
+    <string name="network_timeout_error">O computador não responde. Confira a rede e tente novamente.</string>
+    <string name="network_auth_error">Login recusado. Confira usuário, senha e domínio.</string>
+    <string name="network_share_error">Compartilhamento não encontrado. Confira o nome da pasta.</string>
+    <string name="network_permission_error">Permissão negada. Confira as permissões da pasta no computador.</string>
+    <string name="network_recovery">Recuperar transferência</string>
+    <string name="network_recovery_help">Reconecte as mesmas pastas de origem e destino. As cópias verificadas serão conferidas antes de retomar.</string>
+    <string name="network_source">Origem</string>
+    <string name="network_destination">Destino</string>
+    <string name="network_resume">Retomar</string>
+    <string name="sound_preview_pin">Fixar prévia</string>
+    <string name="sound_preview_unpin">Liberar prévia</string>
+    <string name="sound_comparison_first">Primeira comparação</string>
+    <string name="sound_comparison_second">Segunda comparação</string>
+    <string name="sound_comparison_close">Fechar comparação</string>
+    <string name="sound_network_transfer">Iniciar transferência</string>
+    <string name="sound_zoom_out">Diminuir grade</string>
+    <string name="sound_zoom_in">Ampliar grade</string>
+    <string name="all_animated_album_covers">Animar todas as capas visíveis</string>
+</resources>

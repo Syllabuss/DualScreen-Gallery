@@ -1,0 +1,10 @@
+<resources>
+    <string name="widget_choose_track">Выбрать трек</string>
+    <string name="photo_slide_left">Сдвиг влево</string>
+    <string name="photo_slide_right">Сдвиг вправо</string>
+    <string name="photo_slide_up">Сдвиг вверх</string>
+    <string name="photo_slide_down">Сдвиг вниз</string>
+    <string name="photo_rotate">Вращение</string>
+    <string name="widget_circle_name">DS Gallery · Player Coin</string>
+    <string name="widget_effect_circle">Круг</string>
+</resources>

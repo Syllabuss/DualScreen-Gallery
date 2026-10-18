@@ -1,0 +1,22 @@
+<resources>
+    <string name="network_host_error">Ordinateur introuvable. Utilisez son adresse IP sur le même réseau.</string>
+    <string name="network_offline_error">Ordinateur inaccessible. Vérifiez le Wi-Fi, le port SMB et le pare-feu.</string>
+    <string name="network_timeout_error">Le PC ne répond pas. Vérifiez le réseau et réessayez.</string>
+    <string name="network_auth_error">Connexion refusée. Vérifiez utilisateur, mot de passe et domaine.</string>
+    <string name="network_share_error">Partage introuvable. Vérifiez le nom du dossier partagé.</string>
+    <string name="network_permission_error">Accès refusé. Vérifiez les permissions du dossier sur le PC.</string>
+    <string name="network_recovery">Récupérer le transfert</string>
+    <string name="network_recovery_help">Reconnectez les mêmes dossiers source et destination. Les copies vérifiées seront contrôlées avant la reprise.</string>
+    <string name="network_source">Source</string>
+    <string name="network_destination">Destination</string>
+    <string name="network_resume">Reprendre</string>
+    <string name="sound_preview_pin">Épingler l’aperçu</string>
+    <string name="sound_preview_unpin">Détacher l’aperçu</string>
+    <string name="sound_comparison_first">Premier comparatif</string>
+    <string name="sound_comparison_second">Second comparatif</string>
+    <string name="sound_comparison_close">Fermer le comparatif</string>
+    <string name="sound_network_transfer">Démarrer le transfert</string>
+    <string name="sound_zoom_out">Réduire la grille</string>
+    <string name="sound_zoom_in">Agrandir la grille</string>
+    <string name="all_animated_album_covers">Animer toutes les couvertures visibles</string>
+</resources>

@@ -1,0 +1,6 @@
+<resources>
+    <string name="tv_personal_notice_title">Deine TV-Quellen</string>
+    <string name="tv_personal_notice_body">DS Gallery enthält keine Sender oder Playlists und gewährt keine Programmrechte. Füge nur offizielle, vertrauenswürdige und in deinem Land erlaubte Quellen hinzu. Öffentliche Links sind kein Nachweis einer Erlaubnis. Umgehe keine Abonnements, DRM oder Gebietsbeschränkungen. Dienste sehen deine IP-Adresse. Gesetzliche Pflichten bleiben bestehen.</string>
+    <string name="tv_personal_source_add">Playlist hinzufügen</string>
+    <string name="tv_personal_source_help">Gib eine autorisierte HTTPS-M3U-Playlist ein. Bis zu 20 Quellen; der Import startet keine Wiedergabe.</string>
+</resources>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="gallery_background_title">Gallery background</string>
+    <string name="gallery_background_description">Customize the browsing background only. Media previews and files stay unchanged.</string>
+    <string name="gallery_background_gradient">Gradient</string>
+    <string name="gallery_background_photo">Image</string>
+    <string name="gallery_background_opacity">Opacity</string>
+</resources>

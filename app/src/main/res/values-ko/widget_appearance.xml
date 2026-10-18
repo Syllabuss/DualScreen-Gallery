@@ -1,0 +1,8 @@
+<resources>
+    <string name="widget_appearance">모양</string>
+    <string name="widget_dark">어둡게</string>
+    <string name="widget_light">밝게</string>
+    <string name="widget_system">시스템 기본값</string>
+    <string name="widget_transparent">투명</string>
+    <string name="widget_bars_color">막대 색상</string>
+</resources>

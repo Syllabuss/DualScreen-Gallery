@@ -1,0 +1,8 @@
+<resources>
+    <string name="widget_appearance">Apparence</string>
+    <string name="widget_dark">Sombre</string>
+    <string name="widget_light">Clair</string>
+    <string name="widget_system">Paramètre du système</string>
+    <string name="widget_transparent">Transparent</string>
+    <string name="widget_bars_color">Couleur des barres</string>
+</resources>

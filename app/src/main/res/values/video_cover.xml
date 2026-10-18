@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:locale="it">
+    <string name="video_cover_frame">"Scegli fotogramma copertina"</string>
+    <string name="album_tile_size">"Dimensione album"</string>
+    <string name="video_cover_current_frame">Imposta fotogramma copertina</string>
+</resources>

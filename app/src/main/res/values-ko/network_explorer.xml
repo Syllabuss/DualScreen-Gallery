@@ -1,0 +1,20 @@
+<resources>
+    <string name="explorer_share">폴더 공유</string>
+    <string name="explorer_browse">기기 탐색</string>
+    <string name="explorer_device">이 기기</string>
+    <string name="explorer_computer">컴퓨터</string>
+    <string name="explorer_control">여기서 조작</string>
+    <string name="explorer_connect">컴퓨터 연결</string>
+    <string name="explorer_refresh">새로 고침</string>
+    <string name="explorer_local_intro">폴더를 선택하세요. 파일은 그대로 유지됩니다.</string>
+    <string name="explorer_remote_intro">컴퓨터의 공유 폴더를 엽니다.</string>
+    <string name="explorer_empty">빈 폴더</string>
+    <string name="explorer_read_only">읽기 전용: 파일을 변경하지 않습니다.</string>
+    <string name="explorer_connection_help">같은 Wi-Fi에 연결하고 컴퓨터에서 폴더를 공유하세요. 주소와 로그인 정보를 입력하세요.</string>
+    <string name="explorer_password_help">Windows PIN 대신 계정 비밀번호를 사용하세요. 저장되지 않습니다.</string>
+    <string name="explorer_address">공유 폴더</string>
+    <string name="explorer_address_invalid">\\\\PC\\Photos 또는 smb://PC/Photos 같은 주소를 입력하세요.</string>
+    <string name="explorer_local_error">폴더에 접근할 수 없습니다. 다시 선택하여 접근을 허용하세요.</string>
+    <string name="explorer_remote_error">연결하지 못했습니다. 네트워크, 공유 폴더와 로그인 정보를 확인하세요.</string>
+    <string name="explorer_example_help">초기 값은 예시입니다. 공유 폴더 주소와 사용 중인 컴퓨터 계정으로 바꿔 주세요.</string>
+</resources>

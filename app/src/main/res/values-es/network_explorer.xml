@@ -1,0 +1,20 @@
+<resources>
+    <string name="explorer_share">Compartir carpeta</string>
+    <string name="explorer_browse">Explorar dispositivos</string>
+    <string name="explorer_device">En este dispositivo</string>
+    <string name="explorer_computer">Ordenador</string>
+    <string name="explorer_control">Controlar aquí</string>
+    <string name="explorer_connect">Conectar ordenador</string>
+    <string name="explorer_refresh">Actualizar</string>
+    <string name="explorer_local_intro">Elige una carpeta. Los archivos permanecen donde están.</string>
+    <string name="explorer_remote_intro">Abre una carpeta compartida en tu ordenador.</string>
+    <string name="explorer_empty">Carpeta vacía</string>
+    <string name="explorer_read_only">Solo lectura: no se modifica ningún archivo.</string>
+    <string name="explorer_connection_help">Usa la misma red Wi-Fi y una carpeta compartida en el ordenador. Introduce su dirección y las credenciales.</string>
+    <string name="explorer_password_help">Usa la contraseña de la cuenta, no el PIN de Windows. No se guarda.</string>
+    <string name="explorer_address">Carpeta compartida</string>
+    <string name="explorer_address_invalid">Introduce una dirección como \\\\PC\\Fotos o smb://PC/Fotos.</string>
+    <string name="explorer_local_error">Carpeta no disponible. Vuelve a elegirla para autorizar el acceso.</string>
+    <string name="explorer_remote_error">No se pudo conectar. Comprueba la red, la carpeta compartida y las credenciales.</string>
+    <string name="explorer_example_help">Los valores iniciales son ejemplos. Sustitúyelos por la dirección de tu carpeta compartida y la cuenta de tu ordenador.</string>
+</resources>

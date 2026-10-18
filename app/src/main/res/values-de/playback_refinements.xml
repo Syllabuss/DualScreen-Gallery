@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="music_cover_animation">Cover-Animation</string>
+    <string name="music_cover_normal">Normal</string>
+    <string name="music_cover_pulse">Pulsieren</string>
+    <string name="music_cover_disc_hole">CD mit Loch</string>
+    <string name="music_cover_disc_solid">CD ohne Loch</string>
+    <string name="video_auto_dim">Navigation automatisch abdunkeln</string>
+    <string name="video_auto_dim_off">Aus</string>
+    <string name="video_auto_dim_description">Während ein Video läuft, wird der Navigationsbildschirm nach der gewählten Zeit ohne Eingabe abgedunkelt. Berühre ihn zum Aufwecken. Aus: Nutze das Mondsymbol nach Bedarf. Die Suche blendet die Taste aus, ohne den Timer anzuhalten.</string>
+</resources>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="widget_choose_track">Titel auswählen</string>
+    <string name="photo_slide_left">Nach links gleiten</string>
+    <string name="photo_slide_right">Nach rechts gleiten</string>
+    <string name="photo_slide_up">Nach oben gleiten</string>
+    <string name="photo_slide_down">Nach unten gleiten</string>
+    <string name="photo_rotate">Drehung</string>
+    <string name="widget_circle_name">DS Gallery · Player Coin</string>
+    <string name="widget_effect_circle">Kreis</string>
+</resources>

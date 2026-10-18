@@ -1,0 +1,26 @@
+<resources>
+    <string name="protected_album">受保护的相册</string>
+    <string name="protect_albums">使用 PIN 保护</string>
+    <string name="unprotect_albums">移除保护</string>
+    <string name="unlock_album">解锁相册</string>
+    <string name="pin_create">创建 PIN</string>
+    <string name="pin_confirm">再次输入 PIN</string>
+    <string name="pin_enter">输入 PIN</string>
+    <string name="pin_hint">使用四位数字保护相册。封面仍然可见。</string>
+    <string name="pin_wrong">PIN 不正确，请重试。</string>
+    <string name="pin_wait">%1$d 秒后重试</string>
+    <string name="timeline_title">按时间浏览</string>
+    <string name="timeline_off">不分组</string>
+    <string name="timeline_day">日</string>
+    <string name="timeline_month">月</string>
+    <string name="timeline_year">年</string>
+    <string name="timeline_unknown">未知日期</string>
+    <string name="tools_zoom">+ 和 − 按钮</string>
+    <string name="tools_view">列表 / 网格按钮</string>
+    <string name="tools_search">搜索按钮</string>
+    <string name="tools_filter">格式筛选</string>
+    <string name="tools_swap">交换屏幕按钮</string>
+    <string name="tools_play">播放按钮</string>
+    <string name="tools_music_mode">音乐库菜单</string>
+    <string name="tools_hint">选择要显示的按钮。控制器快捷键仍可使用。</string>
+</resources>

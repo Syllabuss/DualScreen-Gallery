@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="widget_playback_effect">Wiedergabeeffekt</string>
+    <string name="widget_effect_none">Keiner</string>
+    <string name="widget_effect_disc">Disc</string>
+    <string name="widget_effect_pulse">Pulsieren</string>
+    <string name="widget_effect_bars">Audiobalken</string>
+</resources>

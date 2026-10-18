@@ -1,0 +1,8 @@
+<resources>
+    <string name="image_backdrop_title">Sfondo delle immagini trasparenti</string>
+    <string name="image_backdrop_grid">Scacchiera</string>
+    <string name="image_backdrop_tint">Scacchiera colorata</string>
+    <string name="image_backdrop_solid">Colore uniforme</string>
+    <string name="image_backdrop_linear">Sfumatura verticale</string>
+    <string name="image_backdrop_radial">Sfumatura dal centro</string>
+</resources>

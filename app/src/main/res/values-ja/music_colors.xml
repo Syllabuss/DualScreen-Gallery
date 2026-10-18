@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="music_colors_title">プレーヤーの色</string>
+    <string name="music_colors_theme">テーマ</string>
+    <string name="music_colors_artwork">ジャケットから</string>
+    <string name="music_colors_custom">カスタム</string>
+    <string name="music_colors_description">テーマ、色を合わせた全画面のジャケット、またはカスタムカラーを使用します。ジャケットがない場合はテーマの背景を表示します。カスタムカラーにはグラデーションを加えず、選択した色をそのまま使用します。</string>
+    <string name="music_colors_background">背景</string>
+    <string name="music_colors_bars">バー</string>
+</resources>

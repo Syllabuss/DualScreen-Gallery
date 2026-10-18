@@ -1,0 +1,8 @@
+<resources>
+    <string name="widget_appearance">Оформление</string>
+    <string name="widget_dark">Тёмная</string>
+    <string name="widget_light">Светлая</string>
+    <string name="widget_system">Как в системе</string>
+    <string name="widget_transparent">Прозрачная</string>
+    <string name="widget_bars_color">Цвет полос</string>
+</resources>

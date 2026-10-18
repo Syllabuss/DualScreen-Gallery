@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tv_title">"オンラインTV"</string>
+    <string name="tv_enabled">"オンラインTVを有効にする"</string>
+    <string name="tv_navbar">"ナビゲーションバーにTVを表示"</string>
+    <string name="tv_favorites">"お気に入りにTVチャンネルを表示"</string>
+    <string name="tv_my_channels">"マイチャンネル"</string>
+    <string name="tv_browse">"チャンネルを探す"</string>
+    <string name="tv_empty">"TVチャンネルがありません"</string>
+    <string name="tv_empty_help">利用が許可されたHTTPSのM3Uプレイリストを入力してください。最大20件。読み込みで再生は始まりません。</string>
+    <string name="tv_add">"チャンネルを追加"</string>
+    <string name="tv_url">"ストリームのHTTPS URL"</string>
+    <string name="tv_unverified">"HLSストリーム1つのみ。再生せずにリンクを確認します。"</string>
+    <string name="tv_network_notice">"カタログ、ロゴ、チャンネルは外部サービスに接続し、IPアドレスが相手に伝わります。"</string>
+    <string name="tv_countries">"国"</string>
+    <string name="tv_languages">"言語"</string>
+    <string name="tv_categories">"カテゴリ"</string>
+    <string name="tv_sources">"配信元"</string>
+    <string name="tv_watch">"今すぐ見る"</string>
+    <string name="tv_edit">"チャンネルを編集"</string>
+    <string name="tv_artwork">"サムネイルを選択"</string>
+    <string name="tv_restore">"元の情報に戻す"</string>
+    <string name="tv_error_network">"接続できません。ネットワークを確認して再試行してください。"</string>
+    <string name="tv_error_blocked">"許可されていないアドレスです。公開サーバーのHTTPSを使用してください。"</string>
+    <string name="tv_error_forbidden">"アクセスが拒否されました。お住まいの地域では視聴できない可能性があります。"</string>
+    <string name="tv_error_not_found">"配信元が見つかりません。別のカタログやリンクをお試しください。"</string>
+    <string name="tv_error_large">"安全に読み込めるサイズを超えています。"</string>
+    <string name="tv_error_format">"未対応の形式です。HLSストリームを1つ選択してください。"</string>
+    <string name="tv_error_live">"この配信元はライブ配信ではありません。"</string>
+    <string name="tv_retry">"再試行"</string>
+    <string name="tv_return">"この画面に戻す"</string>
+    <string name="tv_save_unverified">"未確認のチャンネルを保存するには、もう一度「保存」を押してください。"</string>
+    <string name="tv_search">"チャンネルやカタログを検索"</string>
+    <string name="tv_replace_title">"テレビに切り替えますか？"</string>
+    <string name="tv_replace_description">"このチャンネルを開くと、再生中の動画が閉じられます。続けますか？"</string>
+    <string name="tv_optional_title">"サムネイルのタイトル（任意）"</string>
+    <string name="tv_favorite_add">"お気に入りに追加しますか？"</string>
+    <string name="tv_favorite_remove">"お気に入りから削除しますか？"</string>
+    <string name="tv_sleep_title">"テレビを一時停止しました"</string>
+    <string name="tv_sleep_message">"スリープ中にライブ接続を終了しました。再接続しますか？"</string>
+    <string name="info_tv_sources">TV：Media3 · ユーザーが追加したソース</string>
+</resources>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tv_title">"Онлайн-ТВ"</string>
+    <string name="tv_enabled">"Включить онлайн-ТВ"</string>
+    <string name="tv_navbar">"Показывать ТВ на панели навигации"</string>
+    <string name="tv_favorites">"Показывать телеканалы в избранном"</string>
+    <string name="tv_my_channels">"Мои каналы"</string>
+    <string name="tv_browse">"Найти каналы"</string>
+    <string name="tv_empty">"Телеканалов пока нет"</string>
+    <string name="tv_empty_help">Введите разрешённый HTTPS-плейлист M3U. До 20 источников; импорт не запускает воспроизведение.</string>
+    <string name="tv_add">"Добавить канал"</string>
+    <string name="tv_url">"HTTPS-адрес трансляции"</string>
+    <string name="tv_unverified">"Только один поток HLS. Ссылка проверяется без запуска воспроизведения."</string>
+    <string name="tv_network_notice">"Каталоги, логотипы и каналы загружаются с внешних сервисов, которым будет виден ваш IP-адрес."</string>
+    <string name="tv_countries">"Страны"</string>
+    <string name="tv_languages">"Языки"</string>
+    <string name="tv_categories">"Категории"</string>
+    <string name="tv_sources">"Источники"</string>
+    <string name="tv_watch">"Смотреть"</string>
+    <string name="tv_edit">"Изменить канал"</string>
+    <string name="tv_artwork">"Выбрать миниатюру"</string>
+    <string name="tv_restore">"Восстановить исходные данные"</string>
+    <string name="tv_error_network">"Не удалось подключиться. Проверьте сеть и повторите попытку."</string>
+    <string name="tv_error_blocked">"Недопустимый адрес. Используйте HTTPS на общедоступном сервере."</string>
+    <string name="tv_error_forbidden">"Сервис отказал в доступе. Возможно, канал недоступен в вашем регионе."</string>
+    <string name="tv_error_not_found">"Источник не найден. Попробуйте другой каталог или ссылку."</string>
+    <string name="tv_error_large">"Содержимое слишком велико для безопасной загрузки."</string>
+    <string name="tv_error_format">"Формат не поддерживается. Выберите один поток HLS."</string>
+    <string name="tv_error_live">"Этот источник не является прямой трансляцией."</string>
+    <string name="tv_retry">"Повторить"</string>
+    <string name="tv_return">"Вернуть на этот экран"</string>
+    <string name="tv_save_unverified">"Нажмите «Сохранить» ещё раз, чтобы сохранить непроверенный канал."</string>
+    <string name="tv_search">"Поиск каналов или каталогов"</string>
+    <string name="tv_replace_title">"Переключиться на ТВ?"</string>
+    <string name="tv_replace_description">"Текущее видео будет закрыто для запуска этого канала. Продолжить?"</string>
+    <string name="tv_optional_title">"Заголовок миниатюры (необязательно)"</string>
+    <string name="tv_favorite_add">"Добавить в избранное?"</string>
+    <string name="tv_favorite_remove">"Удалить из избранного?"</string>
+    <string name="tv_sleep_title">"ТВ приостановлено"</string>
+    <string name="tv_sleep_message">"Соединение с эфиром закрыто в спящем режиме. Подключиться снова?"</string>
+    <string name="info_tv_sources">ТВ: Media3 · источники пользователя</string>
+</resources>

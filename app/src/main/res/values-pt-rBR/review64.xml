@@ -1,0 +1,6 @@
+<resources>
+    <string name="video_flow_once">Reproduzir uma vez</string>
+    <string name="video_flow_playlist">Lista de reprodução</string>
+    <string name="video_flow_repeat">Repetir este vídeo</string>
+    <string name="video_flow_random">Aleatório</string>
+</resources>

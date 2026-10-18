@@ -1,0 +1,6 @@
+<resources>
+    <string name="tv_personal_notice_title">Le tue fonti TV</string>
+    <string name="tv_personal_notice_body">DS Gallery non include canali o playlist e non fornisce diritti sui programmi. Aggiungi solo fonti ufficiali e attendibili che sei autorizzato a usare nel tuo Paese. Un link pubblico o una playlist gratuita non garantiscono il permesso. Non usare fonti che aggirano abbonamenti, DRM o restrizioni territoriali. I servizi contattati vedono il tuo indirizzo IP. Questo avviso non elimina gli obblighi previsti dalla legge.</string>
+    <string name="tv_personal_source_add">Aggiungi playlist</string>
+    <string name="tv_personal_source_help">Inserisci una playlist M3U HTTPS che sei autorizzato a utilizzare. Massimo 20 fonti; nessun canale viene riprodotto durante l’importazione.</string>
+</resources>

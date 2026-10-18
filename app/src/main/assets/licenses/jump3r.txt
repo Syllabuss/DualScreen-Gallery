@@ -1,0 +1,6 @@
+jump3r 1.0.5 — Java port of LAME
+Copyright: LAME contributors, Ken Händel, Vadym Vikulin, Hanns Holger Rutz.
+License: LGPL 2.1 or later.
+Unmodified source: https://repo.maven.apache.org/maven2/de/sciss/jump3r/1.0.5/jump3r-1.0.5-sources.jar
+Project: https://git.iem.at/sciss/jump3r
+The library is unmodified and linked through Maven. Replace the dependency in app/build.gradle.kts to rebuild with another compatible version.

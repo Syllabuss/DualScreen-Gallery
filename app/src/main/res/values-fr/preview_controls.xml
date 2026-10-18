@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="preview_pin_setting">Bouton Épingler l’aperçu</string>
+    <string name="preview_compare_setting">Comparaisons en fenêtres flottantes</string>
+    <string name="preview_unpin_title">Changer l’aperçu ?</string>
+    <string name="preview_unpin_description">Cette image est épinglée. Ouvrir un autre média la détachera. Continuer ?</string>
+    <string name="preview_overlay_permission">Autorise DS Gallery à afficher deux images ou GIF animés au maximum au-dessus des autres applications. Fais glisser pour déplacer et utilise deux doigts pour redimensionner. Un appui affiche ou masque la croix de fermeture. Glisse au-delà d’un bord latéral pour réduire en bulle ; touche la bulle ou glisse vers l’intérieur pour restaurer la fenêtre.</string>
+    <string name="preview_compare_limit">Deux comparaisons sont déjà ouvertes. Fermez-en une avant d’en ajouter une autre.</string>
+    <string name="video_keep_playing">Continuer en fenêtre</string>
+    <string name="animated_album_covers">Couvertures GIF animées des albums</string>
+    <string name="preview_pin_description">Épinglez une photo ou un GIF dans l’aperçu pendant que vous parcourez les autres médias. Musique, FTP et paramètres restent accessibles.</string>
+    <string name="video_keep_playing_description">La vidéo continue dans une fenêtre quand vous ouvrez d’autres médias, la musique, FTP ou les paramètres. Désactivez pour la mettre en pause.</string>
+    <string name="preview_restore_overlay">Afficher à nouveau</string>
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="music_cover_animation">커버 애니메이션</string>
+    <string name="music_cover_normal">일반</string>
+    <string name="music_cover_pulse">맥동</string>
+    <string name="music_cover_disc_hole">구멍이 있는 디스크</string>
+    <string name="music_cover_disc_solid">구멍이 없는 디스크</string>
+    <string name="video_auto_dim">탐색 화면 자동 어둡게</string>
+    <string name="video_auto_dim_off">사용 안 함</string>
+    <string name="video_auto_dim_description">동영상 재생 중 선택한 시간 동안 조작이 없으면 탐색 화면을 어둡게 합니다. 화면을 터치하면 다시 켜집니다. 사용 안 함: 달 버튼으로 직접 조절합니다. 검색 중에는 버튼이 숨겨지지만 타이머는 계속 작동합니다.</string>
+</resources>

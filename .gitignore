@@ -1,0 +1,35 @@
+# Gradle, Android Studio and machine-specific configuration
+.gradle/
+.kotlin/
+.idea/
+.vscode/
+**/build/
+local.properties
+*.iml
+.DS_Store
+Thumbs.db
+
+# Generated packages, previous versions, captures and test outputs
+/dist/
+/qa/
+*.apk
+*.aab
+*.apks
+*.hprof
+*.perfetto-trace
+*.trace
+*.log
+__pycache__/
+*.pyc
+
+# Signing material and private configuration
+*.jks
+*.keystore
+*.p12
+*.pem
+.env
+.env.*
+!.env.example
+*credentials*.json
+google-services.json
+*.code-workspace

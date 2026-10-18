@@ -1,0 +1,9 @@
+<resources>
+    <string name="photo_widget_name">DS Gallery · Photo frame</string>
+    <string name="photo_widget_open">Open photo on one screen</string>
+    <string name="photo_widget_previous">Previous photo</string>
+    <string name="photo_widget_next">Next photo</string>
+    <string name="photo_widget_settings">Configure this widget</string>
+    <string name="photo_widget_empty">Your images</string>
+    <string name="photo_widget_manual">Manual changes</string>
+</resources>

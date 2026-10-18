@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tutorial_folder_compact_body">Выберите медиа. Подпапки станут альбомами.</string>
+    <string name="tutorial_permission_compact_purpose">Папки: медиа. Уведомления: плеер. Окна поверх приложений: сравнение. Только при необходимости.</string>
+    <string name="tutorial_permission_compact_body">Откройте папку → Использовать эту папку → Разрешить. Для Download выберите подпапку.</string>
+    <string name="tutorial_actions_short">Действия и настройки</string>
+    <string name="info_licenses">Лицензии и компоненты</string>
+    <string name="controller_guide_image_title">Увеличенные изображения</string>
+    <string name="controller_guide_image_body">Только при увеличении: левый стик двигает изображение; правый вверх/вниз меняет масштаб. Крестовина переключает медиа.</string>
+</resources>

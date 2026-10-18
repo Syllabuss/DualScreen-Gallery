@@ -1,0 +1,4 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:locale="it">
+    <string name="launcher_icon_title">Icona dell’app</string>
+    <string name="dual_screen_disclaimer">Pensata per due schermi. La modalità a schermo singolo è sperimentale e non ancora sufficientemente collaudata.</string>
+</resources>

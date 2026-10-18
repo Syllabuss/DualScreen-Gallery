@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ftp_title">Обмен по FTP</string>
+    <string name="ftp_wifi_required">Подключите Thor и другое устройство к одной сети Wi-Fi.</string>
+    <string name="ftp_notification">Выбранная папка доступна в локальной сети.</string>
+    <string name="ftp_stop">Остановить обмен</string>
+    <string name="ftp_start">Начать обмен</string>
+    <string name="ftp_folder">Общая папка</string>
+    <string name="ftp_description">Отправляйте и получайте файлы с компьютера или телефона в выбранной папке. Обмен работает, пока вы его не остановите.</string>
+    <string name="ftp_connect">Как подключиться</string>
+    <string name="ftp_security">Используйте FTP-клиент на другом устройстве. Только в доверенной сети: FTP не шифрует передачу данных. Существующие файлы не перезаписываются, удаление по сети недоступно.</string>
+    <string name="ftp_password">Пароль</string>
+    <string name="ftp_username">Имя пользователя</string>
+    <string name="ftp_choose">Выбрать папку</string>
+    <string name="ftp_enabled">Показать FTP на панели навигации</string>
+    <string name="ftp_transfers">Передачи</string>
+    <string name="ftp_received">Получено</string>
+    <string name="ftp_receiving">Получение</string>
+    <string name="ftp_failed">Передача прервана</string>
+</resources>

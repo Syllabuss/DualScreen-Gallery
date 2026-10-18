@@ -1,0 +1,8 @@
+<resources>
+    <string name="image_backdrop_title">투명 이미지 배경</string>
+    <string name="image_backdrop_grid">체크무늬</string>
+    <string name="image_backdrop_tint">색상 체크무늬</string>
+    <string name="image_backdrop_solid">단색</string>
+    <string name="image_backdrop_linear">세로 그라데이션</string>
+    <string name="image_backdrop_radial">중앙에서 퍼지는 그라데이션</string>
+</resources>

@@ -1,0 +1,6 @@
+<resources>
+    <string name="tv_personal_notice_title">您的电视来源</string>
+    <string name="tv_personal_notice_body">DS Gallery不包含频道或播放列表，也不授予节目权利。请仅添加您所在国家允许使用的官方可信来源。公开链接不代表获得授权。请勿绕过订阅、DRM或地区限制。连接的服务会收到您的IP地址。本提示不免除法定义务。</string>
+    <string name="tv_personal_source_add">添加播放列表</string>
+    <string name="tv_personal_source_help">输入您获准使用的HTTPS M3U播放列表。最多20个来源；导入不会开始播放。</string>
+</resources>

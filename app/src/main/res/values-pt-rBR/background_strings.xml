@@ -1,0 +1,7 @@
+<resources>
+    <string name="gallery_background_title">Fundo da galeria</string>
+    <string name="gallery_background_description">Personalize apenas o fundo da navegação. As prévias de mídia e os arquivos permanecem inalterados.</string>
+    <string name="gallery_background_gradient">Gradiente</string>
+    <string name="gallery_background_photo">Imagem</string>
+    <string name="gallery_background_opacity">Opacidade</string>
+</resources>

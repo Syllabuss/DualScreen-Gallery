@@ -1,0 +1,11 @@
+<resources>
+    <string name="video_exit_playback">Exit playback</string>
+    <string name="video_resume_title">Resume this video?</string>
+    <string name="video_resume_description">Resume from %1$s or start again from the beginning.</string>
+    <string name="video_resume_controller_hint">Controller: A resumes · Y restarts · B cancels</string>
+    <string name="video_resume_action">Continue</string>
+    <string name="video_restart_action">Start over</string>
+    <string name="editor_save_mp3">Save as MP3</string>
+    <string name="editor_pcm_unsupported">Unsupported decoded audio format</string>
+    <string name="editor_decoder_timeout">Audio decoding is not responding. The original has not been changed.</string>
+</resources>

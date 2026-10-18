@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tutorial_permission_purpose">L’accesso alle cartelle serve a mostrare e gestire i media che scegli. Notifiche e finestre sopra altre app vengono richieste solo quando usi le relative funzioni: controlli del player e confronti.</string>
+</resources>

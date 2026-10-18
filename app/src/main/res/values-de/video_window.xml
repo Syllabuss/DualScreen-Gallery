@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="video_pip">Video im Fenster</string>
+    <string name="video_pip_active">Wiedergabe im Fenster</string>
+    <string name="video_pip_description">Das Video läuft im Android-Fenster weiter. Durchsuche die Galerie oder öffne andere Apps. Über die Fenstersteuerung kannst du es vergrößern oder schließen.</string>
+    <string name="video_pip_unavailable">Das Videofenster ist nicht verfügbar. Prüfe die Bild-in-Bild-Berechtigung in den Android-Einstellungen.</string>
+    <string name="video_return_screen">"Video auf diesen Bildschirm zurückholen"</string>
+</resources>

@@ -1,0 +1,20 @@
+<resources>
+    <string name="explorer_share">共享文件夹</string>
+    <string name="explorer_browse">浏览设备</string>
+    <string name="explorer_device">此设备</string>
+    <string name="explorer_computer">电脑</string>
+    <string name="explorer_control">在此控制</string>
+    <string name="explorer_connect">连接电脑</string>
+    <string name="explorer_refresh">刷新</string>
+    <string name="explorer_local_intro">选择要浏览的文件夹。文件不会移动。</string>
+    <string name="explorer_remote_intro">打开电脑上的共享文件夹。</string>
+    <string name="explorer_empty">空文件夹</string>
+    <string name="explorer_read_only">只读浏览：不会修改文件。</string>
+    <string name="explorer_connection_help">连接同一 Wi-Fi，并在电脑上共享文件夹。输入地址和登录凭据。</string>
+    <string name="explorer_password_help">使用账户密码，而非 Windows PIN。密码不会保存。</string>
+    <string name="explorer_address">共享文件夹</string>
+    <string name="explorer_address_invalid">输入地址，例如 \\\\PC\\Photos 或 smb://PC/Photos。</string>
+    <string name="explorer_local_error">无法访问文件夹。请重新选择以授权访问。</string>
+    <string name="explorer_remote_error">连接失败。请检查网络、共享文件夹和登录凭据。</string>
+    <string name="explorer_example_help">初始值仅为示例。请替换为您自己的共享文件夹地址和电脑账户。</string>
+</resources>

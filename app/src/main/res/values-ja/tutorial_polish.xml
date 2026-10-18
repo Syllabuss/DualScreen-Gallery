@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tutorial_folder_compact_body">表示するメディアを選びます。サブフォルダーがアルバムになります。</string>
+    <string name="tutorial_permission_compact_purpose">フォルダー：メディア。通知：プレーヤー。重ねて表示：画像比較。必要なときだけ。</string>
+    <string name="tutorial_permission_compact_body">フォルダーを開く → このフォルダーを使用 → 許可。Downloadはサブフォルダーを選びます。</string>
+    <string name="tutorial_actions_short">操作と設定</string>
+    <string name="info_licenses">ライセンスとコンポーネント</string>
+    <string name="controller_guide_image_title">拡大した画像</string>
+    <string name="controller_guide_image_body">拡大中のみ：左スティックで画像を移動し、右スティックの上下でズームを調整します。十字キーでメディアを選びます。</string>
+</resources>

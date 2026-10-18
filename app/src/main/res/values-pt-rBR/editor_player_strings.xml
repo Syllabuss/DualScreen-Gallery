@@ -1,0 +1,11 @@
+<resources>
+    <string name="video_exit_playback">Sair da reprodução</string>
+    <string name="video_resume_title">Continuar o vídeo?</string>
+    <string name="video_resume_description">Continuar a partir de %1$s ou começar do início.</string>
+    <string name="video_resume_controller_hint">Controle: A continua · Y reinicia · B cancela</string>
+    <string name="video_resume_action">Continuar</string>
+    <string name="video_restart_action">Recomeçar</string>
+    <string name="editor_save_mp3">Salvar como MP3</string>
+    <string name="editor_pcm_unsupported">Formato de áudio decodificado não compatível</string>
+    <string name="editor_decoder_timeout">A decodificação de áudio não está respondendo. O original não foi alterado.</string>
+</resources>

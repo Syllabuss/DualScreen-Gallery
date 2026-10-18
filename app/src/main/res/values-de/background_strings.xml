@@ -1,0 +1,7 @@
+<resources>
+    <string name="gallery_background_title">Galeriehintergrund</string>
+    <string name="gallery_background_description">Passe nur den Hintergrund beim Durchsuchen an. Medienvorschauen und Dateien bleiben unverändert.</string>
+    <string name="gallery_background_gradient">Farbverlauf</string>
+    <string name="gallery_background_photo">Bild</string>
+    <string name="gallery_background_opacity">Deckkraft</string>
+</resources>

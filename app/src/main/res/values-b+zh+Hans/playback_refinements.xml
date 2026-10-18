@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="music_cover_animation">封面动画</string>
+    <string name="music_cover_normal">普通</string>
+    <string name="music_cover_pulse">脉动</string>
+    <string name="music_cover_disc_hole">带孔光盘</string>
+    <string name="music_cover_disc_solid">无孔光盘</string>
+    <string name="video_auto_dim">自动调暗导航屏幕</string>
+    <string name="video_auto_dim_off">关闭</string>
+    <string name="video_auto_dim_description">播放视频时，若在所选时间内没有操作，导航屏幕会自动变暗。触摸即可唤醒。关闭时可手动使用月亮按钮。搜索会隐藏按钮，但不会暂停计时。</string>
+</resources>

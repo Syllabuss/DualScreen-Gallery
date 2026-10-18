@@ -1,0 +1,16 @@
+<resources>
+    <string name="settings_advanced">Advanced</string>
+    <string name="settings_visible_buttons">Visible buttons</string>
+    <string name="settings_unsaved_title">Unsaved changes</string>
+    <string name="settings_unsaved_message">Leave without saving your changes?</string>
+    <string name="settings_discard">Leave without saving</string>
+    <string name="settings_keep_editing">Keep editing</string>
+    <string name="settings_folders_permission">File access is granted when you choose folders in the Library.</string>
+    <string name="settings_organize">Folders and collections</string>
+    <string name="settings_privacy">Privacy</string>
+    <string name="settings_file_management">File management</string>
+    <string name="settings_manage_folders">Manage folders</string>
+    <string name="settings_folder_access_ready">Access available</string>
+    <string name="settings_folder_access_missing">Set up access</string>
+    <string name="settings_album_tools_note">These options also apply to media inside an album.</string>
+</resources>

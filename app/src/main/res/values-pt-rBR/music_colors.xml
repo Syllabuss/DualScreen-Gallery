@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="music_colors_title">Cores do player</string>
+    <string name="music_colors_theme">Tema</string>
+    <string name="music_colors_artwork">Da capa</string>
+    <string name="music_colors_custom">Personalizadas</string>
+    <string name="music_colors_description">Use o tema, a capa em tela cheia com cores combinando ou cores personalizadas. Sem capa, o fundo do tema permanece. As cores personalizadas são usadas exatamente como escolhidas, sem degradês adicionais.</string>
+    <string name="music_colors_background">Fundo</string>
+    <string name="music_colors_bars">Barras</string>
+</resources>

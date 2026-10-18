@@ -1,0 +1,22 @@
+<resources>
+    <string name="network_host_error">Nome computer non trovato. Usa il suo indirizzo IP sulla stessa rete.</string>
+    <string name="network_offline_error">Computer non raggiungibile. Controlla Wi-Fi, porta SMB e firewall.</string>
+    <string name="network_timeout_error">Il computer non risponde. Controlla la rete e riprova.</string>
+    <string name="network_auth_error">Accesso rifiutato. Controlla utente, password e dominio del computer.</string>
+    <string name="network_share_error">Condivisione non trovata. Controlla il nome della cartella condivisa.</string>
+    <string name="network_permission_error">Permesso negato. Controlla i permessi della cartella sul computer.</string>
+    <string name="network_recovery">Recupera trasferimento</string>
+    <string name="network_recovery_help">Ricollega le stesse cartelle di origine e destinazione. Le copie già verificate saranno controllate prima di riprendere.</string>
+    <string name="network_source">Origine</string>
+    <string name="network_destination">Destinazione</string>
+    <string name="network_resume">Riprendi</string>
+    <string name="sound_preview_pin">Fissa anteprima</string>
+    <string name="sound_preview_unpin">Libera anteprima</string>
+    <string name="sound_comparison_first">Primo confronto</string>
+    <string name="sound_comparison_second">Secondo confronto</string>
+    <string name="sound_comparison_close">Chiudi confronto</string>
+    <string name="sound_network_transfer">Avvia trasferimento</string>
+    <string name="sound_zoom_out">Rimpicciolisci griglia</string>
+    <string name="sound_zoom_in">Ingrandisci griglia</string>
+    <string name="all_animated_album_covers">Anima tutte le copertine visibili</string>
+</resources>

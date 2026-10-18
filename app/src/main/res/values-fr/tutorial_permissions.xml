@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tutorial_permission_purpose">L’accès aux dossiers permet de consulter et gérer les médias choisis. Les notifications et l’affichage par-dessus les autres applications ne sont demandés que pour les fonctions concernées : commandes du lecteur et comparaisons.</string>
+</resources>

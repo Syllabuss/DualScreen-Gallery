@@ -1,0 +1,22 @@
+<resources>
+    <string name="network_host_error">找不到计算机名称。请使用同一网络上的 IP 地址。</string>
+    <string name="network_offline_error">无法连接计算机。请检查 Wi-Fi、SMB 端口和防火墙。</string>
+    <string name="network_timeout_error">计算机没有响应。请检查网络后重试。</string>
+    <string name="network_auth_error">登录被拒绝。请检查用户名、密码和域。</string>
+    <string name="network_share_error">找不到共享。请检查共享文件夹名称。</string>
+    <string name="network_permission_error">权限被拒绝。请检查计算机文件夹权限。</string>
+    <string name="network_recovery">恢复传输</string>
+    <string name="network_recovery_help">重新连接相同的源和目标文件夹。恢复前将检查已验证的副本。</string>
+    <string name="network_source">源</string>
+    <string name="network_destination">目标</string>
+    <string name="network_resume">继续</string>
+    <string name="sound_preview_pin">固定预览</string>
+    <string name="sound_preview_unpin">取消固定预览</string>
+    <string name="sound_comparison_first">第一个对比</string>
+    <string name="sound_comparison_second">第二个对比</string>
+    <string name="sound_comparison_close">关闭对比</string>
+    <string name="sound_network_transfer">开始传输</string>
+    <string name="sound_zoom_out">缩小网格</string>
+    <string name="sound_zoom_in">放大网格</string>
+    <string name="all_animated_album_covers">播放所有可见封面的动画</string>
+</resources>

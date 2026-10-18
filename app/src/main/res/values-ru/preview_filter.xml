@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="preview_nearest">Чёткие пиксели (Nearest-neighbor) </string>
+    <string name="preview_nearest_help">Сохраняет чёткие пиксели при масштабировании без сглаживания. Отключите для стандартного фильтра.</string>
+</resources>

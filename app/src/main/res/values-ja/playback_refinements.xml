@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="music_cover_animation">カバーのアニメーション</string>
+    <string name="music_cover_normal">通常</string>
+    <string name="music_cover_pulse">パルス</string>
+    <string name="music_cover_disc_hole">穴のあるディスク</string>
+    <string name="music_cover_disc_solid">穴のないディスク</string>
+    <string name="video_auto_dim">ナビゲーション画面の自動減光</string>
+    <string name="video_auto_dim_off">オフ</string>
+    <string name="video_auto_dim_description">動画の再生中、操作せずに設定時間が過ぎるとナビゲーション画面が暗くなります。タッチすると戻ります。オフの場合は月ボタンで操作できます。検索中はボタンが非表示になりますが、タイマーは動き続けます。</string>
+</resources>

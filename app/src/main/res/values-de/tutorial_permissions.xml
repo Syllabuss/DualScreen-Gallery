@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tutorial_permission_purpose">Der Ordnerzugriff erlaubt das Anzeigen und Verwalten deiner ausgewählten Medien. Benachrichtigungen und das Einblenden über anderen Apps werden nur für die jeweiligen Funktionen angefragt: Player-Steuerung und Bildvergleiche.</string>
+</resources>

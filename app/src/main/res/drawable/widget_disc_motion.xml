@@ -1,0 +1,1 @@
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android" android:drawable="@drawable/widget_disc_vector"><target android:name="rotor" android:animation="@animator/widget_disc_rotation"/></animated-vector>

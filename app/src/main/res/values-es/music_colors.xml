@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="music_colors_title">Colores del reproductor</string>
+    <string name="music_colors_theme">Tema</string>
+    <string name="music_colors_artwork">De la portada</string>
+    <string name="music_colors_custom">Personalizados</string>
+    <string name="music_colors_description">Usa el tema, la portada a pantalla completa con colores a juego o colores personalizados. Sin portada se mantiene el fondo del tema. Los colores personalizados se usan tal como los eliges, sin degradados añadidos.</string>
+    <string name="music_colors_background">Fondo</string>
+    <string name="music_colors_bars">Barras</string>
+</resources>

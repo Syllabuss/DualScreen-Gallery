@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tutorial_permission_purpose">폴더 접근 권한은 선택한 미디어를 보고 관리하는 데 사용됩니다. 알림과 다른 앱 위에 표시 권한은 플레이어 제어와 이미지 비교 등 필요한 기능을 사용할 때만 요청합니다.</string>
+</resources>

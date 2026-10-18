@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="preview_nearest">Píxeles nítidos (Nearest-neighbor) </string>
+    <string name="preview_nearest_help">Mantiene los píxeles nítidos al ampliar, sin suavizarlos. Desactiva para usar el filtro estándar.</string>
+</resources>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="album_lock_action">Sperren</string>
+    <string name="album_unlock_action">Entsperren</string>
+    <string name="album_pin_settings">Album-PIN</string>
+    <string name="album_pin_shared">Eine PIN für alle geschützten Alben.</string>
+    <string name="album_pin_add">PIN hinzufügen</string>
+    <string name="album_pin_change">PIN ändern</string>
+    <string name="preview_rotate">Vorschau um 90° drehen</string>
+</resources>

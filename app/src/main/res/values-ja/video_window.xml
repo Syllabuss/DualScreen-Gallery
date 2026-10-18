@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="video_pip">動画をウィンドウで表示</string>
+    <string name="video_pip_active">ウィンドウで再生中</string>
+    <string name="video_pip_description">Androidのウィンドウで動画の再生が続きます。ギャラリーの閲覧や別のアプリの起動ができます。ウィンドウの操作ボタンで拡大や終了ができます。</string>
+    <string name="video_pip_unavailable">動画ウィンドウを利用できません。Androidの設定でピクチャーインピクチャーの権限を確認してください。</string>
+    <string name="video_return_screen">"この画面に動画を戻す"</string>
+</resources>

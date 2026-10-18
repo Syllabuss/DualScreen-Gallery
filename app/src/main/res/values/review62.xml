@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:locale="it">
+    <string name="video_flow_mode">Modalità di riproduzione</string>
+    <string name="action_menus_below">Azioni sullo schermo di navigazione</string>
+    <string name="explorer_copy">Copia</string>
+    <string name="explorer_move">Sposta</string>
+    <string name="explorer_continue">Continua</string>
+    <string name="explorer_transfer_error">Operazione interrotta. Controlla originali e copie prima di riprovare.</string>
+    <string name="explorer_transfer_help">La destinazione è la cartella aperta sull’altro pannello. I nomi esistenti vengono conservati. Sposta rimuove l’origine solo dopo la verifica della copia.</string>
+    <string name="explorer_extract">Estrai archivio</string>
+    <string name="explorer_move_folders_help">Spostiamo i file verificati, mantenendo le cartelle originali. Le cartelle vuote non vengono eliminate.</string>
+</resources>

@@ -1,0 +1,4 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="launcher_icon_title">应用图标</string>
+    <string name="dual_screen_disclaimer">专为双屏设计。单屏模式仍处于实验阶段，尚未经过充分测试。</string>
+</resources>

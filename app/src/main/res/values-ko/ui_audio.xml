@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="gif_all_visible">화면에 보이는 모든 GIF</string>
+    <string name="hide_gif_badge">GIF 표시 숨기기</string>
+    <string name="ui_sounds">인터페이스 소리</string>
+<string name="widget_crop">사진 구도 조정</string>
+<string name="widget_crop_hint">두 손가락으로 확대하세요. 드래그하거나 스틱으로 사진을 이동하세요.</string>
+<string name="widget_crop_reset">초기화</string>
+</resources>

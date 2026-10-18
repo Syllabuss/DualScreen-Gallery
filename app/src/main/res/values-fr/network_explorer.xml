@@ -1,0 +1,20 @@
+<resources>
+    <string name="explorer_share">Partager un dossier</string>
+    <string name="explorer_browse">Explorer les appareils</string>
+    <string name="explorer_device">Sur cet appareil</string>
+    <string name="explorer_computer">Ordinateur</string>
+    <string name="explorer_control">Contrôler ici</string>
+    <string name="explorer_connect">Connecter un ordinateur</string>
+    <string name="explorer_refresh">Actualiser</string>
+    <string name="explorer_local_intro">Choisissez un dossier. Les fichiers restent à leur place.</string>
+    <string name="explorer_remote_intro">Ouvrez un dossier partagé sur votre ordinateur.</string>
+    <string name="explorer_empty">Dossier vide</string>
+    <string name="explorer_read_only">Lecture seule : aucun fichier n’est modifié.</string>
+    <string name="explorer_connection_help">Utilisez le même réseau Wi-Fi et un dossier partagé sur l’ordinateur. Saisissez son adresse et vos identifiants.</string>
+    <string name="explorer_password_help">Utilisez le mot de passe du compte, pas le code PIN Windows. Il n’est pas enregistré.</string>
+    <string name="explorer_address">Dossier partagé</string>
+    <string name="explorer_address_invalid">Saisissez une adresse comme \\\\PC\\Photos ou smb://PC/Photos.</string>
+    <string name="explorer_local_error">Dossier inaccessible. Sélectionnez-le à nouveau pour autoriser l’accès.</string>
+    <string name="explorer_remote_error">Échec de connexion. Vérifiez le réseau, le dossier partagé et les identifiants.</string>
+    <string name="explorer_example_help">Les valeurs initiales sont des exemples. Remplacez-les par l’adresse de votre dossier partagé et le compte de votre ordinateur.</string>
+</resources>

@@ -1,0 +1,22 @@
+<resources>
+    <string name="network_host_error">Имя компьютера не найдено. Используйте его IP в той же сети.</string>
+    <string name="network_offline_error">Компьютер недоступен. Проверьте Wi-Fi, порт SMB и брандмауэр.</string>
+    <string name="network_timeout_error">Компьютер не отвечает. Проверьте сеть и повторите попытку.</string>
+    <string name="network_auth_error">Вход отклонён. Проверьте имя пользователя, пароль и домен.</string>
+    <string name="network_share_error">Общая папка не найдена. Проверьте её имя.</string>
+    <string name="network_permission_error">Нет доступа. Проверьте разрешения папки на компьютере.</string>
+    <string name="network_recovery">Восстановить передачу</string>
+    <string name="network_recovery_help">Подключите те же исходную и целевую папки. Проверенные копии будут проверены снова перед продолжением.</string>
+    <string name="network_source">Источник</string>
+    <string name="network_destination">Назначение</string>
+    <string name="network_resume">Продолжить</string>
+    <string name="sound_preview_pin">Закрепить просмотр</string>
+    <string name="sound_preview_unpin">Открепить просмотр</string>
+    <string name="sound_comparison_first">Первое сравнение</string>
+    <string name="sound_comparison_second">Второе сравнение</string>
+    <string name="sound_comparison_close">Закрыть сравнение</string>
+    <string name="sound_network_transfer">Начать передачу</string>
+    <string name="sound_zoom_out">Уменьшить сетку</string>
+    <string name="sound_zoom_in">Увеличить сетку</string>
+    <string name="all_animated_album_covers">Анимировать все видимые обложки</string>
+</resources>

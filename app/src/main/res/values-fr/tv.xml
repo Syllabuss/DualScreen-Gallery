@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tv_title">"TV en ligne"</string>
+    <string name="tv_enabled">"Activer la TV en ligne"</string>
+    <string name="tv_navbar">"Afficher TV dans la barre de navigation"</string>
+    <string name="tv_favorites">"Afficher les chaînes TV dans les Favoris"</string>
+    <string name="tv_my_channels">"Mes chaînes"</string>
+    <string name="tv_browse">"Parcourir les chaînes"</string>
+    <string name="tv_empty">"Aucune chaîne TV"</string>
+    <string name="tv_empty_help">Saisissez une liste M3U HTTPS autorisée. Jusqu’à 20 sources ; l’importation ne lance aucune lecture.</string>
+    <string name="tv_add">"Ajouter une chaîne"</string>
+    <string name="tv_url">"URL HTTPS du flux"</string>
+    <string name="tv_unverified">"Un seul flux HLS. Le lien est vérifié sans lancer la lecture."</string>
+    <string name="tv_network_notice">"Les catalogues, logos et chaînes contactent des services externes qui verront votre adresse IP."</string>
+    <string name="tv_countries">"Pays"</string>
+    <string name="tv_languages">"Langues"</string>
+    <string name="tv_categories">"Catégories"</string>
+    <string name="tv_sources">"Sources"</string>
+    <string name="tv_watch">"Regarder"</string>
+    <string name="tv_edit">"Modifier la chaîne"</string>
+    <string name="tv_artwork">"Choisir une miniature"</string>
+    <string name="tv_restore">"Rétablir les données originales"</string>
+    <string name="tv_error_network">"Échec de connexion. Vérifiez le réseau et réessayez."</string>
+    <string name="tv_error_blocked">"Adresse non autorisée. Utilisez HTTPS sur un serveur public."</string>
+    <string name="tv_error_forbidden">"Le service refuse l’accès. Cette chaîne peut être indisponible dans votre région."</string>
+    <string name="tv_error_not_found">"Source introuvable. Essayez un autre catalogue ou lien."</string>
+    <string name="tv_error_large">"Contenu trop volumineux pour être chargé en toute sécurité."</string>
+    <string name="tv_error_format">"Format non pris en charge. Choisissez un seul flux HLS."</string>
+    <string name="tv_error_live">"Cette source ne diffuse pas en direct."</string>
+    <string name="tv_retry">"Réessayer"</string>
+    <string name="tv_return">"Rétablir sur cet écran"</string>
+    <string name="tv_save_unverified">"Appuyez à nouveau sur Enregistrer pour conserver cette chaîne non vérifiée."</string>
+    <string name="tv_search">"Rechercher des chaînes ou catalogues"</string>
+    <string name="tv_replace_title">"Passer à la TV ?"</string>
+    <string name="tv_replace_description">"La vidéo actuelle sera fermée pour ouvrir cette chaîne. Continuer ?"</string>
+    <string name="tv_optional_title">"Titre sur la miniature (facultatif)"</string>
+    <string name="tv_favorite_add">"Ajouter aux favoris ?"</string>
+    <string name="tv_favorite_remove">"Retirer des favoris ?"</string>
+    <string name="tv_sleep_title">"TV en pause"</string>
+    <string name="tv_sleep_message">"La connexion au direct a été fermée pendant la veille. Se reconnecter ?"</string>
+    <string name="info_tv_sources">TV : Media3 · sources fournies par l’utilisateur</string>
+</resources>

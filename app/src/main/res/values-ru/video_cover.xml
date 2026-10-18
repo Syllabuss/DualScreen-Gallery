@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="video_cover_frame">"Выбрать кадр обложки"</string>
+    <string name="album_tile_size">"Размер альбома"</string>
+    <string name="video_cover_current_frame">Использовать текущий кадр как обложку</string>
+</resources>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tutorial_permission_purpose">El acceso a carpetas permite ver y gestionar los archivos que elijas. Las notificaciones y la superposición sobre otras apps solo se solicitan para las funciones que las necesitan: controles del reproductor y comparaciones.</string>
+</resources>

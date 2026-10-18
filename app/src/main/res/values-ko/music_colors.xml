@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="music_colors_title">플레이어 색상</string>
+    <string name="music_colors_theme">테마</string>
+    <string name="music_colors_artwork">앨범 표지에서</string>
+    <string name="music_colors_custom">사용자 지정</string>
+    <string name="music_colors_description">테마, 어울리는 색상의 전체 화면 앨범 표지 또는 사용자 지정 색상을 사용합니다. 표지가 없으면 테마 배경이 유지됩니다. 사용자 지정 색상은 추가 그라데이션 없이 선택한 그대로 적용됩니다.</string>
+    <string name="music_colors_background">배경</string>
+    <string name="music_colors_bars">막대</string>
+</resources>

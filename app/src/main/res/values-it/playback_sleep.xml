@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="playback_sleep_continue">"Continua a console chiusa"</string>
+    <string name="music_sleep_help">"Continua solo la musica già in riproduzione. Può consumare più batteria; non avvia brani messi in pausa."</string>
+    <string name="video_sleep_help">"Continua solo il video o canale già in riproduzione. Decodifica e rete restano attive: può aumentare consumo, calore e ventola."</string>
+</resources>

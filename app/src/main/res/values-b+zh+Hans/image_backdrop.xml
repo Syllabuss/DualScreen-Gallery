@@ -1,0 +1,8 @@
+<resources>
+    <string name="image_backdrop_title">透明图像背景</string>
+    <string name="image_backdrop_grid">棋盘格</string>
+    <string name="image_backdrop_tint">着色棋盘格</string>
+    <string name="image_backdrop_solid">纯色</string>
+    <string name="image_backdrop_linear">垂直渐变</string>
+    <string name="image_backdrop_radial">从中心向外渐变</string>
+</resources>

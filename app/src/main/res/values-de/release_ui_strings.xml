@@ -1,0 +1,4 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="launcher_icon_title">App-Symbol</string>
+    <string name="dual_screen_disclaimer">Für zwei Bildschirme entwickelt. Der Einzelbildschirmmodus ist experimentell und noch nicht ausreichend getestet.</string>
+</resources>

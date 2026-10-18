@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="video_pip">Vidéo en fenêtre</string>
+    <string name="video_pip_active">Lecture en fenêtre</string>
+    <string name="video_pip_description">La vidéo continue dans la fenêtre Android. Parcourez la galerie ou ouvrez une autre application. Utilisez les commandes de la fenêtre pour l’agrandir ou la fermer.</string>
+    <string name="video_pip_unavailable">La fenêtre vidéo est indisponible. Vérifiez l’autorisation Picture-in-Picture dans les paramètres Android.</string>
+    <string name="video_return_screen">"Ramener la vidéo sur cet écran"</string>
+</resources>

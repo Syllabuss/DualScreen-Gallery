@@ -1,0 +1,10 @@
+<resources>
+    <string name="widget_choose_track">选择歌曲</string>
+    <string name="photo_slide_left">向左滑动</string>
+    <string name="photo_slide_right">向右滑动</string>
+    <string name="photo_slide_up">向上滑动</string>
+    <string name="photo_slide_down">向下滑动</string>
+    <string name="photo_rotate">旋转</string>
+    <string name="widget_circle_name">DS Gallery · Player Coin</string>
+    <string name="widget_effect_circle">圆形</string>
+</resources>

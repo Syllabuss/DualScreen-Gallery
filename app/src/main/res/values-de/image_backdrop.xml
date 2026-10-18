@@ -1,0 +1,8 @@
+<resources>
+    <string name="image_backdrop_title">Hintergrund transparenter Bilder</string>
+    <string name="image_backdrop_grid">Schachbrett</string>
+    <string name="image_backdrop_tint">Getöntes Schachbrett</string>
+    <string name="image_backdrop_solid">Einfarbig</string>
+    <string name="image_backdrop_linear">Vertikaler Verlauf</string>
+    <string name="image_backdrop_radial">Verlauf von der Mitte</string>
+</resources>

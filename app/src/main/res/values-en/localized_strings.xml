@@ -1,0 +1,1627 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="text_choose_a_segment_of_at_least_0_25_seconds_within_eb10b3" formatted="false">"Choose a segment of at least 0.25 seconds within the track"</string>
+    <string name="text_unsupported_audio_quality_2af31b" formatted="false">"Unsupported audio quality"</string>
+    <string name="text_unsupported_audio_recipe_d81e86" formatted="false">"Unsupported audio recipe"</string>
+    <string name="text_the_file_has_no_readable_audio_track_bc530e" formatted="false">"The file has no readable audio track"</string>
+    <string name="text_audio_duration_unavailable_3d0271" formatted="false">"Audio duration unavailable"</string>
+    <string name="text_the_source_duration_has_changed_reopen_the_edito_be0a12" formatted="false">"The source duration has changed: reopen the editor"</string>
+    <string name="text_audio_encoding_could_not_be_verified_output_not_681245" formatted="false">"Audio encoding could not be verified: output not published"</string>
+    <string name="text_unreadable_track_99d3c9" formatted="false">"Unreadable track"</string>
+    <string name="text_folder_access_denied_try_again_d5e242" formatted="false">"Folder access denied. Try again."</string>
+    <string name="text_export_did_not_start_c11e45" formatted="false">"Export did not start"</string>
+    <string name="text_edit_audio_90b959" formatted="false">"Edit audio"</string>
+    <string name="text_a_new_copy_keeping_the_original_intact_b1e835" formatted="false">"A new copy, keeping the original intact."</string>
+    <string name="text_segment_new_duration_1_s_468a07">"Segment · new duration %1$s"</string>
+    <string name="text_audio_segment_range_68e0ae" formatted="false">"Audio segment range"</string>
+    <string name="text_start_seconds_a70528" formatted="false">"Start · seconds"</string>
+    <string name="text_end_seconds_60bd23" formatted="false">"End · seconds"</string>
+    <string name="text_apply_range_f3c147" formatted="false">"Apply range"</string>
+    <string name="text_invalid_range_7d3864" formatted="false">"Invalid range"</string>
+    <string name="text_tap_apply_range_before_listening_or_saving_727b4a" formatted="false">"Tap Apply range before listening or saving."</string>
+    <string name="text_full_track_a05670" formatted="false">"Full track"</string>
+    <string name="text_replay_segment_6f92a8" formatted="false">"Replay segment"</string>
+    <string name="text_listen_to_segment_b9d78e" formatted="false">"Listen to segment"</string>
+    <string name="text_playback_did_not_start_367226" formatted="false">"Playback did not start"</string>
+    <string name="text_stop_preview_049a11" formatted="false">"Stop preview"</string>
+    <string name="text_preview_0b2338" formatted="false">"Preview ·"</string>
+    <string name="text_playing_5ef505" formatted="false">"Playing"</string>
+    <string name="text_paused_or_finished_4e52b8" formatted="false">"Paused or finished"</string>
+    <string name="text_preparing_playback_617073" formatted="false">"Preparing playback…"</string>
+    <string name="text_preview_uses_the_shared_player_your_original_que_0a71a9" formatted="false">"Preview uses the shared player. Your original queue is preserved and returns paused when you stop the preview or close the editor."</string>
+    <string name="text_new_copy_quality_253f0f" formatted="false">"New copy quality"</string>
+    <string name="text_m4a_with_aac_audio_the_segment_is_re_encoded_not_ca6411" formatted="false">"M4A with AAC audio: the segment is re-encoded, not trimmed losslessly. The original title, artist, artwork and other metadata are not copied."</string>
+    <string name="text_new_copy_name_m4a_ed1106" formatted="false">"New copy name · .m4a"</string>
+    <string name="text_destination_1_s_27ea61">"Destination: %1$s"</string>
+    <string name="text_choose_music_destination_b193b9" formatted="false">"Choose music destination"</string>
+    <string name="text_choose_another_folder_423db4" formatted="false">"Choose another folder…"</string>
+    <string name="text_choose_a_music_or_mixed_folder_in_folders_and_pe_026756" formatted="false">"Choose a Music or Mixed folder in Library > Media folders."</string>
+    <string name="text_no_overwriting_an_existing_name_receives_a_suffi_1531d1" formatted="false">"No overwriting: an existing name receives a suffix. The new copy does not replace the original in Favorites or playlists."</string>
+    <string name="text_reading_duration_8bc1f7" formatted="false">"Reading duration…"</string>
+    <string name="text_the_source_has_changed_or_is_unavailable_reopen_43f906" formatted="false">"The source has changed or is unavailable. Reopen the editor."</string>
+    <string name="text_cancel_18c9d9" formatted="false">"Cancel"</string>
+    <string name="text_save_a_copy_0680bd" formatted="false">"Save a copy"</string>
+    <string name="text_export_new_copy_f9107d" formatted="false">"Export new copy"</string>
+    <string name="text_1_s_m4a_n_2_s_nfrom_3_s_to_4_s_5_s_nm4a_aac_6_s_e1e1cd">"%1$s.m4a\n%2$s\nFrom %3$s to %4$s · %5$s\nM4A · AAC · %6$s kb/s\nOriginal metadata and artwork not copied. Original, Favorites and playlists preserved."</string>
+    <string name="text_destination_unavailable_1a3939" formatted="false">"Destination unavailable"</string>
+    <string name="text_back_804268" formatted="false">"Back"</string>
+    <string name="text_export_2c4c51" formatted="false">"Export"</string>
+    <string name="text_export_while_gaming_a6b51c" formatted="false">"Export while gaming?"</string>
+    <string name="text_encoding_may_slow_down_your_game_and_use_more_ba_06e080" formatted="false">"Encoding may slow down your game and use more battery. You can export later."</string>
+    <string name="text_later_b81861" formatted="false">"Not now"</string>
+    <string name="text_export_now_4bb86b" formatted="false">"Export now"</string>
+    <string name="text_artwork_recovery_incomplete_try_clearing_preview_225d68" formatted="false">"Artwork recovery incomplete. Try clearing previews again."</string>
+    <string name="text_artwork_cache_recovery_failed_1_s_3bc1c1">"Artwork cache recovery failed: %1$s"</string>
+    <string name="text_allow_cleanup_in_game_mode_7fcac9" formatted="false">"Allow cleanup in Game mode"</string>
+    <string name="text_in_memory_previews_cleared_removed_1_s_temporary_d1b41f">"In-memory previews cleared. Removed %1$s temporary artwork files (%2$s)."</string>
+    <string name="text_partial_cleanup_removed_1_s_artwork_files_2_s_co_2e8c9b">"Partial cleanup: removed %1$s artwork files; %2$s could not be deleted. You can try again."</string>
+    <string name="text_cleanup_failed_try_again_08cccf" formatted="false">"Cleanup failed. Try again."</string>
+    <string name="text_artwork_cache_unavailable_81e2e4" formatted="false">"Artwork cache unavailable"</string>
+    <string name="text_unsafe_temporary_artwork_368bc9" formatted="false">"Unsafe temporary artwork"</string>
+    <string name="text_unsafe_temporary_write_455c5f" formatted="false">"Unsafe temporary write"</string>
+    <string name="text_temporary_artwork_storage_unavailable_f8b0fa" formatted="false">"Temporary artwork storage unavailable"</string>
+    <string name="text_unsafe_artwork_recovery_dbc2b0" formatted="false">"Unsafe artwork recovery"</string>
+    <string name="text_previous_artwork_not_recovered_6904f2" formatted="false">"Previous artwork not recovered"</string>
+    <string name="text_incomplete_artwork_cannot_be_deleted_5c7b87" formatted="false">"Incomplete artwork cannot be deleted"</string>
+    <string name="text_unsafe_artwork_folder_178f07" formatted="false">"Unsafe artwork folder"</string>
+    <string name="text_unreadable_artwork_folder_c5d7b8" formatted="false">"Unreadable artwork folder"</string>
+    <string name="text_clearing_cache_911274" formatted="false">"Clearing cache…"</string>
+    <string name="text_clear_cache_591e39" formatted="false">"Clear cache"</string>
+    <string name="text_cache_cleared_3a29ae" formatted="false">"Cache cleared"</string>
+    <string name="text_backup_source_needs_relinking_fb5836" formatted="false">"Backup: source needs relinking"</string>
+    <string name="text_access_needs_restoring_6a31e2" formatted="false">"Access needs restoring"</string>
+    <string name="text_circular_reference_6918cc" formatted="false">"Circular reference"</string>
+    <string name="text_allow_photos_and_videos_0e8d89" formatted="false">"Allow photos and videos"</string>
+    <string name="text_source_disconnected_or_reading_failed_2c1ac4" formatted="false">"Source disconnected or reading failed"</string>
+    <string name="text_choose_a_folder_56d054" formatted="false">"Choose a folder"</string>
+    <string name="text_the_folder_does_not_grant_read_access_c5c5f5" formatted="false">"The folder does not grant read access."</string>
+    <string name="text_selected_folder_aae82a" formatted="false">"Selected folder"</string>
+    <string name="text_the_destination_must_grant_read_and_write_access_64dff6" formatted="false">"The destination must grant read and write access"</string>
+    <string name="text_this_source_is_disabled_enable_it_in_sources_42528d" formatted="false">"This source is disabled: enable it in Sources"</string>
+    <string name="text_folder_is_not_writable_348e84" formatted="false">"Folder is not writable"</string>
+    <string name="text_artwork_unavailable_56b21e" formatted="false">"Artwork unavailable"</string>
+    <string name="text_source_unavailable_or_media_hidden_2075ae" formatted="false">"Source unavailable or media hidden"</string>
+    <string name="text_allow_access_to_this_media_36f18a" formatted="false">"Allow access to this media"</string>
+    <string name="text_document_link_changed_66df8b" formatted="false">"Document link changed"</string>
+    <string name="text_invalid_artwork_priority_c1e3fd" formatted="false">"Invalid artwork priority"</string>
+    <string name="text_album_or_track_no_longer_available_41bdb5" formatted="false">"Album or track no longer available"</string>
+    <string name="text_invalid_collection_type_802a12" formatted="false">"Invalid collection type"</string>
+    <string name="text_an_item_is_no_longer_available_for_this_collecti_eae1b5" formatted="false">"An item is no longer available for this collection"</string>
+    <string name="text_use_a_name_of_1120_characters_without_control_ch_d4d026" formatted="false">"Use a name of 1–120 characters, without control characters"</string>
+    <string name="text_the_collection_was_removed_7b276a" formatted="false">"The collection was removed"</string>
+    <string name="text_item_already_removed_47c0c9" formatted="false">"Item already removed"</string>
+    <string name="text_the_collection_order_has_changed_try_again_938c15" formatted="false">"The collection order has changed: try again"</string>
+    <string name="text_name_508690" formatted="false">"Name"</string>
+    <string name="text_collection_name_5d060a" formatted="false">"Collection name"</string>
+    <string name="text_local_references_only_original_files_stay_in_the_1c6b0a" formatted="false">"Local references only: original files stay in their folders."</string>
+    <string name="text_could_not_save_9b6ca7" formatted="false">"Could not save"</string>
+    <string name="text_saving_c4f57f" formatted="false">"Saving…"</string>
+    <string name="text_save_c5997e" formatted="false">"Save"</string>
+    <string name="text_new_playlist_6ebfb3" formatted="false">"New playlist"</string>
+    <string name="text_new_collection_656a05" formatted="false">"New collection"</string>
+    <string name="text_collection_cover_7ec6e5" formatted="false">"Collection cover"</string>
+    <string name="text_add_to_0791d4" formatted="false">"Add to…"</string>
+    <string name="text_choose_a_collection_the_image_remains_a_local_re_698b12" formatted="false">"Choose a collection: the image remains a local reference."</string>
+    <string name="text_1_s_items_no_files_copied_9ee36c">"%1$s items · no files copied"</string>
+    <string name="text_collection_97d9d7" formatted="false">" · Collection"</string>
+    <string name="text_operation_failed_f17e12" formatted="false">"Operation failed"</string>
+    <string name="text_no_compatible_collection_c6ea58" formatted="false">"No compatible collection."</string>
+    <string name="text_close_32d407" formatted="false">"Close"</string>
+    <string name="text_your_collections_b5ac86" formatted="false">"Your collections"</string>
+    <string name="text_bring_together_images_gifs_videos_and_music_with_1ca575" formatted="false">"Bring together images, GIFs, videos and music without copying them. Playlists contain tracks only."</string>
+    <string name="text_1_s_2_s_visible_items_c963ae">"%1$s · %2$s visible items"</string>
+    <string name="text_mixed_collection_6834fb" formatted="false">"Mixed collection"</string>
+    <string name="text_collection_removed_7205b1" formatted="false">"Collection removed"</string>
+    <string name="text_original_files_remain_intact_go_back_to_choose_a_b50e67" formatted="false">"Original files remain intact. Go back to choose another collection."</string>
+    <string name="text_1_s_visible_items_df95fc">"%1$s visible items"</string>
+    <string name="text_1_s_excluded_or_missing_references_retained_034d70">" · %1$s excluded or missing references retained"</string>
+    <string name="text_add_items_49e7fb" formatted="false">"Add items"</string>
+    <string name="text_manage_collection_557c66" formatted="false">"Manage collection"</string>
+    <string name="text_rename_98b79b" formatted="false">"Rename"</string>
+    <string name="text_cover_7be01e" formatted="false">"Cover"</string>
+    <string name="text_remove_collection_e81de6" formatted="false">"Remove collection"</string>
+    <string name="text_play_playlist_5451fd" formatted="false">"Play playlist"</string>
+    <string name="text_space_for_your_choices_9db02b" formatted="false">"Space for your choices"</string>
+    <string name="text_add_items_to_this_collection_excluded_links_are_21b137" formatted="false">"Add items to this collection. Excluded links are not deleted."</string>
+    <string name="text_unavailable_ce1391" formatted="false">"Unavailable"</string>
+    <string name="text_collection_item_actions_81ff41" formatted="false">"Collection item actions"</string>
+    <string name="text_move_up_666f06" formatted="false">"Move up"</string>
+    <string name="text_move_down_d0bb80" formatted="false">"Move down"</string>
+    <string name="text_remove_from_collection_d95612" formatted="false">"Remove from collection"</string>
+    <string name="text_media_actions_0e2aa2" formatted="false">"Media actions"</string>
+    <string name="text_rename_collection_afd80a" formatted="false">"Rename collection"</string>
+    <string name="text_remove_this_collection_aec0c3" formatted="false">"Remove this collection?"</string>
+    <string name="text_1_s_n_nonly_the_collection_and_its_links_will_be_1073ca">"%1$s\n\nOnly the collection and its links will be removed. No files will be deleted; Favorites are preserved."</string>
+    <string name="text_choose_cover_254a2f" formatted="false">"Choose cover"</string>
+    <string name="text_search_name_or_artist_44c15b" formatted="false">"Search name or artist"</string>
+    <string name="text_search_media_626c4c" formatted="false">"Search media"</string>
+    <string name="text_loading_fda05a" formatted="false">"Loading…"</string>
+    <string name="text_no_compatible_items_for_this_choice_9187e2" formatted="false">"No compatible items for this choice."</string>
+    <string name="text_automatic_cover_99768a" formatted="false">"Automatic cover"</string>
+    <string name="text_choose_a_name_of_1100_characters_20d6b6" formatted="false">"Choose a name of 1–100 characters"</string>
+    <string name="text_invalid_name_2e3d77" formatted="false">"Invalid name"</string>
+    <string name="text_a_session_with_this_name_already_exists_5ae07c" formatted="false">"A session with this name already exists"</string>
+    <string name="text_linked_zoom_ac5b5d" formatted="false">"Linked zoom"</string>
+    <string name="text_four_panes_407964" formatted="false">"Four panes"</string>
+    <string name="text_two_panes_e0eda7" formatted="false">"Two panes"</string>
+    <string name="text_save_session_beee36" formatted="false">"Save session"</string>
+    <string name="text_sessions_733ff6" formatted="false">"Sessions"</string>
+    <string name="text_pinned_items_stay_in_place_while_browsing_arrows_389821" formatted="false">"Pinned items stay in place while browsing. Arrows change only the active pane."</string>
+    <string name="text_active_1_s_08406e">"Active · %1$s"</string>
+    <string name="text_pane_1_s_df7792">"Pane %1$s"</string>
+    <string name="text_follow_selection_4b3585" formatted="false">"Follow selection"</string>
+    <string name="text_pin_media_05a7ef" formatted="false">"Pin media"</string>
+    <string name="text_pane_options_a83fbf" formatted="false">"Pane options"</string>
+    <string name="text_empty_pin_e56092" formatted="false">"Empty pin"</string>
+    <string name="text_media_unavailable_or_hidden_789e84" formatted="false">"Media unavailable or hidden"</string>
+    <string name="text_following_selection_1_s_97b184">"Following selection · %1$s"</string>
+    <string name="text_no_media_25195d" formatted="false">"no media"</string>
+    <string name="text_choose_media_217616" formatted="false">"Choose media"</string>
+    <string name="text_reference_retained_3c0f78" formatted="false">"Reference retained"</string>
+    <string name="text_panes_12_0684e7" formatted="false">"Panes 1–2"</string>
+    <string name="text_panes_34_5d606a" formatted="false">"Panes 3–4"</string>
+    <string name="text_previous_media_in_the_active_pane_fe4ef7" formatted="false">"Previous media in the active pane"</string>
+    <string name="text_next_media_in_the_active_pane_520c0c" formatted="false">"Next media in the active pane"</string>
+    <string name="text_save_comparison_1dff9e" formatted="false">"Save comparison"</string>
+    <string name="text_session_name_856023" formatted="false">"Session name"</string>
+    <string name="text_a_session_with_this_name_already_exists_choose_a_e1a297" formatted="false">"A session with this name already exists. Choose another name."</string>
+    <string name="text_saved_sessions_3c65dd" formatted="false">"Saved sessions"</string>
+    <string name="text_session_unreadable_no_pins_replaced_fde88c" formatted="false">"Session unreadable; no pins replaced."</string>
+    <string name="text_switch_to_two_panes_43f379" formatted="false">"Switch to two panes?"</string>
+    <string name="text_pins_in_panes_3_and_4_will_be_removed_from_this_f500e1" formatted="false">"Pins in panes 3 and 4 will be removed from this session. Save the session first if you want to keep them."</string>
+    <string name="text_the_session_changed_on_the_other_screen_check_th_b1243d" formatted="false">"The session changed on the other screen. Check the pins again."</string>
+    <string name="text_remove_and_switch_to_two_f5d196" formatted="false">"Remove and switch to two"</string>
+    <string name="text_library_93c372" formatted="false">"Library"</string>
+    <string name="text_preview_e9bcae" formatted="false">"Preview"</string>
+    <string name="text_music_012df9" formatted="false">"Music"</string>
+    <string name="text_dialogs_c3422e" formatted="false">"Dialogs"</string>
+    <string name="text_a_received_1f521d" formatted="false">"A received"</string>
+    <string name="text_b_received_d8ce9e" formatted="false">"B received"</string>
+    <string name="text_x_received_1f44c5" formatted="false">"X received"</string>
+    <string name="text_y_received_7e8297" formatted="false">"Y received"</string>
+    <string name="text_right_stick_5a153b" formatted="false">"Right stick ↑"</string>
+    <string name="text_right_stick_9bc58d" formatted="false">"Right stick ↓"</string>
+    <string name="text_right_stick_9b9fdf" formatted="false">"Right stick ←"</string>
+    <string name="text_right_stick_aa4367" formatted="false">"Right stick →"</string>
+    <string name="text_focus_up_bb1e59" formatted="false">"Focus up"</string>
+    <string name="text_focus_down_d198fa" formatted="false">"Focus down"</string>
+    <string name="text_focus_left_bbc430" formatted="false">"Focus left"</string>
+    <string name="text_focus_right_8b0117" formatted="false">"Focus right"</string>
+    <string name="text_confirm_662c0e" formatted="false">"Confirm"</string>
+    <string name="text_previous_media_3e439b" formatted="false">"Previous media"</string>
+    <string name="text_next_media_228a8d" formatted="false">"Next media"</string>
+    <string name="text_previous_track_b3f5fe" formatted="false">"Previous track"</string>
+    <string name="text_next_track_b0ff2f" formatted="false">"Next track"</string>
+    <string name="text_music_play_pause_b180bc" formatted="false">"Music play / pause"</string>
+    <string name="text_music_10_seconds_c20111" formatted="false">"Music −10 seconds"</string>
+    <string name="text_music_10_seconds_453447" formatted="false">"Music +10 seconds"</string>
+    <string name="text_toggle_favorite_41f17b" formatted="false">"Toggle favorite"</string>
+    <string name="text_pin_compare_ff6bd8" formatted="false">"Pin / compare"</string>
+    <string name="text_media_menu_17ce51" formatted="false">"Media menu"</string>
+    <string name="text_screens_menu_37fb30" formatted="false">"Screens menu"</string>
+    <string name="text_swap_panels_a7b7be" formatted="false">"Swap panels"</string>
+    <string name="text_photo_frame_mode_be123c" formatted="false">"Photo frame mode"</string>
+    <string name="text_move_to_trash_confirm_98b863" formatted="false">"Move to trash · confirm"</string>
+    <string name="text_previous_section_079e1f" formatted="false">"Previous section"</string>
+    <string name="text_next_section_9416ef" formatted="false">"Next section"</string>
+    <string name="text_thumbnails_c2d7a9" formatted="false">"Thumbnails −"</string>
+    <string name="text_thumbnails_9a085b" formatted="false">"Thumbnails +"</string>
+    <string name="text_pan_up_919906" formatted="false">"Pan up"</string>
+    <string name="text_pan_down_458c10" formatted="false">"Pan down"</string>
+    <string name="text_pan_left_78d13c" formatted="false">"Pan left"</string>
+    <string name="text_pan_right_9990b6" formatted="false">"Pan right"</string>
+    <string name="text_binding_already_used_by_1_s_74e2c7">"Binding already used by %1$s"</string>
+    <string name="text_one_shared_profile_and_up_to_16_personal_profile_aad090" formatted="false">"One shared profile and up to 16 personal profiles are allowed"</string>
+    <string name="text_conflicting_bindings_60437b" formatted="false">"Conflicting bindings"</string>
+    <string name="text_1_s_directions_confirm_and_back_must_remain_assi_d66f86">"%1$s: directions, Confirm and Back must remain assigned"</string>
+    <string name="text_invalid_1_s_field_949520">"Invalid %1$s field"</string>
+    <string name="text_directions_cannot_be_part_of_combinations_50c20a" formatted="false">"Directions cannot be part of combinations"</string>
+    <string name="text_invalid_colors_124716" formatted="false">"Invalid colors"</string>
+    <string name="text_invalid_color_afaf16" formatted="false">"Invalid color"</string>
+    <string name="text_background_78edb0" formatted="false">"Background"</string>
+    <string name="text_panels_f2a345" formatted="false">"Panels"</string>
+    <string name="text_accent_785d03" formatted="false">"Accent"</string>
+    <string name="text_selection_ae3f45" formatted="false">"Selection"</string>
+    <string name="text_text_ebb9e6" formatted="false">"Text"</string>
+    <string name="text_borders_45b76c" formatted="false">"Borders"</string>
+    <string name="text_hue_071cf9" formatted="false">"Hue"</string>
+    <string name="text_saturation_433626" formatted="false">"Saturation"</string>
+    <string name="text_brightness_48f971" formatted="false">"Brightness"</string>
+    <string name="text_done_fa6730" formatted="false">"Done"</string>
+    <string name="text_allow_access_to_photos_and_videos_d1906e" formatted="false">"Allow access to photos and videos"</string>
+    <string name="text_android_gallery_did_not_respond_52ab35" formatted="false">"Android gallery did not respond"</string>
+    <string name="text_unnamed_034324" formatted="false">"Unnamed"</string>
+    <string name="text_images_a9f46a" formatted="false">"Images"</string>
+    <string name="text_device_gallery_1354db" formatted="false">"Device gallery"</string>
+    <string name="text_could_not_read_albums_585db4" formatted="false">"Could not read albums"</string>
+    <string name="text_album_unavailable_check_permission_or_reopen_the_70b1c5" formatted="false">"Album unavailable. Check permission or reopen the folder."</string>
+    <string name="text_album_unavailable_fe6944" formatted="false">"Album unavailable"</string>
+    <string name="text_album_source_unavailable_d29ab8" formatted="false">"Album source unavailable"</string>
+    <string name="text_this_access_cannot_be_retained_choose_the_file_a_2472a4" formatted="false">"This access cannot be retained: choose the file again in the Android picker or import a copy"</string>
+    <string name="text_persistent_access_not_granted_17c407" formatted="false">"Persistent access not granted"</string>
+    <string name="text_linked_file_1_s_c1b652">"Linked file · %1$s"</string>
+    <string name="text_explicitly_relink_the_backup_document_d45acb" formatted="false">"Explicitly relink the backup document"</string>
+    <string name="text_file_access_needs_restoring_5e2b63" formatted="false">"File access needs restoring"</string>
+    <string name="text_the_reference_is_in_the_trash_resolve_it_before_4482d2" formatted="false">"The reference is in the trash: resolve it before linking"</string>
+    <string name="text_resolve_the_file_operation_first_6c358c" formatted="false">"Resolve the file operation first"</string>
+    <string name="text_linked_file_1_s_2ebd23">"Linked file / %1$s"</string>
+    <string name="text_same_content_multiple_copies_dd275d" formatted="false">"Same content, multiple copies"</string>
+    <string name="text_compares_the_contents_of_authorized_files_matchi_7f9d1e" formatted="false">"Compares the contents of authorized files. Matching names or similar images are not enough."</string>
+    <string name="text_search_runs_only_when_you_start_it_4a07e0" formatted="false">"Search runs only when you start it."</string>
+    <string name="text_1_s_2_s_candidates_3_s_read_4_s_unverified_c7af59">"%1$s / %2$s candidates · %3$s read · %4$s unverified"</string>
+    <string name="text_resume_b0cc9c" formatted="false">"Resume"</string>
+    <string name="text_pause_9bd4d1" formatted="false">"Pause"</string>
+    <string name="text_cancel_search_d9c204" formatted="false">"Cancel search"</string>
+    <string name="text_start_a_new_search_d9b3b9" formatted="false">"Start a new search"</string>
+    <string name="text_scope_of_the_next_search_237f0a" formatted="false">"Scope of the next search"</string>
+    <string name="text_entire_catalog_10e9a3" formatted="false">"Entire catalog"</string>
+    <string name="text_folders_23cc92" formatted="false">"Folders"</string>
+    <string name="text_chosen_media_25c884" formatted="false">"Chosen media"</string>
+    <string name="text_choose_1_s_2_s_26e8e4">"Choose %1$s · %2$s"</string>
+    <string name="text_hidden_items_trash_disabled_sources_and_unavaila_44d115" formatted="false">"Hidden items, trash, disabled sources and unavailable files are excluded. Folders include previously indexed subfolders."</string>
+    <string name="text_1_s_groups_2_s_candidates_read_3_s_unverified_290f94">"%1$s groups · %2$s candidates read · %3$s unverified"</string>
+    <string name="text_search_performed_1_s_75bcaf">"Search performed: %1$s"</string>
+    <string name="text_1_s_chosen_media_30240a">"%1$s chosen media"</string>
+    <string name="text_1_s_folders_and_subfolders_f1bc01">"%1$s folders and subfolders"</string>
+    <string name="text_the_entire_authorized_catalog_270539" formatted="false">"the entire authorized catalog"</string>
+    <string name="text_no_identical_copies_found_in_the_chosen_scope_b98b95" formatted="false">"No identical copies found in the chosen scope."</string>
+    <string name="text_no_identical_copies_among_verified_files_some_fi_34dda8" formatted="false">"No identical copies among verified files. Some files could not be read."</string>
+    <string name="text_verified_groups_will_appear_here_nothing_is_dele_41b1d4" formatted="false">"Verified groups will appear here. Nothing is deleted automatically."</string>
+    <string name="text_group_1_s_2_s_copies_116e5d">"Group %1$s · %2$s copies"</string>
+    <string name="text_1_s_each_potential_space_to_reclaim_2_s_0deb3a">"%1$s each · potential space to reclaim %2$s"</string>
+    <string name="text_choose_which_copy_to_keep_content_is_checked_aga_db2906" formatted="false">"Choose which copy to keep. Content is checked again before moving to trash."</string>
+    <string name="text_keep_d3090f" formatted="false">"Keep"</string>
+    <string name="text_extra_copy_17ffbc" formatted="false">"Extra copy"</string>
+    <string name="text_open_12abcf" formatted="false">"Open"</string>
+    <string name="text_keep_this_one_5d3d76" formatted="false">"Keep this one"</string>
+    <string name="text_compare_65b080" formatted="false">"Compare"</string>
+    <string name="text_transfer_references_0edaf3" formatted="false">"Transfer references"</string>
+    <string name="text_trash_0f64be" formatted="false">"Trash…"</string>
+    <string name="text_space_is_estimated_from_content_providers_and_li_c770ea" formatted="false">"Space is estimated from content: providers and linked files may use different amounts. Results do not verify files changed after reading."</string>
+    <string name="text_folders_to_check_708c64" formatted="false">"Folders to check"</string>
+    <string name="text_media_to_check_32b34c" formatted="false">"Media to check"</string>
+    <string name="text_use_this_selection_48380c" formatted="false">"Use this selection"</string>
+    <string name="text_clear_2bdc24" formatted="false">"Clear"</string>
+    <string name="text_read_files_while_gaming_ccc524" formatted="false">"Read files while gaming?"</string>
+    <string name="text_search_may_use_device_storage_and_the_sd_card_in_901521" formatted="false">"Search may use device storage and the SD card. In Game mode, it starts or resumes only with this explicit choice."</string>
+    <string name="text_search_now_anyway_d2a180" formatted="false">"Search now anyway"</string>
+    <string name="text_transfer_references_396f43" formatted="false">"Transfer references?"</string>
+    <string name="text_from_1_s_nto_2_s_n_nfavorites_and_collection_pla_bb8171">"From %1$s\nTo %2$s\n\nFavorites and collection/playlist links will move, keeping their order. Covers stay unchanged. No files are deleted. Both contents are checked again first."</string>
+    <string name="text_favorites_and_links_transferred_no_files_deleted_b9a9f0" formatted="false">"Favorites and links transferred. No files deleted."</string>
+    <string name="text_verification_failed_or_access_changed_no_referen_ba271c" formatted="false">"Verification failed or access changed. No references transferred; start a new search."</string>
+    <string name="text_verifying_62483c" formatted="false">"Verifying…"</string>
+    <string name="text_compare_these_two_copies_bc72b0" formatted="false">"Compare these two copies?"</string>
+    <string name="text_1_s_n_2_s_n_nreplaces_the_open_comparison_previo_76dd8a">"%1$s\n%2$s\n\nReplaces the open comparison. Previously saved sessions remain available."</string>
+    <string name="text_open_comparison_7d6cae" formatted="false">"Open comparison"</string>
+    <string name="text_the_previous_search_is_not_resumed_automatically_7b96aa" formatted="false">"The previous search is not resumed automatically. Start a new file verification."</string>
+    <string name="text_cancellation_requested_a58dd2" formatted="false">"Cancellation requested…"</string>
+    <string name="text_reading_file_sizes_1fccaa" formatted="false">"Reading file sizes…"</string>
+    <string name="text_search_finished_no_files_were_changed_006f53" formatted="false">"Search finished. No files were changed."</string>
+    <string name="text_search_state_not_saved_ca2a23" formatted="false">"Search state not saved"</string>
+    <string name="text_search_canceled_results_are_partial_files_remain_3c838c" formatted="false">"Search canceled. Results are partial; files remain intact."</string>
+    <string name="text_search_interrupted_access_or_provider_unavailabl_020715" formatted="false">"Search interrupted. Access or provider unavailable; no files were changed."</string>
+    <string name="text_search_state_not_retained_e21aac" formatted="false">" Search state not retained."</string>
+    <string name="text_paused_by_you_b54dd5" formatted="false">"Paused by you"</string>
+    <string name="text_paused_for_game_mode_resume_only_if_you_want_to_e0c9cb" formatted="false">"Paused for Game mode · resume only if you want to start reading"</string>
+    <string name="text_paused_while_the_gallery_is_not_visible_3b5e35" formatted="false">"Paused while the gallery is not visible"</string>
+    <string name="text_reading_contents_b436b3" formatted="false">"Reading contents…"</string>
+    <string name="text_authorized_folder_739100" formatted="false">"Authorized folder"</string>
+    <string name="text_content_changed_no_references_transferred_4ec39b" formatted="false">"Content changed: no references transferred"</string>
+    <string name="text_visibility_or_access_changed_06dec4" formatted="false">"Visibility or access changed"</string>
+    <string name="text_a_playlist_requires_an_audio_copy_77dd5c" formatted="false">"A playlist requires an audio copy"</string>
+    <string name="text_share_5812e6" formatted="false">"Share"</string>
+    <string name="text_choose_app_965609" formatted="false">"Choose app"</string>
+    <string name="text_open_with_531e1d" formatted="false">"Open with"</string>
+    <string name="text_android_wallpaper_67c9fc" formatted="false">"Android wallpaper"</string>
+    <string name="text_open_android_crop_tool_3130eb" formatted="false">"Open Android crop tool"</string>
+    <string name="text_choose_1128_files_to_open_ee836b" formatted="false">"Choose 1–128 files to open"</string>
+    <string name="text_wallpaper_requires_a_static_image_60bd7b" formatted="false">"Wallpaper requires a static image"</string>
+    <string name="text_converted_copies_require_static_images_a4ba7d" formatted="false">"Converted copies require static images"</string>
+    <string name="text_selection_too_large_choose_fewer_files_c3c718" formatted="false">"Selection too large: choose fewer files"</string>
+    <string name="text_use_system_crop_tool_30ec32" formatted="false">"Use system crop tool"</string>
+    <string name="text_the_selection_changed_or_is_no_longer_available_33adcc" formatted="false">"The selection changed or is no longer available. Reopen the menu."</string>
+    <string name="text_the_file_changed_after_selection_reopen_the_menu_d4632a" formatted="false">"The file changed after selection. Reopen the menu."</string>
+    <string name="text_the_file_type_changed_reopen_the_menu_079ffe" formatted="false">"The file type changed. Reopen the menu."</string>
+    <string name="text_the_file_changed_during_verification_3909b4" formatted="false">"The file changed during verification"</string>
+    <string name="text_selection_access_no_longer_available_ee4372" formatted="false">"Selection access no longer available"</string>
+    <string name="text_prepare_and_verify_copies_before_sharing_2a431b" formatted="false">"Prepare and verify copies before sharing"</string>
+    <string name="text_chosen_wallpaper_ba1aba" formatted="false">"Chosen wallpaper"</string>
+    <string name="text_this_system_does_not_offer_wallpaper_cropping_fo_7f7e1f" formatted="false">"This system does not offer wallpaper cropping for this image. You can open it with another app."</string>
+    <string name="text_temporary_copies_retained_retry_cleanup_f0c17a" formatted="false">"Temporary copies retained: retry cleanup"</string>
+    <string name="text_the_selection_is_no_longer_available_reopen_the_672edd" formatted="false">"The selection is no longer available. Reopen the menu."</string>
+    <string name="text_copies_not_recovered_prepare_them_again_7bdf89" formatted="false">"Copies not recovered: prepare them again"</string>
+    <string name="text_selected_file_fc1eda" formatted="false">"selected file"</string>
+    <string name="text_selected_files_43f235" formatted="false">"selected files"</string>
+    <string name="text_android_will_show_available_crop_tools_and_desti_6acb8e" formatted="false">"Android will show available crop tools and destinations. Wallpapers on both displays and iiSU depend on the system."</string>
+    <string name="text_the_chosen_app_receives_temporary_read_access_to_b93bca" formatted="false">"The chosen app receives temporary read access to these files. You can cancel in the Android picker."</string>
+    <string name="text_mixed_file_types_some_apps_may_not_accept_every_6c1468" formatted="false">"Mixed file types: some apps may not accept every file. You can remove items from the selection."</string>
+    <string name="text_originals_fa1fbe" formatted="false">"Originals"</string>
+    <string name="text_image_copies_646a7b" formatted="false">"Image copies"</string>
+    <string name="text_re_encodes_in_srgb_with_orientation_applied_all_722db5" formatted="false">"Re-encodes in sRGB with orientation applied. All original metadata, including location, is excluded; copy names are anonymous. Pixels may still reveal personal information."</string>
+    <string name="text_remove_gifs_videos_and_tracks_to_prepare_image_c_e825c6" formatted="false">"Remove GIFs, videos and tracks to prepare image copies, or choose Originals."</string>
+    <string name="text_format_73e180" formatted="false">"Format"</string>
+    <string name="text_png_preserves_transparency_96ed6e" formatted="false">"PNG preserves transparency."</string>
+    <string name="text_jpeg_quality_1_s_transparent_areas_become_white_5dbac0">"JPEG · quality %1$s%%. Transparent areas become white; lossy compression."</string>
+    <string name="text_maximum_long_edge_no_upscaling_377c8a" formatted="false">"Maximum long edge · no upscaling"</string>
+    <string name="text_original_dimensions_ee2d69" formatted="false">"Original dimensions"</string>
+    <string name="text_copies_do_not_enter_the_catalog_or_trash_after_o_8ae906" formatted="false">"Copies do not enter the catalog or trash. After opening the picker, they remain readable for 24 hours; cleanup runs when next possible. Preparing does not send them."</string>
+    <string name="text_allow_preparation_while_gaming_347fe8" formatted="false">"Allow preparation while gaming"</string>
+    <string name="text_prepare_while_gaming_anyway_encoding_may_slow_th_02a0ee" formatted="false">"Prepare while gaming anyway. Encoding may slow the game and use more battery."</string>
+    <string name="text_original_files_may_contain_location_metadata_no_f14755" formatted="false">"Original files may contain location metadata. No conversion applied."</string>
+    <string name="text_include_1_s_414139">"Include %1$s"</string>
+    <string name="text_no_longer_available_reopen_the_menu_5f5c78" formatted="false">"No longer available: reopen the menu"</string>
+    <string name="text_copies_ready_1_s_c7ea4e">"Copies ready · %1$s"</string>
+    <string name="text_preview_of_1_s_62847b">"Preview of %1$s"</string>
+    <string name="text_recovering_preview_9fa505" formatted="false">"Recovering preview…"</string>
+    <string name="text_preparing_1_s_2_s_c07b72">"Preparing · %1$s / %2$s"</string>
+    <string name="text_checking_access_a6b304" formatted="false">"Checking access…"</string>
+    <string name="text_file_access_denied_check_the_source_160214" formatted="false">"File access denied. Check the source."</string>
+    <string name="text_could_not_open_aa1697" formatted="false">"Could not open"</string>
+    <string name="text_prepare_copies_437567" formatted="false">"Prepare copies"</string>
+    <string name="text_media_unavailable_91dca9" formatted="false">"Media unavailable"</string>
+    <string name="text_device_gallery_unavailable_4a3bc5" formatted="false">"Device gallery unavailable"</string>
+    <string name="text_file_not_found_cf1869" formatted="false">"File not found"</string>
+    <string name="text_provider_unavailable_f52c42" formatted="false">"Provider unavailable"</string>
+    <string name="text_too_many_documents_in_the_folder_dc4e96" formatted="false">"Too many documents in the folder"</string>
+    <string name="text_folder_unavailable_1f6e37" formatted="false">"Folder unavailable"</string>
+    <string name="text_creation_denied_b143ba" formatted="false">"Creation denied"</string>
+    <string name="text_publishing_denied_76e1f0" formatted="false">"Publishing denied"</string>
+    <string name="text_deletion_denied_e0b43a" formatted="false">"Deletion denied"</string>
+    <string name="text_file_unreadable_2af756" formatted="false">"File unreadable"</string>
+    <string name="text_file_not_writable_01d31c" formatted="false">"File not writable"</string>
+    <string name="text_name_not_allowed_513891" formatted="false">"Name not allowed"</string>
+    <string name="text_keep_the_original_extension_renaming_does_not_co_5220af" formatted="false">"Keep the original extension: renaming does not convert the file"</string>
+    <string name="text_name_already_taken_choose_another_name_or_keep_b_ec9d46" formatted="false">"Name already taken. Choose another name or Keep both."</string>
+    <string name="text_too_many_conflicting_names_76409a" formatted="false">"Too many conflicting names"</string>
+    <string name="text_operation_canceled_original_preserved_e6b590" formatted="false">"Operation canceled; original preserved"</string>
+    <string name="text_the_source_changed_the_original_will_not_be_dele_1bfd44" formatted="false">"The source changed. The original will not be deleted; review the current file."</string>
+    <string name="text_the_selection_already_has_a_different_operation_5c4a12" formatted="false">"The selection already has a different operation: resolve it in File operations first"</string>
+    <string name="text_the_chosen_file_changed_reopen_the_picker_65e401" formatted="false">"The chosen file changed: reopen the picker"</string>
+    <string name="text_empty_file_7a1d6c" formatted="false">"Empty file"</string>
+    <string name="text_this_file_has_an_import_to_resolve_in_file_opera_3498d1" formatted="false">"This file has an import to resolve in File operations"</string>
+    <string name="text_not_started_1_s_4866a0">"Not started: %1$s"</string>
+    <string name="text_file_unavailable_6dcc4f" formatted="false">"file unavailable"</string>
+    <string name="text_copy_imported_or_canceled_private_temporary_file_cc6d03" formatted="false">"Copy imported or canceled; private temporary file retained. Resume cleanup."</string>
+    <string name="text_import_data_missing_774e96" formatted="false">"Import data missing"</string>
+    <string name="text_private_copy_unverified_no_new_changes_a39372" formatted="false">"Private copy unverified: no new changes"</string>
+    <string name="text_received_file_changed_original_preserved_141a38" formatted="false">"Received file changed: original preserved"</string>
+    <string name="text_private_storage_unavailable_8e7c33" formatted="false">"Private storage unavailable"</string>
+    <string name="text_insufficient_private_storage_import_stopped_orig_5daa32" formatted="false">"Insufficient private storage: import stopped, original preserved"</string>
+    <string name="text_acquiring_the_private_copy_before_the_destinatio_87ef67" formatted="false">"Acquiring the private copy before the destination…"</string>
+    <string name="text_private_storage_full_original_preserved_2c14a4" formatted="false">"Private storage full: original preserved"</string>
+    <string name="text_received_size_differs_no_file_published_c4dc10" formatted="false">"Received size differs: no file published"</string>
+    <string name="text_the_source_changed_during_acquisition_a4b43b" formatted="false">"The source changed during acquisition"</string>
+    <string name="text_private_copy_damaged_or_source_replaced_ad5ee7" formatted="false">"Private copy damaged or source replaced"</string>
+    <string name="text_could_not_publish_the_private_copy_7f58f5" formatted="false">"Could not publish the private copy"</string>
+    <string name="text_the_name_must_end_in_1_s_e12d3a">"The name must end in .%1$s"</string>
+    <string name="text_resolve_the_operation_on_the_original_first_c24f4b" formatted="false">"Resolve the operation on the original first"</string>
+    <string name="text_choose_a_destination_1_s_2c24d6">"Choose a destination %1$s"</string>
+    <string name="text_for_videos_4cebe5" formatted="false">"for videos"</string>
+    <string name="text_destination_is_not_writable_e03949" formatted="false">"Destination is not writable"</string>
+    <string name="text_choose_an_image_destination_e8911f" formatted="false">"Choose an image destination"</string>
+    <string name="text_hidden_folder_d2c9a2" formatted="false">"Hidden folder"</string>
+    <string name="text_folder_needs_relinking_f72a5e" formatted="false">"Folder needs relinking"</string>
+    <string name="text_name_taken_no_folder_overwritten_9f5059" formatted="false">"Name taken: no folder overwritten"</string>
+    <string name="text_the_provider_did_not_create_a_folder_fc23fd" formatted="false">"The provider did not create a folder"</string>
+    <string name="text_folder_available_1_s_ae9bd3">"Folder available: %1$s"</string>
+    <string name="text_invalid_private_locator_9aa0f7" formatted="false">"Invalid private locator"</string>
+    <string name="text_previous_restore_recovered_private_copy_retained_542ed0" formatted="false">"Previous restore recovered: private copy retained until the original expiry"</string>
+    <string name="text_operation_interrupted_resume_or_cancel_in_file_o_dc8133" formatted="false">"Operation interrupted. Resume or cancel in File operations."</string>
+    <string name="text_the_file_has_already_changed_update_the_selectio_151a60" formatted="false">"The file has already changed; update the selection"</string>
+    <string name="text_resolve_the_other_operation_on_this_file_first_cf0c95" formatted="false">"Resolve the other operation on this file first"</string>
+    <string name="text_item_not_in_trash_1d8ce8" formatted="false">"Item not in trash"</string>
+    <string name="text_media_hidden_disconnected_or_busy_6151f3" formatted="false">"Media hidden, disconnected or busy"</string>
+    <string name="text_restore_unavailable_3d38ae" formatted="false">"Restore unavailable"</string>
+    <string name="text_this_single_file_link_is_read_only_import_a_copy_2b4ea6" formatted="false">"This single-file link is read-only: import a copy or authorize its folder to modify the original"</string>
+    <string name="text_to_move_rename_or_use_trash_authorize_the_folder_44ca3d" formatted="false">"To move, rename or use trash, authorize the folder in Sources. The file stays intact."</string>
+    <string name="text_the_provider_cannot_remove_the_original_c3a48f" formatted="false">"The provider cannot remove the original"</string>
+    <string name="text_choose_an_authorized_destination_folder_d16813" formatted="false">"Choose an authorized destination folder"</string>
+    <string name="text_the_folder_does_not_allow_new_copies_3ec9ee" formatted="false">"The folder does not allow new copies"</string>
+    <string name="text_choose_another_name_in_the_same_folder_0121f0" formatted="false">"Choose another name in the same folder"</string>
+    <string name="text_the_file_is_already_in_the_chosen_folder_3a7291" formatted="false">"The file is already in the chosen folder"</string>
+    <string name="text_choose_a_destination_outside_the_selected_albums_312088" formatted="false">"Choose a destination outside the selected albums."</string>
+    <string name="text_invalid_folder_structure_637a03" formatted="false">"Invalid folder structure."</string>
+    <string name="text_folder_not_created_c4c5b9" formatted="false">"Folder not created"</string>
+    <string name="text_destination_disconnected_or_access_needs_restori_06ea20" formatted="false">"Destination disconnected or access needs restoring"</string>
+    <string name="text_destination_hidden_or_unavailable_54ced7" formatted="false">"Destination hidden or unavailable"</string>
+    <string name="text_choose_an_active_connected_folder_1_s_e19a6c">"Choose an active, connected folder %1$s"</string>
+    <string name="text_for_images_and_videos_3a551b" formatted="false">"for images and videos"</string>
+    <string name="text_operation_cannot_be_resumed_e10db1" formatted="false">"Operation cannot be resumed"</string>
+    <string name="text_private_copy_changed_destination_not_published_b61c4c" formatted="false">"Private copy changed: destination not published"</string>
+    <string name="text_trash_copy_damaged_362903" formatted="false">"Trash copy damaged"</string>
+    <string name="text_destination_verification_failed_original_preserv_108861" formatted="false">"Destination verification failed: original preserved"</string>
+    <string name="text_game_mode_export_deferred_disable_it_and_tap_res_a4b373" formatted="false">"Game mode: export deferred. Disable it and tap Resume."</string>
+    <string name="text_game_mode_import_deferred_disable_it_and_tap_res_450951" formatted="false">"Game mode: import deferred. Disable it and tap Resume."</string>
+    <string name="text_media_record_missing_c01843" formatted="false">"Media record missing"</string>
+    <string name="text_source_unavailable_private_copy_retained_23d417" formatted="false">"Source unavailable: private copy retained"</string>
+    <string name="text_private_copy_not_removed_original_preserved_9a16c1" formatted="false">"Private copy not removed; original preserved"</string>
+    <string name="text_original_preserved_trash_operation_canceled_5a8833" formatted="false">"Original preserved; trash operation canceled"</string>
+    <string name="text_copy_in_trash_no_further_removal_of_the_original_6a1315" formatted="false">"Copy in trash; no further removal of the original"</string>
+    <string name="text_no_remaining_copy_in_trash_5e3e21" formatted="false">"No remaining copy in trash"</string>
+    <string name="text_the_item_changed_confirm_again_79bd2a" formatted="false">"The item changed: confirm again"</string>
+    <string name="text_source_identity_changed_289adf" formatted="false">"Source identity changed"</string>
+    <string name="text_result_recovered_2cc841" formatted="false">"Result recovered"</string>
+    <string name="text_destination_identity_changed_no_new_changes_2bc461" formatted="false">"Destination identity changed: no new changes"</string>
+    <string name="text_the_source_is_hidden_or_disabled_no_new_changes_3a5881" formatted="false">"The source is hidden or disabled. No new changes."</string>
+    <string name="text_trash_unavailable_474ba5" formatted="false">"Trash unavailable"</string>
+    <string name="text_publishing_interrupted_destination_needs_verific_e95574" formatted="false">"Publishing interrupted: destination needs verification"</string>
+    <string name="text_trash_archive_unavailable_65088e" formatted="false">"Trash archive unavailable"</string>
+    <string name="text_insufficient_space_to_protect_the_file_original_837367" formatted="false">"Insufficient space to protect the file: original preserved"</string>
+    <string name="text_could_not_reserve_the_private_copy_557a15" formatted="false">"Could not reserve the private copy"</string>
+    <string name="text_ambiguous_temporary_file_check_the_destination_7fc5f4" formatted="false">"Ambiguous temporary file: check the destination"</string>
+    <string name="text_could_not_publish_the_trash_copy_dd8550" formatted="false">"Could not publish the trash copy"</string>
+    <string name="text_publishing_conflict_original_preserved_2f5ae0" formatted="false">"Publishing conflict: original preserved"</string>
+    <string name="text_this_provider_cannot_publish_the_temporary_file_949885" formatted="false">"This provider cannot publish the temporary file. Choose another destination."</string>
+    <string name="text_the_provider_changed_the_requested_name_the_orig_b5eddd" formatted="false">"The provider changed the requested name. The original is preserved."</string>
+    <string name="text_the_destination_name_changed_no_further_deletion_4b4834" formatted="false">"The destination name changed. No further deletion."</string>
+    <string name="text_invalid_duplicate_protection_011a1a" formatted="false">"Invalid duplicate protection"</string>
+    <string name="text_the_provider_did_not_remove_the_original_99c355" formatted="false">"The provider did not remove the original"</string>
+    <string name="text_source_cannot_be_verified_6e3e1e" formatted="false">"Source cannot be verified"</string>
+    <string name="text_in_trash_for_seven_days_e05a70" formatted="false">"In trash for seven days"</string>
+    <string name="text_copy_complete_original_preserved_51eb2c" formatted="false">"Copy complete: original preserved"</string>
+    <string name="text_copy_imported_into_the_chosen_folder_external_or_edcde6" formatted="false">"Copy imported into the chosen folder: external original preserved"</string>
+    <string name="text_first_frame_exported_original_gif_and_favorites_8d9d76" formatted="false">"First frame exported: original GIF and Favorites preserved"</string>
+    <string name="text_image_exported_original_and_favorites_preserved_5e5c41" formatted="false">"Image exported: original and Favorites preserved"</string>
+    <string name="text_video_segment_exported_original_favorites_and_co_e1d82f" formatted="false">"Video segment exported: original, Favorites and collections preserved"</string>
+    <string name="text_audio_segment_exported_original_favorites_and_pl_bb24a1" formatted="false">"Audio segment exported: original, Favorites and playlists preserved"</string>
+    <string name="text_operation_complete_9b2712" formatted="false">"Operation complete"</string>
+    <string name="text_interrupted_verify_copy_and_original_before_resu_eb3b9a" formatted="false">"Interrupted: verify copy and original before resuming"</string>
+    <string name="text_destination_published_verify_the_result_before_r_c120e7" formatted="false">"Destination published: verify the result before resolving the operation. No further removal."</string>
+    <string name="text_operation_failed_original_preserved_4dd031" formatted="false">"Operation failed: original preserved"</string>
+    <string name="text_source_folder_needs_verification_c7496b" formatted="false">"Source folder needs verification"</string>
+    <string name="text_recipe_missing_0d4b6e" formatted="false">"Recipe missing"</string>
+    <string name="text_invalid_recipe_format_ec8914" formatted="false">"Invalid recipe format"</string>
+    <string name="text_source_type_changed_d2e607" formatted="false">"Source type changed"</string>
+    <string name="text_the_source_is_no_longer_available_407cb7" formatted="false">"The source is no longer available"</string>
+    <string name="text_invalid_export_identity_2dbcad" formatted="false">"Invalid export identity"</string>
+    <string name="text_private_temporary_file_retained_resume_or_cancel_e646b3" formatted="false">"Private temporary file retained: resume or cancel cleanup"</string>
+    <string name="text_source_type_or_format_changed_2e65b2" formatted="false">"Source type or format changed"</string>
+    <string name="text_export_storage_unavailable_5041f2" formatted="false">"Export storage unavailable"</string>
+    <string name="text_encoding_segment_4f4ac8" formatted="false">"Encoding segment…"</string>
+    <string name="text_insufficient_private_storage_original_preserved_4f3855" formatted="false">"Insufficient private storage: original preserved"</string>
+    <string name="text_encoding_segment_1_s_a411b2">"Encoding segment: %1$s%%"</string>
+    <string name="text_saving_the_new_copy_d7e74b" formatted="false">"Saving the new copy…"</string>
+    <string name="text_temporary_file_retained_1_s_3157a4">"Temporary file retained: %1$s"</string>
+    <string name="text_trash_date_unverified_591d7a" formatted="false">"Trash date unverified"</string>
+    <string name="text_destination_album_unavailable_1d55d6" formatted="false">"Destination album unavailable"</string>
+    <string name="text_destination_needs_relinking_file_preserved_6cd661" formatted="false">"Destination needs relinking; file preserved"</string>
+    <string name="text_file_restored_private_copy_still_retained_resume_f3fe8f" formatted="false">"File restored; private copy still retained. Resume cleanup or keep the backup copy."</string>
+    <string name="text_file_unavailable_dad522" formatted="false">"File unavailable"</string>
+    <string name="text_restore_not_yet_indexed_use_resume_6e4516" formatted="false">"Restore not yet indexed: use Resume"</string>
+    <string name="text_restored_backup_copy_retained_in_trash_until_the_634382" formatted="false">"Restored; backup copy retained in trash until the original expiry"</string>
+    <string name="text_source_already_removed_or_unverifiable_use_resum_3e26c2" formatted="false">"Source already removed or unverifiable: use Resume; private copy remains protected"</string>
+    <string name="text_source_already_removed_use_resume_to_recover_ref_4c3a87" formatted="false">"Source already removed: use Resume to recover references at the destination"</string>
+    <string name="text_destination_changed_85142f" formatted="false">"Destination changed"</string>
+    <string name="text_copy_retained_move_incomplete_no_further_deletio_f4c49b" formatted="false">"Copy retained: move incomplete, no further deletion"</string>
+    <string name="text_copy_retained_references_need_restoring_1_s_e7e976">"Copy retained: references need restoring. %1$s"</string>
+    <string name="text_trash_item_changed_confirm_the_target_again_cd7047" formatted="false">"Trash item changed: confirm the target again"</string>
+    <string name="text_restore_or_another_operation_in_progress_6bf31c" formatted="false">"Restore or another operation in progress"</string>
+    <string name="text_the_item_has_not_expired_148c30" formatted="false">"The item has not expired"</string>
+    <string name="text_private_deletion_failed_208163" formatted="false">"Private deletion failed"</string>
+    <string name="text_private_copy_permanently_deleted_cb214b" formatted="false">"Private copy permanently deleted"</string>
+    <string name="text_cleanup_interrupted_1_s_3f18c1">"Cleanup interrupted: %1$s"</string>
+    <string name="text_file_operations_7333a0" formatted="false">"File operations"</string>
+    <string name="text_progress_and_cancellation_in_file_operations_86c746" formatted="false">"Progress and cancellation in File operations"</string>
+    <string name="text_unknown_size_e9b931" formatted="false">"Unknown size"</string>
+    <string name="text_copy_ebd162" formatted="false">"Copy"</string>
+    <string name="text_import_a_copy_9719ca" formatted="false">"Import a copy"</string>
+    <string name="text_move_f44eb9" formatted="false">"Move"</string>
+    <string name="text_move_to_trash_dd41b3" formatted="false">"Move to trash"</string>
+    <string name="text_export_gif_frame_a7c5cd" formatted="false">"Export GIF frame"</string>
+    <string name="text_export_image_b28177" formatted="false">"Export image"</string>
+    <string name="text_export_video_segment_d137d3" formatted="false">"Export video segment"</string>
+    <string name="text_export_audio_segment_a0faff" formatted="false">"Export audio segment"</string>
+    <string name="text_restore_cf1718" formatted="false">"Restore"</string>
+    <string name="text_recover_copy_1ee15f" formatted="false">"Recover copy"</string>
+    <string name="text_delete_permanently_8a62e5" formatted="false">"Delete permanently"</string>
+    <string name="text_new_folder_cf5925" formatted="false">"New folder"</string>
+    <string name="text_keep_copy_in_trash_725033" formatted="false">"Keep copy in trash"</string>
+    <string name="text_keep_original_64df82" formatted="false">"Keep original"</string>
+    <string name="text_operation_053259" formatted="false">"Operation"</string>
+    <string name="text_1_s_files_fe3ced">" · %1$s files"</string>
+    <string name="text_source_1_s_n_9a21ed">"Source: %1$s\n"</string>
+    <string name="text_1_s_files_2_s_0660da">"%1$s files · %2$s"</string>
+    <string name="text_size_needs_verification_bf47ec" formatted="false">"Size needs verification"</string>
+    <string name="text_selected_media_move_to_trash_original_folders_re_6f7f18" formatted="false">"Selected media move to trash; original folders remain."</string>
+    <string name="text_album_folders_and_media_structure_will_be_recrea_1c7b5d" formatted="false">"Album folders and media structure will be recreated at the destination. Non-media files will not be transferred."</string>
+    <string name="text_keep_1_s_nthis_content_will_also_be_checked_agai_5f06f3">"Keep: %1$s\nThis content will also be checked again before removal."</string>
+    <string name="text_copy_unavailable_0f205e" formatted="false">"Copy unavailable"</string>
+    <string name="text_a_verified_copy_will_be_kept_for_seven_days_the_dcf62b" formatted="false">"A verified copy will be kept for seven days. The original is removed only after verification."</string>
+    <string name="text_uninstalling_the_app_or_clearing_its_data_also_d_cecefb" formatted="false">"Uninstalling the app or clearing its data also deletes the trash."</string>
+    <string name="text_choose_destination_7320c1" formatted="false">"Choose destination"</string>
+    <string name="text_choose_the_destination_8c4b9e" formatted="false">"Choose the destination"</string>
+    <string name="text_no_authorized_folder_use_choose_another_folder_t_c6cfc5" formatted="false">"No authorized folder. Use “Choose another folder” to grant access."</string>
+    <string name="text_new_folder_at_destination_db21b2" formatted="false">"New folder at destination"</string>
+    <string name="text_destination_same_folder_a0be2e" formatted="false">"Destination: same folder"</string>
+    <string name="text_name_1_s_7ad389">"Name: %1$s"</string>
+    <string name="text_keep_both_if_the_name_is_taken_cbae14" formatted="false">"Keep both if the name is taken"</string>
+    <string name="text_no_files_will_be_overwritten_favorites_and_colle_5a422b" formatted="false">"No files will be overwritten. Favorites and collections follow moves and restores."</string>
+    <string name="text_if_the_file_is_playing_playback_stops_before_rem_8136e9" formatted="false">"If the file is playing, playback stops before removal."</string>
+    <string name="text_preparing_7e2891" formatted="false">"Preparing…"</string>
+    <string name="text_file_name_a26de2" formatted="false">"File name"</string>
+    <string name="text_keep_the_original_extension_the_name_does_not_ch_02a5b8" formatted="false">"Keep the original extension. The name does not change the file format."</string>
+    <string name="text_use_this_name_c09501" formatted="false">"Use this name"</string>
+    <string name="text_folder_name_7eaa40" formatted="false">"Folder name"</string>
+    <string name="text_if_the_name_is_taken_a_suffix_will_be_used_no_fo_261df9" formatted="false">"If the name is taken, a suffix will be used. No folder will be overwritten."</string>
+    <string name="text_creating_ad9b47" formatted="false">"Creating…"</string>
+    <string name="text_create_9bf626" formatted="false">"Create"</string>
+    <string name="text_all_done_046f31" formatted="false">"All done"</string>
+    <string name="text_progress_results_and_recovery_of_your_file_opera_e3a3f2" formatted="false">"Progress, results and recovery of your file operations appear here."</string>
+    <string name="text_each_file_has_its_own_result_a_successful_copy_w_1dda18" formatted="false">"Each file has its own result. A successful copy with a denied deletion remains a partial move."</string>
+    <string name="text_operations_continue_without_notifications_enable_5afbfb" formatted="false">"Operations continue without notifications. Enable them to follow copies while using other apps."</string>
+    <string name="text_enable_operation_notifications_d6bcd6" formatted="false">"Enable operation notifications"</string>
+    <string name="text_waiting_6f3524" formatted="false">"Waiting"</string>
+    <string name="text_preparing_copy_ccb050" formatted="false">"Preparing copy"</string>
+    <string name="text_copying_0ed6bc" formatted="false">"Copying"</string>
+    <string name="text_acquiring_external_file_47201b" formatted="false">"Acquiring external file"</string>
+    <string name="text_private_copy_verified_0e4d4b" formatted="false">"Private copy verified"</string>
+    <string name="text_preparing_image_07c726" formatted="false">"Preparing image"</string>
+    <string name="text_encoding_new_copy_cddadd" formatted="false">"Encoding new copy"</string>
+    <string name="text_deferred_in_game_mode_318f70" formatted="false">"Deferred in Game mode"</string>
+    <string name="text_verifying_integrity_a2ae93" formatted="false">"Verifying integrity"</string>
+    <string name="text_publishing_destination_c735d6" formatted="false">"Publishing destination"</string>
+    <string name="text_removing_original_please_wait_5de067" formatted="false">"Removing original · please wait"</string>
+    <string name="text_updating_references_7a459f" formatted="false">"Updating references"</string>
+    <string name="text_completed_97967f" formatted="false">"Completed"</string>
+    <string name="text_copy_retained_move_incomplete_9fedd1" formatted="false">"Copy retained · move incomplete"</string>
+    <string name="text_canceled_fdb1ba" formatted="false">"Canceled"</string>
+    <string name="text_skipped_9006eb" formatted="false">"Skipped"</string>
+    <string name="text_permanent_cleanup_in_progress_dbdb7b" formatted="false">"Permanent cleanup in progress"</string>
+    <string name="text_imported_cleaning_private_copy_343dbb" formatted="false">"Imported · cleaning private copy"</string>
+    <string name="text_restored_cleaning_private_copy_4c8f4d" formatted="false">"Restored · cleaning private copy"</string>
+    <string name="text_original_preserved_015250" formatted="false">"Original preserved"</string>
+    <string name="text_restored_backup_copy_retained_ea9ba2" formatted="false">"Restored · backup copy retained"</string>
+    <string name="text_partial_result_6dc371" formatted="false">"Partial result"</string>
+    <string name="text_interrupted_verification_required_98ab9d" formatted="false">"Interrupted · verification required"</string>
+    <string name="text_incomplete_90fb31" formatted="false">"Incomplete"</string>
+    <string name="text_keep_copy_782cd4" formatted="false">"Keep copy"</string>
+    <string name="text_keep_backup_copy_bfdd54" formatted="false">"Keep backup copy"</string>
+    <string name="text_cancel_when_safe_cb9d24" formatted="false">"Cancel when safe"</string>
+    <string name="text_a_second_chance_0fddaa" formatted="false">"A second chance"</string>
+    <string name="text_restore_within_seven_days_cleanup_runs_when_next_ca4f77" formatted="false">"Restore within seven days. Cleanup runs when next possible after expiry. Uninstalling the app or clearing its data also deletes the trash."</string>
+    <string name="text_the_clock_changed_automatic_cleanup_is_paused_8501bb" formatted="false">"The clock changed: automatic cleanup is paused."</string>
+    <string name="text_check_date_and_resume_cleanup_b9c526" formatted="false">"Check date and resume cleanup"</string>
+    <string name="text_empty_trash_1c01ef" formatted="false">"Empty trash"</string>
+    <string name="text_trash_is_empty_bd2e58" formatted="false">"Trash is empty"</string>
+    <string name="text_no_files_waiting_to_be_restored_c8ec60" formatted="false">"No files waiting to be restored."</string>
+    <string name="text_backup_copy_after_restore_d3b116" formatted="false">"Backup copy after restore"</string>
+    <string name="text_source_unavailable_3bc08a" formatted="false">"Source unavailable"</string>
+    <string name="text_1_s_expires_2_s_8918f6">"%1$s · expires %2$s"</string>
+    <string name="text_permanently_delete_1_s_files_5b028e">"Permanently delete %1$s files?"</string>
+    <string name="text_these_copies_can_no_longer_be_restored_07ed54" formatted="false">"These copies can no longer be restored."</string>
+    <string name="text_is_the_system_date_correct_e852f9" formatted="false">"Is the system date correct?"</string>
+    <string name="text_1_s_nconfirming_resumes_cleanup_of_expired_copie_d2bb79">"%1$s\nConfirming resumes cleanup of expired copies. Correct the date first if it is wrong."</string>
+    <string name="text_confirm_date_6b308b" formatted="false">"Confirm date"</string>
+    <string name="text_preview_too_large_choose_an_original_subfolder_c1fdcf" formatted="false">"Preview too large: choose an original subfolder"</string>
+    <string name="text_allow_relinking_in_game_mode_670757" formatted="false">"Allow relinking in Game mode"</string>
+    <string name="text_choose_a_folder_in_the_android_picker_354f26" formatted="false">"Choose a folder in the Android picker"</string>
+    <string name="text_the_folder_must_allow_persistent_read_access_402191" formatted="false">"The folder must allow persistent read access"</string>
+    <string name="text_source_unavailable_ea3980" formatted="false">"Source unavailable"</string>
+    <string name="text_choose_the_original_folder_ab2296" formatted="false">"Choose the original folder"</string>
+    <string name="text_no_missing_references_in_this_original_folder_749906" formatted="false">"No missing references in this original folder"</string>
+    <string name="text_too_many_folders_choose_an_original_subfolder_922de2" formatted="false">"Too many folders: choose an original subfolder"</string>
+    <string name="text_too_many_documents_choose_an_original_subfolder_495209" formatted="false">"Too many documents: choose an original subfolder"</string>
+    <string name="text_re_enable_this_folder_in_sources_first_70d532" formatted="false">"Re-enable this folder in Sources first"</string>
+    <string name="text_check_matches_before_relinking_48b12f" formatted="false">"Check matches before relinking"</string>
+    <string name="text_choose_only_one_reference_for_each_file_659de7" formatted="false">"Choose only one reference for each file"</string>
+    <string name="text_reference_not_in_preview_a3e66e" formatted="false">"Reference not in preview"</string>
+    <string name="text_match_not_in_preview_b32852" formatted="false">"Match not in preview"</string>
+    <string name="text_a_file_changed_choose_the_folder_again_e4947d" formatted="false">"A file changed: choose the folder again"</string>
+    <string name="text_the_chosen_file_is_empty_or_unreadable_4ea2f0" formatted="false">"The chosen file is empty or unreadable"</string>
+    <string name="text_the_library_changed_refresh_the_preview_by_choos_cc2201" formatted="false">"The library changed: refresh the preview by choosing the folder again"</string>
+    <string name="text_finish_file_operations_before_relinking_544ffb" formatted="false">"Finish file operations before relinking"</string>
+    <string name="text_file_not_indexed_check_exclusions_and_access_e8ce8a" formatted="false">"File not indexed: check exclusions and access"</string>
+    <string name="text_several_matches_point_to_the_same_file_select_on_c691b2" formatted="false">"Several matches point to the same file: select only one"</string>
+    <string name="text_relinking_not_applied_choose_the_folder_again_184529" formatted="false">"Relinking not applied; choose the folder again"</string>
+    <string name="text_folder_unavailable_choose_it_again_no_originals_2a7f89" formatted="false">"Folder unavailable. Choose it again; no originals changed."</string>
+    <string name="text_preview_unavailable_choose_the_folder_again_no_r_2a78f0" formatted="false">"Preview unavailable: choose the folder again. No references changed."</string>
+    <string name="text_folder_read_choose_and_verify_matches_no_persist_cd57e0" formatted="false">"Folder read. Choose and verify matches; no persistent access acquired."</string>
+    <string name="text_folder_picker_unavailable_on_this_panel_72be79" formatted="false">"Folder picker unavailable on this panel"</string>
+    <string name="text_find_your_folder_d5b7f4" formatted="false">"Find your folder"</string>
+    <string name="text_check_matches_871bbc" formatted="false">"Check matches"</string>
+    <string name="text_verifying_1_s_documents_examined_55eddd">"Verifying · %1$s documents examined"</string>
+    <string name="text_original_source_1_s_b2b855">"Original source: %1$s"</string>
+    <string name="text_unavailable_1d80f0" formatted="false">"unavailable"</string>
+    <string name="text_specify_the_original_folder_then_its_new_locatio_9026c2" formatted="false">"Specify the original folder, then its new location. Only metadata is read before confirmation: no files are copied or changed."</string>
+    <string name="text_allow_this_check_in_game_mode_5680c6" formatted="false">"Allow this check in Game mode"</string>
+    <string name="text_choose_original_folder_7c8b3b" formatted="false">"Choose original folder…"</string>
+    <string name="text_choose_new_folder_9ec30a" formatted="false">"Choose new folder…"</string>
+    <string name="text_the_chosen_folder_is_added_or_recovered_as_a_rea_3251be" formatted="false">"The chosen folder is added or recovered as a read-only source only after Relink. Unselected media are indexed without inheriting previous Favorites."</string>
+    <string name="text_from_1_s_2e9c11">"From: %1$s"</string>
+    <string name="text_to_1_s_e9250f">"To: %1$s"</string>
+    <string name="text_1_s_references_2_s_media_in_the_folder_fff099">"%1$s references · %2$s media in the folder"</string>
+    <string name="text_1_s_selected_matches_01a2e5">"%1$s selected matches"</string>
+    <string name="text_path_name_and_size_are_clues_the_backup_has_no_f_3d5d0a" formatted="false">"Path, name and size are clues: the backup has no file hashes. Verify suggestions before linking. Ambiguous cases and different versions require individual choices."</string>
+    <string name="text_select_unique_matches_1_s_87601c">"Select unique matches (%1$s)"</string>
+    <string name="text_clear_selection_508e08" formatted="false">"Clear selection"</string>
+    <string name="text_chosen_1_s_c8f1bf">"Chosen: %1$s"</string>
+    <string name="text_no_matches_in_the_folder_52d8ec" formatted="false">"No matches in the folder"</string>
+    <string name="text_1_s_candidates_choice_required_107fb7">"%1$s candidates: choice required"</string>
+    <string name="text_different_data_or_path_verification_required_660629" formatted="false">"Different data or path: verification required"</string>
+    <string name="text_suggested_unique_match_needs_confirmation_5111c8" formatted="false">"Suggested unique match, needs confirmation"</string>
+    <string name="text_excluded_album_stays_excluded_after_relinking_8db313" formatted="false">"Excluded album: stays excluded after relinking."</string>
+    <string name="text_check_candidates_8155a8" formatted="false">"Check candidates…"</string>
+    <string name="text_check_change_36b194" formatted="false">"Check / change…"</string>
+    <string name="text_leave_unlinked_16ff6e" formatted="false">"Leave unlinked"</string>
+    <string name="text_confirming_authorizes_the_entire_folder_read_onl_43d5fe">"Confirming authorizes the entire folder read-only: %1$s. Only selected references transfer. Favorites, collections, covers and pins follow files; exclusions remain active."</string>
+    <string name="text_music_and_local_covers_without_adding_them_to_ph_316e17" formatted="false">"music and local covers, without adding them to Photos"</string>
+    <string name="text_photos_and_videos_1f1516" formatted="false">"photos and videos"</string>
+    <string name="text_photos_videos_and_music_564f16" formatted="false">"photos, videos and music"</string>
+    <string name="text_i_checked_the_selected_matches_71f4d0" formatted="false">"I checked the selected matches"</string>
+    <string name="text_discard_838670" formatted="false">"Discard"</string>
+    <string name="text_choices_discarded_permissions_and_references_pre_811d22" formatted="false">"Choices discarded; permissions and references preserved"</string>
+    <string name="text_relink_e366de" formatted="false">"Relink"</string>
+    <string name="text_1_s_references_relinked_folder_authorized_for_re_e1eaeb">"%1$s references relinked. Folder authorized for reading; no originals changed or media started."</string>
+    <string name="text_original_folder_e41647" formatted="false">"Original folder"</string>
+    <string name="text_search_backup_059b95" formatted="false">"Search backup"</string>
+    <string name="text_candidates_for_1_s_b55cd1">"Candidates for %1$s"</string>
+    <string name="text_compare_the_reference_f68129" formatted="false">"Compare the reference"</string>
+    <string name="text_date_unavailable_932e7b" formatted="false">"date unavailable"</string>
+    <string name="text_original_1_s_n_2_s_3_s_n_4_s_cbe330">"Original: %1$s\n%2$s · %3$s\n%4$s"</string>
+    <string name="text_unknown_size_c08f91" formatted="false">"unknown size"</string>
+    <string name="text_chosen_1_s_n_2_s_3_s_n_4_s_5b7d73">"Chosen: %1$s\n%2$s · %3$s\n%4$s"</string>
+    <string name="text_candidate_preview_142090" formatted="false">"Candidate preview"</string>
+    <string name="text_this_file_is_already_chosen_for_another_referenc_995a49" formatted="false">"This file is already chosen for another reference. Keep just one."</string>
+    <string name="text_confirm_only_if_you_recognize_the_file_identical_c20d48" formatted="false">"Confirm only if you recognize the file: identical names and sizes do not prove identity. The choice applies only when you tap Relink."</string>
+    <string name="text_choose_this_one_255533" formatted="false">"Choose this one"</string>
+    <string name="text_home_p_1_s_in_background_2_s_8f77e6">"Home: P%1$s in background=%2$s"</string>
+    <string name="text_choose_two_available_screens_first_77329a" formatted="false">"Choose two available screens first."</string>
+    <string name="text_startup_preference_not_saved_febc48" formatted="false">"Startup preference not saved."</string>
+    <string name="text_at_startup_the_app_uses_both_detected_screens_a_b5d260" formatted="false">"At startup, the app uses both detected screens. A screen given to a game stays free."</string>
+    <string name="text_process_started_checking_availability_and_releas_262ec8" formatted="false">"Process started; checking availability and released displays"</string>
+    <string name="text_lower_fa89db" formatted="false">"Lower"</string>
+    <string name="text_upper_ae009f" formatted="false">"Upper"</string>
+    <string name="text_screen_1_s_55a281">"Screen %1$s"</string>
+    <string name="text_thor_layout_not_saved_e72a31" formatted="false">"Thor layout not saved."</string>
+    <string name="text_thor_albums_below_preview_above_the_button_swaps_218580" formatted="false">"Thor: albums below, preview above. The ⇅ button swaps content."</string>
+    <string name="text_screen_1_s_label_2_s_b21ce5">"Screen %1$s: label %2$s"</string>
+    <string name="text_could_not_save_label_1a4871" formatted="false">"Could not save label."</string>
+    <string name="text_state_not_saved_no_new_window_opened_eaf55b" formatted="false">"State not saved. No new window opened."</string>
+    <string name="text_display_no_longer_available_8322f0" formatted="false">"Display no longer available."</string>
+    <string name="text_android_does_not_allow_an_activity_on_screen_1_s_d097fe">"Android does not allow an Activity on screen %1$s."</string>
+    <string name="text_explicit_panel_1_s_request_screen_2_s_80a0d8">"Explicit panel %1$s request → screen %2$s"</string>
+    <string name="text_opening_refused_1_s_no_automatic_retry_f38df6">"Opening refused: %1$s. No automatic retry."</string>
+    <string name="text_window_display_unavailable_3f5404" formatted="false">"Window display unavailable."</string>
+    <string name="text_requested_display_1_s_actual_2_s_7980a8">"requested display=%1$s, actual=%2$s"</string>
+    <string name="text_released_display_52a9ac" formatted="false">"released display"</string>
+    <string name="text_restore_without_verifiable_authorization_a0331e" formatted="false">"restore without verifiable authorization"</string>
+    <string name="text_panel_1_s_closed_2_s_907fdd">"Panel %1$s closed: %2$s"</string>
+    <string name="text_not_visible_7a468e" formatted="false">"not visible"</string>
+    <string name="text_swap_available_only_when_both_panels_are_visible_eabf0e" formatted="false">"Swap available only when both panels are visible."</string>
+    <string name="text_roles_swapped_no_activity_started_4edeec" formatted="false">"Roles swapped; no Activity started"</string>
+    <string name="text_panels_swapped_selection_preserved_ac0b05" formatted="false">"Panels swapped. Selection preserved."</string>
+    <string name="text_choose_another_available_display_9374e5" formatted="false">"Choose another available display."</string>
+    <string name="text_request_sent_to_screen_1_s_check_the_actual_pane_24e14b">"Request sent to screen %1$s. Check the actual panel positions."</string>
+    <string name="text_only_this_screen_others_remain_released_until_ex_55a96a" formatted="false">"Only this screen. Others remain released until explicitly requested."</string>
+    <string name="text_other_displays_released_screen_1_s_remains_bcd1b9">"Other displays released; screen %1$s remains"</string>
+    <string name="text_open_the_second_panel_first_or_use_back_to_close_ceebad" formatted="false">"Open the second panel first, or use Back to close."</string>
+    <string name="text_display_released_the_gallery_continues_on_the_ot_6b18c1" formatted="false">"Display released. The gallery continues on the other screen."</string>
+    <string name="text_screen_1_s_release_saved_closing_locally_4b6ad9">"Screen %1$s release saved; closing locally"</string>
+    <string name="text_thor_gallery_beta_development_display_report_dd517c" formatted="false">"DS Gallery · beta development · display report"</string>
+    <string name="text_window_p_1_s_display_2_s_focus_3_s_53bd0a">"Window: P%1$s · display %2$s · focus %3$s"</string>
+    <string name="text_anchor_1_s_released_2_s_roles_swapped_3_s_526aa9">"Anchor: %1$s; released: %2$s; roles swapped: %3$s"</string>
+    <string name="text_startup_automatic_1_s_saved_pair_2_s_valid_state_1cc6de">"Startup: automatic=%1$s; saved pair=%2$s; valid state=%3$s"</string>
+    <string name="text_visible_panels_1_s_f349c1">"Visible panels: %1$s"</string>
+    <string name="text_catalog_and_permissions_049549" formatted="false">"--- Catalog and permissions ---"</string>
+    <string name="text_not_allowed_0062d3" formatted="false">"not allowed"</string>
+    <string name="text_android_gallery_1_s_fcad13">"Android gallery: %1$s"</string>
+    <string name="text_included_1_s_reachable_2_s_last_scan_3_s_error_4_ead44c">"included=%1$s; reachable=%2$s; last scan=%3$s; error=%4$s"</string>
+    <string name="text_not_yet_in_the_catalog_986ad9" formatted="false">"not yet in the catalog"</string>
+    <string name="text_chosen_sources_1_s_indexed_media_2_s_albums_3_s_83cb72">"Chosen sources: %1$s; indexed media: %2$s; albums: %3$s"</string>
+    <string name="text_scan_running_1_s_items_2_s_error_3_s_950caf">"Scan: running=%1$s; items=%2$s; error=%3$s"</string>
+    <string name="text_recent_events_2537da" formatted="false">"--- Recent events ---"</string>
+    <string name="text_t01t12_t83_require_thor_verification_this_report_85f844" formatted="false">"T01–T12/T83: require Thor verification. This report does not certify hardware testing."</string>
+    <string name="text_display_added_1_s_no_window_opened_addc3a">"Display added %1$s; no window opened"</string>
+    <string name="text_display_identity_changed_reopen_on_one_screen_an_347828" formatted="false">"Display identity changed. Reopen on one screen and check the assignment."</string>
+    <string name="text_display_configuration_changed_1_s_a9092c">"Display configuration changed %1$s"</string>
+    <string name="text_display_1_s_disconnected_no_panel_moved_automati_c72848">"Display %1$s disconnected. No panel moved automatically."</string>
+    <string name="text_preview_unreadable_9374e0" formatted="false">"Preview unreadable"</string>
+    <string name="text_play_da1576" formatted="false">"Play"</string>
+    <string name="text_favorite_06bae3" formatted="false">"Favorite"</string>
+    <string name="text_artist_unavailable_c612a4" formatted="false">"Artist unavailable"</string>
+    <string name="text_photos_494e08" formatted="false">"Photos"</string>
+    <string name="text_favorites_d1d566" formatted="false">"Favorites"</string>
+    <string name="text_panel_swap_6e908b" formatted="false">"panel swap"</string>
+    <string name="text_selection_unavailable_3930d5" formatted="false">"Selection unavailable"</string>
+    <string name="text_media_unavailable_for_comparison_8fd848" formatted="false">"Media unavailable for comparison"</string>
+    <string name="text_1_s_selected_e2edc4">"%1$s selected"</string>
+    <string name="text_selected_media_options_079c9a" formatted="false">"Selected media options"</string>
+    <string name="text_selected_album_options_839aa6" formatted="false">"Selected album options"</string>
+    <string name="text_larger_albums_806813" formatted="false">"Larger albums"</string>
+    <string name="text_smaller_albums_52ae9a" formatted="false">"Smaller albums"</string>
+    <string name="text_search_albums_f6f4bb" formatted="false">"Search albums"</string>
+    <string name="text_search_collection_053f46" formatted="false">"Search collection"</string>
+    <string name="text_close_search_9cf7ab" formatted="false">"Close search"</string>
+    <string name="text_comparison_5db262" formatted="false">"Comparison"</string>
+    <string name="text_folders_and_permissions_80735e" formatted="false">"Folders and permissions"</string>
+    <string name="text_relink_files_f3aef2" formatted="false">"Relink files"</string>
+    <string name="text_relink_a_folder_d8543d" formatted="false">"Relink a folder"</string>
+    <string name="text_hidden_albums_5ff5a5" formatted="false">"Hidden albums"</string>
+    <string name="text_collections_2ffdd0" formatted="false">"Collections"</string>
+    <string name="text_settings_7b855c" formatted="false">"Settings"</string>
+    <string name="text_folders_and_collections_2083b2" formatted="false">"Folders and collections"</string>
+    <string name="text_file_management_73f374" formatted="false">"File management"</string>
+    <string name="text_screens_and_tools_153eab" formatted="false">"Screens and backup"</string>
+    <string name="text_controls_3c6824" formatted="false">"Controls"</string>
+    <string name="text_controls_54b475" formatted="false">"Controls"</string>
+    <string name="text_save_settings_4daada" formatted="false">"Save settings"</string>
+    <string name="text_two_screens_dde4ec" formatted="false">"Two screens"</string>
+    <string name="text_trash_9a3a36" formatted="false">"Trash"</string>
+    <string name="text_operations_389997" formatted="false">"Operations"</string>
+    <string name="text_identical_duplicates_5f7af8" formatted="false">"Identical duplicates"</string>
+    <string name="text_photo_frame_b05b1e" formatted="false">"Photo frame"</string>
+    <string name="text_touch_gestures_241cad" formatted="false">"Touch gestures"</string>
+    <string name="text_list_view_8cb747" formatted="false">"List view"</string>
+    <string name="text_grid_view_c4886b" formatted="false">"Grid view"</string>
+    <string name="text_search_and_filter_c3edb2" formatted="false">"Search and filter"</string>
+    <string name="text_edit_search_1_s_b5e403">"Edit search: %1$s"</string>
+    <string name="text_preparing_your_library_373c55" formatted="false">"Preparing your library…"</string>
+    <string name="text_play_this_collection_65be1f" formatted="false">"Play this collection"</string>
+    <string name="text_swap_screens_7455a4" formatted="false">"Swap screens"</string>
+    <string name="text_1_s_selected_media_babf2f">"%1$s selected media"</string>
+    <string name="text_select_all_0e5b81" formatted="false">"Select all"</string>
+    <string name="text_deselect_all_d1cf57" formatted="false">"Deselect all"</string>
+    <string name="text_add_to_favorites_ecc911" formatted="false">"Add to Favorites"</string>
+    <string name="text_add_to_a_collection_c19880" formatted="false">"Add to a collection"</string>
+    <string name="text_share_628ff2" formatted="false">"Share…"</string>
+    <string name="text_the_selection_changed_select_the_files_again_83e934" formatted="false">"The selection changed. Select the files again."</string>
+    <string name="text_welcome_to_thor_gallery_f22b0e" formatted="false">"Welcome to DS Gallery"</string>
+    <string name="text_choose_a_root_folder_for_your_photos_and_videos_96ddcc" formatted="false">"Choose a root folder for your photos and videos. Subfolders will appear as albums. You can add more in Settings."</string>
+    <string name="text_choose_folder_764e29" formatted="false">"Choose folder"</string>
+    <string name="text_all_panes_are_pinned_5d759f" formatted="false">"All panes are pinned"</string>
+    <string name="text_choose_which_pin_to_replace_with_1_s_c6ec95">"Choose which pin to replace with %1$s."</string>
+    <string name="text_unavailable_4107fc" formatted="false">"Unavailable"</string>
+    <string name="text_the_media_is_no_longer_available_47e2f8" formatted="false">"The media is no longer available"</string>
+    <string name="text_filter_by_format_113c28" formatted="false">"Filter by format"</string>
+    <string name="text_active_filter_1_s_019879">"Active filter: %1$s"</string>
+    <string name="text_date_cec3a9" formatted="false">"Date"</string>
+    <string name="text_size_86d146" formatted="false">"Size"</string>
+    <string name="text_duration_902f15" formatted="false">"Duration"</string>
+    <string name="text_playlist_order_fb1ecd" formatted="false">"Playlist order"</string>
+    <string name="text_natural_name_order_d9f048" formatted="false">"Natural name order"</string>
+    <string name="text_last_modified_63c096" formatted="false">"Last modified"</string>
+    <string name="text_added_f6ef7c" formatted="false">"Added"</string>
+    <string name="text_reverse_order_33051e" formatted="false">"Reverse order"</string>
+    <string name="text_all_7f65ef" formatted="false">"All"</string>
+    <string name="text_no_media_matches_this_filter_ae3907" formatted="false">"No media matches this filter"</string>
+    <string name="text_filter_1_s_you_can_show_all_formats_while_keepin_c81fc6">"Filter: %1$s. You can show all formats while keeping the folder and search."</string>
+    <string name="text_show_all_formats_400e1d" formatted="false">"Show all formats"</string>
+    <string name="text_no_results_0af987" formatted="false">"No results"</string>
+    <string name="text_try_another_name_or_clear_the_search_0cceaf" formatted="false">"Try another name or clear the search."</string>
+    <string name="text_clear_search_3664fa" formatted="false">"Clear search"</string>
+    <string name="text_no_media_in_this_folder_3e95d8" formatted="false">"No media in this folder"</string>
+    <string name="text_no_visible_media_e3bde4" formatted="false">"No visible media"</string>
+    <string name="text_this_group_has_no_visible_tracks_references_are_0a98e3" formatted="false">"This group has no visible tracks. References are retained."</string>
+    <string name="text_subfolders_remain_accessible_above_hidden_or_una_171816" formatted="false">"Subfolders remain accessible above. Hidden or unavailable media keep their references."</string>
+    <string name="text_your_music_starts_here_22d615" formatted="false">"Your music starts here"</string>
+    <string name="text_your_favorites_together_45ecfa" formatted="false">"Your favorites, together"</string>
+    <string name="text_a_place_for_your_media_8f207b" formatted="false">"A place for your media"</string>
+    <string name="text_mark_an_image_gif_video_or_track_as_a_favorite_n_29af41" formatted="false">"Mark an image, GIF, video or track as a Favorite. No files are copied."</string>
+    <string name="text_choose_your_music_folders_covers_stay_in_the_mus_f93d06" formatted="false">"Choose your music folders. Covers stay in the music library."</string>
+    <string name="text_choose_root_folders_for_your_photos_and_videos_8005f3" formatted="false">"Choose root folders for your photos and videos."</string>
+    <string name="text_preview_1_s_81e72b">"Preview: %1$s"</string>
+    <string name="text_reorder_navigation_bar_f913bd" formatted="false">"Reorder navigation bar"</string>
+    <string name="text_reorder_navigation_bar_5b4ba2" formatted="false">"Reorder navigation bar"</string>
+    <string name="text_tap_a_section_in_the_preview_and_move_it_with_th_098245" formatted="false">"Tap a section in the preview and move it with the arrows. Save to apply the order."</string>
+    <string name="text_move_left_4e3ed5" formatted="false">"Move left"</string>
+    <string name="text_move_right_1d91fd" formatted="false">"Move right"</string>
+    <string name="text_invalid_settings_73e331" formatted="false">"Invalid settings"</string>
+    <string name="text_invalid_navigation_bar_order_0bf386" formatted="false">"Invalid navigation bar order"</string>
+    <string name="text_settings_not_saved_d67a68" formatted="false">"Settings not saved"</string>
+    <string name="text_settings_changed_on_the_other_panel_read_the_fil_805d13" formatted="false">"Settings changed on the other panel. Read the file again before importing."</string>
+    <string name="text_choose_where_to_look_subfolders_become_albums_912e6f" formatted="false">"Choose where to look. Subfolders become albums."</string>
+    <string name="text_photos_and_videos_6bc028" formatted="false">"Photos and videos"</string>
+    <string name="text_relink_files_618c8b" formatted="false">"Relink files…"</string>
+    <string name="text_images_videos_and_music_7e3f80" formatted="false">"Images, videos and music"</string>
+    <string name="text_images_and_videos_731776" formatted="false">"Images and videos"</string>
+    <string name="text_remove_folder_89f681" formatted="false">"Remove folder"</string>
+    <string name="text_1_s_backup_references_still_need_relinking_choos_d8d02b">"%1$s backup references still need relinking. Choose the correct files and confirm each match."</string>
+    <string name="text_all_references_have_been_relinked_the_backup_sou_295fc9" formatted="false">"All references have been relinked. The backup source remains as provenance."</string>
+    <string name="text_relink_files_688750" formatted="false">"Relink files…"</string>
+    <string name="text_restore_access_fa5ec3" formatted="false">"Restore access"</string>
+    <string name="text_refresh_albums_f739d2" formatted="false">"Refresh albums"</string>
+    <string name="text_import_images_and_videos_982ded" formatted="false">"Import images and videos…"</string>
+    <string name="text_import_music_04d90e" formatted="false">"Import music…"</string>
+    <string name="text_link_a_single_file_2f3972" formatted="false">"Link a single file…"</string>
+    <string name="text_no_albums_found_18010c" formatted="false">"No albums found"</string>
+    <string name="text_your_albums_b2a5fe" formatted="false">"Your albums"</string>
+    <string name="text_choose_a_root_folder_subfolders_become_albums_e435c7" formatted="false">"Choose a root folder: subfolders become albums."</string>
+    <string name="text_1_s_selected_albums_5ebbfb">"%1$s selected albums"</string>
+    <string name="text_hide_12292a" formatted="false">"Hide"</string>
+    <string name="text_delete_7efe33" formatted="false">"Delete"</string>
+    <string name="text_the_selected_albums_contain_no_available_media_d768a1" formatted="false">"The selected albums contain no available media."</string>
+    <string name="text_reading_selected_contents_5b4592" formatted="false">"Reading selected contents…"</string>
+    <string name="text_move_copy_and_delete_apply_to_album_media_includ_1ffc2c" formatted="false">"Move, copy and delete apply to album media, including subfolders. Confirmation shows affected files; original folders remain."</string>
+    <string name="text_hide_1_s_albums_359955">"Hide %1$s albums?"</string>
+    <string name="text_n_nsubfolders_will_also_be_excluded_files_remain_a5552e" formatted="false">"\n\nSubfolders will also be excluded. Files remain intact."</string>
+    <string name="text_folder_1_s_media_8ef7d0">"Folder · %1$s media"</string>
+    <string name="text_no_hidden_albums_0da9d4" formatted="false">"No hidden albums"</string>
+    <string name="text_hidden_albums_keep_their_favorites_and_reference_848396" formatted="false">"Hidden albums keep their Favorites and references without changing files."</string>
+    <string name="text_system_nomedia_exclusion_remove_it_externally_to_320c3c" formatted="false">"System .nomedia exclusion. Remove it externally to include the folder."</string>
+    <string name="text_show_again_5cb1ec" formatted="false">"Show again"</string>
+    <string name="text_appearance_f9ce8f" formatted="false">"Theme"</string>
+    <string name="text_interface_a86468" formatted="false">"Interface"</string>
+    <string name="text_playback_2b0fe5" formatted="false">"Playback"</string>
+    <string name="text_appearance_and_behavior_bbd831" formatted="false">"Appearance and behavior"</string>
+    <string name="text_active_1_s_6f4cb9">"Active: %1$s"</string>
+    <string name="text_pastel_f90857" formatted="false">"Pastel"</string>
+    <string name="text_night_and_neon_f6d332" formatted="false">"Night and neon"</string>
+    <string name="text_custom_792566" formatted="false">"Custom"</string>
+    <string name="text_behavior_03b2ee" formatted="false">"Behavior"</string>
+    <string name="text_controls_and_bindings_bc7885" formatted="false">"Controls and bindings"</string>
+    <string name="text_touch_gestures_and_zones_aa170e" formatted="false">"Touch gestures and zones"</string>
+    <string name="text_export_import_settings_5d89ec" formatted="false">"Export / import settings"</string>
+    <string name="text_gallery_and_preview_36bf93" formatted="false">"Gallery and preview"</string>
+    <string name="text_navigation_bar_labels_63fe86" formatted="false">"Navigation bar labels"</string>
+    <string name="text_show_file_names_557e96" formatted="false">"Show file names"</string>
+    <string name="text_compact_grid_3c9e94" formatted="false">"Compact grid"</string>
+    <string name="text_reduce_animations_0fdf71" formatted="false">"Reduce animations"</string>
+    <string name="text_preview_arrows_a1fa38" formatted="false">"Preview arrows"</string>
+    <string name="text_preview_zoom_buttons_7873e1" formatted="false">"Preview zoom buttons"</string>
+    <string name="text_navigator_when_the_photo_is_zoomed_in_9ddb60" formatted="false">"Navigator when the photo is zoomed in"</string>
+    <string name="text_gif_frame_count_dc95bf" formatted="false">"GIF frame count"</string>
+    <string name="text_game_mode_36850a" formatted="false">"Game mode"</string>
+    <string name="text_reduces_gifs_and_pauses_automatic_photo_changes_8a5194" formatted="false">"Reduces GIFs and pauses automatic photo changes in frames and photo widgets while gaming."</string>
+    <string name="text_gifs_in_the_grid_c5be9f" formatted="false">"GIFs in the grid"</string>
+    <string name="text_off_de3be8" formatted="false">"Off"</string>
+    <string name="text_selected_only_07ada4" formatted="false">"Selected only"</string>
+    <string name="text_multiple_visible_gifs_cd9a7d" formatted="false">"Multiple visible GIFs"</string>
+    <string name="text_simultaneous_animated_gifs_1_s_2a1e80">"Simultaneous animated GIFs: %1$s"</string>
+    <string name="text_music_artwork_6ef5dc" formatted="false">"Music artwork"</string>
+    <string name="text_shared_priority_override_it_for_individual_album_c330fa" formatted="false">"Shared priority. Override it for individual albums or tracks without changing tags."</string>
+    <string name="text_previous_always_changes_track_747bc5" formatted="false">"Previous always changes track"</string>
+    <string name="text_previous_changes_track_even_after_three_seconds_3e5ab8" formatted="false">"Previous changes track even after three seconds. If there is no previous track, it returns to the beginning."</string>
+    <string name="text_previous_returns_to_the_beginning_after_three_se_9b4ec0" formatted="false">"Previous returns to the beginning after three seconds; press again within three seconds to go to the previous track."</string>
+    <string name="text_photo_frame_interval_1_s_s_b8e1f7">"Photo frame interval: %1$s s"</string>
+    <string name="text_default_interval_for_the_in_app_photo_frame_laun_3098dc" formatted="false">"Default interval for the in-app photo frame. Launcher widgets have a separate interval."</string>
+    <string name="text_open_on_two_screens_at_startup_7c2cb7" formatted="false">"Open on two screens at startup"</string>
+    <string name="text_use_only_this_screen_f859c0" formatted="false">"Use only this screen"</string>
+    <string name="text_open_with_dae8f1" formatted="false">"Open with…"</string>
+    <string name="text_set_as_wallpaper_c5056f" formatted="false">"Set as wallpaper…"</string>
+    <string name="text_edit_image_cab524" formatted="false">"Edit image…"</string>
+    <string name="text_export_first_frame_68b9a6" formatted="false">Export frame…</string>
+    <string name="text_edit_video_3e8c8f" formatted="false">"Edit video…"</string>
+    <string name="text_edit_audio_3c820b" formatted="false">"Edit audio…"</string>
+    <string name="text_copy_to_b8ead5" formatted="false">"Copy to…"</string>
+    <string name="text_move_to_36f208" formatted="false">"Move to…"</string>
+    <string name="text_the_source_does_not_allow_removing_this_file_7c5fbb" formatted="false">"The source does not allow removing this file."</string>
+    <string name="text_rename_0771a2" formatted="false">"Rename…"</string>
+    <string name="text_move_to_trash_f91742" formatted="false">"Move to trash…"</string>
+    <string name="text_track_artwork_50bfbb" formatted="false">"Track artwork"</string>
+    <string name="text_play_next_504580" formatted="false">"Play next"</string>
+    <string name="text_add_to_queue_363178" formatted="false">"Add to queue"</string>
+    <string name="text_details_1a45b0" formatted="false">"Details"</string>
+    <string name="text_smoky_purple_lavender_and_champagne_5341d5" formatted="false">"Smoky purple · lavender and champagne"</string>
+    <string name="text_pearl_gray_button_accents_e8fab0" formatted="false">"Warm gray · button accents"</string>
+    <string name="text_neutral_white_graphite_and_slate_blue_7cd029" formatted="false">"Neutral white · graphite and slate blue"</string>
+    <string name="text_amoled_black_silver_and_ice_313bfc" formatted="false">"AMOLED black · silver and ice"</string>
+    <string name="text_rose_milk_2c3a5e" formatted="false">"Rose milk"</string>
+    <string name="text_warm_white_powder_pink_5524ec" formatted="false">"Warm white · powder pink"</string>
+    <string name="text_sky_milk_9a0e81" formatted="false">"Sky milk"</string>
+    <string name="text_cool_white_powder_blue_710a43" formatted="false">"Cool white · powder blue"</string>
+    <string name="text_lavender_cloud_4cff2b" formatted="false">"Lavender cloud"</string>
+    <string name="text_soft_lilac_violet_and_sage_7793f8" formatted="false">"Soft lilac · violet and sage"</string>
+    <string name="text_mint_cream_2af769" formatted="false">"Mint cream"</string>
+    <string name="text_pale_mint_vanilla_cream_d7ef2e" formatted="false">"Pale mint · vanilla cream"</string>
+    <string name="text_peach_tea_740475" formatted="false">"Peach tea"</string>
+    <string name="text_light_peach_terracotta_and_teal_0e2200" formatted="false">"Light peach · terracotta and teal"</string>
+    <string name="text_black_and_sage_cf43a0" formatted="false">"Black and sage"</string>
+    <string name="text_charcoal_soft_green_and_sand_690002" formatted="false">"Charcoal · soft green and sand"</string>
+    <string name="text_electric_lime_5aa0f2" formatted="false">"Electric lime"</string>
+    <string name="text_black_acid_green_and_cyan_97deef" formatted="false">"Black · acid green and cyan"</string>
+    <string name="text_ink_black_neon_pink_and_ice_c1dc9e" formatted="false">"Ink black · neon pink and ice"</string>
+    <string name="text_violet_arcade_ad309f" formatted="false">"Violet arcade"</string>
+    <string name="text_violet_night_orchid_and_turquoise_eaa135" formatted="false">"Violet night · orchid and turquoise"</string>
+    <string name="text_neon_nocturne_40d0b9" formatted="false">"Neon nocturne"</string>
+    <string name="text_midnight_blue_cyan_and_fuchsia_87834d" formatted="false">"Midnight blue · cyan and fuchsia"</string>
+    <string name="text_pastel_prism_dec86c" formatted="false">"Pastel prism"</string>
+    <string name="text_cream_lavender_and_sage_5c0db4" formatted="false">"Cream · lavender and sage"</string>
+    <string name="text_midnight_copper_6af1c7" formatted="false">"Midnight copper"</string>
+    <string name="text_warm_black_copper_and_mineral_blue_a03f6d" formatted="false">"Warm black · copper and mineral blue"</string>
+    <string name="text_gif_too_large_803f38" formatted="false">"GIF too large"</string>
+    <string name="text_incomplete_gif_597b31" formatted="false">"Incomplete GIF"</string>
+    <string name="text_invalid_gif_block_19455d" formatted="false">"Invalid GIF block"</string>
+    <string name="text_invalid_crop_b9c1bc" formatted="false">"Invalid crop"</string>
+    <string name="text_invalid_recipe_ed8ebd" formatted="false">"Invalid recipe"</string>
+    <string name="text_invalid_export_type_768187" formatted="false">"Invalid export type"</string>
+    <string name="text_unsupported_recipe_d2aba5" formatted="false">"Unsupported recipe"</string>
+    <string name="text_this_file_is_animated_use_explicit_gif_frame_exp_7d4cbd" formatted="false">"This file is animated: use explicit GIF frame export"</string>
+    <string name="text_the_source_is_not_a_gif_no_conversion_performed_784764" formatted="false">"The source is not a GIF: no conversion performed"</string>
+    <string name="text_large_image_choose_2048_or_1024_px_before_export_f848e3" formatted="false">"Large image: choose 2048 or 1024 px before exporting"</string>
+    <string name="text_image_encoding_failed_856b1c" formatted="false">"Image encoding failed"</string>
+    <string name="text_the_image_is_no_longer_available_47ae20" formatted="false">"The image is no longer available"</string>
+    <string name="text_image_unreadable_dffbcd" formatted="false">"Image unreadable"</string>
+    <string name="text_edit_image_da6264" formatted="false">"Edit image"</string>
+    <string name="text_the_original_stays_intact_save_creates_a_new_cop_1584a7" formatted="false">"The original stays intact. Save creates a new copy and keeps Favorites on the original."</string>
+    <string name="text_first_frame_as_a_still_image_the_original_gif_ke_da8ccd" formatted="false">"First frame as a still image. The original GIF keeps all frames and animation."</string>
+    <string name="text_crop_300dba" formatted="false">"Crop"</string>
+    <string name="text_result_d28636" formatted="false">"Result"</string>
+    <string name="text_source_1_s_2_s_crop_3_s_4_s_rotation_5_s_8a16ea">"Source %1$s×%2$s · crop %3$s×%4$s · rotation %5$s°"</string>
+    <string name="text_full_4b19a8" formatted="false">"Full"</string>
+    <string name="text_portrait_332772" formatted="false">"Portrait"</string>
+    <string name="text_this_display_af7c7f" formatted="false">"This display"</string>
+    <string name="text_drag_the_corners_or_frame_with_a_controller_adju_023237" formatted="false">"Drag the corners or frame. With a controller, adjust the edges below."</string>
+    <string name="text_left_af36a4" formatted="false">"Left"</string>
+    <string name="text_top_85e2ad" formatted="false">"Top"</string>
+    <string name="text_right_ddcff9" formatted="false">"Right"</string>
+    <string name="text_bottom_e201c6" formatted="false">"Bottom"</string>
+    <string name="text_1_s_edge_c30958">"%1$s edge"</string>
+    <string name="text_preparing_preview_cda2d9" formatted="false">"Preparing preview…"</string>
+    <string name="text_rotate_90_9746ed" formatted="false">"Rotate 90°"</string>
+    <string name="text_mirror_on_e46f1b" formatted="false">"Mirror on"</string>
+    <string name="text_mirror_999cf9" formatted="false">"Mirror"</string>
+    <string name="text_jpeg_transparency_becomes_white_quality_1_s_654e7d">"JPEG: transparency becomes white. Quality %1$s%%."</string>
+    <string name="text_jpeg_quality_2a0749" formatted="false">"JPEG quality"</string>
+    <string name="text_dimensions_before_crop_4622f5" formatted="false">"Dimensions before crop"</string>
+    <string name="text_the_image_is_oriented_correctly_cropped_then_mir_64c8b2" formatted="false">"The image is oriented correctly, cropped, then mirrored and rotated. sRGB colors; EXIF, location and other metadata are not copied."</string>
+    <string name="text_use_a_name_up_to_170_characters_9d3f2a" formatted="false">"Use a name up to 170 characters"</string>
+    <string name="text_new_copy_name_1_s_cfecd3">"New copy name · .%1$s"</string>
+    <string name="text_if_the_name_exists_the_copy_receives_a_suffix_th_b80221" formatted="false">"If the name exists, the copy receives a suffix. The queue shows verification, result and cancellation."</string>
+    <string name="text_preparing_request_76bb17" formatted="false">"Preparing request…"</string>
+    <string name="text_encoding_may_use_memory_and_slow_the_game_you_ca_8acfd0" formatted="false">"Encoding may use memory and slow the game. You can cancel and save later."</string>
+    <string name="text_destination_not_authorized_9ab1e7" formatted="false">"Destination not authorized"</string>
+    <string name="text_files_not_acquired_6bf6a7" formatted="false">"Files not acquired"</string>
+    <string name="text_chosen_files_only_no_provider_scanning_or_cloud_49b792" formatted="false">"Chosen files only. No provider scanning or cloud sync, no changes to the external original."</string>
+    <string name="text_reading_chosen_files_1_s_2_s_d7f692">"Reading chosen files · %1$s / %2$s"</string>
+    <string name="text_1_s_of_2_s_selected_files_fbb670">"%1$s of %2$s selected files"</string>
+    <string name="text_these_files_are_not_included_n_a7c42f" formatted="false">"These files are not included:\n"</string>
+    <string name="text_image_850b6f" formatted="false">"Image"</string>
+    <string name="text_track_3c0db2" formatted="false">"Track"</string>
+    <string name="text_copy_1_s_47dc62">"Copy: %1$s"</string>
+    <string name="text_original_names_for_multiple_selection_559576" formatted="false">"Original names for multiple selection"</string>
+    <string name="text_keep_both_when_the_name_is_taken_212871" formatted="false">"Keep both when the name is taken"</string>
+    <string name="text_copies_original_bytes_without_recompression_reta_6efbf0" formatted="false">"Copies original bytes without recompression, retaining any personal metadata. No Favorites or provider links added. The new copy becomes available at the destination only after verification."</string>
+    <string name="text_if_temporary_access_expires_before_acquisition_t_8742b5" formatted="false">"If temporary access expires before acquisition, the operation stops: reopen the picker and try again. Follow each file in File operations."</string>
+    <string name="text_allow_import_while_gaming_ddd9a8" formatted="false">"Allow import while gaming"</string>
+    <string name="text_import_while_gaming_anyway_reading_from_the_prov_352ee8" formatted="false">"Import while gaming anyway. Reading from the provider may use battery and slow the game."</string>
+    <string name="text_preparing_operations_1e55d8" formatted="false">"Preparing operations…"</string>
+    <string name="text_import_did_not_start_7308d0" formatted="false">"Import did not start"</string>
+    <string name="text_import_copies_38f630" formatted="false">"Import copies"</string>
+    <string name="text_new_copy_name_f686d2" formatted="false">"New copy name"</string>
+    <string name="text_keep_the_original_extension_the_name_does_not_co_d2004e" formatted="false">"Keep the original extension: the name does not convert the format."</string>
+    <string name="text_selection_too_large_choose_fewer_files_23f153" formatted="false">"Selection too large: choose fewer files"</string>
+    <string name="text_choose_up_to_128_files_per_import_2cea07" formatted="false">"Choose up to 128 files per import"</string>
+    <string name="text_imported_media_53118d" formatted="false">"Imported media"</string>
+    <string name="text_file_1_s_2_s_348193">"File %1$s: %2$s"</string>
+    <string name="text_metadata_too_large_choose_fewer_files_2a4c6e" formatted="false">"Metadata too large: choose fewer files"</string>
+    <string name="text_the_received_file_changed_open_it_again_8c87d1" formatted="false">"The received file changed: open it again"</string>
+    <string name="text_received_file_unreadable_f23c3d" formatted="false">"Received file unreadable"</string>
+    <string name="text_choose_readable_individual_files_not_a_folder_or_bd3427" formatted="false">"Choose readable individual files, not a folder or address"</string>
+    <string name="text_this_private_app_file_is_not_an_import_source_f90db3" formatted="false">"This private app file is not an import source"</string>
+    <string name="text_unnamed_media_24a1bb" formatted="false">"Unnamed media"</string>
+    <string name="text_file_name_too_long_576415" formatted="false">"File name too long"</string>
+    <string name="text_the_provider_did_not_return_file_data_17e4e1" formatted="false">"The provider did not return file data"</string>
+    <string name="text_1_s_unsupported_format_025f92">"%1$s: unsupported format"</string>
+    <string name="text_1_s_empty_file_80be53">"%1$s: empty file"</string>
+    <string name="text_1_s_unreadable_file_2b9af6">"%1$s: unreadable file"</string>
+    <string name="text_1_s_file_changed_while_reading_9910f3">"%1$s: file changed while reading"</string>
+    <string name="text_this_display_is_released_long_press_the_app_icon_ede49c" formatted="false">"This display is released. Long-press the app icon and choose “Open here, single screen”."</string>
+    <string name="text_library_identity_not_saved_a70dd7" formatted="false">"Library identity not saved"</string>
+    <string name="text_comparison_session_unreadable_1_s_895563">"Comparison session unreadable: %1$s"</string>
+    <string name="text_the_library_changed_refresh_the_preview_a4e11a" formatted="false">"The library changed: refresh the preview"</string>
+    <string name="text_finish_or_cancel_file_operations_before_restorin_e489ae" formatted="false">"Finish or cancel file operations before restoring"</string>
+    <string name="text_incompatible_source_identity_748a30" formatted="false">"Incompatible source identity"</string>
+    <string name="text_incompatible_reference_identity_effad2" formatted="false">"Incompatible reference identity"</string>
+    <string name="text_incompatible_album_identity_b1009c" formatted="false">"Incompatible album identity"</string>
+    <string name="text_choose_a_document_from_the_system_a069ca" formatted="false">"Choose a document from the system"</string>
+    <string name="text_backup_too_large_de2bee" formatted="false">"Backup too large"</string>
+    <string name="text_document_unavailable_2d9594" formatted="false">"Document unavailable"</string>
+    <string name="text_choose_a_destination_from_the_system_3bc989" formatted="false">"Choose a destination from the system"</string>
+    <string name="text_backup_unverified_the_document_may_be_incomplete_510b4b" formatted="false">"Backup unverified; the document may be incomplete"</string>
+    <string name="text_unrecognized_format_a07e3b" formatted="false">"Unrecognized format"</string>
+    <string name="text_unsupported_backup_version_a9bfd8" formatted="false">"Unsupported backup version"</string>
+    <string name="text_missing_identity_6fc395" formatted="false">"Missing identity"</string>
+    <string name="text_too_many_items_in_backup_7b0ac6" formatted="false">"Too many items in backup"</string>
+    <string name="text_invalid_text_c9999f" formatted="false">"Invalid text"</string>
+    <string name="text_invalid_value_23d031" formatted="false">"Invalid value"</string>
+    <string name="text_too_many_comparison_references_79dd27" formatted="false">"Too many comparison references"</string>
+    <string name="text_invalid_cover_e32130" formatted="false">"Invalid cover"</string>
+    <string name="text_invalid_comparison_reference_2ba4e7" formatted="false">"Invalid comparison reference"</string>
+    <string name="text_invalid_transformation_ae3aba" formatted="false">"Invalid transformation"</string>
+    <string name="text_backup_draft_not_verified_fd30b7" formatted="false">"Backup draft not verified"</string>
+    <string name="text_internal_storage_506cd3" formatted="false">"Internal storage"</string>
+    <string name="text_dimensions_4d6b7c" formatted="false">"Dimensions"</string>
+    <string name="text_metadata_07289c" formatted="false">"Metadata"</string>
+    <string name="text_unavailable_1d9817" formatted="false">"Unavailable"</string>
+    <string name="text_file_size_c27dd5" formatted="false">"File size"</string>
+    <string name="text_artist_7e6ef2" formatted="false">"Artist"</string>
+    <string name="text_music_album_f87381" formatted="false">"Music album"</string>
+    <string name="text_root_folder_b2af5c" formatted="false">"Root folder"</string>
+    <string name="text_folder_2e95e4" formatted="false">"Folder"</string>
+    <string name="text_root_path_b7b245" formatted="false">"Root path"</string>
+    <string name="text_file_path_780ddb" formatted="false">"File path"</string>
+    <string name="text_all_formats_5f54e8" formatted="false">"All formats"</string>
+    <string name="text_other_images_af27b2" formatted="false">"Other images"</string>
+    <string name="text_the_reference_is_already_available_or_relinked_r_a58a41" formatted="false">"The reference is already available or relinked. Refresh the list."</string>
+    <string name="text_choose_a_linkable_document_in_the_android_picker_96d1f0" formatted="false">"Choose a linkable document in the Android picker"</string>
+    <string name="text_choose_the_same_content_type_as_the_original_ref_53b10c" formatted="false">"Choose the same content type as the original reference"</string>
+    <string name="text_the_library_changed_choose_the_file_again_to_ref_81ccf1" formatted="false">"The library changed: choose the file again to refresh the preview"</string>
+    <string name="text_different_file_type_75990a" formatted="false">"Different file type"</string>
+    <string name="text_circular_matches_choose_one_reference_per_file_e1f63c" formatted="false">"Circular matches: choose one reference per file"</string>
+    <string name="text_multiple_references_chosen_for_the_same_file_64dc75" formatted="false">"Multiple references chosen for the same file"</string>
+    <string name="text_references_relinked_backup_source_retained_923cab" formatted="false">"References relinked; backup source retained"</string>
+    <string name="text_the_file_is_no_longer_readable_choose_it_again_i_005adc" formatted="false">"The file is no longer readable. Choose it again in the Android picker."</string>
+    <string name="text_the_document_is_unavailable_or_changed_choose_it_3a88b9" formatted="false">"The document is unavailable or changed. Choose it again in the Android picker."</string>
+    <string name="text_relinking_unverified_choose_the_document_again_n_9c784f" formatted="false">"Relinking unverified. Choose the document again. No originals changed."</string>
+    <string name="text_choose_only_one_file_for_this_reference_de6fed" formatted="false">"Choose only one file for this reference"</string>
+    <string name="text_file_readable_compare_the_data_and_confirm_only_2b77a7" formatted="false">"File readable. Compare the data and confirm only if it is the file you want to relink."</string>
+    <string name="text_android_picker_unavailable_on_this_panel_4b1ad8" formatted="false">"Android picker unavailable on this panel"</string>
+    <string name="text_recover_links_d1e7cc" formatted="false">"Recover links"</string>
+    <string name="text_confirm_chosen_file_c62c88" formatted="false">"Confirm chosen file"</string>
+    <string name="text_checking_reference_9b649e" formatted="false">"Checking reference…"</string>
+    <string name="text_choose_a_reference_then_its_file_in_the_android_e4100b" formatted="false">"Choose a reference, then its file in the Android picker. The backup preserves organization without copying media or automatically granting access."</string>
+    <string name="text_relink_folder_1_s_e29041">"Relink folder · %1$s"</string>
+    <string name="text_relink_a_folder_70c3bc" formatted="false">"Relink a folder…"</string>
+    <string name="text_no_references_to_relink_in_this_scope_dcc7ef" formatted="false">"No references to relink in this scope."</string>
+    <string name="text_unknown_size_954717" formatted="false">"Unknown size"</string>
+    <string name="text_excluded_album_relinking_keeps_the_exclusion_3c5468" formatted="false">"Excluded album: relinking keeps the exclusion."</string>
+    <string name="text_choose_file_38d369" formatted="false">"Choose file…"</string>
+    <string name="text_reference_1_s_01d1a7">"Reference: %1$s"</string>
+    <string name="text_chosen_file_1_s_368352">"Chosen file: %1$s"</string>
+    <string name="text_chosen_file_preview_9b3263" formatted="false">"Chosen file preview"</string>
+    <string name="text_name_size_and_date_do_not_prove_this_is_the_orig_d1f102" formatted="false">"Name, size and date do not prove this is the original file: the backup has no media hash. Confirm the match even if they agree."</string>
+    <string name="text_the_data_differs_from_the_saved_reference_you_ma_77bf6c" formatted="false">"The data differs from the saved reference. You may have chosen a different version."</string>
+    <string name="text_favorites_collections_covers_and_pins_are_preser_53017d" formatted="false">"Favorites, collections, covers and pins are preserved. Already indexed files merge their references. Excluded albums remain excluded. No copying, moving or playback; persistent read-only access."</string>
+    <string name="text_i_checked_that_i_want_to_link_this_file_to_the_r_172195" formatted="false">"I checked that I want to link this file to the reference"</string>
+    <string name="text_choose_another_file_4dc30e" formatted="false">"Choose another file…"</string>
+    <string name="text_choice_discarded_references_and_permissions_pres_1f4a42" formatted="false">"Choice discarded; references and permissions preserved"</string>
+    <string name="text_reference_relinked_read_only_original_files_inta_0d4f8c" formatted="false">"Reference relinked read-only. Original files intact; no playback started."</string>
+    <string name="text_media_options_8aef8c" formatted="false">"Media options"</string>
+    <string name="text_favorite_not_saved_1_s_9d77cf">"Favorite not saved: %1$s"</string>
+    <string name="text_remove_from_favorites_6556ff" formatted="false">"Remove from Favorites"</string>
+    <string name="text_add_to_favorites_63ce28" formatted="false">"Add to Favorites"</string>
+    <string name="text_animation_cannot_be_played_1_s_444482">"Animation cannot be played: %1$s"</string>
+    <string name="text_your_preview_48eb5c" formatted="false">"Your preview"</string>
+    <string name="text_select_media_in_the_library_56906c" formatted="false">"Select media in the library."</string>
+    <string name="text_the_source_is_disconnected_hidden_or_needs_acces_148e2b" formatted="false">"The source is disconnected, hidden or needs access again. The reference is retained."</string>
+    <string name="text_zoom_1_s_position_2_s_3_s_abeae2">"Zoom %1$s%% · position %2$s%%, %3$s%%"</string>
+    <string name="text_play_track_402432" formatted="false">"Play track"</string>
+    <string name="text_play_video_ba31ae" formatted="false">"Play video"</string>
+    <string name="text_1_s_frames_ea0c5d">"%1$s frames"</string>
+    <string name="text_frame_count_unavailable_3e8d19" formatted="false">"Frame count unavailable"</string>
+    <string name="text_muted_2228e3" formatted="false">"Muted"</string>
+    <string name="text_sound_on_935c7c" formatted="false">"Sound on"</string>
+    <string name="text_no_tracks_queued_156b61" formatted="false">"No tracks queued"</string>
+    <string name="text_choose_a_music_folder_2a9069" formatted="false">"Choose a music folder"</string>
+    <string name="text_could_not_connect_to_player_85f1ae" formatted="false">"Could not connect to player"</string>
+    <string name="text_widget_command_refused_1_s_0c9fdb">"Widget command refused (%1$s)"</string>
+    <string name="text_audio_preview_unavailable_f44c32" formatted="false">"Audio preview unavailable"</string>
+    <string name="text_received_track_unavailable_c84466" formatted="false">"Received track unavailable"</string>
+    <string name="text_queue_not_restored_try_stopping_the_preview_agai_c21f6d" formatted="false">"Queue not restored: try stopping the preview again"</string>
+    <string name="text_queue_not_restored_443da6" formatted="false">"Queue not restored"</string>
+    <string name="text_player_connection_closed_58b7ea" formatted="false">"Player connection closed"</string>
+    <string name="text_player_disconnected_try_again_7b801f" formatted="false">"Player disconnected · try again"</string>
+    <string name="text_playback_failed_1_s_b5e391">"Playback failed: %1$s"</string>
+    <string name="text_player_unavailable_try_again_8ee4a5" formatted="false">"Player unavailable: try again"</string>
+    <string name="text_track_unavailable_b73d64" formatted="false">"Track unavailable"</string>
+    <string name="text_empty_queue_39af79" formatted="false">"Empty queue"</string>
+    <string name="text_stop_preview_before_changing_order_82ff53" formatted="false">"Stop preview before changing order"</string>
+    <string name="text_stop_preview_before_changing_repeat_65687f" formatted="false">"Stop preview before changing repeat"</string>
+    <string name="text_stop_preview_before_editing_the_queue_91bc03" formatted="false">"Stop preview before editing the queue"</string>
+    <string name="text_stop_preview_before_clearing_the_queue_7fbd0a" formatted="false">"Stop preview before clearing the queue"</string>
+    <string name="text_track_unavailable_in_queue_d9efbc" formatted="false">"Track unavailable in queue"</string>
+    <string name="text_previous_ff1443" formatted="false">"Previous"</string>
+    <string name="text_opening_not_identified_3b2f9b" formatted="false">"Opening not identified"</string>
+    <string name="text_opening_superseded_by_another_music_command_893ffe" formatted="false">"Opening superseded by another music command"</string>
+    <string name="text_received_file_temporary_access_a756d1" formatted="false">"Received file · temporary access"</string>
+    <string name="text_preview_not_identified_21e557" formatted="false">"Preview not identified"</string>
+    <string name="text_the_source_duration_changed_d3389f" formatted="false">"The source duration changed"</string>
+    <string name="text_preview_superseded_by_another_music_command_9601ec" formatted="false">"Preview superseded by another music command"</string>
+    <string name="text_preview_1_s_809e74">"Preview · %1$s"</string>
+    <string name="text_the_track_changed_refresh_the_command_64968c" formatted="false">"The track changed: refresh the command"</string>
+    <string name="text_import_a_copy_or_keep_the_link_before_adding_to_55a177" formatted="false">"Import a copy or keep the link before adding to Favorites"</string>
+    <string name="text_the_track_changed_refresh_the_widget_f90587" formatted="false">"The track changed: refresh the widget"</string>
+    <string name="text_queue_not_recovered_playback_remains_paused_897fc5" formatted="false">"Queue not recovered. Playback remains paused."</string>
+    <string name="text_received_track_access_expired_previous_queue_rec_739d68" formatted="false">"Received track access expired; previous queue recovered paused"</string>
+    <string name="text_playback_failed_12d57a" formatted="false">"Playback failed"</string>
+    <string name="text_local_choice_bb1037" formatted="false">"Local choice"</string>
+    <string name="text_embedded_b70dbe" formatted="false">"Embedded"</string>
+    <string name="text_use_inherited_priority_720160" formatted="false">"Use inherited priority"</string>
+    <string name="text_music_artwork_335159" formatted="false">"Music artwork"</string>
+    <string name="text_choice_retained_unavailable_8fbbc3" formatted="false">"Choice retained, unavailable"</string>
+    <string name="text_choose_local_image_8460fc" formatted="false">"Choose local image"</string>
+    <string name="text_priority_ff5835" formatted="false">"Priority"</string>
+    <string name="text_track_music_album_folder_settings_a_source_witho_9f4410" formatted="false">"Track → music album → folder → settings. A source without artwork falls back to the next. Original tags stay intact."</string>
+    <string name="text_restore_automatic_artwork_d9141c" formatted="false">"Restore automatic artwork"</string>
+    <string name="text_draft_changes_tap_save_to_apply_fd453d" formatted="false">"Draft changes: tap Save to apply."</string>
+    <string name="text_artwork_not_saved_69810d" formatted="false">"Artwork not saved"</string>
+    <string name="text_unspecified_artist_53b8a6" formatted="false">"Unspecified artist"</string>
+    <string name="text_unspecified_album_f59acd" formatted="false">"Unspecified album"</string>
+    <string name="text_local_playlist_091df5" formatted="false">"Local playlist"</string>
+    <string name="text_tracks_ac264a" formatted="false">"Tracks"</string>
+    <string name="text_music_albums_e85fef" formatted="false">"Music albums"</string>
+    <string name="text_artists_bbd1aa" formatted="false">"Artists"</string>
+    <string name="text_manage_playlists_e10ca3" formatted="false">"Manage playlists"</string>
+    <string name="text_artwork_and_priority_b87104" formatted="false">"Artwork and priority"</string>
+    <string name="text_play_these_tracks_625887" formatted="false">"Play these tracks"</string>
+    <string name="text_1_s_unavailable_tracks_will_be_skipped_9556f5">"%1$s unavailable tracks will be skipped"</string>
+    <string name="text_selected_track_operations_b23ac0" formatted="false">"Selected track operations"</string>
+    <string name="text_your_playlists_f30fdf" formatted="false">"Your playlists"</string>
+    <string name="text_no_results_try_another_name_f78f41" formatted="false">"No results. Try another name."</string>
+    <string name="text_save_the_player_queue_to_find_it_here_tracks_sta_7b739d" formatted="false">"Save the player queue to find it here. Tracks stay in their folders."</string>
+    <string name="text_choose_music_folders_artists_and_albums_use_loca_0dbc29" formatted="false">"Choose music folders. Artists and albums use local metadata only, without searching online."</string>
+    <string name="text_1_s_visible_tracks_9940ce">"%1$s visible tracks"</string>
+    <string name="text_your_music_b63856" formatted="false">"Your music"</string>
+    <string name="text_choose_a_track_from_music_the_player_is_shared_a_c71f4b" formatted="false">"Choose a track from Music. The player is shared across screens and continues in the background."</string>
+    <string name="text_the_source_was_hidden_or_disconnected_the_queue_ebde9e" formatted="false">"The source was hidden or disconnected. The queue updates while retaining references."</string>
+    <string name="text_segment_preview_original_queue_retained_a9766d" formatted="false">"Segment preview · original queue retained"</string>
+    <string name="text_stop_preview_and_restore_queue_625382" formatted="false">"Stop preview and restore queue"</string>
+    <string name="text_save_playlist_8d3e69" formatted="false">"Save playlist"</string>
+    <string name="text_disable_timer_ba37ce" formatted="false">"Disable timer"</string>
+    <string name="text_1_s_minutes_c69ae1">"%1$s minutes"</string>
+    <string name="text_queue_1_s_tracks_5ad2e5">"Queue · %1$s tracks"</string>
+    <string name="text_reorder_or_remove_from_queue_6df945" formatted="false">"Reorder or remove from queue"</string>
+    <string name="text_remove_from_queue_f7ebcb" formatted="false">"Remove from queue"</string>
+    <string name="text_clear_queue_bb5c72" formatted="false">"Clear queue"</string>
+    <string name="text_play_pause_7973c0" formatted="false">"Play / pause"</string>
+    <string name="text_shuffle_on_3d4f18" formatted="false">"Shuffle on"</string>
+    <string name="text_shuffle_0eb69b" formatted="false">"Shuffle"</string>
+    <string name="text_repeat_track_baa748" formatted="false">"Repeat track"</string>
+    <string name="text_repeat_queue_7bf8e2" formatted="false">"Repeat queue"</string>
+    <string name="text_repeat_off_700e76" formatted="false">"Repeat off"</string>
+    <string name="text_remove_favorite_9acd17" formatted="false">"Remove Favorite"</string>
+    <string name="text_configuration_not_saved_try_again_0ef8dd" formatted="false">"Configuration not saved. Try again."</string>
+    <string name="text_music_widget_4c67df" formatted="false">"Music widget"</string>
+    <string name="text_this_widget_controls_the_shared_player_play_and_b312ff" formatted="false">"This widget controls the shared player. Play and track changes keep the gallery closed."</string>
+    <string name="text_shuffle_button_f0e9bd" formatted="false">"Shuffle button"</string>
+    <string name="text_artwork_colors_dimmed_8e8b47" formatted="false">"Artwork colors · dimmed"</string>
+    <string name="text_gallery_theme_a2416f" formatted="false">"Gallery theme"</string>
+    <string name="text_opening_artwork_c4ca71" formatted="false">"Opening artwork"</string>
+    <string name="text_opens_music_on_the_current_track_on_one_screen_46281b" formatted="false">"Opens Music on the current track, on one screen."</string>
+    <string name="text_automatic_allowed_screen_5d5ba2" formatted="false">"Automatic · allowed screen"</string>
+    <string name="text_images_stay_local_hiding_an_album_or_disconnecti_ed25ff" formatted="false">"Images stay local. Hiding an album or disconnecting a source removes artwork from the widget."</string>
+    <string name="text_source_needs_relinking_653c58" formatted="false">"Source needs relinking"</string>
+    <string name="text_turn_shuffle_off_ff71f4" formatted="false">"Turn shuffle off"</string>
+    <string name="text_turn_shuffle_on_39e948" formatted="false">"Turn shuffle on"</string>
+    <string name="text_open_player_artwork_unavailable_70b4ea" formatted="false">"Open player · artwork unavailable"</string>
+    <string name="text_open_player_artwork_279c50" formatted="false">"Open player · artwork"</string>
+    <string name="text_remove_from_favorites_e1e1ac" formatted="false">"Remove from Favorites"</string>
+    <string name="text_player_unreachable_tap_again_to_retry_61e14c" formatted="false">"Player unreachable · tap again to retry"</string>
+    <string name="text_command_failed_open_the_player_6a5bff" formatted="false">"Command failed · open the player"</string>
+    <string name="text_bindings_not_saved_ccc1a2" formatted="false">"Bindings not saved"</string>
+    <string name="text_shared_aa3dfe" formatted="false">"Shared"</string>
+    <string name="text_saved_1_s_a6223b">"Saved · %1$s"</string>
+    <string name="text_detect_278b26" formatted="false">"Detect"</string>
+    <string name="text_unassigned_81757b" formatted="false">"Unassigned"</string>
+    <string name="text_edit_49e493" formatted="false">"Edit"</string>
+    <string name="text_1_s_options_a1440f">"%1$s options"</string>
+    <string name="text_remove_fd69f0" formatted="false">"Remove"</string>
+    <string name="text_sticks_and_repeat_91e28e" formatted="false">"Sticks and repeat"</string>
+    <string name="text_activation_threshold_1_s_a3d5d8">"Activation threshold · %1$s%%"</string>
+    <string name="text_release_threshold_1_s_75a788">"Release threshold · %1$s%%"</string>
+    <string name="text_delay_before_repeat_1_s_ms_2d2dfe">"Delay before repeat · %1$s ms"</string>
+    <string name="text_repeat_interval_1_s_ms_2d1d12">"Repeat interval · %1$s ms"</string>
+    <string name="text_hold_a_stick_or_d_pad_to_keep_scrolling_single_a_93ed50" formatted="false">"Hold a stick or D-pad to keep scrolling. Single actions do not repeat."</string>
+    <string name="text_reset_profile_80afee" formatted="false">"Reset profile"</string>
+    <string name="text_use_shared_profile_8997d5" formatted="false">"Use shared profile"</string>
+    <string name="text_reset_1_s_f6bc88">"Reset %1$s"</string>
+    <string name="text_1_s_is_already_used_by_2_s_replace_these_binding_9bc78c">"%1$s is already used by %2$s. Replace these bindings in the draft?"</string>
+    <string name="text_replace_in_draft_f2a979" formatted="false">"Replace in draft"</string>
+    <string name="text_controls_1_s_b42d62">"Controls · %1$s"</string>
+    <string name="text_shared_profile_controller_not_detected_yet_f52b68" formatted="false">"Shared profile · controller not detected yet"</string>
+    <string name="text_letters_indicate_codes_received_from_android_ren_0d4b3a" formatted="false">"Letters indicate codes received from Android. Rename their labels in Controls. Shortcuts apply only to the active window."</string>
+    <string name="text_controller_code_1_s_dd98f6">"Controller · code %1$s"</string>
+    <string name="text_record_1_s_52eb4b">"Record · %1$s"</string>
+    <string name="text_press_the_button_or_combination_then_release_you_ca7221" formatted="false">"Press the button or combination, then release. You can also move sticks or triggers."</string>
+    <string name="text_input_received_check_the_binding_before_using_it_d15720" formatted="false">"Input received. Check the binding before using it."</string>
+    <string name="text_listening_04c474" formatted="false">"Listening…"</string>
+    <string name="text_optional_physical_label_01b29a" formatted="false">"Optional physical label…"</string>
+    <string name="text_label_1_s_45b4a6">"Label: %1$s"</string>
+    <string name="text_use_one_to_three_buttons_directions_are_recorded_9a7276" formatted="false">"Use one to three buttons; directions are recorded individually."</string>
+    <string name="text_already_assigned_1_s_617740">"Already assigned: %1$s"</string>
+    <string name="text_replace_these_bindings_in_the_draft_d23325" formatted="false">"Replace these bindings in the draft"</string>
+    <string name="text_home_volume_and_system_keys_cannot_be_recorded_t_1b3b70" formatted="false">"Home, volume and system keys cannot be recorded. Testing on the real controller shows which physical letter corresponds to the received code."</string>
+    <string name="text_if_a_key_does_not_appear_firmware_may_reserve_it_0f06b5" formatted="false">"If a key does not appear, firmware may reserve it or it may be unsupported: try another command. Stop recording with system Back or Cancel."</string>
+    <string name="text_record_again_8c6a0c" formatted="false">"Record again"</string>
+    <string name="text_use_binding_499a9d" formatted="false">"Use binding"</string>
+    <string name="text_physical_label_5f15ae" formatted="false">"Physical label"</string>
+    <string name="text_the_name_to_show_in_hints_up_to_24_characters_th_b24e2b" formatted="false">"The name to show in hints, up to 24 characters. The button code stays unchanged."</string>
+    <string name="text_optional_physical_label_6a760e" formatted="false">"Optional physical label"</string>
+    <string name="text_up_to_24_characters_without_control_characters_cfac52" formatted="false">"Up to 24 characters, without control characters"</string>
+    <string name="text_use_label_39f1df" formatted="false">"Use label"</string>
+    <string name="text_photos_and_videos_not_authorized_open_folders_an_7b898b" formatted="false">"General photo and video access is off. You can choose specific folders from Library > Media folders."</string>
+    <string name="text_android_settings_unavailable_open_app_permission_fef31a" formatted="false">"Android settings unavailable. Open app permissions in device settings."</string>
+    <string name="text_p_1_s_returning_from_picker_2_s_no_files_read_or_f1fc77">"P%1$s returning from picker: %2$s; no files read or changed"</string>
+    <string name="text_folder_authorized_open_it_in_albums_to_see_files_ef4038" formatted="false">"Folder authorized. Open it in Albums to see files."</string>
+    <string name="text_folder_not_added_1_s_82ccb6">"Folder not added: %1$s"</string>
+    <string name="text_file_cannot_be_linked_403bb3" formatted="false">"File cannot be linked"</string>
+    <string name="text_file_picker_unavailable_be119c" formatted="false">"File picker unavailable"</string>
+    <string name="text_file_picker_unavailable_on_this_system_327275" formatted="false">"File picker unavailable on this system"</string>
+    <string name="text_panel_closed_android_opened_it_on_an_unexpected_9ecb63" formatted="false">"Panel closed: Android opened it on an unexpected or released display."</string>
+    <string name="text_p_1_s_created_on_display_2_s_b6f016">"P%1$s created on display %2$s"</string>
+    <string name="text_content_cannot_be_opened_048ecf" formatted="false">"Content cannot be opened"</string>
+    <string name="text_the_widget_photo_could_not_be_opened_try_again_47f055" formatted="false">"The widget photo could not be opened. Try again."</string>
+    <string name="text_the_widget_photo_is_no_longer_available_d35303" formatted="false">"The widget photo is no longer available."</string>
+    <string name="text_source_verification_failed_try_again_in_sources_be6dc5" formatted="false">"Source verification failed. Try again in Sources."</string>
+    <string name="text_p_1_s_local_command_2_s_b9fd52">"P%1$s local command: %2$s"</string>
+    <string name="text_p_1_s_key_2_s_source_3_s_focus_4_s_accepted_5_s_10cfe3">"P%1$s key %2$s, source %3$s, focus=%4$s, accepted=%5$s"</string>
+    <string name="text_thor_gallery_m1_417893" formatted="false">"DS Gallery M1"</string>
+    <string name="text_report_copied_you_can_paste_it_into_chat_5f32cd" formatted="false">"Report copied. You can paste it into chat."</string>
+    <string name="text_the_panel_is_no_longer_available_try_again_from_88605c" formatted="false">"The panel is no longer available. Try again from the active window."</string>
+    <string name="text_no_app_available_to_open_this_6a28bb" formatted="false">"No app available to open this"</string>
+    <string name="text_p_1_s_external_picker_requested_on_display_2_s_o_214785">"P%1$s external picker requested on display %2$s; outcome not claimed"</string>
+    <string name="text_p_1_s_system_picker_requested_on_display_2_s_fe81f3">"P%1$s system picker requested on display %2$s"</string>
+    <string name="text_picker_unavailable_1_s_bd35d0">"Picker unavailable: %1$s"</string>
+    <string name="text_choose_at_least_one_album_or_collection_f499bc" formatted="false">"Choose at least one album or collection"</string>
+    <string name="text_no_image_0fca79" formatted="false">"No image"</string>
+    <string name="text_image_ready_c2b75d" formatted="false">"Image ready"</string>
+    <string name="text_loading_image_b4f633" formatted="false">"Loading image"</string>
+    <string name="text_no_readable_preview_58c498" formatted="false">"No readable preview"</string>
+    <string name="text_choose_photo_frame_images_3d6082" formatted="false">"Choose photo frame images"</string>
+    <string name="text_the_selected_images_cannot_be_opened_try_again_o_edf6e5" formatted="false">"The selected images cannot be opened. Try again or choose other content."</string>
+    <string name="text_available_images_and_gifs_only_hidden_albums_rev_d46c35" formatted="false">"Available images and GIFs only. Hidden albums, revoked sources and trash remain excluded."</string>
+    <string name="text_retry_20b5f4" formatted="false">"Retry"</string>
+    <string name="text_configure_photo_frame_bbd19b" formatted="false">"Configure photo frame"</string>
+    <string name="text_pause_photo_frame_ead8b9" formatted="false">"Pause photo frame"</string>
+    <string name="text_start_photo_frame_b1bade" formatted="false">"Start photo frame"</string>
+    <string name="text_show_photo_frame_controls_792f9e" formatted="false">"Show photo frame controls"</string>
+    <string name="text_no_image_available_470187" formatted="false">"No image available"</string>
+    <string name="text_panel_not_visible_4f52a6" formatted="false">"Panel not visible"</string>
+    <string name="text_paused_power_saving_44a049" formatted="false">"Paused · power saving"</string>
+    <string name="text_paused_game_mode_853b95" formatted="false">"Paused · Game mode"</string>
+    <string name="text_paused_menu_open_fc2df2" formatted="false">"Paused · menu open"</string>
+    <string name="text_paused_2f4e01" formatted="false">"Paused"</string>
+    <string name="text_one_image_only_7f300d" formatted="false">"One image only"</string>
+    <string name="text_sequential_937369" formatted="false">"Sequential"</string>
+    <string name="text_previous_photo_a41ac2" formatted="false">"Previous photo"</string>
+    <string name="text_next_photo_17e053" formatted="false">"Next photo"</string>
+    <string name="text_image_only_174c99" formatted="false">"Image only"</string>
+    <string name="text_images_to_show_29445a" formatted="false">"Images to show"</string>
+    <string name="text_all_849797" formatted="false">"All"</string>
+    <string name="text_favorites_4c7a1b" formatted="false">"Favorites"</string>
+    <string name="text_albums_and_collections_246b7d" formatted="false">"Albums and collections"</string>
+    <string name="text_1_s_128_albums_and_collections_chosen_at_the_lim_3e14da">"%1$s / 128 albums and collections chosen. At the limit, remove a choice before adding another."</string>
+    <string name="text_1_s_choices_unavailable_references_retained_061994">"%1$s choices unavailable: references retained"</string>
+    <string name="text_change_image_every_75bf32" formatted="false">"Change image every"</string>
+    <string name="text_seconds_2120_c9fe92" formatted="false">"Seconds · 2–120"</string>
+    <string name="text_shuffle_169374" formatted="false">"Shuffle"</string>
+    <string name="text_completes_a_cycle_and_avoids_immediate_repeats_39acda" formatted="false">"Completes a cycle and avoids immediate repeats"</string>
+    <string name="text_fill_frame_4f7c97" formatted="false">"Fill frame"</string>
+    <string name="text_may_crop_edges_turn_off_to_show_the_full_image_de5969" formatted="false">"May crop edges; turn off to show the full image"</string>
+    <string name="text_fade_b179cb" formatted="false">"Fade"</string>
+    <string name="text_smooth_transition_of_about_half_a_second_14f506" formatted="false">"Smooth transition of about half a second"</string>
+    <string name="text_animate_current_gif_863ee0" formatted="false">"Animate current GIF"</string>
+    <string name="text_one_animation_only_suspended_when_paused_and_in_b619ca" formatted="false">"One animation only; suspended when paused and in Game mode"</string>
+    <string name="text_keep_screen_on_d6eb18" formatted="false">"Keep screen on"</string>
+    <string name="text_only_while_the_frame_is_visible_suspended_in_pow_70dcc7" formatted="false">"Only while the frame is visible; suspended in power saving"</string>
+    <string name="text_hides_app_bars_the_top_button_restores_controls_de2422" formatted="false">"Hides app bars; the top button restores controls"</string>
+    <string name="text_videos_and_music_are_excluded_timers_and_preload_29d638" formatted="false">"Videos and music are excluded. Timers and preloading stop when the panel is hidden, a menu is open, or Game mode or power saving is active."</string>
+    <string name="text_configuration_incomplete_try_again_0d7d29" formatted="false">"Configuration incomplete. Try again."</string>
+    <string name="text_photo_widget_911f94" formatted="false">"Photo widget"</string>
+    <string name="text_collection_6d6e22" formatted="false">"Collection"</string>
+    <string name="text_single_photo_5ed01a" formatted="false">"Single photo"</string>
+    <string name="text_choose_a_photo_folder_in_the_gallery_first_bcb193" formatted="false">"Choose a photo folder in the gallery first."</string>
+    <string name="text_no_photo_albums_available_7e331a" formatted="false">"No photo albums available."</string>
+    <string name="text_no_collections_available_1eb2bf" formatted="false">"No collections available."</string>
+    <string name="text_change_photo_f1bc64" formatted="false">"Change photo"</string>
+    <string name="text_every_30_minutes_fcea34" formatted="false">"Every 30 minutes"</string>
+    <string name="text_every_hour_0b11e2" formatted="false">"Every hour"</string>
+    <string name="text_every_6_hours_70657d" formatted="false">"Every 6 hours"</string>
+    <string name="text_every_day_32af98" formatted="false">"Every day"</string>
+    <string name="text_android_may_delay_changes_suspended_in_game_mode_4c0e10" formatted="false">"Android may delay changes; suspended in Game mode."</string>
+    <string name="text_fill_may_crop_edges_7b2302" formatted="false">"Fill · may crop edges"</string>
+    <string name="text_open_on_one_screen_00b28c" formatted="false">"Open on one screen"</string>
+    <string name="text_use_in_a_photo_frame_4b03fb" formatted="false">"Use in a photo frame"</string>
+    <string name="text_add_thor_gallery_photo_frame_from_your_launcher_628bfc" formatted="false">"Add “DS Gallery · Photo frame” from your launcher\'s widgets, then return here."</string>
+    <string name="text_replaces_the_widget_selection_with_this_fixed_im_ecfdfb" formatted="false">"Replaces the widget selection with this fixed image. The original file remains intact."</string>
+    <string name="text_photo_frame_1_s_9917f0">"Photo frame %1$s"</string>
+    <string name="text_widget_not_updated_try_again_d5d426" formatted="false">"Widget not updated. Try again."</string>
+    <string name="text_photo_changed_or_unavailable_fdb784" formatted="false">"Photo changed or unavailable"</string>
+    <string name="text_widget_no_longer_available_f999f8" formatted="false">"Widget no longer available"</string>
+    <string name="text_no_photo_available_3cf246" formatted="false">"No photo available"</string>
+    <string name="text_photo_unavailable_d15d30" formatted="false">"Photo unavailable"</string>
+    <string name="text_preview_unreadable_try_again_45db31" formatted="false">"Preview unreadable · try again"</string>
+    <string name="text_open_gallery_no_photo_available_03a759" formatted="false">"Open gallery · no photo available"</string>
+    <string name="text_your_images_41bd0e" formatted="false">"Your images"</string>
+    <string name="text_fixed_image_631654" formatted="false">"Fixed image"</string>
+    <string name="text_automatic_changes_paused_game_mode_1dd71f" formatted="false">"Automatic changes paused · Game mode"</string>
+    <string name="text_manual_changes_6f0bb8" formatted="false">"Manual changes"</string>
+    <string name="text_about_1_s_min_2ef38b">"About %1$s min"</string>
+    <string name="text_settings_too_large_34c3b1" formatted="false">"Settings too large"</string>
+    <string name="text_file_too_large_234633" formatted="false">"File too large"</string>
+    <string name="text_unexpected_content_after_settings_912e60" formatted="false">"Unexpected content after settings"</string>
+    <string name="text_unsupported_version_0fd927" formatted="false">"Unsupported version"</string>
+    <string name="text_incomplete_or_unsupported_settings_8affeb" formatted="false">"Incomplete or unsupported settings"</string>
+    <string name="text_1_s_field_out_of_range_95e5ad">"%1$s field out of range"</string>
+    <string name="text_select_a_system_document_d34685" formatted="false">"Select a system document"</string>
+    <string name="text_select_a_system_destination_da89d0" formatted="false">"Select a system destination"</string>
+    <string name="text_export_unverified_the_document_may_be_incomplete_eceee6" formatted="false">"Export unverified; the document may be incomplete"</string>
+    <string name="text_export_unverified_the_destination_document_may_b_364634" formatted="false">"Export unverified. The destination document may be incomplete; try again with a new file. Settings remain intact."</string>
+    <string name="text_operation_failed_check_format_access_and_free_sp_9f7c43" formatted="false">"Operation failed. Check format, access and free space; settings remain intact."</string>
+    <string name="text_settings_exported_and_verified_the_document_cont_10cce0" formatted="false">"Settings exported and verified. The document contains no media."</string>
+    <string name="text_document_verified_check_the_preview_before_impor_ab933c" formatted="false">"Document verified. Check the preview before importing."</string>
+    <string name="text_display_unavailable_8b459c" formatted="false">"Display unavailable"</string>
+    <string name="text_file_picker_unavailable_on_this_panel_993597" formatted="false">"File picker unavailable on this panel."</string>
+    <string name="text_keep_your_preferences_53df46" formatted="false">"Keep your preferences"</string>
+    <string name="text_review_what_will_change_f71fce" formatted="false">"Review what will change"</string>
+    <string name="text_themes_behavior_controller_and_touch_gestures_in_e02831" formatted="false">"Themes, behavior, controller and touch gestures in a local document."</string>
+    <string name="text_checking_document_cf3a92" formatted="false">"Checking document…"</string>
+    <string name="text_export_saved_settings_48c7e3" formatted="false">"Export saved settings"</string>
+    <string name="text_the_document_contains_saved_preferences_not_draf_9c4308" formatted="false">"The document contains saved preferences, not drafts open on the other panel."</string>
+    <string name="text_export_settings_b58a03" formatted="false">"Export settings…"</string>
+    <string name="text_current_settings_cannot_be_exported_9a7577" formatted="false">"Current settings cannot be exported."</string>
+    <string name="text_import_with_preview_78ff22" formatted="false">"Import with preview"</string>
+    <string name="text_choose_a_thor_gallery_settings_document_opening_d4eef4" formatted="false">"Choose a DS Gallery settings document. Opening it changes nothing: use Import and save to apply it."</string>
+    <string name="text_choose_settings_f671c8" formatted="false">"Choose settings…"</string>
+    <string name="text_theme_1_s_ngifs_2_s_n_0e9255">"Theme: %1$s\nGIFs: %2$s\n"</string>
+    <string name="text_visible_9c4acf" formatted="false">"Visible"</string>
+    <string name="text_personal_controller_profiles_1_s_ngame_mode_2_s_59f2c2">"Personal controller profiles: %1$s\nGame mode: %2$s"</string>
+    <string name="text_yes_ad273c" formatted="false">"yes"</string>
+    <string name="text_grid_1_s_ngif_limit_2_s_n_224dd6">"Grid: %1$s\nGIF limit: %2$s\n"</string>
+    <string name="text_reduced_motion_1_s_nphoto_interval_2_s_s_n_488a86">"Reduced motion: %1$s\nPhoto interval: %2$s s\n"</string>
+    <string name="text_artwork_1_s_nprevious_2_s_n_462b2e">"Artwork: %1$s\nPrevious: %2$s\n"</string>
+    <string name="text_always_previous_track_c63ca0" formatted="false">"always previous track"</string>
+    <string name="text_restart_after_three_seconds_2e0291" formatted="false">"restart after three seconds"</string>
+    <string name="text_stick_activate_1_s_release_2_s_nrepeat_3_s_4_s_m_a3104d">"Stick: activate %1$s%%, release %2$s%%\nRepeat: %3$s / %4$s ms"</string>
+    <string name="text_double_tap_1_s_nlong_press_2_s_n_610152">"Double tap: %1$s\nLong press: %2$s\n"</string>
+    <string name="text_touch_zones_1_s_nassigned_three_finger_direction_26358f">"Touch zones: %1$s\nAssigned three-finger directions: %2$s"</string>
+    <string name="text_also_use_the_document_s_shared_controls_de11b1" formatted="false">"Also use the document\'s shared controls"</string>
+    <string name="text_leave_this_off_to_keep_current_shared_controls_p_8d66bb" formatted="false">"Leave this off to keep current shared controls. Personal profiles activate only on the matching controller."</string>
+    <string name="text_preferences_changed_read_the_document_again_befo_fb7e76" formatted="false">"Preferences changed. Read the document again before importing."</string>
+    <string name="text_this_document_is_not_a_backup_of_files_or_collec_fca373" formatted="false">"This document is not a backup of files or collections. It contains no sources, permissions, trash or screen assignments; screens released to games stay unchanged."</string>
+    <string name="text_import_and_save_586cbd" formatted="false">"Import and save"</string>
+    <string name="text_settings_imported_and_saved_files_and_screens_st_9e3e7e" formatted="false">"Settings imported and saved. Files and screens stay unchanged."</string>
+    <string name="text_unsupported_opening_ca41a8" formatted="false">"Unsupported opening"</string>
+    <string name="text_no_display_available_explicitly_open_the_gallery_6ef978" formatted="false">"No display available: explicitly open the gallery on a free screen"</string>
+    <string name="text_content_unavailable_df9efa" formatted="false">"Content unavailable"</string>
+    <string name="text_temporary_access_expired_d75210" formatted="false">"Temporary access expired"</string>
+    <string name="text_temporary_content_is_read_only_link_the_file_and_b53bf7" formatted="false">"Temporary content is read-only. Link the file and authorize its folder to modify it."</string>
+    <string name="text_link_the_file_or_import_a_library_copy_to_use_fa_29ea7c" formatted="false">"Link the file or import a library copy to use Favorites and comparison."</string>
+    <string name="text_received_content_cb883c" formatted="false">"Received content"</string>
+    <string name="text_reading_1_s_2_s_1a4230">"Reading · %1$s / %2$s"</string>
+    <string name="text_open_to_view_this_file_with_temporary_access_imp_45ef00" formatted="false">"Open to view this file with temporary access. Import a copy to keep its bytes in a folder you choose. Keep link retains document access only when the provider allows it."</string>
+    <string name="text_no_provider_scanning_automatic_copying_or_adding_0604c6" formatted="false">"No provider scanning, automatic copying or adding to Favorites. A link does not guarantee offline availability."</string>
+    <string name="text_reopen_temporary_file_32d294" formatted="false">"Reopen temporary file"</string>
+    <string name="text_import_a_copy_42d133" formatted="false">"Import a copy…"</string>
+    <string name="text_keep_link_1e44fb" formatted="false">"Keep link…"</string>
+    <string name="text_choose_file_to_link_4d549c" formatted="false">"Choose file to link…"</string>
+    <string name="text_check_access_again_80d1e3" formatted="false">"Check access again"</string>
+    <string name="text_keep_link_0fa353" formatted="false">"Keep link?"</string>
+    <string name="text_1_s_n_nread_only_access_to_this_document_only_no_216299">"%1$s\n\nRead-only access to this document only. No copying or scanning other folders. The provider can make the file unavailable or revoke access; use Import a copy to keep its bytes."</string>
+    <string name="text_read_only_link_retained_original_in_provider_no_935dea" formatted="false">"Read-only link retained; original in provider, no copy."</string>
+    <string name="text_link_not_retained_91c97f" formatted="false">"Link not retained"</string>
+    <string name="text_keep_link_c839e2" formatted="false">"Keep link"</string>
+    <string name="text_opening_paused_f249fe" formatted="false">"Opening paused"</string>
+    <string name="text_content_becomes_visible_when_this_panel_is_activ_89c5d8" formatted="false">"Content becomes visible when this panel is active."</string>
+    <string name="text_temporary_opening_shared_player_4fca7f" formatted="false">"Temporary opening · shared player"</string>
+    <string name="text_playback_was_replaced_by_another_music_command_eec62d" formatted="false">"Playback was replaced by another music command."</string>
+    <string name="text_media_unreadable_access_expired_or_format_cannot_563bbc" formatted="false">"Media unreadable: access expired or format cannot be decoded"</string>
+    <string name="text_video_cannot_be_opened_23b178" formatted="false">"Video cannot be opened"</string>
+    <string name="text_palettes_colors_and_theme_preview_7d2833" formatted="false">"Palettes, colors and theme preview"</string>
+    <string name="text_gallery_preview_and_navigation_1bc538" formatted="false">"Gallery, preview and navigation"</string>
+    <string name="text_music_animation_and_game_mode_678659" formatted="false">Music and animation</string>
+    <string name="text_buttons_sticks_and_touch_gestures_220de4" formatted="false">"Buttons, sticks and touch gestures"</string>
+    <string name="text_choose_what_appears_in_the_gallery_c72934" formatted="false">"Choose what appears in the gallery"</string>
+    <string name="text_trash_copies_imports_and_duplicates_19a795" formatted="false">"Trash, copies, imports and duplicates"</string>
+    <string name="text_thor_layout_cache_and_saved_settings_f7e1f8" formatted="false">"Thor layout and settings backup"</string>
+    <string name="text_buttons_and_sticks_bf2200" formatted="false">"Buttons and sticks"</string>
+    <string name="text_help_79df3a" formatted="false">"Help"</string>
+    <string name="text_collections_and_playlists_8b30ee" formatted="false">"Collections and playlists"</string>
+    <string name="text_find_duplicates_d1ed15" formatted="false">"Find duplicates"</string>
+    <string name="text_import_photos_and_videos_b31480" formatted="false">"Import photos and videos"</string>
+    <string name="text_import_music_b026bc" formatted="false">"Import music"</string>
+    <string name="text_export_or_import_settings_5f5279" formatted="false">"Export or import settings"</string>
+    <string name="text_manage_both_screens_dcba9a" formatted="false">"Manage both screens"</string>
+    <string name="text_operations_to_finish_4f1ecf" formatted="false">"Operations to finish"</string>
+    <string name="empty_preview_folder_title">Your gallery starts here</string>
+    <string name="empty_preview_folder_message">Choose a folder with photos or videos. Its subfolders will appear as albums, ready to browse on the other screen.</string>
+    <string name="choose_media_folder">Choose a folder</string>
+    <string name="library_settings_title">Library</string>
+    <string name="library_settings_description">Folders, collections and file management</string>
+    <string name="media_folders_title">Media folders</string>
+    <string name="copy_photos_title">Copy photos and videos to a folder…</string>
+    <string name="copy_music_title">Copy music to a folder…</string>
+    <string name="permissions_settings_title">Permissions</string>
+    <string name="permissions_settings_description">Review and manage DS Gallery access</string>
+    <string name="permissions_intro">Review the access DS Gallery uses here. Media folders are chosen separately in Library; the app keeps access only to the locations you authorize.</string>
+    <string name="permission_media_title">Photos and videos</string>
+    <string name="permission_media_description">To browse files, choose folders from Library. You can review the app’s Android permissions here.</string>
+    <string name="permission_manage_android">Open Android permissions</string>
+    <string name="permission_folder_access_is_selected">Folders are authorized from Library</string>
+    <string name="permission_usage_title">Detecting when you return Home</string>
+    <string name="permission_usage_description">This access lets DS Gallery send both panels to the background when you return Home, while keeping Gallery on the other screen when another app is in use.</string>
+    <string name="permission_usage_enabled">Enabled</string>
+    <string name="permission_enable_usage">Enable access</string>
+    <string name="permission_status_enabled">Enabled</string>
+    <string name="permission_status_not_enabled">Needs attention</string>
+    <string name="permission_notifications_title">Operation notifications</string>
+    <string name="permission_notifications_description">Notifications show progress for copies and other operations in progress.</string>
+    <string name="source_folder_guidance">Add folders to browse. Subfolders become albums, and files stay in their original location.</string>
+    <string name="add_visual_folder">Photos and videos</string>
+    <string name="add_music_folder">Music</string>
+    <string name="copy_file_explanation">Want to make a copy of files in another folder? Choose one of the options below. To browse without copying, add a folder above.</string>
+    <string name="text_the_bar_uses_icons_only_enable_labels_show_file_94209b" formatted="false">"The bar uses icons only. Enable labels, show file names and reduce animations here."</string>
+    <string name="text_photos_fill_the_screen_pinch_to_zoom_drag_with_o_71a50f" formatted="false">"Photos fill the screen. Pinch to zoom, drag with one finger and tap the sides to change photos. Extra controls are optional."</string>
+    <string name="text_preview_gifs_start_looping_automatically_grid_op_4cabad" formatted="false">"Preview GIFs start looping automatically. Grid options limit simultaneous animated thumbnails; Game mode reduces load."</string>
+    <string name="text_a_opens_b_goes_back_without_closing_the_gallery_435989" formatted="false">"A opens, B goes back without closing the gallery, X swaps panels. Customize buttons and gestures without changing files."</string>
+    <string name="text_authorize_the_folders_you_want_to_see_hiding_an_f652bf" formatted="false">"Authorize the folders you want to see. Hiding an album removes it from the gallery while preserving original files."</string>
+    <string name="text_copy_and_move_ask_for_a_destination_trash_allows_02c47c" formatted="false">"Copy and move ask for a destination. Trash allows restoring: check your selection before confirming."</string>
+    <string name="text_the_gallery_uses_one_navigation_screen_and_one_p_9da2d1" formatted="false">"The gallery uses one navigation screen and one preview. Manage screens and recover previews here without deleting originals."</string>
+    <string name="text_sample_photo_0b6032" formatted="false">"Sample photo"</string>
+    <string name="text_selected_35a6ad" formatted="false">"Selected"</string>
+    <string name="text_button_88410e" formatted="false">"Button"</string>
+    <string name="text_the_temporary_copy_expired_2d727d" formatted="false">"The temporary copy expired"</string>
+    <string name="text_copy_not_published_855942" formatted="false">"Copy not published"</string>
+    <string name="text_choose_copy_transformations_923466" formatted="false">"Choose copy transformations"</string>
+    <string name="text_game_mode_allow_preparation_or_try_later_f52946" formatted="false">"Game mode: allow preparation or try later"</string>
+    <string name="text_temporary_storage_unavailable_e47ae5" formatted="false">"Temporary storage unavailable"</string>
+    <string name="text_preparation_interrupted_for_game_mode_originals_f79ced" formatted="false">"Preparation interrupted for Game mode; originals preserved"</string>
+    <string name="text_insufficient_space_for_copies_originals_preserve_ee396b" formatted="false">"Insufficient space for copies; originals preserved"</string>
+    <string name="text_copies_too_large_reduce_dimensions_or_image_coun_db61cb" formatted="false">"Copies too large: reduce dimensions or image count"</string>
+    <string name="text_temporary_storage_full_34bbc4" formatted="false">"Temporary storage full"</string>
+    <string name="text_copy_not_verified_b25152" formatted="false">"Copy not verified"</string>
+    <string name="text_the_source_changed_during_preparation_c794a3" formatted="false">"The source changed during preparation"</string>
+    <string name="text_copies_expired_or_selection_changed_prepare_agai_88a079" formatted="false">"Copies expired or selection changed: prepare again"</string>
+    <string name="text_temporary_copy_changed_prepare_again_04811b" formatted="false">"Temporary copy changed: prepare again"</string>
+    <string name="text_the_original_changed_prepare_copies_again_92bdd2" formatted="false">"The original changed: prepare copies again"</string>
+    <string name="text_share_image_copies_63f7df" formatted="false">"Share image copies"</string>
+    <string name="text_unrecognized_temporary_file_cleanup_paused_257383" formatted="false">"Unrecognized temporary file: cleanup paused"</string>
+    <string name="text_temporary_copy_cleanup_denied_61395b" formatted="false">"Temporary copy cleanup denied"</string>
+    <string name="text_temporary_folder_cleanup_denied_d615be" formatted="false">"Temporary folder cleanup denied"</string>
+    <string name="text_shared_copies_are_read_only_1aeab8" formatted="false">"Shared copies are read-only"</string>
+    <string name="text_folder_access_needs_restoring_b913f4" formatted="false">"Folder access needs restoring"</string>
+    <string name="text_explicitly_relink_the_backup_source_179521" formatted="false">"Explicitly relink the backup source"</string>
+    <string name="text_too_many_folders_choose_a_subfolder_9faacd" formatted="false">"Too many folders: choose a subfolder"</string>
+    <string name="text_the_provider_did_not_return_folder_contents_8852fa" formatted="false">"The provider did not return folder contents"</string>
+    <string name="text_too_many_documents_choose_a_subfolder_42bf11" formatted="false">"Too many documents: choose a subfolder"</string>
+    <string name="text_active_theme_40e4ef" formatted="false">"Active theme"</string>
+    <string name="text_selected_not_saved_yet_0b8923" formatted="false">"Selected, not saved yet"</string>
+    <string name="text_not_selected_f6efb4" formatted="false">"Not selected"</string>
+    <string name="text_active_39df52" formatted="false">"Active"</string>
+    <string name="text_not_saved_yet_a9ff08" formatted="false">"Not saved yet"</string>
+    <string name="text_dark_316022" formatted="false">"Dark"</string>
+    <string name="text_light_8f1b4e" formatted="false">"Light"</string>
+    <string name="text_no_action_f43e02" formatted="false">"No action"</string>
+    <string name="text_swap_already_open_panels_87205f" formatted="false">"Swap already open panels"</string>
+    <string name="text_leftward_db8d9b" formatted="false">"Leftward"</string>
+    <string name="text_rightward_2260ce" formatted="false">"Rightward"</string>
+    <string name="text_upward_a9ec70" formatted="false">"Upward"</string>
+    <string name="text_downward_da6a81" formatted="false">"Downward"</string>
+    <string name="text_invalid_touch_action_36e363" formatted="false">"Invalid touch action"</string>
+    <string name="text_invalid_touch_contexts_038d88" formatted="false">"Invalid touch contexts"</string>
+    <string name="text_invalid_three_finger_gesture_ef0390" formatted="false">"Invalid three-finger gesture"</string>
+    <string name="text_up_to_four_zones_per_context_6f7946" formatted="false">"Up to four zones per context"</string>
+    <string name="text_touch_zone_outside_the_usable_area_1d5310" formatted="false">"Touch zone outside the usable area"</string>
+    <string name="text_zones_in_the_same_context_cannot_overlap_d8c35b" formatted="false">"Zones in the same context cannot overlap"</string>
+    <string name="text_touch_settings_too_large_b4e1f3" formatted="false">"Touch settings too large"</string>
+    <string name="text_invalid_touch_settings_a76146" formatted="false">"Invalid touch settings"</string>
+    <string name="text_invalid_touch_field_cd73e5" formatted="false">"Invalid touch field"</string>
+    <string name="text_invalid_touch_coordinates_0cb272" formatted="false">"Invalid touch coordinates"</string>
+    <string name="text_gestures_changed_on_the_other_panel_reload_setti_09990f" formatted="false">"Gestures changed on the other panel. Reload settings before saving."</string>
+    <string name="text_gestures_not_saved_f2b3af" formatted="false">"Gestures not saved"</string>
+    <string name="text_photos_and_gifs_927c77" formatted="false">"Photos and GIFs"</string>
+    <string name="text_double_tap_8f6732" formatted="false">"Double tap"</string>
+    <string name="text_long_press_e8ac77" formatted="false">"Long press"</string>
+    <string name="text_three_finger_gestures_f7904c" formatted="false">"Three-finger gestures"</string>
+    <string name="text_swipe_with_three_fingers_then_lift_them_some_ges_caae1f" formatted="false">"Swipe with three fingers, then lift them. Some gestures may be reserved by Android."</string>
+    <string name="text_touch_zones_51a77a" formatted="false">"Touch zones"</string>
+    <string name="text_tap_a_zone_to_perform_its_action_measurements_ar_abf462" formatted="false">"Tap a zone to perform its action. Measurements are percentages of the content area."</string>
+    <string name="text_preview_of_1_s_zones_in_the_content_area_b336b0">"Preview of %1$s zones in the content area"</string>
+    <string name="text_zone_1_s_13f903">"Zone %1$s"</string>
+    <string name="text_add_zone_54c3e5" formatted="false">"Add zone"</string>
+    <string name="text_make_room_by_moving_or_shrinking_a_zone_82547d" formatted="false">"Make room by moving or shrinking a zone."</string>
+    <string name="text_zone_action_38a54a" formatted="false">"Zone action"</string>
+    <string name="text_horizontal_position_c54b8c" formatted="false">"Horizontal position"</string>
+    <string name="text_vertical_position_b0dfc9" formatted="false">"Vertical position"</string>
+    <string name="text_width_ea6150" formatted="false">"Width"</string>
+    <string name="text_height_ba9669" formatted="false">"Height"</string>
+    <string name="text_remove_this_zone_e2a96a" formatted="false">"Remove this zone"</string>
+    <string name="text_gestures_apply_locally_to_this_window_swap_panel_b7ff93" formatted="false">"Gestures apply locally to this window. Swap panels affects only the two open panels; it does not reclaim a screen released to a game. File confirmations remain explicit."</string>
+    <string name="text_restore_default_gestures_88890a" formatted="false">"Restore default gestures"</string>
+    <string name="text_reload_saved_settings_b7567e" formatted="false">"Reload saved settings"</string>
+    <string name="text_choose_a_segment_of_at_least_0_25_seconds_within_3023d9" formatted="false">"Choose a segment of at least 0.25 seconds within the video"</string>
+    <string name="text_invalid_video_crop_6c7d96" formatted="false">"Invalid video crop"</string>
+    <string name="text_unsupported_resolution_b28db9" formatted="false">"Unsupported resolution"</string>
+    <string name="text_enter_seconds_within_the_content_duration_3fa3be" formatted="false">"Enter seconds within the content duration"</string>
+    <string name="text_unsupported_video_recipe_393281" formatted="false">"Unsupported video recipe"</string>
+    <string name="text_the_file_has_no_readable_video_track_6b8fdc" formatted="false">"The file has no readable video track"</string>
+    <string name="text_video_duration_or_dimensions_unavailable_007d54" formatted="false">"Video duration or dimensions unavailable"</string>
+    <string name="text_preview_frame_unavailable_3d562e" formatted="false">"Preview frame unavailable"</string>
+    <string name="text_track_encoding_unverified_output_not_published_13ac53" formatted="false">"Track encoding unverified: output not published"</string>
+    <string name="text_encoding_failed_1_s_codec_or_parameters_may_be_u_8f1cb9">"Encoding failed (%1$s). Codec or parameters may be unsupported; original preserved."</string>
+    <string name="text_encoding_did_not_produce_a_file_8b1592" formatted="false">"Encoding did not produce a file"</string>
+    <string name="text_unexpected_output_track_1_s_af782c">"Unexpected output track: %1$s"</string>
+    <string name="text_exported_duration_does_not_match_the_segment_5feb72" formatted="false">"Exported duration does not match the segment"</string>
+    <string name="text_samples_beyond_the_chosen_segment_output_not_pub_af4d09" formatted="false">"Samples beyond the chosen segment: output not published"</string>
+    <string name="text_exported_track_incomplete_79fd24" formatted="false">"Exported track incomplete"</string>
+    <string name="text_video_audio_tracks_do_not_match_options_429d73" formatted="false">"Video/audio tracks do not match options"</string>
+    <string name="text_video_unreadable_041806" formatted="false">"Video unreadable"</string>
+    <string name="text_edit_video_e5572e" formatted="false">"Edit video"</string>
+    <string name="text_trim_time_and_crop_the_frame_the_original_its_fa_58180e" formatted="false">"Trim time and crop the frame. The original, its Favorites and collections remain intact."</string>
+    <string name="text_frame_4098fb" formatted="false">"Frame"</string>
+    <string name="text_the_still_frame_shows_the_initial_crop_play_to_c_4ea1d0" formatted="false">"Drag the timeline to preview the current frame. Play to check only the selected range."</string>
+    <string name="text_play_segment_47e94f" formatted="false">"Play segment"</string>
+    <string name="text_segment_new_copy_duration_1_s_33ce36">"Segment · new copy duration %1$s"</string>
+    <string name="text_video_segment_range_314ef0" formatted="false">"Video segment range"</string>
+    <string name="text_tap_apply_range_before_saving_2d9014" formatted="false">"Tap Apply range before saving."</string>
+    <string name="text_full_video_cae633" formatted="false">"Full video"</string>
+    <string name="text_full_frame_1f765a" formatted="false">"Full frame"</string>
+    <string name="text_video_resolution_a7f5f2" formatted="false">"Video resolution"</string>
+    <string name="text_output_height_is_1_s_px_width_follows_the_chosen_de6116">"Output height is %1$s px; width follows the chosen crop. Re-encodes to MP4 with H.264 video and AAC audio when present. Personal metadata is not copied."</string>
+    <string name="text_export_without_audio_ab231b" formatted="false">"Export without audio"</string>
+    <string name="text_source_has_no_audio_0732a4" formatted="false">"Source has no audio"</string>
+    <string name="text_new_copy_name_mp4_fb568c" formatted="false">"New copy name · .mp4"</string>
+    <string name="text_encoding_takes_time_and_temporary_space_no_files_ad5504" formatted="false">"Encoding takes time and temporary space. No files are overwritten: existing names receive a suffix."</string>
+    <string name="text_1_s_mp4_n_2_s_nfrom_3_s_to_4_s_5_s_nmp4_h_264_6_2381c9">"%1$s.mp4\n%2$s\nFrom %3$s to %4$s · %5$s\nMP4 · H.264 · %6$sp%7$s\nCrop %8$s%% × %9$s%%\nNo personal metadata copied. Original preserved."</string>
+    <string name="text_without_audio_66297f" formatted="false">" · without audio"</string>
+    <string name="text_aac_if_present_981768" formatted="false">" · AAC if present"</string>
+    <string name="text_video_encoding_may_slow_the_game_and_use_more_ba_0160f6" formatted="false">"Video encoding may slow the game and use more battery. You can export later."</string>
+    <string name="text_video_cannot_be_played_1_s_a0e774">"Video cannot be played: %1$s"</string>
+    <string name="text_video_unavailable_ce2e8e" formatted="false">"Video unavailable"</string>
+    <string name="text_folders_69d99c" formatted="false">"folders"</string>
+    <string name="text_for_music_eef927" formatted="false">"for music"</string>
+    <string name="text_preview_c10f62" formatted="false">"PREVIEW"</string>
+    <string name="text_compact_07da14" formatted="false">"compact"</string>
+    <string name="text_regular_0e99b3" formatted="false">"regular"</string>
+    <string name="text_selected_3da0d3" formatted="false">"selected"</string>
+    <string name="text_canceled_000f5b" formatted="false">"canceled"</string>
+    <string name="text_visible_373a21" formatted="false">"visible"</string>
+    <string name="text_allowed_9b88cf" formatted="false">"allowed"</string>
+    <string name="text_none_b8ce01" formatted="false">"none"</string>
+    <string name="text_opening_0945e5" formatted="false">"opening"</string>
+    <string name="text_navigation_96867a" formatted="false">"navigation"</string>
+    <string name="text_segment_8d73b9" formatted="false">"-segment"</string>
+    <string name="text_frame_a6b9c6" formatted="false">"-frame"</string>
+    <string name="text_edited_7e7cdc" formatted="false">"-edited"</string>
+    <string name="text_thorgallery_settings_json_c065ac" formatted="false">"DSGallery-settings.json"</string>
+    <string name="text_choose_a_color_9cf459" formatted="false">Choose a color</string>
+    <string name="text_advanced_value_optional_2f398a" formatted="false">Advanced value · optional</string>
+    <string name="text_lightness_7d8d12" formatted="false">Brightness</string>
+    <string name="text_tap_a_color_to_change_it_5cbe58" formatted="false">Tap a color to change it. Changes apply when you save.</string>
+    <string name="text_color_preview_7bbd3c" formatted="false">Preview</string>
+    <string name="text_choose_colors_with_a_color_wheel_45c992" formatted="false">Choose colors one at a time</string>
+    <string name="text_intensity_7a8f0c" formatted="false">Intensity</string>
+    <string name="text_tap_to_choose_a_new_color_0de3e4" formatted="false">Tap to choose a new color</string>
+    <string name="text_back_to_appearance_2b73b0" formatted="false">"Back to Theme"</string>
+    <string name="text_sample_text_a631e1" formatted="false">Text</string>
+    <string name="text_customize_theme_5d7c82" formatted="false">Customize colors</string>
+    <string name="text_color_wheel_5d58ae" formatted="false">Color wheel</string>
+    <string name="text_hide_advanced_value_47a819" formatted="false">Hide advanced value</string>
+    <string name="text_audio_trim_preview_on_the_other_screen_45d9bc" formatted="false">Track preview · adjust the start and end on the other screen</string>
+    <string name="text_preview_unavailable_135044" formatted="false">Preview unavailable</string>
+    <string name="text_invalid_image_filter_d2a84e" formatted="false">Invalid image filter</string>
+    <string name="text_mirror_horizontal_on_b74c1f" formatted="false">Horizontal mirror on</string>
+    <string name="text_mirror_horizontal_2c4e75" formatted="false">Mirror horizontally</string>
+    <string name="text_mirror_vertical_on_9c28ef" formatted="false">Vertical mirror on</string>
+    <string name="text_mirror_vertical_629eb8" formatted="false">Mirror vertically</string>
+    <string name="text_filters_54fc01" formatted="false">Filters</string>
+    <string name="text_filter_original_18c7dc" formatted="false">Original</string>
+    <string name="text_filter_black_and_white_7c204d" formatted="false">Black and white</string>
+    <string name="text_filter_warm_ef28da" formatted="false">Warm</string>
+    <string name="text_filter_cool_5a1d5d" formatted="false">Cool</string>
+    <string name="dual_screen_access_title">Manage both screens</string>
+    <string name="dual_screen_access_description">To keep the gallery on the free screen when you open a game and send it to the background when you return Home, Android must let DS Gallery identify the app in the foreground. It can read the active app\'s name, not its content.</string>
+    <string name="dual_screen_access_action">Open settings</string>
+    <string name="video_preview_position">Video preview position</string>
+    <string name="audio_preview_position">Audio preview position</string>
+    <string name="roots_title">Your roots</string>
+    <string name="add_roots">Add roots</string>
+    <string name="roots_guidance">Subfolders become albums. Scanning starts automatically when you add a folder.</string>
+    <string name="roots_scanning">Scanning %1$s… · %2$s files</string>
+    <string name="roots_empty_title">No folders yet</string>
+    <string name="roots_empty_message">Add a folder to start seeing your albums.</string>
+    <string name="roots_choose_type">Choose what you want to browse. After you grant access, albums will be found automatically.</string>
+    <string name="remove_root">Remove root: %1$s</string>
+    <string name="roots_added_scanning">Folder added. Album scanning is in progress.</string>
+    <string name="roots_download_help">Android may block selecting the entire Download folder or a storage root. Open a subfolder, such as Download/Photos, and tap “Use this folder”. Android/data and Android/obb are not accessible.</string>
+    <string name="roots_picker_help">In Android’s picker, open internal storage or the microSD card, choose a root folder, and tap “Use this folder”. Protected system folders cannot be authorized.</string>
+    <string name="album_set_cover">"Set as album cover"</string>
+
+    <string name="navbar_categories_title">Enable and reorder</string>
+
+    <string name="navbar_categories_help">Tap an icon to show or hide it. Touch and hold, then drag to change its order.</string>
+    <string name="controller_guide_title">"Quick controller guide"</string>
+    <string name="controller_guide_video_title">"Video: seeking and volume"</string>
+    <string name="controller_guide_video_body">During a video, A toggles play/pause. While playing, B navigates the gallery; while paused, B closes the player without leaving the folder. Resume dialog: A continues, X restarts, B cancels. Left stick: up/down for volume, left/right to seek. The D-pad navigates.</string>
+    <string name="controller_guide_dpad_title">"D-pad"</string>
+    <string name="controller_guide_dpad_body">"Use the D-pad to move through gallery items and sections."</string>
+    <string name="controller_guide_l3_title">"L3 · Photo Frame"</string>
+    <string name="controller_guide_l3_body">"L3 opens Photo Frame: choose an album or Favorites and start the slideshow on the upper screen."</string>
+    <string name="controller_guide_shortcuts_title">"Default shortcuts"</string>
+    <string name="controller_guide_shortcuts_body">"A confirms and opens or plays. B goes back without closing the app. Y swaps content between screens. X opens settings. Xou can remap these controls."</string>
+    <string name="controller_guide_tabs_title">"Change section"</string>
+    <string name="controller_guide_tabs_body">"L1 and R1 move to the previous or next section. Bindings may vary by controller profile."</string>
+    <string name="frame_enter_fullscreen">"Fullscreen slideshow"</string>
+    <string name="frame_exit_fullscreen">"Exit fullscreen"</string>
+    <string name="video_return_screen">"Return video to this screen"</string>
+</resources>

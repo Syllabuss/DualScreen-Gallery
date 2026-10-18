@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="music_colors_title">Couleurs du lecteur</string>
+    <string name="music_colors_theme">Thème</string>
+    <string name="music_colors_artwork">Depuis la pochette</string>
+    <string name="music_colors_custom">Personnalisées</string>
+    <string name="music_colors_description">Utilisez le thème, la pochette en plein écran avec des couleurs assorties ou vos propres couleurs. Sans pochette, le fond du thème reste affiché. Vos couleurs sont utilisées telles quelles, sans dégradé ajouté.</string>
+    <string name="music_colors_background">Fond</string>
+    <string name="music_colors_bars">Barres</string>
+</resources>

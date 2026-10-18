@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="video_cover_frame">"选择封面帧"</string>
+    <string name="album_tile_size">"相册大小"</string>
+    <string name="video_cover_current_frame">将当前帧设为封面</string>
+</resources>

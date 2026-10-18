@@ -1,0 +1,8 @@
+<resources>
+    <string name="image_backdrop_title">Фон прозрачных изображений</string>
+    <string name="image_backdrop_grid">Шахматный фон</string>
+    <string name="image_backdrop_tint">Тонированный шахматный фон</string>
+    <string name="image_backdrop_solid">Сплошной цвет</string>
+    <string name="image_backdrop_linear">Вертикальный градиент</string>
+    <string name="image_backdrop_radial">Градиент от центра</string>
+</resources>

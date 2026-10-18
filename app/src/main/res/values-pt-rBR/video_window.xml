@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="video_pip">Vídeo em janela</string>
+    <string name="video_pip_active">Reproduzindo em janela</string>
+    <string name="video_pip_description">O vídeo continua na janela do Android. Navegue pela galeria ou abra outros aplicativos. Use os controles da janela para ampliá-la ou fechá-la.</string>
+    <string name="video_pip_unavailable">A janela de vídeo está indisponível. Verifique a permissão de picture-in-picture nas configurações do Android.</string>
+    <string name="video_return_screen">"Trazer o vídeo para esta tela"</string>
+</resources>

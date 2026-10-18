@@ -1,0 +1,83 @@
+name: Verify Android
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: verify-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  tests:
+    name: Tests ${{ matrix.shard }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Set up JDK 17
+        uses: actions/setup-java@de7274f081f381c8f8158605e0321c36c376e2e6 # v6.0.1
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: gradle
+      - name: Ensure Android SDK 35
+        run: '"$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" "platforms;android-35" "build-tools;35.0.0"'
+      - name: Run test shard
+        run: bash ./gradlew :app:testDebugUnitTest -PtestShard=${{ matrix.shard }}/4 --build-cache --max-workers=2 --console=plain
+      - name: Save test reports
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: tests-${{ matrix.shard }}
+          path: app/build/test-results
+          retention-days: 7
+  build:
+    name: Build and lint
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Set up JDK 17
+        uses: actions/setup-java@de7274f081f381c8f8158605e0321c36c376e2e6 # v6.0.1
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: gradle
+      - name: Ensure Android SDK 35
+        run: '"$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" "platforms;android-35" "build-tools;35.0.0"'
+      - name: Verify translations
+        run: python3 scripts/localization.py
+      - name: Lint and assemble optimized app
+        run: bash ./gradlew :app:lintDebug :app:assembleBenchmark :app:lgplRelinkingKit --build-cache --max-workers=2 --console=plain
+      - name: Save build reports
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: build-reports
+          path: |
+            app/build/reports
+            dist/*-relinking.zip
+          retention-days: 7
+  verify:
+    name: verify
+    if: always()
+    needs: [tests, build]
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Require every test shard and build
+        env:
+          TESTS: ${{ needs.tests.result }}
+          BUILD: ${{ needs.build.result }}
+        run: test "$TESTS" = success && test "$BUILD" = success

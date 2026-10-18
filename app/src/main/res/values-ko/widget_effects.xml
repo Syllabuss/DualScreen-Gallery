@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="widget_playback_effect">재생 효과</string>
+    <string name="widget_effect_none">없음</string>
+    <string name="widget_effect_disc">디스크</string>
+    <string name="widget_effect_pulse">맥동</string>
+    <string name="widget_effect_bars">오디오 막대</string>
+</resources>

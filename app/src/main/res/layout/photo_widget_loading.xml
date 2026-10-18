@@ -1,0 +1,4 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/widget_loading_surface" android:focusable="false">
+    <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="12dp" android:background="@drawable/widget_loading_block" android:importantForAccessibility="no"/>
+    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="center" android:src="@drawable/ph_images" android:alpha="0.25" android:importantForAccessibility="no"/>
+</FrameLayout>

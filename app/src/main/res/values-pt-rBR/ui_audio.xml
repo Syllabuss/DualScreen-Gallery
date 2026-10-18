@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="gif_all_visible">Todos os GIFs visíveis</string>
+    <string name="hide_gif_badge">Ocultar etiqueta GIF</string>
+    <string name="ui_sounds">Sons da interface</string>
+<string name="widget_crop">Enquadrar a foto</string>
+<string name="widget_crop_hint">Use dois dedos para ampliar. Arraste ou use os analógicos para mover a foto.</string>
+<string name="widget_crop_reset">Redefinir</string>
+</resources>

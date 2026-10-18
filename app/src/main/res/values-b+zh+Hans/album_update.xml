@@ -1,0 +1,9 @@
+<resources>
+    <string name="album_lock_action">锁定</string>
+    <string name="album_unlock_action">解锁</string>
+    <string name="album_pin_settings">相册 PIN</string>
+    <string name="album_pin_shared">所有受保护的相册共用一个 PIN。</string>
+    <string name="album_pin_add">添加 PIN</string>
+    <string name="album_pin_change">更改 PIN</string>
+    <string name="preview_rotate">将预览旋转 90°</string>
+</resources>

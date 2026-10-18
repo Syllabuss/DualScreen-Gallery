@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="gif_all_visible">Все видимые GIF</string>
+    <string name="hide_gif_badge">Скрыть метку GIF</string>
+    <string name="ui_sounds">Звуки интерфейса</string>
+<string name="widget_crop">Кадрирование фото</string>
+<string name="widget_crop_hint">Изменяйте масштаб двумя пальцами. Перемещайте фото пальцем или стиками.</string>
+<string name="widget_crop_reset">Сбросить</string>
+</resources>

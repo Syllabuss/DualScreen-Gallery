@@ -1,0 +1,20 @@
+<resources>
+    <string name="explorer_share">フォルダーを共有</string>
+    <string name="explorer_browse">デバイスを参照</string>
+    <string name="explorer_device">このデバイス</string>
+    <string name="explorer_computer">パソコン</string>
+    <string name="explorer_control">ここを操作</string>
+    <string name="explorer_connect">パソコンに接続</string>
+    <string name="explorer_refresh">更新</string>
+    <string name="explorer_local_intro">フォルダーを選択してください。ファイルは移動しません。</string>
+    <string name="explorer_remote_intro">パソコンの共有フォルダーを開きます。</string>
+    <string name="explorer_empty">空のフォルダー</string>
+    <string name="explorer_read_only">読み取り専用：ファイルは変更されません。</string>
+    <string name="explorer_connection_help">同じWi-Fiに接続し、パソコンでフォルダーを共有してください。アドレスとログイン情報を入力します。</string>
+    <string name="explorer_password_help">WindowsのPINではなくアカウントのパスワードを使います。保存されません。</string>
+    <string name="explorer_address">共有フォルダー</string>
+    <string name="explorer_address_invalid">\\\\PC\\Photos または smb://PC/Photos のようなアドレスを入力してください。</string>
+    <string name="explorer_local_error">フォルダーにアクセスできません。再度選択してアクセスを許可してください。</string>
+    <string name="explorer_remote_error">接続できません。ネットワーク、共有フォルダー、ログイン情報を確認してください。</string>
+    <string name="explorer_example_help">初期値は入力例です。共有フォルダーのアドレスと、お使いのパソコンのアカウントに置き換えてください。</string>
+</resources>

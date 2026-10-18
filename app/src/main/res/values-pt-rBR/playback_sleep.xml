@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="playback_sleep_continue">"Continuar com o aparelho fechado"</string>
+    <string name="music_sleep_help">"Apenas a música já em reprodução continua. Pode consumir mais bateria; faixas pausadas não são iniciadas."</string>
+    <string name="video_sleep_help">"Apenas o vídeo ou canal já em reprodução continua. Decodificação e rede permanecem ativas, podendo aumentar o consumo, o calor e o uso da ventoinha."</string>
+</resources>

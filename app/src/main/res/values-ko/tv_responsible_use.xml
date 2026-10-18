@@ -1,0 +1,9 @@
+<resources>
+    <string name="tv_authorized_title">"TV 및 허가된 소스"</string>
+    <string name="tv_authorized_message">"DS Gallery는 플레이어이며 콘텐츠 이용 권한을 부여하지 않습니다. 거주 국가에서 허가된 공식 배포 채널만 이용하세요. 개발자는 외부 소스를 관리하지 않으며 합법성이나 가용성을 보장하지 않습니다. 선택한 소스와 그 이용에 대한 책임은 사용자에게 있습니다. 카탈로그, 로고, 방송을 불러올 때 연결한 서비스에 IP 주소가 전달됩니다."</string>
+    <string name="tv_authorized_accept">"이해했으며 허가된 소스만 이용할 책임을 수락합니다."</string>
+    <string name="tv_source_policy">"소스 정보"</string>
+    <string name="tv_report_channel">"채널 신고"</string>
+    <string name="tv_start_timeout">"채널이 응답하지 않습니다. 다시 시도하거나 다른 채널을 선택하세요."</string>
+    <string name="ftp_upload_limits">"업로드는 임시 내부 저장소를 사용합니다. 파일당 최대 8 GiB이며 최소 128 MiB를 비워 둡니다. FTP는 비밀번호나 파일을 암호화하지 않습니다. 신뢰할 수 있는 네트워크만 이용하세요."</string>
+</resources>

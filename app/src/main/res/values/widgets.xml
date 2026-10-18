@@ -1,0 +1,39 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:locale="it">
+    <string name="widget_square_name">DS Gallery · Icon Player</string>
+    <string name="widget_full_name">DS Gallery · Icon Player</string>
+    <string name="widget_minimal_name">DS Gallery · Compact Player</string>
+    <string name="widget_empty_title"></string>
+    <string name="widget_choose_folder"></string>
+    <string name="widget_start">Tocca per iniziare</string>
+    <string name="widget_duration_empty">\u0020/ —</string>
+    <string name="widget_open_cover">Apri player · copertina</string>
+    <string name="widget_progress_open">Avanzamento · apri player</string>
+    <string name="widget_previous">Brano precedente</string>
+    <string name="widget_play">Riproduci</string>
+    <string name="widget_next">Brano successivo</string>
+    <string name="widget_color">Colore</string>
+    <string name="widget_start_playlist">Playlist iniziale</string>
+    <string name="widget_last_listened">Ultimo ascolto</string>
+    <string name="widget_resume_guidance">Play riprende l’ultimo ascolto. Se non c’è una coda, usa la playlist scelta.</string>
+    <string name="widget_photo_fade">Dissolvenza</string>
+    <string name="widget_favorite">Aggiungi ai Preferiti</string>
+    <style name="WidgetButton">
+        <item name="android:layout_width">48dp</item><item name="android:layout_height">48dp</item>
+        <item name="android:padding">12dp</item><item name="android:background">@drawable/widget_button</item>
+        <item name="android:focusable">true</item><item name="android:clickable">true</item>
+        <item name="android:scaleType">centerInside</item>
+    </style>
+    <style name="WidgetTitle">
+        <item name="android:layout_width">match_parent</item><item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#FFFFFF</item><item name="android:textSize">17sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item><item name="android:maxLines">1</item><item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item><item name="android:text">@string/widget_empty_title</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+    <style name="WidgetSecondary">
+        <item name="android:layout_width">match_parent</item><item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#DAE0EA</item><item name="android:textSize">12sp</item>
+        <item name="android:maxLines">1</item><item name="android:ellipsize">end</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+</resources>

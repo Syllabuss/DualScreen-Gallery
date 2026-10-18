@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="video_pip">Видео в окне</string>
+    <string name="video_pip_active">Воспроизведение в окне</string>
+    <string name="video_pip_description">Видео продолжает воспроизводиться в окне Android. Просматривайте галерею или открывайте другие приложения. Используйте кнопки окна, чтобы увеличить или закрыть его.</string>
+    <string name="video_pip_unavailable">Окно видео недоступно. Проверьте разрешение «Картинка в картинке» в настройках Android.</string>
+    <string name="video_return_screen">"Вернуть видео на этот экран"</string>
+</resources>

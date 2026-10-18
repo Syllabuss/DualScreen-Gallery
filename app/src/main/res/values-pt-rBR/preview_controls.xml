@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="preview_pin_setting">Botão Fixar prévia</string>
+    <string name="preview_compare_setting">Comparações em janelas flutuantes</string>
+    <string name="preview_unpin_title">Mudar a prévia?</string>
+    <string name="preview_unpin_description">Esta imagem está fixada. Abrir outra mídia vai desafixá-la. Continuar?</string>
+    <string name="preview_overlay_permission">Permita que o DS Gallery mostre até duas imagens ou GIFs animados sobre outros apps. Arraste para mover e use dois dedos para redimensionar. Toque para mostrar ou ocultar o X de fechar. Arraste além de uma borda lateral para reduzir a uma bolha; toque ou deslize a bolha para dentro para restaurar a janela.</string>
+    <string name="preview_compare_limit">Já existem duas comparações abertas. Feche uma antes de adicionar outra.</string>
+    <string name="video_keep_playing">Continuar reproduzindo em uma janela</string>
+    <string name="animated_album_covers">Capas GIF animadas dos álbuns</string>
+    <string name="preview_pin_description">Fixe uma foto ou GIF com o alfinete enquanto navega por outras mídias. Música, FTP e configurações continuam disponíveis.</string>
+    <string name="video_keep_playing_description">O vídeo continua numa janela ao abrir outras mídias, Música, FTP ou configurações. Desative para pausá-lo.</string>
+    <string name="preview_restore_overlay">Mostrar novamente</string>
+</resources>

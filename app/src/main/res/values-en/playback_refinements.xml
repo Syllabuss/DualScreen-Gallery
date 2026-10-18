@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="music_cover_animation">Cover animation</string>
+    <string name="music_cover_normal">Normal</string>
+    <string name="music_cover_pulse">Pulse</string>
+    <string name="music_cover_disc_hole">Disc with hole</string>
+    <string name="music_cover_disc_solid">Disc without hole</string>
+    <string name="video_auto_dim">Automatically dim navigation</string>
+    <string name="video_auto_dim_off">Off</string>
+    <string name="video_auto_dim_description">While a video plays, dim the navigation screen after the chosen idle time. Touch it to wake it. Off: use the moon whenever you want. Search hides the button without stopping the timer.</string>
+</resources>

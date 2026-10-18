@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="playback_sleep_continue">"合盖后继续播放"</string>
+    <string name="music_sleep_help">"仅继续播放正在播放的音乐。可能增加耗电量，不会启动已暂停的歌曲。"</string>
+    <string name="video_sleep_help">"仅继续播放当前视频或频道。解码和网络保持运行，可能增加耗电、发热和风扇运转。"</string>
+</resources>

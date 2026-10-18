@@ -1,0 +1,4 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="launcher_icon_title">Значок приложения</string>
+    <string name="dual_screen_disclaimer">Приложение создано для двух экранов. Режим одного экрана экспериментальный и пока недостаточно протестирован.</string>
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="music_cover_animation">Animação da capa</string>
+    <string name="music_cover_normal">Normal</string>
+    <string name="music_cover_pulse">Pulsação</string>
+    <string name="music_cover_disc_hole">Disco com furo</string>
+    <string name="music_cover_disc_solid">Disco sem furo</string>
+    <string name="video_auto_dim">Escurecimento automático</string>
+    <string name="video_auto_dim_off">Desativado</string>
+    <string name="video_auto_dim_description">Durante um vídeo, escurece a tela de navegação após o tempo escolhido sem interação. Toque nela para reativar. Desativado: use a lua quando quiser. A busca oculta o botão sem parar o temporizador.</string>
+</resources>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="tv_authorized_title">"TV und autorisierte Quellen"</string>
+    <string name="tv_authorized_message">"DS Gallery ist ein Player und gewährt keine Inhaltsrechte. Verwende nur offiziell verbreitete und in deinem Land autorisierte Sender. Der Entwickler kontrolliert externe Quellen nicht und garantiert weder deren Rechtmäßigkeit noch Verfügbarkeit. Du bist für die gewählten Quellen und deren Nutzung verantwortlich. Kataloge, Logos und Streams übermitteln deine IP an die kontaktierten Dienste."</string>
+    <string name="tv_authorized_accept">"Ich verstehe und übernehme die Verantwortung, nur autorisierte Quellen zu nutzen."</string>
+    <string name="tv_source_policy">"Über die Quelle"</string>
+    <string name="tv_report_channel">"Sender melden"</string>
+    <string name="tv_start_timeout">"Der Sender antwortet nicht. Erneut versuchen oder einen anderen Sender wählen."</string>
+    <string name="ftp_upload_limits">"Uploads nutzen temporären internen Speicher: höchstens 8 GiB pro Datei, mindestens 128 MiB bleiben frei. FTP verschlüsselt weder Passwörter noch Dateien: nur vertrauenswürdige Netzwerke nutzen."</string>
+</resources>

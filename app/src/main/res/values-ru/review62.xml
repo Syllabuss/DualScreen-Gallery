@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:locale="ru">
+    <string name="video_flow_mode">Режим воспроизведения</string>
+    <string name="action_menus_below">Действия на экране навигации</string>
+    <string name="explorer_copy">Копировать</string>
+    <string name="explorer_move">Переместить</string>
+    <string name="explorer_continue">Продолжить</string>
+    <string name="explorer_transfer_error">Операция прервана. Проверьте оригиналы и копии перед повторной попыткой.</string>
+    <string name="explorer_transfer_help">Назначение — папка, открытая на другом экране. Существующие файлы сохраняются. Перемещение удаляет оригинал только после проверки копии.</string>
+    <string name="explorer_extract">Распаковать архив</string>
+    <string name="explorer_move_folders_help">Проверенные файлы перемещаются, а исходные папки сохраняются. Пустые папки не удаляются.</string>
+</resources>

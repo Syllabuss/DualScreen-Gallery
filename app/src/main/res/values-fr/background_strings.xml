@@ -1,0 +1,7 @@
+<resources>
+    <string name="gallery_background_title">Arrière-plan de la galerie</string>
+    <string name="gallery_background_description">Personnalisez uniquement le fond de navigation. Les aperçus des médias et les fichiers restent inchangés.</string>
+    <string name="gallery_background_gradient">Dégradé</string>
+    <string name="gallery_background_photo">Image</string>
+    <string name="gallery_background_opacity">Opacité</string>
+</resources>

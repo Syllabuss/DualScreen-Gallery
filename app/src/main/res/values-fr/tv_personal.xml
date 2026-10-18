@@ -1,0 +1,6 @@
+<resources>
+    <string name="tv_personal_notice_title">Vos sources TV</string>
+    <string name="tv_personal_notice_body">DS Gallery ne fournit ni chaînes, ni listes, ni droits sur les programmes. Ajoutez uniquement des sources officielles et fiables autorisées dans votre pays. Un lien public ne prouve pas une autorisation. Ne contournez ni abonnements, ni DRM, ni restrictions territoriales. Les services reçoivent votre IP. Les obligations légales restent applicables.</string>
+    <string name="tv_personal_source_add">Ajouter une liste</string>
+    <string name="tv_personal_source_help">Saisissez une liste M3U HTTPS autorisée. Jusqu’à 20 sources ; l’importation ne lance aucune lecture.</string>
+</resources>

@@ -1,0 +1,16 @@
+<resources>
+    <string name="settings_advanced">高级</string>
+    <string name="settings_visible_buttons">显示的按钮</string>
+    <string name="settings_unsaved_title">未保存的更改</string>
+    <string name="settings_unsaved_message">不保存更改就退出吗？</string>
+    <string name="settings_discard">不保存并退出</string>
+    <string name="settings_keep_editing">继续编辑</string>
+    <string name="settings_folders_permission">在媒体库中选择文件夹时授予文件访问权限。</string>
+    <string name="settings_organize">文件夹与收藏集</string>
+    <string name="settings_privacy">隐私</string>
+    <string name="settings_file_management">文件管理</string>
+    <string name="settings_manage_folders">管理文件夹</string>
+    <string name="settings_folder_access_ready">可访问</string>
+    <string name="settings_folder_access_missing">需要设置</string>
+    <string name="settings_album_tools_note">这些选项也适用于相册内的媒体。</string>
+</resources>

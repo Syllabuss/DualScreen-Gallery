@@ -1,0 +1,4 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="launcher_icon_title">앱 아이콘</string>
+    <string name="dual_screen_disclaimer">두 화면을 위해 설계되었습니다. 단일 화면 모드는 실험적이며 아직 충분히 테스트되지 않았습니다.</string>
+</resources>

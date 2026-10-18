@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="preview_pin_setting">Vorschau anheften</string>
+    <string name="preview_compare_setting">Schwebende Bildvergleiche</string>
+    <string name="preview_unpin_title">Vorschau ändern?</string>
+    <string name="preview_unpin_description">Dieses Bild ist angeheftet. Ein anderes Medium zu öffnen löst es. Fortfahren?</string>
+    <string name="preview_overlay_permission">Erlaube DS Gallery, bis zu zwei Bilder oder animierte GIFs über anderen Apps anzuzeigen. Ziehen verschiebt sie, zwei Finger ändern die Größe. Tippen zeigt oder verbirgt das X zum Schließen. Ziehe über einen Seitenrand, um eine Blase zu erhalten; Tippen oder Wischen nach innen stellt das Fenster wieder her.</string>
+    <string name="preview_compare_limit">Zwei Vergleiche sind bereits geöffnet. Schließe zuerst einen.</string>
+    <string name="video_keep_playing">In einem Fenster weiterspielen</string>
+    <string name="animated_album_covers">Animierte GIF-Albencover</string>
+    <string name="preview_pin_description">Hefte ein Foto oder GIF mit der Pinnadel an, während du andere Medien durchsuchst. Musik, FTP und Einstellungen bleiben verfügbar.</string>
+    <string name="video_keep_playing_description">Das Video läuft im Fenster weiter, wenn du andere Medien, Musik, FTP oder Einstellungen öffnest. Ausschalten, um es zu pausieren.</string>
+    <string name="preview_restore_overlay">Wieder anzeigen</string>
+</resources>

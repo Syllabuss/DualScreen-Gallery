@@ -1,0 +1,8 @@
+<resources>
+    <string name="widget_appearance">Darstellung</string>
+    <string name="widget_dark">Dunkel</string>
+    <string name="widget_light">Hell</string>
+    <string name="widget_system">Systemstandard</string>
+    <string name="widget_transparent">Transparent</string>
+    <string name="widget_bars_color">Balkenfarbe</string>
+</resources>

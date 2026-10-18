@@ -1,0 +1,7 @@
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut android:shortcutId="single_here" android:enabled="true"
+        android:icon="@drawable/ic_launcher" android:shortcutShortLabel="@string/single_shortcut">
+        <intent android:action="it.ayngallery.OPEN_SINGLE"
+            android:targetPackage="it.ayngallery" android:targetClass="it.ayngallery.LauncherActivity" />
+    </shortcut>
+</shortcuts>

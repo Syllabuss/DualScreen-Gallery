@@ -1,0 +1,9 @@
+<resources>
+    <string name="album_lock_action">ロック</string>
+    <string name="album_unlock_action">ロック解除</string>
+    <string name="album_pin_settings">アルバムのPIN</string>
+    <string name="album_pin_shared">すべての保護されたアルバムで同じPINを使います。</string>
+    <string name="album_pin_add">PINを追加</string>
+    <string name="album_pin_change">PINを変更</string>
+    <string name="preview_rotate">プレビューを90°回転</string>
+</resources>

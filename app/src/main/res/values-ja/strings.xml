@@ -1,0 +1,1818 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="settings_preview_example">プレビュー例</string>
+    <string name="add_music_folder" formatted="false">"音楽"</string>
+    <string name="add_roots" formatted="false">"フォルダーを追加"</string>
+    <string name="add_visual_folder" formatted="false">"写真と動画"</string>
+    <string name="audio_preview_position" formatted="false">"オーディオプレビューの位置"</string>
+    <string name="choose_media_folder" formatted="false">"フォルダーを選択"</string>
+    <string name="copy_file_explanation" formatted="false">"別のフォルダーにファイルのコピーを作成したいですか?以下のオプションのいずれかを選択してください。コピーせずに参照するには、上にフォルダーを追加します。"</string>
+    <string name="copy_music_title" formatted="false">"音楽をフォルダーにコピーします…"</string>
+    <string name="copy_photos_title" formatted="false">"写真とビデオをフォルダーにコピーします…"</string>
+    <string name="dual_screen_access_action" formatted="false">"設定を開く"</string>
+    <string name="dual_screen_access_description" formatted="false">"ゲームを開いたときにギャラリーをフリー画面に保ち、ホームに戻ったときにギャラリーをバックグラウンドに送信するには、Android がフォアグラウンドのアプリを DS Gallery に識別させる必要があります。アクティブなアプリの内容ではなく、名前を読み取ることができます。"</string>
+    <string name="dual_screen_access_title" formatted="false">"両方の画面を管理する"</string>
+    <string name="empty_preview_folder_message" formatted="false">"写真またはビデオが含まれるフォルダーを選択します。そのサブフォルダーがアルバムとして表示され、他の画面で参照できるようになります。"</string>
+    <string name="empty_preview_folder_title" formatted="false">"あなたのギャラリーはここから始まります"</string>
+    <string name="info_author" formatted="false">"制作：Syllabuss"</string>
+    <string name="info_channel" formatted="false">"チャンネル"</string>
+    <string name="info_description" formatted="false">"バージョン、作者、フォルダと権限"</string>
+    <string name="info_development" formatted="false">"ベータ版"</string>
+    <string name="info_support">Ko-fiで支援する</string>
+    <string name="info_title" formatted="false">"情報と権限"</string>
+    <string name="info_version" formatted="false">"バージョン"</string>
+    <string name="language_description" formatted="false">"アプリの言語"</string>
+    <string name="language_save_error" formatted="false">"言語を保存できませんでした。もう一度お試しください。"</string>
+    <string name="language_system" formatted="false">"端末の言語"</string>
+    <string name="language_title" formatted="false">"言語"</string>
+    <string name="library_settings_description" formatted="false">"フォルダー、コレクション、ファイル管理"</string>
+    <string name="library_settings_title" formatted="false">"図書館"</string>
+    <string name="media_folders_title" formatted="false">"メディアフォルダー"</string>
+    <string name="nav_albums" formatted="false">"アルバム"</string>
+    <string name="nav_videos" formatted="false">"動画"</string>
+    <string name="permission_enable_usage" formatted="false">"アクセスを有効にする"</string>
+    <string name="permission_folder_access_is_selected" formatted="false">"フォルダーはライブラリから許可されます"</string>
+    <string name="permission_manage_android" formatted="false">"Android 権限を開く"</string>
+    <string name="permission_media_description" formatted="false">"ファイルを参照するには、ライブラリからフォルダーを選択します。ここでアプリの Android 権限を確認できます。"</string>
+    <string name="permission_media_title" formatted="false">"写真と動画"</string>
+    <string name="permission_notifications_description" formatted="false">"通知には、コピーや進行中のその他の操作の進行状況が表示されます。"</string>
+    <string name="permission_notifications_title" formatted="false">"運行のお知らせ"</string>
+    <string name="permission_status_enabled" formatted="false">"有効"</string>
+    <string name="permission_status_not_enabled" formatted="false">"注意が必要です"</string>
+    <string name="permission_usage_description" formatted="false">"このアクセスにより、DS Gallery はホームに戻ったときに両方のパネルをバックグラウンドに送信し、別のアプリの使用中にギャラリーを他の画面に表示したままにすることができます。"</string>
+    <string name="permission_usage_enabled" formatted="false">"有効"</string>
+    <string name="permission_usage_title" formatted="false">"帰宅時の検知"</string>
+    <string name="permissions_intro" formatted="false">"ここで DS Gallery が使用するアクセスを確認してください。メディア フォルダーはライブラリで個別に選択されます。アプリは、ユーザーが承認した場所へのアクセスのみを維持します。"</string>
+    <string name="permissions_settings_description" formatted="false">"DS Gallery アクセスの確認と管理"</string>
+    <string name="permissions_settings_title" formatted="false">"権限"</string>
+    <string name="photo_widget_empty" formatted="false">"あなたの画像"</string>
+    <string name="photo_widget_manual" formatted="false">"手動による変更"</string>
+    <string name="photo_widget_name" formatted="false">"DS Gallery · 写真ウィジェット"</string>
+    <string name="photo_widget_next" formatted="false">"次の写真"</string>
+    <string name="photo_widget_open" formatted="false">"写真を 1 つの画面で開く"</string>
+    <string name="photo_widget_previous" formatted="false">"前の写真"</string>
+    <string name="photo_widget_settings" formatted="false">"このウィジェットを設定します"</string>
+    <string name="remove_root">"フォルダーを削除：%1$s"</string>
+    <string name="roots_added_scanning" formatted="false">"フォルダーが追加されました。アルバムのスキャンが進行中です。"</string>
+    <string name="roots_choose_type" formatted="false">"閲覧したいものを選択してください。アクセスを許可すると、アルバムが自動的に検索されます。"</string>
+    <string name="roots_download_help" formatted="false">"Android では、Download フォルダー全体やストレージのルートを選べない場合があります。Download/Photos などのサブフォルダーを開き、「このフォルダーを使用」をタップしてください。Android/data と Android/obb にはアクセスできません。"</string>
+    <string name="roots_empty_message" formatted="false">"フォルダーを追加するとアルバムが表示されます。"</string>
+    <string name="roots_empty_title" formatted="false">"フォルダーがありません"</string>
+    <string name="roots_guidance" formatted="false">"サブフォルダーがアルバムになります。フォルダーの追加後に自動で読み込みます。"</string>
+    <string name="roots_picker_help" formatted="false">"Android のピッカーで、内部ストレージまたは microSD カードを開き、ルート フォルダーを選択し、「このフォルダーを使用する」をタップします。保護されたシステム フォルダーは承認できません。"</string>
+    <string name="roots_scanning">"%1$s… · %2$s ファイルをスキャンしています"</string>
+    <string name="roots_title" formatted="false">"メディアフォルダー"</string>
+    <string name="single_shortcut" formatted="false">"この画面で開く"</string>
+    <string name="source_folder_guidance" formatted="false">"参照するフォルダーを追加します。サブフォルダーはアルバムになり、ファイルは元の場所に残ります。"</string>
+    <string name="text_1_s_128_albums_and_collections_chosen_at_the_lim_3e14da">"%1$s / 128 枚のアルバムとコレクションが選択されました。限界に達したら、別の選択肢を追加する前に選択肢を削除してください。"</string>
+    <string name="text_1_s_2_s_candidates_3_s_read_4_s_unverified_c7af59">"%1$s / %2$s 候補 · %3$s 読み取り · %4$s 未検証"</string>
+    <string name="text_1_s_2_s_visible_items_c963ae">"%1$s · %2$s 表示アイテム"</string>
+    <string name="text_1_s_backup_references_still_need_relinking_choos_d8d02b">"%1$s バックアップ参照はまだ再リンクする必要があります。正しいファイルを選択し、それぞれの一致を確認します。"</string>
+    <string name="text_1_s_candidates_choice_required_107fb7">"%1$s 候補者: 選択が必要です"</string>
+    <string name="text_1_s_choices_unavailable_references_retained_061994">"%1$s の選択肢は利用できません: 参照は保持されます"</string>
+    <string name="text_1_s_chosen_media_30240a">"%1$s が選択したメディア"</string>
+    <string name="text_1_s_directions_confirm_and_back_must_remain_assi_d66f86">"%1$s: ルート案内、確認、戻るは割り当てられたままでなければなりません"</string>
+    <string name="text_1_s_each_potential_space_to_reclaim_2_s_0deb3a">"各 %1$s · %2$s を再利用できる潜在的なスペース"</string>
+    <string name="text_1_s_edge_c30958">"%1$s エッジ"</string>
+    <string name="text_1_s_empty_file_80be53">"%1$s: 空のファイル"</string>
+    <string name="text_1_s_excluded_or_missing_references_retained_034d70">" · %1$s 除外された参照または欠落している参照が保持されました"</string>
+    <string name="text_1_s_expires_2_s_8918f6">"%1$s · 有効期限が切れます %2$s"</string>
+    <string name="text_1_s_field_out_of_range_95e5ad">"%1$s フィールドが範囲外です"</string>
+    <string name="text_1_s_file_changed_while_reading_9910f3">"%1$s: 読み取り中にファイルが変更されました"</string>
+    <string name="text_1_s_files_2_s_0660da">"%1$s ファイル · %2$s"</string>
+    <string name="text_1_s_files_fe3ced">" · %1$s ファイル"</string>
+    <string name="text_1_s_folders_and_subfolders_f1bc01">"%1$s フォルダーとサブフォルダー"</string>
+    <string name="text_1_s_frames_ea0c5d">"%1$s フレーム"</string>
+    <string name="text_1_s_groups_2_s_candidates_read_3_s_unverified_290f94">"%1$s グループ · %2$s 候補が読み取られました · %3$s 未検証"</string>
+    <string name="text_1_s_is_already_used_by_2_s_replace_these_binding_9bc78c">"%1$s はすでに %2$s によって使用されています。ドラフトでこれらのバインディングを置き換えますか?"</string>
+    <string name="text_1_s_items_no_files_copied_9ee36c">"%1$s アイテム · ファイルはコピーされませんでした"</string>
+    <string name="text_1_s_m4a_n_2_s_nfrom_3_s_to_4_s_5_s_nm4a_aac_6_s_e1e1cd">"%1$s.m4a\n%2$s\n%3$s から %4$s へ · %5$s\nM4A · AAC · %6$s kb/s\n元のメタデータとアートワークはコピーされません。オリジナル、お気に入り、プレイリストは保持されます。"</string>
+    <string name="text_1_s_minutes_c69ae1">"%1$s分"</string>
+    <string name="text_1_s_mp4_n_2_s_nfrom_3_s_to_4_s_5_s_nmp4_h_264_6_2381c9">"%1$s.mp4\n%2$s\n%3$s から %4$s へ · %5$s\nMP4 · H.264 · %6$sp%7$s\nクロップ %8$s%% × %9$s%%\n個人メタデータはコピーされませんでした。オリジナル保存。"</string>
+    <string name="text_1_s_n_2_s_n_nreplaces_the_open_comparison_previo_76dd8a">"%1$s\n%2$s\n\nオープン比較を置き換えます。以前に保存したセッションは引き続き使用できます。"</string>
+    <string name="text_1_s_n_nonly_the_collection_and_its_links_will_be_1073ca">"%1$s\n\nコレクションとそのリンクのみが削除されます。ファイルは削除されません。お気に入りは保存されます。"</string>
+    <string name="text_1_s_n_nread_only_access_to_this_document_only_no_216299">"%1$s\n\nこのドキュメントのみへの読み取り専用アクセス。他のフォルダーをコピーしたりスキャンしたりすることはできません。プロバイダーはファイルを利用できなくしたり、アクセスを取り消したりすることができます。コピーをインポートしてバイトを保持します。"</string>
+    <string name="text_1_s_nconfirming_resumes_cleanup_of_expired_copie_d2bb79">"%1$s\n確認すると、期限切れのコピーのクリーンアップが再開されます。日付が間違っている場合は、まず日付を修正します。"</string>
+    <string name="text_1_s_of_2_s_selected_files_fbb670">"%2$s 個のファイルのうち %1$s 個が選択されました"</string>
+    <string name="text_1_s_options_a1440f">"%1$s オプション"</string>
+    <string name="text_1_s_references_2_s_media_in_the_folder_fff099">"%1$s 参照 · フォルダー内の %2$s メディア"</string>
+    <string name="text_1_s_references_relinked_folder_authorized_for_re_e1eaeb">"%1$s 参照が再リンクされました。読み取りを許可されたフォルダー。オリジナルは変更されていないか、メディアは開始されていません。"</string>
+    <string name="text_1_s_selected_albums_5ebbfb">"%1$s が選択したアルバム"</string>
+    <string name="text_1_s_selected_e2edc4">"%1$s件選択中"</string>
+    <string name="text_1_s_selected_matches_01a2e5">"%1$s 個の一致が選択されました"</string>
+    <string name="text_1_s_selected_media_babf2f">"%1$s が選択したメディア"</string>
+    <string name="text_1_s_unavailable_tracks_will_be_skipped_9556f5">"%1$s 使用できないトラックはスキップされます"</string>
+    <string name="text_1_s_unreadable_file_2b9af6">"%1$s: 読み取り不可能なファイル"</string>
+    <string name="text_1_s_unsupported_format_025f92">"%1$s: サポートされていない形式です"</string>
+    <string name="text_1_s_visible_items_df95fc">"%1$s 表示アイテム"</string>
+    <string name="text_1_s_visible_tracks_9940ce">"%1$s 表示可能なトラック"</string>
+    <string name="text_a_file_changed_choose_the_folder_again_e4947d" formatted="false">"ファイルが変更されました: フォルダーを再度選択してください"</string>
+    <string name="text_a_new_copy_keeping_the_original_intact_b1e835" formatted="false">"オリジナルをそのまま保持した新しいコピー。"</string>
+    <string name="text_a_opens_b_goes_back_without_closing_the_gallery_435989" formatted="false">"A が開き、B はギャラリーを閉じずに戻り、X はパネルを交換します。ファイルを変更せずにボタンとジェスチャをカスタマイズします。"</string>
+    <string name="text_a_place_for_your_media_8f207b" formatted="false">"メディアのための場所"</string>
+    <string name="text_a_playlist_requires_an_audio_copy_77dd5c" formatted="false">"プレイリストにはオーディオコピーが必要です"</string>
+    <string name="text_a_received_1f521d" formatted="false">"受け取った"</string>
+    <string name="text_a_second_chance_0fddaa" formatted="false">"二度目のチャンス"</string>
+    <string name="text_a_session_with_this_name_already_exists_5ae07c" formatted="false">"この名前のセッションはすでに存在します"</string>
+    <string name="text_a_session_with_this_name_already_exists_choose_a_e1a297" formatted="false">"この名前のセッションはすでに存在します。別の名前を選択してください。"</string>
+    <string name="text_a_verified_copy_will_be_kept_for_seven_days_the_dcf62b" formatted="false">"検証済みのコピーは 7 日間保管されます。オリジナルは検証後にのみ削除されます。"</string>
+    <string name="text_aac_if_present_981768" formatted="false">" · AAC (存在する場合)"</string>
+    <string name="text_about_1_s_min_2ef38b">"約%1$s分"</string>
+    <string name="text_accent_785d03" formatted="false">"アクセントカラー"</string>
+    <string name="text_access_needs_restoring_6a31e2" formatted="false">"アクセスを復元する必要があります"</string>
+    <string name="text_acquiring_external_file_47201b" formatted="false">"外部ファイルの取得"</string>
+    <string name="text_acquiring_the_private_copy_before_the_destinatio_87ef67" formatted="false">"宛先の前にプライベート コピーを取得しています…"</string>
+    <string name="text_activation_threshold_1_s_a3d5d8">"アクティベーションしきい値 · %1$s%%"</string>
+    <string name="text_active_1_s_08406e">"アクティブ · %1$s"</string>
+    <string name="text_active_1_s_6f4cb9">"アクティブ: %1$s"</string>
+    <string name="text_active_39df52" formatted="false">"アクティブ"</string>
+    <string name="text_active_filter_1_s_019879">"アクティブなフィルター: %1$s"</string>
+    <string name="text_active_theme_40e4ef" formatted="false">"アクティブなテーマ"</string>
+    <string name="text_add_items_49e7fb" formatted="false">"アイテムの追加"</string>
+    <string name="text_add_items_to_this_collection_excluded_links_are_21b137" formatted="false">"このコレクションにアイテムを追加します。除外されたリンクは削除されません。"</string>
+    <string name="text_add_thor_gallery_photo_frame_from_your_launcher_628bfc" formatted="false">"ランチャーのウィジェットから「DS Gallery・フォトフレーム」を追加して、ここに戻ってください。"</string>
+    <string name="text_add_to_0791d4" formatted="false">"追加…"</string>
+    <string name="text_add_to_a_collection_c19880" formatted="false">"コレクションに追加する"</string>
+    <string name="text_add_to_favorites_63ce28" formatted="false">"お気に入りに追加"</string>
+    <string name="text_add_to_favorites_ecc911" formatted="false">"お気に入りに追加"</string>
+    <string name="text_add_to_queue_363178" formatted="false">"キューに追加"</string>
+    <string name="text_add_zone_54c3e5" formatted="false">"ゾーンの追加"</string>
+    <string name="text_added_f6ef7c" formatted="false">"追加されました"</string>
+    <string name="text_advanced_value_optional_2f398a" formatted="false">"高度な価値・オプション"</string>
+    <string name="text_album_folders_and_media_structure_will_be_recrea_1c7b5d" formatted="false">"アルバム フォルダーとメディア構造は保存先に再作成されます。メディア以外のファイルは転送されません。"</string>
+    <string name="text_album_or_track_no_longer_available_41bdb5" formatted="false">"アルバムまたはトラックは利用できなくなりました"</string>
+    <string name="text_album_source_unavailable_d29ab8" formatted="false">"アルバムソースが利用できない"</string>
+    <string name="text_album_unavailable_check_permission_or_reopen_the_70b1c5" formatted="false">"アルバムは利用できません。権限を確認するか、フォルダーを再度開きます。"</string>
+    <string name="text_album_unavailable_fe6944" formatted="false">"アルバムが利用できません"</string>
+    <string name="text_albums_and_collections_246b7d" formatted="false">"アルバムとコレクション"</string>
+    <string name="text_all_7f65ef" formatted="false">"すべて"</string>
+    <string name="text_all_849797" formatted="false">"すべて"</string>
+    <string name="text_all_done_046f31" formatted="false">"すべて完了しました"</string>
+    <string name="text_all_formats_5f54e8" formatted="false">"すべてのフォーマット"</string>
+    <string name="text_all_panes_are_pinned_5d759f" formatted="false">"すべてのペインが固定されています"</string>
+    <string name="text_all_references_have_been_relinked_the_backup_sou_295fc9" formatted="false">"すべての参照が再リンクされました。バックアップソースは来歴として残ります。"</string>
+    <string name="text_allow_access_to_photos_and_videos_d1906e" formatted="false">"写真やビデオへのアクセスを許可する"</string>
+    <string name="text_allow_access_to_this_media_36f18a" formatted="false">"このメディアへのアクセスを許可する"</string>
+    <string name="text_allow_cleanup_in_game_mode_7fcac9" formatted="false">"ゲームモードでのクリーンアップを許可する"</string>
+    <string name="text_allow_import_while_gaming_ddd9a8" formatted="false">"ゲーム中のインポートを許可する"</string>
+    <string name="text_allow_photos_and_videos_0e8d89" formatted="false">"写真とビデオを許可する"</string>
+    <string name="text_allow_preparation_while_gaming_347fe8" formatted="false">"ゲーム中に準備ができる"</string>
+    <string name="text_allow_relinking_in_game_mode_670757" formatted="false">"ゲームモードでの再リンクを許可する"</string>
+    <string name="text_allow_this_check_in_game_mode_5680c6" formatted="false">"ゲームモードでこのチェックを許可します"</string>
+    <string name="text_allowed_9b88cf" formatted="false">"許可される"</string>
+    <string name="text_already_assigned_1_s_617740">"すでに割り当てられています: %1$s"</string>
+    <string name="text_also_use_the_document_s_shared_controls_de11b1" formatted="false">"ドキュメントの共有コントロールも使用する"</string>
+    <string name="text_always_previous_track_c63ca0" formatted="false">"常に前のトラック"</string>
+    <string name="text_ambiguous_temporary_file_check_the_destination_7fc5f4" formatted="false">"あいまいな一時ファイル: 宛先を確認してください"</string>
+    <string name="text_amoled_black_silver_and_ice_313bfc" formatted="false">"AMOLED ブラック・シルバー・アンド・アイス"</string>
+    <string name="text_an_item_is_no_longer_available_for_this_collecti_eae1b5" formatted="false">"アイテムはこのコレクションでは利用できなくなりました"</string>
+    <string name="text_anchor_1_s_released_2_s_roles_swapped_3_s_526aa9">"アンカー: %1$s;リリースされました: %2$s;交換された役割: %3$s"</string>
+    <string name="text_android_does_not_allow_an_activity_on_screen_1_s_d097fe">"Android は、画面 %1$s 上のアクティビティを許可しません。"</string>
+    <string name="text_android_gallery_1_s_fcad13">"Android ギャラリー: %1$s"</string>
+    <string name="text_android_gallery_did_not_respond_52ab35" formatted="false">"Android ギャラリーは応答しませんでした"</string>
+    <string name="text_android_may_delay_changes_suspended_in_game_mode_4c0e10" formatted="false">"Android は変更を遅らせる可能性があります。ゲームモードで一時停止されます。"</string>
+    <string name="text_android_picker_unavailable_on_this_panel_4b1ad8" formatted="false">"Android ピッカーはこのパネルでは使用できません"</string>
+    <string name="text_android_settings_unavailable_open_app_permission_fef31a" formatted="false">"Android 設定は使用できません。デバイス設定でアプリの権限を開きます。"</string>
+    <string name="text_android_wallpaper_67c9fc" formatted="false">"Android 壁紙"</string>
+    <string name="text_android_will_show_available_crop_tools_and_desti_6acb8e" formatted="false">"Android には、利用可能な切り抜きツールと出力先が表示されます。両方のディスプレイの壁紙と iiSU はシステムによって異なります。"</string>
+    <string name="text_animate_current_gif_863ee0" formatted="false">"現在の GIF をアニメーション化する"</string>
+    <string name="text_animation_cannot_be_played_1_s_444482">"アニメーションを再生できません: %1$s"</string>
+    <string name="text_appearance_and_behavior_bbd831" formatted="false">"見た目も振る舞いも"</string>
+    <string name="text_appearance_f9ce8f" formatted="false">"テーマ"</string>
+    <string name="text_apply_range_f3c147" formatted="false">"適用範囲"</string>
+    <string name="text_artist_7e6ef2" formatted="false">"アーティスト"</string>
+    <string name="text_artist_unavailable_c612a4" formatted="false">"アーティストが不在"</string>
+    <string name="text_artists_bbd1aa" formatted="false">"アーティスト"</string>
+    <string name="text_artwork_1_s_nprevious_2_s_n_462b2e">"アートワーク: %1$s\n前: %2$s\n"</string>
+    <string name="text_artwork_and_priority_b87104" formatted="false">"アートワークと優先順位"</string>
+    <string name="text_artwork_cache_recovery_failed_1_s_3bc1c1">"アートワークのキャッシュの回復に失敗しました: %1$s"</string>
+    <string name="text_artwork_cache_unavailable_81e2e4" formatted="false">"アートワークキャッシュは利用できません"</string>
+    <string name="text_artwork_colors_dimmed_8e8b47" formatted="false">"アートワークの色・薄暗くする"</string>
+    <string name="text_artwork_not_saved_69810d" formatted="false">"アートワークが保存されていません"</string>
+    <string name="text_artwork_recovery_incomplete_try_clearing_preview_225d68" formatted="false">"アートワークの回復が不完全です。プレビューをもう一度クリアしてみてください。"</string>
+    <string name="text_artwork_unavailable_56b21e" formatted="false">"アートワークが利用できません"</string>
+    <string name="text_at_startup_the_app_uses_both_detected_screens_a_b5d260" formatted="false">"起動時に、アプリは検出された両方の画面を使用します。ゲームに与えられる画面は無料のままです。"</string>
+    <string name="text_audio_duration_unavailable_3d0271" formatted="false">"音声の長さを利用できません"</string>
+    <string name="text_audio_encoding_could_not_be_verified_output_not_681245" formatted="false">"オーディオエンコーディングを検証できませんでした: 出力は公開されませんでした"</string>
+    <string name="text_audio_preview_unavailable_f44c32" formatted="false">"音声プレビューは利用できません"</string>
+    <string name="text_audio_segment_exported_original_favorites_and_pl_bb24a1" formatted="false">"エクスポートされたオーディオセグメント: オリジナル、お気に入り、プレイリストが保持"</string>
+    <string name="text_audio_segment_range_68e0ae" formatted="false">"オーディオセグメントの範囲"</string>
+    <string name="text_audio_trim_preview_on_the_other_screen_45d9bc" formatted="false">"トラックプレビュー・別画面で開始と終了を調整"</string>
+    <string name="text_authorize_the_folders_you_want_to_see_hiding_an_f652bf" formatted="false">"表示したいフォルダーを許可します。アルバムを非表示にすると、元のファイルは保持されたまま、アルバムがギャラリーから削除されます。"</string>
+    <string name="text_authorized_folder_739100" formatted="false">"許可されたフォルダー"</string>
+    <string name="text_automatic_allowed_screen_5d5ba2" formatted="false">"自動・許可画面"</string>
+    <string name="text_automatic_changes_paused_game_mode_1dd71f" formatted="false">"自動変更一時停止・ゲームモード"</string>
+    <string name="text_automatic_cover_99768a" formatted="false">"オートカバー"</string>
+    <string name="text_available_images_and_gifs_only_hidden_albums_rev_d46c35" formatted="false">"利用可能な画像と GIF のみ。非表示のアルバム、取り消されたソース、ゴミ箱は除外されたままになります。"</string>
+    <string name="text_b_received_d8ce9e" formatted="false">"Bが受け取りました"</string>
+    <string name="text_back_804268" formatted="false">"戻る"</string>
+    <string name="text_back_to_appearance_2b73b0" formatted="false">"テーマに戻る"</string>
+    <string name="text_background_78edb0" formatted="false">"背景"</string>
+    <string name="text_backup_copy_after_restore_d3b116" formatted="false">"復元後のバックアップコピー"</string>
+    <string name="text_backup_draft_not_verified_fd30b7" formatted="false">"バックアップドラフトが検証されていません"</string>
+    <string name="text_backup_source_needs_relinking_fb5836" formatted="false">"バックアップ: ソースの再リンクが必要です"</string>
+    <string name="text_backup_too_large_de2bee" formatted="false">"バックアップが大きすぎます"</string>
+    <string name="text_backup_unverified_the_document_may_be_incomplete_510b4b" formatted="false">"バックアップは未検証です。書類が不完全である可能性があります"</string>
+    <string name="text_behavior_03b2ee" formatted="false">"行動"</string>
+    <string name="text_binding_already_used_by_1_s_74e2c7">"バインディングはすでに %1$s によって使用されています"</string>
+    <string name="text_bindings_not_saved_ccc1a2" formatted="false">"バインディングが保存されない"</string>
+    <string name="text_black_acid_green_and_cyan_97deef" formatted="false">"ブラック・アシッドグリーン・シアン"</string>
+    <string name="text_black_and_sage_cf43a0" formatted="false">"黒とセージ"</string>
+    <string name="text_borders_45b76c" formatted="false">"国境"</string>
+    <string name="text_bottom_e201c6" formatted="false">"下"</string>
+    <string name="text_brightness_48f971" formatted="false">"明るさ"</string>
+    <string name="text_bring_together_images_gifs_videos_and_music_with_1ca575" formatted="false">"画像、GIF、ビデオ、音楽をコピーせずにまとめます。プレイリストにはトラックのみが含まれます。"</string>
+    <string name="text_button_88410e" formatted="false">"ボタン"</string>
+    <string name="text_buttons_and_sticks_bf2200" formatted="false">"ボタンとスティック"</string>
+    <string name="text_buttons_sticks_and_touch_gestures_220de4" formatted="false">"ボタン、スティック、タッチジェスチャー"</string>
+    <string name="text_cache_cleared_3a29ae" formatted="false">"キャッシュがクリアされました"</string>
+    <string name="text_cancel_18c9d9" formatted="false">"キャンセル"</string>
+    <string name="text_cancel_search_d9c204" formatted="false">"検索をキャンセルする"</string>
+    <string name="text_cancel_when_safe_cb9d24" formatted="false">"安全になったらキャンセル"</string>
+    <string name="text_canceled_000f5b" formatted="false">"キャンセルされました"</string>
+    <string name="text_canceled_fdb1ba" formatted="false">"キャンセルされました"</string>
+    <string name="text_cancellation_requested_a58dd2" formatted="false">"キャンセルがリクエストされました…"</string>
+    <string name="text_candidate_preview_142090" formatted="false">"候補プレビュー"</string>
+    <string name="text_candidates_for_1_s_b55cd1">"%1$s の候補者"</string>
+    <string name="text_catalog_and_permissions_049549" formatted="false">"--- カタログと権限 ---"</string>
+    <string name="text_change_image_every_75bf32" formatted="false">"ごとに画像を変更します"</string>
+    <string name="text_change_photo_f1bc64" formatted="false">"写真の切り替え"</string>
+    <string name="text_charcoal_soft_green_and_sand_690002" formatted="false">"木炭・ソフトグリーン・サンド"</string>
+    <string name="text_check_access_again_80d1e3" formatted="false">"再度アクセスを確認してください"</string>
+    <string name="text_check_candidates_8155a8" formatted="false">"候補者をチェック…"</string>
+    <string name="text_check_change_36b194" formatted="false">"確認・変更…"</string>
+    <string name="text_check_date_and_resume_cleanup_b9c526" formatted="false">"日付を確認してクリーンアップを再開する"</string>
+    <string name="text_check_matches_871bbc" formatted="false">"一致を確認する"</string>
+    <string name="text_check_matches_before_relinking_48b12f" formatted="false">"再リンクする前に一致を確認してください"</string>
+    <string name="text_checking_access_a6b304" formatted="false">"アクセスを確認中…"</string>
+    <string name="text_checking_document_cf3a92" formatted="false">"書類を確認中…"</string>
+    <string name="text_checking_reference_9b649e" formatted="false">"参照を確認中…"</string>
+    <string name="text_choice_discarded_references_and_permissions_pres_1f4a42" formatted="false">"選択肢は破棄されました。参照と権限が保持される"</string>
+    <string name="text_choice_retained_unavailable_8fbbc3" formatted="false">"選択肢は保持されており、利用できません"</string>
+    <string name="text_choices_discarded_permissions_and_references_pre_811d22" formatted="false">"選択肢は破棄されました。権限と参照が保持される"</string>
+    <string name="text_choose_1128_files_to_open_ee836b" formatted="false">"開くファイルを 1 ～ 128 個選択してください"</string>
+    <string name="text_choose_1_s_2_s_26e8e4">"%1$s · %2$s を選択してください"</string>
+    <string name="text_choose_a_collection_the_image_remains_a_local_re_698b12" formatted="false">"コレクションを選択します。画像はローカル参照のままです。"</string>
+    <string name="text_choose_a_color_9cf459" formatted="false">"色を選択してください"</string>
+    <string name="text_choose_a_destination_1_s_2c24d6">"目的地を選択してください %1$s"</string>
+    <string name="text_choose_a_destination_from_the_system_3bc989" formatted="false">"システムから目的地を選択してください"</string>
+    <string name="text_choose_a_destination_outside_the_selected_albums_312088" formatted="false">"選択したアルバム以外の保存先を選択します。"</string>
+    <string name="text_choose_a_document_from_the_system_a069ca" formatted="false">"システムからドキュメントを選択してください"</string>
+    <string name="text_choose_a_folder_56d054" formatted="false">"フォルダーを選択"</string>
+    <string name="text_choose_a_folder_in_the_android_picker_354f26" formatted="false">"Android ピッカーでフォルダーを選択します"</string>
+    <string name="text_choose_a_linkable_document_in_the_android_picker_96d1f0" formatted="false">"Android ピッカーでリンク可能なドキュメントを選択します"</string>
+    <string name="text_choose_a_music_folder_2a9069" formatted="false">"音楽フォルダーを選択してください"</string>
+    <string name="text_choose_a_music_or_mixed_folder_in_folders_and_pe_026756" formatted="false">"[ライブラリ] &gt; [メディア フォルダー] で、[音楽] フォルダーまたは [混合] フォルダーを選択します。"</string>
+    <string name="text_choose_a_name_of_1100_characters_20d6b6" formatted="false">"1 ～ 100 文字の名前を選択してください"</string>
+    <string name="text_choose_a_photo_folder_in_the_gallery_first_bcb193" formatted="false">"まずギャラリーで写真フォルダーを選択します。"</string>
+    <string name="text_choose_a_reference_then_its_file_in_the_android_e4100b" formatted="false">"Android ピッカーで参照を選択し、そのファイルを選択します。バックアップでは、メディアをコピーしたり、自動的にアクセスを許可したりすることなく、組織が保存されます。"</string>
+    <string name="text_choose_a_root_folder_for_your_photos_and_videos_96ddcc" formatted="false">"写真とビデオのルート フォルダーを選択します。サブフォルダーはアルバムとして表示されます。 [設定] でさらに追加できます。"</string>
+    <string name="text_choose_a_root_folder_subfolders_become_albums_e435c7" formatted="false">"ルート フォルダーを選択します。サブフォルダーがアルバムになります。"</string>
+    <string name="text_choose_a_segment_of_at_least_0_25_seconds_within_3023d9" formatted="false">"ビデオ内で少なくとも 0.25 秒のセグメントを選択してください"</string>
+    <string name="text_choose_a_segment_of_at_least_0_25_seconds_within_eb10b3" formatted="false">"トラック内で少なくとも 0.25 秒のセグメントを選択してください"</string>
+    <string name="text_choose_a_thor_gallery_settings_document_opening_d4eef4" formatted="false">"DS Gallery 設定ドキュメントを選択します。開いても何も変わりません。インポートして保存して適用してください。"</string>
+    <string name="text_choose_a_track_from_music_the_player_is_shared_a_c71f4b" formatted="false">"「ミュージック」からトラックを選択します。プレーヤーは画面間で共有され、バックグラウンドで続行されます。"</string>
+    <string name="text_choose_an_active_connected_folder_1_s_e19a6c">"アクティブな接続されたフォルダー %1$s を選択してください"</string>
+    <string name="text_choose_an_authorized_destination_folder_d16813" formatted="false">"許可された宛先フォルダーを選択してください"</string>
+    <string name="text_choose_an_image_destination_e8911f" formatted="false">"画像の保存先を選択してください"</string>
+    <string name="text_choose_another_available_display_9374e5" formatted="false">"別の利用可能なディスプレイを選択してください。"</string>
+    <string name="text_choose_another_file_4dc30e" formatted="false">"別のファイルを選択してください…"</string>
+    <string name="text_choose_another_folder_423db4" formatted="false">"別のフォルダーを選択してください…"</string>
+    <string name="text_choose_another_name_in_the_same_folder_0121f0" formatted="false">"同じフォルダー内の別の名前を選択してください"</string>
+    <string name="text_choose_app_965609" formatted="false">"アプリを選択"</string>
+    <string name="text_choose_at_least_one_album_or_collection_f499bc" formatted="false">"少なくとも 1 つのアルバムまたはコレクションを選択してください"</string>
+    <string name="text_choose_colors_with_a_color_wheel_45c992" formatted="false">"一度に 1 つずつ色を選択してください"</string>
+    <string name="text_choose_copy_transformations_923466" formatted="false">"コピー変換を選択します"</string>
+    <string name="text_choose_cover_254a2f" formatted="false">"カバーを選択してください"</string>
+    <string name="text_choose_destination_7320c1" formatted="false">"目的地を選択してください"</string>
+    <string name="text_choose_file_38d369" formatted="false">"ファイルを選択してください…"</string>
+    <string name="text_choose_file_to_link_4d549c" formatted="false">"リンクするファイルを選択してください…"</string>
+    <string name="text_choose_folder_764e29" formatted="false">"フォルダーを選択"</string>
+    <string name="text_choose_local_image_8460fc" formatted="false">"ローカルイメージを選択してください"</string>
+    <string name="text_choose_media_217616" formatted="false">"メディアの選択"</string>
+    <string name="text_choose_music_destination_b193b9" formatted="false">"音楽の保存先を選択"</string>
+    <string name="text_choose_music_folders_artists_and_albums_use_loca_0dbc29" formatted="false">"音楽フォルダーを選択します。アーティストとアルバムは、オンラインで検索せずに、ローカルのメタデータのみを使用します。"</string>
+    <string name="text_choose_new_folder_9ec30a" formatted="false">"新しいフォルダーを選択してください…"</string>
+    <string name="text_choose_only_one_file_for_this_reference_de6fed" formatted="false">"この参照にはファイルを 1 つだけ選択してください"</string>
+    <string name="text_choose_only_one_reference_for_each_file_659de7" formatted="false">"ファイルごとに参照を 1 つだけ選択します"</string>
+    <string name="text_choose_original_folder_7c8b3b" formatted="false">"元のフォルダーを選択してください…"</string>
+    <string name="text_choose_photo_frame_images_3d6082" formatted="false">"フォトフレームの画像を選択"</string>
+    <string name="text_choose_readable_individual_files_not_a_folder_or_bd3427" formatted="false">"フォルダーやアドレスではなく、読み取り可能な個別のファイルを選択してください"</string>
+    <string name="text_choose_root_folders_for_your_photos_and_videos_8005f3" formatted="false">"写真とビデオのルート フォルダーを選択します。"</string>
+    <string name="text_choose_settings_f671c8" formatted="false">"設定を選択してください…"</string>
+    <string name="text_choose_the_destination_8c4b9e" formatted="false">"目的地を選択してください"</string>
+    <string name="text_choose_the_original_folder_ab2296" formatted="false">"元のフォルダーを選択してください"</string>
+    <string name="text_choose_the_same_content_type_as_the_original_ref_53b10c" formatted="false">"元の参照と同じコンテンツ タイプを選択してください"</string>
+    <string name="text_choose_this_one_255533" formatted="false">"これを選択してください"</string>
+    <string name="text_choose_two_available_screens_first_77329a" formatted="false">"まず、利用可能な 2 つの画面を選択します。"</string>
+    <string name="text_choose_up_to_128_files_per_import_2cea07" formatted="false">"インポートごとに最大 128 ファイルを選択"</string>
+    <string name="text_choose_what_appears_in_the_gallery_c72934" formatted="false">"ギャラリーに表示されるものを選択します"</string>
+    <string name="text_choose_where_to_look_subfolders_become_albums_912e6f" formatted="false">"どこを見るかを選択してください。サブフォルダーはアルバムになります。"</string>
+    <string name="text_choose_which_copy_to_keep_content_is_checked_aga_db2906" formatted="false">"どのコピーを保持するかを選択します。ゴミ箱に移動する前に、コンテンツが再度チェックされます。"</string>
+    <string name="text_choose_which_pin_to_replace_with_1_s_c6ec95">"どのピンを %1$s に置き換えるかを選択します。"</string>
+    <string name="text_choose_your_music_folders_covers_stay_in_the_mus_f93d06" formatted="false">"音楽フォルダーを選択します。カバーは音楽ライブラリに残ります。"</string>
+    <string name="text_chosen_1_s_c8f1bf">"選択: %1$s"</string>
+    <string name="text_chosen_1_s_n_2_s_3_s_n_4_s_5b7d73">"選択済み: %1$s\n%2$s · %3$s\n%4$s"</string>
+    <string name="text_chosen_file_1_s_368352">"選択したファイル: %1$s"</string>
+    <string name="text_chosen_file_preview_9b3263" formatted="false">"選択したファイルのプレビュー"</string>
+    <string name="text_chosen_files_only_no_provider_scanning_or_cloud_49b792" formatted="false">"選択したファイルのみ。プロバイダーのスキャンやクラウド同期はなく、外部のオリジナルへの変更はありません。"</string>
+    <string name="text_chosen_media_25c884" formatted="false">"選ばれたメディア"</string>
+    <string name="text_chosen_sources_1_s_indexed_media_2_s_albums_3_s_83cb72">"選択されたソース: %1$s;インデックス付きメディア: %2$s;アルバム: %3$s"</string>
+    <string name="text_chosen_wallpaper_ba1aba" formatted="false">"選択した壁紙"</string>
+    <string name="text_circular_matches_choose_one_reference_per_file_e1f63c" formatted="false">"循環一致: ファイルごとに 1 つの参照を選択します"</string>
+    <string name="text_circular_reference_6918cc" formatted="false">"循環参照"</string>
+    <string name="text_cleanup_failed_try_again_08cccf" formatted="false">"クリーンアップに失敗しました。もう一度やり直してください。"</string>
+    <string name="text_cleanup_interrupted_1_s_3f18c1">"クリーンアップが中断されました: %1$s"</string>
+    <string name="text_clear_2bdc24" formatted="false">"クリア"</string>
+    <string name="text_clear_cache_591e39" formatted="false">"キャッシュを削除"</string>
+    <string name="text_clear_queue_bb5c72" formatted="false">"キューをクリアする"</string>
+    <string name="text_clear_search_3664fa" formatted="false">"検索をクリア"</string>
+    <string name="text_clear_selection_508e08" formatted="false">"選択をクリア"</string>
+    <string name="text_clearing_cache_911274" formatted="false">"キャッシュをクリア中…"</string>
+    <string name="text_close_32d407" formatted="false">"閉じる"</string>
+    <string name="text_close_search_9cf7ab" formatted="false">"検索を閉じる"</string>
+    <string name="text_collection_6d6e22" formatted="false">"コレクション"</string>
+    <string name="text_collection_97d9d7" formatted="false">" ・コレクション"</string>
+    <string name="text_collection_cover_7ec6e5" formatted="false">"コレクションカバー"</string>
+    <string name="text_collection_item_actions_81ff41" formatted="false">"コレクションアイテムのアクション"</string>
+    <string name="text_collection_name_5d060a" formatted="false">"コレクション名"</string>
+    <string name="text_collection_removed_7205b1" formatted="false">"コレクションが削除されました"</string>
+    <string name="text_collections_2ffdd0" formatted="false">"コレクション"</string>
+    <string name="text_collections_and_playlists_8b30ee" formatted="false">"コレクションとプレイリスト"</string>
+    <string name="text_color_preview_7bbd3c" formatted="false">"プレビュー"</string>
+    <string name="text_color_wheel_5d58ae" formatted="false">"カラーホイール"</string>
+    <string name="text_command_failed_open_the_player_6a5bff" formatted="false">"コマンドが失敗しました · プレーヤーを開きます"</string>
+    <string name="text_compact_07da14" formatted="false">"コンパクト"</string>
+    <string name="text_compact_grid_3c9e94" formatted="false">"コンパクトなグリッド"</string>
+    <string name="text_compare_65b080" formatted="false">"比較する"</string>
+    <string name="text_compare_the_reference_f68129" formatted="false">"リファレンスを比較する"</string>
+    <string name="text_compare_these_two_copies_bc72b0" formatted="false">"これら 2 つのコピーを比較しますか?"</string>
+    <string name="text_compares_the_contents_of_authorized_files_matchi_7f9d1e" formatted="false">"許可されたファイルの内容を比較します。名前が一致したり、画像が似ているだけでは十分ではありません。"</string>
+    <string name="text_comparison_5db262" formatted="false">"比較"</string>
+    <string name="text_comparison_session_unreadable_1_s_895563">"比較セッションを読み取れません: %1$s"</string>
+    <string name="text_completed_97967f" formatted="false">"完了"</string>
+    <string name="text_completes_a_cycle_and_avoids_immediate_repeats_39acda" formatted="false">"サイクルを完了し、すぐに繰り返されることを回避します"</string>
+    <string name="text_configuration_incomplete_try_again_0d7d29" formatted="false">"構成が不完全です。もう一度やり直してください。"</string>
+    <string name="text_configuration_not_saved_try_again_0ef8dd" formatted="false">"設定が保存されませんでした。もう一度やり直してください。"</string>
+    <string name="text_configure_photo_frame_bbd19b" formatted="false">"フォトフレームを設定する"</string>
+    <string name="text_confirm_662c0e" formatted="false">"確認"</string>
+    <string name="text_confirm_chosen_file_c62c88" formatted="false">"選択したファイルを確認する"</string>
+    <string name="text_confirm_date_6b308b" formatted="false">"日付を確認する"</string>
+    <string name="text_confirm_only_if_you_recognize_the_file_identical_c20d48" formatted="false">"ファイルを認識している場合にのみ確認してください。名前とサイズが同じであっても、同一性は証明されません。この選択は、[再リンク] をタップした場合にのみ適用されます。"</string>
+    <string name="text_confirming_authorizes_the_entire_folder_read_onl_43d5fe">"確認すると、フォルダー全体が読み取り専用で承認されます: %1$s。選択された参照のみが転送されます。お気に入り、コレクション、カバー、ピンはファイルに続きます。除外はアクティブのままです。"</string>
+    <string name="text_conflicting_bindings_60437b" formatted="false">"競合するバインディング"</string>
+    <string name="text_content_becomes_visible_when_this_panel_is_activ_89c5d8" formatted="false">"このパネルがアクティブになると、コンテンツが表示されます。"</string>
+    <string name="text_content_cannot_be_opened_048ecf" formatted="false">"コンテンツを開けません"</string>
+    <string name="text_content_changed_no_references_transferred_4ec39b" formatted="false">"コンテンツが変更されました: 参照は転送されませんでした"</string>
+    <string name="text_content_unavailable_df9efa" formatted="false">"コンテンツが利用できません"</string>
+    <string name="text_controller_code_1_s_dd98f6">"コントローラー・コード %1$s"</string>
+    <string name="text_controls_1_s_b42d62">"コントロール · %1$s"</string>
+    <string name="text_controls_3c6824" formatted="false">"操作"</string>
+    <string name="text_controls_54b475" formatted="false">"操作"</string>
+    <string name="text_controls_and_bindings_bc7885" formatted="false">"コントロールとバインディング"</string>
+    <string name="text_converted_copies_require_static_images_a4ba7d" formatted="false">"変換されたコピーには静止画像が必要です"</string>
+    <string name="text_cool_white_powder_blue_710a43" formatted="false">"クールホワイト・パウダーブルー"</string>
+    <string name="text_copies_do_not_enter_the_catalog_or_trash_after_o_8ae906" formatted="false">"コピーはカタログやゴミ箱に入りません。ピッカーを開いた後、24 時間は読み取り可能な状態が続きます。次に可能なときにクリーンアップが実行されます。準備しても送信されません。"</string>
+    <string name="text_copies_expired_or_selection_changed_prepare_agai_88a079" formatted="false">"コピーの有効期限が切れたか、選択内容が変更されました: 再度準備してください"</string>
+    <string name="text_copies_not_recovered_prepare_them_again_7bdf89" formatted="false">"コピーが回復されませんでした: 再度準備してください"</string>
+    <string name="text_copies_original_bytes_without_recompression_reta_6efbf0" formatted="false">"再圧縮せずに元のバイトをコピーし、個人メタデータを保持します。お気に入りやプロバイダーのリンクは追加されていません。新しいコピーは、検証後にのみ宛先で使用可能になります。"</string>
+    <string name="text_copies_ready_1_s_c7ea4e">"コピーの準備完了 · %1$s"</string>
+    <string name="text_copies_too_large_reduce_dimensions_or_image_coun_db61cb" formatted="false">"コピーが大きすぎる: サイズを減らすか画像数を減らす"</string>
+    <string name="text_copy_1_s_47dc62">"コピー: %1$s"</string>
+    <string name="text_copy_and_move_ask_for_a_destination_trash_allows_02c47c" formatted="false">"コピーと移動では、宛先を尋ねられます。ゴミ箱を使用すると復元できます。確認する前に選択内容を確認してください。"</string>
+    <string name="text_copy_complete_original_preserved_51eb2c" formatted="false">"コピー完了: オリジナルは保存されました"</string>
+    <string name="text_copy_ebd162" formatted="false">"コピー"</string>
+    <string name="text_copy_imported_into_the_chosen_folder_external_or_edcde6" formatted="false">"選択したフォルダーにインポートされたコピー: 外部オリジナルが保存されます"</string>
+    <string name="text_copy_imported_or_canceled_private_temporary_file_cc6d03" formatted="false">"コピーがインポートまたはキャンセルされました。プライベート一時ファイルが保持されます。クリーンアップを再開します。"</string>
+    <string name="text_copy_in_trash_no_further_removal_of_the_original_6a1315" formatted="false">"ゴミ箱にコピーします。オリジナルをそれ以上削除する必要はありません"</string>
+    <string name="text_copy_not_published_855942" formatted="false">"コピーは公開されていません"</string>
+    <string name="text_copy_not_verified_b25152" formatted="false">"コピーが検証されていません"</string>
+    <string name="text_copy_retained_move_incomplete_9fedd1" formatted="false">"コピーは保持されていますが、移動は不完全です"</string>
+    <string name="text_copy_retained_move_incomplete_no_further_deletio_f4c49b" formatted="false">"コピーが保持されています: 移動は不完全です。これ以上の削除はありません"</string>
+    <string name="text_copy_retained_references_need_restoring_1_s_e7e976">"コピーが保持されています: 参照を復元する必要があります。 %1$s"</string>
+    <string name="text_copy_to_b8ead5" formatted="false">"コピー先…"</string>
+    <string name="text_copy_unavailable_0f205e" formatted="false">"コピー不可"</string>
+    <string name="text_copying_0ed6bc" formatted="false">"コピーする"</string>
+    <string name="text_could_not_connect_to_player_85f1ae" formatted="false">"プレーヤーに接続できませんでした"</string>
+    <string name="text_could_not_open_aa1697" formatted="false">"開けませんでした"</string>
+    <string name="text_could_not_publish_the_private_copy_7f58f5" formatted="false">"プライベートコピーを公開できませんでした"</string>
+    <string name="text_could_not_publish_the_trash_copy_dd8550" formatted="false">"ゴミ箱のコピーを公開できませんでした"</string>
+    <string name="text_could_not_read_albums_585db4" formatted="false">"アルバムを読み取れませんでした"</string>
+    <string name="text_could_not_reserve_the_private_copy_557a15" formatted="false">"プライベートコピーを予約できませんでした"</string>
+    <string name="text_could_not_save_9b6ca7" formatted="false">"保存できませんでした"</string>
+    <string name="text_could_not_save_label_1a4871" formatted="false">"ラベルを保存できませんでした。"</string>
+    <string name="text_cover_7be01e" formatted="false">"カバー"</string>
+    <string name="text_cream_lavender_and_sage_5c0db4" formatted="false">"クリーム・ラベンダー＆セージ"</string>
+    <string name="text_create_9bf626" formatted="false">"作成"</string>
+    <string name="text_creating_ad9b47" formatted="false">"作成中…"</string>
+    <string name="text_creation_denied_b143ba" formatted="false">"作成が拒否されました"</string>
+    <string name="text_crop_300dba" formatted="false">"切り抜き"</string>
+    <string name="text_current_settings_cannot_be_exported_9a7577" formatted="false">"現在の設定はエクスポートできません。"</string>
+    <string name="text_custom_792566" formatted="false">"カスタム"</string>
+    <string name="text_customize_theme_5d7c82" formatted="false">"色のカスタマイズ"</string>
+    <string name="text_dark_316022" formatted="false">"暗い"</string>
+    <string name="text_date_cec3a9" formatted="false">"日付"</string>
+    <string name="text_date_unavailable_932e7b" formatted="false">"日付が不明"</string>
+    <string name="text_default_interval_for_the_in_app_photo_frame_laun_3098dc" formatted="false">"アプリ内フォトフレームのデフォルトの間隔。ランチャー ウィジェットには別の間隔があります。"</string>
+    <string name="text_deferred_in_game_mode_318f70" formatted="false">"ゲームモードでは延期"</string>
+    <string name="text_delay_before_repeat_1_s_ms_2d2dfe">"リピート前の遅延 · %1$s ミリ秒"</string>
+    <string name="text_delete_7efe33" formatted="false">"削除"</string>
+    <string name="text_delete_permanently_8a62e5" formatted="false">"完全に削除"</string>
+    <string name="text_deletion_denied_e0b43a" formatted="false">"削除が拒否されました"</string>
+    <string name="text_deselect_all_d1cf57" formatted="false">"すべて選択解除"</string>
+    <string name="text_destination_1_s_27ea61">"宛先: %1$s"</string>
+    <string name="text_destination_album_unavailable_1d55d6" formatted="false">"宛先アルバムが利用できません"</string>
+    <string name="text_destination_changed_85142f" formatted="false">"目的地が変更されました"</string>
+    <string name="text_destination_disconnected_or_access_needs_restori_06ea20" formatted="false">"宛先が切断されているか、アクセスを復元する必要があります"</string>
+    <string name="text_destination_hidden_or_unavailable_54ced7" formatted="false">"宛先が非表示または利用不可"</string>
+    <string name="text_destination_identity_changed_no_new_changes_2bc461" formatted="false">"宛先 ID が変更されました: 新たな変更はありません"</string>
+    <string name="text_destination_is_not_writable_e03949" formatted="false">"宛先は書き込み可能ではありません"</string>
+    <string name="text_destination_needs_relinking_file_preserved_6cd661" formatted="false">"宛先は再リンクする必要があります。ファイルが保存されました"</string>
+    <string name="text_destination_not_authorized_9ab1e7" formatted="false">"宛先が許可されていません"</string>
+    <string name="text_destination_published_verify_the_result_before_r_c120e7" formatted="false">"公開された宛先: 操作を解決する前に結果を確認してください。これ以上の削除はありません。"</string>
+    <string name="text_destination_same_folder_a0be2e" formatted="false">"保存先：同じフォルダ"</string>
+    <string name="text_destination_unavailable_1a3939" formatted="false">"宛先が利用できません"</string>
+    <string name="text_destination_verification_failed_original_preserv_108861" formatted="false">"宛先検証に失敗しました: オリジナルは保存されました"</string>
+    <string name="text_details_1a45b0" formatted="false">"詳細"</string>
+    <string name="text_detect_278b26" formatted="false">"検出"</string>
+    <string name="text_device_gallery_1354db" formatted="false">"デバイスギャラリー"</string>
+    <string name="text_device_gallery_unavailable_4a3bc5" formatted="false">"デバイスギャラリーは使用できません"</string>
+    <string name="text_dialogs_c3422e" formatted="false">"ダイアログ"</string>
+    <string name="text_different_data_or_path_verification_required_660629" formatted="false">"データまたはパスが異なります: 検証が必要です"</string>
+    <string name="text_different_file_type_75990a" formatted="false">"異なるファイルタイプ"</string>
+    <string name="text_dimensions_4d6b7c" formatted="false">"寸法"</string>
+    <string name="text_dimensions_before_crop_4622f5" formatted="false">"トリミング前の寸法"</string>
+    <string name="text_directions_cannot_be_part_of_combinations_50c20a" formatted="false">"ルートを組み合わせの一部にすることはできません"</string>
+    <string name="text_disable_timer_ba37ce" formatted="false">"タイマーを無効にする"</string>
+    <string name="text_discard_838670" formatted="false">"廃棄する"</string>
+    <string name="text_display_1_s_disconnected_no_panel_moved_automati_c72848">"ディスプレイ %1$s が切断されました。自動的に移動するパネルはありません。"</string>
+    <string name="text_display_added_1_s_no_window_opened_addc3a">"%1$s を表示します。窓が開いていません"</string>
+    <string name="text_display_configuration_changed_1_s_a9092c">"ディスプレイ構成が変更されました %1$s"</string>
+    <string name="text_display_identity_changed_reopen_on_one_screen_an_347828" formatted="false">"表示IDが変更されました。 1 つの画面で再度開いて、割り当てを確認します。"</string>
+    <string name="text_display_no_longer_available_8322f0" formatted="false">"ディスプレイは使用できなくなりました。"</string>
+    <string name="text_display_released_the_gallery_continues_on_the_ot_6b18c1" formatted="false">"ディスプレイが解放されました。ギャラリーは別の画面でも続きます。"</string>
+    <string name="text_display_unavailable_8b459c" formatted="false">"表示不可"</string>
+    <string name="text_document_link_changed_66df8b" formatted="false">"ドキュメントのリンクが変更されました"</string>
+    <string name="text_document_unavailable_2d9594" formatted="false">"ドキュメントが利用できません"</string>
+    <string name="text_document_verified_check_the_preview_before_impor_ab933c" formatted="false">"文書が確認されました。インポートする前にプレビューを確認してください。"</string>
+    <string name="text_done_fa6730" formatted="false">"完了"</string>
+    <string name="text_double_tap_1_s_nlong_press_2_s_n_610152">"ダブルタップ: %1$s\n長押し: %2$s\n"</string>
+    <string name="text_double_tap_8f6732" formatted="false">"ダブルタップ"</string>
+    <string name="text_downward_da6a81" formatted="false">"下向き"</string>
+    <string name="text_draft_changes_tap_save_to_apply_fd453d" formatted="false">"変更の下書き: [保存] をタップして適用します。"</string>
+    <string name="text_drag_the_corners_or_frame_with_a_controller_adju_023237" formatted="false">"角またはフレームをドラッグします。コントローラーを使用して、下のエッジを調整します。"</string>
+    <string name="text_duration_902f15" formatted="false">"長さ"</string>
+    <string name="text_each_file_has_its_own_result_a_successful_copy_w_1dda18" formatted="false">"各ファイルには独自の結果があります。コピーが成功し、削除が拒否された場合でも、部分的な移動のままになります。"</string>
+    <string name="text_edit_49e493" formatted="false">"編集"</string>
+    <string name="text_edit_audio_3c820b" formatted="false">"オーディオを編集…"</string>
+    <string name="text_edit_audio_90b959" formatted="false">"音声を編集"</string>
+    <string name="text_edit_image_cab524" formatted="false">"画像を編集…"</string>
+    <string name="text_edit_image_da6264" formatted="false">"画像を編集"</string>
+    <string name="text_edit_search_1_s_b5e403">"検索の編集: %1$s"</string>
+    <string name="text_edit_video_3e8c8f" formatted="false">"ビデオを編集…"</string>
+    <string name="text_edit_video_e5572e" formatted="false">"動画を編集"</string>
+    <string name="text_edited_7e7cdc" formatted="false">"-編集済み"</string>
+    <string name="text_electric_lime_5aa0f2" formatted="false">"電気石灰"</string>
+    <string name="text_embedded_b70dbe" formatted="false">"埋め込み型"</string>
+    <string name="text_empty_file_7a1d6c" formatted="false">"空のファイル"</string>
+    <string name="text_empty_pin_e56092" formatted="false">"空のピン"</string>
+    <string name="text_empty_queue_39af79" formatted="false">"空のキュー"</string>
+    <string name="text_empty_trash_1c01ef" formatted="false">"ゴミ箱を空にする"</string>
+    <string name="text_enable_operation_notifications_d6bcd6" formatted="false">"操作通知を有効にする"</string>
+    <string name="text_encoding_did_not_produce_a_file_8b1592" formatted="false">"エンコードではファイルが生成されませんでした"</string>
+    <string name="text_encoding_failed_1_s_codec_or_parameters_may_be_u_8f1cb9">"エンコードに失敗しました (%1$s)。コーデックまたはパラメータがサポートされていない可能性があります。原本保存。"</string>
+    <string name="text_encoding_may_slow_down_your_game_and_use_more_ba_06e080" formatted="false">"エンコードするとゲームの速度が低下し、バッテリーの消費量が増加する可能性があります。後でエクスポートすることもできます。"</string>
+    <string name="text_encoding_may_use_memory_and_slow_the_game_you_ca_8acfd0" formatted="false">"エンコードによりメモリが使用され、ゲームが遅くなる可能性があります。後でキャンセルして保存することもできます。"</string>
+    <string name="text_encoding_new_copy_cddadd" formatted="false">"新しいコピーのエンコード"</string>
+    <string name="text_encoding_segment_1_s_a411b2">"エンコードセグメント: %1$s%%"</string>
+    <string name="text_encoding_segment_4f4ac8" formatted="false">"セグメントをエンコード中…"</string>
+    <string name="text_encoding_takes_time_and_temporary_space_no_files_ad5504" formatted="false">"エンコードには時間と一時的なスペースが必要です。ファイルは上書きされません。既存の名前には接尾辞が付けられます。"</string>
+    <string name="text_end_seconds_60bd23" formatted="false">"終了・秒"</string>
+    <string name="text_enter_seconds_within_the_content_duration_3fa3be" formatted="false">"コンテンツの長さ内の秒数を入力してください"</string>
+    <string name="text_entire_catalog_10e9a3" formatted="false">"カタログ全体"</string>
+    <string name="text_every_30_minutes_fcea34" formatted="false">"30分ごと"</string>
+    <string name="text_every_6_hours_70657d" formatted="false">"6時間ごと"</string>
+    <string name="text_every_day_32af98" formatted="false">"毎日"</string>
+    <string name="text_every_hour_0b11e2" formatted="false">"1時間ごと"</string>
+    <string name="text_excluded_album_relinking_keeps_the_exclusion_3c5468" formatted="false">"除外されたアルバム: 再リンクすると除外が維持されます。"</string>
+    <string name="text_excluded_album_stays_excluded_after_relinking_8db313" formatted="false">"除外されたアルバム: 再リンク後も除外されたままになります。"</string>
+    <string name="text_explicit_panel_1_s_request_screen_2_s_80a0d8">"明示的なパネル %1$s リクエスト → 画面 %2$s"</string>
+    <string name="text_explicitly_relink_the_backup_document_d45acb" formatted="false">"バックアップドキュメントを明示的に再リンクする"</string>
+    <string name="text_explicitly_relink_the_backup_source_179521" formatted="false">"バックアップ ソースを明示的に再リンクする"</string>
+    <string name="text_export_2c4c51" formatted="false">"エクスポート"</string>
+    <string name="text_export_audio_segment_a0faff" formatted="false">"オーディオセグメントのエクスポート"</string>
+    <string name="text_export_did_not_start_c11e45" formatted="false">"エクスポートが開始されませんでした"</string>
+    <string name="text_export_first_frame_68b9a6" formatted="false">フレームを書き出す…</string>
+    <string name="text_export_gif_frame_a7c5cd" formatted="false">"GIF フレームをエクスポート"</string>
+    <string name="text_export_image_b28177" formatted="false">"画像のエクスポート"</string>
+    <string name="text_export_import_settings_5d89ec" formatted="false">"設定のエクスポート/インポート"</string>
+    <string name="text_export_new_copy_f9107d" formatted="false">"新しいコピーをエクスポートする"</string>
+    <string name="text_export_now_4bb86b" formatted="false">"今すぐエクスポート"</string>
+    <string name="text_export_or_import_settings_5f5279" formatted="false">"設定のエクスポートまたはインポート"</string>
+    <string name="text_export_saved_settings_48c7e3" formatted="false">"保存された設定をエクスポートする"</string>
+    <string name="text_export_settings_b58a03" formatted="false">"設定をエクスポート…"</string>
+    <string name="text_export_storage_unavailable_5041f2" formatted="false">"エクスポートストレージは使用できません"</string>
+    <string name="text_export_unverified_the_destination_document_may_b_364634" formatted="false">"エクスポートは未確認です。宛先の文書が不完全である可能性があります。新しいファイルで再試行してください。設定はそのまま残ります。"</string>
+    <string name="text_export_unverified_the_document_may_be_incomplete_eceee6" formatted="false">"エクスポートは未確認です。書類が不完全である可能性があります"</string>
+    <string name="text_export_video_segment_d137d3" formatted="false">"ビデオセグメントのエクスポート"</string>
+    <string name="text_export_while_gaming_a6b51c" formatted="false">"ゲーム中にエクスポートしますか?"</string>
+    <string name="text_export_without_audio_ab231b" formatted="false">"音声なしでエクスポートする"</string>
+    <string name="text_exported_duration_does_not_match_the_segment_5feb72" formatted="false">"エクスポートされた期間がセグメントと一致しません"</string>
+    <string name="text_exported_track_incomplete_79fd24" formatted="false">"エクスポートされたトラックが不完全です"</string>
+    <string name="text_extra_copy_17ffbc" formatted="false">"余分なコピー"</string>
+    <string name="text_fade_b179cb" formatted="false">"フェード"</string>
+    <string name="text_favorite_06bae3" formatted="false">"お気に入り"</string>
+    <string name="text_favorite_not_saved_1_s_9d77cf">"お気に入りが保存されていません: %1$s"</string>
+    <string name="text_favorites_4c7a1b" formatted="false">"お気に入り"</string>
+    <string name="text_favorites_and_links_transferred_no_files_deleted_b9a9f0" formatted="false">"お気に入りとリンクが転送されました。ファイルは削除されませんでした。"</string>
+    <string name="text_favorites_collections_covers_and_pins_are_preser_53017d" formatted="false">"お気に入り、コレクション、カバー、ピンは保存されます。すでにインデックスが作成されているファイルは、その参照をマージします。除外されたアルバムは除外されたままになります。コピー、移動、再生はできません。永続的な読み取り専用アクセス。"</string>
+    <string name="text_favorites_d1d566" formatted="false">"お気に入り"</string>
+    <string name="text_file_1_s_2_s_348193">"ファイル %1$s: %2$s"</string>
+    <string name="text_file_access_denied_check_the_source_160214" formatted="false">"ファイルアクセスが拒否されました。ソースを確認してください。"</string>
+    <string name="text_file_access_needs_restoring_5e2b63" formatted="false">"ファイルアクセスを復元する必要があります"</string>
+    <string name="text_file_cannot_be_linked_403bb3" formatted="false">"ファイルをリンクできません"</string>
+    <string name="text_file_management_73f374" formatted="false">"ファイル管理"</string>
+    <string name="text_file_name_a26de2" formatted="false">"ファイル名"</string>
+    <string name="text_file_name_too_long_576415" formatted="false">"ファイル名が長すぎます"</string>
+    <string name="text_file_not_found_cf1869" formatted="false">"ファイルが見つかりません"</string>
+    <string name="text_file_not_indexed_check_exclusions_and_access_e8ce8a" formatted="false">"ファイルのインデックスが作成されていません: 除外とアクセスを確認してください"</string>
+    <string name="text_file_not_writable_01d31c" formatted="false">"ファイルが書き込み不可"</string>
+    <string name="text_file_operations_7333a0" formatted="false">"ファイル操作"</string>
+    <string name="text_file_path_780ddb" formatted="false">"ファイルパス"</string>
+    <string name="text_file_picker_unavailable_be119c" formatted="false">"ファイルピッカーは使用できません"</string>
+    <string name="text_file_picker_unavailable_on_this_panel_993597" formatted="false">"ファイル ピッカーはこのパネルでは使用できません。"</string>
+    <string name="text_file_picker_unavailable_on_this_system_327275" formatted="false">"このシステムではファイル ピッカーを使用できません"</string>
+    <string name="text_file_readable_compare_the_data_and_confirm_only_2b77a7" formatted="false">"ファイル読み取り可能。データを比較し、再リンクしたいファイルであるかどうかのみを確認します。"</string>
+    <string name="text_file_restored_private_copy_still_retained_resume_f3fe8f" formatted="false">"ファイルが復元されました。プライベートコピーはまだ保持されています。クリーンアップを再開するか、バックアップ コピーを保存してください。"</string>
+    <string name="text_file_size_c27dd5" formatted="false">"ファイルサイズ"</string>
+    <string name="text_file_too_large_234633" formatted="false">"ファイルが大きすぎます"</string>
+    <string name="text_file_unavailable_6dcc4f" formatted="false">"ファイルが利用できません"</string>
+    <string name="text_file_unavailable_dad522" formatted="false">"ファイルが利用できません"</string>
+    <string name="text_file_unreadable_2af756" formatted="false">"ファイルが読み取れません"</string>
+    <string name="text_files_not_acquired_6bf6a7" formatted="false">"ファイルが取得されませんでした"</string>
+    <string name="text_fill_frame_4f7c97" formatted="false">"フレームを埋める"</string>
+    <string name="text_fill_may_crop_edges_7b2302" formatted="false">"塗りつぶし・エッジをトリミングする場合があります"</string>
+    <string name="text_filter_1_s_you_can_show_all_formats_while_keepin_c81fc6">"フィルター: %1$s。フォルダを保持したまますべての形式を表示して検索することができます。"</string>
+    <string name="text_filter_black_and_white_7c204d" formatted="false">"黒と白"</string>
+    <string name="text_filter_by_format_113c28" formatted="false">"形式でフィルタリングする"</string>
+    <string name="text_filter_cool_5a1d5d" formatted="false">"クール"</string>
+    <string name="text_filter_original_18c7dc" formatted="false">"オリジナル"</string>
+    <string name="text_filter_warm_ef28da" formatted="false">"暖かい"</string>
+    <string name="text_filters_54fc01" formatted="false">"フィルター"</string>
+    <string name="text_find_duplicates_d1ed15" formatted="false">"重複の検索"</string>
+    <string name="text_find_your_folder_d5b7f4" formatted="false">"フォルダーを見つける"</string>
+    <string name="text_finish_file_operations_before_relinking_544ffb" formatted="false">"再リンクする前にファイル操作を終了してください"</string>
+    <string name="text_finish_or_cancel_file_operations_before_restorin_e489ae" formatted="false">"復元する前にファイル操作を終了またはキャンセルしてください"</string>
+    <string name="text_first_frame_as_a_still_image_the_original_gif_ke_da8ccd" formatted="false">"静止画としての最初のフレーム。オリジナルの GIF はすべてのフレームとアニメーションを保持します。"</string>
+    <string name="text_first_frame_exported_original_gif_and_favorites_8d9d76" formatted="false">"最初のフレームがエクスポートされました: オリジナルの GIF とお気に入りが保存されました"</string>
+    <string name="text_fixed_image_631654" formatted="false">"固定画像"</string>
+    <string name="text_focus_down_d198fa" formatted="false">"フォーカスダウン"</string>
+    <string name="text_focus_left_bbc430" formatted="false">"左にフォーカス"</string>
+    <string name="text_focus_right_8b0117" formatted="false">"右に焦点を合わせる"</string>
+    <string name="text_focus_up_bb1e59" formatted="false">"集中力を上げる"</string>
+    <string name="text_folder_1_s_media_8ef7d0">"フォルダー · %1$s メディア"</string>
+    <string name="text_folder_2e95e4" formatted="false">"フォルダー"</string>
+    <string name="text_folder_access_denied_try_again_d5e242" formatted="false">"フォルダーへのアクセスが拒否されました。もう一度やり直してください。"</string>
+    <string name="text_folder_access_needs_restoring_b913f4" formatted="false">"フォルダーアクセスを復元する必要があります"</string>
+    <string name="text_folder_authorized_open_it_in_albums_to_see_files_ef4038" formatted="false">"フォルダーが許可されました。アルバムで開くとファイルが表示されます。"</string>
+    <string name="text_folder_available_1_s_ae9bd3">"利用可能なフォルダー: %1$s"</string>
+    <string name="text_folder_is_not_writable_348e84" formatted="false">"フォルダーは書き込み可能ではありません"</string>
+    <string name="text_folder_name_7eaa40" formatted="false">"フォルダ名"</string>
+    <string name="text_folder_needs_relinking_f72a5e" formatted="false">"フォルダーの再リンクが必要です"</string>
+    <string name="text_folder_not_added_1_s_82ccb6">"フォルダーが追加されていません: %1$s"</string>
+    <string name="text_folder_not_created_c4c5b9" formatted="false">"フォルダーが作成されていません"</string>
+    <string name="text_folder_picker_unavailable_on_this_panel_72be79" formatted="false">"このパネルではフォルダー ピッカーは使用できません"</string>
+    <string name="text_folder_read_choose_and_verify_matches_no_persist_cd57e0" formatted="false">"フォルダーが読み取られました。一致するものを選択して確認します。永続的なアクセスは取得されませんでした。"</string>
+    <string name="text_folder_unavailable_1f6e37" formatted="false">"フォルダーが使用できません"</string>
+    <string name="text_folder_unavailable_choose_it_again_no_originals_2a7f89" formatted="false">"フォルダーが使用できません。もう一度選択してください。オリジナルは変更されていません。"</string>
+    <string name="text_folders_23cc92" formatted="false">"フォルダー"</string>
+    <string name="text_folders_69d99c" formatted="false">"フォルダ"</string>
+    <string name="text_folders_and_collections_2083b2" formatted="false">"フォルダーとコレクション"</string>
+    <string name="text_folders_and_permissions_80735e" formatted="false">"フォルダーと権限"</string>
+    <string name="text_folders_to_check_708c64" formatted="false">"確認するフォルダー"</string>
+    <string name="text_follow_selection_4b3585" formatted="false">"選択に従ってください"</string>
+    <string name="text_following_selection_1_s_97b184">"次の選択 · %1$s"</string>
+    <string name="text_for_images_and_videos_3a551b" formatted="false">"画像やビデオの場合"</string>
+    <string name="text_for_music_eef927" formatted="false">"音楽用"</string>
+    <string name="text_for_videos_4cebe5" formatted="false">"ビデオ用"</string>
+    <string name="text_format_73e180" formatted="false">"フォーマット"</string>
+    <string name="text_four_panes_407964" formatted="false">"4 つのペイン"</string>
+    <string name="text_frame_4098fb" formatted="false">"フレーム"</string>
+    <string name="text_frame_a6b9c6" formatted="false">"-フレーム"</string>
+    <string name="text_frame_count_unavailable_3e8d19" formatted="false">"フレームカウントが利用できません"</string>
+    <string name="text_from_1_s_2e9c11">"差出人: %1$s"</string>
+    <string name="text_from_1_s_nto_2_s_n_nfavorites_and_collection_pla_bb8171">"%1$s\nから%2$s\n\nお気に入りとコレクション/プレイリストのリンクは、順序を保ったまま移動します。表紙は変わらず。ファイルは削除されません。最初に両方の内容が再度チェックされます。"</string>
+    <string name="text_full_4b19a8" formatted="false">"フル"</string>
+    <string name="text_full_frame_1f765a" formatted="false">"フルフレーム"</string>
+    <string name="text_full_track_a05670" formatted="false">"フルトラック"</string>
+    <string name="text_full_video_cae633" formatted="false">"フルビデオ"</string>
+    <string name="text_gallery_and_preview_36bf93" formatted="false">"ギャラリーとプレビュー"</string>
+    <string name="text_gallery_preview_and_navigation_1bc538" formatted="false">"ギャラリー、プレビュー、ナビゲーション"</string>
+    <string name="text_gallery_theme_a2416f" formatted="false">"ギャラリーのテーマ"</string>
+    <string name="text_game_mode_36850a" formatted="false">"ゲームモード"</string>
+    <string name="text_game_mode_allow_preparation_or_try_later_f52946" formatted="false">"ゲームモード: 準備を許可するか、後で試してください"</string>
+    <string name="text_game_mode_export_deferred_disable_it_and_tap_res_a4b373" formatted="false">"ゲームモード: エクスポートは延期されました。無効にして「再開」をタップします。"</string>
+    <string name="text_game_mode_import_deferred_disable_it_and_tap_res_450951" formatted="false">"ゲームモード: インポートは延期されました。無効にして「再開」をタップします。"</string>
+    <string name="text_gestures_apply_locally_to_this_window_swap_panel_b7ff93" formatted="false">"ジェスチャはこのウィンドウにローカルに適用されます。パネルの交換は、開いている 2 つのパネルにのみ影響します。ゲームに解放された画面は再利用されません。ファイルの確認は明示的なままです。"</string>
+    <string name="text_gestures_changed_on_the_other_panel_reload_setti_09990f" formatted="false">"他のパネルでジェスチャーが変更されました。保存する前に設定をリロードします。"</string>
+    <string name="text_gestures_not_saved_f2b3af" formatted="false">"ジェスチャーが保存されない"</string>
+    <string name="text_gif_frame_count_dc95bf" formatted="false">"GIF フレーム数"</string>
+    <string name="text_gif_too_large_803f38" formatted="false">"GIF が大きすぎます"</string>
+    <string name="text_gifs_in_the_grid_c5be9f" formatted="false">"グリッド内のGIF"</string>
+    <string name="text_grid_1_s_ngif_limit_2_s_n_224dd6">"グリッド: %1$s\nGIF 制限: %2$s\n"</string>
+    <string name="text_grid_view_c4886b" formatted="false">"グリッド表示"</string>
+    <string name="text_group_1_s_2_s_copies_116e5d">"グループ %1$s · %2$s コピー"</string>
+    <string name="text_height_ba9669" formatted="false">"高さ"</string>
+    <string name="text_help_79df3a" formatted="false">"ヘルプ"</string>
+    <string name="text_hidden_albums_5ff5a5" formatted="false">"隠しアルバム"</string>
+    <string name="text_hidden_albums_keep_their_favorites_and_reference_848396" formatted="false">"非表示のアルバムでは、ファイルを変更せずにお気に入りと参照が保持されます。"</string>
+    <string name="text_hidden_folder_d2c9a2" formatted="false">"隠しフォルダー"</string>
+    <string name="text_hidden_items_trash_disabled_sources_and_unavaila_44d115" formatted="false">"隠しアイテム、ゴミ箱、無効なソース、使用できないファイルは除外されます。フォルダーには、以前にインデックスが作成されたサブフォルダーが含まれます。"</string>
+    <string name="text_hide_12292a" formatted="false">"非表示"</string>
+    <string name="text_hide_1_s_albums_359955">"%1$s アルバムを非表示にしますか?"</string>
+    <string name="text_hide_advanced_value_47a819" formatted="false">"高度な値を非表示にする"</string>
+    <string name="text_hides_app_bars_the_top_button_restores_controls_de2422" formatted="false">"アプリバーを非表示にします。上のボタンでコントロールを復元します"</string>
+    <string name="text_hold_a_stick_or_d_pad_to_keep_scrolling_single_a_93ed50" formatted="false">"スティックまたは方向パッドを押したままスクロールを続けます。単一のアクションは繰り返されません。"</string>
+    <string name="text_home_p_1_s_in_background_2_s_8f77e6">"ホーム: バックグラウンドの P%1$s=%2$s"</string>
+    <string name="text_home_volume_and_system_keys_cannot_be_recorded_t_1b3b70" formatted="false">"ホームキー、ボリュームキー、システムキーは記録できません。実際のコントローラでテストすると、どの物理文字が受信したコードに対応するかがわかります。"</string>
+    <string name="text_horizontal_position_c54b8c" formatted="false">"水平位置"</string>
+    <string name="text_hue_071cf9" formatted="false">"色相"</string>
+    <string name="text_i_checked_that_i_want_to_link_this_file_to_the_r_172195" formatted="false">"このファイルを参照にリンクすることを確認しました"</string>
+    <string name="text_i_checked_the_selected_matches_71f4d0" formatted="false">"選択した一致を確認しました"</string>
+    <string name="text_identical_duplicates_5f7af8" formatted="false">"同一の重複"</string>
+    <string name="text_if_a_key_does_not_appear_firmware_may_reserve_it_0f06b5" formatted="false">"キーが表示されない場合は、ファームウェアがそのキーを予約しているか、サポートされていない可能性があります。別のコマンドを試してください。システムの「戻る」または「キャンセル」で録画を停止します。"</string>
+    <string name="text_if_temporary_access_expires_before_acquisition_t_8742b5" formatted="false">"取得前に一時的なアクセスの有効期限が切れた場合、操作は停止します。ピッカーを再度開き、再試行してください。ファイル操作の各ファイルに従ってください。"</string>
+    <string name="text_if_the_file_is_playing_playback_stops_before_rem_8136e9" formatted="false">"ファイルが再生中の場合は、削除する前に再生が停止します。"</string>
+    <string name="text_if_the_name_exists_the_copy_receives_a_suffix_th_b80221" formatted="false">"名前が存在する場合、コピーには接尾辞が付けられます。キューには検証、結果、キャンセルが表示されます。"</string>
+    <string name="text_if_the_name_is_taken_a_suffix_will_be_used_no_fo_261df9" formatted="false">"名前が使用される場合は、接尾辞が使用されます。フォルダーは上書きされません。"</string>
+    <string name="text_image_850b6f" formatted="false">"画像"</string>
+    <string name="text_image_copies_646a7b" formatted="false">"画像のコピー"</string>
+    <string name="text_image_encoding_failed_856b1c" formatted="false">"画像エンコードに失敗しました"</string>
+    <string name="text_image_exported_original_and_favorites_preserved_5e5c41" formatted="false">"エクスポートされた画像: オリジナルとお気に入りが保存されました"</string>
+    <string name="text_image_only_174c99" formatted="false">"画像のみ"</string>
+    <string name="text_image_ready_c2b75d" formatted="false">"画像の準備ができました"</string>
+    <string name="text_image_unreadable_dffbcd" formatted="false">"画像が読めません"</string>
+    <string name="text_images_a9f46a" formatted="false">"画像"</string>
+    <string name="text_images_and_videos_731776" formatted="false">"画像とビデオ"</string>
+    <string name="text_images_stay_local_hiding_an_album_or_disconnecti_ed25ff" formatted="false">"画像はローカルに残ります。アルバムを非表示にするか、ソースを切断すると、アートワークがウィジェットから削除されます。"</string>
+    <string name="text_images_to_show_29445a" formatted="false">"表示する画像"</string>
+    <string name="text_images_videos_and_music_7e3f80" formatted="false">"画像、ビデオ、音楽"</string>
+    <string name="text_import_a_copy_42d133" formatted="false">"コピーをインポートします…"</string>
+    <string name="text_import_a_copy_9719ca" formatted="false">"コピーをインポートする"</string>
+    <string name="text_import_a_copy_or_keep_the_link_before_adding_to_55a177" formatted="false">"コピーをインポートするか、お気に入りに追加する前にリンクを保持してください"</string>
+    <string name="text_import_and_save_586cbd" formatted="false">"インポートして保存する"</string>
+    <string name="text_import_copies_38f630" formatted="false">"コピーをインポートする"</string>
+    <string name="text_import_data_missing_774e96" formatted="false">"インポートデータがありません"</string>
+    <string name="text_import_did_not_start_7308d0" formatted="false">"インポートが開始されませんでした"</string>
+    <string name="text_import_images_and_videos_982ded" formatted="false">"画像とビデオをインポート…"</string>
+    <string name="text_import_music_04d90e" formatted="false">"音楽をインポート…"</string>
+    <string name="text_import_music_b026bc" formatted="false">"音楽をインポートする"</string>
+    <string name="text_import_photos_and_videos_b31480" formatted="false">"写真とビデオをインポートする"</string>
+    <string name="text_import_while_gaming_anyway_reading_from_the_prov_352ee8" formatted="false">"とにかくゲームしながらインポートしてください。プロバイダーからの読み取りによりバッテリーが消費され、ゲームの速度が低下する可能性があります。"</string>
+    <string name="text_import_with_preview_78ff22" formatted="false">"プレビュー付きでインポート"</string>
+    <string name="text_imported_cleaning_private_copy_343dbb" formatted="false">"インポート・クリーニング私用コピー"</string>
+    <string name="text_imported_media_53118d" formatted="false">"インポートされたメディア"</string>
+    <string name="text_in_memory_previews_cleared_removed_1_s_temporary_d1b41f">"メモリ内のプレビューがクリアされました。 %1$s 一時アートワーク ファイル (%2$s) を削除しました。"</string>
+    <string name="text_in_trash_for_seven_days_e05a70" formatted="false">"7日間ゴミ箱に"</string>
+    <string name="text_include_1_s_414139">"%1$s を含める"</string>
+    <string name="text_included_1_s_reachable_2_s_last_scan_3_s_error_4_ead44c">"含まれています=%1$s;到達可能=%2$s;最後のスキャン=%3$s;エラー=%4$s"</string>
+    <string name="text_incompatible_album_identity_b1009c" formatted="false">"互換性のないアルバム ID"</string>
+    <string name="text_incompatible_reference_identity_effad2" formatted="false">"互換性のない参照 ID"</string>
+    <string name="text_incompatible_source_identity_748a30" formatted="false">"互換性のないソース ID"</string>
+    <string name="text_incomplete_90fb31" formatted="false">"不完全"</string>
+    <string name="text_incomplete_artwork_cannot_be_deleted_5c7b87" formatted="false">"未完成のアートワークは削除できません"</string>
+    <string name="text_incomplete_gif_597b31" formatted="false">"不完全なGIF"</string>
+    <string name="text_incomplete_or_unsupported_settings_8affeb" formatted="false">"不完全な設定またはサポートされていない設定"</string>
+    <string name="text_ink_black_neon_pink_and_ice_c1dc9e" formatted="false">"インクブラック・ネオンピンクとアイス"</string>
+    <string name="text_input_received_check_the_binding_before_using_it_d15720" formatted="false">"入力を受信しました。使用前にビンディングを確認してください。"</string>
+    <string name="text_insufficient_private_storage_import_stopped_orig_5daa32" formatted="false">"プライベートストレージが不十分です: インポートは停止されました、オリジナルは保存されています"</string>
+    <string name="text_insufficient_private_storage_original_preserved_4f3855" formatted="false">"プライベートストレージが不十分です: オリジナルの保存"</string>
+    <string name="text_insufficient_space_for_copies_originals_preserve_ee396b" formatted="false">"コピー用のスペースが不十分です。原本が保存されている"</string>
+    <string name="text_insufficient_space_to_protect_the_file_original_837367" formatted="false">"ファイルを保護するのに十分なスペースがありません: オリジナルは保存されています"</string>
+    <string name="text_intensity_7a8f0c" formatted="false">"強度"</string>
+    <string name="text_interface_a86468" formatted="false">"インターフェース"</string>
+    <string name="text_internal_storage_506cd3" formatted="false">"内部ストレージ"</string>
+    <string name="text_interrupted_verification_required_98ab9d" formatted="false">"中断・要確認"</string>
+    <string name="text_interrupted_verify_copy_and_original_before_resu_eb3b9a" formatted="false">"中断されました: 再開する前にコピーとオリジナルを確認してください"</string>
+    <string name="text_invalid_1_s_field_949520">"無効な%1$sフィールドです"</string>
+    <string name="text_invalid_artwork_priority_c1e3fd" formatted="false">"アートワークの優先度が無効です"</string>
+    <string name="text_invalid_collection_type_802a12" formatted="false">"無効なコレクションタイプです"</string>
+    <string name="text_invalid_color_afaf16" formatted="false">"無効な色です"</string>
+    <string name="text_invalid_colors_124716" formatted="false">"無効な色"</string>
+    <string name="text_invalid_comparison_reference_2ba4e7" formatted="false">"無効な比較参照"</string>
+    <string name="text_invalid_cover_e32130" formatted="false">"無効な表紙"</string>
+    <string name="text_invalid_crop_b9c1bc" formatted="false">"無効なクロップ"</string>
+    <string name="text_invalid_duplicate_protection_011a1a" formatted="false">"無効な重複保護"</string>
+    <string name="text_invalid_export_identity_2dbcad" formatted="false">"無効なエクスポート ID"</string>
+    <string name="text_invalid_export_type_768187" formatted="false">"無効なエクスポートタイプです"</string>
+    <string name="text_invalid_folder_structure_637a03" formatted="false">"フォルダー構造が無効です。"</string>
+    <string name="text_invalid_gif_block_19455d" formatted="false">"無効な GIF ブロックです"</string>
+    <string name="text_invalid_image_filter_d2a84e" formatted="false">"無効な画像フィルターです"</string>
+    <string name="text_invalid_name_2e3d77" formatted="false">"無効な名前です"</string>
+    <string name="text_invalid_navigation_bar_order_0bf386" formatted="false">"ナビゲーションバーの順序が無効です"</string>
+    <string name="text_invalid_private_locator_9aa0f7" formatted="false">"無効なプライベート ロケーター"</string>
+    <string name="text_invalid_range_7d3864" formatted="false">"無効な範囲"</string>
+    <string name="text_invalid_recipe_ed8ebd" formatted="false">"無効な処理設定です"</string>
+    <string name="text_invalid_recipe_format_ec8914" formatted="false">"無効な処理設定形式です"</string>
+    <string name="text_invalid_settings_73e331" formatted="false">"無効な設定"</string>
+    <string name="text_invalid_text_c9999f" formatted="false">"無効なテキスト"</string>
+    <string name="text_invalid_three_finger_gesture_ef0390" formatted="false">"無効な 3 本指ジェスチャ"</string>
+    <string name="text_invalid_touch_action_36e363" formatted="false">"無効なタッチ操作"</string>
+    <string name="text_invalid_touch_contexts_038d88" formatted="false">"無効なタッチコンテキスト"</string>
+    <string name="text_invalid_touch_coordinates_0cb272" formatted="false">"無効なタッチ座標"</string>
+    <string name="text_invalid_touch_field_cd73e5" formatted="false">"無効なタッチフィールド"</string>
+    <string name="text_invalid_touch_settings_a76146" formatted="false">"無効なタッチ設定"</string>
+    <string name="text_invalid_transformation_ae3aba" formatted="false">"無効な変換"</string>
+    <string name="text_invalid_value_23d031" formatted="false">"無効な値"</string>
+    <string name="text_invalid_video_crop_6c7d96" formatted="false">"無効なビデオクロップ"</string>
+    <string name="text_is_the_system_date_correct_e852f9" formatted="false">"システムの日付は正しいですか?"</string>
+    <string name="text_item_already_removed_47c0c9" formatted="false">"項目はすでに削除されています"</string>
+    <string name="text_item_not_in_trash_1d8ce8" formatted="false">"ゴミ箱にアイテムがありません"</string>
+    <string name="text_jpeg_quality_1_s_transparent_areas_become_white_5dbac0">"JPEG · 品質 %1$s%%。透明な部分は白くなります。非可逆圧縮。"</string>
+    <string name="text_jpeg_quality_2a0749" formatted="false">"JPEG 品質"</string>
+    <string name="text_jpeg_transparency_becomes_white_quality_1_s_654e7d">"JPEG: 透明度が白になります。品質%1$s%%。"</string>
+    <string name="text_keep_1_s_nthis_content_will_also_be_checked_agai_5f06f3">"保持: %1$s\nこのコンテンツも削除前に再度チェックされます。"</string>
+    <string name="text_keep_backup_copy_bfdd54" formatted="false">"バックアップコピーを保存しておく"</string>
+    <string name="text_keep_both_if_the_name_is_taken_cbae14" formatted="false">"名前が取られた場合は両方を保持してください"</string>
+    <string name="text_keep_both_when_the_name_is_taken_212871" formatted="false">"名前が取られるときは両方を保持してください"</string>
+    <string name="text_keep_copy_782cd4" formatted="false">"コピーを保管しておく"</string>
+    <string name="text_keep_copy_in_trash_725033" formatted="false">"コピーをゴミ箱に保管しておく"</string>
+    <string name="text_keep_d3090f" formatted="false">"キープする"</string>
+    <string name="text_keep_link_0fa353" formatted="false">"リンクを維持しますか?"</string>
+    <string name="text_keep_link_1e44fb" formatted="false">"リンクを維持…"</string>
+    <string name="text_keep_link_c839e2" formatted="false">"リンクを維持する"</string>
+    <string name="text_keep_original_64df82" formatted="false">"オリジナルを維持"</string>
+    <string name="text_keep_screen_on_d6eb18" formatted="false">"画面をオンにしたままにする"</string>
+    <string name="text_keep_the_original_extension_renaming_does_not_co_5220af" formatted="false">"元の拡張子を保持します: 名前を変更してもファイルは変換されません"</string>
+    <string name="text_keep_the_original_extension_the_name_does_not_ch_02a5b8" formatted="false">"元の拡張子はそのままにしておきます。名前によってファイル形式が変更されることはありません。"</string>
+    <string name="text_keep_the_original_extension_the_name_does_not_co_d2004e" formatted="false">"元の拡張子を保持します。名前は形式を変換しません。"</string>
+    <string name="text_keep_this_one_5d3d76" formatted="false">"これを保管してください"</string>
+    <string name="text_keep_your_preferences_53df46" formatted="false">"自分の好みを維持してください"</string>
+    <string name="text_label_1_s_45b4a6">"ラベル: %1$s"</string>
+    <string name="text_large_image_choose_2048_or_1024_px_before_export_f848e3" formatted="false">"大きな画像: エクスポートする前に 2048 または 1024 ピクセルを選択してください"</string>
+    <string name="text_larger_albums_806813" formatted="false">"より大きなアルバム"</string>
+    <string name="text_last_modified_63c096" formatted="false">"最終更新日"</string>
+    <string name="text_later_b81861" formatted="false">"今はしない"</string>
+    <string name="text_lavender_cloud_4cff2b" formatted="false">"ラベンダークラウド"</string>
+    <string name="text_leave_this_off_to_keep_current_shared_controls_p_8d66bb" formatted="false">"現在の共有コントロールを維持するには、これをオフのままにしておきます。個人プロファイルは、一致するコントローラーでのみ有効になります。"</string>
+    <string name="text_leave_unlinked_16ff6e" formatted="false">"リンクを解除したままにする"</string>
+    <string name="text_left_af36a4" formatted="false">"左"</string>
+    <string name="text_leftward_db8d9b" formatted="false">"左方向"</string>
+    <string name="text_letters_indicate_codes_received_from_android_ren_0d4b3a" formatted="false">"文字は、Android から受信したコードを示します。コントロールでラベルの名前を変更します。ショートカットはアクティブなウィンドウにのみ適用されます。"</string>
+    <string name="text_library_93c372" formatted="false">"図書館"</string>
+    <string name="text_library_identity_not_saved_a70dd7" formatted="false">"ライブラリ ID が保存されない"</string>
+    <string name="text_light_8f1b4e" formatted="false">"ライト"</string>
+    <string name="text_light_peach_terracotta_and_teal_0e2200" formatted="false">"ライトピーチ・テラコッタ・ティール"</string>
+    <string name="text_lightness_7d8d12" formatted="false">"明るさ"</string>
+    <string name="text_link_a_single_file_2f3972" formatted="false">"単一のファイルをリンクします…"</string>
+    <string name="text_link_not_retained_91c97f" formatted="false">"リンクは保持されません"</string>
+    <string name="text_link_the_file_or_import_a_library_copy_to_use_fa_29ea7c" formatted="false">"ファイルをリンクするか、ライブラリのコピーをインポートして、お気に入りと比較を使用します。"</string>
+    <string name="text_linked_file_1_s_2ebd23">"リンクされたファイル / %1$s"</string>
+    <string name="text_linked_file_1_s_c1b652">"リンクされたファイル · %1$s"</string>
+    <string name="text_linked_zoom_ac5b5d" formatted="false">"連動ズーム"</string>
+    <string name="text_list_view_8cb747" formatted="false">"リスト表示"</string>
+    <string name="text_listen_to_segment_b9d78e" formatted="false">"セグメントを聞く"</string>
+    <string name="text_listening_04c474" formatted="false">"聞いています…"</string>
+    <string name="text_loading_fda05a" formatted="false">"読み込み中…"</string>
+    <string name="text_loading_image_b4f633" formatted="false">"画像の読み込み中"</string>
+    <string name="text_local_choice_bb1037" formatted="false">"地元の選択"</string>
+    <string name="text_local_playlist_091df5" formatted="false">"ローカルプレイリスト"</string>
+    <string name="text_local_references_only_original_files_stay_in_the_1c6b0a" formatted="false">"ローカル参照のみ: 元のファイルはフォルダー内に残ります。"</string>
+    <string name="text_long_press_e8ac77" formatted="false">"長押し"</string>
+    <string name="text_lower_fa89db" formatted="false">"下位"</string>
+    <string name="text_m4a_with_aac_audio_the_segment_is_re_encoded_not_ca6411" formatted="false">"AAC オーディオを含む M4A: セグメントは再エンコードされ、ロスレスにトリミングされません。元のタイトル、アーティスト、アートワーク、その他のメタデータはコピーされません。"</string>
+    <string name="text_make_room_by_moving_or_shrinking_a_zone_82547d" formatted="false">"ゾーンを移動または縮小してスペースを空けます。"</string>
+    <string name="text_manage_both_screens_dcba9a" formatted="false">"両方の画面を管理する"</string>
+    <string name="text_manage_collection_557c66" formatted="false">"コレクションの管理"</string>
+    <string name="text_manage_playlists_e10ca3" formatted="false">"プレイリストの管理"</string>
+    <string name="text_manual_changes_6f0bb8" formatted="false">"手動による変更"</string>
+    <string name="text_mark_an_image_gif_video_or_track_as_a_favorite_n_29af41" formatted="false">"画像、GIF、ビデオ、またはトラックをお気に入りとしてマークします。ファイルはコピーされません。"</string>
+    <string name="text_match_not_in_preview_b32852" formatted="false">"試合はプレビューにありません"</string>
+    <string name="text_maximum_long_edge_no_upscaling_377c8a" formatted="false">"最大長エッジ · アップスケーリングなし"</string>
+    <string name="text_may_crop_edges_turn_off_to_show_the_full_image_de5969" formatted="false">"端が切り取られる場合があります。画像全体を表示するにはオフにします"</string>
+    <string name="text_media_actions_0e2aa2" formatted="false">"メディアアクション"</string>
+    <string name="text_media_hidden_disconnected_or_busy_6151f3" formatted="false">"メディアが隠されているか、接続されていない、またはビジー状態です"</string>
+    <string name="text_media_menu_17ce51" formatted="false">"メディアメニュー"</string>
+    <string name="text_media_options_8aef8c" formatted="false">"メディアオプション"</string>
+    <string name="text_media_record_missing_c01843" formatted="false">"メディアレコードがありません"</string>
+    <string name="text_media_to_check_32b34c" formatted="false">"チェックするメディア"</string>
+    <string name="text_media_unavailable_91dca9" formatted="false">"メディアが利用できません"</string>
+    <string name="text_media_unavailable_for_comparison_8fd848" formatted="false">"メディアを比較できません"</string>
+    <string name="text_media_unavailable_or_hidden_789e84" formatted="false">"メディアが利用できないか、非表示になっています"</string>
+    <string name="text_media_unreadable_access_expired_or_format_cannot_563bbc" formatted="false">"メディアを読み取れません: アクセスの有効期限が切れているか、フォーマットをデコードできません"</string>
+    <string name="text_metadata_07289c" formatted="false">"メタデータ"</string>
+    <string name="text_metadata_too_large_choose_fewer_files_2a4c6e" formatted="false">"メタデータが大きすぎます: 選択するファイルの数を減らしてください"</string>
+    <string name="text_midnight_blue_cyan_and_fuchsia_87834d" formatted="false">"ミッドナイトブルー・シアン・フューシャ"</string>
+    <string name="text_midnight_copper_6af1c7" formatted="false">"ミッドナイトコッパー"</string>
+    <string name="text_mint_cream_2af769" formatted="false">"ミントクリーム"</string>
+    <string name="text_mirror_999cf9" formatted="false">"鏡"</string>
+    <string name="text_mirror_horizontal_2c4e75" formatted="false">"水平方向にミラーリングする"</string>
+    <string name="text_mirror_horizontal_on_b74c1f" formatted="false">"水平ミラーオン"</string>
+    <string name="text_mirror_on_e46f1b" formatted="false">"ミラーオン"</string>
+    <string name="text_mirror_vertical_629eb8" formatted="false">"垂直方向にミラーリングする"</string>
+    <string name="text_mirror_vertical_on_9c28ef" formatted="false">"垂直ミラーオン"</string>
+    <string name="text_missing_identity_6fc395" formatted="false">"アイデンティティの喪失"</string>
+    <string name="text_mixed_collection_6834fb" formatted="false">"混合コレクション"</string>
+    <string name="text_mixed_file_types_some_apps_may_not_accept_every_6c1468" formatted="false">"混合ファイルタイプ: アプリによっては、すべてのファイルを受け入れられない場合があります。選択項目から項目を削除できます。"</string>
+    <string name="text_move_copy_and_delete_apply_to_album_media_includ_1ffc2c" formatted="false">"移動、コピー、削除は、サブフォルダーを含むアルバム メディアに適用されます。確認すると、影響を受けたファイルが表示されます。元のフォルダーは残ります。"</string>
+    <string name="text_move_down_d0bb80" formatted="false">"下に移動"</string>
+    <string name="text_move_f44eb9" formatted="false">"移動"</string>
+    <string name="text_move_left_4e3ed5" formatted="false">"左に移動"</string>
+    <string name="text_move_right_1d91fd" formatted="false">"右に移動"</string>
+    <string name="text_move_to_36f208" formatted="false">"移動先…"</string>
+    <string name="text_move_to_trash_confirm_98b863" formatted="false">"ゴミ箱に移動・確認"</string>
+    <string name="text_move_to_trash_dd41b3" formatted="false">"ゴミ箱に移動"</string>
+    <string name="text_move_to_trash_f91742" formatted="false">"ゴミ箱に移動…"</string>
+    <string name="text_move_up_666f06" formatted="false">"上に移動"</string>
+    <string name="text_multiple_references_chosen_for_the_same_file_64dc75" formatted="false">"同じファイルに対して複数の参照が選択されています"</string>
+    <string name="text_multiple_visible_gifs_cd9a7d" formatted="false">"複数の表示可能な GIF"</string>
+    <string name="text_music_012df9" formatted="false">"音楽"</string>
+    <string name="text_music_10_seconds_453447" formatted="false">"音楽+10秒"</string>
+    <string name="text_music_10_seconds_c20111" formatted="false">"音楽 −10秒"</string>
+    <string name="text_music_album_f87381" formatted="false">"音楽アルバム"</string>
+    <string name="text_music_albums_e85fef" formatted="false">"音楽アルバム"</string>
+    <string name="text_music_and_local_covers_without_adding_them_to_ph_316e17" formatted="false">"音楽やローカルのカバーを写真に追加せずに"</string>
+    <string name="text_music_animation_and_game_mode_678659" formatted="false">音楽とアニメーション</string>
+    <string name="text_music_artwork_335159" formatted="false">"音楽アートワーク"</string>
+    <string name="text_music_artwork_6ef5dc" formatted="false">"音楽アートワーク"</string>
+    <string name="text_music_play_pause_b180bc" formatted="false">"音楽の再生/一時停止"</string>
+    <string name="text_music_widget_4c67df" formatted="false">"音楽ウィジェット"</string>
+    <string name="text_muted_2228e3" formatted="false">"ミュート"</string>
+    <string name="text_n_nsubfolders_will_also_be_excluded_files_remain_a5552e" formatted="false">"\n\nサブフォルダーも除外されます。ファイルはそのまま残ります。"</string>
+    <string name="text_name_1_s_7ad389">"名前: %1$s"</string>
+    <string name="text_name_508690" formatted="false">"名前"</string>
+    <string name="text_name_already_taken_choose_another_name_or_keep_b_ec9d46" formatted="false">"名前はすでに使用されています。別の名前を選択するか、両方を保持します。"</string>
+    <string name="text_name_not_allowed_513891" formatted="false">"名前は許可されていません"</string>
+    <string name="text_name_size_and_date_do_not_prove_this_is_the_orig_d1f102" formatted="false">"名前、サイズ、日付は、これが元のファイルであることを証明しません。バックアップにはメディア ハッシュがありません。同意した場合でも一致を確認します。"</string>
+    <string name="text_name_taken_no_folder_overwritten_9f5059" formatted="false">"取得した名前: フォルダは上書きされませんでした"</string>
+    <string name="text_natural_name_order_d9f048" formatted="false">"自然な名前の順序"</string>
+    <string name="text_navigation_96867a" formatted="false">"ナビゲーション"</string>
+    <string name="text_navigation_bar_labels_63fe86" formatted="false">"ナビゲーションバーのラベル"</string>
+    <string name="text_navigator_when_the_photo_is_zoomed_in_9ddb60" formatted="false">"写真を拡大したときのナビゲーター"</string>
+    <string name="text_neon_nocturne_40d0b9" formatted="false">"ネオンノクターン"</string>
+    <string name="text_neutral_white_graphite_and_slate_blue_7cd029" formatted="false">"ニュートラルホワイト・グラファイト・スレートブルー"</string>
+    <string name="text_new_collection_656a05" formatted="false">"新しいコレクション"</string>
+    <string name="text_new_copy_name_1_s_cfecd3">"新しいコピー名 · .%1$s"</string>
+    <string name="text_new_copy_name_f686d2" formatted="false">"新しいコピー名"</string>
+    <string name="text_new_copy_name_m4a_ed1106" formatted="false">"新しいコピー名 · .m4a"</string>
+    <string name="text_new_copy_name_mp4_fb568c" formatted="false">"新しいコピー名 · .mp4"</string>
+    <string name="text_new_copy_quality_253f0f" formatted="false">"新しいコピー品質"</string>
+    <string name="text_new_folder_at_destination_db21b2" formatted="false">"宛先の新しいフォルダー"</string>
+    <string name="text_new_folder_cf5925" formatted="false">"新しいフォルダー"</string>
+    <string name="text_new_playlist_6ebfb3" formatted="false">"新しいプレイリスト"</string>
+    <string name="text_next_media_228a8d" formatted="false">"次のメディア"</string>
+    <string name="text_next_media_in_the_active_pane_520c0c" formatted="false">"アクティブなペインの次のメディア"</string>
+    <string name="text_next_photo_17e053" formatted="false">"次の写真"</string>
+    <string name="text_next_section_9416ef" formatted="false">"次のセクション"</string>
+    <string name="text_next_track_b0ff2f" formatted="false">"次の曲"</string>
+    <string name="text_night_and_neon_f6d332" formatted="false">"夜とネオン"</string>
+    <string name="text_no_action_f43e02" formatted="false">"アクションなし"</string>
+    <string name="text_no_albums_found_18010c" formatted="false">"アルバムが見つかりませんでした"</string>
+    <string name="text_no_app_available_to_open_this_6a28bb" formatted="false">"これを開くためのアプリはありません"</string>
+    <string name="text_no_authorized_folder_use_choose_another_folder_t_c6cfc5" formatted="false">"許可されたフォルダーがありません。 「別のフォルダーを選択」を使用してアクセスを許可します。"</string>
+    <string name="text_no_collections_available_1eb2bf" formatted="false">"利用できるコレクションはありません。"</string>
+    <string name="text_no_compatible_collection_c6ea58" formatted="false">"互換性のあるコレクションがありません。"</string>
+    <string name="text_no_compatible_items_for_this_choice_9187e2" formatted="false">"この選択に互換性のあるアイテムはありません。"</string>
+    <string name="text_no_display_available_explicitly_open_the_gallery_6ef978" formatted="false">"利用可能なディスプレイがありません: 空き画面でギャラリーを明示的に開きます"</string>
+    <string name="text_no_files_waiting_to_be_restored_c8ec60" formatted="false">"復元を待っているファイルはありません。"</string>
+    <string name="text_no_files_will_be_overwritten_favorites_and_colle_5a422b" formatted="false">"ファイルは上書きされません。お気に入りとコレクションは、移動と復元に続きます。"</string>
+    <string name="text_no_hidden_albums_0da9d4" formatted="false">"隠しアルバムはありません"</string>
+    <string name="text_no_identical_copies_among_verified_files_some_fi_34dda8" formatted="false">"検証されたファイル間に同一のコピーはありません。一部のファイルを読み取れませんでした。"</string>
+    <string name="text_no_identical_copies_found_in_the_chosen_scope_b98b95" formatted="false">"選択したスコープ内に同一のコピーが見つかりません。"</string>
+    <string name="text_no_image_0fca79" formatted="false">"画像なし"</string>
+    <string name="text_no_image_available_470187" formatted="false">"画像がありません"</string>
+    <string name="text_no_longer_available_reopen_the_menu_5f5c78" formatted="false">"もう利用できません: メニューを再度開きます"</string>
+    <string name="text_no_matches_in_the_folder_52d8ec" formatted="false">"フォルダー内に一致するものがありません"</string>
+    <string name="text_no_media_25195d" formatted="false">"メディアがありません"</string>
+    <string name="text_no_media_in_this_folder_3e95d8" formatted="false">"このフォルダにはメディアがありません"</string>
+    <string name="text_no_media_matches_this_filter_ae3907" formatted="false">"このフィルタに一致するメディアはありません"</string>
+    <string name="text_no_missing_references_in_this_original_folder_749906" formatted="false">"この元のフォルダーに欠落している参照はありません"</string>
+    <string name="text_no_overwriting_an_existing_name_receives_a_suffi_1531d1" formatted="false">"上書きなし: 既存の名前には接尾辞が付けられます。新しいコピーは、お気に入りまたはプレイリスト内のオリジナルを置き換えません。"</string>
+    <string name="text_no_photo_albums_available_7e331a" formatted="false">"フォトアルバムはありません。"</string>
+    <string name="text_no_photo_available_3cf246" formatted="false">"写真がありません"</string>
+    <string name="text_no_provider_scanning_automatic_copying_or_adding_0604c6" formatted="false">"プロバイダーのスキャン、自動コピー、お気に入りへの追加はありません。リンクはオフラインでの可用性を保証するものではありません。"</string>
+    <string name="text_no_readable_preview_58c498" formatted="false">"判読可能なプレビューがありません"</string>
+    <string name="text_no_references_to_relink_in_this_scope_dcc7ef" formatted="false">"このスコープには再リンクする参照がありません。"</string>
+    <string name="text_no_remaining_copy_in_trash_5e3e21" formatted="false">"ゴミ箱にコピーが残っていない"</string>
+    <string name="text_no_results_0af987" formatted="false">"結果はありません"</string>
+    <string name="text_no_results_try_another_name_f78f41" formatted="false">"結果はありません。別の名前を試してください。"</string>
+    <string name="text_no_tracks_queued_156b61" formatted="false">"キューにトラックがありません"</string>
+    <string name="text_no_visible_media_e3bde4" formatted="false">"表示可能なメディアがありません"</string>
+    <string name="text_none_b8ce01" formatted="false">"なし"</string>
+    <string name="text_not_allowed_0062d3" formatted="false">"許可されていません"</string>
+    <string name="text_not_saved_yet_a9ff08" formatted="false">"まだ保存されていません"</string>
+    <string name="text_not_selected_f6efb4" formatted="false">"未選択"</string>
+    <string name="text_not_started_1_s_4866a0">"未開始: %1$s"</string>
+    <string name="text_not_visible_7a468e" formatted="false">"見えない"</string>
+    <string name="text_not_yet_in_the_catalog_986ad9" formatted="false">"まだカタログに載っていない"</string>
+    <string name="text_off_de3be8" formatted="false">"オフ"</string>
+    <string name="text_one_animation_only_suspended_when_paused_and_in_b619ca" formatted="false">"アニメーションは 1 つだけです。一時停止中およびゲームモードの場合は一時停止されます"</string>
+    <string name="text_one_image_only_7f300d" formatted="false">"画像は 1 枚のみ"</string>
+    <string name="text_one_shared_profile_and_up_to_16_personal_profile_aad090" formatted="false">"1 つの共有プロファイルと最大 16 の個人プロファイルが許可されます"</string>
+    <string name="text_only_this_screen_others_remain_released_until_ex_55a96a" formatted="false">"この画面だけ。その他は、明示的に要求されるまで解放されたままになります。"</string>
+    <string name="text_only_while_the_frame_is_visible_suspended_in_pow_70dcc7" formatted="false">"フレームが表示されている間のみ。節電中で停止中"</string>
+    <string name="text_open_12abcf" formatted="false">"開く"</string>
+    <string name="text_open_android_crop_tool_3130eb" formatted="false">"Android 切り抜きツールを開く"</string>
+    <string name="text_open_comparison_7d6cae" formatted="false">"オープン比較"</string>
+    <string name="text_open_gallery_no_photo_available_03a759" formatted="false">"ギャラリーを開く · 写真がありません"</string>
+    <string name="text_open_on_one_screen_00b28c" formatted="false">"1 つの画面で開く"</string>
+    <string name="text_open_on_two_screens_at_startup_7c2cb7" formatted="false">"起動時に2画面で開く"</string>
+    <string name="text_open_player_artwork_279c50" formatted="false">"プレーヤー・アートワークを開く"</string>
+    <string name="text_open_player_artwork_unavailable_70b4ea" formatted="false">"プレーヤーを開く・アートワークが利用できない"</string>
+    <string name="text_open_the_second_panel_first_or_use_back_to_close_ceebad" formatted="false">"最初に 2 番目のパネルを開くか、「戻る」を使用して閉じます。"</string>
+    <string name="text_open_to_view_this_file_with_temporary_access_imp_45ef00" formatted="false">"一時的にアクセスしてこのファイルを表示するには、開いてください。コピーをインポートして、そのバイトを選択したフォルダーに保存します。 「リンクを保持」は、プロバイダーが許可している場合にのみドキュメントへのアクセスを保持します。"</string>
+    <string name="text_open_with_531e1d" formatted="false">"で開く"</string>
+    <string name="text_open_with_dae8f1" formatted="false">"…で開く"</string>
+    <string name="text_opening_0945e5" formatted="false">"オープニング"</string>
+    <string name="text_opening_artwork_c4ca71" formatted="false">"オープニングアートワーク"</string>
+    <string name="text_opening_not_identified_3b2f9b" formatted="false">"開口部が特定されていない"</string>
+    <string name="text_opening_paused_f249fe" formatted="false">"オープニング一時停止中"</string>
+    <string name="text_opening_refused_1_s_no_automatic_retry_f38df6">"開くことが拒否されました: %1$s。自動再試行はありません。"</string>
+    <string name="text_opening_superseded_by_another_music_command_893ffe" formatted="false">"オープニングは別の音楽コマンドに置き換えられました"</string>
+    <string name="text_opens_music_on_the_current_track_on_one_screen_46281b" formatted="false">"現在のトラックのミュージックを 1 つの画面で開きます。"</string>
+    <string name="text_operation_053259" formatted="false">"操作"</string>
+    <string name="text_operation_canceled_original_preserved_e6b590" formatted="false">"操作はキャンセルされました。オリジナル保存"</string>
+    <string name="text_operation_cannot_be_resumed_e10db1" formatted="false">"操作を再開できません"</string>
+    <string name="text_operation_complete_9b2712" formatted="false">"操作完了"</string>
+    <string name="text_operation_failed_check_format_access_and_free_sp_9f7c43" formatted="false">"操作が失敗しました。フォーマット、アクセス、空き容量を確認します。設定はそのまま残ります。"</string>
+    <string name="text_operation_failed_f17e12" formatted="false">"操作が失敗しました"</string>
+    <string name="text_operation_failed_original_preserved_4dd031" formatted="false">"操作は失敗しました: オリジナルは保存されました"</string>
+    <string name="text_operation_interrupted_resume_or_cancel_in_file_o_dc8133" formatted="false">"操作が中断されました。ファイル操作で再開またはキャンセルします。"</string>
+    <string name="text_operations_389997" formatted="false">"運営"</string>
+    <string name="text_operations_continue_without_notifications_enable_5afbfb" formatted="false">"操作は通知なしで続行されます。他のアプリを使用しながらコピーを追跡できるようにします。"</string>
+    <string name="text_operations_to_finish_4f1ecf" formatted="false">"終了する操作"</string>
+    <string name="text_optional_physical_label_01b29a" formatted="false">"オプションの物理ラベル…"</string>
+    <string name="text_optional_physical_label_6a760e" formatted="false">"オプションの物理ラベル"</string>
+    <string name="text_original_1_s_n_2_s_3_s_n_4_s_cbe330">"オリジナル: %1$s\n%2$s · %3$s\n%4$s"</string>
+    <string name="text_original_dimensions_ee2d69" formatted="false">"元の寸法"</string>
+    <string name="text_original_files_may_contain_location_metadata_no_f14755" formatted="false">"元のファイルには位置メタデータが含まれている場合があります。変換は適用されません。"</string>
+    <string name="text_original_files_remain_intact_go_back_to_choose_a_b50e67" formatted="false">"元のファイルはそのまま残ります。戻って別のコレクションを選択します。"</string>
+    <string name="text_original_folder_e41647" formatted="false">"オリジナルフォルダ"</string>
+    <string name="text_original_names_for_multiple_selection_559576" formatted="false">"複数選択時の元の名前"</string>
+    <string name="text_original_preserved_015250" formatted="false">"原本保存"</string>
+    <string name="text_original_preserved_trash_operation_canceled_5a8833" formatted="false">"オリジナルは保存されています。ゴミ箱操作がキャンセルされました"</string>
+    <string name="text_original_source_1_s_b2b855">"元のソース: %1$s"</string>
+    <string name="text_originals_fa1fbe" formatted="false">"オリジナル"</string>
+    <string name="text_other_displays_released_screen_1_s_remains_bcd1b9">"他のディスプレイもリリースされました。画面 %1$s は残ります"</string>
+    <string name="text_other_images_af27b2" formatted="false">"その他の画像"</string>
+    <string name="text_output_height_is_1_s_px_width_follows_the_chosen_de6116">"出力の高さは %1$s ピクセルです。幅は選択したトリミングに従います。 H.264 ビデオと AAC オーディオ (存在する場合) を使用して MP4 に再エンコードします。個人のメタデータはコピーされません。"</string>
+    <string name="text_p_1_s_created_on_display_2_s_b6f016">"P%1$s がディスプレイ %2$s 上に作成されました"</string>
+    <string name="text_p_1_s_external_picker_requested_on_display_2_s_o_214785">"P%1$s ディスプレイ %2$s で外部ピッカーが要求されました。結果は主張されていない"</string>
+    <string name="text_p_1_s_key_2_s_source_3_s_focus_4_s_accepted_5_s_10cfe3">"P%1$s キー %2$s、ソース %3$s、フォーカス=%4$s、受け入れ=%5$s"</string>
+    <string name="text_p_1_s_local_command_2_s_b9fd52">"P%1$s ローカル コマンド: %2$s"</string>
+    <string name="text_p_1_s_returning_from_picker_2_s_no_files_read_or_f1fc77">"P%1$s がピッカーから戻りました: %2$s;ファイルが読み取られたり変更されたりしません"</string>
+    <string name="text_p_1_s_system_picker_requested_on_display_2_s_fe81f3">"P%1$s システム ピッカーがディスプレイ %2$s で要求されました"</string>
+    <string name="text_pale_mint_vanilla_cream_d7ef2e" formatted="false">"ペールミント・バニラクリーム"</string>
+    <string name="text_palettes_colors_and_theme_preview_7d2833" formatted="false">"パレット、色、テーマのプレビュー"</string>
+    <string name="text_pan_down_458c10" formatted="false">"パンダウン"</string>
+    <string name="text_pan_left_78d13c" formatted="false">"左にパン"</string>
+    <string name="text_pan_right_9990b6" formatted="false">"右にパン"</string>
+    <string name="text_pan_up_919906" formatted="false">"パンアップ"</string>
+    <string name="text_pane_1_s_df7792">"ペイン %1$s"</string>
+    <string name="text_pane_options_a83fbf" formatted="false">"ペインのオプション"</string>
+    <string name="text_panel_1_s_closed_2_s_907fdd">"パネル %1$s が閉じられました: %2$s"</string>
+    <string name="text_panel_closed_android_opened_it_on_an_unexpected_9ecb63" formatted="false">"パネルが閉じられました: Android が予期しないディスプレイまたは解放されたディスプレイでパネルを開きました。"</string>
+    <string name="text_panel_not_visible_4f52a6" formatted="false">"パネルが見えない"</string>
+    <string name="text_panel_swap_6e908b" formatted="false">"パネル交換"</string>
+    <string name="text_panels_f2a345" formatted="false">"パネル"</string>
+    <string name="text_panels_swapped_selection_preserved_ac0b05" formatted="false">"パネル交換しました。選択範囲が保存されました。"</string>
+    <string name="text_panes_12_0684e7" formatted="false">"ペイン 1 ～ 2"</string>
+    <string name="text_panes_34_5d606a" formatted="false">"ペイン 3 ～ 4"</string>
+    <string name="text_partial_cleanup_removed_1_s_artwork_files_2_s_co_2e8c9b">"部分的なクリーンアップ: %1$s アートワーク ファイルを削除しました。 %2$s を削除できませんでした。もう一度試すことができます。"</string>
+    <string name="text_partial_result_6dc371" formatted="false">"部分的な結果"</string>
+    <string name="text_pastel_f90857" formatted="false">"パステル"</string>
+    <string name="text_pastel_prism_dec86c" formatted="false">"パステルプリズム"</string>
+    <string name="text_path_name_and_size_are_clues_the_backup_has_no_f_3d5d0a" formatted="false">"パス、名前、サイズが手がかりとなります。バックアップにはファイル ハッシュがありません。リンクする前に提案を確認してください。あいまいな場合やバージョンが異なる場合は、個別の選択が必要です。"</string>
+    <string name="text_pause_9bd4d1" formatted="false">"一時停止"</string>
+    <string name="text_pause_photo_frame_ead8b9" formatted="false">"フォトフレームを一時停止する"</string>
+    <string name="text_paused_2f4e01" formatted="false">"一時停止中"</string>
+    <string name="text_paused_by_you_b54dd5" formatted="false">"あなたによって一時停止されました"</string>
+    <string name="text_paused_for_game_mode_resume_only_if_you_want_to_e0c9cb" formatted="false">"ゲームモードのために一時停止されています。読書を開始したい場合にのみ再開します。"</string>
+    <string name="text_paused_game_mode_853b95" formatted="false">"一時停止・ゲームモード"</string>
+    <string name="text_paused_menu_open_fc2df2" formatted="false">"一時停止中・メニューが開いている"</string>
+    <string name="text_paused_or_finished_4e52b8" formatted="false">"一時停止または終了"</string>
+    <string name="text_paused_power_saving_44a049" formatted="false">"一時停止・省電力"</string>
+    <string name="text_paused_while_the_gallery_is_not_visible_3b5e35" formatted="false">"ギャラリーが表示されていない間は一時停止します"</string>
+    <string name="text_peach_tea_740475" formatted="false">"ピーチティー"</string>
+    <string name="text_pearl_gray_button_accents_e8fab0" formatted="false">"ウォームグレー・ボタンアクセント"</string>
+    <string name="text_permanent_cleanup_in_progress_dbdb7b" formatted="false">"永続的なクリーンアップが進行中です"</string>
+    <string name="text_permanently_delete_1_s_files_5b028e">"%1$s ファイルを完全に削除しますか?"</string>
+    <string name="text_persistent_access_not_granted_17c407" formatted="false">"永続的なアクセスは許可されていません"</string>
+    <string name="text_personal_controller_profiles_1_s_ngame_mode_2_s_59f2c2">"パーソナル コントローラー プロファイル: %1$s\nゲーム モード: %2$s"</string>
+    <string name="text_photo_changed_or_unavailable_fdb784" formatted="false">"写真が変更されたか、利用できなくなりました"</string>
+    <string name="text_photo_frame_1_s_9917f0">"フォトフレーム %1$s"</string>
+    <string name="text_photo_frame_b05b1e" formatted="false">"フォトフレーム"</string>
+    <string name="text_photo_frame_interval_1_s_s_b8e1f7">"フォトフレーム間隔: %1$s 秒"</string>
+    <string name="text_photo_frame_mode_be123c" formatted="false">"フォトフレームモード"</string>
+    <string name="text_photo_unavailable_d15d30" formatted="false">"写真が利用できません"</string>
+    <string name="text_photo_widget_911f94" formatted="false">"写真ウィジェット"</string>
+    <string name="text_photos_494e08" formatted="false">"写真"</string>
+    <string name="text_photos_and_gifs_927c77" formatted="false">"写真とGIF"</string>
+    <string name="text_photos_and_videos_1f1516" formatted="false">"写真とビデオ"</string>
+    <string name="text_photos_and_videos_6bc028" formatted="false">"写真と動画"</string>
+    <string name="text_photos_and_videos_not_authorized_open_folders_an_7b898b" formatted="false">"一般的な写真とビデオへのアクセスはオフになっています。 [ライブラリ] &gt; [メディア フォルダー] から特定のフォルダーを選択できます。"</string>
+    <string name="text_photos_fill_the_screen_pinch_to_zoom_drag_with_o_71a50f" formatted="false">"写真が画面いっぱいに表示されます。ピンチしてズームし、1 本の指でドラッグして側面をタップして写真を変更します。追加のコントロールはオプションです。"</string>
+    <string name="text_photos_videos_and_music_564f16" formatted="false">"写真、ビデオ、音楽"</string>
+    <string name="text_physical_label_5f15ae" formatted="false">"物理ラベル"</string>
+    <string name="text_picker_unavailable_1_s_bd35d0">"ピッカーが使用できません: %1$s"</string>
+    <string name="text_pin_compare_ff6bd8" formatted="false">"固定/比較"</string>
+    <string name="text_pin_media_05a7ef" formatted="false">"メディアを固定する"</string>
+    <string name="text_pinned_items_stay_in_place_while_browsing_arrows_389821" formatted="false">"ピン留めされたアイテムは閲覧中にその場に留まります。矢印はアクティブなペインのみを変更します。"</string>
+    <string name="text_pins_in_panes_3_and_4_will_be_removed_from_this_f500e1" formatted="false">"ペイン 3 と 4 のピンはこのセッションから削除されます。セッションを保持したい場合は、まずセッションを保存します。"</string>
+    <string name="text_play_da1576" formatted="false">"再生"</string>
+    <string name="text_play_next_504580" formatted="false">"次にプレイする"</string>
+    <string name="text_play_pause_7973c0" formatted="false">"再生/一時停止"</string>
+    <string name="text_play_playlist_5451fd" formatted="false">"プレイリストを再生する"</string>
+    <string name="text_play_segment_47e94f" formatted="false">"再生セグメント"</string>
+    <string name="text_play_these_tracks_625887" formatted="false">"これらのトラックを再生します"</string>
+    <string name="text_play_this_collection_65be1f" formatted="false">"このコレクションをプレイする"</string>
+    <string name="text_play_track_402432" formatted="false">"トラックを再生する"</string>
+    <string name="text_play_video_ba31ae" formatted="false">"ビデオを再生する"</string>
+    <string name="text_playback_2b0fe5" formatted="false">"再生"</string>
+    <string name="text_playback_did_not_start_367226" formatted="false">"再生が開始されませんでした"</string>
+    <string name="text_playback_failed_12d57a" formatted="false">"再生に失敗しました"</string>
+    <string name="text_playback_failed_1_s_b5e391">"再生に失敗しました: %1$s"</string>
+    <string name="text_playback_was_replaced_by_another_music_command_eec62d" formatted="false">"再生は別の音楽コマンドに置き換えられました。"</string>
+    <string name="text_player_connection_closed_58b7ea" formatted="false">"プレーヤー接続が閉じられました"</string>
+    <string name="text_player_disconnected_try_again_7b801f" formatted="false">"プレーヤーが切断されました · もう一度試してください"</string>
+    <string name="text_player_unavailable_try_again_8ee4a5" formatted="false">"プレーヤーが利用できません: もう一度お試しください"</string>
+    <string name="text_player_unreachable_tap_again_to_retry_61e14c" formatted="false">"プレーヤーにアクセスできません · もう一度タップして再試行してください"</string>
+    <string name="text_playing_5ef505" formatted="false">"遊ぶ"</string>
+    <string name="text_playlist_order_fb1ecd" formatted="false">"プレイリストの順序"</string>
+    <string name="text_png_preserves_transparency_96ed6e" formatted="false">"PNG は透明度を保持します。"</string>
+    <string name="text_portrait_332772" formatted="false">"肖像画"</string>
+    <string name="text_preferences_changed_read_the_document_again_befo_fb7e76" formatted="false">"設定が変更されました。インポートする前にドキュメントをもう一度読んでください。"</string>
+    <string name="text_preparation_interrupted_for_game_mode_originals_f79ced" formatted="false">"ゲームモードの準備が中断されました。原本が保存されている"</string>
+    <string name="text_prepare_and_verify_copies_before_sharing_2a431b" formatted="false">"共有する前にコピーを準備して検証する"</string>
+    <string name="text_prepare_copies_437567" formatted="false">"コピーを準備する"</string>
+    <string name="text_prepare_while_gaming_anyway_encoding_may_slow_th_02a0ee" formatted="false">"とにかくゲームをしながら準備をしましょう。エンコードするとゲームの速度が低下し、バッテリーの消費量が増加する可能性があります。"</string>
+    <string name="text_preparing_1_s_2_s_c07b72">"準備中 · %1$s / %2$s"</string>
+    <string name="text_preparing_7e2891" formatted="false">"準備中…"</string>
+    <string name="text_preparing_copy_ccb050" formatted="false">"コピーを準備しています"</string>
+    <string name="text_preparing_image_07c726" formatted="false">"画像を準備しています"</string>
+    <string name="text_preparing_operations_1e55d8" formatted="false">"操作を準備しています…"</string>
+    <string name="text_preparing_playback_617073" formatted="false">"再生を準備しています…"</string>
+    <string name="text_preparing_preview_cda2d9" formatted="false">"プレビューを準備しています…"</string>
+    <string name="text_preparing_request_76bb17" formatted="false">"リクエストを準備しています…"</string>
+    <string name="text_preparing_your_library_373c55" formatted="false">"ライブラリを準備しています…"</string>
+    <string name="text_press_the_button_or_combination_then_release_you_ca7221" formatted="false">"ボタンまたはその組み合わせを押してから放します。スティックやトリガーを動かすこともできます。"</string>
+    <string name="text_preview_0b2338" formatted="false">"プレビュー ·"</string>
+    <string name="text_preview_1_s_809e74">"プレビュー · %1$s"</string>
+    <string name="text_preview_1_s_81e72b">"プレビュー: %1$s"</string>
+    <string name="text_preview_arrows_a1fa38" formatted="false">"プレビュー矢印"</string>
+    <string name="text_preview_c10f62" formatted="false">"プレビュー"</string>
+    <string name="text_preview_e9bcae" formatted="false">"プレビュー"</string>
+    <string name="text_preview_frame_unavailable_3d562e" formatted="false">"プレビュー フレームは使用できません"</string>
+    <string name="text_preview_gifs_start_looping_automatically_grid_op_4cabad" formatted="false">"プレビュー GIF は自動的にループを開始します。グリッド オプションでは、同時にアニメーション化されるサムネイルを制限します。ゲームモードは負荷を軽減します。"</string>
+    <string name="text_preview_not_identified_21e557" formatted="false">"プレビューが識別されない"</string>
+    <string name="text_preview_of_1_s_62847b">"%1$s のプレビュー"</string>
+    <string name="text_preview_of_1_s_zones_in_the_content_area_b336b0">"コンテンツ領域の %1$s ゾーンのプレビュー"</string>
+    <string name="text_preview_superseded_by_another_music_command_9601ec" formatted="false">"プレビューは別の音楽コマンドに置き換えられます"</string>
+    <string name="text_preview_too_large_choose_an_original_subfolder_c1fdcf" formatted="false">"プレビューが大きすぎます: 元のサブフォルダーを選択してください"</string>
+    <string name="text_preview_unavailable_135044" formatted="false">"プレビューは利用できません"</string>
+    <string name="text_preview_unavailable_choose_the_folder_again_no_r_2a78f0" formatted="false">"プレビューは利用できません: フォルダーを再度選択してください。参照は変更されませんでした。"</string>
+    <string name="text_preview_unreadable_9374e0" formatted="false">"プレビューが読めません"</string>
+    <string name="text_preview_unreadable_try_again_45db31" formatted="false">"プレビューが読めません · もう一度お試しください"</string>
+    <string name="text_preview_uses_the_shared_player_your_original_que_0a71a9" formatted="false">"プレビューでは共有プレーヤーを使用します。元のキューは保存され、プレビューを停止するかエディタを閉じると一時停止状態に戻ります。"</string>
+    <string name="text_preview_zoom_buttons_7873e1" formatted="false">"プレビューズームボタン"</string>
+    <string name="text_previous_always_changes_track_747bc5" formatted="false">"前へは常にトラックが変更されます"</string>
+    <string name="text_previous_artwork_not_recovered_6904f2" formatted="false">"以前のアートワークが回復されない"</string>
+    <string name="text_previous_changes_track_even_after_three_seconds_3e5ab8" formatted="false">"Previous は 3 秒経過してもトラックを変更します。前のトラックがない場合は先頭に戻ります。"</string>
+    <string name="text_previous_ff1443" formatted="false">"前へ"</string>
+    <string name="text_previous_media_3e439b" formatted="false">"以前のメディア"</string>
+    <string name="text_previous_media_in_the_active_pane_fe4ef7" formatted="false">"アクティブなペインの前のメディア"</string>
+    <string name="text_previous_photo_a41ac2" formatted="false">"前の写真"</string>
+    <string name="text_previous_restore_recovered_private_copy_retained_542ed0" formatted="false">"以前の復元が回復されました: プライベート コピーは元の有効期限が切れるまで保持されます"</string>
+    <string name="text_previous_returns_to_the_beginning_after_three_se_9b4ec0" formatted="false">"「前へ」は 3 秒後に最初に戻ります。 3 秒以内にもう一度押すと、前のトラックに移動します。"</string>
+    <string name="text_previous_section_079e1f" formatted="false">"前のセクション"</string>
+    <string name="text_previous_track_b3f5fe" formatted="false">"前の曲"</string>
+    <string name="text_priority_ff5835" formatted="false">"優先順位"</string>
+    <string name="text_private_copy_changed_destination_not_published_b61c4c" formatted="false">"プライベート コピーが変更されました: 宛先は公開されていません"</string>
+    <string name="text_private_copy_damaged_or_source_replaced_ad5ee7" formatted="false">"プライベートコピーが破損しているか、ソースが置き換えられています"</string>
+    <string name="text_private_copy_not_removed_original_preserved_9a16c1" formatted="false">"プライベートコピーは削除されませんでした。オリジナル保存"</string>
+    <string name="text_private_copy_permanently_deleted_cb214b" formatted="false">"プライベートコピーは完全に削除されました"</string>
+    <string name="text_private_copy_unverified_no_new_changes_a39372" formatted="false">"プライベート コピーは未検証: 新しい変更はありません"</string>
+    <string name="text_private_copy_verified_0e4d4b" formatted="false">"プライベートコピーが検証されました"</string>
+    <string name="text_private_deletion_failed_208163" formatted="false">"プライベート削除に失敗しました"</string>
+    <string name="text_private_storage_full_original_preserved_2c14a4" formatted="false">"プライベート ストレージがいっぱいです: オリジナルが保存されています"</string>
+    <string name="text_private_storage_unavailable_8e7c33" formatted="false">"プライベートストレージが利用できない"</string>
+    <string name="text_private_temporary_file_retained_resume_or_cancel_e646b3" formatted="false">"プライベート一時ファイルが保持されます: クリーンアップを再開またはキャンセルします"</string>
+    <string name="text_process_started_checking_availability_and_releas_262ec8" formatted="false">"プロセスが開始されました。在庫状況とリリース済みの表示を確認する"</string>
+    <string name="text_progress_and_cancellation_in_file_operations_86c746" formatted="false">"ファイル操作の進行とキャンセル"</string>
+    <string name="text_progress_results_and_recovery_of_your_file_opera_e3a3f2" formatted="false">"ファイル操作の進行状況、結果、リカバリがここに表示されます。"</string>
+    <string name="text_provider_unavailable_f52c42" formatted="false">"プロバイダーが利用できない"</string>
+    <string name="text_publishing_conflict_original_preserved_2f5ae0" formatted="false">"公開の競合: オリジナルは保存されています"</string>
+    <string name="text_publishing_denied_76e1f0" formatted="false">"公開が拒否されました"</string>
+    <string name="text_publishing_destination_c735d6" formatted="false">"発行先"</string>
+    <string name="text_publishing_interrupted_destination_needs_verific_e95574" formatted="false">"公開が中断されました: 宛先の確認が必要です"</string>
+    <string name="text_queue_1_s_tracks_5ad2e5">"キュー · %1$s トラック"</string>
+    <string name="text_queue_not_recovered_playback_remains_paused_897fc5" formatted="false">"キューは回復されませんでした。再生は一時停止したままになります。"</string>
+    <string name="text_queue_not_restored_443da6" formatted="false">"キューは復元されませんでした"</string>
+    <string name="text_queue_not_restored_try_stopping_the_preview_agai_c21f6d" formatted="false">"キューは復元されませんでした: プレビューをもう一度停止してみてください"</string>
+    <string name="text_re_enable_this_folder_in_sources_first_70d532" formatted="false">"まずソースでこのフォルダーを再度有効にします"</string>
+    <string name="text_re_encodes_in_srgb_with_orientation_applied_all_722db5" formatted="false">"方向を適用して sRGB で再エンコードします。場所を含むすべての元のメタデータは除外されます。コピー名は匿名です。ピクセルは依然として個人情報を明らかにする可能性があります。"</string>
+    <string name="text_read_files_while_gaming_ccc524" formatted="false">"ゲーム中にファイルを読み取りますか?"</string>
+    <string name="text_read_only_link_retained_original_in_provider_no_935dea" formatted="false">"読み取り専用リンクが保持されます。プロバイダーにオリジナルがあり、コピーはありません。"</string>
+    <string name="text_reading_1_s_2_s_1a4230">"読書 · %1$s / %2$s"</string>
+    <string name="text_reading_chosen_files_1_s_2_s_d7f692">"選択したファイルの読み取り · %1$s / %2$s"</string>
+    <string name="text_reading_contents_b436b3" formatted="false">"内容を読んで…"</string>
+    <string name="text_reading_duration_8bc1f7" formatted="false">"読書時間…"</string>
+    <string name="text_reading_file_sizes_1fccaa" formatted="false">"ファイルサイズを読み取り中…"</string>
+    <string name="text_reading_selected_contents_5b4592" formatted="false">"選択したコンテンツを読み込んでいます…"</string>
+    <string name="text_received_content_cb883c" formatted="false">"受信内容"</string>
+    <string name="text_received_file_changed_original_preserved_141a38" formatted="false">"受信したファイルが変更されました: オリジナルは保存されました"</string>
+    <string name="text_received_file_temporary_access_a756d1" formatted="false">"受信ファイル・一時アクセス"</string>
+    <string name="text_received_file_unreadable_f23c3d" formatted="false">"受信したファイルが読み取れません"</string>
+    <string name="text_received_size_differs_no_file_published_c4dc10" formatted="false">"受信したサイズが異なります: ファイルが公開されていません"</string>
+    <string name="text_received_track_access_expired_previous_queue_rec_739d68" formatted="false">"受信したトラックへのアクセスの有効期限が切れました。以前のキューが回復され、一時停止されました"</string>
+    <string name="text_received_track_unavailable_c84466" formatted="false">"受信したトラックが利用できません"</string>
+    <string name="text_recent_events_2537da" formatted="false">"--- 最近の出来事 ---"</string>
+    <string name="text_recipe_missing_0d4b6e" formatted="false">"処理設定がありません"</string>
+    <string name="text_record_1_s_52eb4b">"レコード · %1$s"</string>
+    <string name="text_record_again_8c6a0c" formatted="false">"再度録音する"</string>
+    <string name="text_recover_copy_1ee15f" formatted="false">"コピーを回復する"</string>
+    <string name="text_recover_links_d1e7cc" formatted="false">"リンクを回復する"</string>
+    <string name="text_recovering_preview_9fa505" formatted="false">"プレビューを回復中…"</string>
+    <string name="text_reduce_animations_0fdf71" formatted="false">"アニメーションを減らす"</string>
+    <string name="text_reduced_motion_1_s_nphoto_interval_2_s_s_n_488a86">"低減モーション: %1$s\n撮影間隔: %2$s s\n"</string>
+    <string name="text_reduces_gifs_and_pauses_automatic_photo_changes_8a5194" formatted="false">"ゲーム中に GIF を減らし、フレームや写真ウィジェットの自動写真変更を一時停止します。"</string>
+    <string name="text_reference_1_s_01d1a7">"参照: %1$s"</string>
+    <string name="text_reference_not_in_preview_a3e66e" formatted="false">"参照はプレビューにありません"</string>
+    <string name="text_reference_relinked_read_only_original_files_inta_0d4f8c" formatted="false">"参照は読み取り専用で再リンクされました。元のファイルはそのままです。再生は開始されませんでした。"</string>
+    <string name="text_reference_retained_3c0f78" formatted="false">"参照が保持される"</string>
+    <string name="text_references_relinked_backup_source_retained_923cab" formatted="false">"参照が再リンクされました。バックアップソースは保持される"</string>
+    <string name="text_refresh_albums_f739d2" formatted="false">"アルバムを更新する"</string>
+    <string name="text_regular_0e99b3" formatted="false">"定期的な"</string>
+    <string name="text_release_threshold_1_s_75a788">"リリースしきい値 · %1$s%%"</string>
+    <string name="text_released_display_52a9ac" formatted="false">"リリースされたディスプレイ"</string>
+    <string name="text_relink_a_folder_70c3bc" formatted="false">"フォルダーを再リンク…"</string>
+    <string name="text_relink_a_folder_d8543d" formatted="false">"フォルダーを再リンクする"</string>
+    <string name="text_relink_e366de" formatted="false">"再リンク"</string>
+    <string name="text_relink_files_618c8b" formatted="false">"ファイルを再リンク…"</string>
+    <string name="text_relink_files_688750" formatted="false">"ファイルを再リンク…"</string>
+    <string name="text_relink_files_f3aef2" formatted="false">"ファイルを再リンクする"</string>
+    <string name="text_relink_folder_1_s_e29041">"フォルダーを再リンク · %1$s"</string>
+    <string name="text_relinking_not_applied_choose_the_folder_again_184529" formatted="false">"再リンクは適用されません。もう一度フォルダを選択してください"</string>
+    <string name="text_relinking_unverified_choose_the_document_again_n_9c784f" formatted="false">"再リンク未確認。もう一度ドキュメントを選択してください。オリジナルは変更されていません。"</string>
+    <string name="text_reload_saved_settings_b7567e" formatted="false">"保存された設定を再ロードする"</string>
+    <string name="text_remove_and_switch_to_two_f5d196" formatted="false">"取り外して2つに切り替えます"</string>
+    <string name="text_remove_collection_e81de6" formatted="false">"コレクションの削除"</string>
+    <string name="text_remove_favorite_9acd17" formatted="false">"お気に入りを削除"</string>
+    <string name="text_remove_fd69f0" formatted="false">"削除"</string>
+    <string name="text_remove_folder_89f681" formatted="false">"フォルダーを削除する"</string>
+    <string name="text_remove_from_collection_d95612" formatted="false">"コレクションから削除"</string>
+    <string name="text_remove_from_favorites_6556ff" formatted="false">"お気に入りから削除"</string>
+    <string name="text_remove_from_favorites_e1e1ac" formatted="false">"お気に入りから削除"</string>
+    <string name="text_remove_from_queue_f7ebcb" formatted="false">"キューから削除"</string>
+    <string name="text_remove_gifs_videos_and_tracks_to_prepare_image_c_e825c6" formatted="false">"GIF、ビデオ、トラックを削除してイメージのコピーを準備するか、オリジナルを選択します。"</string>
+    <string name="text_remove_this_collection_aec0c3" formatted="false">"このコレクションを削除しますか?"</string>
+    <string name="text_remove_this_zone_e2a96a" formatted="false">"このゾーンを削除します"</string>
+    <string name="text_removing_original_please_wait_5de067" formatted="false">"オリジナルを削除しています · しばらくお待ちください"</string>
+    <string name="text_rename_0771a2" formatted="false">"名前を変更…"</string>
+    <string name="text_rename_98b79b" formatted="false">"名前を変更"</string>
+    <string name="text_rename_collection_afd80a" formatted="false">"コレクションの名前を変更する"</string>
+    <string name="text_reopen_temporary_file_32d294" formatted="false">"一時ファイルを再度開く"</string>
+    <string name="text_reorder_navigation_bar_5b4ba2" formatted="false">"ナビゲーションバーを並べ替える"</string>
+    <string name="text_reorder_navigation_bar_f913bd" formatted="false">"ナビゲーションバーを並べ替える"</string>
+    <string name="text_reorder_or_remove_from_queue_6df945" formatted="false">"並べ替えまたはキューから削除"</string>
+    <string name="text_repeat_interval_1_s_ms_2d1d12">"繰り返し間隔 · %1$s ミリ秒"</string>
+    <string name="text_repeat_off_700e76" formatted="false">"リピートオフ"</string>
+    <string name="text_repeat_queue_7bf8e2" formatted="false">"リピートキュー"</string>
+    <string name="text_repeat_track_baa748" formatted="false">"トラックをリピートする"</string>
+    <string name="text_replace_in_draft_f2a979" formatted="false">"下書きで置き換える"</string>
+    <string name="text_replace_these_bindings_in_the_draft_d23325" formatted="false">"ドラフト内のこれらのバインディングを置き換えます"</string>
+    <string name="text_replaces_the_widget_selection_with_this_fixed_im_ecfdfb" formatted="false">"ウィジェットの選択をこの固定画像に置き換えます。元のファイルはそのまま残ります。"</string>
+    <string name="text_replay_segment_6f92a8" formatted="false">"リプレイセグメント"</string>
+    <string name="text_report_copied_you_can_paste_it_into_chat_5f32cd" formatted="false">"レポートがコピーされました。チャットに貼り付けることができます。"</string>
+    <string name="text_request_sent_to_screen_1_s_check_the_actual_pane_24e14b">"リクエストは画面 %1$s に送信されました。実際のパネル位置を確認してください。"</string>
+    <string name="text_requested_display_1_s_actual_2_s_7980a8">"要求された表示=%1$s、実際の=%2$s"</string>
+    <string name="text_reset_1_s_f6bc88">"%1$s をリセット"</string>
+    <string name="text_reset_profile_80afee" formatted="false">"プロファイルをリセット"</string>
+    <string name="text_resolve_the_file_operation_first_6c358c" formatted="false">"まずファイル操作を解決してください"</string>
+    <string name="text_resolve_the_operation_on_the_original_first_c24f4b" formatted="false">"最初にオリジナルの操作を解決してください"</string>
+    <string name="text_resolve_the_other_operation_on_this_file_first_cf0c95" formatted="false">"まずこのファイルに対する他の操作を解決してください"</string>
+    <string name="text_restart_after_three_seconds_2e0291" formatted="false">"3秒後に再起動します"</string>
+    <string name="text_restore_access_fa5ec3" formatted="false">"アクセスを復元する"</string>
+    <string name="text_restore_automatic_artwork_d9141c" formatted="false">"自動アートワークを復元する"</string>
+    <string name="text_restore_cf1718" formatted="false">"復元"</string>
+    <string name="text_restore_default_gestures_88890a" formatted="false">"デフォルトのジェスチャを復元する"</string>
+    <string name="text_restore_not_yet_indexed_use_resume_6e4516" formatted="false">"リストアはまだインデックス付けされていません: 再開を使用してください"</string>
+    <string name="text_restore_or_another_operation_in_progress_6bf31c" formatted="false">"復元または別の操作が進行中です"</string>
+    <string name="text_restore_unavailable_3d38ae" formatted="false">"復元不可"</string>
+    <string name="text_restore_within_seven_days_cleanup_runs_when_next_ca4f77" formatted="false">"7日以内に復元してください。有効期限が切れた後、次に可能なときにクリーンアップが実行されます。アプリをアンインストールまたはデータを消去すると、ゴミ箱も削除されます。"</string>
+    <string name="text_restore_without_verifiable_authorization_a0331e" formatted="false">"検証可能な承認なしで復元する"</string>
+    <string name="text_restored_backup_copy_retained_ea9ba2" formatted="false">"復元・バックアップコピー保持"</string>
+    <string name="text_restored_backup_copy_retained_in_trash_until_the_634382" formatted="false">"復元されました。バックアップ コピーは元の有効期限が切れるまでゴミ箱に保持されます"</string>
+    <string name="text_restored_cleaning_private_copy_4c8f4d" formatted="false">"プライベートコピーの復元・クリーニング"</string>
+    <string name="text_result_d28636" formatted="false">"結果"</string>
+    <string name="text_result_recovered_2cc841" formatted="false">"結果が回復しました"</string>
+    <string name="text_resume_b0cc9c" formatted="false">"再開"</string>
+    <string name="text_retry_20b5f4" formatted="false">"再試行"</string>
+    <string name="text_reverse_order_33051e" formatted="false">"逆順"</string>
+    <string name="text_review_what_will_change_f71fce" formatted="false">"何が変わるのかを確認する"</string>
+    <string name="text_right_ddcff9" formatted="false">"右"</string>
+    <string name="text_right_stick_5a153b" formatted="false">"右スティック↑"</string>
+    <string name="text_right_stick_9b9fdf" formatted="false">"右スティック←"</string>
+    <string name="text_right_stick_9bc58d" formatted="false">"右スティック↓"</string>
+    <string name="text_right_stick_aa4367" formatted="false">"右スティック→"</string>
+    <string name="text_rightward_2260ce" formatted="false">"右向き"</string>
+    <string name="text_roles_swapped_no_activity_started_4edeec" formatted="false">"役割が交換されました。アクティビティは開始されていません"</string>
+    <string name="text_root_folder_b2af5c" formatted="false">"ルートフォルダー"</string>
+    <string name="text_root_path_b7b245" formatted="false">"ルートパス"</string>
+    <string name="text_rose_milk_2c3a5e" formatted="false">"ローズミルク"</string>
+    <string name="text_rotate_90_9746ed" formatted="false">"90°回転"</string>
+    <string name="text_same_content_multiple_copies_dd275d" formatted="false">"同じコンテンツ、複数のコピー"</string>
+    <string name="text_sample_photo_0b6032" formatted="false">"サンプル写真"</string>
+    <string name="text_sample_text_a631e1" formatted="false">"文字"</string>
+    <string name="text_samples_beyond_the_chosen_segment_output_not_pub_af4d09" formatted="false">"選択したセグメントを超えるサンプル: 出力は公開されません"</string>
+    <string name="text_saturation_433626" formatted="false">"彩度"</string>
+    <string name="text_save_a_copy_0680bd" formatted="false">"コピーを保存"</string>
+    <string name="text_save_c5997e" formatted="false">"保存"</string>
+    <string name="text_save_comparison_1dff9e" formatted="false">"比較を保存する"</string>
+    <string name="text_save_playlist_8d3e69" formatted="false">"プレイリストの保存"</string>
+    <string name="text_save_session_beee36" formatted="false">"セッションを保存する"</string>
+    <string name="text_save_settings_4daada" formatted="false">"設定を保存する"</string>
+    <string name="text_save_the_player_queue_to_find_it_here_tracks_sta_7b739d" formatted="false">"プレーヤーのキューを保存して、ここで見つけます。トラックはフォルダー内に残ります。"</string>
+    <string name="text_saved_1_s_a6223b">"保存しました · %1$s"</string>
+    <string name="text_saved_sessions_3c65dd" formatted="false">"保存されたセッション"</string>
+    <string name="text_saving_c4f57f" formatted="false">"保存中…"</string>
+    <string name="text_saving_the_new_copy_d7e74b" formatted="false">"新しいコピーを保存しています…"</string>
+    <string name="text_scan_running_1_s_items_2_s_error_3_s_950caf">"スキャン: 実行中=%1$s;アイテム=%2$s;エラー=%3$s"</string>
+    <string name="text_scope_of_the_next_search_237f0a" formatted="false">"次回の検索範囲"</string>
+    <string name="text_screen_1_s_55a281">"画面 %1$s"</string>
+    <string name="text_screen_1_s_label_2_s_b21ce5">"画面 %1$s: ラベル %2$s"</string>
+    <string name="text_screen_1_s_release_saved_closing_locally_4b6ad9">"画面 %1$s リリースが保存されました。ローカルで閉じる"</string>
+    <string name="text_screens_and_tools_153eab" formatted="false">"画面とバックアップ"</string>
+    <string name="text_screens_menu_37fb30" formatted="false">"画面メニュー"</string>
+    <string name="text_search_albums_f6f4bb" formatted="false">"アルバムを検索"</string>
+    <string name="text_search_and_filter_c3edb2" formatted="false">"検索とフィルター"</string>
+    <string name="text_search_backup_059b95" formatted="false">"バックアップの検索"</string>
+    <string name="text_search_canceled_results_are_partial_files_remain_3c838c" formatted="false">"検索がキャンセルされました。結果は部分的なものです。ファイルはそのまま残ります。"</string>
+    <string name="text_search_collection_053f46" formatted="false">"コレクションの検索"</string>
+    <string name="text_search_finished_no_files_were_changed_006f53" formatted="false">"検索が終了しました。ファイルは変更されませんでした。"</string>
+    <string name="text_search_interrupted_access_or_provider_unavailabl_020715" formatted="false">"検索が中断されました。アクセスまたはプロバイダーが利用できません。ファイルは変更されませんでした。"</string>
+    <string name="text_search_may_use_device_storage_and_the_sd_card_in_901521" formatted="false">"検索にはデバイスのストレージと SD カードが使用される場合があります。ゲーム モードでは、この明示的な選択によってのみ開始または再開されます。"</string>
+    <string name="text_search_media_626c4c" formatted="false">"メディアを検索"</string>
+    <string name="text_search_name_or_artist_44c15b" formatted="false">"名前またはアーティストを検索する"</string>
+    <string name="text_search_now_anyway_d2a180" formatted="false">"とにかく今すぐ検索してください"</string>
+    <string name="text_search_performed_1_s_75bcaf">"実行された検索: %1$s"</string>
+    <string name="text_search_runs_only_when_you_start_it_4a07e0" formatted="false">"検索は開始したときにのみ実行されます。"</string>
+    <string name="text_search_state_not_retained_e21aac" formatted="false">" 検索状態は保持されません。"</string>
+    <string name="text_search_state_not_saved_ca2a23" formatted="false">"検索状態は保存されません"</string>
+    <string name="text_seconds_2120_c9fe92" formatted="false">"秒 · 2 ～ 120"</string>
+    <string name="text_segment_8d73b9" formatted="false">"-セグメント"</string>
+    <string name="text_segment_new_copy_duration_1_s_33ce36">"セグメント · 新しいコピー期間 %1$s"</string>
+    <string name="text_segment_new_duration_1_s_468a07">"セグメント · 新しい期間 %1$s"</string>
+    <string name="text_segment_preview_original_queue_retained_a9766d" formatted="false">"セグメントのプレビュー・元のキューを保持"</string>
+    <string name="text_select_a_system_destination_da89d0" formatted="false">"システムの宛先を選択してください"</string>
+    <string name="text_select_a_system_document_d34685" formatted="false">"システムドキュメントを選択してください"</string>
+    <string name="text_select_all_0e5b81" formatted="false">"すべて選択"</string>
+    <string name="text_select_media_in_the_library_56906c" formatted="false">"ライブラリ内のメディアを選択します。"</string>
+    <string name="text_select_unique_matches_1_s_87601c">"一意の一致を選択 (%1$s)"</string>
+    <string name="text_selected_35a6ad" formatted="false">"選択済み"</string>
+    <string name="text_selected_3da0d3" formatted="false">"選択された"</string>
+    <string name="text_selected_album_options_839aa6" formatted="false">"選択したアルバムのオプション"</string>
+    <string name="text_selected_file_fc1eda" formatted="false">"選択したファイル"</string>
+    <string name="text_selected_files_43f235" formatted="false">"選択したファイル"</string>
+    <string name="text_selected_folder_aae82a" formatted="false">"選択したフォルダー"</string>
+    <string name="text_selected_media_move_to_trash_original_folders_re_6f7f18" formatted="false">"選択したメディアはゴミ箱に移動します。元のフォルダーは残ります。"</string>
+    <string name="text_selected_media_options_079c9a" formatted="false">"選択したメディア オプション"</string>
+    <string name="text_selected_not_saved_yet_0b8923" formatted="false">"選択されていますが、まだ保存されていません"</string>
+    <string name="text_selected_only_07ada4" formatted="false">"選択されたもののみ"</string>
+    <string name="text_selected_track_operations_b23ac0" formatted="false">"選択したトラックの操作"</string>
+    <string name="text_selection_access_no_longer_available_ee4372" formatted="false">"選択アクセスは利用できなくなりました"</string>
+    <string name="text_selection_ae3f45" formatted="false">"選択"</string>
+    <string name="text_selection_too_large_choose_fewer_files_23f153" formatted="false">"選択範囲が大きすぎます: 選択するファイルの数を減らしてください"</string>
+    <string name="text_selection_too_large_choose_fewer_files_c3c718" formatted="false">"選択範囲が大きすぎます: 選択するファイルの数を減らしてください"</string>
+    <string name="text_selection_unavailable_3930d5" formatted="false">"選択はできません"</string>
+    <string name="text_sequential_937369" formatted="false">"シーケンシャル"</string>
+    <string name="text_session_name_856023" formatted="false">"セッション名"</string>
+    <string name="text_session_unreadable_no_pins_replaced_fde88c" formatted="false">"セッションを読み取れません。ピンは交換されていません。"</string>
+    <string name="text_sessions_733ff6" formatted="false">"セッション"</string>
+    <string name="text_set_as_wallpaper_c5056f" formatted="false">"壁紙として設定…"</string>
+    <string name="text_settings_7b855c" formatted="false">"設定"</string>
+    <string name="text_settings_changed_on_the_other_panel_read_the_fil_805d13" formatted="false">"他のパネルで設定が変更されました。インポートする前にファイルを再度読み取ります。"</string>
+    <string name="text_settings_exported_and_verified_the_document_cont_10cce0" formatted="false">"設定がエクスポートされ、検証されました。文書にはメディアが含まれていません。"</string>
+    <string name="text_settings_imported_and_saved_files_and_screens_st_9e3e7e" formatted="false">"設定がインポートされ、保存されました。ファイルと画面は変更されません。"</string>
+    <string name="text_settings_not_saved_d67a68" formatted="false">"設定が保存されない"</string>
+    <string name="text_settings_too_large_34c3b1" formatted="false">"設定が大きすぎます"</string>
+    <string name="text_several_matches_point_to_the_same_file_select_on_c691b2" formatted="false">"複数の一致が同じファイルを指しています: 1 つだけを選択してください"</string>
+    <string name="text_share_5812e6" formatted="false">"共有"</string>
+    <string name="text_share_628ff2" formatted="false">"共有…"</string>
+    <string name="text_share_image_copies_63f7df" formatted="false">"イメージコピーを共有する"</string>
+    <string name="text_shared_aa3dfe" formatted="false">"共有"</string>
+    <string name="text_shared_copies_are_read_only_1aeab8" formatted="false">"共有コピーは読み取り専用です"</string>
+    <string name="text_shared_priority_override_it_for_individual_album_c330fa" formatted="false">"共有の優先順位。タグを変更せずに、個々のアルバムまたはトラックに対してこれをオーバーライドします。"</string>
+    <string name="text_shared_profile_controller_not_detected_yet_f52b68" formatted="false">"共有プロファイル・コントローラーがまだ検出されていません"</string>
+    <string name="text_show_again_5cb1ec" formatted="false">"もう一度表示"</string>
+    <string name="text_show_all_formats_400e1d" formatted="false">"すべての形式を表示"</string>
+    <string name="text_show_file_names_557e96" formatted="false">"ファイル名を表示する"</string>
+    <string name="text_show_photo_frame_controls_792f9e" formatted="false">"フォト フレーム コントロールを表示する"</string>
+    <string name="text_shuffle_0eb69b" formatted="false">"シャッフル"</string>
+    <string name="text_shuffle_169374" formatted="false">"シャッフル"</string>
+    <string name="text_shuffle_button_f0e9bd" formatted="false">"シャッフルボタン"</string>
+    <string name="text_shuffle_on_3d4f18" formatted="false">"シャッフルオン"</string>
+    <string name="text_simultaneous_animated_gifs_1_s_2a1e80">"同時アニメーション GIF: %1$s"</string>
+    <string name="text_single_photo_5ed01a" formatted="false">"写真1枚"</string>
+    <string name="text_size_86d146" formatted="false">"サイズ"</string>
+    <string name="text_size_needs_verification_bf47ec" formatted="false">"サイズは要確認"</string>
+    <string name="text_skipped_9006eb" formatted="false">"スキップされました"</string>
+    <string name="text_sky_milk_9a0e81" formatted="false">"スカイミルク"</string>
+    <string name="text_smaller_albums_52ae9a" formatted="false">"小さいアルバム"</string>
+    <string name="text_smoky_purple_lavender_and_champagne_5341d5" formatted="false">"スモーキーパープル・ラベンダーとシャンパン"</string>
+    <string name="text_smooth_transition_of_about_half_a_second_14f506" formatted="false">"約0.5秒のスムーズな移行"</string>
+    <string name="text_soft_lilac_violet_and_sage_7793f8" formatted="false">"ソフトライラック・バイオレット・セージ"</string>
+    <string name="text_sound_on_935c7c" formatted="false">"サウンドオン"</string>
+    <string name="text_source_1_s_2_s_crop_3_s_4_s_rotation_5_s_8a16ea">"ソース %1$s×%2$s · クロップ %3$s×%4$s · 回転 %5$s°"</string>
+    <string name="text_source_1_s_n_9a21ed">"出典: %1$s\n"</string>
+    <string name="text_source_already_removed_or_unverifiable_use_resum_3e26c2" formatted="false">"ソースはすでに削除されているか検証できません: 再開を使用してください。プライベートコピーは引き続き保護されます"</string>
+    <string name="text_source_already_removed_use_resume_to_recover_ref_4c3a87" formatted="false">"ソースはすでに削除されています。宛先で参照を回復するには、再開を使用してください。"</string>
+    <string name="text_source_cannot_be_verified_6e3e1e" formatted="false">"ソースが確認できません"</string>
+    <string name="text_source_disconnected_or_reading_failed_2c1ac4" formatted="false">"ソースが切断されているか、読み取りに失敗しました"</string>
+    <string name="text_source_folder_needs_verification_c7496b" formatted="false">"ソースフォルダーの確認が必要です"</string>
+    <string name="text_source_has_no_audio_0732a4" formatted="false">"ソースに音声がありません"</string>
+    <string name="text_source_identity_changed_289adf" formatted="false">"ソース ID が変更されました"</string>
+    <string name="text_source_needs_relinking_653c58" formatted="false">"ソースの再リンクが必要"</string>
+    <string name="text_source_type_changed_d2e607" formatted="false">"ソースタイプが変更されました"</string>
+    <string name="text_source_type_or_format_changed_2e65b2" formatted="false">"ソースの種類または形式が変更されました"</string>
+    <string name="text_source_unavailable_3bc08a" formatted="false">"ソースが利用できません"</string>
+    <string name="text_source_unavailable_ea3980" formatted="false">"ソースが利用できません"</string>
+    <string name="text_source_unavailable_or_media_hidden_2075ae" formatted="false">"ソースが利用できないかメディアが隠されています"</string>
+    <string name="text_source_unavailable_private_copy_retained_23d417" formatted="false">"ソースが利用できません: プライベート コピーが保持されています"</string>
+    <string name="text_source_verification_failed_try_again_in_sources_be6dc5" formatted="false">"ソースの検証に失敗しました。ソースで再試行してください。"</string>
+    <string name="text_space_for_your_choices_9db02b" formatted="false">"あなたの選択のためのスペース"</string>
+    <string name="text_space_is_estimated_from_content_providers_and_li_c770ea" formatted="false">"容量はコンテンツから推定されます。プロバイダーとリンクされたファイルは異なる量を使用する場合があります。結果は、読み取り後に変更されたファイルを検証しません。"</string>
+    <string name="text_specify_the_original_folder_then_its_new_locatio_9026c2" formatted="false">"元のフォルダーを指定してから、その新しい場所を指定します。確認の前にメタデータのみが読み取られます。ファイルのコピーや変更は行われません。"</string>
+    <string name="text_start_a_new_search_d9b3b9" formatted="false">"新しい検索を開始する"</string>
+    <string name="text_start_photo_frame_b1bade" formatted="false">"フォトフレームを起動する"</string>
+    <string name="text_start_seconds_a70528" formatted="false">"開始・秒"</string>
+    <string name="text_startup_automatic_1_s_saved_pair_2_s_valid_state_1cc6de">"起動: 自動=%1$s;保存されたペア=%2$s;有効な状態=%3$s"</string>
+    <string name="text_startup_preference_not_saved_febc48" formatted="false">"起動設定が保存されませんでした。"</string>
+    <string name="text_state_not_saved_no_new_window_opened_eaf55b" formatted="false">"状態は保存されていません。新しいウィンドウは開かれませんでした。"</string>
+    <string name="text_stick_activate_1_s_release_2_s_nrepeat_3_s_4_s_m_a3104d">"スティック: %1$s%% をアクティブにし、%2$s%%\n をリリースします。繰り返し: %3$s / %4$s ミリ秒"</string>
+    <string name="text_sticks_and_repeat_91e28e" formatted="false">"貼り付けて繰り返す"</string>
+    <string name="text_stop_preview_049a11" formatted="false">"プレビューを停止する"</string>
+    <string name="text_stop_preview_and_restore_queue_625382" formatted="false">"プレビューを停止してキューを復元する"</string>
+    <string name="text_stop_preview_before_changing_order_82ff53" formatted="false">"順序を変更する前にプレビューを停止する"</string>
+    <string name="text_stop_preview_before_changing_repeat_65687f" formatted="false">"リピートを変更する前にプレビューを停止する"</string>
+    <string name="text_stop_preview_before_clearing_the_queue_7fbd0a" formatted="false">"キューをクリアする前にプレビューを停止する"</string>
+    <string name="text_stop_preview_before_editing_the_queue_91bc03" formatted="false">"キューを編集する前にプレビューを停止します"</string>
+    <string name="text_subfolders_remain_accessible_above_hidden_or_una_171816" formatted="false">"サブフォルダーには引き続き上記からアクセスできます。非表示または使用できないメディアでは、参照が保持されます。"</string>
+    <string name="text_suggested_unique_match_needs_confirmation_5111c8" formatted="false">"固有の一致が提案されました。確認が必要です"</string>
+    <string name="text_swap_already_open_panels_87205f" formatted="false">"すでに開いているパネルを交換する"</string>
+    <string name="text_swap_available_only_when_both_panels_are_visible_eabf0e" formatted="false">"スワップは両方のパネルが表示されている場合にのみ使用できます。"</string>
+    <string name="text_swap_panels_a7b7be" formatted="false">"パネルを交換する"</string>
+    <string name="text_swap_screens_7455a4" formatted="false">"画面を切り替える"</string>
+    <string name="text_swipe_with_three_fingers_then_lift_them_some_ges_caae1f" formatted="false">"3 本の指でスワイプしてから指を離します。一部のジェスチャは Android によって予約されている場合があります。"</string>
+    <string name="text_switch_to_two_panes_43f379" formatted="false">"2 つのペインに切り替えますか?"</string>
+    <string name="text_system_nomedia_exclusion_remove_it_externally_to_320c3c" formatted="false">"システム .nomedia の除外。フォルダーを含めるには、外部から削除します。"</string>
+    <string name="text_t01t12_t83_require_thor_verification_this_report_85f844" formatted="false">"T01–T12/T83: Thor 検証が必要です。このレポートはハードウェア テストを保証するものではありません。"</string>
+    <string name="text_tap_a_color_to_change_it_5cbe58" formatted="false">"色をタップして変更します。変更は保存時に適用されます。"</string>
+    <string name="text_tap_a_section_in_the_preview_and_move_it_with_th_098245" formatted="false">"プレビュー内のセクションをタップし、矢印で移動します。保存して注文を適用します。"</string>
+    <string name="text_tap_a_zone_to_perform_its_action_measurements_ar_abf462" formatted="false">"ゾーンをタップしてそのアクションを実行します。測定値はコンテンツ領域のパーセンテージです。"</string>
+    <string name="text_tap_apply_range_before_listening_or_saving_727b4a" formatted="false">"聞いたり保存したりする前に、「範囲を適用」をタップします。"</string>
+    <string name="text_tap_apply_range_before_saving_2d9014" formatted="false">"保存する前に「範囲を適用」をタップします。"</string>
+    <string name="text_tap_to_choose_a_new_color_0de3e4" formatted="false">"タップして新しい色を選択します"</string>
+    <string name="text_temporary_access_expired_d75210" formatted="false">"一時的なアクセスの有効期限が切れました"</string>
+    <string name="text_temporary_artwork_storage_unavailable_f8b0fa" formatted="false">"アートワークの一時保管場所は利用できません"</string>
+    <string name="text_temporary_content_is_read_only_link_the_file_and_b53bf7" formatted="false">"一時コンテンツは読み取り専用です。ファイルをリンクし、そのフォルダーに変更を許可します。"</string>
+    <string name="text_temporary_copies_retained_retry_cleanup_f0c17a" formatted="false">"一時コピーが保持されています: クリーンアップを再試行してください"</string>
+    <string name="text_temporary_copy_changed_prepare_again_04811b" formatted="false">"一時コピーが変更されました: 再度準備します"</string>
+    <string name="text_temporary_copy_cleanup_denied_61395b" formatted="false">"一時的なコピーのクリーンアップが拒否されました"</string>
+    <string name="text_temporary_file_retained_1_s_3157a4">"一時ファイルが保持されます: %1$s"</string>
+    <string name="text_temporary_folder_cleanup_denied_d615be" formatted="false">"一時フォルダーのクリーンアップが拒否されました"</string>
+    <string name="text_temporary_opening_shared_player_4fca7f" formatted="false">"臨時開設・共有プレイヤー"</string>
+    <string name="text_temporary_storage_full_34bbc4" formatted="false">"一時ストレージがいっぱいです"</string>
+    <string name="text_temporary_storage_unavailable_e47ae5" formatted="false">"一時ストレージは利用できません"</string>
+    <string name="text_text_ebb9e6" formatted="false">"文字"</string>
+    <string name="text_the_bar_uses_icons_only_enable_labels_show_file_94209b" formatted="false">"バーではアイコンのみが使用されます。ここでラベルを有効にし、ファイル名を表示し、アニメーションを減らします。"</string>
+    <string name="text_the_chosen_app_receives_temporary_read_access_to_b93bca" formatted="false">"選択したアプリは、これらのファイルへの一時的な読み取りアクセスを受け取ります。 Android ピッカーでキャンセルできます。"</string>
+    <string name="text_the_chosen_file_changed_reopen_the_picker_65e401" formatted="false">"選択したファイルが変更されました: ピッカーを再度開きます"</string>
+    <string name="text_the_chosen_file_is_empty_or_unreadable_4ea2f0" formatted="false">"選択したファイルは空であるか、読み取ることができません"</string>
+    <string name="text_the_chosen_folder_is_added_or_recovered_as_a_rea_3251be" formatted="false">"選択したフォルダーは、再リンク後にのみ読み取り専用ソースとして追加または復元されます。選択されていないメディアは、以前のお気に入りを継承せずにインデックス付けされます。"</string>
+    <string name="text_the_clock_changed_automatic_cleanup_is_paused_8501bb" formatted="false">"時計が変更されました。自動クリーンアップは一時停止されました。"</string>
+    <string name="text_the_collection_order_has_changed_try_again_938c15" formatted="false">"収集順序が変更されました: もう一度お試しください"</string>
+    <string name="text_the_collection_was_removed_7b276a" formatted="false">"コレクションが削除されました"</string>
+    <string name="text_the_data_differs_from_the_saved_reference_you_ma_77bf6c" formatted="false">"データは保存された参照とは異なります。別のバージョンを選択した可能性があります。"</string>
+    <string name="text_the_destination_must_grant_read_and_write_access_64dff6" formatted="false">"宛先は読み取りおよび書き込みアクセスを許可する必要があります"</string>
+    <string name="text_the_destination_name_changed_no_further_deletion_4b4834" formatted="false">"宛先名が変更になりました。これ以上の削除はありません。"</string>
+    <string name="text_the_document_contains_saved_preferences_not_draf_9c4308" formatted="false">"ドキュメントには保存された設定が含まれており、他のパネルで開かれている下書きは含まれません。"</string>
+    <string name="text_the_document_is_unavailable_or_changed_choose_it_3a88b9" formatted="false">"ドキュメントが利用できないか変更されています。 Android ピッカーで再度選択します。"</string>
+    <string name="text_the_entire_authorized_catalog_270539" formatted="false">"認定カタログ全体"</string>
+    <string name="text_the_file_changed_after_selection_reopen_the_menu_d4632a" formatted="false">"選択後にファイルが変更されました。メニューを再度開きます。"</string>
+    <string name="text_the_file_changed_during_verification_3909b4" formatted="false">"検証中にファイルが変更されました"</string>
+    <string name="text_the_file_has_already_changed_update_the_selectio_151a60" formatted="false">"ファイルはすでに変更されています。選択内容を更新する"</string>
+    <string name="text_the_file_has_no_readable_audio_track_bc530e" formatted="false">"ファイルには読み取り可能なオーディオ トラックがありません"</string>
+    <string name="text_the_file_has_no_readable_video_track_6b8fdc" formatted="false">"ファイルには読み取り可能なビデオ トラックがありません"</string>
+    <string name="text_the_file_is_already_in_the_chosen_folder_3a7291" formatted="false">"ファイルは選択したフォルダーに既に存在します"</string>
+    <string name="text_the_file_is_no_longer_readable_choose_it_again_i_005adc" formatted="false">"ファイルは読み取れなくなりました。 Android ピッカーで再度選択します。"</string>
+    <string name="text_the_file_type_changed_reopen_the_menu_079ffe" formatted="false">"ファイルの種類が変更されました。メニューを再度開きます。"</string>
+    <string name="text_the_folder_does_not_allow_new_copies_3ec9ee" formatted="false">"このフォルダーでは新しいコピーが許可されていません"</string>
+    <string name="text_the_folder_does_not_grant_read_access_c5c5f5" formatted="false">"フォルダーには読み取りアクセスが許可されていません。"</string>
+    <string name="text_the_folder_must_allow_persistent_read_access_402191" formatted="false">"フォルダーは永続的な読み取りアクセスを許可する必要があります"</string>
+    <string name="text_the_gallery_uses_one_navigation_screen_and_one_p_9da2d1" formatted="false">"ギャラリーは 1 つのナビゲーション画面と 1 つのプレビューを使用します。オリジナルを削除せずに、ここで画面を管理し、プレビューを復元します。"</string>
+    <string name="text_the_image_is_no_longer_available_47ae20" formatted="false">"画像はもう利用できません"</string>
+    <string name="text_the_image_is_oriented_correctly_cropped_then_mir_64c8b2" formatted="false">"画像は正しい向きで切り取られ、ミラーリングされて回転されます。 sRGB カラー。 EXIF、位置情報、その他のメタデータはコピーされません。"</string>
+    <string name="text_the_item_changed_confirm_again_79bd2a" formatted="false">"項目が変更されました: もう一度確認してください"</string>
+    <string name="text_the_item_has_not_expired_148c30" formatted="false">"アイテムの有効期限が切れていない"</string>
+    <string name="text_the_library_changed_choose_the_file_again_to_ref_81ccf1" formatted="false">"ライブラリが変更されました: ファイルを再度選択してプレビューを更新します"</string>
+    <string name="text_the_library_changed_refresh_the_preview_a4e11a" formatted="false">"ライブラリが変更されました: プレビューを更新してください"</string>
+    <string name="text_the_library_changed_refresh_the_preview_by_choos_cc2201" formatted="false">"ライブラリが変更されました: フォルダーを再度選択してプレビューを更新します"</string>
+    <string name="text_the_media_is_no_longer_available_47e2f8" formatted="false">"メディアはもう利用できません"</string>
+    <string name="text_the_name_must_end_in_1_s_e12d3a">"名前は .%1$s で終わる必要があります"</string>
+    <string name="text_the_name_to_show_in_hints_up_to_24_characters_th_b24e2b" formatted="false">"ヒントに表示する名前 (最大 24 文字)。ボタンのコードは変更されません。"</string>
+    <string name="text_the_original_changed_prepare_copies_again_92bdd2" formatted="false">"オリジナルが変更されました: コピーを再度準備します"</string>
+    <string name="text_the_original_stays_intact_save_creates_a_new_cop_1584a7" formatted="false">"オリジナルはそのまま残ります。保存すると新しいコピーが作成され、お気に入りはオリジナルに保持されます。"</string>
+    <string name="text_the_panel_is_no_longer_available_try_again_from_88605c" formatted="false">"パネルはもう入手できません。アクティブなウィンドウから再試行してください。"</string>
+    <string name="text_the_previous_search_is_not_resumed_automatically_7b96aa" formatted="false">"前回の検索は自動的には再開されません。新しいファイルの検証を開始します。"</string>
+    <string name="text_the_provider_cannot_remove_the_original_c3a48f" formatted="false">"プロバイダーはオリジナルを削除できません"</string>
+    <string name="text_the_provider_changed_the_requested_name_the_orig_b5eddd" formatted="false">"プロバイダーが要求された名前を変更しました。オリジナルは保存されています。"</string>
+    <string name="text_the_provider_did_not_create_a_folder_fc23fd" formatted="false">"プロバイダーがフォルダーを作成しませんでした"</string>
+    <string name="text_the_provider_did_not_remove_the_original_99c355" formatted="false">"プロバイダーはオリジナルを削除しませんでした"</string>
+    <string name="text_the_provider_did_not_return_file_data_17e4e1" formatted="false">"プロバイダーがファイル データを返しませんでした"</string>
+    <string name="text_the_provider_did_not_return_folder_contents_8852fa" formatted="false">"プロバイダーがフォルダーの内容を返しませんでした"</string>
+    <string name="text_the_received_file_changed_open_it_again_8c87d1" formatted="false">"受信したファイルが変更されました: もう一度開きます"</string>
+    <string name="text_the_reference_is_already_available_or_relinked_r_a58a41" formatted="false">"参照はすでに利用可能であるか、再リンクされています。リストを更新します。"</string>
+    <string name="text_the_reference_is_in_the_trash_resolve_it_before_4482d2" formatted="false">"参照はゴミ箱にあります。リンクする前に解決してください。"</string>
+    <string name="text_the_selected_albums_contain_no_available_media_d768a1" formatted="false">"選択したアルバムには利用可能なメディアが含まれていません。"</string>
+    <string name="text_the_selected_images_cannot_be_opened_try_again_o_edf6e5" formatted="false">"選択した画像を開けません。もう一度試すか、他のコンテンツを選択してください。"</string>
+    <string name="text_the_selection_already_has_a_different_operation_5c4a12" formatted="false">"選択範囲にはすでに別の操作が含まれています。最初にファイル操作で解決してください。"</string>
+    <string name="text_the_selection_changed_or_is_no_longer_available_33adcc" formatted="false">"選択内容が変更されたか、使用できなくなりました。メニューを再度開きます。"</string>
+    <string name="text_the_selection_changed_select_the_files_again_83e934" formatted="false">"選択が変わりました。ファイルを再度選択します。"</string>
+    <string name="text_the_selection_is_no_longer_available_reopen_the_672edd" formatted="false">"選択はできなくなりました。メニューを再度開きます。"</string>
+    <string name="text_the_session_changed_on_the_other_screen_check_th_b1243d" formatted="false">"別の画面でセッションが変更されました。もう一度ピンを確認してください。"</string>
+    <string name="text_the_source_changed_during_acquisition_a4b43b" formatted="false">"取得中にソースが変更されました"</string>
+    <string name="text_the_source_changed_during_preparation_c794a3" formatted="false">"準備中にソースが変更されました"</string>
+    <string name="text_the_source_changed_the_original_will_not_be_dele_1bfd44" formatted="false">"ソースが変わりました。オリジナルは削除されません。現在のファイルを確認します。"</string>
+    <string name="text_the_source_does_not_allow_removing_this_file_7c5fbb" formatted="false">"ソースでは、このファイルの削除は許可されていません。"</string>
+    <string name="text_the_source_duration_changed_d3389f" formatted="false">"ソースの長さが変更されました"</string>
+    <string name="text_the_source_duration_has_changed_reopen_the_edito_be0a12" formatted="false">"ソースの長さが変更されました: エディターを再度開きます"</string>
+    <string name="text_the_source_has_changed_or_is_unavailable_reopen_43f906" formatted="false">"ソースが変更されているか、入手できません。エディタを再度開きます。"</string>
+    <string name="text_the_source_is_disconnected_hidden_or_needs_acces_148e2b" formatted="false">"ソースが切断されているか、非表示になっているか、または再度アクセスする必要があります。参照は保持されます。"</string>
+    <string name="text_the_source_is_hidden_or_disabled_no_new_changes_3a5881" formatted="false">"ソースが非表示または無効になっています。新たな変更はありません。"</string>
+    <string name="text_the_source_is_no_longer_available_407cb7" formatted="false">"ソースはもう入手できません"</string>
+    <string name="text_the_source_is_not_a_gif_no_conversion_performed_784764" formatted="false">"ソースは GIF ではありません: 変換は実行されません"</string>
+    <string name="text_the_source_was_hidden_or_disconnected_the_queue_ebde9e" formatted="false">"ソースが隠されているか、接続されていません。キューは参照を保持したまま更新されます。"</string>
+    <string name="text_the_still_frame_shows_the_initial_crop_play_to_c_4ea1d0" formatted="false">"タイムラインをドラッグすると現在のフレームを確認できます。選択した範囲のみ再生します。"</string>
+    <string name="text_the_temporary_copy_expired_2d727d" formatted="false">"一時コピーの有効期限が切れました"</string>
+    <string name="text_the_track_changed_refresh_the_command_64968c" formatted="false">"トラックが変更されました: コマンドを更新してください"</string>
+    <string name="text_the_track_changed_refresh_the_widget_f90587" formatted="false">"トラックが変更されました: ウィジェットを更新してください"</string>
+    <string name="text_the_widget_photo_could_not_be_opened_try_again_47f055" formatted="false">"ウィジェットの写真を開けませんでした。もう一度やり直してください。"</string>
+    <string name="text_the_widget_photo_is_no_longer_available_d35303" formatted="false">"ウィジェットの写真は利用できなくなりました。"</string>
+    <string name="text_theme_1_s_ngifs_2_s_n_0e9255">"テーマ: %1$s\nGIF: %2$s\n"</string>
+    <string name="text_themes_behavior_controller_and_touch_gestures_in_e02831" formatted="false">"ローカル ドキュメントのテーマ、動作、コントローラー、およびタッチ ジェスチャ。"</string>
+    <string name="text_these_copies_can_no_longer_be_restored_07ed54" formatted="false">"これらのコピーは復元できなくなります。"</string>
+    <string name="text_these_files_are_not_included_n_a7c42f" formatted="false">"次のファイルは含まれていません:\n"</string>
+    <string name="text_this_access_cannot_be_retained_choose_the_file_a_2472a4" formatted="false">"このアクセスは保持できません: Android ピッカーでファイルを再度選択するか、コピーをインポートしてください"</string>
+    <string name="text_this_display_af7c7f" formatted="false">"この表示"</string>
+    <string name="text_this_display_is_released_long_press_the_app_icon_ede49c" formatted="false">"この表示が解除されます。アプリアイコンを長押しし、「ここで開く、単一画面」を選択します。"</string>
+    <string name="text_this_document_is_not_a_backup_of_files_or_collec_fca373" formatted="false">"このドキュメントはファイルやコレクションのバックアップではありません。これには、ソース、権限、ゴミ箱、画面割り当ては含まれません。ゲームに公開された画面は変更されません。"</string>
+    <string name="text_this_file_has_an_import_to_resolve_in_file_opera_3498d1" formatted="false">"このファイルにはファイル操作で解決するインポートがあります"</string>
+    <string name="text_this_file_is_already_chosen_for_another_referenc_995a49" formatted="false">"このファイルは別の参照用にすでに選択されています。 1 つだけ保管してください。"</string>
+    <string name="text_this_file_is_animated_use_explicit_gif_frame_exp_7d4cbd" formatted="false">"このファイルはアニメーション化されています: 明示的な GIF フレーム エクスポートを使用してください"</string>
+    <string name="text_this_group_has_no_visible_tracks_references_are_0a98e3" formatted="false">"このグループには表示可能なトラックがありません。参照は保持されます。"</string>
+    <string name="text_this_private_app_file_is_not_an_import_source_f90db3" formatted="false">"このプライベート アプリ ファイルはインポート ソースではありません"</string>
+    <string name="text_this_provider_cannot_publish_the_temporary_file_949885" formatted="false">"このプロバイダーは一時ファイルを公開できません。別の目的地を選択してください。"</string>
+    <string name="text_this_single_file_link_is_read_only_import_a_copy_2b4ea6" formatted="false">"この単一ファイルのリンクは読み取り専用です。コピーをインポートするか、そのフォルダーに元のファイルを変更する権限を与えます。"</string>
+    <string name="text_this_source_is_disabled_enable_it_in_sources_42528d" formatted="false">"このソースは無効になっています: ソースで有効にしてください"</string>
+    <string name="text_this_system_does_not_offer_wallpaper_cropping_fo_7f7e1f" formatted="false">"このシステムでは、この画像の壁紙のトリミングは提供されていません。別のアプリで開くこともできます。"</string>
+    <string name="text_this_widget_controls_the_shared_player_play_and_b312ff" formatted="false">"このウィジェットは共有プレーヤーを制御します。変更を再生および追跡すると、ギャラリーは閉じたままになります。"</string>
+    <string name="text_thor_albums_below_preview_above_the_button_swaps_218580" formatted="false">"Thor: 下にアルバム、上にプレビュー。 ⇅ボタンで内容を入れ替えます。"</string>
+    <string name="text_thor_gallery_beta_development_display_report_dd517c" formatted="false">"DS Gallery · ベータ開発 · レポートの表示"</string>
+    <string name="text_thor_gallery_m1_417893" formatted="false">"DS Gallery M1"</string>
+    <string name="text_thor_layout_cache_and_saved_settings_f7e1f8" formatted="false">"Thor の画面配置と設定のバックアップ"</string>
+    <string name="text_thor_layout_not_saved_e72a31" formatted="false">"Thor レイアウトは保存されませんでした。"</string>
+    <string name="text_thorgallery_settings_json_c065ac" formatted="false">"DSGallery-settings.json"</string>
+    <string name="text_three_finger_gestures_f7904c" formatted="false">"3本指のジェスチャー"</string>
+    <string name="text_thumbnails_9a085b" formatted="false">"サムネイル +"</string>
+    <string name="text_thumbnails_c2d7a9" formatted="false">"サムネイル-"</string>
+    <string name="text_to_1_s_e9250f">"宛先: %1$s"</string>
+    <string name="text_to_move_rename_or_use_trash_authorize_the_folder_44ca3d" formatted="false">"移動、名前変更、ゴミ箱の使用を行うには、ソースでフォルダーを承認します。ファイルはそのまま残ります。"</string>
+    <string name="text_toggle_favorite_41f17b" formatted="false">"お気に入りを切り替え"</string>
+    <string name="text_too_many_comparison_references_79dd27" formatted="false">"比較参照が多すぎる"</string>
+    <string name="text_too_many_conflicting_names_76409a" formatted="false">"競合する名前が多すぎます"</string>
+    <string name="text_too_many_documents_choose_a_subfolder_42bf11" formatted="false">"ドキュメントが多すぎます: サブフォルダーを選択してください"</string>
+    <string name="text_too_many_documents_choose_an_original_subfolder_495209" formatted="false">"ドキュメントが多すぎます: 元のサブフォルダーを選択してください"</string>
+    <string name="text_too_many_documents_in_the_folder_dc4e96" formatted="false">"フォルダー内のドキュメントが多すぎます"</string>
+    <string name="text_too_many_folders_choose_a_subfolder_9faacd" formatted="false">"フォルダが多すぎます: サブフォルダを選択してください"</string>
+    <string name="text_too_many_folders_choose_an_original_subfolder_922de2" formatted="false">"フォルダが多すぎます: 元のサブフォルダを選択してください"</string>
+    <string name="text_too_many_items_in_backup_7b0ac6" formatted="false">"バックアップ内のアイテムが多すぎます"</string>
+    <string name="text_top_85e2ad" formatted="false">"トップへ"</string>
+    <string name="text_touch_gestures_241cad" formatted="false">"タッチジェスチャ"</string>
+    <string name="text_touch_gestures_and_zones_aa170e" formatted="false">"タッチジェスチャとゾーン"</string>
+    <string name="text_touch_settings_too_large_b4e1f3" formatted="false">"タッチ設定が大きすぎます"</string>
+    <string name="text_touch_zone_outside_the_usable_area_1d5310" formatted="false">"使用可能エリア外のタッチゾーン"</string>
+    <string name="text_touch_zones_1_s_nassigned_three_finger_direction_26358f">"タッチゾーン: %1$s\n割り当てられた 3 本の指の方向: %2$s"</string>
+    <string name="text_touch_zones_51a77a" formatted="false">"タッチゾーン"</string>
+    <string name="text_track_3c0db2" formatted="false">"トラック"</string>
+    <string name="text_track_artwork_50bfbb" formatted="false">"アートワークをトラックする"</string>
+    <string name="text_track_encoding_unverified_output_not_published_13ac53" formatted="false">"トラックのエンコードが検証されていません: 出力は公開されていません"</string>
+    <string name="text_track_music_album_folder_settings_a_source_witho_9f4410" formatted="false">"トラック→音楽アルバム→フォルダ→設定。アートワークのないソースは次のソースに戻ります。元のタグはそのまま残ります。"</string>
+    <string name="text_track_unavailable_b73d64" formatted="false">"トラックが利用できません"</string>
+    <string name="text_track_unavailable_in_queue_d9efbc" formatted="false">"キュー内で利用できないトラック"</string>
+    <string name="text_tracks_ac264a" formatted="false">"トラック"</string>
+    <string name="text_transfer_references_0edaf3" formatted="false">"転送リファレンス"</string>
+    <string name="text_transfer_references_396f43" formatted="false">"参照を転送しますか?"</string>
+    <string name="text_trash_0f64be" formatted="false">"ゴミ箱…"</string>
+    <string name="text_trash_9a3a36" formatted="false">"ゴミ箱"</string>
+    <string name="text_trash_archive_unavailable_65088e" formatted="false">"ゴミ箱アーカイブは使用できません"</string>
+    <string name="text_trash_copies_imports_and_duplicates_19a795" formatted="false">"ゴミ箱、コピー、インポート、および複製"</string>
+    <string name="text_trash_copy_damaged_362903" formatted="false">"ゴミ箱のコピーが破損しています"</string>
+    <string name="text_trash_date_unverified_591d7a" formatted="false">"ゴミ箱の日付が未確認"</string>
+    <string name="text_trash_is_empty_bd2e58" formatted="false">"ゴミ箱が空です"</string>
+    <string name="text_trash_item_changed_confirm_the_target_again_cd7047" formatted="false">"ゴミ箱アイテムが変更されました: ターゲットを再度確認してください"</string>
+    <string name="text_trash_unavailable_474ba5" formatted="false">"ゴミ箱は使用できません"</string>
+    <string name="text_trim_time_and_crop_the_frame_the_original_its_fa_58180e" formatted="false">"時間をトリミングしてフレームをトリミングします。オリジナル、そのお気に入り、コレクションはそのまま残ります。"</string>
+    <string name="text_try_another_name_or_clear_the_search_0cceaf" formatted="false">"別の名前を試すか、検索をクリアしてください。"</string>
+    <string name="text_turn_shuffle_off_ff71f4" formatted="false">"シャッフルをオフにする"</string>
+    <string name="text_turn_shuffle_on_39e948" formatted="false">"シャッフルをオンにする"</string>
+    <string name="text_two_panes_e0eda7" formatted="false">"2 つのペイン"</string>
+    <string name="text_two_screens_dde4ec" formatted="false">"2つの画面"</string>
+    <string name="text_unassigned_81757b" formatted="false">"未割り当て"</string>
+    <string name="text_unavailable_1d80f0" formatted="false">"利用不可"</string>
+    <string name="text_unavailable_1d9817" formatted="false">"利用できません"</string>
+    <string name="text_unavailable_4107fc" formatted="false">"利用できません"</string>
+    <string name="text_unavailable_ce1391" formatted="false">"利用できません"</string>
+    <string name="text_unexpected_content_after_settings_912e60" formatted="false">"設定後の予期せぬ内容"</string>
+    <string name="text_unexpected_output_track_1_s_af782c">"予期しない出力トラック: %1$s"</string>
+    <string name="text_uninstalling_the_app_or_clearing_its_data_also_d_cecefb" formatted="false">"アプリをアンインストールまたはデータを消去すると、ゴミ箱も削除されます。"</string>
+    <string name="text_unknown_size_954717" formatted="false">"不明なサイズ"</string>
+    <string name="text_unknown_size_c08f91" formatted="false">"不明なサイズ"</string>
+    <string name="text_unknown_size_e9b931" formatted="false">"不明なサイズ"</string>
+    <string name="text_unnamed_034324" formatted="false">"無名"</string>
+    <string name="text_unnamed_media_24a1bb" formatted="false">"名前のないメディア"</string>
+    <string name="text_unreadable_artwork_folder_c5d7b8" formatted="false">"アートワークフォルダーを読み取れません"</string>
+    <string name="text_unreadable_track_99d3c9" formatted="false">"読めないトラック"</string>
+    <string name="text_unrecognized_format_a07e3b" formatted="false">"認識できない形式"</string>
+    <string name="text_unrecognized_temporary_file_cleanup_paused_257383" formatted="false">"認識されない一時ファイル: クリーンアップが一時停止されました"</string>
+    <string name="text_unsafe_artwork_folder_178f07" formatted="false">"安全でないアートワークフォルダー"</string>
+    <string name="text_unsafe_artwork_recovery_dbc2b0" formatted="false">"安全でないアートワークの回復"</string>
+    <string name="text_unsafe_temporary_artwork_368bc9" formatted="false">"危険な一時的なアートワーク"</string>
+    <string name="text_unsafe_temporary_write_455c5f" formatted="false">"安全でない一時書き込み"</string>
+    <string name="text_unspecified_album_f59acd" formatted="false">"不特定のアルバム"</string>
+    <string name="text_unspecified_artist_53b8a6" formatted="false">"不特定のアーティスト"</string>
+    <string name="text_unsupported_audio_quality_2af31b" formatted="false">"サポートされていないオーディオ品質"</string>
+    <string name="text_unsupported_audio_recipe_d81e86" formatted="false">"サポートされていないオーディオ 処理設定"</string>
+    <string name="text_unsupported_backup_version_a9bfd8" formatted="false">"サポートされていないバックアップ バージョン"</string>
+    <string name="text_unsupported_opening_ca41a8" formatted="false">"サポートされていないオープニング"</string>
+    <string name="text_unsupported_recipe_d2aba5" formatted="false">"サポートされていない処理設定"</string>
+    <string name="text_unsupported_resolution_b28db9" formatted="false">"サポートされていない解像度"</string>
+    <string name="text_unsupported_version_0fd927" formatted="false">"サポートされていないバージョン"</string>
+    <string name="text_unsupported_video_recipe_393281" formatted="false">"サポートされていないビデオ処理設定"</string>
+    <string name="text_up_to_24_characters_without_control_characters_cfac52" formatted="false">"制御文字を除く最大 24 文字"</string>
+    <string name="text_up_to_four_zones_per_context_6f7946" formatted="false">"コンテキストごとに最大 4 つのゾーン"</string>
+    <string name="text_updating_references_7a459f" formatted="false">"参照の更新"</string>
+    <string name="text_upper_ae009f" formatted="false">"アッパー"</string>
+    <string name="text_upward_a9ec70" formatted="false">"上向き"</string>
+    <string name="text_use_a_name_of_1120_characters_without_control_ch_d4d026" formatted="false">"制御文字を含まない 1 ～ 120 文字の名前を使用してください"</string>
+    <string name="text_use_a_name_up_to_170_characters_9d3f2a" formatted="false">"最大 170 文字の名前を使用してください"</string>
+    <string name="text_use_binding_499a9d" formatted="false">"バインディングを使用する"</string>
+    <string name="text_use_in_a_photo_frame_4b03fb" formatted="false">"フォトフレームに入れて使う"</string>
+    <string name="text_use_inherited_priority_720160" formatted="false">"継承された優先順位を使用する"</string>
+    <string name="text_use_label_39f1df" formatted="false">"ラベルを使用する"</string>
+    <string name="text_use_one_to_three_buttons_directions_are_recorded_9a7276" formatted="false">"1 ～ 3 つのボタンを使用します。道順は個別に記録されます。"</string>
+    <string name="text_use_only_this_screen_f859c0" formatted="false">"この画面のみ使用"</string>
+    <string name="text_use_shared_profile_8997d5" formatted="false">"共有プロファイルを使用する"</string>
+    <string name="text_use_system_crop_tool_30ec32" formatted="false">"システムトリミングツールを使用する"</string>
+    <string name="text_use_this_name_c09501" formatted="false">"この名前を使用してください"</string>
+    <string name="text_use_this_selection_48380c" formatted="false">"この選択を使用します"</string>
+    <string name="text_verification_failed_or_access_changed_no_referen_ba271c" formatted="false">"検証が失敗したか、アクセスが変更されました。参照は転送されません。新しい検索を開始します。"</string>
+    <string name="text_verified_groups_will_appear_here_nothing_is_dele_41b1d4" formatted="false">"検証済みのグループがここに表示されます。何も自動的には削除されません。"</string>
+    <string name="text_verifying_1_s_documents_examined_55eddd">"検証中 · %1$s 文書が検査されました"</string>
+    <string name="text_verifying_62483c" formatted="false">"確認中…"</string>
+    <string name="text_verifying_integrity_a2ae93" formatted="false">"整合性の検証"</string>
+    <string name="text_vertical_position_b0dfc9" formatted="false">"縦位置"</string>
+    <string name="text_video_audio_tracks_do_not_match_options_429d73" formatted="false">"ビデオ/オーディオトラックがオプションと一致しません"</string>
+    <string name="text_video_cannot_be_opened_23b178" formatted="false">"ビデオを開けません"</string>
+    <string name="text_video_cannot_be_played_1_s_a0e774">"ビデオを再生できません: %1$s"</string>
+    <string name="text_video_duration_or_dimensions_unavailable_007d54" formatted="false">"動画の長さやサイズは利用できません"</string>
+    <string name="text_video_encoding_may_slow_the_game_and_use_more_ba_0160f6" formatted="false">"ビデオのエンコードによりゲームの速度が低下し、バッテリーの消費量が増加する可能性があります。後でエクスポートすることもできます。"</string>
+    <string name="text_video_resolution_a7f5f2" formatted="false">"ビデオ解像度"</string>
+    <string name="text_video_segment_exported_original_favorites_and_co_e1d82f" formatted="false">"エクスポートされたビデオセグメント: オリジナル、お気に入り、コレクションが保持"</string>
+    <string name="text_video_segment_range_314ef0" formatted="false">"ビデオセグメントの範囲"</string>
+    <string name="text_video_unavailable_ce2e8e" formatted="false">"ビデオが利用できません"</string>
+    <string name="text_video_unreadable_041806" formatted="false">"ビデオが読み取れません"</string>
+    <string name="text_videos_and_music_are_excluded_timers_and_preload_29d638" formatted="false">"動画や音楽は対象外となります。パネルが非表示になっている場合、メニューが開いている場合、またはゲーム モードまたは省電力がアクティブになっている場合、タイマーとプリロードは停止します。"</string>
+    <string name="text_violet_arcade_ad309f" formatted="false">"バイオレットアーケード"</string>
+    <string name="text_violet_night_orchid_and_turquoise_eaa135" formatted="false">"ヴァイオレットナイト・オーキッドとターコイズ"</string>
+    <string name="text_visibility_or_access_changed_06dec4" formatted="false">"可視性またはアクセス権が変更されました"</string>
+    <string name="text_visible_373a21" formatted="false">"見える"</string>
+    <string name="text_visible_9c4acf" formatted="false">"見える"</string>
+    <string name="text_visible_panels_1_s_f349c1">"表示されるパネル: %1$s"</string>
+    <string name="text_waiting_6f3524" formatted="false">"待っています"</string>
+    <string name="text_wallpaper_requires_a_static_image_60bd7b" formatted="false">"壁紙には静止画像が必要です"</string>
+    <string name="text_warm_black_copper_and_mineral_blue_a03f6d" formatted="false">"ウォームブラック・カッパー＆ミネラルブルー"</string>
+    <string name="text_warm_white_powder_pink_5524ec" formatted="false">"ウォームホワイト・パウダーピンク"</string>
+    <string name="text_welcome_to_thor_gallery_f22b0e" formatted="false">"DS Galleryへようこそ"</string>
+    <string name="text_widget_command_refused_1_s_0c9fdb">"ウィジェット コマンドが拒否されました (%1$s)"</string>
+    <string name="text_widget_no_longer_available_f999f8" formatted="false">"ウィジェットは利用できなくなりました"</string>
+    <string name="text_widget_not_updated_try_again_d5d426" formatted="false">"ウィジェットが更新されていません。もう一度やり直してください。"</string>
+    <string name="text_width_ea6150" formatted="false">"幅"</string>
+    <string name="text_window_display_unavailable_3f5404" formatted="false">"ウィンドウ表示は使用できません。"</string>
+    <string name="text_window_p_1_s_display_2_s_focus_3_s_53bd0a">"ウィンドウ: P%1$s · 表示 %2$s · フォーカス %3$s"</string>
+    <string name="text_without_audio_66297f" formatted="false">" · 音声なし"</string>
+    <string name="text_x_received_1f44c5" formatted="false">"Xを受け取りました"</string>
+    <string name="text_y_received_7e8297" formatted="false">"Yが受け取りました"</string>
+    <string name="text_yes_ad273c" formatted="false">"はい"</string>
+    <string name="text_your_albums_b2a5fe" formatted="false">"あなたのアルバム"</string>
+    <string name="text_your_collections_b5ac86" formatted="false">"あなたのコレクション"</string>
+    <string name="text_your_favorites_together_45ecfa" formatted="false">"あなたのお気に入りを一緒に"</string>
+    <string name="text_your_images_41bd0e" formatted="false">"あなたの画像"</string>
+    <string name="text_your_music_b63856" formatted="false">"あなたの音楽"</string>
+    <string name="text_your_music_starts_here_22d615" formatted="false">"あなたの音楽はここから始まります"</string>
+    <string name="text_your_playlists_f30fdf" formatted="false">"あなたのプレイリスト"</string>
+    <string name="text_your_preview_48eb5c" formatted="false">"あなたのプレビュー"</string>
+    <string name="text_zone_1_s_13f903">"ゾーン %1$s"</string>
+    <string name="text_zone_action_38a54a" formatted="false">"ゾーンアクション"</string>
+    <string name="text_zones_in_the_same_context_cannot_overlap_d8c35b" formatted="false">"同じコンテキスト内のゾーンは重複できません"</string>
+    <string name="text_zoom_1_s_position_2_s_3_s_abeae2">"ズーム %1$s%% · 位置 %2$s%%、%3$s%%"</string>
+    <string name="video_preview_position" formatted="false">"ビデオのプレビュー位置"</string>
+    <string name="widget_choose_folder" formatted="false">""</string>
+    <string name="widget_color" formatted="false">"色"</string>
+    <string name="widget_duration_empty" formatted="false">"\u0020/ —"</string>
+    <string name="widget_empty_title" formatted="false">""</string>
+    <string name="widget_favorite" formatted="false">"お気に入りに追加"</string>
+    <string name="widget_full_name" formatted="false">DS Gallery · Icon Player</string>
+    <string name="widget_last_listened" formatted="false">"前回の再生"</string>
+    <string name="widget_minimal_name" formatted="false">DS Gallery · Compact Player</string>
+    <string name="widget_next" formatted="false">"次の曲"</string>
+    <string name="widget_open_cover" formatted="false">"プレーヤー・アートワークを開く"</string>
+    <string name="widget_photo_fade" formatted="false">"フェード"</string>
+    <string name="widget_play" formatted="false">"再生"</string>
+    <string name="widget_previous" formatted="false">"前の曲"</string>
+    <string name="widget_progress_open" formatted="false">"進行状況・オープンプレイヤー"</string>
+    <string name="widget_resume_guidance" formatted="false">"再生すると前回の続きを再生します。キューがなければ選択したプレイリストを使います。"</string>
+    <string name="widget_square_name" formatted="false">DS Gallery · Icon Player</string>
+    <string name="widget_start" formatted="false">"タップして開始"</string>
+    <string name="widget_start_playlist" formatted="false">"初期プレイリスト"</string>
+    <string name="settings_preview_no_media">"このカテゴリにはメディアがありません。"</string>
+    <string name="album_add_folder">"アルバムを追加"</string>
+    <string name="recovery_description">"ファイルの復元と重複の検索"</string>
+    <string name="info_updated">"更新日"</string>
+    <string name="info_sound_sources">"効果音の提供元：Pixabay、Romain Raynal · Modern UI Vol.1"</string>
+    <string name="trash_selected_count">"%1$s件を選択中"</string>
+    <string name="trash_delete_selected">"選択項目を削除"</string>
+    <string name="trash_delete_all">"すべて削除"</string>
+    <string name="trash_days_remaining">"%1$s日"</string>
+    <string name="trash_restore_confirmation">"%1$s件のファイルを復元しますか？"</string>
+    <string name="trash_restore_original">"ファイルは元のフォルダに復元されます。同名の既存ファイルは保持されます。"</string>
+    <string name="trash_selected_one">"%1$s件を選択中"</string>
+    <string name="trash_day_remaining_one">"%1$s日"</string>
+    <string name="sounds_title">"サウンド"</string>
+    <string name="persist_media_title">"最後に選択したメディアを保持"</string>
+    <string name="persist_media_description">"オン：アルバムを閉じたり別のアルバムを閲覧しても、次の項目を選ぶまでプレビューを保持します。オフ：アルバムを開くと現在の並び順の最初の項目を表示し、閉じると表紙に戻ります。"</string>
+    <string name="settings_grid_title">"グリッド"</string>
+    <string name="settings_rows_title">"リスト"</string>
+    <string name="sound_navigate">"ギャラリーの移動"</string>
+    <string name="sound_notice">"通知とダイアログ"</string>
+    <string name="sound_delete">"削除"</string>
+    <string name="sound_favorite">"お気に入り"</string>
+    <string name="sound_settings">"設定を開く"</string>
+    <string name="sound_settings_navigation">"設定内の移動"</string>
+    <string name="sound_save">"保存"</string>
+    <string name="direct_delete">"直接削除"</string>
+    <string name="direct_delete_warning">"ファイルは完全に削除され、ゴミ箱から復元できません。"</string>
+    <string name="direct_delete_option">"「直接削除」を表示"</string>
+    <string name="favorite_deletion_notice">"選択した項目には%1$sの項目が含まれています。"</string>
+    <string name="new_empty_album">"新しい空のアルバムを作成"</string>
+    <string name="new_album_move">"新しいアルバムに移動…"</string>
+    <string name="new_album_copy">"新しいアルバムにコピー…"</string>
+    <string name="album_hierarchy">"フォルダ別にアルバムを閲覧"</string>
+    <string name="album_hierarchy_description">オフ：サブフォルダーのアルバムを他のアルバムと一緒に表示します。オン：フォルダー階層をたどります。ファイルは変更しません。</string>
+    <string name="controller_settings_hint">"%1$sで設定を開きます。ショートカットはコントローラーの設定に従います。"</string>
+    <string name="duplicate_experimental">試験的な機能 · 削除する前に結果を確認してください。</string>
+    <string name="tutorial_skip">チュートリアルをスキップ</string>
+    <string name="tutorial_shortcuts_title">2つの画面で快適に操作</string>
+    <string name="tutorial_folders_title">フォルダーを接続</string>
+    <string name="tutorial_folders_body">写真と動画のフォルダーと、音楽用のフォルダーを選びます。サブフォルダーはアルバムとして表示されます。設定でフォルダーを追加・削除できます。</string>
+    <string name="tutorial_permission_body">Androidの選択画面でフォルダーを開き、このフォルダーを使用を押して許可します。許可したフォルダーだけにアクセスします。Downloadを選べない場合は、その中のフォルダーを選んでください。</string>
+    <string name="tutorial_visual_folder">写真と動画</string>
+    <string name="tutorial_next">次へ</string>
+    <string name="tutorial_finish">開始</string>
+    <string name="tutorial_previous">前へ</string>
+    <string name="album_set_cover">"アルバムのカバーに設定"</string>
+
+    <string name="navbar_categories_title">有効化と並べ替え</string>
+
+    <string name="navbar_categories_help">アイコンをタップして表示・非表示を切り替えます。長押ししてドラッグすると順序を変更できます。</string>
+    <string name="video_subtitles">字幕</string>
+    <string name="controller_shortcuts">コントローラーのショートカット</string>
+    <string name="album_shadows_title">アルバムプレビューの影</string>
+    <string name="album_shadow_top">上</string>
+    <string name="album_shadow_bottom">下</string>
+    <string name="album_shadow_sides">左右</string>
+    <string name="album_shadow_all">すべての縁</string>
+    <string name="album_shadow_vertical">上下</string>
+    <string name="album_shadow_none">なし</string>
+    <string name="photo_widget_order">写真の順序</string>
+    <string name="photo_widget_newest">新しい順</string>
+    <string name="photo_widget_oldest">古い順</string>
+    <string name="photo_widget_random">シャッフル</string>
+    <string name="album_studio_title">"スタジオフレーム"</string>
+    <string name="album_studio_description">"テーマ色の細い線を画面の端に表示します。影の上、操作ボタンの下に重なり、画像を隠さず内側へ素早く薄れていきます。"</string>
+    <string name="frame_source_guidance">"アルバムまたはお気に入りを選択してください。スライドショーはプレビュー画面に表示されます。"</string>
+    <string name="frame_transition_title">"切り替え効果"</string>
+    <string name="video_dim_navigation">"閲覧画面を暗くする"</string>
+    <string name="sound_preview_action">"サウンドを試聴"</string>
+    <string name="sound_preview_hint">"サウンドの横にある再生ボタンを押すと、試聴と波形の確認ができます。"</string>
+    <string name="sound_custom_action">"サウンドをカスタマイズ"</string>
+    <string name="sound_custom_guide">"6秒以内のWAVファイルを選択してください。アプリ内にコピーを保存し、元のファイルは変更しません。"</string>
+    <string name="sound_custom_choose">"音声を選択"</string>
+    <string name="sound_custom_reset">"元のサウンドに戻しますか？"</string>
+    <string name="sound_custom_restore">"元に戻す"</string>
+    <string name="sound_custom_invalid">"6秒以内の有効なWAVファイルを選択してください。"</string>
+    <string name="sound_custom_load_failed">"サウンドを読み込めませんでした。以前のサウンドを保持しています。"</string>
+    <string name="controller_guide_title">"コントローラー早見ガイド"</string>
+    <string name="controller_guide_video_title">"動画：シークと音量"</string>
+    <string name="controller_guide_video_body">動画ではAで再生と一時停止を切り替えます。再生中のBはギャラリーの移動、一時停止中のBはフォルダーを出ずにプレーヤーを閉じます。再開ダイアログではAで続行、Xで最初から、Bでキャンセル。左スティックは上下で音量、左右でシーク。十字キーで移動します。</string>
+    <string name="controller_guide_dpad_title">"十字キー"</string>
+    <string name="controller_guide_dpad_body">"十字キーでギャラリーの項目やセクションを移動します。"</string>
+    <string name="controller_guide_l3_title">"L3・フォトフレーム"</string>
+    <string name="controller_guide_l3_body">"L3でフォトフレームを開きます。アルバムまたはお気に入りを選び、上画面でスライドショーを開始します。"</string>
+    <string name="controller_guide_shortcuts_title">"既定のショートカット"</string>
+    <string name="controller_guide_shortcuts_body">"Aで決定・開く・再生、Bでアプリを終了せず戻る、Yで画面の内容を入れ替え、Xで設定を開きます。ボタンは変更できます。"</string>
+    <string name="controller_guide_tabs_title">"セクション切替"</string>
+    <string name="controller_guide_tabs_body">"L1とR1で前または次のセクションへ移動します。割り当てはコントローラープロファイルによって異なる場合があります。"</string>
+    <string name="frame_enter_fullscreen">"全画面スライドショー"</string>
+    <string name="frame_exit_fullscreen">"全画面を終了"</string>
+    <string name="video_stick_category">動画</string>
+    <string name="video_stick_controls">左スティック：音量とシーク</string>
+    <string name="gallery_background_zoom">ズーム</string>
+    <string name="default_section">起動時のセクション</string>
+    <string name="info_icon_sources">アイコン：Phosphor · MITライセンス</string>
+    <string name="tutorial_y_actions">選択中の項目の操作。未選択なら設定を開きます。</string>
+    <string name="playback_image_category">画像</string>
+    <string name="image_preview_name">プレビューにファイル名を表示</string>
+    <string name="grid_preview_motion">グリッド移動時にプレビューをスライド</string>
+    <string name="sound_restore">復元完了</string>
+    <string name="sound_unlock">正しいPIN</string>
+    <string name="sound_unlock_error">間違ったPIN</string>
+    <string name="sound_reorder">アルバムの並べ替え</string>
+    <string name="widget_disc_hole">CDの中心の穴</string>
+    <string name="controller_sorting">コントローラーでカレンダーと並び順を操作</string>
+    <string name="controller_sorting_description">スティックまたは十字キーでカレンダー、並び順、逆順の矢印を選び、Aで決定できます。オフの場合、これらの操作はタッチのみです。</string>
+    <string name="grid_preview_motion_description">グリッドでは移動方向にプレビューがスライドします。無効にするとメディア間をフェードで切り替えます。</string>
+    <string name="sound_pin_digit_1">PIN · 1</string>
+    <string name="sound_pin_digit_2">PIN · 2</string>
+    <string name="sound_pin_digit_3">PIN · 3</string>
+    <string name="image_overlay_auto_hide">"プレビュー操作を自動で隠す"</string>
+    <string name="image_overlay_auto_hide_description">"操作がないと5秒後にプレビューの操作ボタンを隠します。画像をタップするか、現在のメディアでAを押すと表示・非表示を切り替えます。画像を変えてもタイマーはリセットされません。"</string>
+    <string name="crop_upper_screen">"上画面"</string>
+    <string name="crop_lower_screen">"下画面"</string>
+    <string name="video_stick_description">"動画再生中：上下で音量を調整し、左右で5、10、10、30、30、60秒と移動します。スティックを倒したままにすると0.5秒ごとに繰り返します。方向を変えるか1秒待つと5秒に戻ります。軸を変えるには中央に戻してください。十字キーは引き続き移動に使えます。"</string>
+    <string name="color_copy_hex">"色をコピー"</string>
+    <string name="video_mix_audio">"他のアプリと音声を同時に再生"</string>
+    <string name="video_mix_audio_description">"ホーム画面や他のアプリが音声を再生しても動画を続け、両方の音声が聞こえます。オフの場合、他の音声によって動画が一時停止することがあります。"</string>
+    <string name="reduced_motion_help">画面切り替えの動きを減らし、プレーヤーのアニメーション効果を停止します。GIFとウィジェットには影響しません。</string>
+    <string name="music_volume">音楽の音量</string>
+    <string name="video_confirm_replace">再生中の動画を切り替える前に確認</string>
+    <string name="video_replace_title">別の動画を再生しますか？</string>
+    <string name="video_replace_description">現在の動画を閉じて、選択した動画を再生しますか？</string>
+    <string name="video_replace_dont_ask">今後表示しない</string>
+    <string name="sound_pin_digit_4">PIN · 4桁目</string>
+    <string name="sound_video_replace">動画切り替えの確認</string>
+    <string name="video_volume">音量</string>
+    <string name="dim_screen">この画面を暗くする</string>
+    <string name="upper_status_bar">上画面にステータスバーを表示</string>
+    <string name="app_reset_action">アプリをリセット</string>
+    <string name="app_reset_title">アプリをリセットしますか？</string>
+    <string name="app_reset_description">設定、フォルダーの接続情報、アプリデータが削除されます。接続したフォルダー内のファイルは削除されません。アプリは終了します。再度開くとチュートリアルから始まります。</string>
+    <string name="app_reset_failed">リセットできませんでした。Android のアプリ設定から再試行してください。</string>
+    <string name="empty_favorites_message">まだお気に入りのメディアがありません。</string>
+    <string name="folder_add_explanation">閲覧するフォルダーを選んでください。ほかのフォルダーは後からいつでも追加できます。</string>
+    <string name="folder_add_continue">続ける</string>
+    <string name="onboarding_images">画像のプレビュー</string>
+    <string name="onboarding_images_body">左スティック：拡大画像を移動。\n右スティック：ズーム。\nA またはタップ：操作ボタンを表示・非表示。\n指1本でスワイプしてメディアを切り替え。</string>
+    <string name="onboarding_video_body">左スティック上下：プレーヤーの音量。\n左右：巻き戻し・早送り。\nA：再生・一時停止。\n画面の左右をダブルタップして移動。</string>
+    <string name="onboarding_gestures_body">3本の指で表示された方向へスワイプします。操作設定でジェスチャーを変更できます。</string>
+    <string name="onboarding_ready">準備完了！</string>
+    <string name="onboarding_later">あとで</string>
+    <string name="shared_storage_title">内部ストレージ</string>
+    <string name="shared_storage_action">Downloadとストレージ全体</string>
+    <string name="shared_storage_help">Downloadや内部ストレージ全体を選ぶには、Androidの設定ですべてのファイルへのアクセスを許可してからフォルダーを選びます。Android/data、Android/obbとアプリの専用フォルダーは対象外です。</string>
+    <string name="console_stick_title">音量と明るさ</string>
+    <string name="console_stick_body">動画と音楽では右スティックの上下でシステムの明るさ、左右で本体の音量を調整します。画像では引き続きズームを操作します。</string>
+    <string name="console_brightness_permission_title">明るさを調整</string>
+    <string name="console_brightness_permission_body">右スティックで明るさを調整するには、DS Galleryにシステム設定の変更を許可してください。音量の調整にはこの権限は不要です。</string>
+    <string name="console_brightness_permission_action">権限を開く</string>
+    <string name="console_brightness_level">明るさ · %1$d%%</string>
+    <string name="tutorial_pan">拡大した画像を移動</string>
+    <string name="tutorial_overlay">操作ボタンの表示・非表示</string>
+    <string name="tutorial_swipe_media">1本指でスワイプしてメディアを切り替え</string>
+    <string name="tutorial_double_tap_zoom">画像をダブルタップすると拡大・縮小できます。</string>
+    <string name="tutorial_seek">巻き戻し / 早送り</string>
+    <string name="tutorial_double_tap_seek">左右をダブルタップしてシーク</string>
+    <string name="tutorial_folders_selected">%1$d 個のフォルダーを選択済み</string>
+    <string name="tutorial_play_pause">再生 / 一時停止</string>
+    <string name="tutorial_three_tap">3本指でタップ</string>
+    <string name="tutorial_gesture_hint">3本指で表示方向にスワイプするか、動かさずにタップします。</string>
+    <string name="tutorial_recap_title">準備完了です！</string>
+    <string name="tutorial_recap_body">フォルダーの準備ができました。設定から追加できます。</string>
+    <string name="tutorial_begin">始めましょう！</string>
+    <string name="tutorial_control_help">操作の詳細</string>
+    <string name="tutorial_recap_empty">フォルダーは後から設定で追加できます。</string>
+    <string name="tutorial_setup_hint">言語とテーマは設定でいつでも変更できます。</string>
+    <string name="tutorial_ready">準備ができました！</string>
+    <string name="sound_section">セクション切り替え</string>
+    <string name="widget_effect_coin">コイン</string>
+</resources>

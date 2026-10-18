@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tv_title">"Online TV"</string>
+    <string name="tv_enabled">"Enable online TV"</string>
+    <string name="tv_navbar">"Show TV in the navigation bar"</string>
+    <string name="tv_favorites">"Show TV channels in Favorites"</string>
+    <string name="tv_my_channels">"My channels"</string>
+    <string name="tv_browse">"Browse channels"</string>
+    <string name="tv_empty">"No TV channels"</string>
+    <string name="tv_empty_help">Enter an HTTPS M3U playlist you are authorized to use. Up to 20 sources; importing never starts playback.</string>
+    <string name="tv_add">"Add channel"</string>
+    <string name="tv_url">"Stream HTTPS URL"</string>
+    <string name="tv_unverified">"One HLS stream only. The link is checked without starting playback."</string>
+    <string name="tv_network_notice">"Catalogs, logos and channels connect to external services, which will see your IP address."</string>
+    <string name="tv_countries">"Countries"</string>
+    <string name="tv_languages">"Languages"</string>
+    <string name="tv_categories">"Categories"</string>
+    <string name="tv_sources">"Sources"</string>
+    <string name="tv_watch">"Watch now"</string>
+    <string name="tv_edit">"Edit channel"</string>
+    <string name="tv_artwork">"Choose thumbnail"</string>
+    <string name="tv_restore">"Restore original details"</string>
+    <string name="tv_error_network">"Connection failed. Check your network and try again."</string>
+    <string name="tv_error_blocked">"Address not allowed. Use HTTPS on a public server."</string>
+    <string name="tv_error_forbidden">"The service denied access. This channel may be unavailable in your region."</string>
+    <string name="tv_error_not_found">"Source not found. Try another catalog or link."</string>
+    <string name="tv_error_large">"Content is too large to load safely."</string>
+    <string name="tv_error_format">"Unsupported format. Choose a single HLS stream."</string>
+    <string name="tv_error_live">"This source is not a live stream."</string>
+    <string name="tv_retry">"Try again"</string>
+    <string name="tv_return">"Bring back to this screen"</string>
+    <string name="tv_save_unverified">"Press Save again to keep this unverified channel."</string>
+    <string name="tv_search">"Search channels or catalogs"</string>
+    <string name="tv_replace_title">"Switch to TV?"</string>
+    <string name="tv_replace_description">"The current video will close to open this channel. Continue?"</string>
+    <string name="tv_optional_title">"Thumbnail title (optional)"</string>
+    <string name="tv_favorite_add">"Add to favorites?"</string>
+    <string name="tv_favorite_remove">"Remove from favorites?"</string>
+    <string name="tv_sleep_title">"TV paused"</string>
+    <string name="tv_sleep_message">"The live connection was closed during sleep. Reconnect?"</string>
+    <string name="info_tv_sources">TV: Media3 · user-provided sources</string>
+</resources>

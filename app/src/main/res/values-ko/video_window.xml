@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="video_pip">창으로 동영상 보기</string>
+    <string name="video_pip_active">창에서 재생 중</string>
+    <string name="video_pip_description">Android 창에서 동영상이 계속 재생됩니다. 갤러리를 탐색하거나 다른 앱을 여세요. 창의 컨트롤로 확대하거나 닫을 수 있습니다.</string>
+    <string name="video_pip_unavailable">동영상 창을 사용할 수 없습니다. Android 설정에서 화면 속 화면 권한을 확인하세요.</string>
+    <string name="video_return_screen">"이 화면으로 동영상 가져오기"</string>
+</resources>

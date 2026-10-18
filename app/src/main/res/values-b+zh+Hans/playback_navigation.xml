@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="playback_images">图像</string>
+    <string name="media_display_options">显示选项</string>
+</resources>

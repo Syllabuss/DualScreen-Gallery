@@ -1,0 +1,8 @@
+<resources>
+    <string name="image_backdrop_title">Fondo de imágenes transparentes</string>
+    <string name="image_backdrop_grid">Cuadrícula</string>
+    <string name="image_backdrop_tint">Cuadrícula coloreada</string>
+    <string name="image_backdrop_solid">Color uniforme</string>
+    <string name="image_backdrop_linear">Degradado vertical</string>
+    <string name="image_backdrop_radial">Degradado desde el centro</string>
+</resources>

@@ -1,0 +1,16 @@
+<resources>
+    <string name="settings_advanced">Avanzado</string>
+    <string name="settings_visible_buttons">Botones visibles</string>
+    <string name="settings_unsaved_title">Cambios sin guardar</string>
+    <string name="settings_unsaved_message">¿Salir sin guardar los cambios?</string>
+    <string name="settings_discard">Salir sin guardar</string>
+    <string name="settings_keep_editing">Seguir editando</string>
+    <string name="settings_folders_permission">El acceso a los archivos se concede al elegir carpetas en la biblioteca.</string>
+    <string name="settings_organize">Carpetas y colecciones</string>
+    <string name="settings_privacy">Privacidad</string>
+    <string name="settings_file_management">Gestión de archivos</string>
+    <string name="settings_manage_folders">Gestionar carpetas</string>
+    <string name="settings_folder_access_ready">Acceso disponible</string>
+    <string name="settings_folder_access_missing">Por configurar</string>
+    <string name="settings_album_tools_note">Estas opciones también se aplican a los archivos dentro de un álbum.</string>
+</resources>

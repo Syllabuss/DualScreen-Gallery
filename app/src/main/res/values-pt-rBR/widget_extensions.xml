@@ -1,0 +1,10 @@
+<resources>
+    <string name="widget_choose_track">Escolher música</string>
+    <string name="photo_slide_left">Deslizar à esquerda</string>
+    <string name="photo_slide_right">Deslizar à direita</string>
+    <string name="photo_slide_up">Deslizar para cima</string>
+    <string name="photo_slide_down">Deslizar para baixo</string>
+    <string name="photo_rotate">Rotação</string>
+    <string name="widget_circle_name">DS Gallery · Player Coin</string>
+    <string name="widget_effect_circle">Círculo</string>
+</resources>

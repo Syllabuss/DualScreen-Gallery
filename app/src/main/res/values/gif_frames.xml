@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:locale="it">
+    <string name="gif_current_frame">"Contatore del fotogramma corrente"</string>
+    <string name="gif_frame_selector">"Selettore dei fotogrammi"</string>
+    <string name="gif_current_of_total">"%1$s / %2$s fotogrammi"</string>
+</resources>

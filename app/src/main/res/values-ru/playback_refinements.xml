@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="music_cover_animation">Анимация обложки</string>
+    <string name="music_cover_normal">Без эффектов</string>
+    <string name="music_cover_pulse">Пульсация</string>
+    <string name="music_cover_disc_hole">Диск с отверстием</string>
+    <string name="music_cover_disc_solid">Диск без отверстия</string>
+    <string name="video_auto_dim">Автоматическое затемнение</string>
+    <string name="video_auto_dim_off">Выключено</string>
+    <string name="video_auto_dim_description">Во время видео экран навигации затемняется после выбранного времени без действий. Коснитесь его, чтобы включить. Выключено: используйте значок луны вручную. Поиск скрывает кнопку, но не останавливает таймер.</string>
+</resources>

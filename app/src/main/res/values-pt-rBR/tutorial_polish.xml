@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tutorial_folder_compact_body">Escolha o que mostrar. Subpastas viram álbuns.</string>
+    <string name="tutorial_permission_compact_purpose">Pastas: arquivos. Notificações: player. Sobreposições: comparações. Só quando necessário.</string>
+    <string name="tutorial_permission_compact_body">Abra uma pasta → Usar esta pasta → Permitir. Para Download, escolha uma subpasta.</string>
+    <string name="tutorial_actions_short">Ações e ajustes</string>
+    <string name="info_licenses">Licenças e componentes</string>
+    <string name="controller_guide_image_title">Imagens ampliadas</string>
+    <string name="controller_guide_image_body">Só com zoom ativo: o analógico esquerdo move a imagem; o direito para cima/baixo ajusta o zoom. O direcional navega pelos arquivos.</string>
+</resources>
