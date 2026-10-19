@@ -1,6 +1,6 @@
 # Known issues and verification limits
 
-Latest published build: **0.1.0-beta.124**, code **210**, on **main**, dated **2026-10-18**. First public beta.
+Latest published build: **0.1.0-beta.125**, code **211**, on **main**, dated **2026-10-19**. Public beta with single-screen support.
 
 ## Device coverage
 
@@ -8,7 +8,7 @@ DS Gallery was designed around the maintainer’s **AYN Thor**. It also supports
 
 Recent Thor checks covered returning both panels to iiSU, one Gallery card in Recents, software sleep/wake and a physical lid cycle, controller navigation, background music, video replacement, PiP return to Settings, and explicit access to Download/shared storage. These checks do not establish behavior on other firmware or devices. The eight-page tutorial was inspected at 800×600 and 800×480, including its folder recap and controller controls.
 
-The pending update was installed in place on Thor on October 19, preserving app data. The maintainer’s regression checks on that build are still pending. Phone checks covered settings list layout, the landscape toggle in both directions, folder selection including Download, converted-GIF swipes and filename display, and the empty-folder setting.
+The single-screen update was installed in place on Thor on October 19, preserving app data. The maintainer’s regression checks on that build are still pending. Phone checks covered settings list layout, the landscape toggle in both directions, folder selection including Download, converted-GIF swipes and filename display, and the empty-folder setting.
 
 ## Open limitations
 
@@ -29,7 +29,7 @@ The signed APK was installed in place on Thor without clearing data. Its four up
 
 The maintainer confirmed widget sizing, controller navigation, album actions, independent album views and TV/Music preview behavior. PiP return, settings preservation and lid reopening were also checked on Thor. Onboarding was exercised from a reset installation.
 
-The pending single-screen changes passed 922 JVM tests, lint and an optimized release build. The final orientation-toggle adjustment then passed 14 targeted tests, lint and an optimized release build, plus an on-phone on/off check. These local checks are separate from the published beta.124 CI result above.
+The single-screen changes passed 922 JVM tests, lint and an optimized release build. The final orientation-toggle adjustment then passed 14 targeted tests, lint and an optimized release build, plus an on-phone on/off check. These local checks are separate from the published beta.124 CI result above.
 
 ## Distribution and third-party assets
 

@@ -2,7 +2,7 @@
 <h1 align="center">DS Gallery (DualScreen Gallery)</h1>
 <p align="center">Your media. Two screens. One gallery.</p>
 <p align="center"><strong>Android · Kotlin · Jetpack Compose · AYN Thor</strong><br />Public beta · Created by Syllabuss</p>
-<p align="center"><a href="https://github.com/Syllabuss/DualScreen-Gallery/releases">Downloads</a> · <a href="docs/USER_GUIDE.md">User guide</a> · <a href="https://ko-fi.com/syllabuss">♥ Support on Ko-fi</a></p>
+<p align="center"><a href="https://github.com/Syllabuss/DualScreen-Gallery/releases/tag/v0.1.0-beta.125">Downloads</a> · <a href="docs/USER_GUIDE.md">User guide</a> · <a href="https://ko-fi.com/syllabuss">♥ Support on Ko-fi</a></p>
 
 DS Gallery started as something I was making for myself. I wanted to choose exactly which folders became albums, rather than hide half my device after every scan. I also wanted a gallery that actually used both screens of my AYN Thor. I tried other apps, but none quite worked the way I wanted.
 
@@ -64,7 +64,7 @@ With one screen, browsing and playback share the same display. Settings uses a l
 
 Optional online TV supports user-supplied HTTPS M3U playlists, a personal channel list and live playback through the existing video/PiP coordinator. It starts disabled. See the [TV guide](docs/TV.md) for setup and limits; online TV is experimental.
 
-1. Download the APK from the **[Releases](https://github.com/Syllabuss/DualScreen-Gallery/releases)** page.
+1. Download the APK from the **[Releases](https://github.com/Syllabuss/DualScreen-Gallery/releases/tag/v0.1.0-beta.125)** page.
 2. Install it on Android 9 or later. Existing installations should be updated in place; do not uninstall to update.
 3. Open the gallery and choose a folder containing photos or videos. Add music folders separately in **Settings → Info and permissions**.
 4. On Thor, check **Open on two screens at startup** in Screens and backup. A opens, B navigates back, X opens contextual options, Y swaps the panels, L3 opens PhotoFrame and R3 changes the view. The tutorial shows the current controller mappings.

@@ -24,7 +24,7 @@ Nel [README principale](../README.md#see-it-in-use-y-swaps-the-screens) trovi le
 
 ## Per iniziare
 
-Serve Android 9 o successivo. Scarica un APK disponibile dalle [release](https://github.com/Syllabuss/DualScreen-Gallery/releases) e aggiorna senza disinstallare per conservare i dati. Consulta i [limiti aperti](KNOWN_ISSUES.md).
+Serve Android 9 o successivo. Scarica un APK disponibile dalle [release](https://github.com/Syllabuss/DualScreen-Gallery/releases/tag/v0.1.0-beta.125) e aggiorna senza disinstallare per conservare i dati. Consulta i [limiti aperti](KNOWN_ISSUES.md).
 
 Al primo avvio il tutorial ti accompagna nella scelta di lingua, tema e cartelle. Puoi aggiungere altre sorgenti da **Impostazioni → Info e permessi → Cartelle multimediali**.
 
