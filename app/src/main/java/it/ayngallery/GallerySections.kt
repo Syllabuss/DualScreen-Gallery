@@ -1,7 +1,8 @@
 package it.ayngallery
 
-import androidx.compose.animation.animateContentSize
 import androidx.compose.animation.core.VectorConverter
+import androidx.compose.animation.core.animateFloat
+import androidx.compose.foundation.gestures.waitForUpOrCancellation
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.*
 import androidx.compose.foundation.gestures.awaitEachGesture
@@ -213,7 +214,34 @@ fun AlbumScreen(activity: PanelActivity, data: CatalogSnapshot, task: (suspend (
         "stocking_pink" -> androidx.compose.ui.graphics.Color(0xFFC4F66B)
         else -> MaterialTheme.colorScheme.secondary
     }
+    val route by vm.route.collectAsStateWithLifecycle()
+    var focusedAlbum by remember { mutableStateOf<String?>(null) }
+    var swapFocusTarget by remember { mutableStateOf<String?>(null) }
+    var pairReorder by remember(route.tab, route.album) { mutableStateOf(false) }
+    var swapFirst by remember(route.tab, route.album) { mutableStateOf<String?>(null) }
+    androidx.activity.compose.BackHandler(enabled = pairReorder) { pairReorder = false; swapFirst = null }
     fun choose(album: AlbumEntity) {
+        if (pairReorder) {
+            val first = swapFirst
+            if (first == null) swapFirst = album.id
+            else if (first == album.id) swapFirst = null
+            else {
+                val next = (app.preferences.albumOrder.value + albumIds).distinct().toMutableList()
+                val a = next.indexOf(first)
+                val b = next.indexOf(album.id)
+                if (a >= 0 && b >= 0) {
+                    java.util.Collections.swap(next, a, b)
+                    app.preferences.reorderAlbums(next)
+                    focusedAlbum = first
+                    vm.albumAnchor = first
+                    app.session.previewAlbum(first)
+                    swapFocusTarget = first
+                    app.sounds.play("reorder")
+                }
+                swapFirst = null
+            }
+            return
+        }
         app.video.browsePreview(null)
         app.sounds.play("navigate")
         app.session.previewAlbum(album.id)
@@ -239,9 +267,14 @@ fun AlbumScreen(activity: PanelActivity, data: CatalogSnapshot, task: (suspend (
             .map { it.id to width.toLong() * width * if ((sizes[it.id] ?: 2) == 4) 4 else 1 }, prefs.albumCoverLimit)
     } }
     val inputMode = androidx.compose.ui.platform.LocalInputModeManager.current.inputMode
-    var focusedAlbum by remember { mutableStateOf<String?>(null) }
     var initialFocusRequested by remember(grid, inputMode) { mutableStateOf(false) }
     val focusRequests = remember { mutableMapOf<String, androidx.compose.ui.focus.FocusRequester>() }
+    LaunchedEffect(swapFocusTarget) {
+        val id = swapFocusTarget ?: return@LaunchedEffect
+        androidx.compose.runtime.withFrameNanos { }
+        focusRequests[id]?.requestFocus()
+        swapFocusTarget = null
+    }
     val focusScope = rememberCoroutineScope()
     var focusJob by remember { mutableStateOf<kotlinx.coroutines.Job?>(null) }
     var preferredColumn by remember(columns) { mutableIntStateOf(-1) }
@@ -430,7 +463,7 @@ fun AlbumScreen(activity: PanelActivity, data: CatalogSnapshot, task: (suspend (
         val tileFocus = remember(album.id) { focusRequests.getOrPut(album.id) { androidx.compose.ui.focus.FocusRequester() } }
         val hover = remember { androidx.compose.foundation.interaction.MutableInteractionSource() }
         val hovered by hover.collectIsHoveredAsState()
-        LaunchedEffect(hovered) { if (hovered && dragged == null) { app.video.browsePreview(null); app.session.previewAlbum(album.id) } }
+        LaunchedEffect(hovered) { if (hovered && !menu && dragged == null) { app.video.browsePreview(null); app.session.previewAlbum(album.id) } }
         var coordinates by remember(album.id) { mutableStateOf<androidx.compose.ui.layout.LayoutCoordinates?>(null) }
         DisposableEffect(album.id) { onDispose { if (positions[album.id] === coordinates) positions.remove(album.id) } }
         LaunchedEffect(inputMode, coordinates, grid, anchor) {
@@ -440,11 +473,19 @@ fun AlbumScreen(activity: PanelActivity, data: CatalogSnapshot, task: (suspend (
         var focused by remember(album.id) { mutableStateOf(false) }
         val chosen = album.id in selected
         val active = if (dragged != null) dragged == album.id else if (focusedAlbum != null) focusedAlbum == album.id else focused || anchor == album.id
-        // Translate the whole tile outside animateContentSize's clip, including its border.
+        val swapSelected = pairReorder && swapFirst == album.id
+        val swapScale = if (swapSelected && !prefs.reducedMotion) {
+            val pulse = androidx.compose.animation.core.rememberInfiniteTransition(label = "album-swap")
+            val scale by pulse.animateFloat(1.025f, 1.055f,
+                androidx.compose.animation.core.infiniteRepeatable(tween(700), androidx.compose.animation.core.RepeatMode.Reverse), label = "album-swap-scale")
+            scale
+        } else if (swapSelected) 1.04f else 1f
+        // Translate the tile and its border together during drag previews.
         Surface(Modifier.graphicsLayer {
-            alpha = if (album.id in draggedIds) .18f else 1f
+            scaleX = swapScale; scaleY = swapScale
+            alpha = if (dragMoved && album.id in draggedIds) .18f else 1f
             if (placement != null) { translationX = animatedOffset.value.x - placement.x; translationY = animatedOffset.value.y - placement.y }
-        }.hoverable(hover).then(if (carousel) Modifier else Modifier.animateContentSize(tween(if (prefs.reducedMotion || dragged != null) 0 else 260))).fillMaxWidth().onGloballyPositioned { coordinates = it; positions[album.id] = it }.focusRequester(tileFocus).testTag("album:${album.id}").onFocusChanged { focused = it.isFocused; if (it.isFocused && (dragged == null || dragged == album.id)) { if (focusedAlbum != null && focusedAlbum != album.id) app.video.browsePreview(null); focusedAlbum = album.id; if (controllerFocusTarget != album.id) preferredColumn = geometry[currentAlbumIds.indexOf(album.id).coerceAtLeast(0)].center; controllerFocusTarget = null; val previous = app.session.previewAlbumId; app.sounds.navigation("album:${album.id}"); vm.albumAnchor = album.id; app.session.previewAlbum(album.id); if (grid) {
+        }.hoverable(hover).fillMaxWidth().onGloballyPositioned { coordinates = it; positions[album.id] = it }.focusRequester(tileFocus).testTag("album:${album.id}").onFocusChanged { focused = it.isFocused; if (it.isFocused && (dragged == null || dragged == album.id)) { if (focusedAlbum != null && focusedAlbum != album.id) app.video.browsePreview(null); focusedAlbum = album.id; if (controllerFocusTarget != album.id) preferredColumn = geometry[currentAlbumIds.indexOf(album.id).coerceAtLeast(0)].center; controllerFocusTarget = null; val previous = app.session.previewAlbumId; app.sounds.navigation("album:${album.id}"); vm.albumAnchor = album.id; app.session.previewAlbum(album.id); if (grid) {
                     val from = geometry.getOrNull(currentAlbumIds.indexOf(previous))
                     val to = geometry.getOrNull(currentAlbumIds.indexOf(album.id))
                     app.session.gridPreviewDirection = if (from == null || to == null) androidx.compose.ui.unit.IntOffset.Zero
@@ -459,14 +500,15 @@ fun AlbumScreen(activity: PanelActivity, data: CatalogSnapshot, task: (suspend (
                     true
                 } else false
             }.focusable(), shape = if (grid && columns >= 5) RoundedCornerShape(5.dp) else GalleryShape,
-            border = BorderStroke(if (active && (selected.isEmpty() || dragged != null) || chosen) 3.dp else 1.dp,
-                if (active && dragged != null) GalleryFocus else if (chosen) selectionColor else if (active && selected.isEmpty()) GalleryFocus else MaterialTheme.colorScheme.outlineVariant),
+            border = BorderStroke(if (swapSelected || active && (selected.isEmpty() || dragged != null) || chosen) 3.dp else 1.dp,
+                if (swapSelected) androidx.compose.ui.graphics.Color(0xFF69FFF1) else if (active && dragged != null) GalleryFocus else if (chosen) selectionColor else if (active && selected.isEmpty()) GalleryFocus else MaterialTheme.colorScheme.outlineVariant),
             color = MaterialTheme.colorScheme.surface) {
-            AlbumTileContent(album, data, app.catalog, prefs, LocalAlbumTileGrid.current, columns, chosen, selectionColor, selected.isNotEmpty(), carouselLabel = carouselLabel) { choose(album) }
+            AlbumTileContent(album, data, app.catalog, prefs, LocalAlbumTileGrid.current, columns, chosen, selectionColor, selected.isNotEmpty(),
+                carouselLabel = carouselLabel, reorderScale = swapScale.takeIf { pairReorder }, reorderSelected = swapSelected) { choose(album) }
         }
     }
     val currentAlbums by rememberUpdatedState(albums)
-    Box(Modifier.fillMaxSize().testTag("album-reorder-surface").onGloballyPositioned { container = it }.pointerInput(query, grid, columns, horizontal, horizontalGrid, carousel) {
+    Box(Modifier.fillMaxSize().testTag("album-reorder-surface").onGloballyPositioned { container = it }.pointerInput(query, grid, columns, horizontal, horizontalGrid, carousel, pairReorder) {
                 awaitEachGesture {
                     val down = awaitFirstDown(requireUnconsumed = true)
                     val rootPoint = container?.localToRoot(down.position) ?: down.position
@@ -475,6 +517,11 @@ fun AlbumScreen(activity: PanelActivity, data: CatalogSnapshot, task: (suspend (
                     focusedAlbum = album.id
                     vm.albumAnchor = album.id
                     app.session.previewAlbum(album.id)
+                    if (pairReorder) {
+                        val up = waitForUpOrCancellation()
+                        if (up != null) { up.consume(); choose(album) }
+                        return@awaitEachGesture
+                    }
                     val held = awaitLongPressOrCancellation(down.id)
                     if (held == null) {
                         val up = currentEvent.changes.firstOrNull { it.id == down.id && it.changedToUpIgnoreConsumed() }
@@ -603,7 +650,7 @@ fun AlbumScreen(activity: PanelActivity, data: CatalogSnapshot, task: (suspend (
     }
     }
     }
-    dragged?.let { id ->
+    dragged?.takeIf { dragMoved }?.let { id ->
         val album = data.albumsById[id]
         val origin = container?.takeIf { it.isAttached }?.localToRoot(Offset.Zero) ?: Offset.Zero
         val density = androidx.compose.ui.platform.LocalDensity.current
@@ -622,6 +669,7 @@ fun AlbumScreen(activity: PanelActivity, data: CatalogSnapshot, task: (suspend (
         app.session.albumCommand = null
         vm.albumMenu(false)
         when (kind) {
+            "REORDER" -> { pairReorder = true; swapFirst = null; vm.selectAlbums(emptySet()) }
             "COVER" -> coverAlbum = frozen.singleOrNull()
             "SIZE1", "SIZE2" -> { if (!prefs.albumCarousel) { if (vm.route.value.tab == "VIDEO") app.preferences.videoAlbumSize(frozen, if (kind == "SIZE1") 2 else 4) else app.preferences.albumSize(frozen, if (kind == "SIZE1") 2 else 4) }; vm.selectAlbums(emptySet()) }
             "LOCK" -> { pinAlbums = frozen; pinMode = if (frozen.all { it in data.protectedAlbumIds }) "REMOVE" else "PROTECT" }
@@ -732,7 +780,7 @@ internal fun DisplayControls(activity: PanelActivity) {
         if (session.screens.size > 1) GallerySettingSwitch(localized(R.string.text_open_on_two_screens_at_startup_7c2cb7, "Apri su due schermi all'avvio"),
             others.size == 1 && (session.startupAutomatic || session.startupPair == setOf(activity.screenKey, others.single().key)),
             Modifier.testTag("startup-dual"), enabled = others.size == 1) { enabled ->
-                if (enabled) session.rememberStartupPair(activity, true) else session.single(activity)
+                if (enabled) session.openOnTwoScreens(activity) else session.single(activity)
             }
         if (session.isSingleScreen) {
             GallerySettingSwitch(localized(R.string.text_use_only_this_screen_f859c0, "Usa solo questo schermo"), true, Modifier.testTag("single-screen-active"), enabled = session.screens.size > 1) {
@@ -852,6 +900,7 @@ internal fun AlbumOptionsDialog(app: GalleryApp, data: CatalogSnapshot, ids: Set
                 Text(localized(R.string.album_tile_size, "Dimensione album"))
                 Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) { GalleryButton("1×", Modifier.weight(1f)) { command("SIZE1") }; GalleryButton("2×", Modifier.weight(1f)) { command("SIZE2") } }
             }
+            GalleryButton(localized(R.string.album_pair_reorder, "Riordina gli album"), Modifier.fillMaxWidth().testTag("album-pair-reorder"), icon = R.drawable.ph_arrows_left_right) { command("REORDER") }
             val protected = ids.all { it in data.protectedAlbumIds }
             GalleryButton(localized(if (protected) R.string.album_unlock_action else R.string.album_lock_action, ""), Modifier.fillMaxWidth()) { command("LOCK") }
             GalleryButton(localized(R.string.text_hide_12292a, "Nascondi"), Modifier.fillMaxWidth()) { command("HIDE") }

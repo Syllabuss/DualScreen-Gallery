@@ -1822,4 +1822,5 @@
     <string name="horizontal_albums">横向浏览相册和文件夹</string>
     <string name="album_carousel">相册和文件夹轮播</string>
     <string name="video_skip_preview">跳过预览直接播放视频</string>
+    <string name="album_pair_reorder">重新排列相册</string>
 </resources>

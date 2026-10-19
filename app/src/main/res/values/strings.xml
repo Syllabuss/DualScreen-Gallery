@@ -174,4 +174,5 @@
     <string name="horizontal_albums">Scorrimento orizzontale di album e cartelle</string>
     <string name="album_carousel">Carosello di album e cartelle</string>
     <string name="video_skip_preview">Avvia i video senza anteprima</string>
+    <string name="album_pair_reorder">Riordina gli album</string>
 </resources>

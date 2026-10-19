@@ -1822,4 +1822,5 @@
     <string name="horizontal_albums">Просматривать альбомы и папки горизонтально</string>
     <string name="album_carousel">Карусель альбомов и папок</string>
     <string name="video_skip_preview">Запускать видео без предпросмотра</string>
+    <string name="album_pair_reorder">Изменить порядок альбомов</string>
 </resources>

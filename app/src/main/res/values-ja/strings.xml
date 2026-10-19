@@ -1822,4 +1822,5 @@
     <string name="horizontal_albums">アルバムとフォルダを横にスクロール</string>
     <string name="album_carousel">アルバムとフォルダのカルーセル</string>
     <string name="video_skip_preview">プレビューせずに動画を再生</string>
+    <string name="album_pair_reorder">アルバムを並べ替え</string>
 </resources>

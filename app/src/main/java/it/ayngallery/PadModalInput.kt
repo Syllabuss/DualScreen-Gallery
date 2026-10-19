@@ -63,6 +63,9 @@ internal fun PadModalRegistration(runtime: PadModalRuntime, dismiss: () -> Unit,
     val app = LocalContext.current.applicationContext as? GalleryApp ?: return
     val owner = generateSequence(LocalContext.current) { (it as? android.content.ContextWrapper)?.baseContext }
         .filterIsInstance<PanelActivity>().firstOrNull()
+    val dialogWindow = (view.parent as? androidx.compose.ui.window.DialogWindowProvider)?.window
+    SideEffect { if (dialogWindow != null) owner?.applyDialogWindow(dialogWindow) }
+
     val dismissNow = rememberUpdatedState(dismiss)
     LaunchedEffect(rootFocus, autoFocus, initialFocus) {
         if (autoFocus) inputMode.requestInputMode(InputMode.Keyboard)

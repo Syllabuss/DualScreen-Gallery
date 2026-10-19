@@ -425,15 +425,21 @@ abstract class PanelActivity : ComponentActivity() {
     private var galleryImmersive = false
     fun immersivePreview(enabled: Boolean) {
         galleryImmersive = enabled
+        applyImmersiveWindow(window, enabled)
+    }
+
+    internal fun applyDialogWindow(target: android.view.Window) = applyImmersiveWindow(target, galleryImmersive)
+
+    private fun applyImmersiveWindow(target: android.view.Window, enabled: Boolean) {
         val app = application as GalleryApp
         val shaded = manuallyDimmed || app.video.dimNavigation && app.video.owner != slot || windowModel.frameDimmed.value
         val showStatus = !session.isSingleScreen && app.preferences.state.value.showUpperStatusBar &&
             session.screens.firstOrNull { it.key == screenKey }?.id == android.view.Display.DEFAULT_DISPLAY && !shaded
-        if (session.isSingleScreen) window.attributes = window.attributes.apply {
+        if (session.isSingleScreen) target.attributes = target.attributes.apply {
             layoutInDisplayCutoutMode = android.view.WindowManager.LayoutParams.LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES
         }
-        androidx.core.view.WindowCompat.setDecorFitsSystemWindows(window, showStatus && !enabled)
-        val bars = androidx.core.view.WindowCompat.getInsetsController(window, window.decorView)
+        androidx.core.view.WindowCompat.setDecorFitsSystemWindows(target, showStatus && !enabled)
+        val bars = androidx.core.view.WindowCompat.getInsetsController(target, target.decorView)
         bars.systemBarsBehavior = androidx.core.view.WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
         bars.hide(androidx.core.view.WindowInsetsCompat.Type.systemBars())
         if (showStatus) bars.show(androidx.core.view.WindowInsetsCompat.Type.statusBars())

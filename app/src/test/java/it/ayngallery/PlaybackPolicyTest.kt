@@ -75,7 +75,7 @@ class PlaybackPolicyTest {
         app.preferences.save(enabled)
         val stored = PreferenceStore(app).state.value
         assertTrue(stored.musicDuringSleep && stored.videoDuringSleep)
-        val old = org.json.JSONObject(PreferencesTransfer.encode(enabled)).put("version", 31).apply { getJSONObject("preferences").remove("showEmptyFolders") }
+        val old = org.json.JSONObject(PreferencesTransfer.encode(enabled)).put("version", 31).apply { getJSONObject("preferences").apply { remove("showEmptyFolders"); remove("horizontalAlbums"); remove("albumCarousel"); remove("videoSkipPreview") } }
         old.getJSONObject("preferences").remove("musicDuringSleep")
         old.getJSONObject("preferences").remove("videoDuringSleep")
         assertFalse(PreferencesTransfer.decode(old.toString()).musicDuringSleep)

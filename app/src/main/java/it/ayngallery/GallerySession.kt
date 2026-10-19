@@ -131,11 +131,16 @@ class GallerySession(private val app: Application) : DisplayManager.DisplayListe
             startupPair = pair; startupAutomatic = false
             if (enabled) {
                 prefs.edit().putBoolean("usage_access_deferred", false).apply()
-                val target = screens.single { it.key in pair && it.key != activity.screenKey }
-                expand(activity, target)
-                activity.recreate()
+                save(state.copy(ceded = state.ceded - pair))
             }
         } else fail(localized(R.string.text_startup_preference_not_saved_febc48, "Preferenza di avvio non salvata."))
+    }
+    fun openOnTwoScreens(activity: PanelActivity) {
+        rememberStartupPair(activity, true)
+        if (startupPair.size != 2 || activity.screenKey !in startupPair) return
+        val target = screens.singleOrNull { it.key in startupPair && it.key != activity.screenKey } ?: return
+        expand(activity, target)
+        activity.recreate()
     }
     private val restoreSavedPreview = (app as? GalleryApp)?.preferences?.state?.value?.persistSelectedMedia == true
     var selectedMediaId by mutableStateOf(if (restoreSavedPreview) prefs.getString("selected_media", null) else null)

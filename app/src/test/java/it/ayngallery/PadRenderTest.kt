@@ -255,11 +255,11 @@ class PadRenderTest {
         assertTrue(app.session.settingsDraft!!.showMediaNames)
         compose.onNodeWithText("Mostra album musicali in Album").assertDoesNotExist()
     }
-    @Test fun singleScreenSettingsDisableGridAndShowOnlyThisScreenAsActive() {
+    @Test fun singleScreenSettingsHideGridAndShowOnlyThisScreenAsActive() {
         start()
         app.session.openSettings(panel)
         compose.waitForIdle()
-        compose.onNodeWithTag("settings-view-toggle").assertIsNotEnabled()
+        compose.onNodeWithTag("settings-view-toggle").assertDoesNotExist()
         val first = compose.onNodeWithTag("settings-category:INTERFACE").fetchSemanticsNode().boundsInRoot
         val second = compose.onNodeWithTag("settings-category:PLAYBACK").fetchSemanticsNode().boundsInRoot
         assertTrue(second.top >= first.bottom)
@@ -483,7 +483,7 @@ class PadRenderTest {
         assertEquals(.55f, app.video.player!!.volume, .001f)
     }
     @Test fun manualMoonWorksWithoutPlaybackAndTouchOrControllerWakesIt() {
-        start(); val initial = panel.windowModel.route.value
+        start(); focusPreview(); val initial = panel.windowModel.route.value
         assertNull(app.video.player)
         panel.performTouchAction(TouchAction.DIM); compose.waitForIdle()
         assertTrue(panel.manuallyDimmed)

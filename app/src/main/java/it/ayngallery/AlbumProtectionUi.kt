@@ -80,13 +80,20 @@ internal fun AlbumLockBadge(modifier: Modifier = Modifier, large: Boolean = fals
 internal val LocalAnimatedAlbumIds = androidx.compose.runtime.compositionLocalOf { emptySet<String>() }
 
 @Composable
-internal fun AlbumCover(album: AlbumEntity, data: CatalogSnapshot, catalog: Catalog, prefs: GalleryPreferences, modifier: Modifier) {
+internal fun AlbumCover(album: AlbumEntity, data: CatalogSnapshot, catalog: Catalog, prefs: GalleryPreferences, modifier: Modifier, reorderScale: Float? = null, reorderSelected: Boolean = false) {
     val locked = data.albumLocked(album.id)
     Box(modifier) {
         val animated = album.id in LocalAnimatedAlbumIds.current
         MediaThumbnail(if (locked) data.lockedCover(album) else data.cover(album), data, catalog, prefs, Modifier.fillMaxSize(),
             animated = prefs.animatedAlbumCovers && !locked && animated, lockedAlbumCover = album.id.takeIf { locked })
         if (album.id in data.protectedAlbumIds || locked) AlbumLockBadge(Modifier.align(Alignment.Center))
+        if (reorderScale != null) Surface(Modifier.align(Alignment.Center).size(52.dp)
+            .graphicsLayer { scaleX = reorderScale; scaleY = reorderScale }.testTag("album-swap-marker:${album.id}"),
+            shape = CircleShape, color = MaterialTheme.colorScheme.surface.copy(alpha = .96f),
+            border = androidx.compose.foundation.BorderStroke(2.dp,
+                if (reorderSelected) androidx.compose.ui.graphics.Color(0xFF69FFF1) else MaterialTheme.colorScheme.primary)) {
+            Box(contentAlignment = Alignment.Center) { GalleryIcon(R.drawable.ph_arrows_left_right, null, Modifier.size(24.dp)) }
+        }
     }
 }
 

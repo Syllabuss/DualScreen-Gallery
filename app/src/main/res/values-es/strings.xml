@@ -1822,4 +1822,5 @@
     <string name="horizontal_albums">Desplazar álbumes y carpetas horizontalmente</string>
     <string name="album_carousel">Carrusel de álbumes y carpetas</string>
     <string name="video_skip_preview">Reproducir vídeos sin vista previa</string>
+    <string name="album_pair_reorder">Reordenar álbumes</string>
 </resources>

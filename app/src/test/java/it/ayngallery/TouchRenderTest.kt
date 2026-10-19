@@ -1079,7 +1079,7 @@ class TouchRenderTest {
         compose.onNodeWithTag("settings-preview-album:album").assertIsDisplayed().assert(hasClickAction().not())
         compose.onNodeWithTag("navbar:ALBUM").assertIsDisplayed().assertIsNotEnabled()
         compose.onNodeWithTag("settings-preview-tool:PHOTO:FILTER:${R.drawable.ph_funnel}").assertDoesNotExist()
-        compose.onNodeWithTag("settings-preview-swap").assertIsDisplayed()
+        compose.onNodeWithTag("settings-preview-swap").assertDoesNotExist()
         panel.setContent { SettingsPreviewScreen(app, data, prefs.copy(hiddenTools = prefs.hiddenTools + "ALBUM:SWAP"), "INTERFACE") }
         compose.onNodeWithTag("settings-preview-swap").assertDoesNotExist()
     }
@@ -1353,6 +1353,8 @@ class TouchRenderTest {
     }
     @Test fun playbackCoverAndIdleChoicesApplyOnlyAfterSaving() {
         start()
+        org.robolectric.shadows.ShadowDisplayManager.addDisplay("w800dp-h600dp")
+        app.session.refreshDisplays()
         compose.onNodeWithContentDescription("Impostazioni").performClick()
         compose.onNodeWithTag("settings-category:PLAYBACK").performClick()
         compose.onNodeWithTag("playback-tab:MUSIC").performClick()

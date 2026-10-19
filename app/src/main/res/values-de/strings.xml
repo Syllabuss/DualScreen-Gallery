@@ -1822,4 +1822,5 @@
     <string name="horizontal_albums">Alben und Ordner horizontal durchblättern</string>
     <string name="album_carousel">Album- und Ordnerkarussell</string>
     <string name="video_skip_preview">Videos ohne Vorschau starten</string>
+    <string name="album_pair_reorder">Alben neu anordnen</string>
 </resources>

@@ -113,7 +113,7 @@ class PreferencesTransferTest {
         val old = JSONObject(PreferencesTransfer.encode(enabled)).legacyVersion(20)
         old.apply { getJSONObject("preferences").apply { remove("gifFrameCounter"); remove("gifFrameSelector"); remove("ftpEnabled"); remove("previewPinEnabled"); remove("comparisonEnabled"); remove("animatedAlbumCovers"); remove("videoKeepPlaying") } }
         old.getJSONObject("preferences").remove("videoMixAudio")
-        assertEquals(enabled.copy(videoMixAudio = false), PreferencesTransfer.decode(old.toString()))
+        assertEquals(enabled.copy(videoMixAudio = false, musicColorMode = "THEME"), PreferencesTransfer.decode(old.toString()))
     }
     @Test fun autoHideIsOptInPortableAndRetiredMusicAlbumFlagCannotBeRestored() = runBlocking {
         val store = PreferenceStore(RuntimeEnvironment.getApplication())
@@ -211,7 +211,7 @@ class PreferencesTransferTest {
         val old = JSONObject(PreferencesTransfer.encode(value)).legacyVersion(8)
         old.apply { getJSONObject("preferences").apply { remove("gifFrameCounter"); remove("gifFrameSelector"); remove("ftpEnabled"); remove("previewPinEnabled"); remove("comparisonEnabled"); remove("animatedAlbumCovers"); remove("videoKeepPlaying") } }
         listOf("showMusicAlbums", "disabledCategories", "disabledSounds", "persistSelectedMedia", "directDeleteEnabled", "nestedAlbums", "backgroundMode", "backgroundEnd", "backgroundStrength", "backgroundMedia", "backgroundOpacity", "albumShadows", "albumStudio", "videoStickControls", "backgroundX", "backgroundY", "backgroundZoom", "defaultSection", "imagePreviewName", "gridPreviewMotion", "controllerSorting", "musicCoverEffect", "videoDimSeconds", "imageOverlayAutoHide", "videoMixAudio").forEach { old.getJSONObject("preferences").remove(it) }
-        assertEquals(GalleryPreferences(), PreferencesTransfer.decode(old.toString()))
+        assertEquals(GalleryPreferences(musicColorMode = "THEME"), PreferencesTransfer.decode(old.toString()))
     }
     @Test fun soundAndGifChoicesPersistAndRoundTripIncludingUnlimitedVisibleAnimation() = runBlocking {
         val value = GalleryPreferences(gifMode = "VISIBLE", gifLimit = 0, hideGifBadge = true, uiSounds = false)
@@ -222,7 +222,7 @@ class PreferencesTransferTest {
         val old = JSONObject(PreferencesTransfer.encode(value)).legacyVersion(7)
         old.apply { getJSONObject("preferences").apply { remove("gifFrameCounter"); remove("gifFrameSelector"); remove("ftpEnabled"); remove("previewPinEnabled"); remove("comparisonEnabled"); remove("animatedAlbumCovers"); remove("videoKeepPlaying") } }.apply { listOf("showMusicAlbums", "disabledCategories", "disabledSounds", "persistSelectedMedia", "directDeleteEnabled", "nestedAlbums", "backgroundMode", "backgroundEnd", "backgroundStrength", "backgroundMedia", "backgroundOpacity", "albumShadows", "albumStudio", "videoStickControls", "backgroundX", "backgroundY", "backgroundZoom", "defaultSection", "imagePreviewName", "gridPreviewMotion", "controllerSorting", "musicCoverEffect", "videoDimSeconds", "imageOverlayAutoHide", "videoMixAudio").forEach { getJSONObject("preferences").remove(it) } }
         old.getJSONObject("preferences").remove("hideGifBadge"); old.getJSONObject("preferences").remove("uiSounds")
-        assertEquals(value.copy(hideGifBadge = false, uiSounds = true), PreferencesTransfer.decode(old.toString()))
+        assertEquals(value.copy(hideGifBadge = false, uiSounds = true, musicColorMode = "THEME"), PreferencesTransfer.decode(old.toString()))
     }
     @Test fun visibleSwapDefaultsKeepExplicitHiddenToolsAcrossRestart() = runBlocking {
         val context = RuntimeEnvironment.getApplication()
@@ -248,7 +248,7 @@ class PreferencesTransferTest {
         old.apply { getJSONObject("preferences").apply { remove("gifFrameCounter"); remove("gifFrameSelector"); remove("ftpEnabled"); remove("previewPinEnabled"); remove("comparisonEnabled"); remove("animatedAlbumCovers"); remove("videoKeepPlaying") } }.apply { listOf("showMusicAlbums", "disabledCategories", "disabledSounds", "persistSelectedMedia", "directDeleteEnabled", "nestedAlbums", "backgroundMode", "backgroundEnd", "backgroundStrength", "backgroundMedia", "backgroundOpacity", "albumShadows", "albumStudio", "videoStickControls", "backgroundX", "backgroundY", "backgroundZoom", "defaultSection", "imagePreviewName", "gridPreviewMotion", "controllerSorting", "musicCoverEffect", "videoDimSeconds", "imageOverlayAutoHide", "videoMixAudio").forEach { getJSONObject("preferences").remove(it) } }
         old.getJSONObject("preferences").remove("hiddenTools")
         old.getJSONObject("preferences").remove("timelineModes"); old.getJSONObject("preferences").remove("hideGifBadge"); old.getJSONObject("preferences").remove("uiSounds")
-        assertEquals(GalleryPreferences(), PreferencesTransfer.decode(old.toString()))
+        assertEquals(GalleryPreferences(musicColorMode = "THEME"), PreferencesTransfer.decode(old.toString()))
         val exported = JSONObject(PreferencesTransfer.encode(value)).getJSONObject("preferences")
         assertFalse(exported.has("hash"))
         assertFalse(exported.has("salt"))
@@ -274,12 +274,12 @@ class PreferencesTransferTest {
         assertEquals(enabled, PreferencesTransfer.decode(PreferencesTransfer.encode(enabled)))
         val v3 = JSONObject(PreferencesTransfer.encode(enabled)).legacyVersion(3)
         v3.apply { getJSONObject("preferences").apply { remove("gifFrameCounter"); remove("gifFrameSelector"); remove("ftpEnabled"); remove("previewPinEnabled"); remove("comparisonEnabled"); remove("animatedAlbumCovers"); remove("videoKeepPlaying") } }.apply { listOf("showMusicAlbums", "disabledCategories", "disabledSounds", "persistSelectedMedia", "directDeleteEnabled", "nestedAlbums", "backgroundMode", "backgroundEnd", "backgroundStrength", "backgroundMedia", "backgroundOpacity", "albumShadows", "albumStudio", "videoStickControls", "backgroundX", "backgroundY", "backgroundZoom", "defaultSection", "imagePreviewName", "gridPreviewMotion", "controllerSorting", "musicCoverEffect", "videoDimSeconds", "imageOverlayAutoHide", "videoMixAudio").forEach { getJSONObject("preferences").remove(it) } }.apply { getJSONObject("preferences").remove("navbarLabels"); getJSONObject("preferences").remove("navbarOrder"); getJSONObject("preferences").remove("customTheme"); getJSONObject("preferences").remove("hiddenTools"); getJSONObject("preferences").remove("timelineModes"); getJSONObject("preferences").remove("hideGifBadge"); getJSONObject("preferences").remove("uiSounds") }
-        assertEquals(enabled.copy(navbarLabels = false), PreferencesTransfer.decode(v3.toString()))
+        assertEquals(enabled.copy(navbarLabels = false, musicColorMode = "THEME"), PreferencesTransfer.decode(v3.toString()))
         val legacy = JSONObject(PreferencesTransfer.encode(enabled)).legacyVersion(2)
         legacy.apply { getJSONObject("preferences").apply { remove("gifFrameCounter"); remove("gifFrameSelector"); remove("ftpEnabled"); remove("previewPinEnabled"); remove("comparisonEnabled"); remove("animatedAlbumCovers"); remove("videoKeepPlaying") } }.apply { listOf("showMusicAlbums", "disabledCategories", "disabledSounds", "persistSelectedMedia", "directDeleteEnabled", "nestedAlbums", "backgroundMode", "backgroundEnd", "backgroundStrength", "backgroundMedia", "backgroundOpacity", "albumShadows", "albumStudio", "videoStickControls", "backgroundX", "backgroundY", "backgroundZoom", "defaultSection", "imagePreviewName", "gridPreviewMotion", "controllerSorting", "musicCoverEffect", "videoDimSeconds", "imageOverlayAutoHide", "videoMixAudio").forEach { getJSONObject("preferences").remove(it) } }.apply {
             listOf("showMediaNames", "viewerArrows", "viewerZoom", "photoNavigator", "gifFrameCount", "navbarLabels", "navbarOrder", "customTheme", "hiddenTools", "timelineModes", "hideGifBadge", "uiSounds").forEach { getJSONObject("preferences").remove(it) }
         }
-        assertEquals(GalleryPreferences(), PreferencesTransfer.decode(legacy.toString()))
+        assertEquals(GalleryPreferences(musicColorMode = "THEME"), PreferencesTransfer.decode(legacy.toString()))
     }
     @Test fun navbarOrderRoundTripsAndOldExportsUseDefaultOrder() {
         val value = GalleryPreferences(navbarOrder = NavbarOrder.DEFAULT.reversed())

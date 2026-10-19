@@ -1822,4 +1822,5 @@
     <string name="horizontal_albums">앨범 및 폴더 가로 스크롤</string>
     <string name="album_carousel">앨범 및 폴더 캐러셀</string>
     <string name="video_skip_preview">미리보기 없이 동영상 재생</string>
+    <string name="album_pair_reorder">앨범 순서 변경</string>
 </resources>

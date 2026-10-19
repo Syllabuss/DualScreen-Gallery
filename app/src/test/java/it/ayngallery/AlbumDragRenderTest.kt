@@ -61,7 +61,7 @@ class AlbumDragRenderTest {
             advanceEventTime(650); moveTo(origin)
         }
         compose.waitForIdle()
-        compose.onNodeWithTag("album-drag-preview").assertExists()
+        compose.onNodeWithTag("album-drag-preview").assertDoesNotExist()
     }
     private fun move(destination: Offset) {
         compose.onNodeWithTag("album-reorder-surface").performTouchInput { moveTo(destination, delayMillis = 100) }
@@ -117,6 +117,28 @@ class AlbumDragRenderTest {
         compose.onNodeWithTag("album-reorder-surface").performTouchInput { cancel() }
     }
 
+    @Test fun pairReorderSwapsTwoAlbumsWithoutOpeningThemAndBackExits() {
+        start(grid = true)
+        val original = app.preferences.albumOrder.value
+        app.session.albumCommand = "REORDER" to setOf("a")
+        compose.waitForIdle()
+        compose.onNodeWithTag("album-swap-marker:a").assertExists()
+        compose.onNodeWithTag("album:a").performClick()
+        assertNull(panel.windowModel.route.value.album)
+        compose.onNodeWithTag("album:c").performClick()
+        compose.waitForIdle()
+        assertEquals("a", app.session.previewAlbumId)
+        assertEquals("a", panel.windowModel.albumAnchor)
+        compose.onNodeWithTag("album:a").assertIsFocused()
+        val expected = original.toMutableList()
+        java.util.Collections.swap(expected, expected.indexOf("a"), expected.indexOf("c"))
+        assertEquals(expected, app.preferences.albumOrder.value)
+        assertTrue(panel.windowModel.selectedAlbums.value.isEmpty())
+        assertNull(panel.windowModel.route.value.album)
+        compose.runOnUiThread { panel.onBackPressedDispatcher.onBackPressed() }
+        compose.waitForIdle()
+        compose.onNodeWithTag("album-swap-marker:a").assertDoesNotExist()
+    }
     @Test fun stationaryHoldOpensOptionsWithoutSelectingAlbum() {
         start(grid = true)
         hold("a"); release()
