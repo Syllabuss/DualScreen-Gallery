@@ -896,6 +896,27 @@ class TouchRenderTest {
         compose.waitUntil(8000) { compose.onAllNodesWithTag("media:a").fetchSemanticsNodes().isNotEmpty() }
         compose.waitForIdle()
     }
+    @Test fun startingTheSelectedVideoOnOneScreenOpensItsViewerImmediately() {
+        start(kind = "VIDEO")
+        app.session.selectMedia("a")
+        compose.waitForIdle()
+        compose.onNodeWithTag("media:a").performClick()
+        compose.waitForIdle()
+        assertEquals("a", panel.windowModel.route.value.viewer)
+        compose.onNodeWithTag("media:b").assertDoesNotExist()
+    }
+
+    @Test fun directPlaybackOpensAnUnselectedVideoInsteadOfItsStaticPreview() {
+        start(kind = "VIDEO")
+        runBlocking { app.preferences.update { it.copy(videoSkipPreview = true) } }
+        compose.waitForIdle()
+        compose.onNodeWithTag("media:b").performClick()
+        compose.waitForIdle()
+        assertEquals("b", panel.windowModel.route.value.viewer)
+        assertNotNull(app.video.player)
+        assertEquals("b", app.video.mediaId)
+    }
+
     @Test fun firstMusicTapOnlySelectsAndSecondTapActivatesTheSelectedSong() {
         start(kind = "AUDIO")
         compose.onNodeWithTag("media:b").performClick()
@@ -1154,6 +1175,36 @@ class TouchRenderTest {
         compose.waitForIdle(); compose.onNodeWithTag("video-resume").assertDoesNotExist()
         assertNull(app.video.player)
     }
+    @Test fun draggingFromASelectedPhotoAddsTheCrossedPhotos() = verifyDragSelection(false)
+    @Test fun favoritesUseTheSameLongPressDragSelection() = verifyDragSelection(true)
+    private fun verifyDragSelection(mosaic: Boolean) {
+        start(total = 12)
+        val data = app.catalog.snapshot.value
+        val prefs = app.preferences.state.value
+        val first = data.media.first().id
+        var selection by mutableStateOf(setOf(first))
+        panel.setContent { GalleryDesign(prefs) {
+            if (mosaic) FavoriteMosaic(panel, data, data.media, prefs, true, selection, {}, { selection = selection + it.id })
+            else LibraryGrid(panel, GalleryRoute(tab = "PHOTO"), data, data.media, prefs, true, selection,
+                {}, { selection = selection + it.id })
+        } }
+        compose.waitForIdle()
+        val tag = if (mosaic) "favorites-mosaic" else "library-grid"
+        compose.waitUntil(8000) { compose.onAllNodesWithTag(tag).fetchSemanticsNodes().isNotEmpty() }
+        val grid = compose.onNodeWithTag(tag).fetchSemanticsNode().boundsInRoot
+        val origin = compose.onNodeWithTag("media:$first").fetchSemanticsNode().boundsInRoot.center - grid.topLeft
+        val next = data.media[2].id
+        val destination = compose.onNodeWithTag("media:$next").fetchSemanticsNode().boundsInRoot.center - grid.topLeft
+        compose.onNodeWithTag(tag).performTouchInput { down(origin) }
+        compose.mainClock.advanceTimeBy(650)
+        compose.onNodeWithTag(tag).performTouchInput {
+            advanceEventTime(650); moveTo(origin); moveTo(destination, delayMillis = 300); up()
+        }
+        assertTrue(first in selection)
+        assertTrue(next in selection)
+        assertTrue(data.media[1].id in selection)
+    }
+
     @Test fun outgoingPhotoGridDoesNotScrollToAnotherSectionsSelection() {
         start(total = 30)
         val data = app.catalog.snapshot.value

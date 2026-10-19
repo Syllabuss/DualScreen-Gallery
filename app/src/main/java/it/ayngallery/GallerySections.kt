@@ -188,7 +188,11 @@ fun AlbumScreen(activity: PanelActivity, data: CatalogSnapshot, task: (suspend (
     if (albums.isEmpty() && query.isBlank()) { EmptyFolderButton(chooseFolder = onChooseFolder); return }
     val currentAlbumIds by rememberUpdatedState(albumIds)
     val storedGrid by vm.albumGrid.collectAsStateWithLifecycle()
-    val grid = videoOnly || storedGrid
+    val carousel = prefs.albumCarousel
+    val configuration = androidx.compose.ui.platform.LocalConfiguration.current
+    val horizontal = carousel && configuration.screenWidthDp > configuration.screenHeightDp
+    val grid = !carousel && (videoOnly || storedGrid)
+    val horizontalGrid = grid && prefs.horizontalAlbums
     val columns by (if (videoOnly) vm.videoAlbumColumns else vm.albumColumns).collectAsStateWithLifecycle()
     val sizes by (if (videoOnly) app.preferences.videoAlbumSizes else app.preferences.albumSizes).collectAsStateWithLifecycle()
     // One ordered packing model is used during a drag and after its persisted commit.
@@ -221,8 +225,8 @@ fun AlbumScreen(activity: PanelActivity, data: CatalogSnapshot, task: (suspend (
     val listState = androidx.compose.foundation.lazy.rememberLazyListState(initialFirstVisibleItemIndex = start)
     val density = androidx.compose.ui.platform.LocalDensity.current
     val gridGap = with(density) { (if (columns >= 5) 3.dp else 10.dp).toPx() }
-    val gridPadding = with(density) { (if (columns >= 6) 8.dp else 16.dp).toPx() }
-    val gridWidth by remember(gridState) { derivedStateOf { gridState.layoutInfo.viewportSize.width } }
+    val gridPadding = with(density) { (if (!horizontalGrid && columns >= 6) 8.dp else 16.dp).toPx() }
+    val gridWidth by remember(gridState, horizontalGrid) { derivedStateOf { (if (horizontalGrid) gridState.layoutInfo.viewportSize.height else gridState.layoutInfo.viewportSize.width) } }
     val gridUnit by rememberUpdatedState(((gridWidth - 2 * gridPadding - gridGap * (columns - 1)) / columns).coerceAtLeast(0f))
     val gridLayout by rememberUpdatedState(remember(geometry, gridUnit, gridGap) { albumGridLayout(geometry, gridUnit, gridGap) })
     val tileOffsets = remember { mutableMapOf<String, androidx.compose.animation.core.Animatable<Offset, androidx.compose.animation.core.AnimationVector2D>>() }
@@ -256,14 +260,19 @@ fun AlbumScreen(activity: PanelActivity, data: CatalogSnapshot, task: (suspend (
             }
         }
     }
-    DisposableEffect(activity, grid, currentAlbumIds, columns, focusedAlbum, geometry) {
+    DisposableEffect(activity, grid, currentAlbumIds, columns, focusedAlbum, geometry, horizontalGrid) {
         val handler: (PadAction) -> Boolean = { action ->
             val index = currentAlbumIds.indexOf(focusedAlbum)
             if (!grid || index < 0 || activity.settingsHeaderHasFocus || activity.windowModel.route.value.tab != (if (videoOnly) "VIDEO" else "ALBUM") || activity.windowModel.route.value.album != null || app.session.settingsOwner != null) false
             else {
-                val vertical = action == PadAction.UP || action == PadAction.DOWN
+                val vertical = if (horizontalGrid) action == PadAction.LEFT || action == PadAction.RIGHT else action == PadAction.UP || action == PadAction.DOWN
                 if (preferredColumn < 0 || !vertical) preferredColumn = geometry[index].center
-                val target = albumGridTarget(geometry, index, action, preferredColumn)
+                val gridAction = if (horizontalGrid) when (action) {
+                    PadAction.UP -> PadAction.LEFT; PadAction.DOWN -> PadAction.RIGHT
+                    PadAction.LEFT -> PadAction.UP; PadAction.RIGHT -> PadAction.DOWN
+                    else -> action
+                } else action
+                val target = albumGridTarget(geometry, index, gridAction, preferredColumn)
                 if (target !in currentAlbumIds.indices) false
                 else {
                     if (!vertical) preferredColumn = geometry[target].center
@@ -331,15 +340,21 @@ fun AlbumScreen(activity: PanelActivity, data: CatalogSnapshot, task: (suspend (
         // Hit the original slots, never the moving/animated cards. A stationary finger cannot reorder again.
         val candidates = if (grid) {
             fun bandAt(y: Float) = dragLayout.bandOffsets.binarySearch(y).let { if (it >= 0) it else -it - 2 }.coerceAtLeast(0)
-            val from = bandAt(viewport.top - dragContentTop - 2 * gridUnit - gridGap)
-            val to = bandAt(viewport.bottom - dragContentTop).coerceAtMost(dragLayout.bandOffsets.lastIndex)
+            val from = bandAt((if (horizontalGrid) viewport.left else viewport.top) - dragContentTop - 2 * gridUnit - gridGap)
+            val to = bandAt((if (horizontalGrid) viewport.right else viewport.bottom) - dragContentTop).coerceAtMost(dragLayout.bandOffsets.lastIndex)
             (from..to).flatMap { dragBands.getOrNull(it).orEmpty() }.map { i ->
-                dragAlbumIds[i] to dragLayout.bounds[i].translate(Offset(viewport.left + gridPadding, dragContentTop))
+                val bounds = dragLayout.bounds[i]
+                dragAlbumIds[i] to if (horizontalGrid) androidx.compose.ui.geometry.Rect(
+                    dragContentTop + bounds.top, viewport.top + gridPadding + bounds.left,
+                    dragContentTop + bounds.bottom, viewport.top + gridPadding + bounds.right)
+                else bounds.translate(Offset(viewport.left + gridPadding, dragContentTop))
             }.filter { it.second.overlaps(viewport) }
         } else listState.layoutInfo.visibleItemsInfo.mapNotNull { slot ->
             val top = viewport.top - listState.layoutInfo.viewportStartOffset + slot.offset
+            val left = viewport.left - listState.layoutInfo.viewportStartOffset + slot.offset
             dragAlbumIds.getOrNull(slot.index)?.let { id -> id to androidx.compose.ui.geometry.Rect(
-                viewport.left, top, viewport.right, top + slot.size) }
+                if (horizontal) left else viewport.left, if (horizontal) viewport.top else top,
+                if (horizontal) left + slot.size else viewport.right, if (horizontal) viewport.bottom else top + slot.size) }
         }
         if (candidates.any { it.first in draggedIds && it.second.contains(point) }) {
             dropTarget = null; previewOrder(dragBase); return
@@ -362,7 +377,7 @@ fun AlbumScreen(activity: PanelActivity, data: CatalogSnapshot, task: (suspend (
         dropTarget = id; dropAfter = after
         previewOrder(moveAlbumBlock(dragBase, draggedIds, id, after))
     }
-    LaunchedEffect(dragged, grid) {
+    LaunchedEffect(dragged, grid, horizontal, horizontalGrid) {
         if (dragged == null) return@LaunchedEffect
         var previousFrame = android.os.SystemClock.uptimeMillis()
         while (true) {
@@ -373,10 +388,13 @@ fun AlbumScreen(activity: PanelActivity, data: CatalogSnapshot, task: (suspend (
             if (!dragMoved) continue
             val bounds = container?.takeIf { it.isAttached }?.boundsInRoot() ?: continue
             updateDropTarget()
-            val edge = edgeSize.coerceAtMost(bounds.height / 3f)
+            val start = if (horizontal || horizontalGrid) bounds.left else bounds.top
+            val end = if (horizontal || horizontalGrid) bounds.right else bounds.bottom
+            val point = if (horizontal || horizontalGrid) dragPoint.x else dragPoint.y
+            val edge = edgeSize.coerceAtMost((end - start) / 3f)
             val speed = when {
-                dragPoint.y < bounds.top + edge -> -((bounds.top + edge - dragPoint.y) / edge).coerceIn(0f, 1f)
-                dragPoint.y > bounds.bottom - edge -> ((dragPoint.y - bounds.bottom + edge) / edge).coerceIn(0f, 1f)
+                point < start + edge -> -((start + edge - point) / edge).coerceIn(0f, 1f)
+                point > end - edge -> ((point - end + edge) / edge).coerceIn(0f, 1f)
                 else -> 0f
             } * maxScrollSpeed
             if (speed != 0f) {
@@ -402,7 +420,7 @@ fun AlbumScreen(activity: PanelActivity, data: CatalogSnapshot, task: (suspend (
             dropTarget = null; dragMoved = false
         }
     }
-    @Composable fun card(album: AlbumEntity, placement: Offset? = null) {
+    @Composable fun card(album: AlbumEntity, placement: Offset? = null, carouselLabel: Boolean = true) {
         val animatedOffset = remember(album.id) { tileOffsets.getOrPut(album.id) { androidx.compose.animation.core.Animatable(placement ?: Offset.Zero, Offset.VectorConverter) } }
         LaunchedEffect(placement, prefs.reducedMotion) {
             if (placement != null) {
@@ -426,7 +444,7 @@ fun AlbumScreen(activity: PanelActivity, data: CatalogSnapshot, task: (suspend (
         Surface(Modifier.graphicsLayer {
             alpha = if (album.id in draggedIds) .18f else 1f
             if (placement != null) { translationX = animatedOffset.value.x - placement.x; translationY = animatedOffset.value.y - placement.y }
-        }.hoverable(hover).animateContentSize(tween(if (prefs.reducedMotion || dragged != null) 0 else 260)).fillMaxWidth().onGloballyPositioned { coordinates = it; positions[album.id] = it }.focusRequester(tileFocus).testTag("album:${album.id}").onFocusChanged { focused = it.isFocused; if (it.isFocused && (dragged == null || dragged == album.id)) { if (focusedAlbum != null && focusedAlbum != album.id) app.video.browsePreview(null); focusedAlbum = album.id; if (controllerFocusTarget != album.id) preferredColumn = geometry[currentAlbumIds.indexOf(album.id).coerceAtLeast(0)].center; controllerFocusTarget = null; val previous = app.session.previewAlbumId; app.sounds.navigation("album:${album.id}"); vm.albumAnchor = album.id; app.session.previewAlbum(album.id); if (grid) {
+        }.hoverable(hover).then(if (carousel) Modifier else Modifier.animateContentSize(tween(if (prefs.reducedMotion || dragged != null) 0 else 260))).fillMaxWidth().onGloballyPositioned { coordinates = it; positions[album.id] = it }.focusRequester(tileFocus).testTag("album:${album.id}").onFocusChanged { focused = it.isFocused; if (it.isFocused && (dragged == null || dragged == album.id)) { if (focusedAlbum != null && focusedAlbum != album.id) app.video.browsePreview(null); focusedAlbum = album.id; if (controllerFocusTarget != album.id) preferredColumn = geometry[currentAlbumIds.indexOf(album.id).coerceAtLeast(0)].center; controllerFocusTarget = null; val previous = app.session.previewAlbumId; app.sounds.navigation("album:${album.id}"); vm.albumAnchor = album.id; app.session.previewAlbum(album.id); if (grid) {
                     val from = geometry.getOrNull(currentAlbumIds.indexOf(previous))
                     val to = geometry.getOrNull(currentAlbumIds.indexOf(album.id))
                     app.session.gridPreviewDirection = if (from == null || to == null) androidx.compose.ui.unit.IntOffset.Zero
@@ -444,15 +462,19 @@ fun AlbumScreen(activity: PanelActivity, data: CatalogSnapshot, task: (suspend (
             border = BorderStroke(if (active && (selected.isEmpty() || dragged != null) || chosen) 3.dp else 1.dp,
                 if (active && dragged != null) GalleryFocus else if (chosen) selectionColor else if (active && selected.isEmpty()) GalleryFocus else MaterialTheme.colorScheme.outlineVariant),
             color = MaterialTheme.colorScheme.surface) {
-            AlbumTileContent(album, data, app.catalog, prefs, LocalAlbumTileGrid.current, columns, chosen, selectionColor, selected.isNotEmpty()) { choose(album) }
+            AlbumTileContent(album, data, app.catalog, prefs, LocalAlbumTileGrid.current, columns, chosen, selectionColor, selected.isNotEmpty(), carouselLabel = carouselLabel) { choose(album) }
         }
     }
     val currentAlbums by rememberUpdatedState(albums)
-    Box(Modifier.fillMaxSize().testTag("album-reorder-surface").onGloballyPositioned { container = it }.pointerInput(query, grid, columns) {
+    Box(Modifier.fillMaxSize().testTag("album-reorder-surface").onGloballyPositioned { container = it }.pointerInput(query, grid, columns, horizontal, horizontalGrid, carousel) {
                 awaitEachGesture {
                     val down = awaitFirstDown(requireUnconsumed = true)
                     val rootPoint = container?.localToRoot(down.position) ?: down.position
                     val album = currentAlbums.firstOrNull { item -> positions[item.id]?.takeIf { it.isAttached }?.boundsInRoot()?.contains(rootPoint) == true } ?: return@awaitEachGesture
+                    app.video.browsePreview(null)
+                    focusedAlbum = album.id
+                    vm.albumAnchor = album.id
+                    app.session.previewAlbum(album.id)
                     val held = awaitLongPressOrCancellation(down.id)
                     if (held == null) {
                         val up = currentEvent.changes.firstOrNull { it.id == down.id && it.changedToUpIgnoreConsumed() }
@@ -470,8 +492,8 @@ fun AlbumScreen(activity: PanelActivity, data: CatalogSnapshot, task: (suspend (
                             gridState.layoutInfo.visibleItemsInfo.firstOrNull()?.let { first ->
                                 val index = dragBands.getOrNull(first.index)?.firstOrNull()
                                 val bounds = index?.let { positions[dragAlbumIds[it]]?.takeIf { coords -> coords.isAttached }?.boundsInRoot() }
-                                dragContentTop = if (bounds != null) bounds.top - dragLayout.bounds[index!!].top
-                                    else (container?.boundsInRoot()?.top ?: 0f) - gridState.layoutInfo.viewportStartOffset + first.offset.y - (gridLayout.bandOffsets.getOrNull(first.index) ?: 0f)
+                                dragContentTop = if (bounds != null) (if (horizontalGrid) bounds.left else bounds.top) - dragLayout.bounds[index!!].top
+                                    else (container?.boundsInRoot()?.let { if (horizontalGrid) it.left else it.top } ?: 0f) - gridState.layoutInfo.viewportStartOffset + (if (horizontalGrid) first.offset.x else first.offset.y) - (gridLayout.bandOffsets.getOrNull(first.index) ?: 0f)
                             }
                             dragged = album.id; draggedIds = dragSelection + album.id; dragMoved = false
                             dragBase = (app.preferences.albumOrder.value + currentAlbumIds).distinct()
@@ -501,11 +523,34 @@ fun AlbumScreen(activity: PanelActivity, data: CatalogSnapshot, task: (suspend (
                     }
                 }
             }) {
+    if (carousel && app.session.isSingleScreen) {
+        val cover = (focusedAlbum ?: anchor)?.let(data.albumsById::get)?.takeUnless { data.albumLocked(it.id) }?.let(data::cover)
+        if (cover != null) MediaThumbnail(cover, data, app.catalog, prefs,
+            Modifier.matchParentSize().graphicsLayer { alpha = .2f }, scale = androidx.compose.ui.layout.ContentScale.Crop)
+    }
     if (albums.isEmpty() && query.isNotBlank()) {
         EmptyGallery(localized(R.string.text_no_albums_found_18010c, "Nessun album trovato"), localized(R.string.text_try_another_name_or_clear_the_search_0cceaf, "Prova un altro nome o cancella la ricerca."),
             R.drawable.ph_magnifying_glass, localized(R.string.text_clear_search_3664fa, "Cancella ricerca")) { vm.search("") }
     } else GalleryGridFocus { androidx.compose.animation.Crossfade(grid, animationSpec = tween(if (prefs.reducedMotion) 0 else 260), label = "album-view") { tileGrid ->
-    if (tileGrid) LazyVerticalGrid(GridCells.Fixed(1), Modifier.testTag("albums-grid"), state = gridState, contentPadding = PaddingValues(start = if (columns >= 6) 8.dp else 16.dp, end = if (columns >= 6) 8.dp else 16.dp, top = 16.dp, bottom = 32.dp),
+    if (tileGrid && horizontalGrid) androidx.compose.foundation.lazy.grid.LazyHorizontalGrid(GridCells.Fixed(1), Modifier.fillMaxSize().testTag("albums-horizontal-grid"), state = gridState,
+        contentPadding = PaddingValues(16.dp), horizontalArrangement = Arrangement.spacedBy(if (columns >= 5) 3.dp else 10.dp)) {
+        items(count = bands.size) { band ->
+            BoxWithConstraints(Modifier.fillMaxHeight()) {
+                val gap = if (columns >= 5) 3.dp else 10.dp
+                val unit = (maxHeight - gap * (columns - 1)) / columns
+                val rows = bandGeometry.bandRows[band]
+                Box(Modifier.fillMaxHeight().width(unit * rows + gap * (rows - 1))) {
+                    bands[band].forEach { i -> key(albums[i].id) {
+                        val cell = geometry[i]
+                        Box(Modifier.offset(x = (unit + gap) * (cell.row - bandGeometry.bandStarts[band]), y = (unit + gap) * (cell.start / 2))
+                            .width(unit * cell.rows + gap * (cell.rows - 1))) {
+                            CompositionLocalProvider(LocalAlbumTileGrid provides true, LocalAnimatedAlbumIds provides animatedAlbumIds) { card(albums[i]) }
+                        }
+                    } }
+                }
+            }
+        }
+    } else if (tileGrid) LazyVerticalGrid(GridCells.Fixed(1), Modifier.testTag("albums-grid"), state = gridState, contentPadding = PaddingValues(start = if (columns >= 6) 8.dp else 16.dp, end = if (columns >= 6) 8.dp else 16.dp, top = 16.dp, bottom = 32.dp),
         verticalArrangement = Arrangement.spacedBy(if (columns >= 5) 3.dp else 10.dp), horizontalArrangement = Arrangement.spacedBy(if (columns >= 5) 3.dp else 10.dp)) {
         items(count = bands.size) { band ->
             BoxWithConstraints(Modifier.fillMaxWidth()) {
@@ -526,6 +571,31 @@ fun AlbumScreen(activity: PanelActivity, data: CatalogSnapshot, task: (suspend (
                 }
             }
         }
+    } else if (carousel) BoxWithConstraints(Modifier.fillMaxSize()) {
+        val unit = if (horizontal) minOf((maxHeight - 64.dp) / 1.5f, maxWidth / columns.coerceAtLeast(2))
+            else minOf((maxWidth - 32.dp) / 1.5f, maxHeight / columns.coerceAtLeast(2))
+        val slot = unit * 1.5f
+        val content: androidx.compose.foundation.lazy.LazyListScope.() -> Unit = {
+            items(albums, key = { it.id }) { album ->
+                val scale by androidx.compose.animation.core.animateFloatAsState(if (album.id == (focusedAlbum ?: anchor)) 1.5f else 1f,
+                    tween(if (prefs.reducedMotion) 0 else 180), label = "carousel-focus")
+                if (horizontal) Box(Modifier.width(slot).height(slot + 40.dp), contentAlignment = Alignment.Center) {
+                    Box(Modifier.width(unit * scale)) {
+                        CompositionLocalProvider(LocalAlbumTileGrid provides true, LocalAnimatedAlbumIds provides animatedAlbumIds) { card(album) }
+                    }
+                } else Box(Modifier.fillMaxWidth(), contentAlignment = Alignment.TopStart) {
+                    Box(Modifier.width(unit * scale)) {
+                        CompositionLocalProvider(LocalAlbumTileGrid provides true, LocalAnimatedAlbumIds provides animatedAlbumIds) { card(album) }
+                    }
+                }
+            }
+        }
+        if (horizontal) LazyRow(Modifier.fillMaxSize().testTag("albums-horizontal"), state = listState,
+            contentPadding = PaddingValues(16.dp), horizontalArrangement = Arrangement.spacedBy(10.dp),
+            verticalAlignment = Alignment.CenterVertically, content = content)
+        else LazyColumn(Modifier.fillMaxSize().testTag("albums-vertical-carousel"), state = listState,
+            contentPadding = PaddingValues(16.dp), verticalArrangement = Arrangement.spacedBy(6.dp),
+            horizontalAlignment = Alignment.Start, content = content)
     } else LazyColumn(Modifier.testTag("albums-list"), state = listState, contentPadding = PaddingValues(start = 16.dp, top = 16.dp, end = 16.dp, bottom = 32.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
         items(albums, key = { it.id }) { album ->
             Box(Modifier.animateItem(placementSpec = if (dragged != null && !prefs.reducedMotion) tween(160) else null)) { androidx.compose.runtime.CompositionLocalProvider(LocalAlbumTileGrid provides tileGrid, LocalAnimatedAlbumIds provides animatedAlbumIds) { card(album) } }
@@ -540,7 +610,7 @@ fun AlbumScreen(activity: PanelActivity, data: CatalogSnapshot, task: (suspend (
         if (album != null) Surface(Modifier.testTag("album-drag-preview").offset { androidx.compose.ui.unit.IntOffset((dragPoint.x - grabOffset.x - origin.x).toInt(), (dragPoint.y - grabOffset.y - origin.y).toInt()) }
             .size(with(density) { dragSize.width.toDp() }, with(density) { dragSize.height.toDp() }),
             shape = GalleryShape, shadowElevation = 16.dp, border = BorderStroke(3.dp, GalleryFocus)) {
-            Box { AlbumTileContent(album, data, app.catalog, prefs, grid, columns, draggedIds.size > 1, selectionColor, false) {}
+            Box { AlbumTileContent(album, data, app.catalog, prefs, grid || carousel, columns, draggedIds.size > 1, selectionColor, false) {}
                 if (draggedIds.size > 1) Text("${draggedIds.size}", Modifier.align(Alignment.TopEnd).padding(8.dp).background(MaterialTheme.colorScheme.surface, GalleryShape).padding(6.dp)) }
         }
     }
@@ -553,7 +623,7 @@ fun AlbumScreen(activity: PanelActivity, data: CatalogSnapshot, task: (suspend (
         vm.albumMenu(false)
         when (kind) {
             "COVER" -> coverAlbum = frozen.singleOrNull()
-            "SIZE1", "SIZE2" -> { if (vm.route.value.tab == "VIDEO") app.preferences.videoAlbumSize(frozen, if (kind == "SIZE1") 2 else 4) else app.preferences.albumSize(frozen, if (kind == "SIZE1") 2 else 4); vm.selectAlbums(emptySet()) }
+            "SIZE1", "SIZE2" -> { if (!prefs.albumCarousel) { if (vm.route.value.tab == "VIDEO") app.preferences.videoAlbumSize(frozen, if (kind == "SIZE1") 2 else 4) else app.preferences.albumSize(frozen, if (kind == "SIZE1") 2 else 4) }; vm.selectAlbums(emptySet()) }
             "LOCK" -> { pinAlbums = frozen; pinMode = if (frozen.all { it in data.protectedAlbumIds }) "REMOVE" else "PROTECT" }
             "HIDE" -> hide = visible.filter { it.id in frozen }
             "MOVE", "COPY" -> {
@@ -659,11 +729,15 @@ internal fun DisplayControls(activity: PanelActivity) {
     val session = activity.session
     val others = session.screens.filter { it.key != activity.screenKey }
     Column(Modifier.fillMaxWidth(), verticalArrangement = Arrangement.spacedBy(12.dp)) {
-        GallerySettingSwitch(localized(R.string.text_open_on_two_screens_at_startup_7c2cb7, "Apri su due schermi all'avvio"),
+        if (session.screens.size > 1) GallerySettingSwitch(localized(R.string.text_open_on_two_screens_at_startup_7c2cb7, "Apri su due schermi all'avvio"),
             others.size == 1 && (session.startupAutomatic || session.startupPair == setOf(activity.screenKey, others.single().key)),
-            Modifier.testTag("startup-dual"), enabled = others.size == 1) { session.rememberStartupPair(activity, it) }
-        if (session.screens.size == 1) {
-            GallerySettingSwitch(localized(R.string.text_use_only_this_screen_f859c0, "Usa solo questo schermo"), true, Modifier.testTag("single-screen-active"), enabled = false) {}
+            Modifier.testTag("startup-dual"), enabled = others.size == 1) { enabled ->
+                if (enabled) session.rememberStartupPair(activity, true) else session.single(activity)
+            }
+        if (session.isSingleScreen) {
+            GallerySettingSwitch(localized(R.string.text_use_only_this_screen_f859c0, "Usa solo questo schermo"), true, Modifier.testTag("single-screen-active"), enabled = session.screens.size > 1) {
+                others.firstOrNull()?.let { target -> session.expand(activity, target); activity.recreate() }
+            }
             GallerySettingSwitch(localized(R.string.single_screen_landscape, "Forza orientamento orizzontale"), session.singleScreenLandscape, Modifier.testTag("single-screen-landscape")) { session.singleScreenLandscape(it) }
         } else GalleryButton(localized(R.string.text_use_only_this_screen_f859c0, "Usa solo questo schermo"), Modifier.fillMaxWidth()) { session.single(activity) }
     }
@@ -768,13 +842,16 @@ fun MediaMenu(item: MediaEntity, data: CatalogSnapshot, app: GalleryApp, task: (
 
 @Composable
 internal fun AlbumOptionsDialog(app: GalleryApp, data: CatalogSnapshot, ids: Set<String>, dismiss: () -> Unit) {
+    val prefs by app.preferences.state.collectAsStateWithLifecycle()
     fun command(kind: String) { app.session.albumCommand = kind to ids.toSet(); dismiss() }
     GallerySideSheet(dismiss) {
         Text(localized(R.string.text_1_s_selected_albums_5ebbfb, "%1\$s album selezionati", ids.size), style = MaterialTheme.typography.titleMedium)
         Column(Modifier.verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(8.dp)) {
             if (ids.size == 1) GalleryButton(localized(R.string.album_set_cover, "Imposta come copertina"), Modifier.fillMaxWidth(), enabled = !data.albumLocked(ids.single())) { command("COVER") }
-            Text(localized(R.string.album_tile_size, "Dimensione album"))
-            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) { GalleryButton("1×", Modifier.weight(1f)) { command("SIZE1") }; GalleryButton("2×", Modifier.weight(1f)) { command("SIZE2") } }
+            if (!prefs.albumCarousel) {
+                Text(localized(R.string.album_tile_size, "Dimensione album"))
+                Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) { GalleryButton("1×", Modifier.weight(1f)) { command("SIZE1") }; GalleryButton("2×", Modifier.weight(1f)) { command("SIZE2") } }
+            }
             val protected = ids.all { it in data.protectedAlbumIds }
             GalleryButton(localized(if (protected) R.string.album_unlock_action else R.string.album_lock_action, ""), Modifier.fillMaxWidth()) { command("LOCK") }
             GalleryButton(localized(R.string.text_hide_12292a, "Nascondi"), Modifier.fillMaxWidth()) { command("HIDE") }

@@ -72,7 +72,7 @@ internal fun SectionToolsSettings(section: String, prefs: GalleryPreferences, en
                 Text(tab.title, style = MaterialTheme.typography.titleMedium)
             }
             if (section == "ALBUM") Text(localized(R.string.settings_album_tools_note, "Queste opzioni valgono anche per i media dentro un album."), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
-            available.forEach { tool ->
+            available.filter { it != "SWAP" || owner?.session?.isSingleScreen != true }.forEach { tool ->
                 val label = when (tool) {
                     "ZOOM" -> localized(R.string.tools_zoom, "Pulsanti + e −")
                     "VIEW" -> localized(R.string.tools_view, "Pulsante lista / griglia")

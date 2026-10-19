@@ -1818,4 +1818,8 @@
     <string name="navbar_hide_single">仅有一个分类时隐藏导航栏</string>
     <string name="single_screen_landscape">强制横屏显示</string>
     <string name="show_empty_folders">显示空文件夹</string>
+    <string name="player_fullscreen">全屏</string>
+    <string name="horizontal_albums">横向浏览相册和文件夹</string>
+    <string name="album_carousel">相册和文件夹轮播</string>
+    <string name="video_skip_preview">跳过预览直接播放视频</string>
 </resources>

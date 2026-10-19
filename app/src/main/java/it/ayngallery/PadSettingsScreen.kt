@@ -68,7 +68,7 @@ fun PadSettingsScreen(app: GalleryApp, prefs: GalleryPreferences) {
         }
         error?.let { Text(it, color = MaterialTheme.colorScheme.error, modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 8.dp).testTag("pad-error")) }
         LazyVerticalGrid(GridCells.Adaptive(340.dp), Modifier.weight(1f).testTag("pad-settings-list"), state = listState, contentPadding = PaddingValues(start = 16.dp, end = 16.dp, top = 16.dp, bottom = 28.dp), horizontalArrangement = Arrangement.spacedBy(12.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
-            items(padActions(context).filter { it in setOf(PadAction.CONFIRM, PadAction.BACK, PadAction.SETTINGS, PadAction.SWAP, PadAction.UP, PadAction.DOWN, PadAction.LEFT, PadAction.RIGHT, PadAction.GRID_SMALLER, PadAction.GRID_LARGER, PadAction.TOGGLE_VIEW, PadAction.FRAME) }.filterNot { it == PadAction.PIN }, key = { "${context.name}:${it.name}" }) { action ->
+            items(padActions(context).filter { it in setOf(PadAction.CONFIRM, PadAction.BACK, PadAction.SETTINGS, PadAction.SWAP, PadAction.UP, PadAction.DOWN, PadAction.LEFT, PadAction.RIGHT, PadAction.GRID_SMALLER, PadAction.GRID_LARGER, PadAction.TOGGLE_VIEW, PadAction.FRAME) }.filterNot { it == PadAction.PIN || app.session.isSingleScreen && it == PadAction.SWAP }, key = { "${context.name}:${it.name}" }) { action ->
                 val binding = profile.bindings[context]?.get(action)
                 Surface(Modifier.fillMaxWidth(), shape = GalleryShape, color = MaterialTheme.colorScheme.surfaceVariant,
                     border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant)) {

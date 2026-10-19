@@ -9,6 +9,9 @@ data class DisplayState(
 
 /** No lifecycle event in this policy grants permission to open another window. */
 object DisplayPolicy {
+    fun librarySlot(state: DisplayState, singleScreen: Boolean): Int =
+        if (singleScreen) state.anchorSlot else if (state.swapped) 1 else 0
+
     fun preferSingleScreenLandscape(screens: List<ScreenInfo>, enabled: Boolean): Boolean = enabled && screens.size == 1
 
     /** Verified Thor panel sizes, independent of Android display IDs and launch position. */

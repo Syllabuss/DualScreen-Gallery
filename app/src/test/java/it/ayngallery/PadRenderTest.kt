@@ -265,7 +265,7 @@ class PadRenderTest {
         assertTrue(second.top >= first.bottom)
         panel.windowModel.go("SETTINGS_DEVICE")
         compose.waitForIdle()
-        compose.onNodeWithTag("startup-dual").assertIsOff().assertIsNotEnabled()
+        compose.onNodeWithTag("startup-dual").assertDoesNotExist()
         compose.onNodeWithTag("single-screen-active").assertIsOn().assertIsNotEnabled()
         compose.onNodeWithTag("single-screen-landscape").assertIsOff().performClick().assertIsOn()
         assertEquals(android.content.pm.ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE, panel.requestedOrientation)
@@ -273,6 +273,21 @@ class PadRenderTest {
         compose.onNodeWithTag("single-screen-landscape").performClick().assertIsOff()
         assertEquals(android.content.pm.ActivityInfo.SCREEN_ORIENTATION_USER_LANDSCAPE, panel.requestedOrientation)
     }
+    @Test fun videoFullscreenIsTransientAndUnavailableOnTwoScreens() {
+        start()
+        panel.toggleSingleScreenVideoFullscreen()
+        assertTrue(panel.singleScreenVideoFullscreen)
+        assertTrue(panel.intent.getBooleanExtra("video_fullscreen", false))
+        assertEquals(android.content.pm.ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE, panel.requestedOrientation)
+        panel.toggleSingleScreenVideoFullscreen()
+        assertFalse(panel.singleScreenVideoFullscreen)
+        org.robolectric.shadows.ShadowDisplayManager.addDisplay("w800dp-h600dp")
+        app.session.refreshDisplays()
+        panel.toggleSingleScreenVideoFullscreen()
+        assertFalse(panel.singleScreenVideoFullscreen)
+        assertEquals(android.content.pm.ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED, panel.requestedOrientation)
+    }
+
     @Test fun returningToAnOffscreenSettingsCategoryWaitsUntilItsRowIsPlaced() {
         start()
         app.session.openSettings(panel)
@@ -342,6 +357,17 @@ class PadRenderTest {
         panel.intent.removeExtra("paired_gallery")
         assertSame(preview, app.session.controllerTarget(panel))
         assertSame(preview, app.session.controllerTarget(preview))
+    }
+    @Test fun deliveredControllerKeysStillWorkWhenFocusCallbackIsStaleAfterDisplayRecreation() {
+        start()
+        panel.onWindowFocusChanged(false)
+        var action: PadAction? = null
+        panel.padAction = { action = it; true }
+        key(panel, KeyEvent.KEYCODE_BUTTON_R1)
+        assertEquals(PadAction.TAB_NEXT, action)
+        assertTrue(panel.controllerInputActive)
+        panel.onWindowFocusChanged(false)
+        assertFalse(panel.controllerInputActive)
     }
     @Test fun controllerTargetFollowsSwapAndNeverRestartsCoveredNavigation() {
         start()

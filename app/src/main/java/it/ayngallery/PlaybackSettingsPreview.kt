@@ -122,7 +122,7 @@ internal fun PlaybackSettingsPreview(category: String, prefs: GalleryPreferences
                     FavoriteHeart(false, "")
                     if (kind == "IMAGE") GalleryIcon(R.drawable.ph_arrow_clockwise, null)
                     Spacer(Modifier.weight(1f))
-                    if (kind == "VIDEO" && app.session.screens.size > 1) GalleryIcon(R.drawable.ph_moon_stars, null)
+                    if (kind == "VIDEO" && !app.session.isSingleScreen) GalleryIcon(R.drawable.ph_moon_stars, null)
                     if (kind == "IMAGE" && prefs.previewPinEnabled) GalleryIcon(R.drawable.ph_push_pin, null)
                     if (kind == "IMAGE" && prefs.comparisonEnabled) GalleryIcon(R.drawable.ph_browsers, null)
                     GalleryIcon(R.drawable.ph_dots_three, null)

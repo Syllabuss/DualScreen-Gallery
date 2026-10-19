@@ -1818,4 +1818,8 @@
     <string name="navbar_hide_single">섹션이 하나면 탐색 모음 숨기기</string>
     <string name="single_screen_landscape">가로 방향으로 고정</string>
     <string name="show_empty_folders">빈 폴더 표시</string>
+    <string name="player_fullscreen">전체 화면</string>
+    <string name="horizontal_albums">앨범 및 폴더 가로 스크롤</string>
+    <string name="album_carousel">앨범 및 폴더 캐러셀</string>
+    <string name="video_skip_preview">미리보기 없이 동영상 재생</string>
 </resources>

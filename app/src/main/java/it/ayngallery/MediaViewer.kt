@@ -213,6 +213,8 @@ fun MediaViewer(activity: PanelActivity, item: MediaEntity?, data: CatalogSnapsh
     val navigationRoute by (app.session.libraryModel() ?: activity.windowModel).route.collectAsStateWithLifecycle()
 
     androidx.activity.compose.BackHandler(enabled = playingVideo && app.video.player?.playWhenReady == false) { app.video.closePausedViewer(); controlsVisible = true }
+    androidx.activity.compose.BackHandler(enabled = playingVideo && activity.singleScreenVideoFullscreen) { activity.toggleSingleScreenVideoFullscreen() }
+
 
     Box(Modifier.fillMaxSize().pointerInput(imageOverlay) {
 
@@ -781,6 +783,9 @@ fun MediaSurface(activity: PanelActivity, item: MediaEntity?, data: CatalogSnaps
                             }
 
                             playerView.navigate = { navigate(it) }
+                            playerView.onFullscreen = if (!item.convertedGif && app.session.isSingleScreen) activity::toggleSingleScreenVideoFullscreen else null
+                            playerView.fullscreen = activity.singleScreenVideoFullscreen
+
                             playerView.onPreviewTap = if (item.convertedGif) ({ onTap?.invoke(.5f) }) else null
 
                             playerView.onDoubleTapSeek = if (!item.convertedGif) app.video::doubleTapSeek else null

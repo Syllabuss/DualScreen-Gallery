@@ -32,8 +32,8 @@ data class GalleryPreferences(val themeId: String = "ayn_rainbow", val compact: 
     val disabledSounds: Set<String> = emptySet(), val persistSelectedMedia: Boolean = false, val directDeleteEnabled: Boolean = false, val nestedAlbums: Boolean = false, val backgroundMode: String = "PLAIN", val backgroundEnd: String? = null, val backgroundStrength: Int = 50, val backgroundMedia: String? = null, val backgroundOpacity: Int = 25, val albumShadows: String = "VERTICAL", val albumStudio: Boolean = false, val videoStickControls: Boolean = true, val backgroundX: Int = 0, val backgroundY: Int = 0, val backgroundZoom: Int = 100, val defaultSection: String = "ALBUM", val imagePreviewName: Boolean = true, val gridPreviewMotion: Boolean = true, val controllerSorting: Boolean = false, val musicCoverEffect: Int = 0, val videoDimSeconds: Int = 0, val imageOverlayAutoHide: Boolean = false, val videoMixAudio: Boolean = false, val gifFrameCounter: Boolean = true, val gifFrameSelector: Boolean = false, val ftpEnabled: Boolean = false, val previewPinEnabled: Boolean = false, val comparisonEnabled: Boolean = false, val animatedAlbumCovers: Boolean = true, val videoKeepPlaying: Boolean = true, val actionMenusBelow: Boolean = false, val albumCoverLimit: Int = 4, val allAnimatedAlbumCovers: Boolean = false, val previewNearest: Boolean = false,
     val imageBackdrop: String = "GRID", val imageBackdropColor: String = "#252530",
     val imageBackdropEnd: String = "#080810", val imageBackdropOpacity: Int = 50,
-    val musicColorMode: String = "THEME", val musicBackgroundColor: String = "#10101C", val musicBarsColor: String = "#66CFFF", val confirmVideoReplacement: Boolean = true, val showUpperStatusBar: Boolean = false,
-    val musicDuringSleep: Boolean = false, val videoDuringSleep: Boolean = false, val tvEnabled: Boolean = false, val tvInNavbar: Boolean = false, val tvInMediaFavorites: Boolean = false, val showEmptyFolders: Boolean = false) {
+    val musicColorMode: String = "ARTWORK", val musicBackgroundColor: String = "#10101C", val musicBarsColor: String = "#66CFFF", val confirmVideoReplacement: Boolean = true, val showUpperStatusBar: Boolean = false,
+    val musicDuringSleep: Boolean = false, val videoDuringSleep: Boolean = false, val tvEnabled: Boolean = false, val tvInNavbar: Boolean = false, val tvInMediaFavorites: Boolean = false, val showEmptyFolders: Boolean = false, val horizontalAlbums: Boolean = false, val albumCarousel: Boolean = false, val videoSkipPreview: Boolean = false) {
     fun validate() {
         require((GalleryThemes.find(themeId) != null || themeId == GalleryThemes.CUSTOM && customTheme != null) && gifMode in setOf("OFF", "SELECTED", "VISIBLE") && gifLimit in 0..40 && albumCoverLimit in 1..40 &&
             slideshowSeconds in 2..120 && ArtworkOrders.valid(artworkOrder)) { localized(R.string.text_invalid_settings_73e331, "Impostazioni non valide") }
@@ -238,12 +238,12 @@ class PreferenceStore(private val context: Context) {
             imageBackdropColor = prefs.getString("image_backdrop_color", "#252530")?.takeIf { it.matches(Regex("#[0-9a-fA-F]{6}")) } ?: "#252530",
             imageBackdropEnd = prefs.getString("image_backdrop_end", "#080810")?.takeIf { it.matches(Regex("#[0-9a-fA-F]{6}")) } ?: "#080810",
             imageBackdropOpacity = prefs.getInt("image_backdrop_opacity", 50).coerceIn(0, 100),
-            musicColorMode = prefs.getString("music_color_mode", "THEME")?.takeIf { it in musicColorModes } ?: "THEME",
+            musicColorMode = prefs.getString("music_color_mode", "ARTWORK")?.takeIf { it in musicColorModes } ?: "ARTWORK",
             musicBackgroundColor = prefs.getString("music_background_color", "#10101C")?.takeIf { it.matches(Regex("#[0-9a-fA-F]{6}")) } ?: "#10101C",
             musicBarsColor = prefs.getString("music_bars_color", "#66CFFF")?.takeIf { it.matches(Regex("#[0-9a-fA-F]{6}")) } ?: "#66CFFF",
             confirmVideoReplacement = prefs.getBoolean("confirm_video_replacement", true), showUpperStatusBar = prefs.getBoolean("show_upper_status_bar", false),
             musicDuringSleep = prefs.getBoolean("music_during_sleep", false), videoDuringSleep = prefs.getBoolean("video_during_sleep", false),
-            showEmptyFolders = prefs.getBoolean("show_empty_folders", false), tvEnabled = prefs.getBoolean("tv_enabled", false), tvInNavbar = prefs.getBoolean("tv_in_navbar", false), tvInMediaFavorites = prefs.getBoolean("tv_in_favorites", false)))
+            videoSkipPreview = prefs.getBoolean("video_skip_preview", false), albumCarousel = prefs.getBoolean("album_carousel", false), horizontalAlbums = prefs.getBoolean("horizontal_albums", false), showEmptyFolders = prefs.getBoolean("show_empty_folders", false), tvEnabled = prefs.getBoolean("tv_enabled", false), tvInNavbar = prefs.getBoolean("tv_in_navbar", false), tvInMediaFavorites = prefs.getBoolean("tv_in_favorites", false)))
     suspend fun save(value: GalleryPreferences) = update { value }
     suspend fun update(change: (GalleryPreferences) -> GalleryPreferences) = withContext(Dispatchers.IO) { mutation.withLock {
         val value = change(state.value)
@@ -261,7 +261,7 @@ class PreferenceStore(private val context: Context) {
             .putString("custom_theme", value.customTheme?.encode()).putBoolean("navbar_labels", value.navbarLabels).putString("navbar_order", value.navbarOrder.joinToString(","))
             .putStringSet("hidden_tools", value.hiddenTools).putString("timeline_modes", org.json.JSONObject(value.timelineModes).toString())
             .putBoolean("hide_gif_badge", value.hideGifBadge).putBoolean("ui_sounds", value.uiSounds)
-            .putBoolean("show_empty_folders", value.showEmptyFolders).putBoolean("tv_enabled", value.tvEnabled).putBoolean("tv_in_navbar", value.tvInNavbar).putBoolean("tv_in_favorites", value.tvInMediaFavorites)
+            .putBoolean("video_skip_preview", value.videoSkipPreview).putBoolean("album_carousel", value.albumCarousel).putBoolean("horizontal_albums", value.horizontalAlbums).putBoolean("show_empty_folders", value.showEmptyFolders).putBoolean("tv_enabled", value.tvEnabled).putBoolean("tv_in_navbar", value.tvInNavbar).putBoolean("tv_in_favorites", value.tvInMediaFavorites)
             .putBoolean("music_during_sleep", value.musicDuringSleep).putBoolean("video_during_sleep", value.videoDuringSleep).putBoolean("show_upper_status_bar", value.showUpperStatusBar).putBoolean("confirm_video_replacement", value.confirmVideoReplacement).remove("show_music_albums").putBoolean("image_overlay_auto_hide", value.imageOverlayAutoHide).putBoolean("video_mix_audio", value.videoMixAudio)
             .putStringSet("disabled_categories", value.disabledCategories).putStringSet("disabled_sounds", value.disabledSounds)
             .putBoolean("persist_selected_media", value.persistSelectedMedia).putBoolean("direct_delete_enabled", value.directDeleteEnabled).putBoolean("nested_albums", value.nestedAlbums)

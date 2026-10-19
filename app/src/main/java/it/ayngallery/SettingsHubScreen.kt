@@ -99,7 +99,7 @@ fun SettingsHubScreen(activity: PanelActivity, page: String, categoryFocus: Focu
                 if (restoreReady && session.lastSettingsCategory != null) firstCategory.requestFocus()
             }
             val preferredGrid by app.preferences.settingsGrid.collectAsStateWithLifecycle()
-            val grid = preferredGrid && session.screens.size > 1
+            val grid = preferredGrid && !session.isSingleScreen
             BoxWithConstraints(Modifier.weight(1f).fillMaxWidth()) {
             val entries = settingsCategories.filter { it.key != "INFO" || !session.canSwap() }
             val initialCategory = entries.indexOfFirst { it.key == session.lastSettingsCategory }.coerceAtLeast(0)
@@ -122,8 +122,8 @@ fun SettingsHubScreen(activity: PanelActivity, page: String, categoryFocus: Focu
                         border = androidx.compose.foundation.BorderStroke(if (focusedCategory == entry.key) 3.dp else 1.dp,
                             if (focusedCategory == entry.key) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.outlineVariant),
                         colors = CardDefaults.outlinedCardColors(containerColor = MaterialTheme.colorScheme.surface)) {
-                        val contentMotion = settingsFocusContent(focusedCategory == entry.key, prefs.reducedMotion)
-                        val iconMotion = settingsFocusContent(focusedCategory == entry.key, prefs.reducedMotion, 1.12f)
+                        val contentMotion = settingsFocusContent(focusedCategory == entry.key, prefs.reducedMotion, if (tileGrid) 1.045f else 1.015f)
+                        val iconMotion = settingsFocusContent(focusedCategory == entry.key, prefs.reducedMotion, if (tileGrid) 1.12f else 1.05f)
                         if (tileGrid) Column(Modifier.fillMaxSize().padding(12.dp).then(contentMotion), horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.Center) {
                             GalleryIcon(entry.icon, null, iconMotion)
                             Spacer(Modifier.height(12.dp))
@@ -320,13 +320,59 @@ fun SettingsPreviewScreen(app: GalleryApp, data: CatalogSnapshot, draft: Gallery
                 Spacer(Modifier.weight(1f))
                 val trailing = (if (tab in setOf("ALBUM", "PHOTO", "VIDEO") && InterfaceTools.shown(draft, tab, "ZOOM")) listOf("ADD" to R.drawable.ph_plus_circle) else emptyList()) +
                     listOf("SEARCH" to R.drawable.ph_magnifying_glass) +
-                    (if (hasContent) listOf("VIEW" to if (grid) R.drawable.ph_list else R.drawable.ph_squares_four) else emptyList())
+                    (if (hasContent && !(tab == "ALBUM" && draft.albumCarousel)) listOf("VIEW" to if (grid) R.drawable.ph_list else R.drawable.ph_squares_four) else emptyList())
                 trailing.filter { InterfaceTools.shown(draft, tab, it.first) }.forEach { (tool, icon) ->
                     Box(Modifier.size(48.dp).testTag("settings-preview-tool:$tab:$tool:$icon"), contentAlignment = Alignment.Center) { GalleryIcon(icon, null) }
                 }
                 Box(Modifier.size(48.dp), contentAlignment = Alignment.Center) { GalleryIcon(R.drawable.ph_dots_three, null) }
             }
-            if (tab == "FAVORITE" && grid) LazyVerticalStaggeredGrid(StaggeredGridCells.Fixed(columns), Modifier.weight(1f),
+            if (tab == "ALBUM" && draft.albumCarousel) BoxWithConstraints(Modifier.weight(1f).fillMaxWidth()) {
+                val configuration = androidx.compose.ui.platform.LocalConfiguration.current
+                val horizontal = configuration.screenWidthDp > configuration.screenHeightDp
+                val unit = if (horizontal) minOf((maxHeight - 64.dp) / 1.5f, maxWidth / columns.coerceAtLeast(2))
+                    else minOf((maxWidth - 32.dp) / 1.5f, maxHeight / columns.coerceAtLeast(2))
+                val slot = unit * 1.5f
+                val content: androidx.compose.foundation.lazy.LazyListScope.() -> Unit = {
+                    items(albums, key = { it.id }) { album ->
+                        val selected = album.id == albums.firstOrNull()?.id
+                        val width = unit * if (selected) 1.5f else 1f
+                        Box(if (horizontal) Modifier.width(slot).height(slot + 40.dp) else Modifier.fillMaxWidth(),
+                            contentAlignment = if (horizontal) Alignment.Center else Alignment.TopStart) {
+                            Surface(Modifier.width(width).testTag("settings-preview-album:${album.id}"),
+                                shape = if (columns >= 6) RoundedCornerShape(5.dp) else GalleryShape,
+                                border = androidx.compose.foundation.BorderStroke(if (selected) 3.dp else 1.dp,
+                                    if (selected) MaterialTheme.colorScheme.secondary else MaterialTheme.colorScheme.outlineVariant)) {
+                                CompositionLocalProvider(LocalAnimatedAlbumIds provides previewAnimatedIds) {
+                                    AlbumTileContent(album, data, app.catalog, draft, true, columns, false, MaterialTheme.colorScheme.secondary, false) {}
+                                }
+                            }
+                        }
+                    }
+                }
+                if (horizontal) androidx.compose.foundation.lazy.LazyRow(Modifier.fillMaxSize().testTag("settings-preview-carousel-horizontal"),
+                    contentPadding = PaddingValues(16.dp), horizontalArrangement = Arrangement.spacedBy(10.dp),
+                    verticalAlignment = Alignment.CenterVertically, content = content)
+                else LazyColumn(Modifier.fillMaxSize().testTag("settings-preview-carousel-vertical"),
+                    contentPadding = PaddingValues(16.dp), verticalArrangement = Arrangement.spacedBy(6.dp),
+                    horizontalAlignment = Alignment.Start, content = content)
+            }
+            else if (tab == "ALBUM" && grid && draft.horizontalAlbums) BoxWithConstraints(Modifier.weight(1f).fillMaxWidth()) {
+                val tile = (maxWidth / columns.coerceAtLeast(2)).coerceAtMost(maxHeight)
+                LazyHorizontalGrid(GridCells.Fixed((maxHeight / tile).toInt().coerceAtLeast(1)),
+                    Modifier.fillMaxSize().testTag("settings-preview-albums-horizontal"),
+                    contentPadding = PaddingValues(16.dp), horizontalArrangement = Arrangement.spacedBy(12.dp),
+                    verticalArrangement = Arrangement.spacedBy(12.dp)) {
+                    items(albums, key = { it.id }) { album ->
+                        Surface(Modifier.width(tile).testTag("settings-preview-album:${album.id}"), shape = GalleryShape,
+                            border = androidx.compose.foundation.BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant)) {
+                            CompositionLocalProvider(LocalAnimatedAlbumIds provides previewAnimatedIds) {
+                                AlbumTileContent(album, data, app.catalog, draft, true, columns, false, MaterialTheme.colorScheme.secondary, false) {}
+                            }
+                        }
+                    }
+                }
+            }
+            else if (tab == "FAVORITE" && grid) LazyVerticalStaggeredGrid(StaggeredGridCells.Fixed(columns), Modifier.weight(1f),
                 contentPadding = PaddingValues(8.dp), horizontalArrangement = Arrangement.spacedBy(8.dp), verticalItemSpacing = 8.dp) {
                 items(samples, key = { it.id }) { mediaSample(it) }
             }
@@ -348,7 +394,7 @@ fun SettingsPreviewScreen(app: GalleryApp, data: CatalogSnapshot, draft: Gallery
                 GalleryNavbar(app, draft, tab, navigate = {}, interactive = false)
             }
         }
-        if (InterfaceTools.shown(draft, tab, "SWAP")) SmallFloatingActionButton(onClick = {},
+        if (!app.session.isSingleScreen && InterfaceTools.shown(draft, tab, "SWAP")) SmallFloatingActionButton(onClick = {},
             modifier = Modifier.align(Alignment.BottomEnd).padding(8.dp).focusProperties { canFocus = false }.testTag("settings-preview-swap")) {
             Text("⇅", style = MaterialTheme.typography.titleLarge,
                 modifier = Modifier.semantics { contentDescription = localized(R.string.text_swap_screens_7455a4, "Scambia schermi") })

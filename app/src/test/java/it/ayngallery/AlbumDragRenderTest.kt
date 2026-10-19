@@ -26,8 +26,8 @@ class AlbumDragRenderTest {
     @After fun close() { activity?.pause()?.stop()?.destroy(); app.onTerminate() }
 
     private fun start(grid: Boolean, video: Boolean = false, reducedMotion: Boolean = true,
-        ids: List<String> = listOf("a", "b", "c", "d"), columns: Int = 4) {
-        runBlocking { app.preferences.save(GalleryPreferences(reducedMotion = reducedMotion, animatedAlbumCovers = false)) }
+        ids: List<String> = listOf("a", "b", "c", "d"), columns: Int = 4, horizontal: Boolean = false, carousel: Boolean = false) {
+        runBlocking { app.preferences.save(GalleryPreferences(reducedMotion = reducedMotion, animatedAlbumCovers = false, horizontalAlbums = horizontal, albumCarousel = carousel)) }
         app.preferences.reorderAlbums(listOf("hidden") + ids)
         val tree = android.provider.DocumentsContract.buildTreeDocumentUri("ayngallery.dragui", "root")
         fun uri(id: String) = android.provider.DocumentsContract.buildDocumentUriUsingTree(tree, id).toString()
@@ -70,6 +70,51 @@ class AlbumDragRenderTest {
     private fun release() {
         compose.onNodeWithTag("album-reorder-surface").performTouchInput { up() }
         compose.waitForIdle()
+    }
+
+    @Test fun horizontalAlbumsKeepTheirPreviewAndReorderAsAList() {
+        start(grid = true, carousel = true)
+        app.preferences.albumSize(setOf("b"), 4)
+        compose.waitForIdle()
+        compose.onNodeWithTag("albums-horizontal").assertIsDisplayed()
+        val selectedWidth = compose.onNodeWithTag("album:a").fetchSemanticsNode().boundsInRoot.width
+        val otherWidth = compose.onNodeWithTag("album:b").fetchSemanticsNode().boundsInRoot.width
+        assertEquals(1.5f, selectedWidth / otherWidth, .02f)
+        val destination = point("c")
+        hold("a")
+        move(destination)
+        release()
+        assertEquals(listOf("hidden", "b", "c", "a", "d"), app.preferences.albumOrder.value)
+        assertTrue(panel.windowModel.selectedAlbums.value.isEmpty())
+    }
+
+    @Test fun horizontalGridKeepsRowsAndListRemainsVertical() {
+        start(grid = true, horizontal = true)
+        compose.onNodeWithTag("albums-horizontal-grid").assertIsDisplayed()
+        val first = compose.onNodeWithTag("album:a").fetchSemanticsNode().boundsInRoot
+        val second = compose.onNodeWithTag("album:b").fetchSemanticsNode().boundsInRoot
+        assertTrue(second.top > first.top)
+        val destination = point("b")
+        hold("a"); move(destination); release()
+        assertEquals(listOf("hidden", "b", "a", "c", "d"), app.preferences.albumOrder.value)
+        compose.runOnIdle { panel.windowModel.albumGrid(false) }
+        compose.onNodeWithTag("albums-list").assertIsDisplayed()
+        compose.onNodeWithTag("albums-horizontal-grid").assertDoesNotExist()
+    }
+
+    @Test @Config(qualifiers = "it-w400dp-h800dp-port")
+    fun portraitCarouselKeepsCoversLeftAndUsesTheCommonCaption() {
+        start(grid = true, carousel = true)
+        compose.onNodeWithTag("albums-vertical-carousel").assertIsDisplayed()
+        val before = compose.onNodeWithTag("album:b").fetchSemanticsNode().boundsInRoot
+        compose.onNodeWithTag("carousel-label:b").assertDoesNotExist()
+        compose.onNodeWithText("b").assertIsDisplayed()
+        compose.onNodeWithTag("album-reorder-surface").performTouchInput { down(point("b")) }
+        compose.mainClock.advanceTimeBy(220)
+        val after = compose.onNodeWithTag("album:b").fetchSemanticsNode().boundsInRoot
+        assertEquals(before.left, after.left, 1f)
+        compose.onNodeWithText("b").assertIsDisplayed()
+        compose.onNodeWithTag("album-reorder-surface").performTouchInput { cancel() }
     }
 
     @Test fun stationaryHoldOpensOptionsWithoutSelectingAlbum() {

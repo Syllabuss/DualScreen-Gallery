@@ -1818,4 +1818,8 @@
     <string name="navbar_hide_single">Скрывать панель с единственным разделом</string>
     <string name="single_screen_landscape">Принудительная альбомная ориентация</string>
     <string name="show_empty_folders">Показывать пустые папки</string>
+    <string name="player_fullscreen">Полный экран</string>
+    <string name="horizontal_albums">Просматривать альбомы и папки горизонтально</string>
+    <string name="album_carousel">Карусель альбомов и папок</string>
+    <string name="video_skip_preview">Запускать видео без предпросмотра</string>
 </resources>

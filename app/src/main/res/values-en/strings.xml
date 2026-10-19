@@ -169,4 +169,8 @@
     <string name="navbar_hide_single">Hide navigation bar with one section</string>
     <string name="single_screen_landscape">Force landscape orientation</string>
     <string name="show_empty_folders">Show empty folders</string>
+    <string name="player_fullscreen">Fullscreen</string>
+    <string name="horizontal_albums">Browse albums and folders horizontally</string>
+    <string name="album_carousel">Album and folder carousel</string>
+    <string name="video_skip_preview">Play videos without a preview</string>
 </resources>

@@ -1818,4 +1818,8 @@
     <string name="navbar_hide_single">Ocultar la barra con una sola sección</string>
     <string name="single_screen_landscape">Forzar orientación horizontal</string>
     <string name="show_empty_folders">Mostrar carpetas vacías</string>
+    <string name="player_fullscreen">Pantalla completa</string>
+    <string name="horizontal_albums">Desplazar álbumes y carpetas horizontalmente</string>
+    <string name="album_carousel">Carrusel de álbumes y carpetas</string>
+    <string name="video_skip_preview">Reproducir vídeos sin vista previa</string>
 </resources>

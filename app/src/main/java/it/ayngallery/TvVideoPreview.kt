@@ -21,6 +21,7 @@ internal fun TvVideoPreview(activity: PanelActivity) {
     val prefs by app.preferences.state.collectAsStateWithLifecycle()
     val entry = video.liveChannel ?: return
     val player = video.player ?: return
+    androidx.activity.compose.BackHandler(enabled = activity.singleScreenVideoFullscreen) { activity.toggleSingleScreenVideoFullscreen() }
     val livePlayer = remember(player) { TvLiveCommands(player) }
     val scope = rememberCoroutineScope()
 
@@ -56,6 +57,8 @@ internal fun TvVideoPreview(activity: PanelActivity) {
         }, update = { view ->
             if (view.player !== livePlayer) { view.player = livePlayer; view.hideController() }
             view.onDoubleTapSeek = null; view.navigate = {}
+            view.onFullscreen = if (app.session.isSingleScreen) activity::toggleSingleScreenVideoFullscreen else null
+            view.fullscreen = activity.singleScreenVideoFullscreen
             view.onPip = { video.openPip(activity) }
             view.onVolume = { video.showVolume(activity, it) }
             view.onAudio = null; view.onSubtitles = null; view.onSettings = null

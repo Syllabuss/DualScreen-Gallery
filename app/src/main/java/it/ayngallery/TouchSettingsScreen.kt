@@ -61,8 +61,8 @@ internal fun TouchSettingsScreen(app: GalleryApp, prefs: GalleryPreferences) {
             }
             item {
                 Text(localized(R.string.text_photos_and_gifs_927c77, "Foto e GIF"), style = MaterialTheme.typography.titleMedium)
-                TouchChoice(localized(R.string.text_double_tap_8f6732, "Doppio tocco"), draft.doubleTap, touchActions(PadContext.VIEWER, true).filterNot { it == TouchAction.PIN }, "touch-double") { change(draft.copy(doubleTap = it)) }
-                TouchChoice(localized(R.string.text_long_press_e8ac77, "Pressione prolungata"), draft.longPress, touchActions(PadContext.VIEWER, true).filterNot { it == TouchAction.PIN }, "touch-long") { change(draft.copy(longPress = it)) }
+                TouchChoice(localized(R.string.text_double_tap_8f6732, "Doppio tocco"), draft.doubleTap, touchActions(PadContext.VIEWER, true).filterNot { it == TouchAction.PIN || app.session.isSingleScreen && it in setOf(TouchAction.SWAP, TouchAction.DIM) }, "touch-double") { change(draft.copy(doubleTap = it)) }
+                TouchChoice(localized(R.string.text_long_press_e8ac77, "Pressione prolungata"), draft.longPress, touchActions(PadContext.VIEWER, true).filterNot { it == TouchAction.PIN || app.session.isSingleScreen && it in setOf(TouchAction.SWAP, TouchAction.DIM) }, "touch-long") { change(draft.copy(longPress = it)) }
             }
             item { SettingsDisclosure(advanced, { advanced = it }, "touch-advanced") }
             if (advanced) {
@@ -76,7 +76,7 @@ internal fun TouchSettingsScreen(app: GalleryApp, prefs: GalleryPreferences) {
                 Text(localized(R.string.tutorial_gesture_hint, "Con tre dita: scorri nella direzione indicata o tocca senza trascinare."), Modifier.padding(vertical = 8.dp), style = MaterialTheme.typography.bodySmall)
             }
             items(TouchDirection.entries, key = { "direction:$it" }) { direction ->
-                TouchChoice(direction.title, draft.threeFinger.getValue(context).getValue(direction), touchActions(context).filterNot { it == TouchAction.PIN }, "touch-three:${direction.name}") { action ->
+                TouchChoice(direction.title, draft.threeFinger.getValue(context).getValue(direction).let { if (app.session.isSingleScreen && it in setOf(TouchAction.SWAP, TouchAction.DIM)) TouchAction.NONE else it }, touchActions(context).filterNot { it == TouchAction.PIN || app.session.isSingleScreen && it in setOf(TouchAction.SWAP, TouchAction.DIM) }, "touch-three:${direction.name}") { action ->
                     change(draft.copy(threeFinger = draft.threeFinger + (context to (draft.threeFinger.getValue(context) + (direction to action)))))
                 }
             }

@@ -91,6 +91,9 @@ class GallerySession(private val app: Application) : DisplayManager.DisplayListe
     private val allowed = mutableSetOf<String>()
     var screens by mutableStateOf(emptyList<ScreenInfo>())
         private set
+    val activeScreens get() = screens.filter { it.key !in state.ceded }
+    val isSingleScreen get() = activeScreens.size == 1
+    val librarySlot get() = DisplayPolicy.librarySlot(state, isSingleScreen)
     private var persistedStateValid = true
     var state by mutableStateOf(readState())
         private set
@@ -100,7 +103,7 @@ class GallerySession(private val app: Application) : DisplayManager.DisplayListe
     var singleScreenLandscape by mutableStateOf(prefs.getBoolean("single_landscape", false))
         private set
     fun singleScreenLandscape(enabled: Boolean) {
-        if (screens.size != 1) return
+        if (!isSingleScreen) return
         prefs.edit().putBoolean("single_landscape", enabled).apply()
         singleScreenLandscape = enabled
         panels.values.mapNotNull { it.get() }.forEach { it.updateSingleScreenOrientation() }
@@ -128,7 +131,9 @@ class GallerySession(private val app: Application) : DisplayManager.DisplayListe
             startupPair = pair; startupAutomatic = false
             if (enabled) {
                 prefs.edit().putBoolean("usage_access_deferred", false).apply()
-                save(state.copy(ceded = state.ceded - pair))
+                val target = screens.single { it.key in pair && it.key != activity.screenKey }
+                expand(activity, target)
+                activity.recreate()
             }
         } else fail(localized(R.string.text_startup_preference_not_saved_febc48, "Preferenza di avvio non salvata."))
     }
@@ -622,11 +627,10 @@ class GallerySession(private val app: Application) : DisplayManager.DisplayListe
         }
         mediaEditor?.let { editor -> return usable(panels[editor.ownerSlot]?.get()) }
         if (!caller.intent.getBooleanExtra("paired_gallery", false) || screens.size < 2 || state.ceded.isNotEmpty()) return caller
-        val librarySlot = if (state.swapped) 1 else 0
         return usable(panels[settingsOwner ?: librarySlot]?.get())
     }
     internal fun receivesController(panel: PanelActivity) = panels.values.mapNotNull { it.get() }
-        .any { (it.focused || it.controllerModal?.hasFocus?.invoke() == true) && controllerTarget(it) === panel }
+        .any { (it.focused || it.controllerInputActive || it.controllerModal?.hasFocus?.invoke() == true) && controllerTarget(it) === panel }
 
     private fun startedKeys() = started.mapNotNull { panels[it]?.get()?.screenKey }.toSet()
     fun canSwap(): Boolean = DisplayPolicy.canSwap(startedKeys(), allowed, state)
@@ -698,13 +702,12 @@ class GallerySession(private val app: Application) : DisplayManager.DisplayListe
         return true
     }
     fun isPairedPreview(activity: PanelActivity) = canSwap() && ((activity.slot == 0) == state.swapped)
-    fun previewActivity(): PanelActivity? = panels[if (state.swapped) 0 else 1]?.get()?.takeIf { it.slot in started && !it.isFinishing && it.screenKey in allowed && it.screenKey !in state.ceded }
+    fun previewActivity(): PanelActivity? = panels[1 - librarySlot]?.get()?.takeIf { !isSingleScreen && it.slot in started && !it.isFinishing && it.screenKey in allowed && it.screenKey !in state.ceded }
     fun refreshTaskIcons() { panels.values.mapNotNull { it.get() }.filter { !it.isFinishing }.forEach(LauncherIcon::applyTaskIcon) }
-    fun libraryModel(): GalleryWindowModel? = panels[if (state.swapped) 1 else 0]?.get()?.windowModel
+    fun libraryModel(): GalleryWindowModel? = panels[librarySlot]?.get()?.windowModel
     fun libraryNavigation(model: GalleryWindowModel) {
         if (!canSwap() || settingsOwner != null) return
         val caller = panels.values.mapNotNull { it.get() }.firstOrNull { it.windowModel === model } ?: return
-        val librarySlot = if (state.swapped) 1 else 0
         if (caller.slot != librarySlot && !save(state.copy(swapped = caller.slot == 1))) return
         panels[1 - caller.slot]?.get()?.windowModel?.restorePanelRole()
     }
@@ -739,7 +742,7 @@ class GallerySession(private val app: Application) : DisplayManager.DisplayListe
 
     fun swap() {
         if (!canSwap()) { fail(localized(R.string.text_swap_available_only_when_both_panels_are_visible_eabf0e, "Scambio disponibile soltanto con entrambi i pannelli visibili.")); return }
-        val librarySlot = if (state.swapped) 1 else 0
+        val librarySlot = this.librarySlot
         val library = panels[librarySlot]?.get()?.windowModel
         val destination = panels[1 - librarySlot]?.get()?.windowModel
         if (save(state.copy(swapped = !state.swapped))) {
@@ -763,10 +766,17 @@ class GallerySession(private val app: Application) : DisplayManager.DisplayListe
 
     fun single(activity: PanelActivity) {
         val here = current(activity) ?: return
-        if (!save(DisplayPolicy.singleHere(here.key, screens.map { it.key }.toSet(), state).copy(anchorSlot = activity.slot))) return
+        if (!save(DisplayPolicy.singleHere(here.key, screens.map { it.key }.toSet(), state).copy(anchorSlot = activity.slot, swapped = activity.slot == 1))) return
         rememberStartupPair(activity, false)
+        settingsModel()?.takeIf { settingsOwner != activity.slot }?.let { owner ->
+            val route = owner.route.value.tab
+            settingsOwner = activity.slot
+            settingsReturn = activity.windowModel.navigationRestore()
+            activity.windowModel.go(route)
+        }
         allowed.retainAll(setOf(here.key))
         panels.values.mapNotNull { it.get() }.filter { it !== activity }.forEach { it.finishAndRemoveTask() }
+        activity.recreate()
         notice = localized(R.string.text_only_this_screen_others_remain_released_until_ex_55a96a, "Solo questo schermo. Gli altri restano ceduti fino a una richiesta esplicita.")
         record(localized(R.string.text_other_displays_released_screen_1_s_remains_bcd1b9, "Cessione altri display salvata; rimane schermo %1\$s", here.id))
     }

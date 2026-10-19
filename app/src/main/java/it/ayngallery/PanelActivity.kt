@@ -37,6 +37,8 @@ abstract class PanelActivity : ComponentActivity() {
         private set
     var focused by mutableStateOf(false)
         private set
+    internal var controllerInputActive = false
+        private set
     private var accepted = false
     private val visualAccess = registerForActivityResult(ActivityResultContracts.RequestMultiplePermissions()) {
         val app = application as GalleryApp
@@ -157,6 +159,7 @@ abstract class PanelActivity : ComponentActivity() {
     fun performTouchAction(action: TouchAction) {
         if (!accepted || !isStartedFlow.value || isFinishing || action == TouchAction.NONE || action == TouchAction.TOGGLE_ZOOM) return
         if (session.tutorialInProgress) return
+        if (session.isSingleScreen && action in setOf(TouchAction.SWAP, TouchAction.DIM)) return
         if (action in setOf(TouchAction.TAB_PREVIOUS, TouchAction.TAB_NEXT)) {
             val browser = session.libraryModel() ?: windowModel
             val tabs = visibleNavbarTabs((application as GalleryApp).preferences.state.value)
@@ -259,6 +262,7 @@ abstract class PanelActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         session = (application as GalleryApp).session
         windowModel = ViewModelProvider(this)[GalleryWindowModel::class.java]
+        singleScreenVideoFullscreen = intent.getBooleanExtra("video_fullscreen", false)
         updateSingleScreenOrientation()
         screenKey = session.current(this)?.key.orEmpty()
         accepted = session.accept(this)
@@ -285,14 +289,23 @@ abstract class PanelActivity : ComponentActivity() {
         session.record(localized(R.string.text_p_1_s_created_on_display_2_s_b6f016, "P%1\$s creato su display %2\$s", slot, session.current(this)?.id))
     }
 
+    var singleScreenVideoFullscreen by mutableStateOf(false)
+        private set
+    fun toggleSingleScreenVideoFullscreen() {
+        if (!session.isSingleScreen) return
+        singleScreenVideoFullscreen = !singleScreenVideoFullscreen
+        intent.putExtra("video_fullscreen", singleScreenVideoFullscreen)
+        updateSingleScreenOrientation()
+    }
+
     internal fun updateSingleScreenOrientation() {
         val orientation = when {
-            DisplayPolicy.preferSingleScreenLandscape(session.screens, session.singleScreenLandscape) ->
+            DisplayPolicy.preferSingleScreenLandscape(session.activeScreens, session.singleScreenLandscape || singleScreenVideoFullscreen) ->
                 android.content.pm.ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE
-            session.screens.size == 1 -> {
+            session.isSingleScreen -> {
                 // Samsung can retain the forced rotation as its user-locked orientation.
                 // Restore the display's native axis rather than leaving that lock in place.
-                val screen = session.screens.single()
+                val screen = session.activeScreens.single()
                 if (screen.height >= screen.width) android.content.pm.ActivityInfo.SCREEN_ORIENTATION_USER_PORTRAIT
                 else android.content.pm.ActivityInfo.SCREEN_ORIENTATION_USER_LANDSCAPE
             }
@@ -414,8 +427,11 @@ abstract class PanelActivity : ComponentActivity() {
         galleryImmersive = enabled
         val app = application as GalleryApp
         val shaded = manuallyDimmed || app.video.dimNavigation && app.video.owner != slot || windowModel.frameDimmed.value
-        val showStatus = app.preferences.state.value.showUpperStatusBar &&
+        val showStatus = !session.isSingleScreen && app.preferences.state.value.showUpperStatusBar &&
             session.screens.firstOrNull { it.key == screenKey }?.id == android.view.Display.DEFAULT_DISPLAY && !shaded
+        if (session.isSingleScreen) window.attributes = window.attributes.apply {
+            layoutInDisplayCutoutMode = android.view.WindowManager.LayoutParams.LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES
+        }
         androidx.core.view.WindowCompat.setDecorFitsSystemWindows(window, showStatus && !enabled)
         val bars = androidx.core.view.WindowCompat.getInsetsController(window, window.decorView)
         bars.systemBarsBehavior = androidx.core.view.WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
@@ -443,6 +459,7 @@ abstract class PanelActivity : ComponentActivity() {
     }
 
     private fun clearInput() {
+        controllerInputActive = false
         videoStickX = 0f; videoStickY = 0f
         consoleAxes = null; consoleStick.clear()
         input.clear(); previewAxes = null; handler.removeCallbacks(repeatInput)
@@ -540,8 +557,10 @@ abstract class PanelActivity : ComponentActivity() {
     fun handleControllerKey(event: KeyEvent): Boolean {
         if (padButton(event.keyCode) != null && event.action == KeyEvent.ACTION_DOWN)
             session.record(localized(R.string.text_p_1_s_key_2_s_source_3_s_focus_4_s_accepted_5_s_10cfe3, "P%1\$s tasto %2\$s, sorgente %3\$s, focus=%4\$s, accettato=%5\$s", slot, event.keyCode, event.source, focused, accepted))
-        if (!accepted || !focused || !isStartedFlow.value) return false
+        if (!accepted || !isStartedFlow.value || isFinishing) return false
         if (padButton(event.keyCode) == null) return false
+        // Multi-display recreation can leave the focus callback stale even as Android delivers input.
+        controllerInputActive = true
         val target = session.controllerTarget(this) ?: return true
         return target.receiveControllerKey(event)
     }
@@ -606,10 +625,11 @@ abstract class PanelActivity : ComponentActivity() {
 
 
     override fun dispatchGenericMotionEvent(event: MotionEvent): Boolean {
-        if (!accepted || !focused || !isStartedFlow.value || event.action != MotionEvent.ACTION_MOVE ||
+        if (!accepted || !isStartedFlow.value || isFinishing || event.action != MotionEvent.ACTION_MOVE ||
             (!event.isFromSource(InputDevice.SOURCE_JOYSTICK) && !event.isFromSource(InputDevice.SOURCE_GAMEPAD))) {
             return super.dispatchGenericMotionEvent(event)
         }
+        controllerInputActive = true
         val target = session.controllerTarget(this) ?: return true
         return target.receiveControllerMotion(event)
     }

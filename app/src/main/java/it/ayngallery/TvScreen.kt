@@ -156,8 +156,12 @@ internal fun TvScreen(activity: PanelActivity, preview: Boolean) {
                         }
                     }
                 }
-            } else TvChannelCollection(activity, visibleEntries, reorderable = !tv.browsing && tv.query.isBlank(), Modifier.weight(1f), play)
-            if (!app.session.canSwap() && selected != null) GalleryButton(localized(R.string.tv_watch, "Guarda ora"), enabled = app.video.liveLoadingChannel == null, icon = R.drawable.ph_play) { play(selected) }
+            } else Box(Modifier.weight(1f).fillMaxWidth()) {
+                TvChannelCollection(activity, visibleEntries, reorderable = !tv.browsing && tv.query.isBlank(), Modifier.fillMaxSize().padding(bottom = if (!app.session.canSwap() && selected != null) 80.dp else 0.dp), play)
+                if (!app.session.canSwap() && selected != null) Surface(Modifier.align(Alignment.BottomEnd).padding(end = 12.dp, bottom = 16.dp), shape = GalleryShape, shadowElevation = 8.dp) {
+                    GalleryButton(localized(R.string.tv_watch, "Guarda ora"), enabled = app.video.liveLoadingChannel == null, primary = true, icon = R.drawable.ph_play) { play(selected) }
+                }
+            }
         }
     }
 }

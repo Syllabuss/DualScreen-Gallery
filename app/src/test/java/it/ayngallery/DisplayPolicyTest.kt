@@ -4,6 +4,14 @@ import org.junit.Assert.*
 import org.junit.Test
 
 class DisplayPolicyTest {
+    @Test fun singleScreenAlwaysMakesTheRemainingPanelTheLibraryRegardlessOfPreviousSwap() {
+        for (slot in 0..1) for (swapped in listOf(false, true)) {
+            val state = DisplayState(anchorSlot = slot, swapped = swapped)
+            assertEquals(slot, DisplayPolicy.librarySlot(state, singleScreen = true))
+            assertEquals(if (swapped) 1 else 0, DisplayPolicy.librarySlot(state, singleScreen = false))
+        }
+    }
+
     @Test fun landscapeIsOptInAndNeverAppliesToMultipleDisplays() {
         val phone = ScreenInfo(0, "phone", "Phone", 1080, 2340, 0)
         val lower = ScreenInfo(4, "lower", "Lower", 1080, 1240, 0)

@@ -1818,4 +1818,8 @@
     <string name="navbar_hide_single">Masquer la barre avec une seule section</string>
     <string name="single_screen_landscape">Forcer le mode paysage</string>
     <string name="show_empty_folders">Afficher les dossiers vides</string>
+    <string name="player_fullscreen">Plein écran</string>
+    <string name="horizontal_albums">Parcourir les albums et dossiers horizontalement</string>
+    <string name="album_carousel">Carrousel des albums et dossiers</string>
+    <string name="video_skip_preview">Lire les vidéos sans aperçu</string>
 </resources>

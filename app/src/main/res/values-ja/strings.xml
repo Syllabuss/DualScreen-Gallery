@@ -1818,4 +1818,8 @@
     <string name="navbar_hide_single">セクションが1つならナビゲーションバーを隠す</string>
     <string name="single_screen_landscape">横向き表示に固定</string>
     <string name="show_empty_folders">空のフォルダを表示</string>
+    <string name="player_fullscreen">全画面表示</string>
+    <string name="horizontal_albums">アルバムとフォルダを横にスクロール</string>
+    <string name="album_carousel">アルバムとフォルダのカルーセル</string>
+    <string name="video_skip_preview">プレビューせずに動画を再生</string>
 </resources>

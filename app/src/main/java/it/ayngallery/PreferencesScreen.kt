@@ -183,6 +183,12 @@ fun PreferencesScreen(app: GalleryApp, prefs: GalleryPreferences, task: (suspend
                 item { GallerySettingSwitch(localized(R.string.text_navigation_bar_labels_63fe86, "Etichette nella barra di navigazione"), draft.navbarLabels, Modifier.testTag("navbar-labels")) { draft = draft.copy(navbarLabels = it) } }
                 item { GallerySettingSwitch(localized(R.string.text_show_file_names_557e96, "Mostra nomi dei file"), draft.showMediaNames) { draft = draft.copy(showMediaNames = it) } }
                 item { GallerySettingSwitch(localized(R.string.direct_delete_option, "Mostra «Elimina direttamente»"), draft.directDeleteEnabled) { draft = draft.copy(directDeleteEnabled = it) } }
+                item { OutlinedCard(Modifier.fillMaxWidth(), shape = GalleryShape) {
+                    Column(Modifier.padding(12.dp)) {
+                        GallerySettingSwitch(localized(R.string.album_carousel, "Carosello degli album e delle cartelle"), draft.albumCarousel) { draft = draft.copy(albumCarousel = it) }
+                        GallerySettingSwitch(localized(R.string.horizontal_albums, "Scorrimento orizzontale degli album e delle cartelle"), draft.horizontalAlbums, enabled = !draft.albumCarousel) { draft = draft.copy(horizontalAlbums = it) }
+                    }
+                } }
                 item { GallerySettingSwitch(localized(R.string.show_empty_folders, "Mostra cartelle vuote"), draft.showEmptyFolders) { draft = draft.copy(showEmptyFolders = it) } }
                 item { GallerySettingSwitch(localized(R.string.album_hierarchy, "Sfoglia album per cartelle"), draft.nestedAlbums) { draft = draft.copy(nestedAlbums = it) }
                     Row(Modifier.padding(horizontal = 12.dp, vertical = 6.dp), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
@@ -191,7 +197,7 @@ fun PreferencesScreen(app: GalleryApp, prefs: GalleryPreferences, task: (suspend
                     }
                 }
                 item { Text(localized(R.string.tools_hint, "Scegli i pulsanti da mostrare. Le scorciatoie del controller restano attive."), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant) }
-                item { GallerySettingSwitch(localized(R.string.upper_status_bar, "Barra di stato sullo schermo superiore"), draft.showUpperStatusBar,
+                if (!app.session.isSingleScreen) item { GallerySettingSwitch(localized(R.string.upper_status_bar, "Barra di stato sullo schermo superiore"), draft.showUpperStatusBar,
                     Modifier.testTag("upper-status-bar")) { draft = draft.copy(showUpperStatusBar = it) } }
                 item { Text(localized(R.string.settings_visible_buttons, "Pulsanti visibili"), style = MaterialTheme.typography.titleMedium) }
                 item { Row(Modifier.horizontalScroll(rememberScrollState()), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
@@ -237,7 +243,7 @@ fun PreferencesScreen(app: GalleryApp, prefs: GalleryPreferences, task: (suspend
                 }
                 if (section in setOf("ALL", "INTERFACE", "VIEWER")) {
                 item {
-                    GallerySettingSwitch(localized(R.string.action_menus_below, "Azioni sullo schermo di navigazione"), draft.actionMenusBelow) { draft = draft.copy(actionMenusBelow = it) }
+                    if (!app.session.isSingleScreen) GallerySettingSwitch(localized(R.string.action_menus_below, "Azioni sullo schermo di navigazione"), draft.actionMenusBelow) { draft = draft.copy(actionMenusBelow = it) }
                     GallerySettingSwitch(localized(R.string.grid_preview_motion, "Scorrimento dell’anteprima dalla griglia"), draft.gridPreviewMotion, Modifier.testTag("grid-preview-motion")) { draft = draft.copy(gridPreviewMotion = it) }
                     Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                         GalleryIcon(R.drawable.ph_info, null, Modifier.size(18.dp))
@@ -473,6 +479,7 @@ private fun PlaybackMediaSettings(draft: GalleryPreferences, category: String, c
                     Modifier.testTag("video-confirm-replacement")) { change(draft.copy(confirmVideoReplacement = it)) }
                 GallerySettingSwitch(localized(R.string.playback_sleep_continue, "Continua a console chiusa"), draft.videoDuringSleep, Modifier.testTag("video-during-sleep")) { change(draft.copy(videoDuringSleep = it)) }
                 Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) { GalleryIcon(R.drawable.ph_info, null, Modifier.size(18.dp)); Text(localized(R.string.video_sleep_help, ""), Modifier.weight(1f), style = MaterialTheme.typography.bodySmall) }
+                GallerySettingSwitch(localized(R.string.video_skip_preview, "Avvia i video senza anteprima"), draft.videoSkipPreview, Modifier.testTag("video-skip-preview")) { change(draft.copy(videoSkipPreview = it)) }
                 GallerySettingSwitch(localized(R.string.video_keep_playing, "Continua in finestra"), draft.videoKeepPlaying) { change(draft.copy(videoKeepPlaying = it)) }
                 Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) { GalleryIcon(R.drawable.ph_info, null); Text(localized(R.string.video_keep_playing_description, "Il video continua in finestra su Musica, FTP e impostazioni, e rientra nell’anteprima tornando alla galleria."), Modifier.weight(1f), style = MaterialTheme.typography.bodySmall) }
                 GallerySettingSwitch(localized(R.string.video_mix_audio, "Audio condiviso con altre app"), draft.videoMixAudio, Modifier.testTag("video-mix-audio")) {
@@ -486,6 +493,7 @@ private fun PlaybackMediaSettings(draft: GalleryPreferences, category: String, c
                     change(draft.copy(videoStickControls = it))
                 }
                 Text(localized(R.string.video_stick_description, "Durante un video, muovi lo stick sinistro su o giù per regolare il volume, a destra o sinistra per avanzare o tornare indietro. Il D-pad resta disponibile per navigare. Disattiva per usare anche lo stick nella galleria."), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                if ((androidx.activity.compose.LocalActivity.current as? PanelActivity)?.session?.screens?.size != 1) {
                 PlaybackChoice(localized(R.string.video_auto_dim, "Oscuramento automatico"), draft.videoDimSeconds,
                     listOf(0, 5, 10, 30, 60, 300).associateWith { when (it) {
                         0 -> localized(R.string.video_auto_dim_off, "Disattivato")
@@ -495,6 +503,7 @@ private fun PlaybackMediaSettings(draft: GalleryPreferences, category: String, c
                 Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                     GalleryIcon(R.drawable.ph_info, null, Modifier.size(18.dp))
                     Text(localized(R.string.video_auto_dim_description, "Durante un video, oscura lo schermo di navigazione dopo il tempo scelto senza interazioni. Toccalo per riattivarlo. Disattivato: usa la luna quando vuoi; la ricerca nasconde il pulsante, non interrompe il timer."), Modifier.weight(1f), style = MaterialTheme.typography.bodySmall)
+                }
                 }
         }
         if (category in setOf("ALL", "MUSIC")) {

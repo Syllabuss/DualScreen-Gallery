@@ -22,6 +22,7 @@ import androidx.compose.ui.focus.*
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.input.pointer.pointerInput
+import androidx.compose.foundation.gestures.scrollBy
 import androidx.compose.foundation.gestures.awaitEachGesture
 import androidx.compose.foundation.gestures.awaitFirstDown
 import androidx.compose.ui.layout.onGloballyPositioned
@@ -181,7 +182,7 @@ fun GalleryHome(activity: PanelActivity) {
     var mediaMenu by remember { mutableStateOf(false) }
     var multi by remember(route.tab, route.album, route.collection, route.musicView, route.musicGroup, route.kind) { mutableStateOf(false) }
     androidx.activity.compose.BackHandler(enabled = multi) { selected = emptySet(); multi = false; mediaMenu = false }
-    val libraryRole = (activity.slot == 0) != app.session.state.swapped
+    val libraryRole = activity.slot == app.session.librarySlot
     val chromeSurface = GalleryThemes.get(app.session.settingsDraft.takeIf { app.session.settingsOwner != null } ?: prefs).colors.surface.copy(alpha = if (prefs.backgroundMode == "PHOTO") .90f else .94f)
     val libraryRoute by (app.session.libraryModel()?.route ?: vm.route).collectAsStateWithLifecycle()
     LaunchedEffect(libraryRoute.tab) {
@@ -297,7 +298,9 @@ fun GalleryHome(activity: PanelActivity) {
         if (libraryRole && canSwap && app.session.shouldPromptUsageAccess && (!needsFolder || welcomeDismissed))
             usageAccessPrompt = true
     }
-    val immersiveViewer = (showViewer || fullPreviewPlayer) && !showComparison
+    val singleLiveFullscreen = app.session.isSingleScreen && activity.singleScreenVideoFullscreen &&
+        app.video.liveChannel != null && app.video.player != null && !app.video.floating && !app.video.pipOpening && !settingsActive
+    val immersiveViewer = (showViewer || fullPreviewPlayer || singleLiveFullscreen) && !showComparison
     LaunchedEffect(viewer, showViewer) {
         // Actions are shared by both panels; changing the presenter must not dismiss them.
     }
@@ -475,12 +478,15 @@ fun GalleryHome(activity: PanelActivity) {
             else app.music.play(item.id, items.filter { it.kind == "AUDIO" }.map { it.id })
             if (!app.session.remotePreviewVisible(activity)) vm.go("PLAYER")
         } else if (item.kind == "VIDEO" && !item.convertedGif) {
-            if (!alreadySelected) {
+            if (!alreadySelected && !prefs.videoSkipPreview) {
                 if (!videoRunning && !app.session.remotePreviewVisible(activity)) vm.open(item.id)
                 return
             }
+            if (app.session.isSingleScreen) vm.open(item.id)
             if (videoRunning && app.video.mediaId == item.id) app.video.toggle()
-            else app.video.requestPlay(item, app.session.previewActivity()?.slot ?: activity.slot, false)
+            else {
+                app.video.requestPlay(item, app.session.previewActivity()?.slot ?: activity.slot, false)
+            }
         } else {
             if (videoRunning && app.video.keepsPlaying && app.video.player?.isPlaying == true) app.video.suspendForMedia()
             else if (videoRunning) app.video.stop(app.video.owner)
@@ -566,7 +572,7 @@ fun GalleryHome(activity: PanelActivity) {
                 }
                 PadAction.TOGGLE_VIEW -> if (route.tab == "TV") app.tv.store.grid(!app.tv.store.grid) else if (!showViewer && hasGridContent && route.tab in MainTabs.map { it.key }) {
                     if (route.tab == "VIDEO" && route.album == null) vm.cycleVideoView()
-                    else if (albumRootContent) vm.albumGrid(!albumGrid) else vm.mediaGrid(!mediaGrid)
+                    else if (albumRootContent) { if (!prefs.albumCarousel) vm.albumGrid(!albumGrid) } else vm.mediaGrid(!mediaGrid)
                 }
                 PadAction.SWAP -> app.session.swapAnimated()
                 PadAction.FRAME -> if (route.tab == "FRAME") vm.back() else vm.startFrame()
@@ -600,7 +606,7 @@ fun GalleryHome(activity: PanelActivity) {
     CompositionLocalProvider(LocalSettingsSave provides settingsSave) { GalleryDesign(app.session.settingsDraft.takeIf { settingsActive } ?: prefs, animatePalette = needsFolder) {
         Box(Modifier.fillMaxSize()) {
         Column(Modifier.fillMaxSize().then(if (libraryRole && !settingsActive && !immersiveViewer && !frameActive) Modifier.galleryBackground(app, data, prefs) else Modifier.background(MaterialTheme.colorScheme.background))
-            .then(if (immersiveViewer || immersiveFrame) Modifier else Modifier.windowInsetsPadding(if (tvBrowserKeyboard) WindowInsets.safeDrawing.exclude(WindowInsets.ime) else WindowInsets.safeDrawing))
+            .then(if (immersiveViewer || immersiveFrame) Modifier else Modifier.windowInsetsPadding(if (app.session.isSingleScreen) WindowInsets.safeDrawing.exclude(WindowInsets.displayCutout.only(WindowInsetsSides.Horizontal)).let { if (tvBrowserKeyboard) it.exclude(WindowInsets.ime) else it } else if (tvBrowserKeyboard) WindowInsets.safeDrawing.exclude(WindowInsets.ime) else WindowInsets.safeDrawing))
             .then(if (libraryRole && activeVideo && !settingsActive) Modifier.pointerInput(app.video) {
                 awaitEachGesture {
                     awaitFirstDown(requireUnconsumed = false, pass = androidx.compose.ui.input.pointer.PointerEventPass.Initial)
@@ -637,7 +643,7 @@ fun GalleryHome(activity: PanelActivity) {
                 }
                 if (librarySearch && route.tab == "FAVORITE" && toolShown("FILTER") && (tvFavorites.isNotEmpty() || data.visibleMedia.any { it.available && it.favorite })) FavoriteFilters(vm, route.kind)
                 if (librarySearch && route.tab != "MUSIC" && hasGridContent && gridActive && toolShown("ZOOM")) {
-                    GalleryIconButton(R.drawable.ph_magnifying_glass_plus, localized(R.string.text_larger_albums_806813, "Ingrandisci album")) { if (albumRoot) vm.albumColumns(albumColumns - 1) else vm.mediaColumns(mediaColumns - 1) }
+                    GalleryIconButton(R.drawable.ph_magnifying_glass_plus, localized(R.string.text_larger_albums_806813, "Ingrandisci album"), enabled = (if (albumRoot) albumColumns else mediaColumns) > 2) { if (albumRoot) vm.albumColumns(albumColumns - 1) else vm.mediaColumns(mediaColumns - 1) }
                     GalleryIconButton(R.drawable.ph_magnifying_glass_minus, localized(R.string.text_smaller_albums_52ae9a, "Rimpicciolisci album")) { if (albumRoot) vm.albumColumns(albumColumns + 1) else vm.mediaColumns(mediaColumns + 1) }
                 }
                 if (librarySearch && route.tab in setOf("VIDEO", "FAVORITE") && hasGridContent && !gridActive && toolShown("ZOOM")) {
@@ -683,7 +689,7 @@ fun GalleryHome(activity: PanelActivity) {
                 if (librarySearch && showFolderShortcut && route.tab in setOf("ALBUM", "PHOTO", "VIDEO") && !multi && toolShown("ZOOM"))
                     GalleryIconButton(R.drawable.ph_plus_circle, localized(R.string.choose_media_folder, "Aggiungi cartella"), Modifier.testTag("${route.tab.lowercase()}-add-folder")) { addFolderRole = SourceRole.VISUAL }
                     if (librarySearch && toolShown("SEARCH")) GalleryIconButton(R.drawable.ph_magnifying_glass, if (query.isBlank()) localized(R.string.text_search_and_filter_c3edb2, "Cerca e filtra") else localized(R.string.text_edit_search_1_s_b5e403, "Modifica ricerca: %1\$s", query)) { searching = true }
-                    if (librarySearch && hasGridContent && toolShown("VIEW")) GalleryIconButton(if (route.tab == "VIDEO" && route.album == null && videoFolders) R.drawable.ph_folders else if (if (albumRoot) albumGrid else mediaGrid) R.drawable.ph_list else R.drawable.ph_squares_four,
+                    if (librarySearch && hasGridContent && !(albumRootContent && prefs.albumCarousel) && toolShown("VIEW")) GalleryIconButton(if (route.tab == "VIDEO" && route.album == null && videoFolders) R.drawable.ph_folders else if (if (albumRoot) albumGrid else mediaGrid) R.drawable.ph_list else R.drawable.ph_squares_four,
                         if (if (albumRoot) albumGrid else mediaGrid) localized(R.string.text_list_view_8cb747, "Vista elenco") else localized(R.string.text_grid_view_c4886b, "Vista griglia")) {
                         if (route.tab == "VIDEO" && route.album == null) vm.cycleVideoView() else if (albumRoot) vm.albumGrid(!albumGrid) else vm.mediaGrid(!mediaGrid)
                     }
@@ -693,10 +699,10 @@ fun GalleryHome(activity: PanelActivity) {
                 }
                 if (route.tab == "SETTINGS_HUB") {
                     val preferredSettingsGrid by app.preferences.settingsGrid.collectAsStateWithLifecycle()
-                    val settingsGrid = preferredSettingsGrid && app.session.screens.size > 1
-                    GalleryIconButton(if (settingsGrid) R.drawable.ph_rows else R.drawable.ph_grid_nine,
+                    val settingsGrid = preferredSettingsGrid && !app.session.isSingleScreen
+                    if (!app.session.isSingleScreen) GalleryIconButton(if (settingsGrid) R.drawable.ph_rows else R.drawable.ph_grid_nine,
                         localized(if (settingsGrid) R.string.settings_rows_title else R.string.settings_grid_title, "Vista"),
-                        Modifier.testTag("settings-view-toggle").focusProperties { down = settingsCategoryFocus }, enabled = app.session.screens.size > 1) { app.preferences.settingsGrid(!settingsGrid) }
+                        Modifier.testTag("settings-view-toggle").focusProperties { down = settingsCategoryFocus }) { app.preferences.settingsGrid(!settingsGrid) }
                     GalleryIconButton(R.drawable.ph_trash, localized(R.string.text_trash_9a3a36, "Cestino"),
                         Modifier.testTag("settings-trash-shortcut").focusProperties { down = settingsCategoryFocus }) {
                         app.session.settingsSection = "TRASH"; app.session.recoveryTab = "TRASH"; app.session.trashPreviewId = null; vm.go("TRASH")
@@ -755,7 +761,7 @@ fun GalleryHome(activity: PanelActivity) {
                     val route = scene.route
                     val items = scene.items.mapNotNull { data.byId[it.id]?.takeIf(data::visible) }
                     val viewer = scene.viewer
-                    if (prefs.tvEnabled && !libraryRole && app.video.liveChannel != null && !app.video.floating && !app.video.pipOpening && !settingsActive && libraryRoute.tab !in setOf("MUSIC", "PLAYER", "FTP") && scene.settingsPanel == null) TvVideoPreview(activity)
+                    if (singleLiveFullscreen || prefs.tvEnabled && !libraryRole && app.video.liveChannel != null && !app.video.floating && !app.video.pipOpening && !settingsActive && libraryRoute.tab !in setOf("MUSIC", "PLAYER", "FTP") && scene.settingsPanel == null) TvVideoPreview(activity)
                     else if (prefs.tvEnabled && !settingsActive && !libraryRole && libraryRoute.tab == "FAVORITE" && prefs.tvInMediaFavorites && app.tv.favoritePreview && !activeVideo && scene.settingsPanel == null) TvScreen(activity, preview = true)
                     else if (prefs.tvEnabled && !settingsActive && libraryRoute.tab == "TV" && scene.settingsPanel == null) TvScreen(activity, preview = !libraryRole && canSwap)
                     else if (scene.frameVisible) PhotoFrameScreen(activity, data, prefs, blocked = false, actions = { actionMedia = it }, compare = ::compare, remove = { fileRequest = FileActionRequest("TRASH", listOf(it)) }, task = ::task, model = frameModel, previewOnly = !libraryRole, controlsOnly = libraryRole && canSwap)
@@ -847,11 +853,11 @@ fun GalleryHome(activity: PanelActivity) {
                     PreviewMusicPanel(app, playback, data, prefs, fullPlayer = false,
                         controlsVisible = !showViewer || previewControlsVisible, bottomReserve = if (prefs.gifFrameCount && prefs.gifFrameCounter && prefs.gifFrameSelector && data.byId[viewer]?.kind == "GIF") 96.dp else 0.dp)
             }
-            if (!settingsActive) AnimatedVisibility(visible = navbarVisible(prefs) && mediaEditor == null && !settingsPreview && !showViewer && !fullPreviewPlayer && !frameActive && (route.tab in MainTabs.map { it.key } || route.tab == "FTP"),
+            if (!settingsActive) AnimatedVisibility(visible = navbarVisible(prefs) && !singleLiveFullscreen && mediaEditor == null && !settingsPreview && !showViewer && !fullPreviewPlayer && !frameActive && (route.tab in MainTabs.map { it.key } || route.tab == "FTP"),
                 enter = fadeIn(tween(if (prefs.reducedMotion) 0 else 220)), exit = fadeOut(tween(if (prefs.reducedMotion) 0 else 220))) {
                 Column(Modifier.fillMaxWidth().background(chromeSurface)) {
                     HorizontalDivider(color = MaterialTheme.colorScheme.primary.copy(alpha = .72f), thickness = 1.dp)
-                    GalleryNavbar(app, prefs, route.tab, { vm.go(it) }, compact = app.session.screens.size > 1 && app.session.current(activity)?.id == android.view.Display.DEFAULT_DISPLAY)
+                    GalleryNavbar(app, prefs, route.tab, { vm.go(it) }, compact = !app.session.isSingleScreen && app.session.current(activity)?.id == android.view.Display.DEFAULT_DISPLAY)
                 }
             }
 
@@ -1232,7 +1238,14 @@ internal fun LibraryGrid(activity: PanelActivity, route: GalleryRoute, data: Cat
         animatedGifIds(grid.layoutInfo.visibleItemsInfo.mapNotNull { visible -> cells.getOrNull(visible.index)?.media?.takeIf { it.kind == "GIF" }?.let { it.id to visible.size.width.toLong() * visible.size.height } }, prefs.gifLimit)
     } }
     val active by activity.isStartedFlow.collectAsState()
-    GalleryGridFocus { LazyVerticalGrid(GridCells.Fixed(if (tileGrid) columns else 1), Modifier.fillMaxSize().testTag("library-grid"), state = grid,
+    val dragSelection = mediaDragSelection(multi && activeScene, cells.mapNotNull { it.media?.id },
+        hit = { point -> grid.layoutInfo.visibleItemsInfo.firstOrNull {
+            point.x >= it.offset.x && point.x < it.offset.x + it.size.width &&
+                point.y >= it.offset.y && point.y < it.offset.y + it.size.height
+        }?.index?.let { cells.getOrNull(it)?.media?.id } },
+        viewportHeight = { grid.layoutInfo.viewportSize.height }, scroll = { grid.scrollBy(it) },
+        select = { id -> data.byId[id]?.let(actions) })
+    GalleryGridFocus { LazyVerticalGrid(GridCells.Fixed(if (tileGrid) columns else 1), Modifier.fillMaxSize().then(dragSelection).testTag("library-grid"), state = grid,
         contentPadding = PaddingValues(start = 8.dp, top = 8.dp, end = 8.dp, bottom = 28.dp), horizontalArrangement = Arrangement.spacedBy(if (tileGrid && columns >= 5) 3.dp else 6.dp), verticalArrangement = Arrangement.spacedBy(if (tileGrid && columns >= 5) 3.dp else 6.dp)) {
         items(cells, key = { it.key }, span = { GridItemSpan(if (it.media == null) maxLineSpan else 1) }) { cell ->
             val item = cell.media

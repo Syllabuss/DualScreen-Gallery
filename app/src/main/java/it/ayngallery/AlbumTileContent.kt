@@ -14,12 +14,12 @@ import androidx.compose.ui.unit.dp
 
 @Composable
 internal fun AlbumTileContent(album: AlbumEntity, data: CatalogSnapshot, catalog: Catalog, prefs: GalleryPreferences,
-    grid: Boolean, columns: Int, chosen: Boolean, selectionColor: Color, multi: Boolean, onClick: () -> Unit) {
+    grid: Boolean, columns: Int, chosen: Boolean, selectionColor: Color, multi: Boolean, carouselLabel: Boolean = true, onClick: () -> Unit) {
     val subfolders = if (album.hidden || data.albumLocked(album.id)) 0 else data.populatedSubfolderCounts[album.id] ?: 0
     if (grid) Column(Modifier.padding(if (columns >= 5) 1.dp else 3.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
         Box(Modifier.clip(RoundedCornerShape(if (columns >= 5) 3.dp else 17.dp))) {
             AlbumCover(album, data, catalog, prefs, Modifier.fillMaxWidth().aspectRatio(1f).clip(RoundedCornerShape(if (columns >= 5) 3.dp else 17.dp)))
-            if (columns <= 5) Text(album.name, Modifier.align(Alignment.BottomStart).fillMaxWidth()
+            if (columns <= 5 && !prefs.albumCarousel) Text(album.name, Modifier.align(Alignment.BottomStart).fillMaxWidth()
                 .background(androidx.compose.ui.graphics.Brush.verticalGradient(listOf(androidx.compose.ui.graphics.Color.Transparent, androidx.compose.ui.graphics.Color.Black.copy(alpha = .85f))))
                 .padding(start = 6.dp, end = 6.dp, top = 18.dp, bottom = 5.dp), color = androidx.compose.ui.graphics.Color.White, maxLines = 1,
                 overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis, style = MaterialTheme.typography.labelMedium)
@@ -33,6 +33,7 @@ internal fun AlbumTileContent(album: AlbumEntity, data: CatalogSnapshot, catalog
             if (chosen) Surface(Modifier.align(Alignment.TopEnd).padding(4.dp).size(28.dp), shape = androidx.compose.foundation.shape.CircleShape,
                 color = selectionColor) { Box(contentAlignment = Alignment.Center) { Text("✓", color = MaterialTheme.colorScheme.background) } }
         }
+        if (prefs.albumCarousel && carouselLabel) Text(album.name, Modifier.fillMaxWidth(), maxLines = 1, overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis, textAlign = androidx.compose.ui.text.style.TextAlign.Center, style = MaterialTheme.typography.labelLarge)
     } else Row(Modifier.padding(12.dp), verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(14.dp)) {
         AlbumCover(album, data, catalog, prefs, Modifier.size(84.dp).clip(RoundedCornerShape(10.dp)))
         Column(Modifier.weight(1f)) {

@@ -1818,4 +1818,8 @@
     <string name="navbar_hide_single">Navigationsleiste bei nur einem Bereich ausblenden</string>
     <string name="single_screen_landscape">Querformat erzwingen</string>
     <string name="show_empty_folders">Leere Ordner anzeigen</string>
+    <string name="player_fullscreen">Vollbild</string>
+    <string name="horizontal_albums">Alben und Ordner horizontal durchblättern</string>
+    <string name="album_carousel">Album- und Ordnerkarussell</string>
+    <string name="video_skip_preview">Videos ohne Vorschau starten</string>
 </resources>

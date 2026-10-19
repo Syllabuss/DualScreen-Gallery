@@ -1,14 +1,14 @@
 <p align="center"><img src="assets/branding/ds-gallery.png" width="112" alt="DS Gallery icon" /></p>
 <h1 align="center">DS Gallery (DualScreen Gallery)</h1>
 <p align="center">Your media. Two screens. One gallery.</p>
-<p align="center"><strong>Android · Kotlin · Jetpack Compose · AYN Thor</strong><br />Public beta · Created by Syllabuss</p>
+<p align="center"><strong>Android · Kotlin · Jetpack Compose · Dual-screen &amp; single-screen</strong><br />Public beta · Created by Syllabuss</p>
 <p align="center"><a href="https://github.com/Syllabuss/DualScreen-Gallery/releases/tag/v0.1.0-beta.125">Downloads</a> · <a href="docs/USER_GUIDE.md">User guide</a> · <a href="https://ko-fi.com/syllabuss">♥ Support on Ko-fi</a></p>
 
-DS Gallery started as something I was making for myself. I wanted to choose exactly which folders became albums, rather than hide half my device after every scan. I also wanted a gallery that actually used both screens of my AYN Thor. I tried other apps, but none quite worked the way I wanted.
+DS Gallery started as something I was making for myself. I wanted to choose exactly which folders became albums, rather than hide half my device after every scan. I also wanted a gallery that made proper use of two screens. I tried other apps, but none quite worked the way I wanted.
 
 The players grew out of the same idea: separate volume controls for music and video, audio and subtitle tracks within reach, and the freedom to keep something playing in a floating window while looking through the rest of my library. I wanted those tools available without needing every button on screen all the time. You can keep the interface light, or show more controls and make use of the controller shortcuts.
 
-What began as a small gallery became a media manager I enjoy using. I thought the result was worth sharing, in case it fits someone else's setup too. I built it around my own **AYN Thor and its two screens**, but it also works on a **single-screen Android phone**. The phone layout has now been checked on a Samsung running Android 16. Android 9 or later is required.
+What began as a small gallery became a media manager I enjoy using. I thought the result was worth sharing, in case it fits someone else's setup too. DS Gallery began as a **dual-screen app** and now **officially supports single-screen Android devices too**. It has been designed and tested primarily on **AYN Thor**, with the single-screen layout also tested on a Samsung running Android 16. Android 9 or later is required.
 
 <a name="see-it-in-use"></a>
 
@@ -58,7 +58,7 @@ The launcher, wallpaper and desktop decorations in this recording are separate f
 - **Start comfortably.** An eight-page tutorial covers language, theme, controller shortcuts, images, videos, gestures and folder linking. L1/R1 move through the pages; the other display shows a multilingual welcome.
 - **Add home widgets.** Icon Player (2×2) and Compact Player (3×1, or resize to 1×1 for a one-tap play/pause cover), plus one resizable photo widget for a single image/GIF or an album slideshow.
 
-With one screen, browsing and playback share the same display. Settings uses a list, and you can turn landscape view on or off in **Screens and backup**. Controls for the second display stay out of the way. The two-screen layout remains the main focus.
+With one screen, browsing and playback share the same display. Settings uses a list, and you can turn landscape view on or off in **Screens and backup**. Controls for the second display stay out of the way. Both layouts are supported; the app adapts to the number of screens you choose to use.
 
 ## Get started
 

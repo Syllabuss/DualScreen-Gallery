@@ -1,6 +1,7 @@
 package it.ayngallery
 
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.gestures.scrollBy
 import androidx.compose.foundation.lazy.staggeredgrid.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
@@ -76,7 +77,14 @@ internal fun FavoriteMosaic(activity: PanelActivity, data: CatalogSnapshot, item
             requesters[id]?.requestFocus()
         }
     }
-    LazyVerticalStaggeredGrid(StaggeredGridCells.Fixed(columns), Modifier.fillMaxSize().testTag("favorites-mosaic"), state,
+    val dragSelection = mediaDragSelection(multi && activeScene, context,
+        hit = { point -> state.layoutInfo.visibleItemsInfo.firstOrNull {
+            point.x >= it.offset.x && point.x < it.offset.x + it.size.width &&
+                point.y >= it.offset.y && point.y < it.offset.y + it.size.height
+        }?.index?.let { items.getOrNull(it)?.id } },
+        viewportHeight = { state.layoutInfo.viewportSize.height }, scroll = { state.scrollBy(it) },
+        select = { id -> data.byId[id]?.let(actions) })
+    LazyVerticalStaggeredGrid(StaggeredGridCells.Fixed(columns), Modifier.fillMaxSize().then(dragSelection).testTag("favorites-mosaic"), state,
         contentPadding = PaddingValues(if (columns >= 4) 4.dp else 8.dp), horizontalArrangement = Arrangement.spacedBy(if (columns >= 4) 3.dp else 6.dp), verticalItemSpacing = if (columns >= 4) 3.dp else 6.dp) {
         items(items, key = { it.id }) { item ->
             val requester = remember(item.id) { requesters.getOrPut(item.id) { FocusRequester() } }

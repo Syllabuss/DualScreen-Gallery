@@ -170,4 +170,8 @@
     <string name="navbar_hide_single">Nascondi barra con una sola sezione</string>
     <string name="single_screen_landscape">Forza orientamento orizzontale</string>
     <string name="show_empty_folders">Mostra cartelle vuote</string>
+    <string name="player_fullscreen">Schermo intero</string>
+    <string name="horizontal_albums">Scorrimento orizzontale di album e cartelle</string>
+    <string name="album_carousel">Carosello di album e cartelle</string>
+    <string name="video_skip_preview">Avvia i video senza anteprima</string>
 </resources>

@@ -193,7 +193,8 @@ fun MediaThumbnail(item: MediaEntity?, data: CatalogSnapshot, catalog: Catalog, 
                    modifier: Modifier = Modifier, animated: Boolean = false, active: Boolean = true,
                    scale: ContentScale = ContentScale.Crop, animationPaused: Boolean = false, artwork: Boolean = false,
                    dimensions: (Int, Int) -> Unit = { _, _ -> }, crossfadeMillis: Int = 220, decoded: (Boolean?) -> Unit = {}, backgroundColor: Color? = null,
-                   lockedAlbumCover: String? = null, frame: android.graphics.Bitmap? = null, filterQuality: androidx.compose.ui.graphics.FilterQuality = androidx.compose.ui.graphics.FilterQuality.Low) {
+                   lockedAlbumCover: String? = null, frame: android.graphics.Bitmap? = null, filterQuality: androidx.compose.ui.graphics.FilterQuality = androidx.compose.ui.graphics.FilterQuality.Low,
+                   fallbackAlignment: Alignment = Alignment.Center, fallbackModifier: Modifier = Modifier.size(38.dp)) {
     val context = LocalContext.current
     val cacheRevision by catalog.cacheRevision.collectAsState()
     var loading by remember(item?.id, item?.modified) { mutableStateOf(true) }
@@ -245,7 +246,7 @@ fun MediaThumbnail(item: MediaEntity?, data: CatalogSnapshot, catalog: Catalog, 
                     decoded(true)
                 }, onError = { loading = false; failed = true; decoded(false) })
             if (loading && !preferences.reducedMotion && !preferences.gameMode) CircularProgressIndicator(Modifier.size(24.dp), strokeWidth = 2.dp)
-        } else GalleryIcon(if (item?.kind == "AUDIO") R.drawable.ph_music_notes else R.drawable.ph_images, null, Modifier.size(38.dp))
+        } else GalleryIcon(if (item?.kind == "AUDIO") R.drawable.ph_music_notes else R.drawable.ph_images, null, Modifier.align(fallbackAlignment).then(fallbackModifier))
         if ((item != null && !allowed) || failed) {
             Text(if (!allowed) localized(R.string.text_unavailable_ce1391, "Non disponibile") else localized(R.string.text_preview_unreadable_9374e0, "Anteprima non leggibile"), Modifier.align(Alignment.BottomCenter)
                 .background(MaterialTheme.colorScheme.surface.copy(alpha = 0.9f)).padding(6.dp), fontSize = 11.sp)

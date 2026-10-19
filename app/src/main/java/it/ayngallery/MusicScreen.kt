@@ -2,7 +2,11 @@ package it.ayngallery
 
 import androidx.compose.foundation.interaction.collectIsDraggedAsState
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.Canvas
+import androidx.compose.foundation.basicMarquee
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -191,13 +195,16 @@ fun MusicScreen(app: GalleryApp, data: CatalogSnapshot, playback: PlaybackState,
     if (playback.id == null) { EmptyGallery(localized(R.string.text_your_music_b63856, "La tua musica"), localized(R.string.text_choose_a_track_from_music_the_player_is_shared_a_c71f4b, "Scegli un brano dalla raccolta Musica. Il player è condiviso da tutte le schermate e continua in background."), R.drawable.ph_music_notes, featured = true); return }
     val track = data.byId[playback.id]?.takeIf(data::usable)
     if (track == null) { EmptyGallery(localized(R.string.text_track_unavailable_b73d64, "Brano non disponibile"), localized(R.string.text_the_source_was_hidden_or_disconnected_the_queue_ebde9e, "La sorgente è stata nascosta o scollegata. La coda viene aggiornata conservando i riferimenti."), R.drawable.ph_music_notes); return }
-    LazyColumn(contentPadding = PaddingValues(20.dp), verticalArrangement = Arrangement.spacedBy(16.dp)) {
+    val singleScreen = app.session.isSingleScreen
+    @Composable fun queue(modifier: Modifier, includePlayer: Boolean) {
+    LazyColumn(modifier, contentPadding = PaddingValues(if (singleScreen) 12.dp else 20.dp), verticalArrangement = Arrangement.spacedBy(if (singleScreen) 6.dp else 16.dp)) {
         if (preview != null) item {
             Text(localized(R.string.text_segment_preview_original_queue_retained_a9766d, "Anteprima del segmento · la coda originale è conservata"), color = MaterialTheme.colorScheme.primary)
             GalleryButton(localized(R.string.text_stop_preview_and_restore_queue_625382, "Ferma anteprima e ritrova la coda"), Modifier.fillMaxWidth()) { preview?.let(app.music::finishPreview) }
         }
-        item {
-            BoxWithConstraints(Modifier.fillMaxWidth().clip(GalleryShape).background(MaterialTheme.colorScheme.surface)) {
+        if (includePlayer) item {
+            if (singleScreen) SingleScreenMusicPlayer(app, data, playback, track, prefs, task) { savePlaylist = ArrayList(playback.queue) }
+            else BoxWithConstraints(Modifier.fillMaxWidth().clip(GalleryShape).background(MaterialTheme.colorScheme.surface)) {
                 if (app.catalog.artwork(track, data) != null) MediaThumbnail(track, data, app.catalog, prefs,
                     Modifier.matchParentSize().blur(36.dp).graphicsLayer { alpha = 0.12f })
                 @Composable fun artwork(modifier: Modifier) {
@@ -232,9 +239,22 @@ fun MusicScreen(app: GalleryApp, data: CatalogSnapshot, playback: PlaybackState,
         itemsIndexed(playback.queue, key = { index, id -> "$index/$id" }) { index, id ->
             val item = data.byId[id]?.takeIf(data::visible)
             var menu by remember(index, id) { mutableStateOf(false) }
-            Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
-                Text("${if (index == playback.index) "▶ " else ""}${item?.title ?: item?.name ?: localized(R.string.text_unavailable_ce1391, "Non disponibile")}",
-                    Modifier.weight(1f).heightIn(min = 48.dp).clickable(enabled = item != null && data.usable(item)) { app.music.playQueueIndex(index) })
+            Row(Modifier.fillMaxWidth().then(if (singleScreen) Modifier.clip(GalleryShape).background(MaterialTheme.colorScheme.surface.copy(alpha = .7f)).padding(horizontal = 10.dp, vertical = 4.dp) else Modifier), verticalAlignment = Alignment.CenterVertically) {
+                if (singleScreen) {
+                    if (item != null) MediaThumbnail(item, data, app.catalog, prefs, Modifier.padding(end = 10.dp).size(44.dp).clip(GalleryShape))
+                    Column(Modifier.weight(1f).clickable(enabled = item != null && data.usable(item)) { app.music.playQueueIndex(index) }.padding(vertical = 2.dp)) {
+                        Row(Modifier.heightIn(min = 22.dp), verticalAlignment = Alignment.CenterVertically) {
+                            Text(item?.title ?: item?.name ?: localized(R.string.text_unavailable_ce1391, "Non disponibile"),
+                                Modifier.weight(1f).then(if (index == playback.index && playback.playing) Modifier.basicMarquee(iterations = Int.MAX_VALUE) else Modifier),
+                                maxLines = 1, overflow = TextOverflow.Ellipsis, fontWeight = if (index == playback.index) FontWeight.SemiBold else FontWeight.Normal)
+                        }
+                        Text(listOfNotNull(item?.artist?.takeIf { it.isNotBlank() }, item?.duration?.takeIf { it > 0 }?.let(::formatTime)).joinToString(" · "),
+                            maxLines = 1, overflow = TextOverflow.Ellipsis, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                    }
+                } else {
+                    Text("${if (index == playback.index) "▶ " else ""}${item?.title ?: item?.name ?: localized(R.string.text_unavailable_ce1391, "Non disponibile")}",
+                        Modifier.weight(1f).heightIn(min = 48.dp).clickable(enabled = item != null && data.usable(item)) { app.music.playQueueIndex(index) })
+                }
                 Box {
                     GalleryIconButton(R.drawable.ph_dots_three, localized(R.string.text_reorder_or_remove_from_queue_6df945, "Riordina o rimuovi dalla coda"), enabled = preview == null) { menu = true }
                     GalleryDropdownMenu(menu, { menu = false }) {
@@ -247,7 +267,90 @@ fun MusicScreen(app: GalleryApp, data: CatalogSnapshot, playback: PlaybackState,
         }
         item { GalleryButton(localized(R.string.text_clear_queue_bb5c72, "Svuota coda"), Modifier.fillMaxWidth(), enabled = preview == null) { app.music.clear() } }
     }
+    }
+    if (singleScreen) BoxWithConstraints(Modifier.fillMaxSize()) {
+        val playerMaxHeight = maxHeight * .6f
+        @Composable fun player(modifier: Modifier) {
+            Box(modifier.verticalScroll(rememberScrollState())) {
+                SingleScreenMusicPlayer(app, data, playback, track, prefs, task) { savePlaylist = ArrayList(playback.queue) }
+            }
+        }
+        if (maxWidth > maxHeight) Row(Modifier.fillMaxSize().testTag("phone-music-landscape")) {
+            player(Modifier.weight(1f).fillMaxHeight().padding(12.dp))
+            queue(Modifier.weight(1f).fillMaxHeight(), false)
+        } else Column(Modifier.fillMaxSize().testTag("phone-music-portrait")) {
+            player(Modifier.fillMaxWidth().heightIn(max = playerMaxHeight).padding(12.dp))
+            queue(Modifier.weight(1f).fillMaxWidth(), false)
+        }
+    } else queue(Modifier, true)
     savePlaylist?.let { ids -> CollectionNameDialog(localized(R.string.text_save_playlist_8d3e69, "Salva playlist"), submit = { app.catalog.collection(it, "PLAYLIST", ids); Unit }, done = { savePlaylist = null }, dismiss = { savePlaylist = null }) }
+}
+
+@Composable
+private fun SingleScreenMusicPlayer(app: GalleryApp, data: CatalogSnapshot, state: PlaybackState, track: MediaEntity,
+    prefs: GalleryPreferences, task: (suspend () -> Unit) -> Unit, savePlaylist: () -> Unit) {
+    val palette = musicPlayerPalette(app, track, data, prefs)
+    var seek by remember(track.id) { mutableStateOf<Float?>(null) }
+    val bars = remember { List(20) { androidx.compose.animation.core.Animatable(.15f) } }
+    LaunchedEffect(state.playing, prefs.reducedMotion, prefs.gameMode) {
+        while (state.playing && !prefs.reducedMotion && !prefs.gameMode) {
+            bars.forEach { bar -> launch { bar.animateTo(.1f + kotlin.random.Random.nextFloat() * .75f, androidx.compose.animation.core.tween(420)) } }
+            delay(450)
+        }
+    }
+    CompositionLocalProvider(LocalContentColor provides palette.ink) {
+        Box(Modifier.fillMaxWidth().clip(GalleryShape).testTag("single-screen-music-player")) {
+            Box(Modifier.matchParentSize()) { MusicPlayerBackdrop(palette, prefs) }
+            Canvas(Modifier.matchParentSize().graphicsLayer { alpha = if (state.playing) .17f else .05f }) {
+                val step = size.width / bars.size
+                bars.forEachIndexed { index, bar -> drawLine(palette.accent,
+                    androidx.compose.ui.geometry.Offset((index + .5f) * step, size.height),
+                    androidx.compose.ui.geometry.Offset((index + .5f) * step, size.height * (1 - bar.value)), step * .45f,
+                    cap = androidx.compose.ui.graphics.StrokeCap.Round) }
+            }
+            Column(Modifier.fillMaxWidth().padding(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Text(state.title, Modifier.weight(1f).then(if (state.playing) Modifier.basicMarquee(iterations = Int.MAX_VALUE) else Modifier),
+                        maxLines = 1, overflow = TextOverflow.Ellipsis, style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.SemiBold)
+                    IconButton({ task { app.catalog.favorite(track.id) } }) { FavoriteHeart(track.favorite, localized(R.string.text_favorite_06bae3, "Preferito"), identity = track.id) }
+                }
+                Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(16.dp)) {
+                    InteractiveMusicCover(app, track, data, prefs, state.playing, Modifier.size(96.dp))
+                    Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                        Text(state.artist, maxLines = 1, overflow = TextOverflow.Ellipsis, style = MaterialTheme.typography.bodyMedium)
+                        GallerySlider((seek ?: state.position.toFloat()).coerceIn(0f, state.duration.coerceAtLeast(1).toFloat()), { seek = it },
+                            onValueChangeFinished = { seek?.let { app.music.seek(it.toLong()) }; seek = null },
+                            valueRange = 0f..state.duration.coerceAtLeast(1).toFloat(), enabled = state.duration > 0)
+                        Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
+                            Text(formatTime((seek ?: state.position.toFloat()).toLong()), style = MaterialTheme.typography.labelSmall)
+                            Text(formatTime(state.duration), style = MaterialTheme.typography.labelSmall)
+                        }
+                    }
+                }
+                Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically) {
+                    GalleryIconButton(R.drawable.ph_list, localized(R.string.text_save_playlist_8d3e69, "Salva playlist")) { savePlaylist() }
+                    GalleryIconButton(R.drawable.ph_skip_back, localized(R.string.text_previous_track_b3f5fe, "Brano precedente"), enabled = state.hasPrevious ?: (state.index > 0)) { app.music.previous() }
+                    FilledIconButton({ app.music.toggle() }, Modifier.size(56.dp)) { GalleryIcon(if (state.playing) R.drawable.ph_pause else R.drawable.ph_play, localized(R.string.text_play_pause_7973c0, "Play / pausa")) }
+                    GalleryIconButton(R.drawable.ph_skip_forward, localized(R.string.text_next_track_b0ff2f, "Brano successivo"), enabled = state.hasNext ?: (state.index < state.queue.lastIndex)) { app.music.next() }
+                    GalleryIconButton(if (state.shuffle) R.drawable.ph_shuffle else if (state.repeat != 0) R.drawable.ph_arrows_clockwise else R.drawable.ph_arrows_left_right,
+                        localized(R.string.text_shuffle_0eb69b, "Casuale")) { app.music.cyclePlaybackMode() }
+                    Box {
+                        val volume by app.music.volume.collectAsStateWithLifecycle()
+                        var volumeOpen by remember { mutableStateOf(false) }
+                        LaunchedEffect(volumeOpen, volume) { if (volumeOpen) { delay(5000); volumeOpen = false } }
+                        GalleryIconButton(playbackVolumeIcon(volume), localized(R.string.music_volume, "Volume musica")) { volumeOpen = !volumeOpen }
+                        GalleryDropdownMenu(volumeOpen, { volumeOpen = false }) {
+                            Column(Modifier.width(200.dp).padding(12.dp)) {
+                                Text("${(volume * 100).toInt()}%")
+                                GallerySlider(volume, app.music::setVolume)
+                            }
+                        }
+                    }
+                }
+                state.error?.let { Text(it, color = MaterialTheme.colorScheme.error) }
+            }
+        }
+    }
 }
 
 @Composable
@@ -321,15 +424,15 @@ private fun InteractiveMusicCover(app: GalleryApp, track: MediaEntity, data: Cat
     val shape = if (effect in setOf(1, 3)) androidx.compose.foundation.shape.CircleShape else GalleryShape
     Box(modifier.clickable { app.preferences.musicCoverEffect(MusicCoverEffects.next(effect)) }.testTag("music-cover-effect:$effect"), contentAlignment = Alignment.Center) {
         Box(Modifier.fillMaxSize().graphicsLayer { rotationZ = rotation.value; scaleX = scale.value; scaleY = scale.value }.testTag("music-cover-transform").clip(shape).background(MaterialTheme.colorScheme.surfaceVariant)) {
-            MediaThumbnail(track, data, app.catalog, prefs, Modifier.fillMaxSize(), scale = ContentScale.Crop)
+            MediaThumbnail(track, data, app.catalog, prefs, Modifier.fillMaxSize(), scale = ContentScale.Crop,
+                fallbackAlignment = if (effect == 1) Alignment.TopCenter else Alignment.Center,
+                fallbackModifier = if (effect == 1) Modifier.padding(top = 32.dp).size(48.dp) else Modifier.size(38.dp))
             if (effect in setOf(1, 3)) Canvas(Modifier.fillMaxSize()) {
                 drawCircle(androidx.compose.ui.graphics.Color.White.copy(alpha = .14f), size.minDimension * .46f, style = Stroke(size.minDimension * .006f))
                 drawArc(androidx.compose.ui.graphics.Color.White.copy(alpha = .25f), 25f, 70f, false,
                     topLeft = androidx.compose.ui.geometry.Offset(size.width * .08f, size.height * .08f),
                     size = androidx.compose.ui.geometry.Size(size.width * .84f, size.height * .84f), style = Stroke(size.minDimension * .009f))
             }
-            if (effect == 1 && app.catalog.artwork(track, data) == null)
-                GalleryIcon(R.drawable.ph_music_notes, null, Modifier.align(Alignment.TopCenter).padding(top = 32.dp).size(48.dp))
             if (effect == 1) Box(Modifier.align(Alignment.Center).fillMaxSize(.13f).clip(androidx.compose.foundation.shape.CircleShape).background(MaterialTheme.colorScheme.background))
         }
     }

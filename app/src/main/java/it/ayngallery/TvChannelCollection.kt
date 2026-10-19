@@ -199,7 +199,9 @@ private fun TvChannelContents(app: GalleryApp, entry: TvCatalogEntry, grid: Bool
     val saved = tv.store.channels.firstOrNull { it.matches(entry) }
     var logoAvailable by remember(id) { mutableStateOf(false) }
     val hasArtwork = saved?.artwork != null || !entry.logoUrl.isNullOrBlank() || logoAvailable
-    Column(Modifier.padding(6.dp)) {
+    val configuration = androidx.compose.ui.platform.LocalConfiguration.current
+    val compact = app.session.isSingleScreen && configuration.screenWidthDp > configuration.screenHeightDp
+    Column(Modifier.padding(horizontal = 6.dp, vertical = if (compact && !grid) 0.dp else 6.dp)) {
         if (grid) Box(Modifier.fillMaxWidth().aspectRatio(1.55f).clip(RoundedCornerShape(8.dp))) {
             if (saved?.artwork != null) TvArtwork(app, entry, Modifier.fillMaxSize(), color = color, loadRemote = false, maxSide = 256, crop = true, placeholder = false)
             TvArtwork(app, entry,

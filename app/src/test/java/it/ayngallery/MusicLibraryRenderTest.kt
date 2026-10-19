@@ -31,6 +31,36 @@ class MusicLibraryRenderTest {
     @get:Rule val compose = createEmptyComposeRule()
     private val app get() = RuntimeEnvironment.getApplication() as GalleryApp
     @After fun release() { app.onTerminate() }
+    @Test @Config(qualifiers = "it-w400dp-h800dp-port")
+    fun phonePlayerKeepsTitleCoverTransportAndQueueWithinTheScreen() = verifyPhonePlayer(false)
+
+    @Test @Config(qualifiers = "it-w800dp-h400dp-land")
+    fun phonePlayerAndQueueSitSideBySideInLandscape() = verifyPhonePlayer(true)
+
+    private fun verifyPhonePlayer(landscape: Boolean) {
+        val track = MediaEntity("track", "track", "content://preview/track", "album", "Long song name that must remain on one line.mp3", "audio/mpeg", "AUDIO", 100, 1, duration = 180000, artist = "Artist")
+        val data = CatalogSnapshot(sources = listOf(SourceEntity("music", "content://preview/root", "Music", "MUSIC")),
+            media = listOf(track), membership = listOf(MediaSource(track.id, "music", 1)))
+        val controller = Robolectric.buildActivity(ComponentActivity::class.java).setup().visible()
+        try {
+            controller.get().setContent { GalleryDesign(GalleryPreferences(reducedMotion = true)) {
+                MusicScreen(app, data, PlaybackState(id = track.id, title = track.name, artist = "Artist", queue = listOf(track.id), duration = 180000), {}, compact = true)
+            } }
+            compose.onNodeWithTag(if (landscape) "phone-music-landscape" else "phone-music-portrait").assertIsDisplayed()
+            compose.onNodeWithTag("single-screen-music-player").assertIsDisplayed()
+            val player = compose.onNodeWithTag("single-screen-music-player").fetchSemanticsNode().boundsInRoot
+            assertTrue(player.height < if (landscape) 400f else 450f)
+            compose.onNodeWithContentDescription("Play / pausa").assertIsDisplayed()
+            compose.onNodeWithText("Svuota coda").performScrollTo().assertIsDisplayed()
+            compose.onNodeWithTag("single-screen-music-player").assertIsDisplayed()
+            val bitmap = Bitmap.createBitmap(controller.get().window.decorView.width, controller.get().window.decorView.height, Bitmap.Config.ARGB_8888)
+            try {
+                controller.get().window.decorView.draw(Canvas(bitmap))
+                File("../qa/rendered/single-screen-music${if (landscape) "-landscape" else ""}.png").apply { parentFile.mkdirs() }.outputStream().use { bitmap.compress(Bitmap.CompressFormat.PNG, 100, it) }
+            } finally { bitmap.recycle() }
+        } finally { controller.pause().stop().destroy() }
+    }
+
     @Test fun previewFollowsPlayingTrackUntilPausedIncludingBufferingAndTrackChanges() {
         val first = MediaEntity("first", "first", "content://preview/first", "album", "Execution Clap.mp3", "audio/mpeg", "AUDIO", 100, 1)
         val second = first.copy(id = "second", uri = "content://preview/second", name = "Shut Me Up.mp3")

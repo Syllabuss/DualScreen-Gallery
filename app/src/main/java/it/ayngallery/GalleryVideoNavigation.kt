@@ -54,6 +54,11 @@ internal class GalleryVideoView(context: Context, attrs: android.util.AttributeS
             return true
         }
     })
+    var onFullscreen: (() -> Unit)? = null
+        set(value) { field = value; fullscreenButton?.visibility = if (value != null) android.view.View.VISIBLE else android.view.View.GONE }
+    private var fullscreenButton: android.widget.ImageButton? = null
+    var fullscreen = false
+        set(value) { field = value; fullscreenButton?.setImageResource(if (value) R.drawable.ph_arrows_in else R.drawable.ph_arrows_out) }
     var onPip: (() -> Unit)? = null
         set(value) { field = value; pipButton?.visibility = if (value != null) android.view.View.VISIBLE else android.view.View.GONE }
     private var pipButton: android.widget.ImageButton? = null
@@ -80,6 +85,13 @@ internal class GalleryVideoView(context: Context, attrs: android.util.AttributeS
         super.onFinishInflate()
         val gear = findViewById<android.view.View>(androidx.media3.ui.R.id.exo_settings) ?: return
         val row = gear.parent as? android.widget.LinearLayout ?: return
+        fullscreenButton = android.widget.ImageButton(context, null, 0, androidx.media3.ui.R.style.ExoStyledControls_Button_Bottom).apply {
+            setImageResource(R.drawable.ph_arrows_out)
+            contentDescription = context.getString(R.string.player_fullscreen)
+            visibility = android.view.View.GONE
+            setOnClickListener { onFullscreen?.invoke() }
+        }
+        row.addView(fullscreenButton, row.indexOfChild(gear), android.widget.LinearLayout.LayoutParams(gear.layoutParams))
         pipButton = android.widget.ImageButton(context, null, 0, androidx.media3.ui.R.style.ExoStyledControls_Button_Bottom).apply {
             setImageResource(R.drawable.ph_frame_corners)
             contentDescription = localized(R.string.video_pip, "Video in finestra")

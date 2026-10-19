@@ -58,13 +58,13 @@ class MusicPlayerColorsTest {
 
     @Test fun customMusicColorsPersistAndRoundTripWhileOlderExportsUseTheTheme() = runBlocking {
         val store = PreferenceStore(RuntimeEnvironment.getApplication())
-        assertEquals("THEME", store.state.value.musicColorMode)
+        assertEquals("ARTWORK", store.state.value.musicColorMode)
         val value = store.state.value.copy(musicColorMode = "CUSTOM", musicBackgroundColor = "#331122", musicBarsColor = "#55CCFF")
         store.save(value)
         assertEquals(value, PreferenceStore(RuntimeEnvironment.getApplication()).state.value)
         val encoded = PreferencesTransfer.encode(value)
         assertEquals(value, PreferencesTransfer.decode(encoded))
-        val legacy = JSONObject(encoded).put("version", 28).apply { getJSONObject("preferences").remove("showEmptyFolders") }.apply {
+        val legacy = JSONObject(encoded).put("version", 28).apply { getJSONObject("preferences").remove("showEmptyFolders"); getJSONObject("preferences").apply { remove("horizontalAlbums"); remove("albumCarousel"); remove("videoSkipPreview") } }.apply {
             getJSONObject("preferences").remove("musicDuringSleep"); getJSONObject("preferences").remove("videoDuringSleep")
             listOf("tvEnabled", "tvInNavbar", "tvInMediaFavorites").forEach { getJSONObject("preferences").remove(it) }
             getJSONObject("preferences").apply { remove("showUpperStatusBar"); remove("confirmVideoReplacement"); remove("musicColorMode"); remove("musicBackgroundColor"); remove("musicBarsColor") }
