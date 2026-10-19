@@ -27,5 +27,5 @@ dependencies {
     implementation("androidx.profileinstaller:profileinstaller:1.4.1")
     implementation("androidx.startup:startup-runtime:1.2.0")
     implementation("androidx.test.ext:junit:1.2.1")
-    implementation("androidx.test.uiautomator:uiautomator:2.3.0")
+    implementation("androidx.test.uiautomator:uiautomator:2.4.0")
 }
