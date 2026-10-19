@@ -57,7 +57,11 @@ class GallerySession(private val app: Application) : DisplayManager.DisplayListe
     private var homeWatch: Job? = null
     private var returningFromSleep = false
     private val backgroundBothIfHome = Runnable {
-        if (started.isEmpty() && !returningFromSleep) backgroundBoth("all-panels-stopped")
+        // A phone's only panel also stops for an in-task picker; only paired tasks need this Home fallback.
+        val paired = panels.values.mapNotNull { it.get() }.any {
+            it.intent.getBooleanExtra("paired_gallery", false) && startupOther(it.screenKey) != null
+        }
+        if (started.isEmpty() && !returningFromSleep && paired) backgroundBoth("all-panels-stopped")
     }
     val visiblePanels = kotlinx.coroutines.flow.MutableStateFlow(0)
     private var startupGeneration = 0
@@ -93,6 +97,14 @@ class GallerySession(private val app: Application) : DisplayManager.DisplayListe
     var startupPair by mutableStateOf(runCatching { prefs.getStringSet("startup_pair", emptySet())!!.toSet() }
         .onFailure { persistedStateValid = false }.getOrDefault(emptySet()))
         private set
+    var singleScreenLandscape by mutableStateOf(prefs.getBoolean("single_landscape", false))
+        private set
+    fun singleScreenLandscape(enabled: Boolean) {
+        if (screens.size != 1) return
+        prefs.edit().putBoolean("single_landscape", enabled).apply()
+        singleScreenLandscape = enabled
+        panels.values.mapNotNull { it.get() }.forEach { it.updateSingleScreenOrientation() }
+    }
     var startupAutomatic by mutableStateOf(runCatching { prefs.getBoolean("startup_automatic", !prefs.contains("startup_pair")) }
         .onFailure { persistedStateValid = false }.getOrDefault(false))
         private set
@@ -426,6 +438,7 @@ class GallerySession(private val app: Application) : DisplayManager.DisplayListe
 
     fun refreshDisplays() {
         screens = manager.displays.mapNotNull(::screen)
+        panels.values.mapNotNull { it.get() }.forEach { it.updateSingleScreenOrientation() }
         revision++
     }
 

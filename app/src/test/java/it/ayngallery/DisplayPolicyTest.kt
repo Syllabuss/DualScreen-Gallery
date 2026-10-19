@@ -4,6 +4,15 @@ import org.junit.Assert.*
 import org.junit.Test
 
 class DisplayPolicyTest {
+    @Test fun landscapeIsOptInAndNeverAppliesToMultipleDisplays() {
+        val phone = ScreenInfo(0, "phone", "Phone", 1080, 2340, 0)
+        val lower = ScreenInfo(4, "lower", "Lower", 1080, 1240, 0)
+        assertFalse(DisplayPolicy.preferSingleScreenLandscape(listOf(phone), false))
+        assertTrue(DisplayPolicy.preferSingleScreenLandscape(listOf(phone), true))
+        assertFalse(DisplayPolicy.preferSingleScreenLandscape(listOf(phone, lower), true))
+        assertFalse(DisplayPolicy.preferSingleScreenLandscape(emptyList(), true))
+    }
+
     @Test fun thorTaskRemapKeepsThePhysicalLibraryPanelAndDoesNotFlipAgain() {
         val legacy = DisplayState(anchor = "lower", swapped = false, anchorSlot = 0)
         val primaryMain = DisplayPolicy.thorTaskState("lower", "upper", legacy)

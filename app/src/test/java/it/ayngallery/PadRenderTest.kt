@@ -46,6 +46,7 @@ import java.time.Duration
 class PadRenderTest {
     @Test fun albumVerticalNavigationRetracesItsColumnAfterReachingTheFooter() {
         start()
+        runBlocking { app.preferences.update { it.copy(showEmptyFolders = true) } }
         runBlocking {
             val base = app.catalog.dao.albums().single()
             val folders = (0..10).map { base.copy(id = "nav-$it", documentKey = "nav-$it", name = "%02d".format(it)) }
@@ -87,6 +88,7 @@ class PadRenderTest {
     }
     @Test fun aLargeAlbumHasTwoSmallAlbumsBesideItWithoutOverlap() {
         start()
+        runBlocking { app.preferences.update { it.copy(showEmptyFolders = true) } }
         runBlocking {
             val base = app.catalog.dao.albums().single()
             val folders = (0..2).map { base.copy(id = "size-$it", documentKey = "size-$it", name = "Size $it") }
@@ -253,8 +255,35 @@ class PadRenderTest {
         assertTrue(app.session.settingsDraft!!.showMediaNames)
         compose.onNodeWithText("Mostra album musicali in Album").assertDoesNotExist()
     }
+    @Test fun singleScreenSettingsDisableGridAndShowOnlyThisScreenAsActive() {
+        start()
+        app.session.openSettings(panel)
+        compose.waitForIdle()
+        compose.onNodeWithTag("settings-view-toggle").assertIsNotEnabled()
+        val first = compose.onNodeWithTag("settings-category:INTERFACE").fetchSemanticsNode().boundsInRoot
+        val second = compose.onNodeWithTag("settings-category:PLAYBACK").fetchSemanticsNode().boundsInRoot
+        assertTrue(second.top >= first.bottom)
+        panel.windowModel.go("SETTINGS_DEVICE")
+        compose.waitForIdle()
+        compose.onNodeWithTag("startup-dual").assertIsOff().assertIsNotEnabled()
+        compose.onNodeWithTag("single-screen-active").assertIsOn().assertIsNotEnabled()
+        compose.onNodeWithTag("single-screen-landscape").assertIsOff().performClick().assertIsOn()
+        assertEquals(android.content.pm.ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE, panel.requestedOrientation)
+        assertTrue(app.getSharedPreferences("display_safety_v1", Context.MODE_PRIVATE).getBoolean("single_landscape", false))
+        compose.onNodeWithTag("single-screen-landscape").performClick().assertIsOff()
+        assertEquals(android.content.pm.ActivityInfo.SCREEN_ORIENTATION_USER_LANDSCAPE, panel.requestedOrientation)
+    }
+    @Test fun returningToAnOffscreenSettingsCategoryWaitsUntilItsRowIsPlaced() {
+        start()
+        app.session.openSettings(panel)
+        app.session.lastSettingsCategory = "DEVICE"
+        compose.waitForIdle()
+        compose.onNodeWithTag("settings-category:DEVICE").assertIsDisplayed().assertIsFocused()
+    }
     @Test fun controllerCanActivateSettingsHeaderLayoutWithoutLosingFocus() {
         start()
+        org.robolectric.shadows.ShadowDisplayManager.addDisplay("w800dp-h600dp")
+        app.session.refreshDisplays()
         app.session.openSettings(panel)
         compose.waitForIdle()
         key(panel, KeyEvent.KEYCODE_DPAD_UP)
@@ -286,7 +315,7 @@ class PadRenderTest {
         compose.waitForIdle()
         key(panel, KeyEvent.KEYCODE_DPAD_DOWN)
         compose.onNodeWithTag("settings-category:INTERFACE").assertIsFocused()
-        key(panel, KeyEvent.KEYCODE_DPAD_RIGHT)
+        key(panel, KeyEvent.KEYCODE_DPAD_DOWN)
         compose.onNodeWithTag("settings-category:PLAYBACK").assertIsFocused()
         key(panel, KeyEvent.KEYCODE_BUTTON_A)
         assertEquals("PLAYBACK", app.session.settingsSection)
@@ -1538,6 +1567,7 @@ class PadRenderTest {
     }
     @Test fun albumDragMovesSelectedBlockAndKeepsSavedOrder() {
         start()
+        runBlocking { app.preferences.update { it.copy(showEmptyFolders = true) } }
         runBlocking {
             val original = app.catalog.dao.albums().single()
             app.catalog.dao.saveAlbums(listOf(original.copy(id = "second", documentKey = "second", name = "Second"), original.copy(id = "third", documentKey = "third", name = "Third")))

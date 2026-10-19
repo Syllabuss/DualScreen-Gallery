@@ -1,6 +1,6 @@
 # User guide
 
-DS Gallery began as a personal project for choosing exactly which folders belong in a library and using both screens of an AYN Thor. The interface can stay minimal or expose more tools and controller shortcuts. Music and video have separate in-app volume controls; audio tracks, subtitles and floating playback are covered below. See the [screenshots and widget recording](../README.md#see-it-in-use-y-swaps-the-screens) for a look at the app on its development device.
+DS Gallery began as a personal project for choosing exactly which folders belong in my library and using both screens of my AYN Thor. It also works on single-screen Android phones, where browsing and playback use the same display. The interface can stay minimal or expose more tools and controller shortcuts. Music and video have separate in-app volume controls; audio tracks, subtitles and floating playback are covered below. See the [screenshots and widget recording](../README.md#see-it-in-use-y-swaps-the-screens) for a look at the app on its development device.
 
 X opens actions for the current album or media on the preview display. The first available action is focused; use directions and A to choose, or B to close. Interface can move these menus to the browsing display. R3 cycles Video grid, list and folder views. The right stick can zoom an image from its normal size.
 
@@ -12,11 +12,13 @@ The network explorer copies selected files to the other open pane after a confir
 
 The first-launch tutorial introduces language, theme, controls and folder linking before opening Albums. Pick a folder whose subfolders contain the albums you want to see. Choosing `Pictures`, for example, shows its media subfolders directly in Albums. Music folders are configured separately.
 
-Add or remove roots in **Settings → Info and permissions → Multimedia folders**. Removing a root disconnects it from the gallery; it does not delete its files. Empty albums are shown. By default, populated subalbums appear alongside other albums; enable folder browsing in Interface to navigate the hierarchy instead. Use the + button in the album toolbar to connect a folder; Android’s picker can create a folder if its provider supports this. Pull down in the browsing panel to refresh after adding files elsewhere.
+Add or remove roots in **Settings → Info and permissions → Multimedia folders**. Removing a root disconnects it from the gallery; it does not delete its files. Empty folders are hidden by default; enable **Interface → Show empty folders** to include them. A folder with media in its subfolders stays visible and can use a descendant’s cover. By default, folders appear in a single list; enable folder browsing in Interface to navigate the hierarchy instead. Use the + button in the album toolbar to connect a folder; Android’s picker can create a folder if its provider supports this. Pull down in the browsing panel to refresh after adding files elsewhere.
 
 An empty library shows a centered + tile on the browsing panel. It explains folder selection before opening Android’s picker; Continue is initially selected for controller use. Music has the same empty preview and folder action as the visual categories. Favorites instead explains that nothing has been marked yet and does not suggest adding folders.
 
-Android's standard folder picker can restrict storage roots and the top-level Download folder. For these locations, use the explicit Download and full storage flow described below; it requires Android all-files permission. Protected app directories remain excluded. A disconnected SD card or revoked folder grant can be reconnected without discarding saved media references.
+Android's standard folder picker can restrict storage roots and the top-level Download folder. Continue uses the Download and full-storage picker, asking for Android all-files permission if needed. You still choose which folder to connect; granting permission does not add every folder to the library. Protected app directories remain excluded. A disconnected SD card or revoked folder grant can be reconnected without discarding saved media references.
+
+On a single-screen device, Settings uses a list and the grid layout is unavailable. **Screens and backup → Force landscape orientation** optionally locks the view to landscape; it is off by default. Turning it off immediately restores the display’s native orientation (portrait on phones). Companion-screen dimming controls are hidden. These defaults do not change paired-screen operation.
 
 ## Browse and preview
 
@@ -31,6 +33,8 @@ Favorites in grid view form a mosaic with image proportions and square music cov
 Long-press a media item to select it. Long-press and drag an album to reorder it, including multiple selected albums as one block. Releasing an album without changing its position opens its options instead; a single moved album is deselected after the drop. Dropping on an album moves the selection to that slot; the live preview and saved grid use the same ordering, including mixed 1×/2× sizes. Newly discovered albums appear first. Selection replaces toolbar actions with an operations menu. Copy and move ask for a destination. Albums can be hidden but cannot be deleted from their actions menu. Individual media and media selections can be moved to Trash after confirmation. Favorites can be toggled with the preview heart. Album selection exposes Select all and Deselect all immediately beside the gear. For a single selected album, Choose cover lets you pick one of its photos or restore the automatic cover.
 
 On Thor, the browsing and preview panels are complementary. Y swaps them while keeping the current album media and browsing position. The touch swap button is visible by default in every category; hide it per section in **Settings → Interface** if you prefer the controller shortcut. The upper browsing navbar uses less vertical space. Each section keeps its own browsing position during the session, and ordinary previews follow the focused item in its current sort order. Empty categories show their own placeholder. Preview pins and playing videos are the exceptions described below.
+
+When hiding an album, selection moves to the next remaining album, or the previous one if it was last. If you enable only one navigation section, Interface offers a switch to hide the navigation bar; enabling more sections shows the bar again. Converted animations named `.gif.mp4` or `.gif.webm` remain navigable alongside images and GIFs.
 
 ## Controller and gestures
 
@@ -259,7 +263,7 @@ Starting a different video while another is playing asks for confirmation. The c
 
 ### Download and the whole internal storage
 
-In Add folder, choose **Download and full storage** to open Android’s all-files access setting. Enable access and return to the picker, which opens **Internal storage**. Select the entire shared-storage root or Download and confirm **Use this folder**. Only the selected folders are added; granting permission alone does not scan your storage. Android/data, Android/obb and private app folders are excluded; shared media in Android/media remains accessible. For ordinary folders, Continue keeps the standard Android picker without requesting broad access. The chosen Photo/video or Music role is retained. Revoking broad access makes these sources unavailable until it is restored.
+In Add folder, press **Continue**. If all-files access is missing on Android 11 or later, Android asks you to grant it. Return to the picker, which opens **Internal storage**. If access was already granted, Continue opens the picker directly. Select the entire shared-storage root or Download and confirm **Use this folder**. Only the selected folders are added; granting permission alone does not scan your storage. Android/data, Android/obb and private app folders are excluded; shared media in Android/media remains accessible. On older Android versions, the standard folder picker is used. The chosen Photo/video or Music role is retained. Revoking broad access makes these sources unavailable until it is restored.
 
 
 ### Interface controls and defaults

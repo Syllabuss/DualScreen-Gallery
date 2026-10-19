@@ -238,9 +238,8 @@ internal fun WelcomeTutorial(activity: PanelActivity, finish: () -> Unit) {
             }
         })
     folderRole?.let { role -> AddFolderGuidanceDialog(
-        continueAction = { folderRole = null; activity.chooseSource(role) },
-        dismiss = { folderRole = null },
-        wholeStorage = { folderRole = null; activity.chooseWholeStorage(role) }) }
+        continueAction = { folderRole = null; activity.chooseWholeStorage(role) },
+        dismiss = { folderRole = null }) }
 }
 
 @Composable

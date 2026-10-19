@@ -47,7 +47,7 @@
     <string name="new_album_move">"Move to a new album…"</string>
     <string name="new_album_copy">"Copy to a new album…"</string>
     <string name="album_hierarchy">"Browse albums by folder"</string>
-    <string name="album_hierarchy_description">Off: subfolder albums appear alongside other albums. On: browse folders and subfolders. Files remain unchanged.</string>
+    <string name="album_hierarchy_description">Off: all folders appear in one list. On: open subfolders one at a time, keeping the structure of your roots. Files and folders are not modified.</string>
     <string name="controller_settings_hint">"Open settings with %1$s. Shortcuts follow your controller configuration."</string>
     <string name="duplicate_experimental">Experimental · Review results before deleting files.</string>
     <string name="tutorial_skip">Skip tutorial</string>
@@ -166,4 +166,7 @@
     <string name="tutorial_ready">You’re all set!</string>
     <string name="sound_section">Section changes</string>
     <string name="widget_effect_coin">Coin</string>
+    <string name="navbar_hide_single">Hide navigation bar with one section</string>
+    <string name="single_screen_landscape">Force landscape orientation</string>
+    <string name="show_empty_folders">Show empty folders</string>
 </resources>

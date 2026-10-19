@@ -1678,7 +1678,7 @@
     <string name="new_album_move">"Mover para um novo álbum…"</string>
     <string name="new_album_copy">"Copiar para um novo álbum…"</string>
     <string name="album_hierarchy">"Explorar álbuns por pasta"</string>
-    <string name="album_hierarchy_description">Desativado: álbuns das subpastas aparecem junto aos demais. Ativado: navegue por pastas e subpastas. Os arquivos não são alterados.</string>
+    <string name="album_hierarchy_description">Desativado: todas as pastas aparecem numa lista. Ativado: abre as subpastas uma a uma, mantendo a estrutura. Arquivos e pastas não são alterados.</string>
     <string name="controller_settings_hint">"Abra as configurações com %1$s. Os atalhos seguem a configuração do controle."</string>
     <string name="duplicate_experimental">Experimental · Confira os resultados antes de excluir arquivos.</string>
     <string name="tutorial_skip">Pular tutorial</string>
@@ -1815,4 +1815,7 @@
     <string name="tutorial_ready">Tudo pronto!</string>
     <string name="sound_section">Troca de seção</string>
     <string name="widget_effect_coin">Moeda</string>
+    <string name="navbar_hide_single">Ocultar barra com uma única seção</string>
+    <string name="single_screen_landscape">Forçar orientação horizontal</string>
+    <string name="show_empty_folders">Mostrar pastas vazias</string>
 </resources>

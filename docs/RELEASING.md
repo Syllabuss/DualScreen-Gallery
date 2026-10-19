@@ -30,7 +30,7 @@ Actions use read-only tokens and full commit SHAs. Workflow artifacts are retain
 
 ## Device acceptance
 
-Check an in-place update preserves roots, preferences and favorites. Exercise controller and touch navigation, album reordering, independent album layouts, GIF controls, widget sizes (including 1×1), music track changes, video/PiP return, settings drafts and sleep/wake behavior. Changes to file operations or network code also require appropriate transfer and recovery checks. Record actual results and remaining device limits in [known issues](KNOWN_ISSUES.md).
+Check an in-place update preserves roots, preferences and favorites. Exercise controller and touch navigation, album reordering, independent album layouts, GIF controls, widget sizes (including 1×1), music track changes, video/PiP return, settings drafts and sleep/wake behavior. Changes to file operations or network code also require appropriate transfer and recovery checks. For single-screen changes, also check folder selection, list-only Settings, landscape on → off without reopening, and absence of companion-screen controls. Record actual results and remaining device limits in [known issues](KNOWN_ISSUES.md).
 
 ## Before publishing
 

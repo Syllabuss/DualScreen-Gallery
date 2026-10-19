@@ -193,7 +193,7 @@ class ExternalMediaRenderTest {
             compose.waitUntil(5000) { compose.onAllNodesWithTag("tutorial-next").fetchSemanticsNodes().isNotEmpty() }
             repeat(6) { compose.onNodeWithTag("tutorial-next").performClick(); compose.waitForIdle() }
             compose.onNodeWithTag("welcome-choose-folder").performClick()
-            compose.onNodeWithTag("folder-guidance-whole-storage").performClick()
+            compose.onNodeWithTag("folder-guidance-continue").performClick()
             val permission = shadowOf(panel).nextStartedActivityForResult
             assertEquals(android.provider.Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION, permission.intent.action)
             SharedStorageDocumentsTest.StorageEnvironment.permitted = true

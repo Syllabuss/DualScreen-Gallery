@@ -141,7 +141,8 @@ class ChosenRootsTest {
         provider.nodes.remove("image")
         app.albums.refreshSource(source.id)
         waitFor { app.catalog.snapshot.value.visibleMedia.isEmpty() }
-        assertEquals(setOf("Origin"), app.catalog.readStoredSnapshot().topAlbums().map { it.name }.toSet())
+        assertTrue(app.catalog.readStoredSnapshot().topAlbums().isEmpty())
+        assertEquals(setOf("Origin"), app.catalog.readStoredSnapshot().topAlbums(GalleryPreferences(showEmptyFolders = true)).map { it.name }.toSet())
         assertNotNull(app.catalog.dao.media(original.id))
         assertTrue(provider.deletions.isEmpty())
     }
@@ -154,7 +155,8 @@ class ChosenRootsTest {
         app.albums.show(0, GalleryRoute(tab = "ALBUM"))
         waitFor { app.catalog.snapshot.value.visibleMedia.size == 1 }
         val data = app.catalog.snapshot.value
-        assertEquals(setOf("Origin", "Destination"), data.topAlbums().map { it.name }.toSet())
+        assertEquals(setOf("Origin"), data.topAlbums().map { it.name }.toSet())
+        assertEquals(setOf("Origin", "Destination"), data.topAlbums(GalleryPreferences(showEmptyFolders = true)).map { it.name }.toSet())
         assertTrue(data.topAlbums().none { it.id in data.rootAlbumIds })
         assertEquals(1, app.catalog.dao.media().size); assertFalse(app.catalog.dao.albums().isEmpty())
         assertTrue(provider.deletions.isEmpty())

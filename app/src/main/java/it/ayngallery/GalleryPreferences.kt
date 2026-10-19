@@ -33,7 +33,7 @@ data class GalleryPreferences(val themeId: String = "ayn_rainbow", val compact: 
     val imageBackdrop: String = "GRID", val imageBackdropColor: String = "#252530",
     val imageBackdropEnd: String = "#080810", val imageBackdropOpacity: Int = 50,
     val musicColorMode: String = "THEME", val musicBackgroundColor: String = "#10101C", val musicBarsColor: String = "#66CFFF", val confirmVideoReplacement: Boolean = true, val showUpperStatusBar: Boolean = false,
-    val musicDuringSleep: Boolean = false, val videoDuringSleep: Boolean = false, val tvEnabled: Boolean = false, val tvInNavbar: Boolean = false, val tvInMediaFavorites: Boolean = false) {
+    val musicDuringSleep: Boolean = false, val videoDuringSleep: Boolean = false, val tvEnabled: Boolean = false, val tvInNavbar: Boolean = false, val tvInMediaFavorites: Boolean = false, val showEmptyFolders: Boolean = false) {
     fun validate() {
         require((GalleryThemes.find(themeId) != null || themeId == GalleryThemes.CUSTOM && customTheme != null) && gifMode in setOf("OFF", "SELECTED", "VISIBLE") && gifLimit in 0..40 && albumCoverLimit in 1..40 &&
             slideshowSeconds in 2..120 && ArtworkOrders.valid(artworkOrder)) { localized(R.string.text_invalid_settings_73e331, "Impostazioni non valide") }
@@ -243,7 +243,7 @@ class PreferenceStore(private val context: Context) {
             musicBarsColor = prefs.getString("music_bars_color", "#66CFFF")?.takeIf { it.matches(Regex("#[0-9a-fA-F]{6}")) } ?: "#66CFFF",
             confirmVideoReplacement = prefs.getBoolean("confirm_video_replacement", true), showUpperStatusBar = prefs.getBoolean("show_upper_status_bar", false),
             musicDuringSleep = prefs.getBoolean("music_during_sleep", false), videoDuringSleep = prefs.getBoolean("video_during_sleep", false),
-            tvEnabled = prefs.getBoolean("tv_enabled", false), tvInNavbar = prefs.getBoolean("tv_in_navbar", false), tvInMediaFavorites = prefs.getBoolean("tv_in_favorites", false)))
+            showEmptyFolders = prefs.getBoolean("show_empty_folders", false), tvEnabled = prefs.getBoolean("tv_enabled", false), tvInNavbar = prefs.getBoolean("tv_in_navbar", false), tvInMediaFavorites = prefs.getBoolean("tv_in_favorites", false)))
     suspend fun save(value: GalleryPreferences) = update { value }
     suspend fun update(change: (GalleryPreferences) -> GalleryPreferences) = withContext(Dispatchers.IO) { mutation.withLock {
         val value = change(state.value)
@@ -261,7 +261,7 @@ class PreferenceStore(private val context: Context) {
             .putString("custom_theme", value.customTheme?.encode()).putBoolean("navbar_labels", value.navbarLabels).putString("navbar_order", value.navbarOrder.joinToString(","))
             .putStringSet("hidden_tools", value.hiddenTools).putString("timeline_modes", org.json.JSONObject(value.timelineModes).toString())
             .putBoolean("hide_gif_badge", value.hideGifBadge).putBoolean("ui_sounds", value.uiSounds)
-            .putBoolean("tv_enabled", value.tvEnabled).putBoolean("tv_in_navbar", value.tvInNavbar).putBoolean("tv_in_favorites", value.tvInMediaFavorites)
+            .putBoolean("show_empty_folders", value.showEmptyFolders).putBoolean("tv_enabled", value.tvEnabled).putBoolean("tv_in_navbar", value.tvInNavbar).putBoolean("tv_in_favorites", value.tvInMediaFavorites)
             .putBoolean("music_during_sleep", value.musicDuringSleep).putBoolean("video_during_sleep", value.videoDuringSleep).putBoolean("show_upper_status_bar", value.showUpperStatusBar).putBoolean("confirm_video_replacement", value.confirmVideoReplacement).remove("show_music_albums").putBoolean("image_overlay_auto_hide", value.imageOverlayAutoHide).putBoolean("video_mix_audio", value.videoMixAudio)
             .putStringSet("disabled_categories", value.disabledCategories).putStringSet("disabled_sounds", value.disabledSounds)
             .putBoolean("persist_selected_media", value.persistSelectedMedia).putBoolean("direct_delete_enabled", value.directDeleteEnabled).putBoolean("nested_albums", value.nestedAlbums)

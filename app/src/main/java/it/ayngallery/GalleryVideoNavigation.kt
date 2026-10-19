@@ -41,6 +41,7 @@ internal class GalleryVideoNavigation(player: Player, private val navigate: (Int
 @androidx.annotation.OptIn(UnstableApi::class)
 internal class GalleryVideoView(context: Context, attrs: android.util.AttributeSet? = null) : PlayerView(context, attrs) {
     var navigate: (Int) -> Unit = {}
+    var onPreviewTap: (() -> Unit)? = null
     var onDoubleTapSeek: ((Int) -> Unit)? = null
     private var seekingTap = false
     private val doubleTapDetector = android.view.GestureDetector(context, object : android.view.GestureDetector.SimpleOnGestureListener() {
@@ -132,7 +133,7 @@ internal class GalleryVideoView(context: Context, attrs: android.util.AttributeS
         when (event.actionMasked) {
             MotionEvent.ACTION_DOWN -> {
                 startX = event.x; startY = event.y
-                eligible = event.y < height * .7f; swiping = false
+                eligible = !useController || event.y < height * .7f; swiping = false
             }
             MotionEvent.ACTION_POINTER_DOWN -> eligible = false
             MotionEvent.ACTION_MOVE -> if (eligible && !swiping && abs(event.x - startX) > slop * 2 &&
@@ -146,10 +147,14 @@ internal class GalleryVideoView(context: Context, attrs: android.util.AttributeS
                 if (abs(event.x - startX) > width * .12f) navigate(if (event.x < startX) 1 else -1)
                 swiping = false; eligible = false
                 return true
+            } else if (!useController) {
+                performClick()
+                onPreviewTap?.invoke()
+                return true
             }
             MotionEvent.ACTION_CANCEL -> { swiping = false; eligible = false }
         }
-        return if (swiping) true else super.dispatchTouchEvent(event)
+        return if (swiping || !useController) true else super.dispatchTouchEvent(event)
     }
 }
 

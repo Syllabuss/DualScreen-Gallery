@@ -9,6 +9,8 @@ data class DisplayState(
 
 /** No lifecycle event in this policy grants permission to open another window. */
 object DisplayPolicy {
+    fun preferSingleScreenLandscape(screens: List<ScreenInfo>, enabled: Boolean): Boolean = enabled && screens.size == 1
+
     /** Verified Thor panel sizes, independent of Android display IDs and launch position. */
     fun thorPair(model: String, screens: List<ScreenInfo>): Pair<ScreenInfo, ScreenInfo>? {
         if (!model.replace(" ", "").replace("_", "").equals("AYNThor", true) || screens.size != 2) return null

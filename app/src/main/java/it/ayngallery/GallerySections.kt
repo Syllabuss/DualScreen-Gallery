@@ -48,7 +48,6 @@ fun SourceScreen(activity: PanelActivity, data: CatalogSnapshot, task: (suspend 
     val catalog = (activity.application as GalleryApp).catalog
     val progress by catalog.progress.collectAsStateWithLifecycle()
     var chooseRootType by rememberSaveable { mutableStateOf(false) }
-    var wholeStorage by rememberSaveable { mutableStateOf(false) }
     val missing = remember(data) {
         val active = data.sources.filter { it.enabled && it.id != DeviceGallery.SOURCE }.map { it.id }.toSet()
         val referenced = data.membership.filter { it.sourceId in active }.map { it.mediaId }.toSet()
@@ -118,7 +117,7 @@ fun SourceScreen(activity: PanelActivity, data: CatalogSnapshot, task: (suspend 
                         if (count > 0) GalleryButton(localized(R.string.text_relink_files_688750, "Ricollega i file…"), Modifier.fillMaxWidth().testTag("source-relink:${source.id}")) { activity.windowModel.relinkSource(source.id) }
                     }
                     else if (!source.reachable) GalleryButton(localized(R.string.text_restore_access_fa5ec3, "Ripristina accesso")) {
-                        if (source.singleDocument) activity.chooseDocument() else activity.chooseSource(SourceRole.valueOf(source.role))
+                        if (source.singleDocument) activity.chooseDocument() else activity.chooseWholeStorage(SourceRole.valueOf(source.role))
                     }
                     }
                     IconButton(onClick = { task { catalog.enableSource(source.id, false) } }, modifier = Modifier.testTag("remove-root:${source.id}").semantics {
@@ -135,31 +134,37 @@ fun SourceScreen(activity: PanelActivity, data: CatalogSnapshot, task: (suspend 
                 style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
             Text(localized(R.string.roots_picker_help, "Nel selettore Android apri la memoria interna o la microSD, scegli la cartella radice e conferma con “Usa questa cartella”. Le cartelle di sistema protette non possono essere autorizzate."),
                 style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
-            if (android.os.Build.VERSION.SDK_INT >= 30) Row(verticalAlignment = Alignment.CenterVertically) {
-                Checkbox(wholeStorage, { wholeStorage = it })
-                Text(localized(R.string.shared_storage_action, "Download e memoria completa"))
-                }
             Row(Modifier.fillMaxWidth().height(IntrinsicSize.Min), horizontalArrangement = Arrangement.spacedBy(12.dp)) {
-                GalleryButton(localized(R.string.add_visual_folder, "Foto e video"), Modifier.weight(1f).fillMaxHeight().testTag("add-visual-root"), primary = true, icon = R.drawable.ph_images) { chooseRootType = false; if (wholeStorage) activity.chooseWholeStorage(SourceRole.VISUAL) else activity.chooseSource(SourceRole.VISUAL) }
-                GalleryButton(localized(R.string.add_music_folder, "Musica"), Modifier.weight(1f).fillMaxHeight().testTag("add-music-root"), icon = R.drawable.ph_music_notes) { chooseRootType = false; if (wholeStorage) activity.chooseWholeStorage(SourceRole.MUSIC) else activity.chooseSource(SourceRole.MUSIC) }
+                GalleryButton(localized(R.string.add_visual_folder, "Foto e video"), Modifier.weight(1f).fillMaxHeight().testTag("add-visual-root"), primary = true, icon = R.drawable.ph_images) { chooseRootType = false; activity.chooseWholeStorage(SourceRole.VISUAL) }
+                GalleryButton(localized(R.string.add_music_folder, "Musica"), Modifier.weight(1f).fillMaxHeight().testTag("add-music-root"), icon = R.drawable.ph_music_notes) { chooseRootType = false; activity.chooseWholeStorage(SourceRole.MUSIC) }
             }
         } }, dismissButton = { TextButton({ chooseRootType = false }) { Text(localized(R.string.text_cancel_18c9d9, "Annulla")) } }, confirmButton = {})
+}
+
+internal fun albumAnchorAfterRemoval(previous: List<String>, current: List<String>, selected: String?): String? {
+    if (selected in current) return selected
+    val index = previous.indexOf(selected)
+    if (index >= 0) {
+        previous.drop(index + 1).firstOrNull { it in current }?.let { return it }
+        previous.take(index).lastOrNull { it in current }?.let { return it }
+    }
+    return current.firstOrNull()
 }
 
 private val LocalAlbumTileGrid = androidx.compose.runtime.compositionLocalOf { false }
 
 @Composable
 @OptIn(ExperimentalFoundationApi::class)
-fun AlbumScreen(activity: PanelActivity, data: CatalogSnapshot, task: (suspend () -> Unit) -> Unit, videoOnly: Boolean = false, onChooseFolder: () -> Unit = { activity.chooseSource(SourceRole.VISUAL) }) {
+fun AlbumScreen(activity: PanelActivity, data: CatalogSnapshot, task: (suspend () -> Unit) -> Unit, videoOnly: Boolean = false, onChooseFolder: () -> Unit = { activity.chooseWholeStorage(SourceRole.VISUAL) }) {
     val app = activity.application as GalleryApp
     val prefs by app.preferences.state.collectAsStateWithLifecycle()
     val videoBranches = remember(data) {
         val direct = data.media.filter { it.kind == "VIDEO" && !it.convertedGif && !it.trashed && it.available }.map { it.albumId }.toSet()
         direct + data.ancestry.filter { it.albumId in direct }.map { it.ancestorId }
     }
-    val visible = remember(data, videoOnly, videoBranches) { data.visibleAlbums().distinctBy { it.id }.filter { !videoOnly || it.id in videoBranches } }
+    val visible = remember(data, videoOnly, videoBranches, prefs.showEmptyFolders) { data.visibleAlbums().distinctBy { it.id }.filter { (!videoOnly || it.id in videoBranches) && (prefs.showEmptyFolders || it.id in data.albumsWithVisibleMedia) } }
     val query by activity.windowModel.query.collectAsStateWithLifecycle()
-    val topIds = remember(data, prefs.nestedAlbums) { data.topAlbums(prefs).map { it.id }.toSet() }
+    val topIds = remember(data, prefs.nestedAlbums, prefs.showEmptyFolders) { data.topAlbums(prefs).map { it.id }.toSet() }
     val savedOrder by app.preferences.albumOrder.collectAsStateWithLifecycle()
     var dragOrder by remember { mutableStateOf<List<String>?>(null) }
     val order = dragOrder ?: savedOrder
@@ -168,9 +173,20 @@ fun AlbumScreen(activity: PanelActivity, data: CatalogSnapshot, task: (suspend (
     val albums = remember(visible, query, videoOnly, topIds, rank) { visible.filter { if (query.isBlank()) videoOnly || it.id in topIds
         else it.name.contains(query.trim(), true) || it.path.contains(query.trim(), true) }
         .sortedWith(compareBy<AlbumEntity> { rank[it.id] ?: -1 }.thenBy { it.name }) }
-    if (albums.isEmpty() && query.isBlank()) { EmptyFolderButton(chooseFolder = onChooseFolder); return }
-    val currentAlbumIds by rememberUpdatedState(albums.map { it.id })
     val vm = activity.windowModel
+    val albumIds = albums.map { it.id }
+    var previousAlbumIds by remember { mutableStateOf(emptyList<String>()) }
+    val anchor = remember(albumIds) { albumAnchorAfterRemoval(previousAlbumIds, albumIds, vm.albumAnchor) }
+    LaunchedEffect(albumIds) {
+        val hadAlbums = previousAlbumIds.isNotEmpty()
+        previousAlbumIds = albumIds
+        if (anchor != null || hadAlbums) {
+            vm.albumAnchor = anchor
+            app.session.previewAlbum(anchor)
+        }
+    }
+    if (albums.isEmpty() && query.isBlank()) { EmptyFolderButton(chooseFolder = onChooseFolder); return }
+    val currentAlbumIds by rememberUpdatedState(albumIds)
     val storedGrid by vm.albumGrid.collectAsStateWithLifecycle()
     val grid = videoOnly || storedGrid
     val columns by (if (videoOnly) vm.videoAlbumColumns else vm.albumColumns).collectAsStateWithLifecycle()
@@ -200,8 +216,6 @@ fun AlbumScreen(activity: PanelActivity, data: CatalogSnapshot, task: (suspend (
         if (selected.isNotEmpty()) vm.selectAlbums(if (album.id in selected) selected - album.id else selected + album.id)
         else { vm.albumAnchor = album.id; if (data.albumLocked(album.id)) app.session.albumUnlockRequest = album.id else vm.go(if (videoOnly) "VIDEO" else "ALBUM", album = album.id) }
     }
-    val anchor = remember(albums.map { it.id }) { vm.albumAnchor?.takeIf { id -> albums.any { it.id == id } } ?: albums.firstOrNull()?.id }
-    LaunchedEffect(anchor) { if (anchor != null) app.session.previewAlbum(anchor) }
     val start = albums.indexOfFirst { it.id == anchor }.coerceAtLeast(0)
     val gridState = rememberLazyGridState(initialFirstVisibleItemIndex = bandGeometry.cellBands.getOrNull(start) ?: 0)
     val listState = androidx.compose.foundation.lazy.rememberLazyListState(initialFirstVisibleItemIndex = start)
@@ -228,6 +242,20 @@ fun AlbumScreen(activity: PanelActivity, data: CatalogSnapshot, task: (suspend (
     var focusJob by remember { mutableStateOf<kotlinx.coroutines.Job?>(null) }
     var preferredColumn by remember(columns) { mutableIntStateOf(-1) }
     var controllerFocusTarget by remember { mutableStateOf<String?>(null) }
+    LaunchedEffect(albumIds) {
+        if (focusedAlbum != null && focusedAlbum !in albumIds) {
+            focusedAlbum = null
+            initialFocusRequested = false
+            if (anchor != null) {
+                val index = albumIds.indexOf(anchor)
+                if (grid) gridState.scrollToItem(bandGeometry.cellBands[index]) else listState.scrollToItem(index)
+                if (inputMode == androidx.compose.ui.input.InputMode.Keyboard) {
+                    androidx.compose.runtime.withFrameNanos { }
+                    focusRequests[anchor]?.requestFocus()
+                }
+            }
+        }
+    }
     DisposableEffect(activity, grid, currentAlbumIds, columns, focusedAlbum, geometry) {
         val handler: (PadAction) -> Boolean = { action ->
             val index = currentAlbumIds.indexOf(focusedAlbum)
@@ -387,7 +415,7 @@ fun AlbumScreen(activity: PanelActivity, data: CatalogSnapshot, task: (suspend (
         LaunchedEffect(hovered) { if (hovered && dragged == null) { app.video.browsePreview(null); app.session.previewAlbum(album.id) } }
         var coordinates by remember(album.id) { mutableStateOf<androidx.compose.ui.layout.LayoutCoordinates?>(null) }
         DisposableEffect(album.id) { onDispose { if (positions[album.id] === coordinates) positions.remove(album.id) } }
-        LaunchedEffect(inputMode, coordinates, grid) {
+        LaunchedEffect(inputMode, coordinates, grid, anchor) {
             if (!initialFocusRequested && album.id == anchor && coordinates?.isAttached == true &&
                 inputMode == androidx.compose.ui.input.InputMode.Keyboard) { initialFocusRequested = true; tileFocus.requestFocus() }
         }
@@ -587,7 +615,7 @@ internal fun AlbumDialogs(activity: PanelActivity, app: GalleryApp, data: Catalo
 @Composable
 fun AlbumChildren(activity: PanelActivity, data: CatalogSnapshot, parent: String, prefs: GalleryPreferences) {
     val currentRoute by activity.windowModel.route.collectAsStateWithLifecycle()
-    val children = (if (prefs.nestedAlbums || currentRoute.tab == "VIDEO") data.childAlbums(parent, nested = true) else emptyList<AlbumEntity>())
+    val children = (if (prefs.nestedAlbums || currentRoute.tab == "VIDEO") data.childAlbums(parent, nested = true) else emptyList<AlbumEntity>()).filter { prefs.showEmptyFolders || it.id in data.albumsWithVisibleMedia }
         .sortedWith(Comparator { a, b -> MediaNames.natural.compare(a.name, b.name) })
     if (children.isEmpty()) return
     val catalog = (activity.application as GalleryApp).catalog
@@ -632,9 +660,12 @@ internal fun DisplayControls(activity: PanelActivity) {
     val others = session.screens.filter { it.key != activity.screenKey }
     Column(Modifier.fillMaxWidth(), verticalArrangement = Arrangement.spacedBy(12.dp)) {
         GallerySettingSwitch(localized(R.string.text_open_on_two_screens_at_startup_7c2cb7, "Apri su due schermi all'avvio"),
-            session.startupAutomatic || (others.size == 1 && session.startupPair == setOf(activity.screenKey, others.single().key)),
+            others.size == 1 && (session.startupAutomatic || session.startupPair == setOf(activity.screenKey, others.single().key)),
             Modifier.testTag("startup-dual"), enabled = others.size == 1) { session.rememberStartupPair(activity, it) }
-        GalleryButton(localized(R.string.text_use_only_this_screen_f859c0, "Usa solo questo schermo"), Modifier.fillMaxWidth()) { session.single(activity) }
+        if (session.screens.size == 1) {
+            GallerySettingSwitch(localized(R.string.text_use_only_this_screen_f859c0, "Usa solo questo schermo"), true, Modifier.testTag("single-screen-active"), enabled = false) {}
+            GallerySettingSwitch(localized(R.string.single_screen_landscape, "Forza orientamento orizzontale"), session.singleScreenLandscape, Modifier.testTag("single-screen-landscape")) { session.singleScreenLandscape(it) }
+        } else GalleryButton(localized(R.string.text_use_only_this_screen_f859c0, "Usa solo questo schermo"), Modifier.fillMaxWidth()) { session.single(activity) }
     }
 }
 

@@ -174,14 +174,20 @@ fun PreferencesScreen(app: GalleryApp, prefs: GalleryPreferences, task: (suspend
                     item { DependentSetting(true) { GallerySettingSwitch(localized(R.string.tv_favorites, "Mostra canali TV nei Preferiti"), draft.tvInMediaFavorites) { draft = draft.copy(tvInMediaFavorites = it) } } }
                 }
                 item { NavbarCategoryEditor(draft) { draft = it } }
+                if (visibleNavbarTabs(draft).size == 1) item {
+                    GallerySettingSwitch(localized(R.string.navbar_hide_single, "Nascondi barra con una sola sezione"), InterfaceTools.SINGLE_NAVBAR in draft.hiddenTools, Modifier.testTag("hide-single-navbar")) { hidden ->
+                        draft = draft.copy(hiddenTools = if (hidden) draft.hiddenTools + InterfaceTools.SINGLE_NAVBAR else draft.hiddenTools - InterfaceTools.SINGLE_NAVBAR)
+                    }
+                }
                 item { HorizontalDivider(Modifier.padding(vertical = 8.dp)); Text(localized(R.string.text_gallery_and_preview_36bf93, "Galleria e anteprima"), style = MaterialTheme.typography.titleMedium) }
                 item { GallerySettingSwitch(localized(R.string.text_navigation_bar_labels_63fe86, "Etichette nella barra di navigazione"), draft.navbarLabels, Modifier.testTag("navbar-labels")) { draft = draft.copy(navbarLabels = it) } }
                 item { GallerySettingSwitch(localized(R.string.text_show_file_names_557e96, "Mostra nomi dei file"), draft.showMediaNames) { draft = draft.copy(showMediaNames = it) } }
                 item { GallerySettingSwitch(localized(R.string.direct_delete_option, "Mostra «Elimina direttamente»"), draft.directDeleteEnabled) { draft = draft.copy(directDeleteEnabled = it) } }
+                item { GallerySettingSwitch(localized(R.string.show_empty_folders, "Mostra cartelle vuote"), draft.showEmptyFolders) { draft = draft.copy(showEmptyFolders = it) } }
                 item { GallerySettingSwitch(localized(R.string.album_hierarchy, "Sfoglia album per cartelle"), draft.nestedAlbums) { draft = draft.copy(nestedAlbums = it) }
                     Row(Modifier.padding(horizontal = 12.dp, vertical = 6.dp), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                         GalleryIcon(R.drawable.ph_info, null, Modifier.size(18.dp))
-                        Text(localized(R.string.album_hierarchy_description, "Disattivato: le cartelle che contengono solo altri album vengono saltate, così raggiungi subito i media. Attivato: apri le cartelle una alla volta, mantenendo la struttura delle roots. I file e le cartelle non vengono modificati."), style = MaterialTheme.typography.bodySmall)
+                        Text(localized(R.string.album_hierarchy_description, "Disattivato: tutte le cartelle sono in un unico elenco. Attivato: apri le cartelle una alla volta, mantenendo la struttura delle roots. I file e le cartelle non vengono modificati."), style = MaterialTheme.typography.bodySmall)
                     }
                 }
                 item { Text(localized(R.string.tools_hint, "Scegli i pulsanti da mostrare. Le scorciatoie del controller restano attive."), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant) }

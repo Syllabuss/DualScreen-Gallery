@@ -259,6 +259,7 @@ abstract class PanelActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         session = (application as GalleryApp).session
         windowModel = ViewModelProvider(this)[GalleryWindowModel::class.java]
+        updateSingleScreenOrientation()
         screenKey = session.current(this)?.key.orEmpty()
         accepted = session.accept(this)
         if (!accepted) {
@@ -282,6 +283,22 @@ abstract class PanelActivity : ComponentActivity() {
         else if (intent.getBooleanExtra("open_music", false)) openWidgetMusic(intent)
         (application as GalleryApp).music.observe()
         session.record(localized(R.string.text_p_1_s_created_on_display_2_s_b6f016, "P%1\$s creato su display %2\$s", slot, session.current(this)?.id))
+    }
+
+    internal fun updateSingleScreenOrientation() {
+        val orientation = when {
+            DisplayPolicy.preferSingleScreenLandscape(session.screens, session.singleScreenLandscape) ->
+                android.content.pm.ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE
+            session.screens.size == 1 -> {
+                // Samsung can retain the forced rotation as its user-locked orientation.
+                // Restore the display's native axis rather than leaving that lock in place.
+                val screen = session.screens.single()
+                if (screen.height >= screen.width) android.content.pm.ActivityInfo.SCREEN_ORIENTATION_USER_PORTRAIT
+                else android.content.pm.ActivityInfo.SCREEN_ORIENTATION_USER_LANDSCAPE
+            }
+            else -> android.content.pm.ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED
+        }
+        if (requestedOrientation != orientation) requestedOrientation = orientation
     }
 
     private fun applyWindowTheme(preferences: GalleryPreferences) = applyGalleryWindowTheme(this, preferences)

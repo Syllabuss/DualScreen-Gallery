@@ -48,7 +48,7 @@
     <string name="new_album_move">"Sposta in un nuovo album…"</string>
     <string name="new_album_copy">"Copia in un nuovo album…"</string>
     <string name="album_hierarchy">"Sfoglia album per cartelle"</string>
-    <string name="album_hierarchy_description">Disattivato: gli album nelle sottocartelle compaiono direttamente insieme agli altri album. Attivato: navighi tra cartelle e sottocartelle. I file non vengono modificati.</string>
+    <string name="album_hierarchy_description">Disattivato: tutte le cartelle sono in un unico elenco. Attivato: apri le sottocartelle una alla volta, mantenendo la struttura delle roots. I file e le cartelle non vengono modificati.</string>
     <string name="controller_settings_hint">"Apri le impostazioni con %1$s. Le scorciatoie seguono la configurazione del controller."</string>
     <string name="duplicate_experimental">Sperimentale · Controlla i risultati prima di eliminare i file.</string>
     <string name="tutorial_skip">Salta tutorial</string>
@@ -167,4 +167,7 @@
     <string name="tutorial_ready">È tutto pronto!</string>
     <string name="sound_section">Cambio sezione</string>
     <string name="widget_effect_coin">Moneta</string>
+    <string name="navbar_hide_single">Nascondi barra con una sola sezione</string>
+    <string name="single_screen_landscape">Forza orientamento orizzontale</string>
+    <string name="show_empty_folders">Mostra cartelle vuote</string>
 </resources>

@@ -64,7 +64,7 @@ internal fun EmptyFolderButton(description: String = localized(R.string.choose_m
 }
 
 @Composable
-internal fun AddFolderGuidanceDialog(continueAction: () -> Unit, dismiss: () -> Unit, wholeStorage: (() -> Unit)? = null) {
+internal fun AddFolderGuidanceDialog(continueAction: () -> Unit, dismiss: () -> Unit) {
     val confirm = remember { FocusRequester() }
     GalleryAlertDialog(onDismissRequest = dismiss, initialFocus = confirm, containerColor = MaterialTheme.colorScheme.surface,
         modifier = Modifier.widthIn(max = 800.dp).fillMaxWidth(.9f), properties = androidx.compose.ui.window.DialogProperties(usePlatformDefaultWidth = false),
@@ -73,9 +73,8 @@ internal fun AddFolderGuidanceDialog(continueAction: () -> Unit, dismiss: () -> 
         } },
         text = { Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
             Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) { GalleryIcon(R.drawable.ph_info, null, Modifier.size(20.dp)); Text(localized(R.string.folder_add_explanation, "Scegli una cartella da sfogliare. Potrai aggiungerne altre quando vuoi.")) }
-            if (wholeStorage != null && android.os.Build.VERSION.SDK_INT >= 30) {
+            if (android.os.Build.VERSION.SDK_INT >= 30) {
                 Text(localized(R.string.shared_storage_help, "Per Download o tutta la memoria interna, autorizza l’accesso a tutti i file nelle impostazioni Android. Poi scegli la cartella. Android/data, Android/obb e le cartelle private restano esclusi."), style = MaterialTheme.typography.bodySmall)
-                OutlinedButton(wholeStorage, Modifier.fillMaxWidth().testTag("folder-guidance-whole-storage")) { Text(localized(R.string.shared_storage_action, "Download e memoria completa")) }
             }
         } },
         confirmButton = {

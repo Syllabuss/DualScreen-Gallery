@@ -41,7 +41,7 @@ fun MusicModeMenu(vm: GalleryWindowModel, mode: String) {
 fun MusicLibraryScreen(activity: PanelActivity, route: GalleryRoute, data: CatalogSnapshot, items: List<MediaEntity>, prefs: GalleryPreferences,
                        multi: Boolean, selected: Set<String>, activate: (MediaEntity) -> Unit, actions: (MediaEntity) -> Unit,
                        onMulti: () -> Unit, onSelectionAction: (String) -> Unit,
-                       onChooseFolder: (SourceRole) -> Unit = { role -> activity.chooseSource(role) },
+                       onChooseFolder: (SourceRole) -> Unit = { role -> activity.chooseWholeStorage(role) },
                        activeScene: Boolean = true, renderedSortRevision: Long? = null,
                        timelineDescending: Boolean = activity.windowModel.descending.value) {
     val app = activity.application as GalleryApp
