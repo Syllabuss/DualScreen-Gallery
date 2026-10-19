@@ -1,6 +1,6 @@
 # Known issues and verification limits
 
-Latest published build: **0.1.0-beta.125**, code **211**, on **main**, dated **2026-10-19**. Public beta with single-screen support.
+Current build: **0.1.0-beta.126**, code **212**, on **main**, dated **2026-10-20**. This update expands single-screen layouts and adds deliberate album pair reordering.
 
 ## Device coverage
 
@@ -23,13 +23,13 @@ The single-screen update was installed in place on Thor on October 19, preservin
 
 ## Release verification
 
-The [beta.124 release commit passed all four test groups, build, lint and translation checks](https://github.com/Syllabuss/DualScreen-Gallery/actions/runs/39161231202). The suite contains 915 JVM tests. Automated tests cover state and rendering; they do not certify every device, codec or external server.
+The beta.126 source commit passed [all four test groups, optimized build, lint and translation checks](https://github.com/Syllabuss/DualScreen-Gallery/actions/runs/39341282484). The suite contains 936 JVM tests. Automated tests cover state and rendering; they do not certify every device, codec or external server.
 
 The signed APK was installed in place on Thor without clearing data. Its four uploaded assets were checked against local SHA-256 digests. The matching reconstruction kit rebuilt successfully from an extracted copy, including a build replacing the jump3r dependency with its Java sources.
 
 The maintainer confirmed widget sizing, controller navigation, album actions, independent album views and TV/Music preview behavior. PiP return, settings preservation and lid reopening were also checked on Thor. Onboarding was exercised from a reset installation.
 
-The single-screen changes passed 922 JVM tests, lint and an optimized release build. The final orientation-toggle adjustment then passed 14 targeted tests, lint and an optimized release build, plus an on-phone on/off check. These local checks are separate from the published beta.124 CI result above.
+The current release candidate also passed the complete local JVM suite, debug lint and optimized release build. Translation validation reports 2,087 strings across ten locales with no pending entries. CI independently passed every shard for the same application changes; the version and documentation update does not alter runtime behavior.
 
 ## Distribution and third-party assets
 

@@ -2,7 +2,7 @@
 <h1 align="center">DS Gallery (DualScreen Gallery)</h1>
 <p align="center">Your media. Two screens. One gallery.</p>
 <p align="center"><strong>Android · Kotlin · Jetpack Compose · Dual-screen &amp; single-screen</strong><br />Public beta · Created by Syllabuss</p>
-<p align="center"><a href="https://github.com/Syllabuss/DualScreen-Gallery/releases/tag/v0.1.0-beta.125">Downloads</a> · <a href="docs/USER_GUIDE.md">User guide</a> · <a href="https://ko-fi.com/syllabuss">♥ Support on Ko-fi</a></p>
+<p align="center"><a href="https://github.com/Syllabuss/DualScreen-Gallery/releases/tag/v0.1.0-beta.126">Downloads</a> · <a href="docs/USER_GUIDE.md">User guide</a> · <a href="https://ko-fi.com/syllabuss">♥ Support on Ko-fi</a></p>
 
 DS Gallery started as something I was making for myself. I wanted to choose exactly which folders became albums, rather than hide half my device after every scan. I also wanted a gallery that made proper use of two screens. I tried other apps, but none quite worked the way I wanted.
 
@@ -58,13 +58,13 @@ The launcher, wallpaper and desktop decorations in this recording are separate f
 - **Start comfortably.** An eight-page tutorial covers language, theme, controller shortcuts, images, videos, gestures and folder linking. L1/R1 move through the pages; the other display shows a multilingual welcome.
 - **Add home widgets.** Icon Player (2×2) and Compact Player (3×1, or resize to 1×1 for a one-tap play/pause cover), plus one resizable photo widget for a single image/GIF or an album slideshow.
 
-With one screen, browsing and playback share the same display. Settings uses a list, and you can turn landscape view on or off in **Screens and backup**. Controls for the second display stay out of the way. Both layouts are supported; the app adapts to the number of screens you choose to use.
+With one screen, browsing and playback share the same display. Settings uses a list, and you can turn landscape view on or off in **Screens and backup**. Album grids can scroll vertically or horizontally, or use the carousel. Music rearranges its player and queue for portrait or landscape. Controls for the second display stay out of the way. Both layouts are supported; the app adapts to the number of screens you choose to use.
 
 ## Get started
 
 Optional online TV supports user-supplied HTTPS M3U playlists, a personal channel list and live playback through the existing video/PiP coordinator. It starts disabled. See the [TV guide](docs/TV.md) for setup and limits; online TV is experimental.
 
-1. Download the APK from the **[Releases](https://github.com/Syllabuss/DualScreen-Gallery/releases/tag/v0.1.0-beta.125)** page.
+1. Download the APK from the **[Releases](https://github.com/Syllabuss/DualScreen-Gallery/releases/tag/v0.1.0-beta.126)** page.
 2. Install it on Android 9 or later. Existing installations should be updated in place; do not uninstall to update.
 3. Open the gallery and choose a folder containing photos or videos. Add music folders separately in **Settings → Info and permissions**.
 4. On Thor, check **Open on two screens at startup** in Screens and backup. A opens, B navigates back, X opens contextual options, Y swaps the panels, L3 opens PhotoFrame and R3 changes the view. The tutorial shows the current controller mappings.

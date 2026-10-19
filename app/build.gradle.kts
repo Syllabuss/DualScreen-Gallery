@@ -41,8 +41,8 @@ android {
         minSdk = 28
         targetSdk = 35
         testInstrumentationRunner = "it.ayngallery.GifStressInstrumentation"
-        versionCode = 211
-        versionName = "0.1.0-beta.125"
+        versionCode = 212
+        versionName = "0.1.0-beta.126"
     }
     buildFeatures { compose = true }
     sourceSets.getByName("main").assets.srcDir(layout.buildDirectory.dir("generated/legal-assets"))
