@@ -1678,7 +1678,7 @@
     <string name="new_album_move">"Mover a un nuevo álbum…"</string>
     <string name="new_album_copy">"Copiar a un nuevo álbum…"</string>
     <string name="album_hierarchy">"Explorar álbumes por carpetas"</string>
-    <string name="album_hierarchy_description">Desactivado: los álbumes de subcarpetas aparecen junto a los demás. Activado: navega por carpetas y subcarpetas. No modifica archivos.</string>
+    <string name="album_hierarchy_description">Desactivado: todas las carpetas aparecen en una lista. Activado: abre las subcarpetas una a una, conservando la estructura. No se modifican archivos ni carpetas.</string>
     <string name="controller_settings_hint">"Abre los ajustes con %1$s. Los atajos siguen la configuración del mando."</string>
     <string name="duplicate_experimental">Experimental · Revisa los resultados antes de eliminar archivos.</string>
     <string name="tutorial_skip">Saltar tutorial</string>
@@ -1815,4 +1815,7 @@
     <string name="tutorial_ready">¡Todo listo!</string>
     <string name="sound_section">Cambio de sección</string>
     <string name="widget_effect_coin">Moneda</string>
+    <string name="navbar_hide_single">Ocultar la barra con una sola sección</string>
+    <string name="single_screen_landscape">Forzar orientación horizontal</string>
+    <string name="show_empty_folders">Mostrar carpetas vacías</string>
 </resources>

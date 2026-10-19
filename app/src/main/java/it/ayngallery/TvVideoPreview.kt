@@ -67,7 +67,7 @@ internal fun TvVideoPreview(activity: PanelActivity) {
                 TvFavoriteStar(record?.favorite == true, Modifier.size(24.dp), identity = tvKey(entry))
             }
             Text(record?.name ?: entry.name, Modifier.weight(1f), color = androidx.compose.ui.graphics.Color.White, maxLines = 1, overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis)
-            if (app.tv.browsing) TvNetworkInfo() else GalleryIconButton(R.drawable.ph_moon_stars, localized(R.string.video_dim_navigation, "Oscura lo schermo di navigazione")) { video.dimNavigation = true }
+            if (app.tv.browsing) TvNetworkInfo() else if (app.session.canSwap()) GalleryIconButton(R.drawable.ph_moon_stars, localized(R.string.video_dim_navigation, "Oscura lo schermo di navigazione")) { video.dimNavigation = true }
             GalleryIconButton(R.drawable.ph_x, localized(R.string.text_close_32d407, "Chiudi"), Modifier.testTag("tv-close-player")) { video.closeLive() }
         }
         }

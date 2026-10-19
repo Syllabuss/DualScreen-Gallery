@@ -8,7 +8,7 @@ DS Gallery started as something I was making for myself. I wanted to choose exac
 
 The players grew out of the same idea: separate volume controls for music and video, audio and subtitle tracks within reach, and the freedom to keep something playing in a floating window while looking through the rest of my library. I wanted those tools available without needing every button on screen all the time. You can keep the interface light, or show more controls and make use of the controller shortcuts.
 
-What began as a small gallery became a media manager I enjoy using. I thought the result was worth sharing, in case it fits someone else's handheld too. It was designed and developed on the **AYN Thor**; I don't own other dual-screen Android devices, so I haven't been able to test them. Android 9 or later is required, and single-screen mode is still experimental.
+What began as a small gallery became a media manager I enjoy using. I thought the result was worth sharing, in case it fits someone else's setup too. I built it around my own **AYN Thor and its two screens**, but it also works on a **single-screen Android phone**. The phone layout has now been checked on a Samsung running Android 16. Android 9 or later is required.
 
 <a name="see-it-in-use"></a>
 
@@ -47,16 +47,18 @@ The launcher, wallpaper and desktop decorations in this recording are separate f
 
 ## A gallery built around your folders
 
-- **Choose your library.** Add one or more root folders. Their subfolders appear directly as albums; music uses its own roots. No automatic device-wide discovery.
+- **Choose your library.** Add one or more root folders. Browse folders together or keep their hierarchy; empty folders stay hidden unless you enable them. Music uses its own roots. No automatic device-wide discovery.
 - **Keep your layout.** Each section and individual album remembers its own list/grid view and thumbnail size. Timeline grouping, favorites, search and individual toolbar visibility help you browse your way.
 - **Enjoy the preview.** Photos support pinch zoom, controller zoom/pan, smooth swiping and temporary 90° rotation. Pin a preview while browsing, open up to two comparison images, or inspect GIF frames with the expandable filmstrip. Optional nearest-neighbor rendering keeps pixel-art edges sharp.
-- **Work across your network.** Settings → Tools combines the trash, experimental duplicate finder and network files. Share a chosen Thor folder over FTP, or browse FTP/SMB shares with guided connection recovery and copy/move controls. Network access never adds folders to your gallery automatically.
+- **Work across your network.** Settings → Tools combines the trash, experimental duplicate finder and network files. Share a chosen folder over FTP, or browse FTP/SMB shares with guided connection recovery and copy/move controls. Network access never adds folders to your gallery automatically.
 - **Listen while browsing.** Separate in-app music and video volume controls, background music playback, notification controls, shuffle/repeat, animated cover styles and theme, cover-derived or custom colors. Compact controls remain available beside image previews.
 - **Make it yours.** Light, dark, neon and pastel palettes, a custom color picker and ten interface languages.
 - **Manage media carefully.** Guided copy/move destinations, a seven-day trash, collections and editors that save new copies. PIN album locks control access inside the gallery; they do not encrypt files.
 - **Watch on either screen.** Choose audio and subtitle tracks, resume recent videos, seek with progressive stick or double-tap controls, dim the other display, and continue in Android picture-in-picture.
 - **Start comfortably.** An eight-page tutorial covers language, theme, controller shortcuts, images, videos, gestures and folder linking. L1/R1 move through the pages; the other display shows a multilingual welcome.
 - **Add home widgets.** Icon Player (2×2) and Compact Player (3×1, or resize to 1×1 for a one-tap play/pause cover), plus one resizable photo widget for a single image/GIF or an album slideshow.
+
+With one screen, browsing and playback share the same display. Settings uses a list, and you can turn landscape view on or off in **Screens and backup**. Controls for the second display stay out of the way. The two-screen layout remains the main focus.
 
 ## Get started
 

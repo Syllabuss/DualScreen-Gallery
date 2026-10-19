@@ -4,6 +4,15 @@ import org.junit.Test
 import org.junit.Assert.*
 
 class AlbumGridGeometryTest {
+    @Test fun removingTheSelectedAlbumPrefersItsNextSurvivorThenItsPreviousOne() {
+        val before = listOf("a", "b", "c", "d")
+        assertEquals("c", albumAnchorAfterRemoval(before, listOf("a", "c", "d"), "b"))
+        assertEquals("d", albumAnchorAfterRemoval(before, listOf("a", "d"), "b"))
+        assertEquals("b", albumAnchorAfterRemoval(before, listOf("a", "b"), "d"))
+        assertEquals("b", albumAnchorAfterRemoval(before, before, "b"))
+        assertNull(albumAnchorAfterRemoval(before, emptyList(), "c"))
+    }
+
     @Test fun pixelGeometryMatchesMixedTilesAndPartiallyFilledBands() {
         val packed = albumGridLayout(albumGridCells(listOf(4, 2, 2, 2), 3), 100f, 10f)
         assertEquals(listOf(0f, 220f), packed.bandOffsets)

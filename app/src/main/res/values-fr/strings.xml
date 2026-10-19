@@ -1678,7 +1678,7 @@
     <string name="new_album_move">"Déplacer vers un nouvel album…"</string>
     <string name="new_album_copy">"Copier vers un nouvel album…"</string>
     <string name="album_hierarchy">"Parcourir les albums par dossier"</string>
-    <string name="album_hierarchy_description">Désactivé : les albums des sous-dossiers apparaissent avec les autres albums. Activé : navigation par dossiers. Les fichiers restent inchangés.</string>
+    <string name="album_hierarchy_description">Désactivé : tous les dossiers figurent dans une liste. Activé : ouvrez les sous-dossiers un à un en conservant la structure. Aucun fichier ni dossier n’est modifié.</string>
     <string name="controller_settings_hint">"Ouvrir les paramètres avec %1$s. Les raccourcis suivent la configuration de votre manette."</string>
     <string name="duplicate_experimental">Expérimental · Vérifiez les résultats avant de supprimer des fichiers.</string>
     <string name="tutorial_skip">Passer le tutoriel</string>
@@ -1815,4 +1815,7 @@
     <string name="tutorial_ready">Tout est prêt !</string>
     <string name="sound_section">Changement de section</string>
     <string name="widget_effect_coin">Pièce</string>
+    <string name="navbar_hide_single">Masquer la barre avec une seule section</string>
+    <string name="single_screen_landscape">Forcer le mode paysage</string>
+    <string name="show_empty_folders">Afficher les dossiers vides</string>
 </resources>

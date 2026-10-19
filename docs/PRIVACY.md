@@ -4,6 +4,7 @@ DS Gallery uses the folders you explicitly choose. Photos/videos and music have 
 
 | Access | Purpose | User control |
 | --- | --- | --- |
+| All-files access (Android 11+) | Make Download and shared-storage roots available in the folder picker | Continue asks for permission if missing; only folders you choose are indexed |
 | Android folder/document grant | Read selected roots; write only where the provider grants it | Choose/reconnect/remove roots in Library |
 | Notifications | Music playback and supported background operations | System notification settings |
 | Usage access | Recognize launcher/Home transitions for paired display lifecycle | Optional, managed in Android settings |
@@ -25,4 +26,4 @@ Optional FTP sharing exposes only the folder explicitly chosen for sharing on yo
 
 Image comparisons use a foreground service while their windows are open. They read only media already authorized for the library and retain scaled previews in memory; they do not export files. Removing access, hiding or locking the source album closes its comparisons. The preview pin is a temporary viewing control, unrelated to the album security PIN.
 
-All-files access, when explicitly granted, lets the Android folder picker expose shared-storage root and Download. It does not add those directories to the library: only roots the user links are indexed. Android/data and Android/obb remain outside this provider. Usage access is optional and used to recognize launcher transitions, not to upload app usage. See [authorized TV use and rights reports](TV_RIGHTS.md).
+The Add folder confirmation uses **Continue** to request all-files access if missing on Android 11 or later, then opens the folder picker at Internal storage. This makes the shared-storage root and Download selectable. It does not add those directories to the library: only roots the user links are indexed. Android/data and Android/obb remain outside this provider. Usage access is optional and used to recognize launcher transitions, not to upload app usage. See [authorized TV use and rights reports](TV_RIGHTS.md).

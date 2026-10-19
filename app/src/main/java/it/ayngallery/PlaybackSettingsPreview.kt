@@ -26,6 +26,7 @@ import kotlin.math.sin
 /** Read-only examples: no files, players, audio sessions or library mutations. */
 @Composable
 internal fun PlaybackSettingsPreview(category: String, prefs: GalleryPreferences) {
+    val app = androidx.compose.ui.platform.LocalContext.current.applicationContext as GalleryApp
     Crossfade(category, animationSpec = tween(if (prefs.reducedMotion) 0 else 220), label = "playback-example") { kind ->
         val colors = MaterialTheme.colorScheme
         Box(Modifier.fillMaxSize().background(colors.background).testTag("playback-example:$kind")) {
@@ -121,7 +122,7 @@ internal fun PlaybackSettingsPreview(category: String, prefs: GalleryPreferences
                     FavoriteHeart(false, "")
                     if (kind == "IMAGE") GalleryIcon(R.drawable.ph_arrow_clockwise, null)
                     Spacer(Modifier.weight(1f))
-                    if (kind == "VIDEO") GalleryIcon(R.drawable.ph_moon_stars, null)
+                    if (kind == "VIDEO" && app.session.screens.size > 1) GalleryIcon(R.drawable.ph_moon_stars, null)
                     if (kind == "IMAGE" && prefs.previewPinEnabled) GalleryIcon(R.drawable.ph_push_pin, null)
                     if (kind == "IMAGE" && prefs.comparisonEnabled) GalleryIcon(R.drawable.ph_browsers, null)
                     GalleryIcon(R.drawable.ph_dots_three, null)

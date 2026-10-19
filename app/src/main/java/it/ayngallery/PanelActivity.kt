@@ -259,6 +259,7 @@ abstract class PanelActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         session = (application as GalleryApp).session
         windowModel = ViewModelProvider(this)[GalleryWindowModel::class.java]
+        updateSingleScreenOrientation()
         screenKey = session.current(this)?.key.orEmpty()
         accepted = session.accept(this)
         if (!accepted) {
@@ -282,6 +283,22 @@ abstract class PanelActivity : ComponentActivity() {
         else if (intent.getBooleanExtra("open_music", false)) openWidgetMusic(intent)
         (application as GalleryApp).music.observe()
         session.record(localized(R.string.text_p_1_s_created_on_display_2_s_b6f016, "P%1\$s creato su display %2\$s", slot, session.current(this)?.id))
+    }
+
+    internal fun updateSingleScreenOrientation() {
+        val orientation = when {
+            DisplayPolicy.preferSingleScreenLandscape(session.screens, session.singleScreenLandscape) ->
+                android.content.pm.ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE
+            session.screens.size == 1 -> {
+                // Samsung can retain the forced rotation as its user-locked orientation.
+                // Restore the display's native axis rather than leaving that lock in place.
+                val screen = session.screens.single()
+                if (screen.height >= screen.width) android.content.pm.ActivityInfo.SCREEN_ORIENTATION_USER_PORTRAIT
+                else android.content.pm.ActivityInfo.SCREEN_ORIENTATION_USER_LANDSCAPE
+            }
+            else -> android.content.pm.ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED
+        }
+        if (requestedOrientation != orientation) requestedOrientation = orientation
     }
 
     private fun applyWindowTheme(preferences: GalleryPreferences) = applyGalleryWindowTheme(this, preferences)
@@ -472,8 +489,10 @@ abstract class PanelActivity : ComponentActivity() {
             app.cycleRecoveryTool(if (action == PadAction.TAB_NEXT) 1 else -1)
             return
         }
-        if ((windowModel.route.value.tab == "FTP" || windowModel.route.value.tab == "TRASH" && session.recoveryTab == "FTP") && action in setOf(PadAction.MENU, PadAction.SETTINGS)) return
-        if ((windowModel.route.value.tab == "FTP" || windowModel.route.value.tab == "TRASH" && session.recoveryTab == "FTP") && controllerModal == null && app.explorer.controller(action)) return
+        val networkBrowser = windowModel.route.value.tab == "FTP" ||
+            windowModel.route.value.tab == "TRASH" && session.recoveryTab == "FTP"
+        if (networkBrowser && action in setOf(PadAction.MENU, PadAction.SETTINGS)) return
+        if (networkBrowser && controllerModal == null && app.explorer.controller(action)) return
         val candidate = focusedMediaItemId ?: session.selectedMediaId
         if (action == PadAction.CONFIRM && session.pinnedPreviewId != null && candidate != session.pinnedPreviewId &&
             (windowModel.route.value.album != null || windowModel.route.value.tab in setOf("PHOTO", "VIDEO", "FAVORITE")) &&
@@ -481,7 +500,7 @@ abstract class PanelActivity : ComponentActivity() {
             session.pinActivationRequestId = candidate
             return
         }
-        if ((application as GalleryApp).video.handleResumeControllerAction(action)) return
+        if (app.video.handleResumeControllerAction(action)) return
         if (settingsInputAction?.invoke(action) == true) return
         if (session.settingsOwner == slot && windowModel.route.value.tab == "SETTINGS" && session.settingsSection in setOf("THEME", "THEME_CUSTOM", "INTERFACE", "PLAYBACK") && action in setOf(PadAction.TAB_PREVIOUS, PadAction.TAB_NEXT)) {
             if (session.settingsSection == "PLAYBACK") {

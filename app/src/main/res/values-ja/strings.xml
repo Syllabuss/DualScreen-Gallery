@@ -1678,7 +1678,7 @@
     <string name="new_album_move">"新しいアルバムに移動…"</string>
     <string name="new_album_copy">"新しいアルバムにコピー…"</string>
     <string name="album_hierarchy">"フォルダ別にアルバムを閲覧"</string>
-    <string name="album_hierarchy_description">オフ：サブフォルダーのアルバムを他のアルバムと一緒に表示します。オン：フォルダー階層をたどります。ファイルは変更しません。</string>
+    <string name="album_hierarchy_description">オフ：すべてのフォルダを一覧に表示します。オン：元の構成を保ちながらサブフォルダを順に開きます。ファイルやフォルダは変更されません。</string>
     <string name="controller_settings_hint">"%1$sで設定を開きます。ショートカットはコントローラーの設定に従います。"</string>
     <string name="duplicate_experimental">試験的な機能 · 削除する前に結果を確認してください。</string>
     <string name="tutorial_skip">チュートリアルをスキップ</string>
@@ -1815,4 +1815,7 @@
     <string name="tutorial_ready">準備ができました！</string>
     <string name="sound_section">セクション切り替え</string>
     <string name="widget_effect_coin">コイン</string>
+    <string name="navbar_hide_single">セクションが1つならナビゲーションバーを隠す</string>
+    <string name="single_screen_landscape">横向き表示に固定</string>
+    <string name="show_empty_folders">空のフォルダを表示</string>
 </resources>

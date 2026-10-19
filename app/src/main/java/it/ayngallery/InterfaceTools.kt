@@ -9,8 +9,9 @@ import java.util.Locale
 object InterfaceTools {
     val sections = listOf("PHOTO", "ALBUM", "VIDEO", "MUSIC", "FAVORITE")
     val tools = listOf("ZOOM", "VIEW", "TIMELINE", "SEARCH", "FILTER", "SWAP", "PLAY", "MUSIC_MODE")
+    const val SINGLE_NAVBAR = "NAVBAR:SINGLE"
     val defaultHidden: Set<String> = emptySet()
-    val validKeys = sections.flatMap { section -> tools.map { "$section:$it" } }.toSet()
+    val validKeys = sections.flatMap { section -> tools.map { "$section:$it" } }.toSet() + SINGLE_NAVBAR
     fun section(tab: String) = if (tab in sections) tab else "PHOTO"
     fun shown(prefs: GalleryPreferences, tab: String, tool: String) = "${section(tab)}:$tool" !in prefs.hiddenTools
     fun decodeTimeline(raw: String): Map<String, String> = JSONObject(raw).let { obj -> obj.keys().asSequence().associateWith { obj.getString(it) } }

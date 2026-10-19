@@ -6,7 +6,7 @@ L'ho iniziato per avere una galleria che seguisse il mio modo di organizzare i f
 
 Poi sono arrivati i player: volume della musica e dei video separato, scelta delle tracce audio e dei sottotitoli, finestre mobili e controlli sempre a portata di mano. L'interfaccia si può alleggerire togliendo i pulsanti che non servono, oppure tenere più completa e usare le shortcut del controller. L'idea è lasciare a chi la usa la scelta di quanto mostrare.
 
-Alla fine mi è piaciuto quello che ne è uscito e ho pensato di renderlo pubblico: magari può fare comodo anche a qualcun altro. **Non possiedo altri dispositivi a doppio schermo**, quindi non ho potuto verificarli. La modalità a schermo singolo resta sperimentale.
+Alla fine mi è piaciuto quello che ne è uscito e ho pensato di renderlo pubblico: magari può fare comodo anche a qualcun altro. È nata per me e per i **due schermi del mio AYN Thor**, ma funziona anche su **un telefono Android a schermo singolo**. Ho verificato la vista per telefono su un Samsung con Android 16; il doppio schermo resta il punto di partenza del progetto.
 
 ## Guarda come funziona
 
@@ -27,6 +27,10 @@ Nel [README principale](../README.md#see-it-in-use-y-swaps-the-screens) trovi le
 Serve Android 9 o successivo. Scarica un APK disponibile dalle [release](https://github.com/Syllabuss/DualScreen-Gallery/releases) e aggiorna senza disinstallare per conservare i dati. Consulta i [limiti aperti](KNOWN_ISSUES.md).
 
 Al primo avvio il tutorial ti accompagna nella scelta di lingua, tema e cartelle. Puoi aggiungere altre sorgenti da **Impostazioni → Info e permessi → Cartelle multimediali**.
+
+Su un solo schermo, libreria e player usano lo stesso display. Le impostazioni sono a lista e da **Schermi e backup** puoi attivare la vista orizzontale; spegnendola torni subito all’orientamento normale dello schermo. I controlli del secondo pannello, come la luna, vengono nascosti.
+
+Le cartelle vuote sono nascoste di default: puoi mostrarle da **Interfaccia → Mostra cartelle vuote**. Una cartella con media nelle sottocartelle resta visibile e può usarne una copertina. Quando aggiungi una cartella, **Prosegui** richiede il permesso Android se serve, poi ti lascia scegliere cosa collegare: autorizzare la memoria non aggiunge automaticamente tutti i suoi contenuti.
 
 Con i comandi predefiniti, **A** apre, **B** torna indietro, **X** apre le azioni, **Y** scambia gli schermi, **L3** apre PhotoFrame e **R3** cambia vista. I comandi sono rimappabili.
 

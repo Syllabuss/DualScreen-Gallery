@@ -22,6 +22,7 @@ import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.text.font.FontWeight
@@ -93,16 +94,20 @@ fun SettingsHubScreen(activity: PanelActivity, page: String, categoryFocus: Focu
     Column(Modifier.fillMaxSize()) {
         if (page == "SETTINGS_HUB") {
             val firstCategory = categoryFocus ?: remember { FocusRequester() }
-            LaunchedEffect(Unit) {
-                if (session.lastSettingsCategory != null) { androidx.compose.runtime.withFrameNanos { }; firstCategory.requestFocus() }
+            var restoreReady by remember { mutableStateOf(false) }
+            LaunchedEffect(restoreReady) {
+                if (restoreReady && session.lastSettingsCategory != null) firstCategory.requestFocus()
             }
-            val grid by app.preferences.settingsGrid.collectAsStateWithLifecycle()
+            val preferredGrid by app.preferences.settingsGrid.collectAsStateWithLifecycle()
+            val grid = preferredGrid && session.screens.size > 1
             BoxWithConstraints(Modifier.weight(1f).fillMaxWidth()) {
             val entries = settingsCategories.filter { it.key != "INFO" || !session.canSwap() }
+            val initialCategory = entries.indexOfFirst { it.key == session.lastSettingsCategory }.coerceAtLeast(0)
+            val hubState = rememberLazyGridState(initialFirstVisibleItemIndex = initialCategory)
             val rows = (entries.size + 2) / 3
             val cellHeight = ((maxHeight - 32.dp - 16.dp * (rows - 1)) / rows).coerceAtLeast(110.dp)
             androidx.compose.animation.Crossfade(grid, animationSpec = androidx.compose.animation.core.tween(if (prefs.reducedMotion) 0 else 220), label = "settings-view") { tileGrid ->
-            LazyVerticalGrid(GridCells.Fixed(if (tileGrid) 3 else 1), Modifier.fillMaxSize().testTag("settings-hub"), contentPadding = PaddingValues(16.dp),
+            LazyVerticalGrid(GridCells.Fixed(if (tileGrid) 3 else 1), Modifier.fillMaxSize().testTag("settings-hub"), state = hubState, contentPadding = PaddingValues(16.dp),
                 horizontalArrangement = Arrangement.spacedBy(16.dp), verticalArrangement = Arrangement.spacedBy(16.dp)) {
                 items(entries, key = { it.key }) { entry ->
                     OutlinedCard(onClick = {
@@ -111,6 +116,7 @@ fun SettingsHubScreen(activity: PanelActivity, page: String, categoryFocus: Focu
                         if (entry.key == "TRASH") { session.recoveryTab = "TRASH"; session.trashPreviewId = null }
                         vm.go(if (entry.key in setOf("THEME", "INTERFACE", "VIEWER", "PLAYBACK")) "SETTINGS" else if (entry.key == "TRASH") "TRASH" else "SETTINGS_${entry.key}")
                     }, modifier = Modifier.fillMaxWidth().clip(RoundedCornerShape(18.dp)).then(if (entry.key == (session.lastSettingsCategory ?: "INTERFACE")) Modifier.focusRequester(firstCategory) else Modifier).then(if (tileGrid) Modifier.height(cellHeight) else Modifier.heightIn(min = 80.dp))
+                        .onGloballyPositioned { if (it.isAttached && entry.key == session.lastSettingsCategory) restoreReady = true }
                         .onFocusChanged { if (it.isFocused) { focusedCategory = entry.key; session.settingsHubBottomFocused = entries.indexOf(entry) >= (if (tileGrid) (rows - 1) * 3 else entries.lastIndex) } else if (focusedCategory == entry.key) { focusedCategory = null; session.settingsHubBottomFocused = false } }
                         .testTag("settings-category:${entry.key}"), shape = RoundedCornerShape(18.dp),
                         border = androidx.compose.foundation.BorderStroke(if (focusedCategory == entry.key) 3.dp else 1.dp,
@@ -337,7 +343,7 @@ fun SettingsPreviewScreen(app: GalleryApp, data: CatalogSnapshot, draft: Gallery
                 }
                 else items(samples, key = { it.id }) { mediaSample(it) }
             }
-            Column(Modifier.fillMaxWidth().background(chrome)) {
+            if (navbarVisible(draft)) Column(Modifier.fillMaxWidth().background(chrome)) {
                 HorizontalDivider(color = MaterialTheme.colorScheme.primary.copy(alpha = .72f))
                 GalleryNavbar(app, draft, tab, navigate = {}, interactive = false)
             }

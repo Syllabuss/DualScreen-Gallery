@@ -1410,6 +1410,8 @@ class TouchRenderTest {
     }
     @Test fun settingsGridUsesThreeEqualCellsAndPersistsChoice() {
         start()
+        org.robolectric.shadows.ShadowDisplayManager.addDisplay("w800dp-h600dp")
+        app.session.refreshDisplays()
         compose.onNodeWithContentDescription("Impostazioni").performClick()
         if (!app.preferences.settingsGrid.value) compose.onNodeWithTag("settings-view-toggle").performClick()
         compose.waitForIdle()

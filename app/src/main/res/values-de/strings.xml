@@ -1678,7 +1678,7 @@
     <string name="new_album_move">"In ein neues Album verschieben…"</string>
     <string name="new_album_copy">"In ein neues Album kopieren…"</string>
     <string name="album_hierarchy">"Alben nach Ordnern durchsuchen"</string>
-    <string name="album_hierarchy_description">Aus: Alben aus Unterordnern erscheinen neben anderen Alben. Ein: Ordner und Unterordner durchsuchen. Dateien bleiben unverändert.</string>
+    <string name="album_hierarchy_description">Aus: Alle Ordner erscheinen in einer Liste. Ein: Unterordner werden einzeln geöffnet, die Struktur bleibt erhalten. Dateien und Ordner werden nicht verändert.</string>
     <string name="controller_settings_hint">"Einstellungen mit %1$s öffnen. Tastenkürzel folgen deiner Controllerkonfiguration."</string>
     <string name="duplicate_experimental">Experimentell · Ergebnisse vor dem Löschen prüfen.</string>
     <string name="tutorial_skip">Einführung überspringen</string>
@@ -1815,4 +1815,7 @@
     <string name="tutorial_ready">Alles bereit!</string>
     <string name="sound_section">Bereich wechseln</string>
     <string name="widget_effect_coin">Münze</string>
+    <string name="navbar_hide_single">Navigationsleiste bei nur einem Bereich ausblenden</string>
+    <string name="single_screen_landscape">Querformat erzwingen</string>
+    <string name="show_empty_folders">Leere Ordner anzeigen</string>
 </resources>

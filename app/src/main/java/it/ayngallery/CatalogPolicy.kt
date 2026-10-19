@@ -113,12 +113,12 @@ data class CatalogSnapshot(
     }
     fun childAlbums(parent: String, nested: Boolean = false): List<AlbumEntity> = if (nested) browsableChildren[parent].orEmpty() else expandEmptyFolders(browsableChildren[parent].orEmpty())
     fun topAlbums(prefs: GalleryPreferences? = null): List<AlbumEntity> {
-        val visible = browsableAlbums
+        val visible = browsableAlbums.filter { prefs?.showEmptyFolders == true || it.id in albumsWithVisibleMedia }
         val roots = rootAlbumIds
         val ids = visible.map { it.id }.toSet()
         val start = visible.filter { album -> album.id in roots ||
             album.parentId in roots || album.parentId == null || album.parentId !in ids }
-        return if (prefs?.nestedAlbums == true) start.filter { it.parentId !in ids } else visible.filter { albumHasMedia(it.id) || browsableChildren[it.id].orEmpty().isEmpty() }
+        return if (prefs?.nestedAlbums == true) start.filter { it.parentId !in ids } else visible.filter { it.id !in roots || albumHasMedia(it.id) || browsableChildren[it.id].orEmpty().isEmpty() }
     }
     val populatedSubfolderCounts by lazy {
         val counts = mutableMapOf<String, Int>()
@@ -150,11 +150,27 @@ data class CatalogSnapshot(
                 .thenBy { android.net.Uri.parse(it.treeUri).authority != android.net.Uri.parse(item.uri).authority }.thenBy { it.singleDocument })
             .firstOrNull { it.enabled && it.reachable && (artwork || roleAllows(it.role, item.kind)) }
     }
+    private val descendantCovers by lazy {
+        val result = mutableMapOf<String, MediaEntity>()
+        val order = compareBy<MediaEntity> { it.modified }.thenBy { it.id }
+        for (item in visibleMedia) {
+            if (item.kind !in setOf("IMAGE", "GIF", "VIDEO") || !usable(item)) continue
+            var parent = albumsById[item.albumId]?.parentId
+            val seen = mutableSetOf(item.albumId)
+            while (parent != null && seen.add(parent)) {
+                val current = result[parent]
+                if (current == null || order.compare(item, current) > 0) result[parent] = item
+                parent = albumsById[parent]?.parentId
+            }
+        }
+        result
+    }
     fun cover(album: AlbumEntity): MediaEntity? {
         val manual = album.coverMediaId?.let(byId::get)?.takeIf(::artworkAllowed)
         return manual ?: visibleByAlbum[album.id].orEmpty()
             .filter { it.kind in setOf("IMAGE", "GIF", "VIDEO") && usable(it) }
             .maxWithOrNull(compareBy<MediaEntity> { it.modified }.thenBy { it.id })
+            ?: descendantCovers[album.id]
     }
     fun collectionCover(collection: CollectionEntity): MediaEntity? = collection.coverMediaId?.let(byId::get)?.takeIf(::artworkAllowed)
         ?: collectionItems.asSequence().filter { it.collectionId == collection.id }.mapNotNull { byId[it.mediaId]?.takeIf(::usable) }.firstOrNull()

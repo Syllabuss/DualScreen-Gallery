@@ -1678,7 +1678,7 @@
     <string name="new_album_move">"Переместить в новый альбом…"</string>
     <string name="new_album_copy">"Скопировать в новый альбом…"</string>
     <string name="album_hierarchy">"Просматривать альбомы по папкам"</string>
-    <string name="album_hierarchy_description">Выключено: альбомы из подпапок отображаются рядом с другими альбомами. Включено: навигация по папкам и подпапкам. Файлы не изменяются.</string>
+    <string name="album_hierarchy_description">Выключено: все папки показаны одним списком. Включено: подпапки открываются по очереди с сохранением структуры. Файлы и папки не изменяются.</string>
     <string name="controller_settings_hint">"Открыть настройки: %1$s. Сочетания соответствуют настройкам контроллера."</string>
     <string name="duplicate_experimental">Экспериментальная функция · Проверьте результаты перед удалением файлов.</string>
     <string name="tutorial_skip">Пропустить обучение</string>
@@ -1815,4 +1815,7 @@
     <string name="tutorial_ready">Всё готово!</string>
     <string name="sound_section">Смена раздела</string>
     <string name="widget_effect_coin">Монета</string>
+    <string name="navbar_hide_single">Скрывать панель с единственным разделом</string>
+    <string name="single_screen_landscape">Принудительная альбомная ориентация</string>
+    <string name="show_empty_folders">Показывать пустые папки</string>
 </resources>

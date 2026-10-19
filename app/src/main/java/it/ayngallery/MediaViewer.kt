@@ -87,7 +87,8 @@ fun MediaViewer(activity: PanelActivity, item: MediaEntity?, data: CatalogSnapsh
 
                 onActions: (MediaEntity) -> Unit, albumCover: Boolean = false, overlayBusy: Boolean = false, onControlsVisibility: (Boolean) -> Unit = {}, lockedCoverAlbumId: String? = null,
 
-                onChooseFolder: (SourceRole) -> Unit = { role -> activity.chooseSource(role) }) {
+                onChooseFolder: (SourceRole) -> Unit = { role -> activity.chooseWholeStorage(role) }) {
+
 
     var zoom by rememberSaveable(item?.id) { mutableFloatStateOf(1f) }
 
@@ -339,7 +340,7 @@ fun MediaViewer(activity: PanelActivity, item: MediaEntity?, data: CatalogSnapsh
 
                 }
 
-                if (playingVideo) GalleryIconButton(R.drawable.ph_moon_stars, localized(R.string.video_dim_navigation, "Oscura lo schermo di navigazione"), Modifier.testTag("video-dim-toggle")) { app.video.dimNavigation = !app.video.dimNavigation }
+                if (playingVideo && app.session.canSwap()) GalleryIconButton(R.drawable.ph_moon_stars, localized(R.string.video_dim_navigation, "Oscura lo schermo di navigazione"), Modifier.testTag("video-dim-toggle")) { app.video.dimNavigation = !app.video.dimNavigation }
 
 
                 GalleryIconButton(R.drawable.ph_dots_three, localized(R.string.text_media_options_8aef8c, "Opzioni del media")) { onActions(item) }
@@ -386,7 +387,7 @@ fun MediaViewer(activity: PanelActivity, item: MediaEntity?, data: CatalogSnapsh
 
                         .background(controlBackground, GalleryShape)) { rotationTurns++ }
 
-                if (item.kind == "VIDEO" && !item.convertedGif || imageOverlay && prefs.imagePreviewName) Text(item.name, Modifier.padding(start = 6.dp)
+                if (item.kind == "VIDEO" && !item.convertedGif || (imageOverlay || item.convertedGif) && prefs.imagePreviewName) Text(item.name, Modifier.padding(start = 6.dp)
 
                     .background(Color.Black.copy(alpha = .65f), GalleryShape).padding(horizontal = 12.dp, vertical = 8.dp)
 
@@ -589,28 +590,7 @@ fun MediaSurface(activity: PanelActivity, item: MediaEntity?, data: CatalogSnaps
 
     val controlledGif = (prefs.previewNearest || prefs.gifFrameSelector || prefs.gifFrameCount && prefs.gifFrameCounter) && item.kind == "GIF"
 
-    val gifFrames by produceState<GifPlayback?>(null, item.id, item.modified, item.size, usable, controlledGif) {
-
-        if (usable && controlledGif) {
-
-            val opened = GifPlayback.open(app, item, data)
-
-            val bookmark = "${item.id}/${item.modified}/${item.size}"
-            try {
-                app.session.pausedGifFrames[bookmark]?.takeIf { opened != null && it in 0 until opened.count }?.let { frame -> opened!!.select(frame); opened.show(frame) }
-                value = opened
-                awaitDispose {
-                    if (opened?.paused == true) {
-                        app.session.pausedGifFrames[bookmark] = opened.selected ?: opened.index
-                        while (app.session.pausedGifFrames.size > 64) app.session.pausedGifFrames.remove(app.session.pausedGifFrames.keys.first())
-                    } else app.session.pausedGifFrames.remove(bookmark)
-                    opened?.close()
-                }
-            } finally { value = null; opened?.close() }
-
-        }
-
-    }
+    val gifFrames by rememberGifPlayback(app, item, data, usable && controlledGif)
 
     LaunchedEffect(gifFrames, started, paneActive, prefs.gameMode, gifFrames?.paused, gifFrames?.requestRevision) {
 
@@ -762,7 +742,7 @@ fun MediaSurface(activity: PanelActivity, item: MediaEntity?, data: CatalogSnaps
 
                     val navigate by rememberUpdatedState<(Int) -> Unit>({ direction ->
 
-                        if (started && paneActive && previewNeighbor(item.id, direction, app.video.context, app.catalog.snapshot.value) != null) {
+                        if (started && paneActive && previewNeighbor(item.id, direction, if (item.convertedGif) app.session.mediaContext else app.video.context, app.catalog.snapshot.value) != null) {
 
                             activate(); activity.navigateMedia?.invoke(direction)
 
@@ -774,9 +754,9 @@ fun MediaSurface(activity: PanelActivity, item: MediaEntity?, data: CatalogSnaps
 
                     val galleryPlayer = remember(delegate) { GalleryVideoNavigation(delegate, { navigate(it) }, app.video::showSeek) }
 
-                    galleryPlayer.previousAvailable = previewNeighbor(item.id, -1, app.video.context, data) != null
+                    galleryPlayer.previousAvailable = previewNeighbor(item.id, -1, if (item.convertedGif) app.session.mediaContext else app.video.context, data) != null
 
-                    galleryPlayer.nextAvailable = previewNeighbor(item.id, 1, app.video.context, data) != null
+                    galleryPlayer.nextAvailable = previewNeighbor(item.id, 1, if (item.convertedGif) app.session.mediaContext else app.video.context, data) != null
 
                     AndroidView(factory = { context -> (android.view.LayoutInflater.from(context).inflate(R.layout.gallery_preview_video, null) as GalleryVideoView).apply {
 
@@ -801,6 +781,7 @@ fun MediaSurface(activity: PanelActivity, item: MediaEntity?, data: CatalogSnaps
                             }
 
                             playerView.navigate = { navigate(it) }
+                            playerView.onPreviewTap = if (item.convertedGif) ({ onTap?.invoke(.5f) }) else null
 
                             playerView.onDoubleTapSeek = if (!item.convertedGif) app.video::doubleTapSeek else null
 
@@ -824,9 +805,7 @@ fun MediaSurface(activity: PanelActivity, item: MediaEntity?, data: CatalogSnaps
 
                             playerView.clipChildren = false
 
-                        }, onRelease = { it.player = null }, modifier = Modifier.fillMaxSize()
-
-                            .then(if (item.convertedGif) Modifier.pointerInput(item.id) { detectTapGestures { onTap?.invoke(.5f) } } else Modifier))
+                        }, onRelease = { it.player = null }, modifier = Modifier.fillMaxSize())
 
                     var flowVisible by remember(delegate) { mutableStateOf(false) }
                     val flowRevision = app.video.flowFeedbackRevision

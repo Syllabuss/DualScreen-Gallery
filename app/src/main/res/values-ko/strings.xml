@@ -1678,7 +1678,7 @@
     <string name="new_album_move">"새 앨범으로 이동…"</string>
     <string name="new_album_copy">"새 앨범으로 복사…"</string>
     <string name="album_hierarchy">"폴더별로 앨범 탐색"</string>
-    <string name="album_hierarchy_description">끄면 하위 폴더의 앨범도 다른 앨범과 함께 표시합니다. 켜면 폴더와 하위 폴더를 탐색합니다. 파일은 변경되지 않습니다.</string>
+    <string name="album_hierarchy_description">끄면 모든 폴더를 한 목록에 표시합니다. 켜면 원래 구조를 유지하며 하위 폴더를 하나씩 엽니다. 파일과 폴더는 변경되지 않습니다.</string>
     <string name="controller_settings_hint">"%1$s 버튼으로 설정을 엽니다. 단축키는 컨트롤러 설정을 따릅니다."</string>
     <string name="duplicate_experimental">실험적 기능 · 파일을 삭제하기 전에 결과를 확인하세요.</string>
     <string name="tutorial_skip">튜토리얼 건너뛰기</string>
@@ -1815,4 +1815,7 @@
     <string name="tutorial_ready">모두 준비됐어요!</string>
     <string name="sound_section">섹션 전환</string>
     <string name="widget_effect_coin">동전</string>
+    <string name="navbar_hide_single">섹션이 하나면 탐색 모음 숨기기</string>
+    <string name="single_screen_landscape">가로 방향으로 고정</string>
+    <string name="show_empty_folders">빈 폴더 표시</string>
 </resources>

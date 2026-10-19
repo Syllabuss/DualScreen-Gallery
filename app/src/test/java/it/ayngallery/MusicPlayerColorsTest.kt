@@ -64,7 +64,7 @@ class MusicPlayerColorsTest {
         assertEquals(value, PreferenceStore(RuntimeEnvironment.getApplication()).state.value)
         val encoded = PreferencesTransfer.encode(value)
         assertEquals(value, PreferencesTransfer.decode(encoded))
-        val legacy = JSONObject(encoded).put("version", 28).apply {
+        val legacy = JSONObject(encoded).put("version", 28).apply { getJSONObject("preferences").remove("showEmptyFolders") }.apply {
             getJSONObject("preferences").remove("musicDuringSleep"); getJSONObject("preferences").remove("videoDuringSleep")
             listOf("tvEnabled", "tvInNavbar", "tvInMediaFavorites").forEach { getJSONObject("preferences").remove(it) }
             getJSONObject("preferences").apply { remove("showUpperStatusBar"); remove("confirmVideoReplacement"); remove("musicColorMode"); remove("musicBackgroundColor"); remove("musicBarsColor") }

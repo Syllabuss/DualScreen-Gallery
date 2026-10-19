@@ -12,6 +12,29 @@ import java.lang.reflect.Proxy
 @RunWith(RobolectricTestRunner::class)
 @Config(sdk = [28], application = Application::class)
 class GalleryVideoNavigationTest {
+    @Test fun convertedGifWithoutVideoControlsStillReceivesSwipesAndPreviewTaps() {
+        val context = android.view.ContextThemeWrapper(org.robolectric.RuntimeEnvironment.getApplication(), R.style.AppTheme)
+        val view = android.view.LayoutInflater.from(context).inflate(R.layout.gallery_preview_video, null) as GalleryVideoView
+        view.layout(0, 0, 1000, 600)
+        view.useController = false
+        val directions = mutableListOf<Int>()
+        var taps = 0
+        view.navigate = directions::add
+        view.onPreviewTap = { taps++ }
+        fun event(action: Int, x: Float, time: Long) {
+            val event = android.view.MotionEvent.obtain(1000, time, action, x, 500f, 0)
+            try { assertTrue(view.dispatchTouchEvent(event)) } finally { event.recycle() }
+        }
+        event(android.view.MotionEvent.ACTION_DOWN, 800f, 1000)
+        event(android.view.MotionEvent.ACTION_MOVE, 200f, 1100)
+        event(android.view.MotionEvent.ACTION_UP, 200f, 1200)
+        assertEquals(listOf(1), directions)
+        assertEquals(0, taps)
+        event(android.view.MotionEvent.ACTION_DOWN, 400f, 2000)
+        event(android.view.MotionEvent.ACTION_UP, 400f, 2050)
+        assertEquals(1, taps)
+    }
+
     @Test fun shuffleVisitsEveryVideoBeforeRepeatingAndNeverRepeatsAdjacentItems() {
         val ids = listOf("a", "b", "c", "d")
         val played = mutableSetOf<String>()

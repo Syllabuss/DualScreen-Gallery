@@ -122,6 +122,22 @@ class GalleryStartupTest {
         override fun moveTaskToBack(nonRoot: Boolean): Boolean { moved = true; return true }
     }
     @Config(shadows = [HomeTaskShadow::class])
+    @Test fun singleScreenFolderPickerDoesNotMoveItsOwnTaskToTheBackground() {
+        val app = RuntimeEnvironment.getApplication() as GalleryApp
+        shadowOf(app).declareComponentUnbindable(android.content.ComponentName(app, MusicService::class.java))
+        val launcher = Robolectric.buildActivity(LauncherActivity::class.java).create().get()
+        val controller = Robolectric.buildActivity(MainPanelActivity::class.java, shadowOf(launcher).nextStartedActivity).setup().visible()
+        try {
+            controller.get().chooseSource(SourceRole.VISUAL)
+            assertEquals(Intent.ACTION_OPEN_DOCUMENT_TREE, shadowOf(controller.get()).nextStartedActivity.action)
+            controller.pause().stop()
+            shadowOf(Looper.getMainLooper()).idleFor(java.time.Duration.ofSeconds(1))
+            assertFalse(org.robolectric.shadow.api.Shadow.extract<HomeTaskShadow>(controller.get()).moved)
+            controller.start().resume().visible()
+            assertEquals(SourceRole.VISUAL.name, controller.get().windowModel.pendingSourceRole)
+        } finally { controller.destroy() }
+    }
+    @Config(shadows = [HomeTaskShadow::class])
     @Test fun sleepingDuringTutorialDoesNotMoveTheGalleryBehindTheLauncher() {
         val app = RuntimeEnvironment.getApplication() as GalleryApp
         shadowOf(app).declareComponentUnbindable(android.content.ComponentName(app, MusicService::class.java))

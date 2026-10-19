@@ -17,6 +17,16 @@ import java.io.ByteArrayInputStream
 @RunWith(RobolectricTestRunner::class)
 @Config(sdk = [28], application = Application::class, qualifiers = "it")
 class PreferencesTransferTest {
+    @Test fun singleSectionNavbarChoiceSurvivesBackupAndDoesNotHideMultipleSections() {
+        val chosen = GalleryPreferences(showEmptyFolders = true, disabledCategories = NavbarOrder.DEFAULT.filterNot { it == "PHOTO" }.toSet(),
+            hiddenTools = setOf(InterfaceTools.SINGLE_NAVBAR))
+        val restored = PreferencesTransfer.decode(PreferencesTransfer.encode(chosen))
+        assertEquals(chosen, restored)
+        assertFalse(navbarVisible(restored))
+        assertTrue(navbarVisible(restored.copy(disabledCategories = restored.disabledCategories - "MUSIC")))
+        assertTrue(navbarVisible(restored.copy(hiddenTools = emptySet())))
+    }
+
     @Test fun replacementConfirmationIsEnabledByDefaultPersistentAndPortable() = runBlocking {
         val store = PreferenceStore(RuntimeEnvironment.getApplication())
         assertTrue(store.state.value.confirmVideoReplacement)
@@ -331,4 +341,4 @@ class PreferencesTransferTest {
 
 private fun JSONObject.legacyVersion(value: Int): JSONObject = withoutTv().apply { put("version", value); getJSONObject("preferences").apply { remove("showUpperStatusBar"); remove("confirmVideoReplacement"); remove("musicColorMode"); remove("musicBackgroundColor"); remove("musicBarsColor"); remove("previewNearest"); remove("imageBackdrop"); remove("imageBackdropColor"); remove("imageBackdropEnd"); remove("imageBackdropOpacity"); remove("actionMenusBelow"); remove("albumCoverLimit"); remove("allAnimatedAlbumCovers") } }
 
-private fun JSONObject.withoutTv(): JSONObject = apply { getJSONObject("preferences").apply { remove("tvEnabled"); remove("tvInNavbar"); remove("tvInMediaFavorites"); remove("musicDuringSleep"); remove("videoDuringSleep") } }
+private fun JSONObject.withoutTv(): JSONObject = apply { getJSONObject("preferences").apply { remove("showEmptyFolders"); remove("tvEnabled"); remove("tvInNavbar"); remove("tvInMediaFavorites"); remove("musicDuringSleep"); remove("videoDuringSleep") } }

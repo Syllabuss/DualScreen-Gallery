@@ -186,7 +186,7 @@ class TvIntegrationTest {
         assertFalse(NavbarOrder.valid(order + "TV" + "TV"))
         assertEquals(listOf("MUSIC", "TV", "VIDEO", "FAVORITE", "ALBUM", "PHOTO"), NavbarOrder.withTv(order))
         assertEquals(listOf("TV") + order, NavbarOrder.withTv(listOf("TV") + order))
-        val legacy = JSONObject(PreferencesTransfer.encode(roundtrip)).put("version", 30).apply { getJSONObject("preferences").apply { remove("musicDuringSleep"); remove("videoDuringSleep") } }
+        val legacy = JSONObject(PreferencesTransfer.encode(roundtrip)).put("version", 30).apply { getJSONObject("preferences").remove("showEmptyFolders") }.apply { getJSONObject("preferences").apply { remove("musicDuringSleep"); remove("videoDuringSleep") } }
         legacy.getJSONObject("preferences").apply { remove("tvEnabled"); remove("tvInNavbar"); remove("tvInMediaFavorites") }
         assertFalse(PreferencesTransfer.decode(legacy.toString()).tvEnabled)
     }

@@ -49,6 +49,8 @@ internal val MainTabs = listOf(MainTab("PHOTO", { localized(R.string.text_photos
     MainTab("FAVORITE", { localized(R.string.text_favorites_d1d566, "Preferiti") }, R.drawable.ph_heart), MainTab("TV", { localized(R.string.tv_title, "TV online") }, R.drawable.ph_television_simple))
 internal fun visibleNavbarTabs(prefs: GalleryPreferences): List<MainTab> =
     NavbarOrder.editable(prefs).filterNot { it in prefs.disabledCategories }.map { key -> MainTabs.first { it.key == key } }
+internal fun navbarVisible(prefs: GalleryPreferences): Boolean =
+    visibleNavbarTabs(prefs).size > 1 || InterfaceTools.SINGLE_NAVBAR !in prefs.hiddenTools
 internal fun preferredGalleryTab(disabled: Set<String>, preferred: String = "ALBUM"): String = preferred.takeIf { it in NavbarOrder.DEFAULT && it !in disabled } ?: listOf("ALBUM", "PHOTO", "VIDEO", "MUSIC", "FAVORITE").first { it !in disabled }
 internal fun visualPreviewSelection(data: CatalogSnapshot, selectedId: String?, fallback: MediaEntity? = null): MediaEntity? =
     selectedId?.let(data.byId::get)?.takeIf { it.kind in setOf("IMAGE", "GIF", "VIDEO") && data.visible(it) }
@@ -66,9 +68,37 @@ internal fun sessionVisualPreview(data: CatalogSnapshot, visualId: String?, sele
     val id = visualId.takeIf { selectionActive } ?: selectedId.takeIf { category == null && selectionActive }
     return visualPreviewSelection(data, id, fallback.takeIf { category != null })
 }
-private data class GalleryScene(val route: GalleryRoute, val viewer: String?, val viewerVisible: Boolean,
-    val comparisonVisible: Boolean, val items: List<MediaEntity>, val loading: Boolean, val albumCover: Boolean = false, val lockedCoverAlbumId: String? = null, val fullPlayer: Boolean = false, val previewSection: String? = null, val descending: Boolean = true, val orderRevision: Long = 0, val previewFocusRevision: Int = 0, val videoSurface: Boolean = false, val frameVisible: Boolean = false, val settingsPanel: String? = null, val gridDirection: androidx.compose.ui.unit.IntOffset = androidx.compose.ui.unit.IntOffset.Zero, val tvPreview: Boolean = false) {
-    val key get() = if (tvPreview) "TV_PREVIEW" else if (settingsPanel != null) "SETTINGS_PREVIEW/$settingsPanel" else if (frameVisible) "FRAME" else if (videoSurface) "VIDEO/$viewer" else if (comparisonVisible) "COMPARE" else if (fullPlayer) "PLAYER" else if (viewerVisible) "VIEWER/$viewer" + if (albumCover) "/album" else "/media" else "${route.tab}/${route.album}/${route.collection}/${route.musicView}/${route.musicGroup}/${route.kind}"
+private data class GalleryScene(
+    val route: GalleryRoute,
+    val viewer: String?,
+    val viewerVisible: Boolean,
+    val comparisonVisible: Boolean,
+    val items: List<MediaEntity>,
+    val loading: Boolean,
+    val albumCover: Boolean = false,
+    val lockedCoverAlbumId: String? = null,
+    val fullPlayer: Boolean = false,
+    val previewSection: String? = null,
+    val descending: Boolean = true,
+    val orderRevision: Long = 0,
+    val previewFocusRevision: Int = 0,
+    val videoSurface: Boolean = false,
+    val frameVisible: Boolean = false,
+    val settingsPanel: String? = null,
+    val gridDirection: androidx.compose.ui.unit.IntOffset = androidx.compose.ui.unit.IntOffset.Zero,
+    val tvPreview: Boolean = false,
+) {
+    val key: String
+        get() = when {
+            tvPreview -> "TV_PREVIEW"
+            settingsPanel != null -> "SETTINGS_PREVIEW/$settingsPanel"
+            frameVisible -> "FRAME"
+            videoSurface -> "VIDEO/$viewer"
+            comparisonVisible -> "COMPARE"
+            fullPlayer -> "PLAYER"
+            viewerVisible -> "VIEWER/$viewer" + if (albumCover) "/album" else "/media"
+            else -> "${route.tab}/${route.album}/${route.collection}/${route.musicView}/${route.musicGroup}/${route.kind}"
+        }
 }
 
 @OptIn(ExperimentalAnimationApi::class)
@@ -107,7 +137,7 @@ fun GalleryHome(activity: PanelActivity) {
     val prefs by app.preferences.state.collectAsStateWithLifecycle()
     val albumRootContent = route.album == null && (route.tab == "ALBUM" || route.tab == "VIDEO" && videoFolders)
     val tvFavorites = if (prefs.tvEnabled && prefs.tvInMediaFavorites && route.tab == "FAVORITE") app.tv.store.channels.filter { it.favorite } else emptyList()
-    val hasGridContent = remember(data, albumRootContent, prefs.nestedAlbums, query, items, tvFavorites) { if (albumRootContent) data.topAlbums(prefs).any {
+    val hasGridContent = remember(data, albumRootContent, prefs.nestedAlbums, prefs.showEmptyFolders, query, items, tvFavorites) { if (albumRootContent) data.topAlbums(prefs).any {
         query.isBlank() || it.name.contains(query.trim(), true) || it.path.contains(query.trim(), true)
     } else items.isNotEmpty() || tvFavorites.isNotEmpty() }
     val showFolderShortcut = hasGridContent && (route.tab != "VIDEO" || data.visibleMedia.any { it.kind == "VIDEO" })
@@ -314,30 +344,43 @@ fun GalleryHome(activity: PanelActivity) {
     DisposableEffect(activity, focusManager, items, viewer, route.tab, data, showViewer, showComparison, settingsActive, settingsPreview) {
         activity.enterPadMode = { inputMode.requestInputMode(InputMode.Keyboard) }
         activity.clearPadFocus = { focusManager.clearFocus(force = true) }
-        activity.moveFocus = { action ->
+        activity.moveFocus = moveFocus@ { action ->
             if (action == PadAction.DOWN && route.tab == "SETTINGS_HUB" && app.session.canSwap() && app.session.settingsHubBottomFocused) {
                 app.session.settingsInfoFocused = true
                 focusManager.clearFocus(force = true)
-            } else {
+                return@moveFocus
+            }
             if (frameModel.route.value.tab == "FRAME") frameModel.wakeFrame()
             app.video.wakeNavigation()
-            val index = items.indexOfFirst { it.id == app.session.selectedMediaId }
-            val step = if (vm.mediaGrid(route.tab).value) vm.mediaColumns(route.tab).value else 1
+            val direction = when (action) {
+                PadAction.UP -> FocusDirection.Up
+                PadAction.DOWN -> FocusDirection.Down
+                PadAction.LEFT -> FocusDirection.Left
+                else -> FocusDirection.Right
+            }
             if (settingsActive || settingsPreview) {
-                val moved = focusManager.moveFocus(when (action) {
-                    PadAction.UP -> FocusDirection.Up; PadAction.DOWN -> FocusDirection.Down; PadAction.LEFT -> FocusDirection.Left; else -> FocusDirection.Right
-                })
+                val moved = focusManager.moveFocus(direction)
                 if (!moved && action == PadAction.DOWN) activity.settingsScrollEnd?.invoke()
                 if (moved) app.sounds.play("settings-navigation")
-            } else if (activity.mediaGridFocus?.invoke(action) == true) {
-                // The library owns ordered list navigation and entry from the sort toolbar.
-            } else if (route.tab == "MUSIC" && (route.musicView == "TRACKS" || route.musicGroup != null) && !activity.settingsHeaderHasFocus && action == PadAction.DOWN && index >= 0 && index + step >= items.size) {
-                app.session.selectMedia(items.last().id)
-            } else {
-            val moved = if (activity.albumGridFocus?.invoke(action) == true) true else focusManager.moveFocus(when (action) {
-            PadAction.UP -> FocusDirection.Up; PadAction.DOWN -> FocusDirection.Down; PadAction.LEFT -> FocusDirection.Left; else -> FocusDirection.Right
-        }); if (!moved && action == PadAction.DOWN && route.tab == "SETTINGS_HUB" && app.session.canSwap()) { app.session.settingsInfoFocused = true; focusManager.clearFocus(force = true) }; if (moved && app.session.settingsOwner == activity.slot) app.sounds.play("settings-navigation") } }
+                return@moveFocus
             }
+            // The library owns ordered list navigation and entry from the sort toolbar.
+            if (activity.mediaGridFocus?.invoke(action) == true) return@moveFocus
+
+            val index = items.indexOfFirst { it.id == app.session.selectedMediaId }
+            val step = if (vm.mediaGrid(route.tab).value) vm.mediaColumns(route.tab).value else 1
+            if (route.tab == "MUSIC" && (route.musicView == "TRACKS" || route.musicGroup != null) &&
+                !activity.settingsHeaderHasFocus && action == PadAction.DOWN && index >= 0 && index + step >= items.size) {
+                app.session.selectMedia(items.last().id)
+                return@moveFocus
+            }
+            val moved = activity.albumGridFocus?.invoke(action) == true || focusManager.moveFocus(direction)
+            if (!moved && action == PadAction.DOWN && route.tab == "SETTINGS_HUB" && app.session.canSwap()) {
+                app.session.settingsInfoFocused = true
+                focusManager.clearFocus(force = true)
+            }
+            if (moved && app.session.settingsOwner == activity.slot) app.sounds.play("settings-navigation")
+        }
         activity.navigateMedia = { delta ->
             if (showComparison) app.comparison.update(app.comparison.state.value.navigate(app.session.selectedMediaId,
                 app.session.mediaContext.filter { data.byId[it]?.let(data::visible) == true }, delta))
@@ -350,7 +393,7 @@ fun GalleryHome(activity: PanelActivity) {
                     val currentId = app.video.mediaId?.takeIf { ongoingVideo } ?: app.session.selectedMediaId?.takeIf { id -> context.any { it.id == id } } ?: vm.route.value.viewer ?: viewer
                     val index = context.indexOfFirst { it.id == currentId }.coerceAtLeast(0)
                     val next = context[Math.floorMod(index + delta, context.size)]
-                    val continueVideo = app.video.surface == "viewer" && app.video.mediaId == currentId && app.video.player != null
+                    val continueVideo = ongoingVideo && app.video.mediaId == currentId
                     val videoSlot = app.video.owner
                     val muted = app.video.player?.volume == 0f
                     app.session.selectMedia(next.id)
@@ -649,10 +692,11 @@ fun GalleryHome(activity: PanelActivity) {
                     FormatFilter(vm, route)
                 }
                 if (route.tab == "SETTINGS_HUB") {
-                    val settingsGrid by app.preferences.settingsGrid.collectAsStateWithLifecycle()
+                    val preferredSettingsGrid by app.preferences.settingsGrid.collectAsStateWithLifecycle()
+                    val settingsGrid = preferredSettingsGrid && app.session.screens.size > 1
                     GalleryIconButton(if (settingsGrid) R.drawable.ph_rows else R.drawable.ph_grid_nine,
                         localized(if (settingsGrid) R.string.settings_rows_title else R.string.settings_grid_title, "Vista"),
-                        Modifier.testTag("settings-view-toggle").focusProperties { down = settingsCategoryFocus }) { app.preferences.settingsGrid(!settingsGrid) }
+                        Modifier.testTag("settings-view-toggle").focusProperties { down = settingsCategoryFocus }, enabled = app.session.screens.size > 1) { app.preferences.settingsGrid(!settingsGrid) }
                     GalleryIconButton(R.drawable.ph_trash, localized(R.string.text_trash_9a3a36, "Cestino"),
                         Modifier.testTag("settings-trash-shortcut").focusProperties { down = settingsCategoryFocus }) {
                         app.session.settingsSection = "TRASH"; app.session.recoveryTab = "TRASH"; app.session.trashPreviewId = null; vm.go("TRASH")
@@ -803,7 +847,7 @@ fun GalleryHome(activity: PanelActivity) {
                     PreviewMusicPanel(app, playback, data, prefs, fullPlayer = false,
                         controlsVisible = !showViewer || previewControlsVisible, bottomReserve = if (prefs.gifFrameCount && prefs.gifFrameCounter && prefs.gifFrameSelector && data.byId[viewer]?.kind == "GIF") 96.dp else 0.dp)
             }
-            if (!settingsActive) AnimatedVisibility(visible = mediaEditor == null && !settingsPreview && !showViewer && !fullPreviewPlayer && !frameActive && (route.tab in MainTabs.map { it.key } || route.tab == "FTP"),
+            if (!settingsActive) AnimatedVisibility(visible = navbarVisible(prefs) && mediaEditor == null && !settingsPreview && !showViewer && !fullPreviewPlayer && !frameActive && (route.tab in MainTabs.map { it.key } || route.tab == "FTP"),
                 enter = fadeIn(tween(if (prefs.reducedMotion) 0 else 220)), exit = fadeOut(tween(if (prefs.reducedMotion) 0 else 220))) {
                 Column(Modifier.fillMaxWidth().background(chromeSurface)) {
                     HorizontalDivider(color = MaterialTheme.colorScheme.primary.copy(alpha = .72f), thickness = 1.dp)
@@ -857,7 +901,7 @@ fun GalleryHome(activity: PanelActivity) {
             confirmButton = { TextButton({ activity.openBrightnessPermission() }) { Text(localized(R.string.console_brightness_permission_action, "Apri permesso")) } },
             dismissButton = { TextButton({ activity.brightnessAccessRequested = false }) { Text(localized(R.string.text_cancel_18c9d9, "Annulla")) } })
         addFolderRole?.let { role ->
-            AddFolderGuidanceDialog(continueAction = { addFolderRole = null; activity.chooseSource(role) }, dismiss = { addFolderRole = null }, wholeStorage = { addFolderRole = null; activity.chooseWholeStorage(role) })
+            AddFolderGuidanceDialog(continueAction = { addFolderRole = null; activity.chooseWholeStorage(role) }, dismiss = { addFolderRole = null })
         }
         if (mediaMenu) GalleryAlertDialog(onDismissRequest = { mediaMenu = false }, title = { Text(localized(R.string.text_1_s_selected_media_babf2f, "%1\$s media selezionati", selected.size)) }, text = {
             Column(Modifier.verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(8.dp)) {
@@ -1067,7 +1111,7 @@ private fun FavoriteFilters(vm: GalleryWindowModel, selected: String) {
 @Composable
 internal fun LibraryGrid(activity: PanelActivity, route: GalleryRoute, data: CatalogSnapshot, items: List<MediaEntity>, prefs: GalleryPreferences,
                         multi: Boolean, selected: Set<String>, activate: (MediaEntity) -> Unit, actions: (MediaEntity) -> Unit,
-                        onChooseFolder: (SourceRole) -> Unit = { role -> activity.chooseSource(role) },
+                        onChooseFolder: (SourceRole) -> Unit = { role -> activity.chooseWholeStorage(role) },
                         activeScene: Boolean = true, timelineDescending: Boolean = activity.windowModel.descending.value,
                         renderedSortRevision: Long? = null) {
     val items = remember(items, data) { items.filter(data::visible) }

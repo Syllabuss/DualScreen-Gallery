@@ -1678,7 +1678,7 @@
     <string name="new_album_move">"移动到新相册…"</string>
     <string name="new_album_copy">"复制到新相册…"</string>
     <string name="album_hierarchy">"按文件夹浏览相册"</string>
-    <string name="album_hierarchy_description">关闭：子文件夹中的相册与其他相册一起显示。开启：按文件夹层级浏览。不会修改文件。</string>
+    <string name="album_hierarchy_description">关闭：所有文件夹显示在同一列表中。开启：逐级打开子文件夹，保留原有结构。不会修改文件或文件夹。</string>
     <string name="controller_settings_hint">"按%1$s打开设置。快捷键遵循您的控制器配置。"</string>
     <string name="duplicate_experimental">实验性功能 · 删除文件前请检查结果。</string>
     <string name="tutorial_skip">跳过教程</string>
@@ -1815,4 +1815,7 @@
     <string name="tutorial_ready">一切就绪！</string>
     <string name="sound_section">切换分区</string>
     <string name="widget_effect_coin">硬币</string>
+    <string name="navbar_hide_single">仅有一个分类时隐藏导航栏</string>
+    <string name="single_screen_landscape">强制横屏显示</string>
+    <string name="show_empty_folders">显示空文件夹</string>
 </resources>

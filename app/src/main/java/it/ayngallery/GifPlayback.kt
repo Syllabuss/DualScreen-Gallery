@@ -11,6 +11,32 @@ import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import java.nio.ByteBuffer
 
+@Composable
+internal fun rememberGifPlayback(app: GalleryApp, item: MediaEntity, data: CatalogSnapshot, enabled: Boolean): State<GifPlayback?> =
+    produceState<GifPlayback?>(null, item.id, item.modified, item.size, enabled) {
+        if (!enabled) return@produceState
+        val opened = GifPlayback.open(app, item, data)
+        val bookmark = "${item.id}/${item.modified}/${item.size}"
+        try {
+            app.session.pausedGifFrames[bookmark]?.takeIf { opened != null && it in 0 until opened.count }?.let { frame ->
+                opened!!.select(frame)
+                opened.show(frame)
+            }
+            value = opened
+            awaitDispose {
+                if (opened?.paused == true) {
+                    app.session.pausedGifFrames[bookmark] = opened.selected ?: opened.index
+                    while (app.session.pausedGifFrames.size > 64) {
+                        app.session.pausedGifFrames.remove(app.session.pausedGifFrames.keys.first())
+                    }
+                } else app.session.pausedGifFrames.remove(bookmark)
+            }
+        } finally {
+            value = null
+            opened?.close()
+        }
+    }
+
 /** Only one preview animation and a lazy, bounded thumbnail strip; never index every frame as a file. */
 internal class GifPlayback private constructor(private val bytes: ByteArray, header: GifHeader, private val scope: CoroutineScope) {
     val count = header.numFrames
