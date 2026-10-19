@@ -30,11 +30,41 @@ private const val AUDIO_PREVIEW_START = "it.ayngallery.AUDIO_PREVIEW_START"
 private const val AUDIO_PREVIEW_END = "it.ayngallery.AUDIO_PREVIEW_END"
 private const val RECEIVED_AUDIO_START = "it.ayngallery.RECEIVED_AUDIO_START"
 
-data class PlaybackState(val id: String? = null, val title: String = localized(R.string.text_no_tracks_queued_156b61, "Nessun brano in coda"),
-    val artist: String = localized(R.string.text_choose_a_music_folder_2a9069, "Scegli una cartella musicale"), val artwork: String? = null,
-    val playing: Boolean = false, val position: Long = 0, val duration: Long = 0,
-    val queue: List<String> = emptyList(), val index: Int = 0, val shuffle: Boolean = false,
-    val repeat: Int = Player.REPEAT_MODE_OFF, val error: String? = null, val hasNext: Boolean? = null, val hasPrevious: Boolean? = null, val playRequested: Boolean = playing)
+data class PlaybackState(
+    val id: String? = null,
+    val title: String = localized(R.string.text_no_tracks_queued_156b61, "Nessun brano in coda"),
+    val artist: String = localized(R.string.text_choose_a_music_folder_2a9069, "Scegli una cartella musicale"),
+    val artwork: String? = null,
+    val playing: Boolean = false,
+    val position: Long = 0,
+    val duration: Long = 0,
+    val queue: List<String> = emptyList(),
+    val index: Int = 0,
+    val shuffle: Boolean = false,
+    val repeat: Int = Player.REPEAT_MODE_OFF,
+    val error: String? = null,
+    val hasNext: Boolean? = null,
+    val hasPrevious: Boolean? = null,
+    val playRequested: Boolean = playing,
+)
+
+private fun Player.playbackSnapshot(queue: List<String>, error: String?, playRequested: Boolean = isPlaying) = PlaybackState(
+    id = currentMediaItem?.mediaId,
+    title = mediaMetadata.title?.toString() ?: localized(R.string.text_no_tracks_queued_156b61, "Nessun brano in coda"),
+    artist = mediaMetadata.artist?.toString() ?: localized(R.string.text_artist_unavailable_c612a4, "Artista non disponibile"),
+    artwork = mediaMetadata.artworkUri?.toString(),
+    playing = isPlaying,
+    position = currentPosition.coerceAtLeast(0),
+    duration = duration.takeIf { it != C.TIME_UNSET }?.coerceAtLeast(0) ?: 0,
+    queue = queue,
+    index = currentMediaItemIndex.coerceAtLeast(0),
+    shuffle = shuffleModeEnabled,
+    repeat = repeatMode,
+    error = error,
+    hasNext = hasNextMediaItem(),
+    hasPrevious = hasPreviousMediaItem(),
+    playRequested = playRequested,
+)
 
 fun Catalog.musicItem(item: MediaEntity, data: CatalogSnapshot): MediaItem = MediaItem.Builder()
     .setMediaId(item.id).setUri(uri(item, data)).setMediaMetadata(MediaMetadata.Builder()
@@ -236,13 +266,11 @@ class MusicCoordinator(private val app: GalleryApp) {
             publishedQueue = (0 until player.mediaItemCount).map { player.getMediaItemAt(it).mediaId }
         }
         volume.value = player.volume
-        val metadata = player.mediaMetadata
-        state.value = PlaybackState(player.currentMediaItem?.mediaId, metadata.title?.toString() ?: localized(R.string.text_no_tracks_queued_156b61, "Nessun brano in coda"),
-            metadata.artist?.toString() ?: localized(R.string.text_artist_unavailable_c612a4, "Artista non disponibile"), metadata.artworkUri?.toString(), player.isPlaying,
-            player.currentPosition.coerceAtLeast(0), player.duration.takeIf { it != C.TIME_UNSET }?.coerceAtLeast(0) ?: 0,
-            publishedQueue, player.currentMediaItemIndex.coerceAtLeast(0),
-            player.shuffleModeEnabled, player.repeatMode, state.value.error, player.hasNextMediaItem(), player.hasPreviousMediaItem(),
-            player.playWhenReady && player.playbackState != Player.STATE_ENDED && player.playerError == null)
+        state.value = player.playbackSnapshot(
+            queue = publishedQueue,
+            error = state.value.error,
+            playRequested = player.playWhenReady && player.playbackState != Player.STATE_ENDED && player.playerError == null,
+        )
     }
 
     private fun command(action: suspend (MediaController) -> Unit) {
@@ -702,12 +730,10 @@ class MusicService : MediaSessionService() {
         prefs.edit().putString("queue", queue.toString()).putInt("index", backup?.index ?: player.currentMediaItemIndex.coerceAtLeast(0))
             .putLong("position", backup?.position ?: player.currentPosition.coerceAtLeast(0)).putBoolean("shuffle", backup?.shuffle ?: player.shuffleModeEnabled)
             .putInt("repeat", backup?.repeat ?: player.repeatMode).apply()
-        val metadata = player.mediaMetadata
-        app.widgets.publish(PlaybackState(player.currentMediaItem?.mediaId, metadata.title?.toString() ?: localized(R.string.text_no_tracks_queued_156b61, "Nessun brano in coda"),
-            metadata.artist?.toString() ?: localized(R.string.text_artist_unavailable_c612a4, "Artista non disponibile"), metadata.artworkUri?.toString(), player.isPlaying,
-            player.currentPosition.coerceAtLeast(0), player.duration.takeIf { it != C.TIME_UNSET }?.coerceAtLeast(0) ?: 0,
-            (0 until player.mediaItemCount).map { player.getMediaItemAt(it).mediaId }, player.currentMediaItemIndex.coerceAtLeast(0),
-            player.shuffleModeEnabled, player.repeatMode, player.playerError?.let { localized(R.string.text_playback_failed_12d57a, "Riproduzione non riuscita") }, player.hasNextMediaItem(), player.hasPreviousMediaItem()))
+        app.widgets.publish(player.playbackSnapshot(
+            queue = (0 until player.mediaItemCount).map { player.getMediaItemAt(it).mediaId },
+            error = player.playerError?.let { localized(R.string.text_playback_failed_12d57a, "Riproduzione non riuscita") },
+        ))
     }
     override fun onGetSession(controllerInfo: MediaSession.ControllerInfo): MediaSession? =
         mediaSession.takeIf { controllerInfo.packageName == packageName || controllerInfo.isTrusted }

@@ -472,8 +472,10 @@ abstract class PanelActivity : ComponentActivity() {
             app.cycleRecoveryTool(if (action == PadAction.TAB_NEXT) 1 else -1)
             return
         }
-        if ((windowModel.route.value.tab == "FTP" || windowModel.route.value.tab == "TRASH" && session.recoveryTab == "FTP") && action in setOf(PadAction.MENU, PadAction.SETTINGS)) return
-        if ((windowModel.route.value.tab == "FTP" || windowModel.route.value.tab == "TRASH" && session.recoveryTab == "FTP") && controllerModal == null && app.explorer.controller(action)) return
+        val networkBrowser = windowModel.route.value.tab == "FTP" ||
+            windowModel.route.value.tab == "TRASH" && session.recoveryTab == "FTP"
+        if (networkBrowser && action in setOf(PadAction.MENU, PadAction.SETTINGS)) return
+        if (networkBrowser && controllerModal == null && app.explorer.controller(action)) return
         val candidate = focusedMediaItemId ?: session.selectedMediaId
         if (action == PadAction.CONFIRM && session.pinnedPreviewId != null && candidate != session.pinnedPreviewId &&
             (windowModel.route.value.album != null || windowModel.route.value.tab in setOf("PHOTO", "VIDEO", "FAVORITE")) &&
@@ -481,7 +483,7 @@ abstract class PanelActivity : ComponentActivity() {
             session.pinActivationRequestId = candidate
             return
         }
-        if ((application as GalleryApp).video.handleResumeControllerAction(action)) return
+        if (app.video.handleResumeControllerAction(action)) return
         if (settingsInputAction?.invoke(action) == true) return
         if (session.settingsOwner == slot && windowModel.route.value.tab == "SETTINGS" && session.settingsSection in setOf("THEME", "THEME_CUSTOM", "INTERFACE", "PLAYBACK") && action in setOf(PadAction.TAB_PREVIOUS, PadAction.TAB_NEXT)) {
             if (session.settingsSection == "PLAYBACK") {

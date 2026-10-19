@@ -66,9 +66,37 @@ internal fun sessionVisualPreview(data: CatalogSnapshot, visualId: String?, sele
     val id = visualId.takeIf { selectionActive } ?: selectedId.takeIf { category == null && selectionActive }
     return visualPreviewSelection(data, id, fallback.takeIf { category != null })
 }
-private data class GalleryScene(val route: GalleryRoute, val viewer: String?, val viewerVisible: Boolean,
-    val comparisonVisible: Boolean, val items: List<MediaEntity>, val loading: Boolean, val albumCover: Boolean = false, val lockedCoverAlbumId: String? = null, val fullPlayer: Boolean = false, val previewSection: String? = null, val descending: Boolean = true, val orderRevision: Long = 0, val previewFocusRevision: Int = 0, val videoSurface: Boolean = false, val frameVisible: Boolean = false, val settingsPanel: String? = null, val gridDirection: androidx.compose.ui.unit.IntOffset = androidx.compose.ui.unit.IntOffset.Zero, val tvPreview: Boolean = false) {
-    val key get() = if (tvPreview) "TV_PREVIEW" else if (settingsPanel != null) "SETTINGS_PREVIEW/$settingsPanel" else if (frameVisible) "FRAME" else if (videoSurface) "VIDEO/$viewer" else if (comparisonVisible) "COMPARE" else if (fullPlayer) "PLAYER" else if (viewerVisible) "VIEWER/$viewer" + if (albumCover) "/album" else "/media" else "${route.tab}/${route.album}/${route.collection}/${route.musicView}/${route.musicGroup}/${route.kind}"
+private data class GalleryScene(
+    val route: GalleryRoute,
+    val viewer: String?,
+    val viewerVisible: Boolean,
+    val comparisonVisible: Boolean,
+    val items: List<MediaEntity>,
+    val loading: Boolean,
+    val albumCover: Boolean = false,
+    val lockedCoverAlbumId: String? = null,
+    val fullPlayer: Boolean = false,
+    val previewSection: String? = null,
+    val descending: Boolean = true,
+    val orderRevision: Long = 0,
+    val previewFocusRevision: Int = 0,
+    val videoSurface: Boolean = false,
+    val frameVisible: Boolean = false,
+    val settingsPanel: String? = null,
+    val gridDirection: androidx.compose.ui.unit.IntOffset = androidx.compose.ui.unit.IntOffset.Zero,
+    val tvPreview: Boolean = false,
+) {
+    val key: String
+        get() = when {
+            tvPreview -> "TV_PREVIEW"
+            settingsPanel != null -> "SETTINGS_PREVIEW/$settingsPanel"
+            frameVisible -> "FRAME"
+            videoSurface -> "VIDEO/$viewer"
+            comparisonVisible -> "COMPARE"
+            fullPlayer -> "PLAYER"
+            viewerVisible -> "VIEWER/$viewer" + if (albumCover) "/album" else "/media"
+            else -> "${route.tab}/${route.album}/${route.collection}/${route.musicView}/${route.musicGroup}/${route.kind}"
+        }
 }
 
 @OptIn(ExperimentalAnimationApi::class)
@@ -314,30 +342,43 @@ fun GalleryHome(activity: PanelActivity) {
     DisposableEffect(activity, focusManager, items, viewer, route.tab, data, showViewer, showComparison, settingsActive, settingsPreview) {
         activity.enterPadMode = { inputMode.requestInputMode(InputMode.Keyboard) }
         activity.clearPadFocus = { focusManager.clearFocus(force = true) }
-        activity.moveFocus = { action ->
+        activity.moveFocus = moveFocus@ { action ->
             if (action == PadAction.DOWN && route.tab == "SETTINGS_HUB" && app.session.canSwap() && app.session.settingsHubBottomFocused) {
                 app.session.settingsInfoFocused = true
                 focusManager.clearFocus(force = true)
-            } else {
+                return@moveFocus
+            }
             if (frameModel.route.value.tab == "FRAME") frameModel.wakeFrame()
             app.video.wakeNavigation()
-            val index = items.indexOfFirst { it.id == app.session.selectedMediaId }
-            val step = if (vm.mediaGrid(route.tab).value) vm.mediaColumns(route.tab).value else 1
+            val direction = when (action) {
+                PadAction.UP -> FocusDirection.Up
+                PadAction.DOWN -> FocusDirection.Down
+                PadAction.LEFT -> FocusDirection.Left
+                else -> FocusDirection.Right
+            }
             if (settingsActive || settingsPreview) {
-                val moved = focusManager.moveFocus(when (action) {
-                    PadAction.UP -> FocusDirection.Up; PadAction.DOWN -> FocusDirection.Down; PadAction.LEFT -> FocusDirection.Left; else -> FocusDirection.Right
-                })
+                val moved = focusManager.moveFocus(direction)
                 if (!moved && action == PadAction.DOWN) activity.settingsScrollEnd?.invoke()
                 if (moved) app.sounds.play("settings-navigation")
-            } else if (activity.mediaGridFocus?.invoke(action) == true) {
-                // The library owns ordered list navigation and entry from the sort toolbar.
-            } else if (route.tab == "MUSIC" && (route.musicView == "TRACKS" || route.musicGroup != null) && !activity.settingsHeaderHasFocus && action == PadAction.DOWN && index >= 0 && index + step >= items.size) {
-                app.session.selectMedia(items.last().id)
-            } else {
-            val moved = if (activity.albumGridFocus?.invoke(action) == true) true else focusManager.moveFocus(when (action) {
-            PadAction.UP -> FocusDirection.Up; PadAction.DOWN -> FocusDirection.Down; PadAction.LEFT -> FocusDirection.Left; else -> FocusDirection.Right
-        }); if (!moved && action == PadAction.DOWN && route.tab == "SETTINGS_HUB" && app.session.canSwap()) { app.session.settingsInfoFocused = true; focusManager.clearFocus(force = true) }; if (moved && app.session.settingsOwner == activity.slot) app.sounds.play("settings-navigation") } }
+                return@moveFocus
             }
+            // The library owns ordered list navigation and entry from the sort toolbar.
+            if (activity.mediaGridFocus?.invoke(action) == true) return@moveFocus
+
+            val index = items.indexOfFirst { it.id == app.session.selectedMediaId }
+            val step = if (vm.mediaGrid(route.tab).value) vm.mediaColumns(route.tab).value else 1
+            if (route.tab == "MUSIC" && (route.musicView == "TRACKS" || route.musicGroup != null) &&
+                !activity.settingsHeaderHasFocus && action == PadAction.DOWN && index >= 0 && index + step >= items.size) {
+                app.session.selectMedia(items.last().id)
+                return@moveFocus
+            }
+            val moved = activity.albumGridFocus?.invoke(action) == true || focusManager.moveFocus(direction)
+            if (!moved && action == PadAction.DOWN && route.tab == "SETTINGS_HUB" && app.session.canSwap()) {
+                app.session.settingsInfoFocused = true
+                focusManager.clearFocus(force = true)
+            }
+            if (moved && app.session.settingsOwner == activity.slot) app.sounds.play("settings-navigation")
+        }
         activity.navigateMedia = { delta ->
             if (showComparison) app.comparison.update(app.comparison.state.value.navigate(app.session.selectedMediaId,
                 app.session.mediaContext.filter { data.byId[it]?.let(data::visible) == true }, delta))

@@ -8,7 +8,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 
-/** One session for both displays. No credentials or file operations are persisted here. */
+/** One browsing session for both displays. Passwords stay transient; transfers use the Room journal. */
 internal class ExplorerSession(private val context: Context) {
     private val preferences = context.getSharedPreferences("network-explorer", Context.MODE_PRIVATE)
     private val draftAddress = androidx.compose.runtime.mutableStateOf(preferences.getString("address", "").orEmpty())
@@ -156,47 +156,68 @@ internal class ExplorerSession(private val context: Context) {
         (context.applicationContext as GalleryApp).catalog.dao.saveOperation(op.copy(phase = "COMPLETED", sourceDeletedAt = if (op.kind == "NETWORK_MOVE") System.currentTimeMillis() else op.sourceDeletedAt))
         return true
     }
-    private suspend fun publishTo(targetSide: ExplorerSide, destination: ExplorerLocation, name: String,
-        op: FileOperation, stage: java.io.File, digest: FileDigest, save: suspend (FileOperation) -> Unit,
-        localSource: ExplorerSafFolder, remoteSource: ExplorerSmbFolder, resume: Boolean = false): Pair<String, FileDigest> {
+    private suspend fun publishTo(
+        targetSide: ExplorerSide,
+        destination: ExplorerLocation,
+        name: String,
+        op: FileOperation,
+        stage: java.io.File,
+        digest: FileDigest,
+        save: suspend (FileOperation) -> Unit,
+        localSource: ExplorerSafFolder,
+        remoteSource: ExplorerSmbFolder,
+        resume: Boolean = false,
+    ): Pair<String, FileDigest> {
         val app = context.applicationContext as GalleryApp
         val transferContext = currentCoroutineContext()
+        val documents = FileDocuments(context)
+        val localTarget = targetSide == ExplorerSide.LOCAL
+        suspend fun readDigest(id: String): FileDigest {
+            val check: (Long) -> Unit = { transferContext.ensureActive() }
+            return if (localTarget) documents.input(Uri.parse(id)).use { networkDigest(it, check = check) }
+            else remoteSource.read(id) { networkDigest(it, check = check) }
+        }
+
         val restored = recoverNetworkPublication(op, digest,
             find = { planned ->
-                val entries = if (targetSide == ExplorerSide.LOCAL) localSource.list(destination) else remoteSource.list(destination)
-                entries.singleOrNull { !it.directory && it.name == planned }?.let { entry ->
-                    entry.id to if (targetSide == ExplorerSide.LOCAL) FileDocuments(context).input(Uri.parse(entry.id)).use { networkDigest(it, check = { transferContext.ensureActive() }) }
-                        else remoteSource.read(entry.id) { networkDigest(it, check = { transferContext.ensureActive() }) }
-                }
+                val entries = if (localTarget) localSource.list(destination) else remoteSource.list(destination)
+                entries.singleOrNull { !it.directory && it.name == planned }?.let { it.id to readDigest(it.id) }
             }, save = save)
         if (restored != null) return restored
-        return if (op.publishedUri != null) {
-                                val target = op.publishedUri
-                                target to if (targetSide == ExplorerSide.LOCAL) { check(localSource.list(destination).any { !it.directory && it.id == target }); FileDocuments(context).input(Uri.parse(target)).use { networkDigest(it, check = { transferContext.ensureActive() }) } }
-                                    else { remoteSource.list(destination); remoteSource.read(target) { networkDigest(it, check = { transferContext.ensureActive() }) } }
-                            } else if (targetSide == ExplorerSide.LOCAL) {
-                                val documents = FileDocuments(context)
-                                val parent = Uri.parse(destination.directoryId)
-                                val finalName = FileNames.available(name, documents.children(parent).map { it.name }.toSet(), true)
-                                save(op.copy(finalName = finalName, recipe = org.json.JSONObject().put("publicationName", finalName).toString()))
-                                val (receive, stream) = app.files.beginFtpReceive(parent, finalName)
-                                try {
-                                    stream.use { output -> stage.inputStream().use { networkDigest(it, output, { transferContext.ensureActive() }) } }
-                                    val uri = app.files.finishFtpReceive(receive)
-                                    save(op.copy(publishedUri = uri.toString(), finalName = finalName, phase = "PUBLISHED"))
-                                    uri.toString() to documents.input(uri).use { networkDigest(it, check = { transferContext.ensureActive() }) }
-                                } catch (failure: Exception) { withContext(NonCancellable) { app.files.abortFtpReceive(receive) }; throw failure }
-                            } else {
-                                val finalName = FileNames.available(name, remoteSource.list(destination).map { it.name }.toSet(), true)
-                                val tempName = ".ayngallery-${op.id}.part"
-                                save(op.copy(finalName = finalName, recipe = org.json.JSONObject().put("temporaryName", tempName).put("publicationName", finalName).toString()))
-                                val temp = remoteSource.create(destination, tempName, resume)
-                                remoteSource.write(temp) { output -> stage.inputStream().use { networkDigest(it, output, { transferContext.ensureActive() }) } }
-                                check(remoteSource.read(temp) { networkDigest(it, check = { transferContext.ensureActive() }) } == digest)
-                                val final = remoteSource.publish(temp, destination, finalName)
-                                save(op.copy(publishedUri = final, finalName = finalName, phase = "PUBLISHED"))
-                                final to remoteSource.read(final) { networkDigest(it, check = { transferContext.ensureActive() }) }
-                            }
+
+        op.publishedUri?.let { target ->
+            if (localTarget) check(localSource.list(destination).any { !it.directory && it.id == target })
+            else remoteSource.list(destination)
+            return target to readDigest(target)
+        }
+
+        if (localTarget) {
+            val parent = Uri.parse(destination.directoryId)
+            val finalName = FileNames.available(name, documents.children(parent).map { it.name }.toSet(), true)
+            save(op.copy(finalName = finalName, recipe = org.json.JSONObject().put("publicationName", finalName).toString()))
+            val (receive, stream) = app.files.beginFtpReceive(parent, finalName)
+            try {
+                stream.use { output -> stage.inputStream().use { networkDigest(it, output, { transferContext.ensureActive() }) } }
+                val uri = app.files.finishFtpReceive(receive)
+                save(op.copy(publishedUri = uri.toString(), finalName = finalName, phase = "PUBLISHED"))
+                return uri.toString() to readDigest(uri.toString())
+            } catch (failure: Exception) {
+                withContext(NonCancellable) { app.files.abortFtpReceive(receive) }
+                throw failure
+            }
+        }
+
+        val finalName = FileNames.available(name, remoteSource.list(destination).map { it.name }.toSet(), true)
+        val temporaryName = ".ayngallery-${op.id}.part"
+        // Persist both names before the external rename, including when resuming an interrupted write.
+        save(op.copy(finalName = finalName, recipe = org.json.JSONObject()
+            .put("temporaryName", temporaryName).put("publicationName", finalName).toString()))
+        val temporary = remoteSource.create(destination, temporaryName, resume)
+        remoteSource.write(temporary) { output -> stage.inputStream().use { networkDigest(it, output, { transferContext.ensureActive() }) } }
+        check(readDigest(temporary) == digest)
+        val published = remoteSource.publish(temporary, destination, finalName)
+        save(op.copy(publishedUri = published, finalName = finalName, phase = "PUBLISHED"))
+        return published to readDigest(published)
     }
     val recoveryLocalPicker = androidx.compose.runtime.mutableStateOf(false)
     val recoveryRequest = androidx.compose.runtime.mutableStateOf<FileOperation?>(null)
@@ -406,12 +427,13 @@ internal class ExplorerSession(private val context: Context) {
                     return@launch
                 }
                 require(entry.size != null && entry.size in 1..64L * 1024 * 1024)
-                val cache = java.io.File(context.filesDir, "network-preview").apply { check(isDirectory || mkdirs()) }
+                val cache = java.io.File(context.filesDir, "network-preview")
                 val identity = "${entry.location.providerId}/${entry.id}/${entry.size}/${entry.modified}"
                 val key = java.security.MessageDigest.getInstance("SHA-256").digest(identity.toByteArray()).joinToString("") { "%02x".format(it) }
                 val extension = entry.name.substringAfterLast('.', "bin").lowercase().takeIf { it.matches(Regex("[a-z0-9]{1,12}")) } ?: "bin"
                 val file = java.io.File(cache, "$key.$extension")
                 withContext(Dispatchers.IO) { remoteLock.withLock {
+                    check(cache.isDirectory || cache.mkdirs())
                     fun stat() = if (side == ExplorerSide.LOCAL) checkNotNull(local).stat(entry) else checkNotNull(remote).stat(entry)
                     check(stat().let { it.size == entry.size && it.modified == entry.modified })
                     if (!file.isFile || file.length() != entry.size) {

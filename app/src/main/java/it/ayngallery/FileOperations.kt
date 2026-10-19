@@ -772,95 +772,13 @@ class FileOperations(private val catalog: Catalog, private val releaseMedia: sus
                     verified(op, final); op = record(op.copy(publishedUri = final, finalName = op.originalName, phase = "PUBLISHED"))
                 }
                 if (op.publishedUri == null) {
-                    if (op.kind == "IMPORT") op = stageImport(op)
-                    if (op.digest != null && op.temporaryUri != null) {
-                        // A complete verified temporary can be reused; partial streams restart in the same owned document.
-                        try { verified(op, op.temporaryUri!!) }
-                        catch (cancelled: CancellationException) { throw cancelled }
-                        catch (cancelled: OperationCancelled) { throw cancelled }
-                        catch (_: Exception) { op = record(op.copy(digest = if (op.kind in setOf("RESTORE", "RESTORE_COPY")) dao.trash(op.mediaId)?.digest else null, phase = "COPYING")) }
-                    }
-                    if (op.temporaryUri == null) {
-                        op = record(op.copy(phase = "CREATING", bytes = 0, message = null))
-                        val temporary = if (op.kind == "TRASH") {
-                            check(directory.isDirectory || directory.mkdirs()) { localized(R.string.text_trash_archive_unavailable_65088e, "Archivio del cestino non disponibile") }
-                            if (op.expectedSize >= 0) require(op.expectedSize <= StatFs(directory.path).availableBytes - 1024 * 1024) {
-                                localized(R.string.text_insufficient_space_to_protect_the_file_original_837367, "Spazio insufficiente per mettere al sicuro il file: originale conservato")
-                            }
-                            val file = privateFile("${op.id}.part")
-                            if (!file.exists()) check(file.createNewFile()) { localized(R.string.text_could_not_reserve_the_private_copy_557a15, "Impossibile riservare la copia privata") }
-                            file.toURI().toString()
-                        } else {
-                            val parent = Uri.parse(op.destinationParent!!)
-                            val prefix = ".ayngallery-${op.id}."
-                            val owned = documents.children(parent).filter { it.name.startsWith(prefix) }
-                            require(owned.size <= 1) { localized(R.string.text_ambiguous_temporary_file_check_the_destination_7fc5f4, "Temporaneo ambiguo: verifica la destinazione") }
-                            (owned.singleOrNull()?.uri ?: documents.create(parent, op.mime, "$prefix${op.requestedName.substringAfterLast('.', "part")}")).toString()
-                        }
-                        op = record(op.copy(temporaryUri = temporary, phase = "COPYING"))
-                    }
-                    val temporary = op.temporaryUri!!
-                    if (op.phase !in setOf("VERIFIED", "PUBLISHING")) {
-                        op = record(op.copy(phase = "COPYING", bytes = 0, message = null))
-                        val copied = if (op.kind == "EXPORT_IMAGE") exportImage(op, temporary)
-                        else if (op.kind in setOf("EXPORT_VIDEO", "EXPORT_AUDIO")) exportClip(op, temporary)
-                        else if (op.kind == "TRASH") FileOutputStream(privateFile("${op.id}.part")).use { out ->
-                            val value = digest(sourceInput(op), out, id, true); out.fd.sync(); value
-                        } else documents.output(Uri.parse(temporary)).use { out -> digest(sourceInput(op), out, id, true) }
-                        if (!export(op.kind) && op.expectedSize >= 0 && copied.bytes != op.expectedSize) throw SourceChanged()
-                        if (op.kind == "TRASH" && op.digest != null && copied.sha256 != op.digest) throw SourceChanged()
-                        if (!export(op.kind)) sourceUnchanged(op, copied)
-                        op = record(op.copy(digest = copied.sha256, bytes = copied.bytes, phase = "VERIFYING"))
-                        verified(op, temporary)
-                        op = record(op.copy(phase = "VERIFIED"))
-                    }
-                    checkCancel(id)
-                    if (op.kind == "TRASH") {
-                        op = record(op.copy(phase = "PUBLISHING"))
-                        val final = privateFile("${op.id}.bin")
-                        if (!final.exists()) check(privateFile("${op.id}.part").renameTo(final)) { localized(R.string.text_could_not_publish_the_trash_copy_dd8550, "Pubblicazione del cestino non riuscita") }
-                        op = record(op.copy(publishedUri = final.toURI().toString(), finalName = op.originalName, phase = "PUBLISHED"))
-                    } else {
-                        val parent = Uri.parse(op.destinationParent!!)
-                        val temp = Uri.parse(temporary)
-                        val children = documents.children(parent)
-                        val existing = children.filter { it.uri != temp }.map { it.name }.toSet()
-                        val name = op.finalName ?: FileNames.available(op.requestedName, existing, op.keepBoth)
-                        require(name.lowercase() !in existing.map { it.lowercase() }) { localized(R.string.text_publishing_conflict_original_preserved_2f5ae0, "Conflitto durante la pubblicazione: originale conservato") }
-                        val stat = documents.stat(temp)
-                        require(stat.flags and DocumentsContract.Document.FLAG_SUPPORTS_RENAME != 0) { localized(R.string.text_this_provider_cannot_publish_the_temporary_file_949885, "Questo provider non consente la pubblicazione del temporaneo. Scegli una diversa destinazione.") }
-                        op = record(op.copy(phase = "PUBLISHING", finalName = name))
-                        val published = documents.rename(temp, name)
-                        op = record(op.copy(publishedUri = published.toString(), phase = "PUBLISHED"))
-                        require(documents.stat(published).name == name) { localized(R.string.text_the_provider_changed_the_requested_name_the_orig_b5eddd, "Il provider ha modificato il nome richiesto. L'originale resta conservato.") }
-                    }
+                    op = stageVerifiedCopy(op)
+                    op = publishVerifiedCopy(op)
                 }
                 verified(op, op.publishedUri!!)
                 if (op.kind != "TRASH") require(documents.stat(Uri.parse(op.publishedUri)).name == op.finalName) { localized(R.string.text_the_destination_name_changed_no_further_deletion_4b4834, "Il nome della destinazione è cambiato. Nessuna ulteriore eliminazione.") }
                 if (op.kind in setOf("MOVE", "RENAME", "TRASH") && op.phase !in setOf("DELETED", "INDEXING")) {
-                    op.retainedMediaId?.let { keptId ->
-                        require(op.kind == "TRASH" && keptId != op.mediaId && op.digest != null) { localized(R.string.text_invalid_duplicate_protection_011a1a, "Protezione duplicati non valida") }
-                        val data = catalog.readMediaSnapshot(keptId)
-                        val kept = data.byId[keptId]?.takeIf(data::usable) ?: throw SourceChanged()
-                        val retained = digest(documents.input(catalog.uri(kept, data)), id = op.id)
-                        if (retained.sha256 != op.digest || retained.bytes != op.bytes) throw SourceChanged()
-                    }
-                    // Block new playback before releasing open handles, then revalidate the complete source immediately before deletion.
-                    op = record(op.copy(phase = "DELETING")); releaseMedia(op.mediaId)
-                    val source = if (sourceExists(op)) documents.stat(Uri.parse(op.sourceUri)) else null
-                    if (source != null) {
-                        sourceUnchanged(op, FileDigest(op.bytes, op.digest!!)); checkCancel(id)
-                        withContext(NonCancellable) {
-                            // Persist the time before the provider effect: it may remove the file and then throw.
-                            op = record(op.copy(sourceDeletionStartedAt = clock().wall))
-                            documents.delete(Uri.parse(op.sourceUri))
-                            require(!sourceExists(op)) { localized(R.string.text_the_provider_did_not_remove_the_original_99c355, "Il provider non ha rimosso l'originale") }
-                            op = record(op.copy(phase = "DELETED", sourceDeletedAt = clock().wall))
-                        }
-                    } else {
-                        require(!sourceExists(op)) { localized(R.string.text_source_cannot_be_verified_6e3e1e, "Origine non verificabile") }
-                        op = record(op.copy(phase = "DELETED", sourceDeletedAt = op.sourceDeletedAt ?: op.sourceDeletionStartedAt ?: clock().wall))
-                    }
+                    op = deleteVerifiedOriginal(op)
                 }
                 withContext(NonCancellable) {
                     op = record(op.copy(phase = "INDEXING"))
@@ -912,6 +830,111 @@ class FileOperations(private val catalog: Catalog, private val releaseMedia: sus
             }
         }
     }
+    private suspend fun stageVerifiedCopy(initial: FileOperation): FileOperation {
+        var op = initial
+        if (op.kind == "IMPORT") op = stageImport(op)
+        if (op.digest != null && op.temporaryUri != null) {
+            // A complete verified temporary can be reused; partial streams restart in the same owned document.
+            try { verified(op, op.temporaryUri!!) }
+            catch (cancelled: CancellationException) { throw cancelled }
+            catch (cancelled: OperationCancelled) { throw cancelled }
+            catch (_: Exception) { op = record(op.copy(digest = if (op.kind in setOf("RESTORE", "RESTORE_COPY")) dao.trash(op.mediaId)?.digest else null, phase = "COPYING")) }
+        }
+        if (op.temporaryUri == null) {
+            op = record(op.copy(phase = "CREATING", bytes = 0, message = null))
+            val temporary = if (op.kind == "TRASH") {
+                check(directory.isDirectory || directory.mkdirs()) { localized(R.string.text_trash_archive_unavailable_65088e, "Archivio del cestino non disponibile") }
+                if (op.expectedSize >= 0) require(op.expectedSize <= StatFs(directory.path).availableBytes - 1024 * 1024) {
+                    localized(R.string.text_insufficient_space_to_protect_the_file_original_837367, "Spazio insufficiente per mettere al sicuro il file: originale conservato")
+                }
+                val file = privateFile("${op.id}.part")
+                if (!file.exists()) check(file.createNewFile()) { localized(R.string.text_could_not_reserve_the_private_copy_557a15, "Impossibile riservare la copia privata") }
+                file.toURI().toString()
+            } else {
+                val parent = Uri.parse(op.destinationParent!!)
+                val prefix = ".ayngallery-${op.id}."
+                val owned = documents.children(parent).filter { it.name.startsWith(prefix) }
+                require(owned.size <= 1) { localized(R.string.text_ambiguous_temporary_file_check_the_destination_7fc5f4, "Temporaneo ambiguo: verifica la destinazione") }
+                (owned.singleOrNull()?.uri ?: documents.create(parent, op.mime, "$prefix${op.requestedName.substringAfterLast('.', "part")}")).toString()
+            }
+            op = record(op.copy(temporaryUri = temporary, phase = "COPYING"))
+        }
+        val temporary = op.temporaryUri!!
+        if (op.phase !in setOf("VERIFIED", "PUBLISHING")) {
+            op = record(op.copy(phase = "COPYING", bytes = 0, message = null))
+            val copied = when (op.kind) {
+                "EXPORT_IMAGE" -> exportImage(op, temporary)
+                "EXPORT_VIDEO", "EXPORT_AUDIO" -> exportClip(op, temporary)
+                "TRASH" -> FileOutputStream(privateFile("${op.id}.part")).use { out ->
+                    val value = digest(sourceInput(op), out, op.id, true)
+                    out.fd.sync()
+                    value
+                }
+                else -> documents.output(Uri.parse(temporary)).use { out -> digest(sourceInput(op), out, op.id, true) }
+            }
+            if (!export(op.kind) && op.expectedSize >= 0 && copied.bytes != op.expectedSize) throw SourceChanged()
+            if (op.kind == "TRASH" && op.digest != null && copied.sha256 != op.digest) throw SourceChanged()
+            if (!export(op.kind)) sourceUnchanged(op, copied)
+            op = record(op.copy(digest = copied.sha256, bytes = copied.bytes, phase = "VERIFYING"))
+            verified(op, temporary)
+            op = record(op.copy(phase = "VERIFIED"))
+        }
+        return op
+    }
+
+    private suspend fun publishVerifiedCopy(initial: FileOperation): FileOperation {
+        var op = initial
+        checkCancel(op.id)
+        if (op.kind == "TRASH") {
+            op = record(op.copy(phase = "PUBLISHING"))
+            val final = privateFile("${op.id}.bin")
+            if (!final.exists()) check(privateFile("${op.id}.part").renameTo(final)) { localized(R.string.text_could_not_publish_the_trash_copy_dd8550, "Pubblicazione del cestino non riuscita") }
+            op = record(op.copy(publishedUri = final.toURI().toString(), finalName = op.originalName, phase = "PUBLISHED"))
+        } else {
+            val parent = Uri.parse(op.destinationParent!!)
+            val temp = Uri.parse(op.temporaryUri!!)
+            val children = documents.children(parent)
+            val existing = children.filter { it.uri != temp }.map { it.name }.toSet()
+            val name = op.finalName ?: FileNames.available(op.requestedName, existing, op.keepBoth)
+            require(name.lowercase() !in existing.map { it.lowercase() }) { localized(R.string.text_publishing_conflict_original_preserved_2f5ae0, "Conflitto durante la pubblicazione: originale conservato") }
+            val stat = documents.stat(temp)
+            require(stat.flags and DocumentsContract.Document.FLAG_SUPPORTS_RENAME != 0) { localized(R.string.text_this_provider_cannot_publish_the_temporary_file_949885, "Questo provider non consente la pubblicazione del temporaneo. Scegli una diversa destinazione.") }
+            op = record(op.copy(phase = "PUBLISHING", finalName = name))
+            val published = documents.rename(temp, name)
+            op = record(op.copy(publishedUri = published.toString(), phase = "PUBLISHED"))
+            require(documents.stat(published).name == name) { localized(R.string.text_the_provider_changed_the_requested_name_the_orig_b5eddd, "Il provider ha modificato il nome richiesto. L'originale resta conservato.") }
+        }
+        return op
+    }
+
+    private suspend fun deleteVerifiedOriginal(initial: FileOperation): FileOperation {
+        var op = initial
+        op.retainedMediaId?.let { keptId ->
+            require(op.kind == "TRASH" && keptId != op.mediaId && op.digest != null) { localized(R.string.text_invalid_duplicate_protection_011a1a, "Protezione duplicati non valida") }
+            val data = catalog.readMediaSnapshot(keptId)
+            val kept = data.byId[keptId]?.takeIf(data::usable) ?: throw SourceChanged()
+            val retained = digest(documents.input(catalog.uri(kept, data)), id = op.id)
+            if (retained.sha256 != op.digest || retained.bytes != op.bytes) throw SourceChanged()
+        }
+        // Block new playback before releasing open handles, then revalidate the complete source immediately before deletion.
+        op = record(op.copy(phase = "DELETING")); releaseMedia(op.mediaId)
+        val source = if (sourceExists(op)) documents.stat(Uri.parse(op.sourceUri)) else null
+        if (source != null) {
+            sourceUnchanged(op, FileDigest(op.bytes, op.digest!!)); checkCancel(op.id)
+            withContext(NonCancellable) {
+                // Persist the time before the provider effect: it may remove the file and then throw.
+                op = record(op.copy(sourceDeletionStartedAt = clock().wall))
+                documents.delete(Uri.parse(op.sourceUri))
+                require(!sourceExists(op)) { localized(R.string.text_the_provider_did_not_remove_the_original_99c355, "Il provider non ha rimosso l'originale") }
+                op = record(op.copy(phase = "DELETED", sourceDeletedAt = clock().wall))
+            }
+        } else {
+            require(!sourceExists(op)) { localized(R.string.text_source_cannot_be_verified_6e3e1e, "Origine non verificabile") }
+            op = record(op.copy(phase = "DELETED", sourceDeletedAt = op.sourceDeletedAt ?: op.sourceDeletionStartedAt ?: clock().wall))
+        }
+        return op
+    }
+
     private suspend fun sourceExists(op: FileOperation): Boolean {
         val source = Uri.parse(op.sourceUri)
         // A removed/unauthorised tree is never proof that a document was deleted.

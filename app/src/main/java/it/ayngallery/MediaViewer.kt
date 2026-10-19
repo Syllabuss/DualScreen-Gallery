@@ -589,28 +589,7 @@ fun MediaSurface(activity: PanelActivity, item: MediaEntity?, data: CatalogSnaps
 
     val controlledGif = (prefs.previewNearest || prefs.gifFrameSelector || prefs.gifFrameCount && prefs.gifFrameCounter) && item.kind == "GIF"
 
-    val gifFrames by produceState<GifPlayback?>(null, item.id, item.modified, item.size, usable, controlledGif) {
-
-        if (usable && controlledGif) {
-
-            val opened = GifPlayback.open(app, item, data)
-
-            val bookmark = "${item.id}/${item.modified}/${item.size}"
-            try {
-                app.session.pausedGifFrames[bookmark]?.takeIf { opened != null && it in 0 until opened.count }?.let { frame -> opened!!.select(frame); opened.show(frame) }
-                value = opened
-                awaitDispose {
-                    if (opened?.paused == true) {
-                        app.session.pausedGifFrames[bookmark] = opened.selected ?: opened.index
-                        while (app.session.pausedGifFrames.size > 64) app.session.pausedGifFrames.remove(app.session.pausedGifFrames.keys.first())
-                    } else app.session.pausedGifFrames.remove(bookmark)
-                    opened?.close()
-                }
-            } finally { value = null; opened?.close() }
-
-        }
-
-    }
+    val gifFrames by rememberGifPlayback(app, item, data, usable && controlledGif)
 
     LaunchedEffect(gifFrames, started, paneActive, prefs.gameMode, gifFrames?.paused, gifFrames?.requestRevision) {
 
